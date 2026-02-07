@@ -15,3 +15,5 @@ Add diagrams and notes here to support the hands-on labs.
 ## Docs Index
 
 - [2.0 The Core Idea: Storage Decoupling](storage-decoupling.md)
+- [3.0 The Cast of Characters (Internal & External Components)](cast-of-characters.md)
+
