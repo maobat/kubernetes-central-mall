@@ -16,4 +16,6 @@ Add diagrams and notes here to support the hands-on labs.
 
 - [2.0 The Core Idea: Storage Decoupling](storage-decoupling.md)
 - [3.0 The Cast of Characters (Internal & External Components)](cast-of-characters.md)
-
+- [3.1 Understanding the Traffic Flow (The "Customer Journey")](traffic-flow.md)
+- [3.2 Diagnostic Cheat Sheet for the Cast](diagnostic-cheat-sheet.md))
+- [3.3 Gateway API: The "Smart Transit Hub"](gateway-api.md)
