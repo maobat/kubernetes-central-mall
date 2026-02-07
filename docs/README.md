@@ -11,3 +11,7 @@ This folder contains conceptual explanations, diagrams, and analogies for Kubern
 - Deployments & Scaling: Shops opening, closing, expanding
 
 Add diagrams and notes here to support the hands-on labs.
+
+## Docs Index
+
+- [2.0 The Core Idea: Storage Decoupling](storage-decoupling.md)
