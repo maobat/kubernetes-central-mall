@@ -1,3 +1,5 @@
+![License](https://img.shields.io/badge/license-MIT-green)
+
 # Kubernetes Central Mall
 
 **Kubernetes Central Mall** is a CKAD-focused guide that explains Kubernetes using a consistent **mall analogy**. Navigate through the mall to understand the core Kubernetes concepts:
