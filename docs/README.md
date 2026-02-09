@@ -97,8 +97,6 @@ The documents are designed to be read sequentially, but each section is also sel
   Breakdown of the `PVC` request form and the PV/PVC matchmaking process.
 - [5.3 The Role of StorageClass](md-resources/the-role-of-storageclass.md)  
   Explains Dynamic Provisioning and Static Selection using StorageClass.
-- [5.3.1 The Spectrum of Storage Class Names](md-resources/the-spectrum-of-storage-class-names.md)  
-  Clarifies that the name can be anything and details the three main categories (Empty, Default, Custom).
 - [5.4 Access Modes: RWO vs. RWM](md-resources/access-modes-rwo-vs-rwm.md)  
   Explaining the different access capabilities of storage.
 - [5.5 Lab Analysis: Shared Volume Setup](md-resources/lab-analysis-shared-volume-setup.md)  
@@ -129,7 +127,7 @@ The documents are designed to be read sequentially, but each section is also sel
   Actions executed in the terminal to demonstrate switching traffic. 
 - [6.3.3 Implementing Canary Deployments](md-resources/implementing-canary-deployments.md)  
   Progressive rollout strategy releasing the new version to a small subset of users.
-- [6.3.3.1 Demo Recap: Progressive Traffic Demo](md-resources/demo-recap-progressive-traffic-demo.md)  
+- [6.3.3.1 Demo Recap: Progressive Traffic Demo](md-resources/lab-deployment-steps-progressive-traffic-demo.md)  
   Gradual scaling of Stable and Canary deployments using kubectl scale to achieve controlled traffic distribution. 
 - [6.3.4 Related Deployment Strategies Comparison](md-resources/related-deployment-strategies-comparison.md)  
   Comparison: Blue/Green vs. Canary Deployments

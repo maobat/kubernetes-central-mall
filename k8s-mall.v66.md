@@ -1,4 +1,4 @@
-# Kubernetes Decoupling & Application Configuration
+    # Kubernetes Decoupling & Application Configuration
 
 ## Key Component Analysis: Storage, Configuration, RBAC Security, and API Interaction
 > **[Kubernetes Mall Analogy: The Full Directory (Advanced Configuration Edition)]**
@@ -58,7 +58,7 @@
 | **6.3.2.1** | **[Lab Demo Recap: Traffic Transition with Kubernetes Service](#6321-lab-deployment-steps-full-traffic-transition-demo)** | Actions executed in the terminal to demonstrate switching traffic. | 
 | **6.3.3** | **[Implementing Canary Deployments](#633-implementing-canary-deployments)** | Progressive rollout strategy releasing the new version to a small subset of users. |
 | **6.3.3.1** | **[Demo Recap: Progressive Traffic Demo](#section-6-3-3-1)** | Gradual scaling of Stable and Canary deployments using kubectl scale to achieve controlled traffic distribution. |
-| **6.3.4** | **[Related Deployment Strategies Comparison](#section-6-3-4)** | Comparison: Blue/Green vs. Canary Deployments |
+| **6.3.4** | **[Related Deployment Strategies Comparison](#634-related-deployment-strategies-comparison)** | Comparison: Blue/Green vs. Canary Deployments |
 | **6.3.5** | **[Understanding Custom Resource Definitions (CRDs)](#section-6-3-5)** | Extending the Kubernetes API with new, custom resource types. |
 | **6.3.5.1** | **[Phase 1: Defining the New Permit Type (The CRD)](#section-6-3-5-1)** | Defines the structure and requirements for the "Nightly Backup Service" (BackUp) permit, establishing the official ruleset that extends the Central Mall Management's capabilities. |
 | **6.4** | **[Extending K8s: CRDs & Operators](#section-6-4-0)** | Automation of complex operational tasks (backup, scaling) using CRDs and Controllers. |
@@ -2673,7 +2673,7 @@ curl whatever.com:<NODEPORT>
 
 ---
 
-### 6.3.3.3 Related Deployment Strategies Comparison
+### 6.3.4 Related Deployment Strategies Comparison
 
 Here is a direct comparison between the Blue/Green and Canary deployment strategies, highlighting their goals, advantages, and ideal use cases in a Kubernetes context.
 
