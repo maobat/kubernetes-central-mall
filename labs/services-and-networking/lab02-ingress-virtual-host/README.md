@@ -2,7 +2,7 @@
 
 ## Services and Networking – Managing Incoming Traffic
 
-<img src="../../../docs/md-resources/docs/md-resources/images/lab02-ingress-routing.png" alt="lab02 - Services and Networking - Managing Incoming Traffic" width="35%" />
+<img src="../../../docs/md-resources/images/lab02-ingress-routing.png" alt="lab02 - Services and Networking - Managing Incoming Traffic" width="35%" />
 
 ---
 
