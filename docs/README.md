@@ -34,7 +34,8 @@ The documents are designed to be read sequentially, but each section is also sel
 - [3.7 The "Traffic Flow" Verification](traffic-flow-verification.md)  
   A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
 - [4.0 The Evolution of the Service IP Tracker](service-ip-tracker-evolution.md)  
-  ---
+  Endpoints vs EndpointSlice.
+---
 
 ## How to Use This Documentation
 
