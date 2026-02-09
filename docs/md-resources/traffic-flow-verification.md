@@ -1,5 +1,5 @@
 ### 3.7 The "Traffic Flow" Verification
-Now we verify that the "Sign" has successfully "snapped" onto the "Door.
+This section validates the end-to-end request path by confirming that traffic routed through the Gateway reaches the intended backend services, ensuring that routing rules, weights, and policies behave as expected under real request flow.
 
 ---
 **1. "Check the Infrastructure:** `get all` won't show the signs! Use specific commands:

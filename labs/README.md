@@ -1,13 +1,11 @@
-# Labs and Exercises
+## Labs Index
 
-This folder contains practical exercises and YAML examples to reinforce the concepts explained in the documentation.
+### Services & Networking
+- lab01 – NodePort + cross-namespace access
+- lab02 – Ingress with virtual host routing
 
-## Suggested content
+### Storage
+- (coming soon)
 
-- Step-by-step YAML exercises
-- Examples of Pods, Services, Ingress
-- Storage and PersistentVolume exercises
-- Security and RBAC exercises
-- Deployment and scaling examples
-
-Each lab should include objectives, instructions, and expected outcomes.
+### Security
+- (coming soon)
