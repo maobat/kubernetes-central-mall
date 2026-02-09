@@ -1,22 +1,38 @@
 # Documentation
 
-This folder contains conceptual explanations, diagrams, and analogies for Kubernetes concepts using the Central Mall analogy.
+This folder contains the conceptual documentation for **Kubernetes Central Mall**.  
+Each section explains core Kubernetes concepts using a consistent **Central Mall analogy**, with a focus on clarity, architecture, and CKAD relevance.
 
-## Suggested structure
+The documents are designed to be read sequentially, but each section is also self-contained.
 
-- Overview of core Kubernetes concepts
-- Traffic flow: Pods, Services, Ingress
-- Storage: Volumes and PersistentVolumes
-- Security: RBAC, Secrets, Network Policies
-- Deployments & Scaling: Shops opening, closing, expanding
+---
 
-Add diagrams and notes here to support the hands-on labs.
+## Contents
 
-## Docs Index
+- [2.0 The Core Idea: Storage Decoupling](storage-decoupling.md)  
+  A concise overview of the Kubernetes storage decoupling principle, explaining PersistentVolumes, PersistentVolumeClaims, and the binding process.
 
-- [2.0 The Core Idea: Storage Decoupling](storage-decoupling.md)
-- [3.0 The Cast of Characters (Internal & External Components)](cast-of-characters.md)
-- [3.1 Understanding the Traffic Flow (The "Customer Journey")](traffic-flow.md)
-- [3.2 Diagnostic Cheat Sheet for the Cast](diagnostic-cheat-sheet.md))
-- [3.3 Gateway API: The "Smart Transit Hub"](gateway-api.md)
-- [3.4 Mall Analogy: Ingress vs. Gateway API](ingress-vs-gateway.md)
+- [3.0 The Cast of Characters (Internal & External Components)](cast-of-characters.md)  
+  A complete mapping of core Kubernetes resources to the Central Mall analogy, covering Pods, Deployments, Services, Ingress, RBAC, and Gateway components.
+
+- [3.1 Understanding the Traffic Flow (The "Customer Journey")](traffic-flow.md)  
+  A step-by-step walkthrough of how a request travels through the mall, from DNS resolution to Pod execution.
+
+- [3.2 Diagnostic Cheat Sheet for the Cast](diagnostic-cheat-sheet.md)  
+  A practical troubleshooting guide that maps common Kubernetes issues to mall characters and the `kubectl` commands used to diagnose them.
+
+- [3.3 Gateway API: The "Smart Transit Hub"](gateway-api.md)  
+  An introduction to the modern, role-oriented traffic management model that supersedes Ingress, focusing on GatewayClass, Gateway, and HTTPRoute.
+
+- [3.4 Mall Analogy: Ingress vs. Gateway API](ingress-vs-gateway.md)  
+  A side-by-side comparison highlighting the architectural and operational differences between legacy Ingress and the modern Gateway API approach.
+
+---
+
+## How to Use This Documentation
+
+- Start with **Section 2.0** to understand foundational Kubernetes principles.
+- Continue through **Section 3.x** to explore networking, traffic flow, and diagnostics.
+- Pair these documents with the hands-on exercises in the `labs/` directory for practical learning.
+
+This documentation is part of an evolving project and will expand as new sections and labs are added.
