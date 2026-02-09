@@ -1,5 +1,5 @@
 ## 6.5 Service Mesh and Security
-<img src="../images/image-12.png" alt="Service Mesh and Security" height="35%" width="35%" />
+<img src="images/images/image-12.png" alt="Service Mesh and Security" height="35%" width="35%" />
 
 As clusters grow, managing communication between microservices becomes complex. A Service Mesh is a dedicated infrastructure layer that handles **service-to-service (East-West)** traffic.
 
@@ -81,7 +81,7 @@ Istio is a "Heavyweight" solution. You don't write the proxy YAML yourself; the 
 ---
 ### 6.6 Observability (The Mall Control Room)
 
-<img src="../images/image-13.png" alt="Observability (The Mall Control Room)" height="35%" width="35%" />
+<img src="images/images/image-13.png" alt="Observability (The Mall Control Room)" height="35%" width="35%" />
 
 If your mall is running hundreds of shops and thousands of workers, you can't walk to every store to check if things are okay. You need a **Central Control Room** to monitor the state of the mall using external signals.
 
@@ -111,7 +111,7 @@ Observability is "Monitoring on Steroids." While basic monitoring tells you if a
 ### 6.6.3 The "Control Room" Toolset
 To run a professional mall, you hire specialized teams for each pillar:
 
-- 1. **Prometheus & Grafana:** The **Metric Gauges**. Prometheus collects the numbers (the "scrapers"), and Grafana puts them on beautiful TV screens in the control room.<img src="../images/image-11.png" alt="Data Warehouse Architecture" height="35%" width="35%" />
+- 1. **Prometheus & Grafana:** The **Metric Gauges**. Prometheus collects the numbers (the "scrapers"), and Grafana puts them on beautiful TV screens in the control room.<img src="images/images/image-11.png" alt="Data Warehouse Architecture" height="35%" width="35%" />
 - 2. **Loki / ELK Stack:** The **Library**. These tools store every "Log" (incident report) so you can search through them to find out what went wrong.
 - 3. **Jaeger:** The **GPS Tracker**. It shows you exactly which "Hallway" (service communication) is causing a delay.
 ---

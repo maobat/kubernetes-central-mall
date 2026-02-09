@@ -1,3 +1,5 @@
+> ⚠️ This file contains the original monolithic draft.
+> The structured and maintained content lives under /docs.
     # Kubernetes Decoupling & Application Configuration
 
 ## Key Component Analysis: Storage, Configuration, RBAC Security, and API Interaction
