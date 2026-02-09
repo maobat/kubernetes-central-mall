@@ -2,3 +2,6 @@
   - Create a high-security department (**Namespace**: `secure`).
   - Issue a specialized identity badge (**ServiceAccount**: `secure`).
   - Deploy a managed store (**Deployment**: `securedeploy`) that uses this specific badge instead of the generic one.
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

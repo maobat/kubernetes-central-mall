@@ -80,3 +80,5 @@ spec:
     kubectl exec $POD_NAME -- cat /usr/share/nginx/html/index.html
     # Expected output: hello world from ConfigMap
     ```
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

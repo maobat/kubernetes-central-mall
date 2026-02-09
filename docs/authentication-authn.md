@@ -22,3 +22,5 @@ The configuration is read from:
 less ~/.kube/config
 # Displays the content of the configuration file.
 ```
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

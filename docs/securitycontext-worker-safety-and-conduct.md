@@ -6,3 +6,6 @@ A **SecurityContext** defines the specific "behavioral rules" for a worker (Pod/
 |**runAsNonRoot**|No "Master Key"|Prevents the worker from having "Root/Admin" access to the building.|
 |**readOnlyFilesystem**|No Writing on Walls|Prevents the container from changing its own internal files.|
 |**allowPrivilegeEscalation**|No Promotions|Prevents a worker from gaining higher clearance than assigned.|
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

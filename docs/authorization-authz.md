@@ -13,3 +13,5 @@ kubectl auth can-i get pods
 kubectl auth can-i get pods --as bob@example.com
 # If Bob is not bound to a role, this will likely return 'no'.
 ```
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

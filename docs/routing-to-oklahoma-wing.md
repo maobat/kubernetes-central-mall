@@ -79,3 +79,6 @@ spec:
       port: 80
 ```
 **Apply it:** `mk -- apply -f oklahoma-route.yaml -n oklahoma`
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

@@ -48,3 +48,6 @@ kubectl apply -f coredns-secret.yaml
 # Patch the ServiceAccount to reference the new token Secret (required for legacy compatibility)
 kubectl patch sa coredns -n kube-system -p '{"secrets": [{"name": "coredns-manual-token"}]}'
 ```
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

@@ -22,3 +22,5 @@ kubectl get svc canary-svc
 # Get the dynamic "Guest List" using a label filter
 kubectl get endpointslice -l kubernetes.io/service-name=canary-svc
 ```
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

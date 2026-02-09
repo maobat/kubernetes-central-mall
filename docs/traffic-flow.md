@@ -13,3 +13,6 @@ To see how these characters interact, follow the path of a request during `Secti
 5. **The Staff List (EndpointSlice)**: The Service checks the **Guest List** to see which workers (Pods) are currently available.
 
 6. **The Staff (Pod)**: The request is handed to an available worker who serves the "Nginx Welcome Page."
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

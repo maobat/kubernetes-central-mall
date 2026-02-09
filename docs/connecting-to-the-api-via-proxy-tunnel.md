@@ -13,3 +13,6 @@ To safely access the API using local tools like \`curl\`, you start the Kubernet
     curl http://localhost:8001
     ```
     *This request, now proxied securely, will return a JSON object listing all available API paths and groups, providing access to all exposed Kubernetes functions.*
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

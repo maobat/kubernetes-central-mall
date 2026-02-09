@@ -73,3 +73,6 @@ containers:
     name: cmvol
 ```
 When the Pod runs, the key (`index.html`) inside the ConfigMap appears as a file named `index.html` at the specified `mountPath`.
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

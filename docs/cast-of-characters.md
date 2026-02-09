@@ -22,3 +22,6 @@
 |**The HR Assignment Letter**|**RoleBinding**|The Local HR Appointment|The document that pins a **Local Permit (Role)** to a specific **Employee ID (ServiceAccount)** within one shop.|
 |**The Executive Permit**|**ClusterRole**|The Mall-Wide Authority|A list of rules that apply to the **entire Mall (Cluster)**. Used for resources like Nodes or for tasks across all Namespaces.|
 |**The Executive Promotion**|**ClusterRoleBinding**|The Mall-Wide Appointment|The high-level document that grants an **Executive Permit (ClusterRole)** to an ID, giving them power across the **entire mall**.|
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

@@ -22,3 +22,6 @@ kubectl get gtw
 curl -H "Host: myapp.info" <GATEWAY_IP>
 ```
 Since we have the oklahoma wing of the mall ready with our securepod (`Task 15`), let's apply this new **Gateway API** logic to it. This will transition us from a simple internal pod to a professionally routed "Storefront."
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

@@ -36,3 +36,5 @@ If you look closer at the `describe` output, you will see a "Mount" point:
   - **SA:** Is the worker using a specialized Badge (**ServiceAccount**) or just the guest one?
   - **SecurityContext:** Is the worker allowed to have a Master Key (**Root**) or are they restricted?
   - **Resources:** Is the worker staying within their allocated Desk Space (**Memory/CPU**)?
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

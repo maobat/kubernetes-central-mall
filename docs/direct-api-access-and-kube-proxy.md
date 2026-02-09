@@ -7,3 +7,6 @@ The Kubernetes APIs are **RESTful**, meaning they can be accessed directly using
     * \`kubectl --v=10 get pods\` (or any other command) will show the actual HTTP request URL, headers, and response.
 * **Security Requirement:** The \`kube-apiserver\` is the core Kubernetes process exposing functionality. It is typically started as a systemd process and only allows **TLS certificate-based access** for security.
 * **The Role of \`kube-proxy\`:** To provide a secure and simple interface for direct API access from a local workstation without having to manage certificates explicitly, you use \`kube-proxy\`. It establishes a secure tunnel to the API server.
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

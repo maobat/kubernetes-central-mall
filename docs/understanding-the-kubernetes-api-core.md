@@ -8,3 +8,6 @@ The Kubernetes API defines which resources exist (Pods, Deployments, Services, e
 * **Inspecting Resources:** Use the following commands for an overview:
     * \`kubectl api-resources\`: Shows all API resources defined in specific APIs.
     * \`kubectl api-versions\`: Provides a list of all resource and version information currently available in the cluster.
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

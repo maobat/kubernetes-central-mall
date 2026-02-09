@@ -178,3 +178,6 @@ This walkthrough demonstrates creating a generic password Secret and injecting i
     ```
 
 **Result:** The MariaDB Pod will now run with an environment variable named `MYSQL_ROOT_PASSWORD` set to the value stored in the `dbpw` Secret.
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

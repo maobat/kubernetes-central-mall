@@ -49,3 +49,5 @@ Once the `kubectl proxy` is running, you can use standard RESTful commands via `
     ```bash
     cat ~/.kube/config
     ```
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)

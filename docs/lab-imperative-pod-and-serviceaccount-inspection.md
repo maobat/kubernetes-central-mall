@@ -20,3 +20,6 @@ kubectl create -f bysysa.yaml
 # 5. Inspect the live Pod's final YAML to confirm the ServiceAccount is set.
 kubectl get pods bysysa -o yaml | less
 ```
+
+
+[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
