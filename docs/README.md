@@ -27,6 +27,8 @@ The documents are designed to be read sequentially, but each section is also sel
 - [3.4 Mall Analogy: Ingress vs. Gateway API](ingress-vs-gateway.md)  
   A side-by-side comparison highlighting the architectural and operational differences between legacy Ingress and the modern Gateway API approach.
 
+- [3.5 Lab 6.3.3.2: Advanced Traffic Splitting](advanced-traffic-splitting.md)  
+  A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
 ---
 
 ## How to Use This Documentation
