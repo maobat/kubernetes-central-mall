@@ -1,6 +1,6 @@
 ### 3.6 Lab Exercise: Routing to the Oklahoma Wing 
 
-<img src="/images/image-11.png" alt="Canary Deployment Schema in Kubernetes" height="35%" width="35%" />
+<img src="images/image11.png" alt="Canary Deployment Schema in Kubernetes" height="35%" width="35%" />
 
 We are transforming the `oklahoma` wing from an isolated pod into a professional storefront accessible via the **Gateway API**.
 
