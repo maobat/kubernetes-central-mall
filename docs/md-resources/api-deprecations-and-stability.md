@@ -1,5 +1,5 @@
 ### 4.3 API Deprecations and Stability
-<img src="images/images/image-15.png" alt="4.3 API Deprecations and Stability" height="35%" width="35%" />
+<img src="images/image-15.png" alt="4.3 API Deprecations and Stability" height="35%" width="35%" />
 
 Kubernetes maintains a strict policy regarding API stability. With new Kubernetes releases, older API versions may get deprecated.
 

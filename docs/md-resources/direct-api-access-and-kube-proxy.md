@@ -1,5 +1,5 @@
 ### 4.2.2 Direct API Access and \`kube-proxy\`
-<img src="images/images/image-16.png" alt="4.2.2 Direct API Access and \`kube-proxy\" height="35%" width="35%" />
+<img src="images/image-16.png" alt="4.2.2 Direct API Access and \`kube-proxy\" height="35%" width="35%" />
 
 The Kubernetes APIs are **RESTful**, meaning they can be accessed directly using standard HTTP requests. This is useful when \`kubectl\` might not be available or for scripting purposes.
 
