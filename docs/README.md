@@ -31,6 +31,8 @@ The documents are designed to be read sequentially, but each section is also sel
   A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
 - [3.6 Lab Exercise: Routing to the Oklahoma Wing](routing-to-oklahoma-wing.md)  
   A hands-on exercise guiding you through routing requests to a specific namespace using Services, Ingress, and Gateway API, simulating a real-world customer journey within the mall.
+- [3.7 The "Traffic Flow" Verification](traffic-flow-verification.md)  
+  A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
 ---
 
 ## How to Use This Documentation
