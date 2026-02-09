@@ -7,4 +7,4 @@ To grant a Pod permission to see other Pods, we follow the HR workflow:
 4. **Give the Badge to the Worker:** `kubectl set serviceaccount deployment viewginx viewer -n bellevue`
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

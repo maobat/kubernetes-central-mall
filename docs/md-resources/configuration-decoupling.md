@@ -6,4 +6,4 @@ The key principle is decoupling application code from site-specific configuratio
 Configuration decoupling ensures that application settings (`ConfigMaps`), sensitive data (`Secrets`), and API access credentials (`ServiceAccounts`) are managed externally to the Pod definition. This promotes portability and security.
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

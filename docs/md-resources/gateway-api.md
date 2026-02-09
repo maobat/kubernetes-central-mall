@@ -30,4 +30,4 @@ helm install my-gateway-controller oci://ghcr.io/nginxinc/charts/nginx-gateway-f
   3. **Build the Entrance (Gateway):** Allocates the Mall's external IP address.
   4. **Hang the Signs (HTTPRoute):** Connects the Gateway to your shop services (like `task7svc`).
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

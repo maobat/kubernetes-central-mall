@@ -23,4 +23,4 @@ kubectl get svc canary-svc
 kubectl get endpointslice -l kubernetes.io/service-name=canary-svc
 ```
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

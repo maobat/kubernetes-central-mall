@@ -8,4 +8,4 @@ In this scenario, we aren't just opening a standard stall. We are creating a res
 |**Set ServiceAccount**|**Distribute the Badges**|`kubectl set serviceaccount -n secure deploy securedeploy secure`|
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

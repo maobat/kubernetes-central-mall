@@ -10,4 +10,4 @@ If the mall isn't working, use these commands to find the "Character" at fault:
 - **Is the Security Guard following the rules?** `kubectl describe ingress myapp`
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

@@ -3,4 +3,4 @@
 To grant the necessary permission (e.g., to list Pods), we need to connect a **custom ServiceAccount** to a **Role** via a **RoleBinding**.
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

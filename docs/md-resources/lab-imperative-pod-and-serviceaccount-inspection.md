@@ -22,4 +22,4 @@ kubectl get pods bysysa -o yaml | less
 ```
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

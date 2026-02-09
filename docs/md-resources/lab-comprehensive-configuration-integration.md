@@ -81,4 +81,4 @@ spec:
     # Expected output: hello world from ConfigMap
     ```
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

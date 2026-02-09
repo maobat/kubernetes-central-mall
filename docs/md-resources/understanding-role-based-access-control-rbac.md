@@ -11,4 +11,4 @@ RBAC is the mechanism that connects the "Who" to the "What."
 | **ClusterRoleBinding** | **The Executive Appointment** | Connects a **User** or **ServiceAccount** to a **ClusterRole** across the entire cluster. |
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

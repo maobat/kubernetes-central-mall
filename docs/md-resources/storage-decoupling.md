@@ -10,4 +10,4 @@ The Kubernetes storage model is built on **decoupling**. Applications (Pods) sho
 | **Decoupling** | **Worker Freedom** | The Worker (Pod) only references the PVC Request Form, allowing it to move across the cluster without needing to know the physical storage path (PV hostPath, cloud disk, etc.). |
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

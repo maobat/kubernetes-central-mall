@@ -4,4 +4,4 @@ A **Quota** is a total limit applied to a **Namespace**.
   - **The Crucial Rule:** If a Quota is set on a department, **every worker** hired must have a defined budget (Requests/Limits) or Management will reject the application immediately.
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

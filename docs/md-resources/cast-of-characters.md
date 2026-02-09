@@ -24,4 +24,4 @@
 |**The Executive Promotion**|**ClusterRoleBinding**|The Mall-Wide Appointment|The high-level document that grants an **Executive Permit (ClusterRole)** to an ID, giving them power across the **entire mall**.|
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

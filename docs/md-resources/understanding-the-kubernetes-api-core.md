@@ -10,4 +10,4 @@ The Kubernetes API defines which resources exist (Pods, Deployments, Services, e
     * \`kubectl api-versions\`: Provides a list of all resource and version information currently available in the cluster.
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

@@ -114,4 +114,4 @@ This lab demonstrates the process of using rapid, imperative commands to configu
 ---
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

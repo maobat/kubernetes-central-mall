@@ -64,4 +64,4 @@ spec:
 The attempt is forbidden because the `default` ServiceAccount is not bound to any Role granting `list` permission for `pods`.
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

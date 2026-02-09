@@ -73,4 +73,4 @@ kubectl get pods
 |`kubectl set resources`|Change the Budget on the Fly|Update limits for a Deployment without deleting it.|
 |`kubectl create quota`|Set Department Spending|Restrict a Namespace's total footprint.|
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

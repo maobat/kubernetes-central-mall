@@ -15,4 +15,4 @@ To see how these characters interact, follow the path of a request during `Secti
 6. **The Staff (Pod)**: The request is handed to an available worker who serves the "Nginx Welcome Page."
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

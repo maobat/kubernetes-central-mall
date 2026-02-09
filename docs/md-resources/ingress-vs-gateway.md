@@ -58,4 +58,4 @@ While **Ingress** remains relevant for the exam, understanding **Gateway API** g
 Think of Gateway API as the **professional mall redesign**: safer, cleaner, and built for growth.
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

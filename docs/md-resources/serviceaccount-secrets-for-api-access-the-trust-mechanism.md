@@ -50,4 +50,4 @@ kubectl patch sa coredns -n kube-system -p '{"secrets": [{"name": "coredns-manua
 ```
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

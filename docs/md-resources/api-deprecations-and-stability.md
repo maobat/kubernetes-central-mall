@@ -46,4 +46,4 @@ Once you correct your `redis-deploy.yaml` file to use the stable `apiVersion: ap
    kubectl create -f redis-deploy.yaml
    ```
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

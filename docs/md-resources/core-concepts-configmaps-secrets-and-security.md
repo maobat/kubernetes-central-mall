@@ -12,4 +12,4 @@ ConfigMaps and Secrets are essential for separating application code (portable) 
 Secrets are specialized Kubernetes resources designed for storing sensitive data. They are **Base64 encoded**, not encrypted by default, and must be protected by **RBAC** (Role-Based Access Control) and **etcd** (Every Thing Consistently Distributed) encryption. Secrets are vital for allowing Pods to connect securely to other cluster resources or external services.
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

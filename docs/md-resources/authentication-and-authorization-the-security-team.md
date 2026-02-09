@@ -4,4 +4,4 @@
 Access to the Kubernetes API is governed by two distinct processes: **Authentication** (AuthN) and **Authorization** (AuthZ).
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)

@@ -4,4 +4,4 @@ Before a worker (Pod) can be hired, they must declare their resource needs.
   - **Resource Limits (The Maximum):** "You can use more power if the mall has extra, but you are strictly cut off at 500mW."
 
 
-[Back to Documentation](https://github.com/maobat/kubernetes-central-mall/tree/main/docs#documentation)
+[Back to Documentation](../README.md)
