@@ -33,7 +33,8 @@ The documents are designed to be read sequentially, but each section is also sel
   A hands-on exercise guiding you through routing requests to a specific namespace using Services, Ingress, and Gateway API, simulating a real-world customer journey within the mall.
 - [3.7 The "Traffic Flow" Verification](traffic-flow-verification.md)  
   A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
----
+- [4.0 The Evolution of the Service IP Tracker](service-ip-tracker-evolution.md)  
+  ---
 
 ## How to Use This Documentation
 
