@@ -62,3 +62,6 @@ Check on the node (only **after** a Pod uses it): `minikube ssh`, then `ls /myda
 | `DirectoryOrCreate` | **Creates the directory if missing** |
 | `FileOrCreate` | Creates an empty file if missing |
 | (no type) | Kubernetes does not create the path (Strict Check) |
+
+
+[Back to Documentation](../README.md)

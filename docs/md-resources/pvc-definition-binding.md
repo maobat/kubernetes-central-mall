@@ -34,3 +34,6 @@ spec:
     * Supports the `ReadWriteOnce` access mode.
     * (Crucially) Matches the `StorageClass` (Contract Type).
 * **Slot Reservation (Bound Status):** Upon finding a match, the Mall Manager reserves that specific Warehouse Slot (PV) and marks the Request Form (PVC) status as **`Bound`**. The two are now exclusively paired. **A PVC bind is exclusive: after binding, the PV cannot be used by any other PVC.**
+
+
+[Back to Documentation](../README.md)

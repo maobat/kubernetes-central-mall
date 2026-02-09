@@ -83,3 +83,6 @@ The miracle happens here. Even though you "fired" the staff and the Mall shut do
 |**The Heavy Safe**|**Persistent Volume:** Data that lives longer than the Pod.|
 |**The Radio Glitch**|**CNI (Calico):** The networking layer that assigns Pod IPs.|
 |**Permanent Shop #0**|**StatefulSet:** Guaranteed identity and storage mapping.|
+
+
+[Back to Documentation](../README.md)

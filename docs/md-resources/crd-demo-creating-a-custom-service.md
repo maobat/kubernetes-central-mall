@@ -64,3 +64,6 @@ Once the Controller is running, the user never interacts directly with the Kuber
 * **To create the backup:** `kubectl apply -f crd-backup.yaml` (The Controller sees this and creates the K8s Job).
 * **To change the image:** `kubectl edit bks mybackup` (The Controller sees the update and rolls out the new K8s Job).
 * **To delete the backup service:** `kubectl delete bks mybackup` (The Controller sees the deletion and automatically cleans up the underlying K8s Job).
+
+
+[Back to Documentation](../README.md)

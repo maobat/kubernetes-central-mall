@@ -13,3 +13,6 @@ How workers (Pods) handle their data: temporary files, shared lockers, persisten
 | **External Storage** | PersistentVolume | Warehouse Slot (The Room) | A block of durable, external storage. **Independent resource.** |
 | **Storage Request** | PVC | Storage Request Form | The application requests specific storage criteria. |
 | **Storage Automation** | StorageClass | The Logistics Officer / Contract Type | The administrative blueprint defining how storage is provisioned (Dynamic) or which pre-existing storage (Static) can be claimed. |
+
+
+[Back to Documentation](../README.md)

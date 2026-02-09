@@ -70,3 +70,6 @@ helm install -f nginx/values.yaml my-nginx ./nginx/
   - `helm show chart bitnami/mysql`: Displays only the basic metadata of the Chart (Chart.yaml).
   - `helm show all bitnami/mysql`: See the entire blueprint before buying.
   - `helm template --debug`: **"The X-Ray"**, shows the generated YAML without actually building anything.
+
+
+[Back to Documentation](../README.md)

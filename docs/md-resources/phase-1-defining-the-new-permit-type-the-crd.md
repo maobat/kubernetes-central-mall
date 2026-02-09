@@ -66,3 +66,6 @@ spec:
 | :--- | :--- | :--- |
 | **6.3.5.2.2. Create the Custom Resource (CR)** (`kubectl create -f crd-backup.yaml`) | **Submit the Form:** Send the specific request to Central Management. | The API server stores this configuration in etcd. The resource now exists but is currently *unmanaged*. |
 | **6.3.5.2.3. Verify the New Resource** (`kubectl get bks`) | **Check the Request Status:** List all submitted "Nightly Backup Services" forms. | Confirms the instance is stored in Kubernetes. The resource is pending action by a Controller/Operator. |
+
+
+[Back to Documentation](../README.md)

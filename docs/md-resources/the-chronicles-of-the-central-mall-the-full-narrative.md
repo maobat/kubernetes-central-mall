@@ -77,3 +77,6 @@ Suddenly, the jewelry store goes dark. The Owner rushes to the **Management Offi
 |**Security**|Control access|HR (RoleBinding), Badge (ServiceAccount)|
 |**Logistics**|Save the data|Safe (PV), Locker Form (PVC)|
 |**Traffic**|Connect users|Guard (Ingress), Signage (HTTPRoute)|
+
+
+[Back to Documentation](../README.md)

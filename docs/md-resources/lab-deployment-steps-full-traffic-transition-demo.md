@@ -94,3 +94,6 @@ This sequence demonstrates the full process, from initial Blue setup to the zero
 * Green Pod IPs (v1.15): e.g., 10.42.0.5, .6, .7
 
 The Endpoint status clearly shows that only the Service's selector patch (Phase III or IV) is needed to redirect all traffic instantaneously, which is the core benefit of the Blue/Green strategy.
+
+
+[Back to Documentation](../README.md)

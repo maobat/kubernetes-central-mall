@@ -20,3 +20,6 @@ Managing a mall manually is impossible. DevOps and GitOps are the modern methodo
 
 >**Why this matters for the CKAD**
 In the exam, you act as the **DevOps Engineer**. You are responsible for the **YAML files** (Configuration as Code). While you might use `kubectl` to apply changes, in a real "GitOps" environment, you would simply "Push" your code to Git and let the cluster update itself.
+
+
+[Back to Documentation](../README.md)

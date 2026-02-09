@@ -149,3 +149,6 @@ kubectl delete deployment old-nginx
 |Image|nginx:1.14|nginx:latest|
 |Service Label|type: canary|type: canary|
 |Count|3 Replicas|3 Replicas|
+
+
+[Back to Documentation](../README.md)

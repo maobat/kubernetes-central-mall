@@ -34,3 +34,6 @@ The `storageClassName` value is the unique identifier for the StorageClass resou
 | **Hard Static Match** | `storageClassName: ""` | **No Logistics Officer Involved:** PVC demands a PV that also explicitly rejects Dynamic Provisioning. | Static Binding only (manual) |
 | **Default Dynamic** | `storageClassName: standard` (or `default`) | **Standard Contract:** If a matching PV is not found, the Logistics Officer (StorageClass) automatically creates a standard-quality PV for the PVC. | Dynamic Provisioning (default) |
 | **Custom Contract** | `storageClassName: gold-fast`, `manual`, `nfs-archive` | **Specialized Contract:** This name refers to a custom blueprint created by the Admin, defining specific characteristics like disk speed (e.g., SSD vs. HDD) or replication. | Dynamic or Static Selection |
+
+
+[Back to Documentation](../README.md)

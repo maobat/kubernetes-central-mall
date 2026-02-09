@@ -165,3 +165,6 @@ Just like the API server, your Nginx or Python apps should have these "Pulse Che
 
 -  **Section Connection:** 
   While **Prometheus (6.6.3)** watches the mall's "Blood Pressure" (Metrics), these **Health Endpoints (6.6.4)** are the immediate "Pulse Checks" used by the **Manager (Kubelet)** to decide if a worker needs to be replaced right now.
+
+
+[Back to Documentation](../README.md)

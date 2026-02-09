@@ -153,3 +153,6 @@ spec:
 |**3. Reader Worker acts**|The second worker looks at the same workbench and reads the note.|
 |**4. Container Crashes**|If one worker faints and is replaced, the **workbench stays put**. The data survives.|
 |**5. Pod is Deleted**|The shop is closed. The Mall Janitor comes by and **throws the whole workbench in the trash**. The data is gone forever.|
+
+
+[Back to Documentation](../README.md)

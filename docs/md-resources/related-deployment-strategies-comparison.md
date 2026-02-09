@@ -19,3 +19,6 @@ Here is a direct comparison between the Blue/Green and Canary deployment strateg
 **Choose Blue/Green** if your main concern is ensuring zero downtime and having the option for an immediate, large-scale rollback, and you can afford to double your infrastructure for a short period.
 
 **Choose Canary** if your main concern is minimizing exposure to risk for end-users and you need to gather real-time metrics on a sample of live traffic before committing to a full rollout.
+
+
+[Back to Documentation](../README.md)

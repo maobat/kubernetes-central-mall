@@ -59,3 +59,6 @@ spec:
 | **PV** | `RWM` + `storageClassName: manual` | Creates a 10Gi shared storage room with a "Manual" contract. |
 | **PVC** | `RWM` + `storageClassName: manual` | Requests a shared room with a "Manual" contract (3Gi). **The match succeeds.** |
 | **Pod** | Mounts to `/usr/local/apache2/htdocs` | The Pod mounts the bound PV directly into the web server's public folder, making the contents of `/mnt/data` on the Node accessible via the web server. |
+
+
+[Back to Documentation](../README.md)

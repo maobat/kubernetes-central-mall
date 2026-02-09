@@ -278,3 +278,6 @@ replicaset.apps/prod-nginx-friday20-58d8c8f884               5         5        
 **Helm (6.2.2)** is best when you are using **third-party apps** (like MySQL or Grafana) where the developers provided a "Menu" (values.yaml) for you.
 
 **Kustomize (6.3.1)** is best for **your own apps**, where you want to keep your YAMLs simple and "Pure," but need different versions for Dev, Staging, and Prod.
+
+
+[Back to Documentation](../README.md)

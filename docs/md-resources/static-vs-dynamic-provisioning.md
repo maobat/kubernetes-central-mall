@@ -34,3 +34,6 @@ The key takeaway is that the file count is a symptom of the provisioning method:
 | :--- | :--- | :--- | :--- |
 | **Section 5.5** | **Dynamic** | **1 or 2** (PVC + Pod) | Request storage, allowing Kubernetes to automatically create the necessary backend volume. |
 | **Section 5.7.1** | **Static** | **3** (PV, PVC, Pod) | Explicitly define and manually bind a pre-existing storage resource. |
+
+
+[Back to Documentation](../README.md)

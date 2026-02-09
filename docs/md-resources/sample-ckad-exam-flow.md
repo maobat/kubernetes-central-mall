@@ -17,3 +17,6 @@ Before starting the sample exam, ensure you can perform these "Reflex Actions":
 |Networking|Create a Service for a Pod.|`k expose pod <name> --port=80 --target-port=8080`|
 |Security|Check permissions.|`k auth can-i create secrets --as system:serviceaccount:default:mysa`|
 Troubleshooting|Find why a Pod is failing.|`k get events --sort-by='.lastTimestamp'`|
+
+
+[Back to Documentation](../README.md)

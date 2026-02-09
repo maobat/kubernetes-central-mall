@@ -233,3 +233,6 @@ curl whatever.com:<NODEPORT>
 |**Control**|Scale replicas (9:1)|Set weight: 10 in YAML|
 |**Logic**|Probability based on worker count|Precise traffic percentage|
 |**Resource**|Service + Deployment|Gateway + HTTPRoute|
+
+
+[Back to Documentation](../README.md)
