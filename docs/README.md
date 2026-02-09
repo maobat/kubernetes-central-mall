@@ -29,6 +29,8 @@ The documents are designed to be read sequentially, but each section is also sel
 
 - [3.5 Lab 6.3.3.2: Advanced Traffic Splitting](advanced-traffic-splitting.md)  
   A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
+- [3.6 Lab Exercise: Routing to the Oklahoma Wing](routing-to-oklahoma-wing.md)  
+  A hands-on exercise guiding you through routing requests to a specific namespace using Services, Ingress, and Gateway API, simulating a real-world customer journey within the mall.
 ---
 
 ## How to Use This Documentation
