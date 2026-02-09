@@ -172,7 +172,7 @@ After each change in the number of open stalls (traffic increment), a mandatory 
 ---
 ### 6.3.3.2 Lab: The "Smart Transit Hub" (Gateway API Lab)
 
-<img src="images/image12.png" alt="The 'Smart Transit Hub'" height="35%" width="35%" />
+<img src="images/gateway-api-smart-hub.png" alt="The 'Smart Transit Hub'" height="35%" width="35%" />
 
 **Why use this instead of Ingress?**
 
