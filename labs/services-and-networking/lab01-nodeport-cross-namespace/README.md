@@ -6,7 +6,7 @@
 
 ---
 
-## Lab Goal
+## 🎯 Lab Goal
 
 This lab focuses on **Service exposure** and **cross-namespace communication**.
 
@@ -17,7 +17,7 @@ You will learn how to:
 
 ---
 
-## Requirements
+## 📋 Requirements
 
 1. Create a Namespace named **`remote`**
 2. In the `remote` Namespace:
@@ -35,7 +35,7 @@ You will learn how to:
 
 ---
 
-##  Mall Analogy
+## 🏬 Mall Analogy
 
 We are opening a boutique in a new, separate wing of the mall called **"remote"**.
 
