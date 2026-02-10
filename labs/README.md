@@ -8,4 +8,4 @@
 - (coming soon)
 
 ### Security
-- (coming soon)
+- lab03 – Using Secrets to inject sensitive configuration
