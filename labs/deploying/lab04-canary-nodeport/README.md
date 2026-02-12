@@ -114,7 +114,7 @@ At this point:
 
 - oldbird = 1 pod
 - newbird = 1 pod
-→ roughly 50/50 traffic
+→ ~ **50/50 traffic**
 
 ### 5️⃣ Shift Traffic to 90/10 (The Canary Step)
 
@@ -128,16 +128,16 @@ kubectl get pods -l type=bird
 ```
 At this point:
 
-oldbird = 9 pods
-newbird = 1 pod
-→ **90/10 traffic split**
+- oldbird = 9 pods
+- newbird = 1 pod
+
+  → ~ **90/10 traffic split**
 
 Verify again:
 ```bash
 kubectl describe svc bird
-``` 
-
-🔎 How Traffic Is Really Split*
+```
+🔎 **How Traffic Is Really Split**
 
 Kubernetes Services do:
 

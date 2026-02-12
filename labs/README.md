@@ -2,6 +2,7 @@
 
 ### Deploying Applications the DevOps Way
 - lab04 – Canary Deployments with NodePort and replica weighting
+- lab05 – Canary Deployments with Gateway API and native traffic weighting
 
 ### Services & Networking
 - lab01 – NodePort + cross-namespace access
