@@ -158,17 +158,7 @@ So, if it's clear the **concept of Gateway**, let's apply it:
 ```bash
 kubectl apply -f gateway.yaml
 ```
----
-🧪 **Exam Shortcut (If Allowed)**
 
->If you doesn't want to create the yaml file
-
-```shell
-kubectl create gateway oklahoma-entrance \
-  --class=nginx \
-  --protocol=HTTP \
-  --port=80
-```
 ---
 
 ### 3️⃣ Define the Canary Traffic Split with HTTPRoute
