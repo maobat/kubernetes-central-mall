@@ -258,6 +258,7 @@ No filters.
 
 This **directly contrasts Lab 04**, where replica counts were abused to fake weighting.
 
+---
 4️⃣ **What you should memorize (exam-safe)**
 
 You do **NOT** need to remember the full spec.
