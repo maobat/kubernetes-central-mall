@@ -220,8 +220,9 @@ spec:
   - name: oklahoma-entrance
   rules:
   - backendRefs:
-    **Why this works**
+
 ```
+>**Why this works**
 - No `matches` → matches **all HTTP traffic**
 - Single rule → default behavior
 - One backend → 100% of traffic goes there
