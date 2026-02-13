@@ -2,6 +2,8 @@
 
 ## Security – Secrets & Environment Variables
 
+<img src="../../../docs/md-resources/images/lab03-inject-sensitive-configuration-security.jpg" alt="lab03 - Inject Sensitive Configuration - Security" width="35%" />   
+
 ---
 
 ## 🧠 Conceptual Comic (Read First)

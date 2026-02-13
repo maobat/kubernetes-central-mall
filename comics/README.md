@@ -54,7 +54,9 @@ Comics help by:
     └── README.md
 
 **Story:** *Crossing the Mall Corridors*  
-**Lab:** `lab01-nodeport-cross-namespace`
+**Quick links:**
+- 🧪 **Lab:** [`lab01-nodeport-cross-namespace`](../labs/services-and-networking/lab01-nodeport-cross-namespace/README.md)
+- 📖 **Docs:** `docs/md-resources/traffic-flow.md`
 
 Explains:
 - How NodePort exposes services
@@ -70,8 +72,9 @@ Explains:
     ├── lab02-ingress-virtual-host.png
     └── README.md
 
-**Story:** *The Virtual Host Directory*  
-**Lab:** `lab02-ingress-virtual-host`
+**Quick links:**
+- 🧪 **Lab:** [`lab02-ingress-virtual-host`](../labs/services-and-networking/lab02-ingress-virtual-host/README.md)
+- 📖 **Docs:** `docs/md-resources/ingress-vs-gateway.md`
 
 Explains:
 - Host-based routing
@@ -87,8 +90,9 @@ Explains:
     ├── lab03-secrets-injection.png
     └── README.md
 
-**Story:** *The Locked Vault*  
-**Lab:** `lab03-secrets-injection`
+**Quick links:**
+- 🧪 **Lab:** [`lab03-secrets-env-injection`](../labs/security/lab03-secrets-env-injection/README.md)
+- 📖 **Docs:** `docs/md-resources/secrets-use-cases-and-application-integration.md`
 
 Explains:
 - Why secrets should never be hardcoded
@@ -104,8 +108,9 @@ Explains:
     ├── lab04-canary-nodeport.png
     └── README.md
     
-**Story:** *The Two Shops Experiment*  
-**Lab:** `lab04-canary-nodeport`
+**Quick links:**
+- 🧪 **Lab:** [`lab04-canary-nodeport`](../labs/deploying/lab04-canary-nodeport/README.md)
+- 📖 **Docs:** `docs/md-resources/implementing-canary-deployments.md`
 
 Explains:
 - Replica-based canary behavior
@@ -122,8 +127,9 @@ Explains:
     └── README.md
 
 
-**Story:** *The Lost Gateway*  
-**Lab:** `lab05-canary-deployment-gateway-api`
+**Quick links:**
+- 🧪 **Lab:** [`lab05-canary-deployment-gateway-api`](../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
+- 📖 **Docs:** `docs/md-resources/gateway-api.md`
 
 Explains:
 - Why a Gateway may show `Programmed: False`
