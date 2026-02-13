@@ -8,19 +8,16 @@
 
 ---
 
-## 🎯 Lab Goal
+## 🧠 Conceptual Comic (Read First)
 
-This lab demonstrates how to implement a **canary deployment** using:
-- Two Deployments
-- A shared **NodePort Service**
-- **Replica weighting** to control traffic distribution
+Before starting, read this short comic:
 
-No Ingress.  
-No Gateway.  
-Pure Kubernetes fundamentals (perfect for CKAD).
+👉 **The Canary Replica Weighting Mystery**  
+📁 `comics/canary-nodeport/01-canary-replica-weighting`
+
+It explains **how replica count determines traffic share** and why this is **not the modern way**.
 
 ---
-
 ## 📋 Requirements
 
 1. Run a Deployment named **oldbird**

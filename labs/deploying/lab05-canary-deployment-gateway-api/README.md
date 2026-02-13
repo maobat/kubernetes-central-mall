@@ -5,7 +5,26 @@
 <img src="../../../docs/md-resources/images/gateway-traffic-flow.png" alt="lab05 - Gateway API Canary Traffic Splitting" width="40%" />
 
 ---
+## 🧠 Conceptual Comic (Read First)
 
+Before starting, read this short comic:
+
+👉 **Il Giallo del Gateway Perduto**  
+📁 `comics/gateway-api/01-the-lost-gateway`
+
+It explains **why your Gateway has no IP** and how traffic really flows.
+
+---
+
+## 📘 Reference Docs
+
+- Gateway API fundamentals  
+  `docs/md-resources/gateway-api.md`
+
+- Advanced traffic splitting  
+  `docs/md-resources/advanced-traffic-splitting.md`
+
+---
 ## 🎯 Lab Goal
 
 This lab demonstrates how to implement a **canary deployment** using the **Gateway API**, where traffic splitting is:
@@ -134,7 +153,7 @@ No TLS, no hostname, no filters, **keep it dumb**.
 ---
 💡 In CKAD, complex Gateways are a trap.
 
-🧠 **The 10-second Recall Trick (Exam Gold)**
+🧠 **10-second recall** → Gateway = class + 1 HTTP door
 
 When under pressure, remember this sentence:
 

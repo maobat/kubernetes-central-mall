@@ -4,6 +4,18 @@
 
 ---
 
+## 🧠 Conceptual Comic (Read First)
+
+Before starting, read this short comic:
+
+👉 **The Secret of the High-Security Vault**  
+📁 `comics/secrets/01-secrets-injection`
+
+It explains **Secrets, Deployment, and Environment Variable Injection** in a CKAD-friendly way.
+
+
+---
+
 ## 🎯 Lab Goal
 
 This lab demonstrates how to:

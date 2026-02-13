@@ -1,0 +1,15 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: canary-route
+spec:
+  parentRefs:
+  - name: oklahoma-entrance
+  rules:
+  - backendRefs:
+    - name: stable-nginx
+      port: 80
+      weight: 90
+    - name: canary-nginx
+      port: 80
+      weight: 10
