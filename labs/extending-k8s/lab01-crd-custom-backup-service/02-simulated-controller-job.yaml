@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-nightly-backup
+spec:
+  template:
+    spec:
+      containers:
+        - name: backup
+          image: busybox
+          command:
+            - sh
+            - -c
+            - |
+              echo "Running FULL backup..."
+              sleep 10
+              echo "Backup completed"
+      restartPolicy: Never

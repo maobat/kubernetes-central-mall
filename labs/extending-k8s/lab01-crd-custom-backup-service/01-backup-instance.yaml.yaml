@@ -1,0 +1,8 @@
+apiVersion: stable.example.com/v1
+kind: BackUp
+metadata:
+  name: nightly-backup
+spec:
+  backupType: full
+  image: busybox
+  replicas: 1
