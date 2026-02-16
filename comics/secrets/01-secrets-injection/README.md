@@ -1,4 +1,4 @@
-<img src="lab03-secrets-injection.png" alt="Secrets injection" width="50%" />
+<img src="lab03-secrets-injection.png" alt="Secrets injection" width="40%" />
 
 # 🕵️ The Secret of the High-Security Vault
 

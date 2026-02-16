@@ -12,4 +12,5 @@
 - (coming soon)
 
 ### Security
+- lab01 – Managing Security Settings with ServiceAccountsy
 - lab03 – Using Secrets to inject sensitive configuration

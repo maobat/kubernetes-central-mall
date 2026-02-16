@@ -1,4 +1,4 @@
-<img src="lab05-il-giallo-del-gateway-perduto.png" alt="The Lost Gateway" width="50%" />
+<img src="lab05-il-giallo-del-gateway-perduto.png" alt="The Lost Gateway" width="40%" />
 
 # 🕵️ The Mystery of the Lost Gateway
 
