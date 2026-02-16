@@ -1,4 +1,5 @@
 <img src="lab01-serviceaccount-identity.png" alt="The Secure Badge" width="40%" />
+
 # 🛡️ The Secure Badge
 
 This comic explains:
