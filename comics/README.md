@@ -22,6 +22,7 @@ Comics help by:
 - Reducing cognitive load under stress
 
 > 📌 **Rule of thumb**  
+
 > If you can remember the comic, you can reconstruct the YAML.
 
 ---
@@ -56,7 +57,7 @@ Comics help by:
 **Story:** *The Nightly Backup Permit*  
 **Quick links:**
 - 🧪 **Lab:** [`lab01-crd-custom-backup-service`](../labs/extending-k8s/lab01-crd-custom-backup-service/README.md)
-- 📖 **Docs:** `docs/md-resources/understanding-custom-resource-definitions-crds.md`
+- 📖 **Docs:** [`docs/md-resources/understanding-custom-resource-definitions-crds.md`](../docs/md-resources/understanding-custom-resource-definitions-crds.md)
 
 Explains:
 - How Kubernetes can be extended with new resource types
@@ -76,7 +77,7 @@ Explains:
 **Story:** *Crossing the Mall Corridors*  
 **Quick links:**
 - 🧪 **Lab:** [`lab01-nodeport-cross-namespace`](../labs/services-and-networking/lab01-nodeport-cross-namespace/README.md)
-- 📖 **Docs:** `docs/md-resources/traffic-flow.md`
+- 📖 **Docs:** [`docs/md-resources/traffic-flow.md`](../docs/md-resources/traffic-flow.md)
 
 Explains:
 - How NodePort exposes services
@@ -94,7 +95,7 @@ Explains:
 
 **Quick links:**
 - 🧪 **Lab:** [`lab02-ingress-virtual-host`](../labs/services-and-networking/lab02-ingress-virtual-host/README.md)
-- 📖 **Docs:** `docs/md-resources/ingress-vs-gateway.md`
+- 📖 **Docs:** [`docs/md-resources/ingress-vs-gateway.md`](../docs/md-resources/ingress-vs-gateway.md)
 
 Explains:
 - Host-based routing
@@ -112,12 +113,32 @@ Explains:
 
 **Quick links:**
 - 🧪 **Lab:** [`lab03-secrets-env-injection`](../labs/security/lab03-secrets-env-injection/README.md)
-- 📖 **Docs:** `docs/md-resources/secrets-use-cases-and-application-integration.md`
+- 📖 **Docs:** [`docs/md-resources/secrets-use-cases-and-application-integration.md`](../docs/md-resources/secrets-use-cases-and-application-integration.md)
 
 Explains:
 - Why secrets should never be hardcoded
 - How env injection works
 - How applications receive sensitive data safely
+
+---
+### 🛡️ Service Accounts
+
+    security/
+    └── 02-the-secure-badge/
+        ├── lab01-the-secure-badge.png
+        └── README.md
+
+**Quick links:**
+- 🧪 **Lab:** [`lab01-serviceaccount-identity`](../labs/security/lab01-serviceaccount-identity/README.md)
+- 📖 **Docs:** [`docs/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md`](../docs/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)
+
+Explains:
+- Why **every Pod runs with an identity**
+- What the **default ServiceAccount** really is
+- How **Pods inherit identity from Deployments**
+- Why **assigning a ServiceAccount is a security boundary**
+- The CKAD mental model: 
+> *"Pods don't choose permissions — they wear the badge you give them."*
 
 ---
 
@@ -130,7 +151,7 @@ Explains:
 
 **Quick links:**
 - 🧪 **Lab:** [`lab04-canary-nodeport`](../labs/deploying/lab04-canary-nodeport/README.md)
-- 📖 **Docs:** `docs/md-resources/implementing-canary-deployments.md`
+- 📖 **Docs:** [`docs/md-resources/implementing-canary-deployments.md`](../docs/md-resources/implementing-canary-deployments.md)
 
 Explains:
 - Replica-based canary behavior
@@ -148,7 +169,7 @@ Explains:
 
 **Quick links:**
 - 🧪 **Lab:** [`lab05-canary-deployment-gateway-api`](../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
-- 📖 **Docs:** `docs/md-resources/gateway-api.md`
+- 📖 **Docs:** [`docs/md-resources/gateway-api.md`](../docs/md-resources/gateway-api.md)
 
 Explains:
 - Why a Gateway may show `Programmed: False`
