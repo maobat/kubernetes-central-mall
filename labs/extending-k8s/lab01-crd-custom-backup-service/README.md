@@ -81,6 +81,13 @@ This Job represents what a Controller **would** create after observing the CR.
 
 ---
 
+> ⚠️ Note  
+> If the Job Pod is stuck in `ImagePullBackOff`, this is **not related to CRDs**.
+> It usually indicates network restrictions (VPN, proxy, air-gapped cluster).
+> The CRD and reconciliation logic are still working correctly.
+
+---
+
 ## 🧠 Key Takeaways
 - CRDs extend the Kubernetes API
 - Custom Resources store **desired state**
