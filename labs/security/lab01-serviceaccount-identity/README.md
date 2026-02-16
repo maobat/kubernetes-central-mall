@@ -53,7 +53,7 @@ kubectl create serviceaccount secure -n secure
 
 Verify:
 ```bash
-kubectl set sa -n secure
+kubectl get sa -n secure
 ```
 
 ### 3️⃣ Create a Deployment using the ServiceAccount
