@@ -14,5 +14,5 @@ This comic explains:
 - You want a quick **mental model** using the mall analogy 😄
 
 🔗 References:
-- Docs → `docs/md-resources/core-concepts-configmaps-secrets-and-security.md`
-- Lab → `labs/security/lab03-secrets-env-injection`
+- Docs → [`docs/md-resources/core-concepts-configmaps-secrets-and-security.md`](../../../docs/md-resources/core-concepts-configmaps-secrets-and-security.md)
+- Lab → [`labs/security/lab03-secrets-env-injectio`](../../../labs/security/lab03-secrets-env-injection/README.md)

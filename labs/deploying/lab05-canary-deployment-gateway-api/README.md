@@ -18,11 +18,9 @@ It explains **why your Gateway has no IP** and how traffic really flows.
 
 ## 📘 Reference Docs
 
-- Gateway API fundamentals  
-  `docs/md-resources/gateway-api.md`
+- Gateway API fundamentals → [`docs/md-resources/gateway-api.md`](../../../docs/md-resources/gateway-api.md)
 
-- Advanced traffic splitting  
-  `docs/md-resources/advanced-traffic-splitting.md`
+- Advanced traffic splitting → [`docs/md-resources/advanced-traffic-splitting.md`](../../../docs/md-resources/advanced-traffic-splitting.md)
 
 ---
 ## 🎯 Lab Goal
