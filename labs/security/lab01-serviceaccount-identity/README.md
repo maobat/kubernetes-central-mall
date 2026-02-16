@@ -1,5 +1,8 @@
 # LAB 01 – Managing Security Settings (ServiceAccount)
 
+<img src="../../../comics/security/01-the-secure-badge/lab01-the-secure-badge.png" alt="The Secure Badge" width="40%" />
+
+---
 ## 🎯 Objective
 
 Learn how Kubernetes assigns **identity** to Pods using **ServiceAccounts**.
