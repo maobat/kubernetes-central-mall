@@ -1,20 +1,35 @@
-<img src="lab02-ingress-virtual-host.png"
-     alt="Ingress Virtual Host"
-     width="35%" />
+<img src="lab02-ingress-virtual-host.png" alt="Ingress Virtual Host" width="40%" />
 
 # 🕵️ The Virtual Host Gateway Show
 
 This comic explains:
 
-- How Ingress routes traffic to different hosts
-- Path-based and host-based routing rules
-- How Kubernetes decouples routing from services
+- host-based routing with **Ingress**
+- how one IP serves multiple applications
+- how traffic is routed before hitting Services
 
 📌 Read this if:
-- You are doing **LAB 02**
-- You want a clear visual of traffic routing via Ingress
-- You like mall analogies for CKAD concepts
+- you are doing **LAB 02**
+- you mix up Service vs Ingress responsibilities
+- you want routing clarity for CKAD
 
-🔗 References:
-- Docs → `docs/md-resources/lab02-ingress-routing.md`
-- Lab → `labs/services-and-networking/lab02-ingress-virtual-host`
+---
+
+## 🛍️ Mall Analogy
+
+- Ingress → Reception desk
+- Host header → “Which shop are you looking for?”
+- Service → Internal directory
+
+---
+
+## 🧠 Key Takeaways
+
+- Ingress routes by **host/path**
+- Services don’t inspect HTTP
+- Ingress sits *before* Services
+
+---
+
+## 🔗 References
+- Lab → [LAB 02 – Ingress Virtual Host](../../../labs/services-and-networking/lab02-ingress-virtual-host/README.md)

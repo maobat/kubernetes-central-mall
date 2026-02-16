@@ -30,12 +30,12 @@ Comics help by:
 
     comics/
     ├── <topic>/
-    │ └── <order>-<story-name>/
-    │ ├── <lab>-<story>.png
-    │ └── README.md
-    
+    │   └── <order>-<story-name>/
+    │       ├── <lab>-<story>.png
+    │       └── README.md
+
 ### Naming rules
-- `<topic>` matches a Kubernetes domain (`nodeport`, `ingress`, `secrets`, `gateway-api`, …)
+- `<topic>` matches a Kubernetes domain (`nodeport`, `ingress`, `secrets`, `crd`, `gateway-api`, …)
 - `<order>` keeps stories progressive
 - Each story focuses on **one problem / one insight**
 - Every comic **must** reference:
@@ -46,12 +46,32 @@ Comics help by:
 
 ## 📚 Available Comics
 
+### 🧩 Custom Resources (CRD)
+
+    crd/
+    └── 01-the-nightly-backup-permit/
+        ├── lab01-crd-nightly-backup.png
+        └── README.md
+
+**Story:** *The Nightly Backup Permit*  
+**Quick links:**
+- 🧪 **Lab:** [`lab01-crd-custom-backup-service`](../labs/extending-k8s/lab01-crd-custom-backup-service/README.md)
+- 📖 **Docs:** `docs/md-resources/understanding-custom-resource-definitions-crds.md`
+
+Explains:
+- How Kubernetes can be extended with new resource types
+- Why Custom Resources do nothing without Controllers
+- The role of the reconciliation loop
+- What CKAD expects you to understand about CRDs
+
+---
+
 ### 🚪 NodePort
 
     nodeport/
     └── 01-cross-namespace/
-    ├── lab01-nodeport-cross-namespace.png
-    └── README.md
+        ├── lab01-nodeport-cross-namespace.png
+        └── README.md
 
 **Story:** *Crossing the Mall Corridors*  
 **Quick links:**
@@ -69,8 +89,8 @@ Explains:
 
     ingress/
     └── 02-virtual-host/
-    ├── lab02-ingress-virtual-host.png
-    └── README.md
+        ├── lab02-ingress-virtual-host.png
+        └── README.md
 
 **Quick links:**
 - 🧪 **Lab:** [`lab02-ingress-virtual-host`](../labs/services-and-networking/lab02-ingress-virtual-host/README.md)
@@ -87,8 +107,8 @@ Explains:
 
     secrets/
     └── 01-secrets-injection/
-    ├── lab03-secrets-injection.png
-    └── README.md
+        ├── lab03-secrets-injection.png
+        └── README.md
 
 **Quick links:**
 - 🧪 **Lab:** [`lab03-secrets-env-injection`](../labs/security/lab03-secrets-env-injection/README.md)
@@ -105,9 +125,9 @@ Explains:
 
     canary-nodeport/
     └── 01-canary-replica-weighting/
-    ├── lab04-canary-nodeport.png
-    └── README.md
-    
+        ├── lab04-canary-nodeport.png
+        └── README.md
+
 **Quick links:**
 - 🧪 **Lab:** [`lab04-canary-nodeport`](../labs/deploying/lab04-canary-nodeport/README.md)
 - 📖 **Docs:** `docs/md-resources/implementing-canary-deployments.md`
@@ -123,9 +143,8 @@ Explains:
 
     gateway-api/
     └── 01-the-lost-gateway/
-    ├── lab05-il-giallo-del-gateway-perduto.png
-    └── README.md
-
+        ├── lab05-il-giallo-del-gateway-perduto.png
+        └── README.md
 
 **Quick links:**
 - 🧪 **Lab:** [`lab05-canary-deployment-gateway-api`](../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
@@ -136,8 +155,6 @@ Explains:
 - What `GatewayConflict` really means
 - Why the Gateway often has **no IP**
 - Who actually controls traffic (GatewayClass & Controller)
-
-
 
 ---
 
@@ -181,15 +198,6 @@ Explains:
 1. **Lab first** → understand the YAML  
 2. **Comic second** → understand the *why*  
 3. **Docs third** → deep dive if needed  
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome:
-- New comics for missing topics
-- Improvements to existing comics
-- Better YAML-to-story mappings
 
 ---
 

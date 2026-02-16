@@ -1,21 +1,30 @@
-<img src="lab04-canary-nodeport.png"
-     alt="lab04 - Canary Release using NodePort and Replica Weighting"
-     width="35%" />
+<img src="lab04-canary-nodeport.png" alt="Canary NodePort" width="40%" />
 
-# 🕵️ The Canary Replica Weighting Mystery
+# 🕵️ Canary Traffic at the Side Entrance
 
 This comic explains:
 
-- How NodePort can be used for canary traffic distribution
-- Why replica count affects traffic proportionally
-- The difference between **implicit weighting** vs **Gateway API weighting**
-- Why this is a **workaround** rather than a feature
+- how canary works **without Ingress**
+- why traffic split happens via **replicas**
+- the limits of NodePort-based canary
 
-📌 Read this if:
-- You are working on **LAB 04**
-- You want a quick mental model for canary deployments using replicas
-- You want to understand **traffic intent vs traffic capacity** 😄
+---
 
-🔗 References:
-- Docs → `docs/md-resources/advanced-traffic-splitting.md`
-- Lab → `labs/deploying/lab04-canary-nodeport`
+## 🛍️ Mall Analogy
+
+- One entrance
+- Two shops behind the same door
+- More clerks = more customers
+
+---
+
+## 🧠 Key Takeaways
+
+- NodePort has no traffic awareness
+- Canary = replica math
+- Simple but limited strategy
+
+---
+
+## 🔗 References
+- Lab → [LAB 04 – Canary with NodePort](../../../labs/deploying/lab04-canary-nodeport/README.md)

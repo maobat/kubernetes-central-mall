@@ -19,16 +19,18 @@ We introduce a **new permit type**:
 
 This lab uses the following manifests:
 
-- `00-crd-backup.yaml`
+- [`00-crd-backup.yaml`](./00-crd-backup.yaml)
   - Defines the **Custom Resource Definition**
   - Extends the Kubernetes API with a new resource: `BackUp`
 
-- `01-backup-instance.yaml`
+- [`01-backup-instance.yaml`](./01-backup-instance.yaml)
   - Defines a **Custom Resource instance**
   - Represents a concrete Nightly Backup request
 
-- `02-simulated-controller-job.yaml`
+- [`02-simulated-controller-job.yaml`](./02-simulated-controller-job.yaml)
   - Simulates the Controller creating the actual Job/Pod
+
+📌 Tip: Open the CRD first, then the instance — notice how `spec` fields align.
 
 ---
 
