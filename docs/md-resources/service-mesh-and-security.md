@@ -13,8 +13,8 @@ In the past, Service Mesh proxies were just "regular" containers. If the proxy c
 |FEATURE|SERVICE MESH SIDECAR|MALL ANALOGY|
 |--|--|--|
 |**Identity**|`initContainer` with `restartPolicy: Always`|**The Security Escort:** Arrives before the shop opens and stays at the door all day.|
-|**Startup**|Must be healthy before the Main App starts.|"Ensures the ""Encrypted Radio"" (mTLS) is working before any customers arrive."|
-|**Termination**|Shuts down only after the Main App is finished.|"Ensures the last ""Customer"" is logged before locking the gates."|
+|**Startup**|Must be healthy before the Main App starts.|Ensures the **Encrypted Radio** (mTLS) is working before any customers arrive.|
+|**Termination**|Shuts down only after the Main App is finished.|Ensures the last **Customer** is logged before locking the gates.|
 ---
 ### 6.5.2 Key Security & Traffic Features (The 4 Pillars)
 |FEATURE|MALL ANALOGY|WHAT IT ACTUALLY DOES|BENEFIT|
