@@ -2,7 +2,19 @@
 
 ## Services and Networking – Managing Incoming Traffic
 
-<img src="../../../docs/md-resources/images/lab02-ingress-routing.png" alt="lab02 - Services and Networking - Managing Incoming Traffic" width="35%" />
+
+
+---
+
+## 🎯 Lab Goal
+
+This lab introduces **Ingress** and **virtual host–based routing**.
+
+You will learn how to:
+- Deploy a multi-replica application
+- Expose it internally via a **Service**
+- Route traffic using an **Ingress** based on the HTTP `Host` header
+- Verify Ingress behavior **from inside the cluster** (CKAD-style)
 
 ---
 
@@ -24,17 +36,7 @@ It explains **how Ingress routes traffic** based on Host headers.
 
 ---
 
-## 🎯 Lab Goal
 
-This lab introduces **Ingress** and **virtual host–based routing**.
-
-You will learn how to:
-- Deploy a multi-replica application
-- Expose it internally via a **Service**
-- Route traffic using an **Ingress** based on the HTTP `Host` header
-- Verify Ingress behavior **from inside the cluster** (CKAD-style)
-
----
 
 ## 📋 Requirements
 

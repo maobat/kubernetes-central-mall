@@ -4,6 +4,9 @@
 - **lab04** – [Canary Deployments with NodePort and replica weighting](deploying/lab04-canary-nodeport/README.md)
 - **lab05** – [Canary Deployments with Gateway API and native traffic weighting](deploying/lab05-canary-deployment-gateway-api/README.md)
 
+### 👀 Observability & Health
+- **lab01** – [Liveness Probes: The Health Inspector](observability-and-health/lab01-liveness-probes/README.md)
+
 ### 🌐 Services & Networking
 - **lab01** – [NodePort + cross-namespace access](services-and-networking/lab01-nodeport-cross-namespace/README.md)
 - **lab02** – [Ingress with virtual host routing](services-and-networking/lab02-ingress-virtual-host/README.md)

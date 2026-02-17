@@ -2,11 +2,15 @@
 
 ## Deploying Applications the DevOps Way – Canary Release (No Ingress)
 
-<img src="../../../docs/md-resources/images/lab04-canary-nodeport.png"
-     alt="lab04 - Canary Release using NodePort and Replica Weighting"
-     width="40%" />
+
 
 ---
+## 🎯 Lab Goal
+
+Implement a **Canary Deployment** using **NodePort** and **replica weighting** to control traffic distribution.
+
+---
+
 ## 🧠 Conceptual Comic (Read First)
 
 Before starting, read this short comic:

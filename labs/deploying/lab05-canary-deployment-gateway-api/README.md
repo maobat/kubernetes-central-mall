@@ -2,9 +2,24 @@
 
 ## Deploying Applications the DevOps Way – Advanced Traffic Splitting
 
-<img src="../../../docs/md-resources/images/gateway-traffic-flow.png" alt="lab05 - Gateway API Canary Traffic Splitting" width="40%" />
+
 
 ---
+## 🎯 Lab Goal
+
+This lab demonstrates how to implement a **canary deployment** using the **Gateway API**, where traffic splitting is:
+
+- **Explicit**
+- **Declarative**
+- **Natively supported by Kubernetes**
+
+Unlike **LAB 04**, where traffic distribution was achieved indirectly through **replica weighting**, this lab shows how modern Kubernetes networking allows you to **declare traffic intent directly** using `HTTPRoute`.
+
+> Same canary concept.  
+> Completely different level of control.
+
+---
+
 ## 🧠 Conceptual Comic (Read First)
 
 Before starting, read this short comic:
@@ -28,20 +43,7 @@ It explains **why your Gateway has no IP** and how traffic really flows.
 - Canary Deployment Implementation → [`docs/md-resources/implementing-canary-deployments.md`](../../../docs/md-resources/implementing-canary-deployments.md)
 
 ---
-## 🎯 Lab Goal
 
-This lab demonstrates how to implement a **canary deployment** using the **Gateway API**, where traffic splitting is:
-
-- **Explicit**
-- **Declarative**
-- **Natively supported by Kubernetes**
-
-Unlike **LAB 04**, where traffic distribution was achieved indirectly through **replica weighting**, this lab shows how modern Kubernetes networking allows you to **declare traffic intent directly** using `HTTPRoute`.
-
-> Same canary concept.  
-> Completely different level of control.
-
----
 
 ## 🧠 What You Will Learn
 

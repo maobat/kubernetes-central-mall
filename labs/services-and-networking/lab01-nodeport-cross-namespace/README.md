@@ -2,7 +2,18 @@
 
 ## Services and Networking – Managing Services
 
-<img src="../../../docs/md-resources/images/lab01-services-networking.png" alt="lab01 - Services and Networking - Managing Services" width="35%" />
+
+
+---
+
+## 🎯 Lab Goal
+
+This lab focuses on **Service exposure** and **cross-namespace communication**.
+
+You will learn how to:
+- Expose a Pod using a **NodePort Service**
+- Access a Service **from another Namespace**
+- Verify both **internal (cluster)** and **external (node-level)** connectivity
 
 ---
 
@@ -24,16 +35,7 @@ It explains **how traffic flows into the cluster** and across namespaces.
 
 ---
 
-## 🎯 Lab Goal
 
-This lab focuses on **Service exposure** and **cross-namespace communication**.
-
-You will learn how to:
-- Expose a Pod using a **NodePort Service**
-- Access a Service **from another Namespace**
-- Verify both **internal (cluster)** and **external (node-level)** connectivity
-
----
 
 ## 📋 Requirements
 

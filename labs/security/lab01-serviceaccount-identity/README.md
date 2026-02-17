@@ -1,8 +1,20 @@
 # LAB 01 – Managing Security Settings (ServiceAccount)
 
-<img src="../../../comics/security/01-the-secure-badge/lab01-the-secure-badge.png" alt="The Secure Badge" width="40%" />
+
 
 ---
+## 🎯 Lab Goal
+Learn how Kubernetes assigns **identity** to Pods using **ServiceAccounts**.
+
+You will:
+- Create a custom ServiceAccount
+- Start a Deployment using that ServiceAccount
+- Verify which identity the Pod is running as
+
+This is a **high-probability CKAD topic**.
+
+---
+
 ## 🧠 Conceptual Comic (Read First)
 
 Before starting, read this short comic:
@@ -21,17 +33,7 @@ It explains **why ServiceAccounts are useful** and how they work.
 - Practice: Imperative Inspection → [`docs/md-resources/lab-imperative-pod-and-serviceaccount-inspection.md`](../../../docs/md-resources/lab-imperative-pod-and-serviceaccount-inspection.md)
 
 ---
-## 🎯 Lab Goal
-Learn how Kubernetes assigns **identity** to Pods using **ServiceAccounts**.
 
-You will:
-- Create a custom ServiceAccount
-- Start a Deployment using that ServiceAccount
-- Verify which identity the Pod is running as
-
-This is a **high-probability CKAD topic**.
-
----
 
 ## 🛍️ Mall Analogy
 

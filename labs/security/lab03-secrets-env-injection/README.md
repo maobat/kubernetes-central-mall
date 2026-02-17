@@ -2,7 +2,18 @@
 
 ## Security – Secrets & Environment Variables
 
-<img src="../../../docs/md-resources/images/lab03-inject-sensitive-configuration-security.jpg" alt="lab03 - Inject Sensitive Configuration - Security" width="35%" />   
+   
+
+---
+
+## 🎯 Lab Goal
+
+This lab demonstrates how to:
+- Store sensitive data using a **Kubernetes Secret**
+- Inject secret values into a **Deployment** as environment variables
+- Safely configure an application without hardcoding credentials
+
+This is a **high-probability CKAD topic**.
 
 ---
 
@@ -21,17 +32,6 @@ It explains **Secrets, Deployment, and Environment Variable Injection** in a CKA
 - Core Concepts: ConfigMaps & Secrets → [`docs/md-resources/core-concepts-configmaps-secrets-and-security.md`](../../../docs/md-resources/core-concepts-configmaps-secrets-and-security.md)
 
 - Secrets: Use Cases & Application Integration → [`docs/md-resources/secrets-use-cases-and-application-integration.md`](../../../docs/md-resources/secrets-use-cases-and-application-integration.md) 
-
----
-
-## 🎯 Lab Goal
-
-This lab demonstrates how to:
-- Store sensitive data using a **Kubernetes Secret**
-- Inject secret values into a **Deployment** as environment variables
-- Safely configure an application without hardcoding credentials
-
-This is a **high-probability CKAD topic**.
 
 ---
 

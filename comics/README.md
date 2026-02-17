@@ -179,6 +179,23 @@ Explains:
 
 ---
 
+### 👁️ Observability (Liveness Probes)
+
+    observability/
+    └── 01-the-health-inspector/
+        ├── lab01-observability-health-inspector.png
+        └── README.md
+
+**Quick links:**
+- 🧪 **Lab:** [`lab01-liveness-probes-health-inspector`](../labs/observability/lab01-liveness-probes-health-inspector/README.md)
+
+Explains:
+- The difference between **Liveness** (restart) and **Readiness** (traffic)
+- How Kubernetes acts as a ruthless Health Inspector
+- Why `initialDelaySeconds` is critical for avoiding restart loops
+
+---
+
 ## 🔁 How to Use Comics Effectively
 
 **Recommended learning flow:**
