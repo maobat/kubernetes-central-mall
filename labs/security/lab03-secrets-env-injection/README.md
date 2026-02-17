@@ -10,11 +10,17 @@
 
 Before starting, read this short comic:
 
-👉 **The Secret of the High-Security Vault**  
-📁 `comics/secrets/01-secrets-injection`
+👉 [Lab 03 - The Secret of the High-Security Vault](../../../comics/secrets/01-secrets-injection/README.md)
 
 It explains **Secrets, Deployment, and Environment Variable Injection** in a CKAD-friendly way.
 
+---
+
+## 📘 Reference Docs
+
+- Core Concepts: ConfigMaps & Secrets → [`docs/md-resources/core-concepts-configmaps-secrets-and-security.md`](../../../docs/md-resources/core-concepts-configmaps-secrets-and-security.md)
+
+- Secrets: Use Cases & Application Integration → [`docs/md-resources/secrets-use-cases-and-application-integration.md`](../../../docs/md-resources/secrets-use-cases-and-application-integration.md) 
 
 ---
 

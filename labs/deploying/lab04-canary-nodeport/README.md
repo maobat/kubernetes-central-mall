@@ -4,18 +4,26 @@
 
 <img src="../../../docs/md-resources/images/lab04-canary-nodeport.png"
      alt="lab04 - Canary Release using NodePort and Replica Weighting"
-     width="35%" />
+     width="40%" />
 
 ---
-
 ## 🧠 Conceptual Comic (Read First)
 
 Before starting, read this short comic:
 
-👉 **The Canary Replica Weighting Mystery**  
-📁 `comics/canary-nodeport/01-canary-replica-weighting`
+👉 [Lab 04 - The Canary Replica Weighting Mystery](../../../comics/canary-nodeport/01-canary-replica-weighting/README.md)
 
 It explains **how replica count determines traffic share** and why this is **not the modern way**.
+
+---
+## 📘 Reference Docs
+
+- Canary deployments → [`docs/md-resources/canary-deployments.md`](../../../docs/md-resources/lab-canary-deployments-the-new-recipe-test.md)
+- Introduction to Canary Deployments → [Implementing Canary Deployments](../../../docs/md-resources/implementing-canary-deployments.md)
+- Reference: Blue/Green vs Canary → [Comparison](../../../docs/md-resources/related-deployment-strategies-comparison.md)
+- Next Step: Advanced Traffic Splitting (Gateway API) → [Advanced Traffic Splitting](../../../docs/md-resources/advanced-traffic-splitting.md)
+
+
 
 ---
 ## 📋 Requirements

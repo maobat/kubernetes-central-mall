@@ -1,4 +1,4 @@
-<img src="lab01-crd-nightly-backup.png" alt="The Nightly Backup Permit" width="45%" />
+<img src="lab01-crd-nightly-backup.png" alt="The Nightly Backup Permit" width="40%" />
 
 # 🗂️ The Nightly Backup Permit
 

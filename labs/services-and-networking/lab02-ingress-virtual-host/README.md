@@ -6,6 +6,24 @@
 
 ---
 
+## 🧠 Conceptual Comic (Read First)
+
+Before starting, read this short comic:
+
+👉 [Lab 02 - The Virtual Host Gateway Show](../../../comics/ingress/02-virtual-host/README.md)
+
+It explains **how Ingress routes traffic** based on Host headers.
+
+---
+
+## 📘 Reference Docs
+
+- Understanding Traffic Flow (Ingress) → [`docs/md-resources/traffic-flow.md`](../../../docs/md-resources/traffic-flow.md)
+
+- Ingress vs Gateway API → [`docs/md-resources/ingress-vs-gateway.md`](../../../docs/md-resources/ingress-vs-gateway.md)
+
+---
+
 ## 🎯 Lab Goal
 
 This lab introduces **Ingress** and **virtual host–based routing**.

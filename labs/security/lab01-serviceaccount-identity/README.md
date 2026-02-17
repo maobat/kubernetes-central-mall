@@ -3,8 +3,25 @@
 <img src="../../../comics/security/01-the-secure-badge/lab01-the-secure-badge.png" alt="The Secure Badge" width="40%" />
 
 ---
-## 🎯 Objective
+## 🧠 Conceptual Comic (Read First)
 
+Before starting, read this short comic:
+
+👉 [The Secure Badge](../../../comics/security/01-the-secure-badge/README.md)
+
+It explains **why ServiceAccounts are useful** and how they work.
+
+---
+## 📘 Reference Docs
+
+- Understanding ServiceAccounts → [`docs/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md`](../../../docs/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)
+
+- Deep Dive: ServiceAccount Secrets & Tokens → [`docs/md-resources/serviceaccount-secrets-for-api-access-the-trust-mechanism.md`](../../../docs/md-resources/serviceaccount-secrets-for-api-access-the-trust-mechanism.md)
+
+- Practice: Imperative Inspection → [`docs/md-resources/lab-imperative-pod-and-serviceaccount-inspection.md`](../../../docs/md-resources/lab-imperative-pod-and-serviceaccount-inspection.md)
+
+---
+## 🎯 Lab Goal
 Learn how Kubernetes assigns **identity** to Pods using **ServiceAccounts**.
 
 You will:

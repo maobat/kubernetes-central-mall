@@ -1,6 +1,28 @@
 # LAB 01 – Creating a Custom Backup Service (CRD)
 
-## 🎯 Objective
+<img src="../../../comics/crd/01-the-nightly-backup-permit/lab01-crd-nightly-backup.png" 
+     alt="lab01 - CRD Custom Backup Service" 
+     width="40%" />
+
+---
+## 🧠 Conceptual Comic (Read First)
+
+Before starting, read this short comic:
+
+👉 [Lab 01 - The Nightly Backup Permit](../../../comics/crd/01-the-nightly-backup-permit/README.md)
+
+It explains **why CRDs are useful** and how they work.
+---
+
+## 📘 Reference Docs
+
+- Understanding Custom Resource Definitions (CRDs) → [`docs/md-resources/understanding-custom-resource-definitions-crds.md`](../../../docs/md-resources/understanding-custom-resource-definitions-crds.md)
+
+- Extending K8s Crds Operators → [`docs/md-resources/extending-k8s-crds-operators.md`](../../../docs/md-resources/extending-k8s-crds-operators.md)
+
+- Crd Demo Creating A Custom Service → [`docs/md-resources/crd-demo-creating-a-custom-service.md`](../../../docs/md-resources/crd-demo-creating-a-custom-service.md)
+---
+## 🎯 Lab Goal
 Learn how Kubernetes can be extended using **Custom Resource Definitions (CRDs)**  
 by introducing a new resource type: **BackUp**.
 

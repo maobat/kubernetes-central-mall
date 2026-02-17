@@ -9,8 +9,7 @@
 
 Before starting, read this short comic:
 
-👉 **Il Giallo del Gateway Perduto**  
-📁 `comics/gateway-api/01-the-lost-gateway`
+👉 [Lab 05 - The Lost Gateway](../../../comics/gateway-api/01-the-lost-gateway/README.md)
 
 It explains **why your Gateway has no IP** and how traffic really flows.
 
@@ -21,6 +20,12 @@ It explains **why your Gateway has no IP** and how traffic really flows.
 - Gateway API fundamentals → [`docs/md-resources/gateway-api.md`](../../../docs/md-resources/gateway-api.md)
 
 - Advanced traffic splitting → [`docs/md-resources/advanced-traffic-splitting.md`](../../../docs/md-resources/advanced-traffic-splitting.md)
+
+- Ingress vs Gateway API → [`docs/md-resources/ingress-vs-gateway.md`](../../../docs/md-resources/ingress-vs-gateway.md)
+
+- Traffic Flow Verification → [`docs/md-resources/traffic-flow-verification.md`](../../../docs/md-resources/traffic-flow-verification.md)
+
+- Canary Deployment Implementation → [`docs/md-resources/implementing-canary-deployments.md`](../../../docs/md-resources/implementing-canary-deployments.md)
 
 ---
 ## 🎯 Lab Goal
@@ -328,7 +333,7 @@ This is:
 - Reversible
 - Observable
 ---
-🧠 **Key Takeaways**
+e **Key Takeaways**
 
 - Canary releases are not just about sending less traffic
 - They are about declaring intent

@@ -6,6 +6,24 @@
 
 ---
 
+## 🧠 Conceptual Comic (Read First)
+
+Before starting, read this short comic:
+
+👉 [Lab 01 - The NodePort Traffic Adventure](../../../comics/nodeport/01-cross-namespace/README.md)
+
+It explains **how traffic flows into the cluster** and across namespaces.
+
+---
+
+## 📘 Reference Docs
+
+- Understanding Traffic Flow → [`docs/md-resources/traffic-flow.md`](../../../docs/md-resources/traffic-flow.md)
+
+- Service IP Tracker Evolution → [`docs/md-resources/service-ip-tracker-evolution.md`](../../../docs/md-resources/service-ip-tracker-evolution.md)
+
+---
+
 ## 🎯 Lab Goal
 
 This lab focuses on **Service exposure** and **cross-namespace communication**.
