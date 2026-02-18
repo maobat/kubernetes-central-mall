@@ -49,41 +49,87 @@ Define a Pod with a **Liveness Probe** using an HTTP check.
 
 > ⚠️ CKAD-style note
 > nginx does not expose /healthz by default.
-> This is intentional: a failing probe lets you **observe restart behavior**, which is exactly what this lab is about.
+> This is intentional: a failing probe lets you **no observe restart behavior** beacuse of `--restart=Never` parameter, which is exactly what this lab is about.
 
-📄 `healthz_probe.yaml`
+### 1️⃣ Generate a skeleton imperatively
+```bash
+kubectl run probed \
+  --image=nginx \
+  --restart=Never \
+  --port=80 \
+  --dry-run=client -o yaml > healthz_probe.yaml
+```
+---
+### 2️⃣ Edit and add the livenessProbe
+
+Open the file and add **only** the probe:
+
 ```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: probed
-spec:
-  containers:
-  - name: nginx
-    image: nginx:latest
-    ports:
-    - containerPort: 80
-    livenessProbe:
-      httpGet:
-        path: /healthz
-        port: 80
-      initialDelaySeconds: 30  # Time to start up
-      periodSeconds: 10        # Check every 10 seconds
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: 80
+  initialDelaySeconds: 30
+  periodSeconds: 10
 ```
 
-### Step 2 — Apply and Observe
-
-Apply the manifest:
+Then apply:
 
 ```bash
 kubectl apply -f healthz_probe.yaml
 ```
 
 
-Watch the Pod status and restart count:
+Watch the Pod status and no restart count:
 ```shell
-kubectl get pods probed -w
+k get pod probed -w
+
+NAME     READY   STATUS              RESTARTS   AGE
+probed   0/1     ContainerCreating   0          2s
+probed   1/1     Running             0          3s
+probed   1/1     Running             0          61s
+probed   0/1     Completed           0          61s
+probed   0/1     Completed           0          63s
 ```
+
+Here is the step-by-step breakdown of what happened:
+
+## 1. The Startup (0s - 3s)
+The Pod goes from `ContainerCreating` to `Running`. At this point, Nginx is up, but the **Liveness Probe** hasn't started yet because of your `initialDelaySeconds: 30`.
+
+## 2. The Grace Period (3s - 61s)
+For about 58 seconds, the Pod stays `1/1 Running`.
+
+- **The First 30s:** Kubernetes is waiting (initial delay).
+- **The Next 30s:** The probe starts running every 10 seconds. It checks `http://<pod-ip>:80/healthz`.
+- **The Failure:** Since standard Nginx does not have a `/healthz` path by default, it returns a `404 Not Found`.
+
+## 3. The "Death" (61s)
+By default, the `failureThreshold` is 3.
+
+- Probe 1 (at 30s): Fails.
+- Probe 2 (at 40s): Fails.
+- Probe 3 (at 50s): Fails.
+- Once the threshold is hit, Kubernetes decides the container is "dead" and kills the process.
+
+## 4. Why it says Completed instead of Error
+This is the most interesting part of your output. Because Nginx received the "kill" signal from Kubernetes and shut down gracefully, and because you set:
+`restartPolicy: Never`
+
+Kubernetes says: <i>"The container finished. I'm not allowed to restart it, so I'll just mark the Pod as 'Completed' and leave it there."</i> If your policy was `Always`, you would see the `RESTARTS` count jump to 1 and the status go back to `Running`.
+
+---
+
+### Summary Table
+
+| Time | Status | Ready | What's happening? |
+|------|--------|-------|-------------------|
+| 2s | ContainerCreating | 0/1 | Pulling image/Starting. |
+| 3s | Running | 1/1 | Nginx is alive; Probe is waiting 30s. |
+| 61s | Running | 1/1 | 3 failed probes later, Kube kills the container. |
+| 61s+ | Completed | 0/1 | Process exited. restartPolicy: Never prevents a reboot. |
+
+---
 
 🔍 **What You Are Observing**
 
@@ -99,6 +145,15 @@ Typical lifecycle:
   Probe is failing → Kubernetes kills and recreates the Pod
 
 In this lab, `/healthz` returns 404, so the Liveness Probe fails and the Pod is **restarted repeatedly**.
+
+If you want this Pod to stay running, you should change the path to one that actually exists in Nginx (like the default index):
+```yaml
+      httpGet:
+        path: /  # Use / instead of /healthz
+        port: 80
+```
+
+---
 
 ### ⚠️ CKAD Notes
 

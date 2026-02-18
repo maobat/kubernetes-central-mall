@@ -21,7 +21,7 @@ This is a **high-probability CKAD topic**.
 
 Before starting, read this short comic:
 
-👉 [Lab 01 - The Assistant & The Shared Space](../../../../comics/pod-design/01-sidecar/README.md)
+👉 [Lab 01 - The Assistant & The Shared Space](../../../comics/pod-design/01-sidecar/README.md)
 
 It explains **Sidecars, InitContainers, and Shared Volumes**.
 
