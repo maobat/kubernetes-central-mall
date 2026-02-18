@@ -1,3 +1,5 @@
+<img src="lab01-storage-persistent-volume.jpg" alt="Storage Persistent Volume" width="40%" />
+
 # 📦 The Warehouse & The Rental Contract
 
 This comic explains:

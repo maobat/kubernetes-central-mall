@@ -21,7 +21,7 @@ This is a **core CKAD topic**.
 
 Before starting, read this short comic:
 
-👉 [Lab 01 - The Rulebook & The Uniform](../../../../comics/configuration/01-configmap/README.md)
+👉 [Lab 01 - The Rulebook & The Uniform](../../../comics/configuration/01-configmap/README.md)
 
 It explains **ConfigMaps, Env Vars, and Decoupling**.
 

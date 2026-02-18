@@ -1,3 +1,5 @@
+<img src="lab01-configuration-configmaps.jpg" alt="Configuration ConfigMaps" width="40%" />
+
 # 📋 The Rulebook & The Uniform
 
 This comic explains:

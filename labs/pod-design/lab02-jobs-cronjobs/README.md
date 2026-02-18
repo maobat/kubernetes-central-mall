@@ -65,7 +65,8 @@ It explains **Jobs (One-off) vs CronJobs (Scheduled)**.
 
 ### 1️⃣ Create a One-Off Job
 
-File: `job.yaml`
+👉 [Lab 02 - The One-Off Task](./job.yaml)
+
 ```yaml
 apiVersion: batch/v1
 kind: Job
@@ -95,7 +96,7 @@ kubectl get jobs
 
 ### 2️⃣ Create a Scheduled CronJob
 
-File: `cronjob.yaml`
+👉 [Lab 02 - The Scheduled Task](./cronjob.yaml)
 ```yaml
 apiVersion: batch/v1
 kind: CronJob

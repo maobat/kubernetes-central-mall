@@ -22,7 +22,7 @@ This is a **core CKAD topic**.
 
 Before starting, read this short comic:
 
-👉 [Lab 01 - The Warehouse & The Rental Contract](../../../../comics/storage/01-persistent-volume/README.md)
+👉 [Lab 01 - The Warehouse & The Rental Contract](../../../comics/storage/01-persistent-volume/README.md)
 
 It explains **PVs, PVCs, and Mounting** using a warehouse analogy.
 
@@ -77,7 +77,8 @@ It explains **PVs, PVCs, and Mounting** using a warehouse analogy.
 
 This represents the actual physical storage available in the cluster (or on the node, in this case).
 
-File: `pv.yaml`
+👉 [Lab 01 - The Nightly Backup Permit](./pv.yaml)
+
 ```yaml
 apiVersion: v1
 kind: PersistentVolume
@@ -104,7 +105,8 @@ kubectl apply -f pv.yaml
 
 This is the request for storage. Kubernetes looks for a PV that matches the request.
 
-File: `pvc.yaml`
+👉 [Lab 01 - The Rental Contract](./pvc.yaml)
+
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -132,7 +134,7 @@ kubectl get pvc task-pv-claim
 
 ### 3️⃣ Create the Pod with the Mounted Volume
 
-File: `pod.yaml`
+👉 [Lab 01 - The Delivery Truck](./pod.yaml)
 ```yaml
 apiVersion: v1
 kind: Pod
