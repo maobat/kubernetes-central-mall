@@ -4,12 +4,13 @@
 ---
 ## 🎯 Lab Goal
 
-Ensure that a running application is actually alive.
+Understand **how Kubernetes detects unhealthy containers** using **Liveness Probes** and what happens **when a probe fails**.
 
-If the application hangs or its internal health check fails, Kubernetes must **automatically restart** it by killing the old Pod and creating a new one.
+You will observe how Kubernetes:
 
-This lab focuses on **Liveness Probes** and how Kubernetes decides when a Pod must die.
-
+- Checks if a container is still alive
+- Marks a Pod as failed when health checks fail
+- **Does NOT restart** the Pod when `restartPolicy: Never` is used
 ---
 
 ## 🧠 Conceptual Comic (Read First)
@@ -33,11 +34,13 @@ Before starting the lab, read the conceptual comic:
 | **Kubernetes Concept** | **Mall Analogy** |
 |-------------------|-------------|
 | Liveness Probe | Security Guard checking the worker |
-| initialDelaySeconds | Time to put on the uniform before inspection |
-| periodSeconds | Guard walks by every X seconds |
-| HTTP GET `/healthz` | “Are you okay?” check |
+| `initialDelaySeconds` | Time to put on the uniform before inspection |
+| `periodSeconds` | Guard walks by every X seconds |
+| httpGet `/healthz` | “Are you okay?” check |
+| `restartPolicy: Never` | The worker is fired and **never rehired** |
 
-If the worker doesn’t respond, the Guard **immediately replaces them**.
+A **Security Guard** periodically checks a shop worker.
+If the worker doesn’t respond, the shift is terminated.
 
 ---
 
@@ -141,10 +144,10 @@ Typical lifecycle:
 - `1/1 Running`
   Probe passed → worker is “open for business”
 
-- `RESTARTS` **increasing**
-  Probe is failing → Kubernetes kills and recreates the Pod
+- `RESTARTS` **no increasing**
+  Probe is failing → Because of `restartPolicy: Never` Kubernetes kills and **does not recreate** the Pod
 
-In this lab, `/healthz` returns 404, so the Liveness Probe fails and the Pod is **restarted repeatedly**.
+In this lab, `/healthz` returns 404, so the Liveness Probe fails and the Pod is **not restarted**.
 
 If you want this Pod to stay running, you should change the path to one that actually exists in Nginx (like the default index):
 ```yaml
