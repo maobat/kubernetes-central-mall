@@ -1,5 +1,12 @@
 ## Labs Index
 
+### ⚙️ Configuration
+- **lab01** – [ConfigMaps: Env Vars & Volumes](configuration/lab01-configmaps/README.md)
+
+### 📦 Pod Design & Multi-Container
+- **lab01** – [Sidecar & InitContainers](pod-design/lab01-sidecar-pattern/README.md)
+- **lab02** – [Jobs & CronJobs](pod-design/lab02-jobs-cronjobs/README.md)
+
 ### 🚀 Deploying Applications the DevOps Way
 - **lab04** – [Canary Deployments with NodePort and replica weighting](deploying/lab04-canary-nodeport/README.md)
 - **lab05** – [Canary Deployments with Gateway API and native traffic weighting](deploying/lab05-canary-deployment-gateway-api/README.md)
@@ -12,7 +19,7 @@
 - **lab02** – [Ingress with virtual host routing](services-and-networking/lab02-ingress-virtual-host/README.md)
 
 ### 💾 Storage
-- *(coming soon)*
+- **lab01** – [Persistent Volumes & Claims (PV/PVC)](storage/lab01-persistent-volume/README.md)
 
 ### 🔐 Security
 - **lab01** – [Managing Security Settings with ServiceAccounts](security/lab01-serviceaccount-identity/README.md)

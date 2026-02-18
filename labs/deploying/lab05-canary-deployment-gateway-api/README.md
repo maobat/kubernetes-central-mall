@@ -105,8 +105,8 @@ kubectl expose deployment stable-nginx --port=80
 kubectl expose deployment canary-nginx --port=80
 ```
 ---
-### 2️⃣ Create the Gateway 
-> gateway.yaml
+### 2️⃣ Create the Gateway
+File: `gateway.yaml`
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
