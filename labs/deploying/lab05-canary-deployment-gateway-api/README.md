@@ -117,8 +117,12 @@ spec:
   listeners:
   - name: http
     protocol: HTTP
-    Apply it:
+```    
+Apply it:
+```bash
+kubectl apply -f gateway.yaml
 ```
+
 ✅ **CKAD Best Practice: “Minimum Viable Gateway”**
 
 ---
