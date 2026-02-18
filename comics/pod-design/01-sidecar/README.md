@@ -1,3 +1,5 @@
+<img src="lab01-pod-design-sidecar.png" alt="Pod Design Sidecar" width="40%" />
+
 # 🤝 The Assistant & The Shared Space
 
 This comic explains:

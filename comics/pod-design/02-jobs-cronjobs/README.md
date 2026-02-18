@@ -1,3 +1,5 @@
+<img src="lab02-pod-design-jobs-cronjobs.jpg" alt="Pod Design Jobs CronJobs" width="40%" />
+
 # 🖌️ The Painter & The Cleaning Crew
 
 This comic explains:

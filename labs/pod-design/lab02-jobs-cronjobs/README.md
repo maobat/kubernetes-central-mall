@@ -20,7 +20,7 @@ This is a **high-probability CKAD topic**.
 
 Before starting, read this short comic:
 
-👉 [Lab 02 - The Painter & The Cleaning Crew](../../../../comics/pod-design/02-jobs-cronjobs/README.md)
+👉 [Lab 02 - The Painter & The Cleaning Crew](../../../comics/pod-design/02-jobs-cronjobs/README.md)
 
 It explains **Jobs (One-off) vs CronJobs (Scheduled)**.
 
