@@ -75,7 +75,8 @@ kubectl create configmap app-config \
 
 ### 2️⃣ Create the Pod with Env Vars and Volume Mount
 
-File: `config-pod.yaml`
+👉 [Lab 01 - The ConfigPod](./config-pod.yaml)
+
 ```yaml
 apiVersion: v1
 kind: Pod

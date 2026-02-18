@@ -106,7 +106,9 @@ kubectl expose deployment canary-nginx --port=80
 ```
 ---
 ### 2️⃣ Create the Gateway
-File: `gateway.yaml`
+
+👉 [Lab 05 - The Gateway](./gateway.yaml)
+
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
@@ -190,6 +192,9 @@ kubectl apply -f gateway.yaml
 ---
 
 ### 3️⃣ Define the Canary Traffic Split with HTTPRoute
+
+👉 [Lab 05 - The HTTPRoute](./httproute.yaml)
+
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute

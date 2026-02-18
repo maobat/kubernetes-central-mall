@@ -72,7 +72,8 @@ It explains **Sidecars, InitContainers, and Shared Volumes**.
 
 We will use an `emptyDir` volume to share data between the InitContainer and the Main Container.
 
-File: `pod-sidecar.yaml`
+👉 [Lab 01 - The Sidecar](./pod-sidecar.yaml)
+
 ```yaml
 apiVersion: v1
 kind: Pod
