@@ -192,7 +192,7 @@ Liveness Probes answer **one brutal question**:
 
 > “Should this Pod be restarted?”
 
-Kubernetes is ruthless by design:
+Kubernetes is strict by design:
 
 - Failing health → **replace immediately**
 - No debugging, no mercy

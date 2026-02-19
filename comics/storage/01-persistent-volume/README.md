@@ -1,4 +1,4 @@
-<img src="lab01-storage-persistent-volume.jpg" alt="Storage Persistent Volume" width="40%" />
+<img src="lab01-configuration-configmaps.png" alt="Storage Persistent Volume" width="40%" />
 
 # 📦 The Warehouse & The Rental Contract
 

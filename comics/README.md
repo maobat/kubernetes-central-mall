@@ -176,6 +176,79 @@ Explains:
 - What `GatewayConflict` really means
 - Why the Gateway often has **no IP**
 - Who actually controls traffic (GatewayClass & Controller)
+---
+
+### 🧱 Pod Design (InitContainers & Sidecars)
+
+    pod-design/
+    └── 01-the-helping-hands/
+        ├── lab01-pod-design-sidecar-init.png
+        └── README.md
+
+**Story:** The Helping Hands
+**Quick links:**
+
+- 🧪 **Lab:** [`lab01-sidecar-initcontainers`](../labs/pod-design/lab01-sidecar-pattern/README.md)
+- 📖 **Docs:** [`TASK 4`-`docs/md-resources/the-final-simulation.md`](../docs/md-resources/the-final-simulation.md)
+
+
+Explains:
+
+- Why one container shouldn’t do everything
+- InitContainers as setup crew
+- Sidecars as permanent assistants
+- Shared volumes as communication channels
+
+> **CKAD takeaway:**
+> 
+> “InitContainers prepare the shop. Sidecars keep it running.”
+
+---
+
+### 🗄️ Storage (Persistent Volumes & Claims)
+    storage/
+    └── 01-the-warehouse/
+        ├── lab01-the-warehouse.png
+        └── README.md
+
+**Story:** The Warehouse
+**Quick links:**
+
+- 🧪 **Lab:** [`lab01-pv-pvc`](../labs/storage/lab01-persistent-volume/README.md)
+- 📖 **Docs:** [`docs/md-resources/storage-recap-for-dummies.md`](../docs/md-resources/storage-recap-for-dummies.md)
+
+Explains:
+
+- Why Pod storage is ephemeral
+- PV as physical storage
+- PVC as a rental contract
+- Why Pods are replaceable but data isn’t
+
+> **CKAD mental hook:**
+> 
+> “Pods are temporary workers. Data lives in the warehouse.”
+
+---
+
+### 🧰 Configuration (ConfigMaps & Secrets)
+    configuration/
+    └── 01-configuration-injection/
+        ├── labXX-configuration-injection.png
+        └── README.md
+
+**Story:** ConfigMaps & Secrets
+**Quick links:**
+
+- 🧪 **Lab:** [`lab01-configmaps`](../labs/configuration/lab01-configmaps/README.md)
+- 📖 **Docs:** [`docs/md-resources/configmaps-variables-vs-configuration-files.md`](../docs/md-resources/configmaps-variables-vs-configuration-files.md)
+- 📖 **Docs:** [`docs/md-resources/configuration-deoupling.md`](../docs/md-resources/configuration-deoupling.md  )
+
+
+**Will explain:**
+
+- ConfigMaps vs Secrets
+- Env vars vs volumes
+- Why config is injected, not baked into images
 
 ---
 
@@ -191,7 +264,7 @@ Explains:
 
 Explains:
 - The difference between **Liveness** (restart) and **Readiness** (traffic)
-- How Kubernetes acts as a ruthless Health Inspector
+- How Kubernetes acts as a strict Health Inspector
 - Why `initialDelaySeconds` is critical for avoiding restart loops
 
 ---
