@@ -58,14 +58,14 @@ Always check:
 - bound status
 
 ## 🔍 Debug
-k describe pod <name>
-k logs <pod>
-k logs <pod> -c <container>
+- k describe pod `<name>`
+- k logs `<pod>`
+- k logs `<pod>` -c `<container>`
 
 ## 🧹 Cleanup
-k delete pod <name> $now
-k delete deploy <name>
-k delete job <name>
+- k delete pod `<name>` $now
+- k delete deploy `<name>`
+- k delete job `<name>`
 
 ---
 
