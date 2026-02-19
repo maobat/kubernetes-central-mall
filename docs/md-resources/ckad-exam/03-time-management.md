@@ -3,7 +3,6 @@
 
 # 📘 `03-time-management.md`
 
-```md
 # ⏱️ Time Strategy (THIS PASSES THE EXAM)
 
 ---
