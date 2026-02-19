@@ -1,4 +1,4 @@
-<img src="lab01-configuration-configmaps.jpg" alt="Configuration ConfigMaps" width="40%" />
+<img src="lab01-configuration-configmaps.png" alt="Configuration ConfigMaps" width="40%" />
 
 # 📋 The Rulebook & The Uniform
 
