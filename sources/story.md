@@ -4,7 +4,7 @@
 ---
 
 ## 🏗️ Part 1: Application Design and Build `[ 20% ]`
-> **Focus:** Understanding the core blueprints of the mall—how we hire staff, organize departments, and deploy our "mannequin" images.
+> **Focus:** Understanding the core blueprints of the mall, how we hire staff, organize departments, and deploy our "mannequin" images.
 
 ### 📖 Chapter 1: [Choosing the Right Workload](story/ch01-choosing-the-right-workload.md) 
 When to use a Shop Clerk (**Pod**), a Manager (**Deployment**), a Night-Shift Worker (**Job**), or a Recurring Maintenance Crew (**CronJob**).
