@@ -2,7 +2,7 @@
 
 ## Pod Design – Advanced Pod Patterns
 
----
+
 
 ## 🎯 Lab Goal
 

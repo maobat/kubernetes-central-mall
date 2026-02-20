@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: manager-firm
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: manager-firm
+  template:
+    metadata:
+      labels:
+        app: manager-firm
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14
+        ports:
+        - containerPort: 80
