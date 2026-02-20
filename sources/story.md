@@ -10,8 +10,8 @@
 When to use a Shop Clerk (**Pod**), a Manager (**Deployment**), a Night-Shift Worker (**Job**), or a Recurring Maintenance Crew (**CronJob**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Jobs & CronJobs](comics/pod-design/02-jobs-cronjobs/README.md)
-- 📄 [Doc: Using StatefulSets](docs/md-resources/using-statefulsets.md)
+- 🖼️ [Comic: Jobs & CronJobs](./../comics/pod-design/02-jobs-cronjobs/README.md)
+- 📄 [Doc: Using StatefulSets](./../docs/md-resources/using-statefulsets.md)
 
 ---
 
@@ -19,8 +19,8 @@ When to use a Shop Clerk (**Pod**), a Manager (**Deployment**), a Night-Shift Wo
 The Clerk and their Helper (**Sidecar** and **Init Containers**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Sidecar Pattern](comics/pod-design/01-sidecar/README.md)
-- 🧪 [Lab: Sidecar Pattern](labs/pod-design/lab01-sidecar-pattern/README.md)
+- 🖼️ [Comic: Sidecar Pattern](./../comics/pod-design/01-sidecar/README.md)
+- 🧪 [Lab: Sidecar Pattern](./../labs/pod-design/lab01-sidecar-pattern/README.md)
 
 ---
 
@@ -33,8 +33,8 @@ Mastering the art of building and updating your store's display models (**Docker
 Hiring external contractors and obtaining special building permits (**CRDs & Operators**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Nightly Backup Permit](comics/crd/01-the-nightly-backup-permit/README.md)
-- 📄 [Doc: Extending K8s with CRDs](docs/md-resources/extending-k8s-crds-operators.md)
+- 🖼️ [Comic: The Nightly Backup Permit](./../comics/crd/01-the-nightly-backup-permit/README.md)
+- 📄 [Doc: Extending K8s with CRDs](./../docs/md-resources/extending-k8s-crds-operators.md)
 
 ---
 
@@ -45,9 +45,9 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: ConfigMaps](comics/configuration/01-configmap/README.md)
-- 🖼️ [Comic: Secrets Injection](comics/secrets/01-secrets-injection/README.md)
-- 🧪 [Lab: Configuration Integration](docs/md-resources/lab-comprehensive-configuration-integration.md)
+- 🖼️ [Comic: ConfigMaps](./../comics/configuration/01-configmap/README.md)
+- 🖼️ [Comic: Secrets Injection](./../comics/secrets/01-secrets-injection/README.md)
+- 🧪 [Lab: Configuration Integration](./../docs/md-resources/lab-comprehensive-configuration-integration.md)
 
 ---
 
@@ -55,8 +55,8 @@ Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 Setting strict rules for how employees handle equipment (**SecurityContexts & Capabilities**).
 
 **🧰 Study Toolbox:**
-- 📄 [Doc: Worker Safety and Conduct](docs/md-resources/securitycontext-worker-safety-and-conduct.md)
-- 🧪 [Lab: Managing Security Settings](docs/md-resources/lab-managing-security-settings.md)
+- 📄 [Doc: Worker Safety and Conduct](./../docs/md-resources/securitycontext-worker-safety-and-conduct.md)
+- 🧪 [Lab: Managing Security Settings](./../docs/md-resources/lab-managing-security-settings.md)
 
 ---
 
@@ -64,8 +64,8 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 Assigning roles and permissions to ensure only authorized staff access the backrooms (**Roles & ServiceAccounts**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Secure Badge](comics/security/01-the-secure-badge/README.md)
-- 📄 [Doc: Understanding RBAC](docs/md-resources/understanding-role-based-access-control-rbac.md)
+- 🖼️ [Comic: The Secure Badge](./../comics/security/01-the-secure-badge/README.md)
+- 📄 [Doc: Understanding RBAC](./../docs/md-resources/understanding-role-based-access-control-rbac.md)
 
 ---
 
@@ -73,7 +73,7 @@ Assigning roles and permissions to ensure only authorized staff access the backr
 Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits & Quotas**).
 
 **🧰 Study Toolbox:**
-- 📄 [Doc: The Resource Budget](docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+- 📄 [Doc: The Resource Budget](./../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
 ---
 
@@ -84,8 +84,8 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Replica Weighting](comics/canary-nodeport/01-canary-replica-weighting/README.md)
-- 📄 [Doc: Implementing Canary Deployments](docs/md-resources/implementing-canary-deployments.md)
+- 🖼️ [Comic: Replica Weighting](./../comics/canary-nodeport/01-canary-replica-weighting/README.md)
+- 📄 [Doc: Implementing Canary Deployments](./../docs/md-resources/implementing-canary-deployments.md)
 
 ---
 
@@ -93,8 +93,8 @@ Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 Using standardized tools like **Helm** and **Kustomize** to manage mall layout templates.
 
 **🧰 Study Toolbox:**
-- 📄 [Doc: Using Helm](docs/md-resources/using-the-helm-package-manager.md)
-- 📄 [Doc: Using Kustomize](docs/md-resources/using-kustomize.md)
+- 📄 [Doc: Using Helm](./../docs/md-resources/using-the-helm-package-manager.md)
+- 📄 [Doc: Using Kustomize](./../docs/md-resources/using-kustomize.md)
 
 ---
 
@@ -105,8 +105,8 @@ Using standardized tools like **Helm** and **Kustomize** to manage mall layout t
 Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Cross-Namespace Nav](comics/nodeport/01-cross-namespace/README.md)
-- 📄 [Doc: Service IP Trackers](docs/md-resources/service-ip-tracker-evolution.md)
+- 🖼️ [Comic: Cross-Namespace Nav](./../comics/nodeport/01-cross-namespace/README.md)
+- 📄 [Doc: Service IP Trackers](./../docs/md-resources/service-ip-tracker-evolution.md)
 
 ---
 
@@ -114,8 +114,8 @@ Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 Routing customers through the main doors and specialized directories (**Ingress & Gateway API**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Virtual Host Routing](comics/ingress/02-virtual-host/README.md)
-- 🖼️ [Comic: The Lost Gateway](comics/gateway-api/01-the-lost-gateway/README.md)
+- 🖼️ [Comic: Virtual Host Routing](./../comics/ingress/02-virtual-host/README.md)
+- 🖼️ [Comic: The Lost Gateway](./../comics/gateway-api/01-the-lost-gateway/README.md)
 
 ---
 
@@ -123,7 +123,7 @@ Routing customers through the main doors and specialized directories (**Ingress 
 Restricting movement between departments to protect the mall's security.
 
 **🧰 Study Toolbox:**
-- 📄 [Doc: Network Isolation Concept](docs/md-resources/troubleshooting-kubernetes.md#section-8-3)
+- 📄 [Doc: Network Isolation Concept](./../docs/md-resources/troubleshooting-kubernetes.md#section-8-3)
 
 ---
 
@@ -134,8 +134,8 @@ Restricting movement between departments to protect the mall's security.
 Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Probes**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Health Inspector](comics/observability/01-the-health-inspector/README.md)
-- 🧪 [Example: Healthz Probe YAML](labs/observability/lab01-liveness-probes-health-inspector/healthz_probe.yaml)
+- 🖼️ [Comic: The Health Inspector](./../comics/observability/01-the-health-inspector/README.md)
+- 🧪 [Example: Healthz Probe YAML](./../labs/observability/lab01-liveness-probes-health-inspector/healthz_probe.yaml)
 
 ---
 
@@ -143,7 +143,7 @@ Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Pr
 Investigating "incidents" using logs and real-time inspections (**Logs, Describe & Exec**).
 
 **🧰 Study Toolbox:**
-- 📄 [Doc: Troubleshooting Guide](docs/md-resources/troubleshooting-kubernetes.md)
-- 📄 [Doc: Diagnostic Cheat Sheet](docs/md-resources/diagnostic-cheat-sheet.md)
+- 📄 [Doc: Troubleshooting Guide](./../docs/md-resources/troubleshooting-kubernetes.md)
+- 📄 [Doc: Diagnostic Cheat Sheet](./../docs/md-resources/diagnostic-cheat-sheet.md)
 
 ---
