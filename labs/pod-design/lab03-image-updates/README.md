@@ -29,8 +29,8 @@ It explains **Image Layers and Rolling Updates**.
 
 ## 📘 Reference Docs
 
-- Updating a Deployment → [Kubernetes Docs: Updating a Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment)
-- Rollback → [Kubernetes Docs: Rolling Back a Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment)
+- Updating a Deployment → [6.3.4.5 managing container images and rollouts](../../../docs/md-resources/managing-container-images-and-rollouts.md)
+- Rollback → [6.3.4.5 managing container images and rollouts](../../../docs/md-resources/managing-container-images-and-rollouts.md)
 
 ---
 

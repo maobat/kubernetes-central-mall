@@ -131,6 +131,8 @@ The documents are designed to be read sequentially, but each section is also sel
   Gradual scaling of Stable and Canary deployments using kubectl scale to achieve controlled traffic distribution. 
 - [6.3.4 Related Deployment Strategies Comparison](md-resources/related-deployment-strategies-comparison.md)  
   Comparison: Blue/Green vs. Canary Deployments
+- [6.3.4.5 managing container images and rollouts](md-resources/managing-container-images-and-rollouts.md)  
+  Comparison: Blue/Green vs. Canary Deployments
 - [6.3.5 Understanding Custom Resource Definitions (CRDs)](md-resources/understanding-custom-resource-definitions-crds.md)  
   Extending the Kubernetes API with new, custom resource types.
 - [6.3.5.1 Phase 1: Defining the New Permit Type (The CRD)](md-resources/phase-1-defining-the-new-permit-type-the-crd.md)  

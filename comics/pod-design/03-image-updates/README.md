@@ -13,7 +13,7 @@ This comic explains:
 - You want a quick **mental model** using the mall analogy 😄
 
 🔗 References:
-- Docs → [Kubernetes Docs: Updating a Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment)
+- Docs → [Kubernetes Docs: Updating a Deployment](../../../docs/md-resources/managing-container-images-and-rollouts.md)
 - Lab → [`labs/pod-design/lab03-image-updates`](../../../labs/pod-design/lab03-image-updates/README.md)
 
 ---
