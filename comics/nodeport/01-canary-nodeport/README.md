@@ -27,4 +27,4 @@ This comic explains:
 ---
 
 ## 🔗 References
-- Lab → [LAB 04 – Canary with NodePort](../../../labs/deploying/lab04-canary-nodeport/README.md)
+- Lab → [LAB 04 – Canary with NodePort](../../../labs/services-and-networking/lab04-canary-nodeport/README.md)

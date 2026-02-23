@@ -32,4 +32,4 @@ This comic explains:
 ---
 
 ## 🔗 References
-- Lab → [LAB 02 – Ingress Virtual Host](../../../labs/services-and-networking/lab02-ingress-virtual-host/README.md)
+- Lab → [LAB 03 – Ingress Virtual Host](../../../labs/services-and-networking/lab03-ingress-virtual-host/README.md)

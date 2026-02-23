@@ -35,4 +35,4 @@ Traffic doesn’t care about floors — only doors.
 ---
 
 ## 🔗 References
-- Lab → [LAB 01 – NodePort Cross Namespace](../../../labs/services-and-networking/lab01-nodeport-cross-namespace/README.md)
+- Lab → [LAB 02 – NodePort Cross Namespace](../../../labs/services-and-networking/lab02-nodeport-cross-namespace/README.md)

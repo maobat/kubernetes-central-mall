@@ -22,8 +22,16 @@ For the most popular shops, the mall might hire a dedicated **Receptionist**. Wh
 
 ---
 
-### Resources for this Chapter:
-- [NodePort: Cross-Namespace Communication](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/nodeport/01-cross-namespace/README.md)
-- [Evolution of the Service IP Tracker](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/service-ip-tracker-evolution.md)
+## 🧰 Study Toolbox
+
+### 📞 Services (Internal - ClusterIP)
+* 🖼️ **Comic:** [The Internal Intercom - ClusterIP Balances Traffic](../../comics/clusterip/01-internal-intercom/README.md)
+* 📄 **Doc:** [Service IP Trackers & Evolution](../../docs/md-resources/service-ip-tracker-evolution.md)
+* 🧪 **Lab:** [LAB 01 – Internal Services Section](../../labs/services-and-networking/lab01-nodeport-cross-namespace/README.md#3-test-from-the-default-namespace-internal-access)
+
+### 🚪 Services (External - NodePort)
+* 🖼️ **Comic:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../comics/nodeport/01-cross-namespace/README.md)
+* 📄 **Doc:** [Understanding Traffic Flow](../../docs/md-resources/traffic-flow.md)
+* 🧪 **Lab:** [LAB 01 – NodePort & Cross-Namespace](../../labs/services-and-networking/lab01-nodeport-cross-namespace/README.md)
 
 [<< Previous Chapter: Logistics Tools](ch10-logistics-tools.md) | [Back to Story Index](../story.md) | [Next Chapter: Ingress & Gateway API >>](ch12-ingress-and-gateway-api.md)

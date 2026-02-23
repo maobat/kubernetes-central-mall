@@ -67,34 +67,52 @@ Explains:
 
 ---
 
-### 🚪 NodePort
+---
+
+### 📞 Services (Internal)
+
+    clusterip/
+    └── 01-internal-intercom/
+        ├── internal-intercom.png
+        └── README.md
+
+**Story:** *The Internal Intercom*  
+**Quick links:**
+- 🧪 **Lab:** [`lab01-clusterip-internal-traffic`](../labs/services-and-networking/lab01-clusterip-internal-traffic/README.md)
+- 📖 **Docs:** [`docs/md-resources/service-ip-tracker-evolution.md`](../docs/md-resources/service-ip-tracker-evolution.md)
+
+Explains:
+- how **ClusterIP** balances requests
+- why Pods don’t need to know each other’s IPs
+- the role of the Service as a stable entry point
+
+---
+
+### 🚪 Services (External)
 
     nodeport/
-    └── 01-cross-namespace/
+    ├── 01-canary-nodeport/
+    │   ├── lab04-canary-nodeport.png
+    │   └── README.md
+    └── 02-cross-namespace/
         ├── lab01-nodeport-cross-namespace.png
         └── README.md
 
-**Story:** *Crossing the Mall Corridors*  
+**Story:** *The Canary Side Entrance*  
 **Quick links:**
-- 🧪 **Lab:** [`lab01-nodeport-cross-namespace`](../labs/services-and-networking/lab01-nodeport-cross-namespace/README.md)
-- 📖 **Docs:** [`docs/md-resources/traffic-flow.md`](../docs/md-resources/traffic-flow.md)
-
-Explains:
-- How NodePort exposes services
-- Why namespaces don’t isolate traffic paths
-- Why NodePort works even when pods live elsewhere
+- 🧪 **Lab:** [`lab04-canary-nodeport`](../labs/services-and-networking/lab04-canary-nodeport/README.md)
 
 ---
 
 ### 🎛️ Ingress
 
     ingress/
-    └── 02-virtual-host/
+    └── 01-virtual-host/
         ├── lab02-ingress-virtual-host.png
         └── README.md
 
 **Quick links:**
-- 🧪 **Lab:** [`lab02-ingress-virtual-host`](../labs/services-and-networking/lab02-ingress-virtual-host/README.md)
+- 🧪 **Lab:** [`lab03-ingress-virtual-host`](../labs/services-and-networking/lab03-ingress-virtual-host/README.md)
 - 📖 **Docs:** [`docs/md-resources/ingress-vs-gateway.md`](../docs/md-resources/ingress-vs-gateway.md)
 
 Explains:
@@ -142,23 +160,8 @@ Explains:
 
 ---
 
-### 🐤 Canary Deployments (NodePort)
-
-    canary-nodeport/
-    └── 01-canary-replica-weighting/
-        ├── lab04-canary-nodeport.png
-        └── README.md
-
-**Quick links:**
-- 🧪 **Lab:** [`lab04-canary-nodeport`](../labs/deploying/lab04-canary-nodeport/README.md)
-- 📖 **Docs:** [`docs/md-resources/implementing-canary-deployments.md`](../docs/md-resources/implementing-canary-deployments.md)
-
-Explains:
-- Replica-based canary behavior
-- Why NodePort can’t do true traffic splitting
-- How Kubernetes “fakes” percentages using replicas
-
 ---
+
  
  ### 📦 Package Management & Logistics (Helm & Kustomize)
  

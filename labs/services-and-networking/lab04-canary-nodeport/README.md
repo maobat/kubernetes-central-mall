@@ -11,13 +11,8 @@ Implement a **Canary Deployment** using **NodePort** and **replica weighting** t
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 04 - The Canary Replica Weighting Mystery](../../../comics/canary-nodeport/01-canary-replica-weighting/README.md)
-
-It explains **how replica count determines traffic share** and why this is **not the modern way**.
+## 📖 Related Comic
+👉 [comics/nodeport/01-canary-nodeport](../../../comics/nodeport/01-canary-nodeport)
 
 ---
 ## 📘 Reference Docs

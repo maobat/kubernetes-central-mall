@@ -18,13 +18,8 @@ You will learn how to:
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 02 - The Virtual Host Gateway Show](../../../comics/ingress/02-virtual-host/README.md)
-
-It explains **how Ingress routes traffic** based on Host headers.
+## 📖 Related Comic
+👉 [comics/ingress/01-virtual-host](../../../comics/ingress/01-virtual-host)
 
 ---
 
