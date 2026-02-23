@@ -12,7 +12,7 @@ Implement a **Canary Deployment** using **NodePort** and **replica weighting** t
 ---
 
 ## 📖 Related Comic
-👉 [comics/nodeport/01-canary-nodeport](../../../comics/nodeport/01-canary-nodeport)
+👉 [comics/nodeport/01-canary-nodeport/README.md](../../../comics/nodeport/01-canary-nodeport/README.md)
 
 ---
 ## 📘 Reference Docs

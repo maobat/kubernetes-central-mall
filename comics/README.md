@@ -101,6 +101,7 @@ Explains:
 **Story:** *The Canary Side Entrance*  
 **Quick links:**
 - 🧪 **Lab:** [`lab04-canary-nodeport`](../labs/services-and-networking/lab04-canary-nodeport/README.md)
+- 🧪 **Lab:** [`lab02-nodeport-cross-namespace`](../labs/services-and-networking/lab02-nodeport-cross-namespace/README.md)
 
 ---
 

@@ -9,7 +9,7 @@ This lab focuses on **Service exposure** and **cross-namespace communication**. 
 ---
 
 ## 📖 Related Comic
-👉 [comics/nodeport/02-cross-namespace](../../../comics/nodeport/02-cross-namespace)
+👉 [comics/nodeport/02-cross-namespace/README.md](../../../comics/nodeport/02-cross-namespace/README.md)
 
 ---
 

@@ -19,7 +19,7 @@ You will learn how to:
 ---
 
 ## 📖 Related Comic
-👉 [comics/ingress/01-virtual-host](../../../comics/ingress/01-virtual-host)
+👉 [comics/ingress/01-virtual-host/README.md](../../../comics/ingress/01-virtual-host/README.md)
 
 ---
 

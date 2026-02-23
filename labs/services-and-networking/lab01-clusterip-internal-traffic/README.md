@@ -11,7 +11,7 @@ This lab focuses on **ClusterIP Services**. You will learn how to create a stabl
 ---
 
 ## 📖 Related Comic
-👉 [comics/clusterip/01-internal-intercom](../../../comics/clusterip/01-internal-intercom)
+👉 [comics/clusterip/01-internal-intercom/README.md](../../../comics/clusterip/01-internal-intercom/README.md)
 
 ---
 
