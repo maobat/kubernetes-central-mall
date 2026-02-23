@@ -32,7 +32,9 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 
 ---
 
-### Resources for this Chapter:
-- [Resource Requests, Limits, and Quotas](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+### 🧰 Study Toolbox
+
+### 📄 Documentation
+* 📖 **Docs:** [Resource Requests, Limits, and Quotas](../../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
 [<< Previous Chapter: Identity & Access](ch07-identity-and-access.md) | [Back to Story Index](../story.md) | [Next Chapter: Launch Strategies >>](ch09-launch-strategies.md)

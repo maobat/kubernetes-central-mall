@@ -26,8 +26,13 @@ This is the default **Rolling Update** in Kubernetes. One by one, old pods are r
 
 ---
 
-### Resources for this Chapter:
-- [Canary & NodePort: Replica Weighting](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/canary-nodeport/01-canary-replica-weighting/README.md)
-- [Implementing Canary Deployments](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/implementing-canary-deployments.md)
+### 🧰 Study Toolbox
+
+### 🚪 Services (External - NodePort & Canary)
+* 🖼️ **Comic:** [Canary Traffic at the Side Entrance](../../comics/nodeport/01-canary-nodeport/README.md)
+* 🧪 **Lab:** [LAB 04 – Canary Deployments with NodePort](../../labs/services-and-networking/lab04-canary-nodeport/README.md)
+
+### 📄 Documentation
+* 📖 **Docs:** [Implementing Canary Deployments](../../docs/md-resources/implementing-canary-deployments.md)
 
 [<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md)

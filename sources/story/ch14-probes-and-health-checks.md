@@ -26,8 +26,10 @@ For massive department stores that take a very long time to open their heavy shu
 
 ---
 
-### Resources for this Chapter:
-- [Comic: The Health Inspector](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/observability/01-the-health-inspector/README.md)
-- [Example: Healthz Probe Configuration](file:///home/mauro.battello/projects/kubernetes-central-mall/labs/observability/lab01-liveness-probes-health-inspector/healthz_probe.yaml)
+### 🧰 Study Toolbox
+
+### 👁️ Observability & Probes
+* 🖼️ **Comic:** [The Health Inspector](../../comics/observability/01-the-health-inspector/README.md)
+* 🧪 **Lab:** [LAB 01 – Liveness Probes: The Health Inspector](../../labs/observability/lab01-liveness-probes-health-inspector/README.md)
 
 [<< Previous Chapter: Network Policies](ch13-network-policies.md) | [Back to Story Index](../story.md) | [Next Chapter: Debugging & Logs >>](ch15-debugging-and-logs.md)

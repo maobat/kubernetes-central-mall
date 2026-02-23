@@ -31,7 +31,13 @@ By using Images, the mall ensures that every worker is **exactly the same**. No 
 
 ---
 
-### Resources for this Chapter:
-- [Building Images](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/ckad-cheatsheet.md) (Look for 'Build' commands)
+### 🧰 Study Toolbox
+
+### 🏗️ Image Updates & Rollouts
+* 🖼️ **Comic:** [The Perfect Mannequin](../../comics/pod-design/03-image-updates/README.md)
+* 🧪 **Lab:** [LAB 03 – Image Updates & Rollouts](../../labs/pod-design/lab03-image-updates/README.md)
+
+### 📄 Documentation
+* 📖 **Docs:** [CKAD Cheatsheet](../../docs/md-resources/ckad-cheatsheet.md) (Look for 'Build' commands)
 
 [<< Previous Chapter: Multi-container Design Patterns](ch02-multi-container-design-patterns.md) | [Back to Story Index](../story.md) | [Next Chapter: Extending the Mall >>](ch04-extending-the-mall.md)

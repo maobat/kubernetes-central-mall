@@ -29,8 +29,10 @@ By defining **Worker Safety & Conduct**, the Mall Owner ensures that the entire 
 
 ---
 
-### Resources for this Chapter:
-- [Worker Safety & Conduct (SecurityContexts)](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/securitycontext-worker-safety-and-conduct.md)
-- [Lab: Managing Security Settings](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/lab-managing-security-settings.md)
+### 🧰 Study Toolbox
+
+### 📄 Documentation
+* 📖 **Docs:** [SecurityContext: Worker Safety & Conduct](../../docs/md-resources/securitycontext-worker-safety-and-conduct.md)
+* 📖 **Docs:** [Lab: Managing Security Settings](../../docs/md-resources/lab-managing-security-settings.md)
 
 [<< Previous Chapter: ConfigMaps & Secrets](ch05-configmaps-and-secrets.md) | [Back to Story Index](../story.md) | [Next Chapter: Identity & Access >>](ch07-identity-and-access.md)

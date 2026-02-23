@@ -29,8 +29,10 @@ This is `kubectl exec`. It allows you to step inside a running pod and run comma
 
 ---
 
-### Resources for this Chapter:
-- [Troubleshooting Kubernetes Guide](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/troubleshooting-kubernetes.md)
-- [Diagnostic Cheat Sheet](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/diagnostic-cheat-sheet.md)
+### 🧰 Study Toolbox
+
+### 📄 Documentation
+* 📖 **Docs:** [Troubleshooting Kubernetes Guide](../../docs/md-resources/troubleshooting-kubernetes.md)
+* 📖 **Docs:** [Diagnostic Cheat Sheet](../../docs/md-resources/diagnostic-cheat-sheet.md)
 
 [<< Previous Chapter: Probes & Health Checks](ch14-probes-and-health-checks.md) | [Back to Story Index](../story.md)

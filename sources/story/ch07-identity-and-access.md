@@ -35,8 +35,13 @@ You might wonder why the Mall doesn't just write the permissions directly onto t
 
 ---
 
-### Resources for this Chapter:
-- [01-The Secure Badge (ServiceAccounts)](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/security/01-the-secure-badge/README.md)
-- [Understanding RBAC](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/understanding-role-based-access-control-rbac.md)
+### 🧰 Study Toolbox
+
+### 🔐 Identity & Access (ServiceAccounts)
+* 🖼️ **Comic:** [The Secure Badge](../../comics/security/01-the-secure-badge/README.md)
+* 🧪 **Lab:** [LAB 01 – Managing Security Settings (ServiceAccount)](../../labs/security/lab01-serviceaccount-identity/README.md)
+
+### 📄 Documentation
+* 📖 **Docs:** [Understanding RBAC](../../docs/md-resources/understanding-role-based-access-control-rbac.md)
 
 [<< Previous Chapter: Worker Safety & Conduct](ch06-worker-safety-and-conduct.md) | [Back to Story Index](../story.md) | [Next Chapter: Resource Budgets >>](ch08-resource-budgets.md)

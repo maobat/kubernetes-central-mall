@@ -25,8 +25,14 @@ The Gateway API is "Role-Based." It allows different people to manage different 
 
 ---
 
-### Resources for this Chapter:
-- [Ingress: Virtual Host Routing](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/ingress/02-virtual-host/README.md)
-- [Gateway API: The Lost Gateway](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/gateway-api/01-the-lost-gateway/README.md)
+### 🧰 Study Toolbox
+
+### 🌐 Ingress & Virtual Hosts
+* 🖼️ **Comic:** [Virtual Host Gateway Show](../../comics/ingress/01-virtual-host/README.md)
+* 🧪 **Lab:** [LAB 03 – Ingress & Virtual Host Routing](../../labs/services-and-networking/lab03-ingress-virtual-host/README.md)
+
+### 📡 Gateway API
+* 🖼️ **Comic:** [The Lost Gateway](../../comics/gateway-api/01-the-lost-gateway/README.md)
+* 🧪 **Lab:** [LAB 05 – Canary Deployments with Gateway API](../../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
 
 [<< Previous Chapter: Finding the Stores](ch11-finding-the-stores.md) | [Back to Story Index](../story.md) | [Next Chapter: Network Policies >>](ch13-network-policies.md)

@@ -33,9 +33,14 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 
 ---
 
-### Resources for this Chapter:
-- [01-ConfigMaps](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/configuration/01-configmap/README.md)
-- [01-Secrets-Injection](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/secrets/01-secrets-injection/README.md)
-- [Lab: Comprehensive Configuration Integration](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/lab-comprehensive-configuration-integration.md)
+### 🧰 Study Toolbox
+
+### ⚙️ Configuration (ConfigMaps)
+* 🖼️ **Comic:** [The Rulebook & The Uniform](../../comics/configuration/01-configmap/README.md)
+* 🧪 **Lab:** [LAB 01 – Configuration: ConfigMaps](../../labs/configuration/lab01-configmaps/README.md)
+
+### 🤫 Security (Secrets)
+* 🖼️ **Comic:** [The Secret of the High-Security Vault](../../comics/secrets/01-secrets-injection/README.md)
+* 🧪 **Lab:** [LAB 03 – Using Secrets to Inject Sensitive Configuration](../../labs/security/lab03-secrets-env-injection/README.md)
 
 [<< Previous Chapter: Extending the Mall](ch04-extending-the-mall.md) | [Back to Story Index](../story.md) | [Next Chapter: Worker Safety & Conduct >>](ch06-worker-safety-and-conduct.md)

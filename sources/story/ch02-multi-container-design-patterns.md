@@ -29,8 +29,10 @@ By separating the "Setup" and the "Side-Tasks" from the Main Worker, we keep our
 
 ---
 
-### Resources for this Chapter:
-- [pod-design/01-sidecar](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/pod-design/01-sidecar/README.md)
-- [lab01-sidecar-pattern](file:///home/mauro.battello/projects/kubernetes-central-mall/labs/pod-design/lab01-sidecar-pattern/README.md)
+### 🧰 Study Toolbox
+
+### 🧱 Multi-Container Pods
+* 🖼️ **Comic:** [The Assistant & The Shared Space](../../comics/pod-design/01-sidecar/README.md)
+* 🧪 **Lab:** [LAB 01 – Sidecars & InitContainers](../../labs/pod-design/lab01-sidecar-pattern/README.md)
 
 [<< Previous Chapter: Choosing the Right Workload](ch01-choosing-the-right-workload.md) | [Back to Story Index](../story.md) | [Next Chapter: Images & Modifications >>](ch03-images-and-modifications.md)

@@ -20,8 +20,9 @@ By locking the corridors between competing departments and only allowing necessa
 
 ---
 
-### Resources for this Chapter:
-- [Network Policies: Concept and Application](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/troubleshooting-kubernetes.md#section-8-3) (Refer to Section 8.3)
-- [Lab: Implementing Network Policies] (Upcoming)
+### 🧰 Study Toolbox
+
+### 📄 Documentation
+* 📖 **Docs:** [Network Policies: Concept and Application](../../docs/md-resources/troubleshooting-kubernetes.md#section-8-3) (Refer to Section 8.3)
 
 [<< Previous Chapter: Ingress & Gateway API](ch12-ingress-and-gateway-api.md) | [Back to Story Index](../story.md) | [Next Chapter: Probes & Health Checks >>](ch14-probes-and-health-checks.md)

@@ -49,9 +49,10 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: ConfigMaps](./../comics/configuration/01-configmap/README.md)
-- 🖼️ [Comic: Secrets Injection](./../comics/secrets/01-secrets-injection/README.md)
-- 🧪 [Lab: Configuration Integration](./../docs/md-resources/lab-comprehensive-configuration-integration.md)
+- 🖼️ [Comic: The Rulebook & The Uniform](./../comics/configuration/01-configmap/README.md)
+- 🧪 [Lab: Configuration: ConfigMaps](./../labs/configuration/lab01-configmaps/README.md)
+- 🖼️ [Comic: The Secret of the High-Security Vault](./../comics/secrets/01-secrets-injection/README.md)
+- 🧪 [Lab: Secrets & Env Injection](./../labs/security/lab03-secrets-env-injection/README.md)
 
 ---
 
@@ -60,7 +61,7 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 
 **🧰 Study Toolbox:**
 - 📄 [Doc: Worker Safety and Conduct](./../docs/md-resources/securitycontext-worker-safety-and-conduct.md)
-- 🧪 [Lab: Managing Security Settings](./../docs/md-resources/lab-managing-security-settings.md)
+- 🧪 [Lab: Managing Security Settings (SecurityContext)](./../labs/security/lab01-serviceaccount-identity/README.md)
 
 ---
 
@@ -88,8 +89,9 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Replica Weighting](./../comics/canary-nodeport/01-canary-replica-weighting/README.md)
+- 🖼️ [Comic: Canary Traffic at the Side Entrance](./../comics/nodeport/01-canary-nodeport/README.md)
 - 📄 [Doc: Implementing Canary Deployments](./../docs/md-resources/implementing-canary-deployments.md)
+- 🧪 [Lab: Canary Deployments with NodePort](./../labs/services-and-networking/lab04-canary-nodeport/README.md)
 
 ---
 
@@ -109,7 +111,8 @@ Using standardized tools like **Helm** and **Kustomize** to manage mall layout t
 Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Cross-Namespace Nav](./../comics/nodeport/01-cross-namespace/README.md)
+- 🖼️ [Comic: The NodePort Traffic Adventure](./../comics/nodeport/02-cross-namespace/README.md)
+- 🧪 [Lab: NodePort & Cross-Namespace Access](./../labs/services-and-networking/lab02-nodeport-cross-namespace/README.md)
 - 📄 [Doc: Service IP Trackers](./../docs/md-resources/service-ip-tracker-evolution.md)
 
 ---
@@ -118,8 +121,10 @@ Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 Routing customers through the main doors and specialized directories (**Ingress & Gateway API**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Virtual Host Routing](./../comics/ingress/02-virtual-host/README.md)
+- 🖼️ [Comic: Virtual Host Gateway Show](./../comics/ingress/01-virtual-host/README.md)
+- 🧪 [Lab: Ingress & Virtual Host Routing](./../labs/services-and-networking/lab03-ingress-virtual-host/README.md)
 - 🖼️ [Comic: The Lost Gateway](./../comics/gateway-api/01-the-lost-gateway/README.md)
+- 🧪 [Lab: Canary Deployments with Gateway API](./../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
 
 ---
 
@@ -139,7 +144,7 @@ Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Pr
 
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Health Inspector](./../comics/observability/01-the-health-inspector/README.md)
-- 🧪 [Example: Healthz Probe YAML](./../labs/observability/lab01-liveness-probes-health-inspector/healthz_probe.yaml)
+- 🧪 [Lab: Liveness Probes: The Health Inspector](./../labs/observability/lab01-liveness-probes-health-inspector/README.md)
 
 ---
 

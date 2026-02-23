@@ -36,8 +36,13 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 
 ---
 
-### Resources for this Chapter:
-- [01-the-nightly-backup-permit](file:///home/mauro.battello/projects/kubernetes-central-mall/labs/extending-k8s/lab01-crd-backup-permit/README.md)
-- [Extending K8s: CRDs & Operators](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/extending-k8s-crds-operators.md)
+### 🧰 Study Toolbox
+
+### 🧩 Custom Resource Definitions (CRD)
+* 🖼️ **Comic:** [The Nightly Backup Permit](../../comics/crd/01-the-nightly-backup-permit/README.md)
+* 🧪 **Lab:** [LAB 01 – Creating a Custom Backup Service (CRD)](../../labs/extending-k8s/lab01-crd-custom-backup-service/README.md)
+
+### 📄 Documentation
+* 📖 **Docs:** [Extending K8s: CRDs & Operators](../../docs/md-resources/extending-k8s-crds-operators.md)
 
 [<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)
