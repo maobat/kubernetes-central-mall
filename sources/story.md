@@ -132,6 +132,8 @@ Routing customers through the main doors and specialized directories (**Ingress 
 Restricting movement between departments to protect the mall's security.
 
 **🧰 Study Toolbox:**
+- 🖼️ [Comic: The Locked Corridor - Whitelisting Traffic](./../comics/network-policies/01-locked-corridors/README.md)
+- 🧪 [Lab: Network Policies & Locked Corridors](./../labs/services-and-networking/lab06-network-policies/README.md)
 - 📄 [Doc: Network Isolation Concept](./../docs/md-resources/troubleshooting-kubernetes.md#section-8-3)
 
 ---

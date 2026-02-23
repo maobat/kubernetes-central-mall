@@ -22,6 +22,10 @@ By locking the corridors between competing departments and only allowing necessa
 
 ### 🧰 Study Toolbox
 
+### 🛡️ Network Security
+* 🖼️ **Comic:** [The Locked Corridor - Whitelisting Traffic](../../comics/network-policies/01-locked-corridors/README.md)
+* 🧪 **Lab:** [LAB 06 – Network Policies & Locked Corridors](../../labs/services-and-networking/lab06-network-policies/README.md)
+
 ### 📄 Documentation
 * 📖 **Docs:** [Network Policies: Concept and Application](../../docs/md-resources/troubleshooting-kubernetes.md#section-8-3) (Refer to Section 8.3)
 

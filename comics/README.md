@@ -161,6 +161,24 @@ Explains:
 
 ---
 
+### 🛡️ Network Policies
+
+    network-policies/
+    └── 01-locked-corridors/
+        ├── locked-corridors.png
+        └── README.md
+
+**Story:** *The Locked Corridor*  
+**Quick links:**
+- 🧪 **Lab:** [`lab06-network-policies`](../labs/services-and-networking/lab06-network-policies/README.md)
+- 📖 **Docs:** [`docs/md-resources/troubleshooting-kubernetes.md#section-8-3`](../docs/md-resources/troubleshooting-kubernetes.md#section-8-3)
+
+Explains:
+- Default deny strategy
+- Why whitelisting is the safest approach
+- How labels act as keycards
+- The critical role of DNS whitelisting
+
 ---
 
  

@@ -18,6 +18,7 @@
 - **lab02** – [NodePort & cross-namespace access](services-and-networking/lab02-nodeport-cross-namespace/README.md)
 - **lab03** – [Ingress with virtual host routing](services-and-networking/lab03-ingress-virtual-host/README.md)
 - **lab04** – [Canary Deployments with NodePort](services-and-networking/lab04-canary-nodeport/README.md)
+- **lab06** – [Network Policies & Locked Corridors](services-and-networking/lab06-network-policies/README.md)
 
 ### 💾 Storage
 - **lab01** – [Persistent Volumes & Claims (PV/PVC)](storage/lab01-persistent-volume/README.md)
