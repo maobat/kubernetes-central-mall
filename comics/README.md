@@ -293,7 +293,9 @@ Explains:
 
 ---
 
-### 👁️ Observability (Liveness Probes)
+### 👁️ Observability (Probes)
+
+#### 01 - The Health Inspector (Liveness)
 
     observability/
     └── 01-the-health-inspector/
@@ -304,9 +306,24 @@ Explains:
 - 🧪 **Lab:** [`lab01-liveness-probes-health-inspector`](../labs/observability/lab01-liveness-probes-health-inspector/README.md)
 
 Explains:
-- The difference between **Liveness** (restart) and **Readiness** (traffic)
+- When Kubernetes decides when to **restart** a Pod
 - How Kubernetes acts as a strict Health Inspector
 - Why `initialDelaySeconds` is critical for avoiding restart loops
+
+#### 02 - Readiness Probes
+
+    observability/
+    └── 02-readiness-probes/
+        ├── readiness-probes.png
+        └── README.md
+
+**Quick links:**
+- 🧪 **Lab:** [`lab01-liveness-probes-health-inspector`](../labs/observability/lab01-liveness-probes-health-inspector/README.md)
+
+Explains:
+- The "Stocked Shelves" analogy
+- Why Readiness Probes remove Pods from traffic but don't restart them
+- How to troubleshoot "Ready 0/1" status
 
 ---
 

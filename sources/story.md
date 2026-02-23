@@ -141,11 +141,13 @@ Restricting movement between departments to protect the mall's security.
 ## 🩺 Part 5: Observability and Maintenance `[ 15% ]`
 > **Focus:** Health inspections, incident investigations, and the mall control room.
 
-### 📖 Chapter 14: [Probes & Health Checks: The Health Inspector](story/ch14.md)
+### 📖 Chapter 14: [Probes & Health Checks: The Health Inspector](ch14.md)
 Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Probes**).
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Health Inspector](./../comics/observability/01-the-health-inspector/README.md)
+- 📄 [Doc: Worker Safety and Probes](./../docs/md-resources/troubleshooting-kubernetes.md#section-2)
+- 🖼️ [Comic: The Health Inspector - Liveness vs Readiness](./../comics/observability/01-the-health-inspector/README.md)
+- 🖼️ [Comic: The Health Inspector - Readiness](./../comics/observability/02-readiness-probes/README.md)
 - 🧪 [Lab: Liveness Probes: The Health Inspector](./../labs/observability/lab01-liveness-probes-health-inspector/README.md)
 
 ---
