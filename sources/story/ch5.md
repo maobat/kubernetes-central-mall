@@ -86,7 +86,7 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 
 ---
 
-## 🧰 Study Toolbox
+### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Rulebook & The Uniform - ConfigMaps & Secrets](../../comics/configuration/01-configmap/README.md)
 * 🧪 **Lab:** [Lab 01 - ConfigMaps](../../labs/configuration/lab01-configmaps/README.md)

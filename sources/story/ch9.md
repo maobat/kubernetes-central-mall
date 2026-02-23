@@ -54,7 +54,7 @@ kubectl rollout undo deployment/clerk-dept
 
 ---
 
-## 🧰 Study Toolbox
+### 🧰 Study Toolbox
 
 ### 🔵🟢 Blue/Green Strategy
 * �🖼️ **Comic:** [Blue/Green Sign Swap](../../comics/deploying/01-blue-green-sign-swap/README.md)

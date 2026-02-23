@@ -91,7 +91,7 @@ kubectl describe pod <pod-name>
 
 ---
 
-## 🧰 Study Toolbox
+### 🧰 Study Toolbox
 
 * 📄 **Doc:** [The Resource Budget (Requests, Limits, & Quotas)](../../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 * 🧪 **Lab:** [Lab: Managing Resource Constraints](../../docs/md-resources/lab-managing-resource-constraints.md)

@@ -159,6 +159,25 @@ Explains:
 - How Kubernetes “fakes” percentages using replicas
 
 ---
+ 
+ ### 📦 Package Management & Logistics (Helm & Kustomize)
+ 
+     deploying/
+     └── 02-the-logistics-chain/
+         ├── the-logistics-chain.png
+         └── README.md
+ 
+ **Story:** The Logistics Chain  
+ **Quick links:**
+ - 📖 **Docs:** [`docs/md-resources/using-the-helm-package-manager.md`](../docs/md-resources/using-the-helm-package-manager.md)
+ - 📖 **Docs:** [`docs/md-resources/using-kustomize.md`](../docs/md-resources/using-kustomize.md)
+ 
+ Explains:
+ - **Helm**: Prefabricated "Store-in-a-Box".
+ - **Kustomize**: Blueprint overlays (Base vs. Overlays).
+ - Why we use different tools for different scaling needs.
+ 
+ ---
 
 ### 📡 Gateway API
 

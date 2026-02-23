@@ -72,7 +72,7 @@ helm install my-web-shop bitnami/nginx
 
 ---
 
-## 🧰 Study Toolbox
+### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Operator - The Manager with the Manual](../../comics/architecture/04-operators/README.md)
 * 🧪 **Lab:** [Lab 04 - CRDs & Operators](../../labs/architecture/lab04-crds-operators/README.md)

@@ -81,7 +81,7 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 
 ---
 
-## 🧰 Study Toolbox
+### 🧰 Study Toolbox
 
 - 🖼️ [**Comic: Sidecar Pattern - The Assistant at Work**](./../../comics/pod-design/01-sidecar/README.md)
 - 🧪 [**Lab: labs/pod-design/lab01-sidecar-pattern**](./../../labs/pod-design/lab01-sidecar-pattern/README.md)

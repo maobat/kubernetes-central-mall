@@ -69,7 +69,7 @@ spec:
 
 ---
 
-## 🧰 Study Toolbox
+### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Perfect Mannequin - Image Layers](./../../comics/pod-design/03-image-updates/README.md)
 * 🧪 **Lab:** [labs/pod-design/lab03-image-updates/README.md](./../../labs/pod-design/lab03-image-updates/README.md)
