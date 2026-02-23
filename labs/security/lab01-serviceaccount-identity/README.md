@@ -15,11 +15,8 @@ This is a **high-probability CKAD topic**.
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [The Secure Badge](../../../comics/security/01-the-secure-badge/README.md)
+## 📖 Related Comic
+👉 [comics/security/01-the-secure-badge/README.md](../../../comics/security/01-the-secure-badge/README.md)
 
 It explains **why ServiceAccounts are useful** and how they work.
 

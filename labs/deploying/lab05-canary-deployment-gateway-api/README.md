@@ -20,11 +20,8 @@ Unlike **LAB 04**, where traffic distribution was achieved indirectly through **
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 05 - The Lost Gateway](../../../comics/gateway-api/01-the-lost-gateway/README.md)
+## 📖 Related Comic
+👉 [comics/gateway-api/01-the-lost-gateway/README.md](../../../comics/gateway-api/01-the-lost-gateway/README.md)
 
 It explains **why your Gateway has no IP** and how traffic really flows.
 

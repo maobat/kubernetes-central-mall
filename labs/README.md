@@ -11,7 +11,7 @@
 - **lab05** – [Canary Deployments with Gateway API and native traffic weighting](deploying/lab05-canary-deployment-gateway-api/README.md)
 
 ### 👀 Observability & Health
-- **lab01** – [Liveness Probes: The Health Inspector](observability-and-health/lab01-liveness-probes/README.md)
+- **lab01** – [Liveness Probes: The Health Inspector](observability/lab01-liveness-probes-health-inspector/README.md)
 
 ### 🌐 Services & Networking
 - **lab01** – [ClusterIP & Internal Communication](services-and-networking/lab01-clusterip-internal-traffic/README.md)

@@ -17,11 +17,8 @@ This is a **high-probability CKAD topic**.
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 03 - The Secret of the High-Security Vault](../../../comics/secrets/01-secrets-injection/README.md)
+## 📖 Related Comic
+👉 [comics/secrets/01-secrets-injection/README.md](../../../comics/secrets/01-secrets-injection/README.md)
 
 It explains **Secrets, Deployment, and Environment Variable Injection** in a CKAD-friendly way.
 

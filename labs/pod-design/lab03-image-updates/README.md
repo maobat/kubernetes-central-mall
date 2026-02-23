@@ -17,11 +17,8 @@ This is a **fundamental CKAD skill** (Application Deployment).
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 03 - The Perfect Mannequin](../../../comics/pod-design/03-image-updates/README.md)
+## 📖 Related Comic
+👉 [comics/pod-design/03-image-updates/README.md](../../../comics/pod-design/03-image-updates/README.md)
 
 It explains **Image Layers and Rolling Updates**.
 

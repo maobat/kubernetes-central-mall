@@ -14,11 +14,8 @@ This lab introduces you to **Custom Resource Definitions (CRDs)** and **Operator
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 04 - The Manager with the Manual](../../../comics/architecture/04-operators/README.md)
+## 📖 Related Comic
+👉 [comics/architecture/04-operators/README.md](../../../comics/architecture/04-operators/README.md)
 
 It explains the relationship between Permits (CRDs) and Managers (Operators).
 

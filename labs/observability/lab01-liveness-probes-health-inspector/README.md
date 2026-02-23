@@ -13,11 +13,8 @@ You will observe how Kubernetes:
 - **Does NOT restart** the Pod when `restartPolicy: Never` is used
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting the lab, read the conceptual comic:
-
-👉 [The Health Inspector](../../../comics/observability/01-the-health-inspector/README.md)
+## 📖 Related Comic
+👉 [comics/observability/01-the-health-inspector/README.md](../../../comics/observability/01-the-health-inspector/README.md)
 
 ---
 

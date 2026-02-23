@@ -18,11 +18,8 @@ This is a **core CKAD topic**.
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 01 - The Warehouse & The Rental Contract](../../../comics/storage/01-persistent-volume/README.md)
+## 📖 Related Comic
+👉 [comics/storage/01-persistent-volume/README.md](../../../comics/storage/01-persistent-volume/README.md)
 
 It explains **PVs, PVCs, and Mounting** using a warehouse analogy.
 

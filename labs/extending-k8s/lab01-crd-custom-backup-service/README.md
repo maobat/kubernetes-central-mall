@@ -9,11 +9,8 @@ by introducing a new resource type: **BackUp**.
 
 ---
 
-## 🧠 Conceptual Comic (Read First)
-
-Before starting, read this short comic:
-
-👉 [Lab 01 - The Nightly Backup Permit](../../../comics/crd/01-the-nightly-backup-permit/README.md)
+## 📖 Related Comic
+👉 [comics/crd/01-the-nightly-backup-permit/README.md](../../../comics/crd/01-the-nightly-backup-permit/README.md)
 
 It explains **why CRDs are useful** and how they work.
 ---
