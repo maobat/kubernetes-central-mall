@@ -325,6 +325,21 @@ Explains:
 - Why Readiness Probes remove Pods from traffic but don't restart them
 - How to troubleshoot "Ready 0/1" status
 
+#### 03 - The Broken Shop (Troubleshooting)
+
+    observability/
+    └── 03-the-broken-shop/
+        ├── broken-shop.png
+        └── README.md
+
+**Quick links:**
+- 🧪 **Lab:** [`lab15-fixing-the-broken-shop`](../labs/observability/lab15-fixing-the-broken-shop/README.md)
+
+Explains:
+- The Troubleshooting toolkit (`describe`, `logs`, `exec`)
+- The "Crime Scene Investigation" analogy
+- Step-by-step approach to fixing failing Pods
+
 ---
 
 ## 🔁 How to Use Comics Effectively

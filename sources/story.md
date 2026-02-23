@@ -158,5 +158,7 @@ Investigating "incidents" using logs and real-time inspections (**Logs, Describe
 **🧰 Study Toolbox:**
 - 📄 [Doc: Troubleshooting Guide](./../docs/md-resources/troubleshooting-kubernetes.md)
 - 📄 [Doc: Diagnostic Cheat Sheet](./../docs/md-resources/diagnostic-cheat-sheet.md)
+- 🖼️ [Comic: The Broken Shop](./../comics/observability/03-the-broken-shop/README.md)
+- 🧪 [Lab: Fixing the Broken Shop](./../labs/observability/lab15-fixing-the-broken-shop/README.md)
 
 ---
