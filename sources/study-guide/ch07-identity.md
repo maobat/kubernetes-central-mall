@@ -75,6 +75,12 @@ If a worker needs to see shops in **every** floor of the mall (all Namespaces), 
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Forgetting the Binding:** Creating a `ServiceAccount` and a `Role` does absolutely nothing until you create a `RoleBinding` to connect them. If your Pod gets "Forbidden" errors, check the binding first!
+- **Cross-Namespace Bindings:** A `RoleBinding` in `namespace-a` can reference a `Role` in `namespace-a` and bind it to a `ServiceAccount` in `namespace-b`. Pay close attention to the `--serviceaccount=<namespace>:<name>` syntax in the exam.
+
+---
+
 ### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Secure Badge - Pod Identity](../../comics/security/01-the-secure-badge/README.md)

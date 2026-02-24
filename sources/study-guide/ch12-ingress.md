@@ -83,6 +83,12 @@ spec:
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Missing Ingress Controller:** Creating an `Ingress` resource does nothing if an Ingress Controller (like NGINX) is not installed in the cluster. It will just sit there without an `ADDRESS`. Always check if the controller is running.
+- **PathType Exact vs Prefix:** In the `rules.http.paths` array, `pathType: Exact` means `/app` only matches `/app`. `pathType: Prefix` means `/app` matches `/app/login` and `/app/images`. Choosing the wrong one is a common exam mistake.
+
+---
+
 ## 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [Virtual Host Gateway Show - Host-based Routing](../../comics/ingress/01-virtual-host/README.md)

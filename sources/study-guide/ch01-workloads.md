@@ -57,6 +57,12 @@ kubectl create cronjob nightly-clean --image=busybox --schedule=`0 23 * * *` -- 
 ```
 > ⚠️ Exam Note: You cannot "create" a StatefulSet directly with a simple kubectl create command like a Deployment. You usually have to generate a Deployment YAML and manually change the kind to StatefulSet and add the serviceName.
 
+## ⚠️ Common Exam Traps
+- **CronJob Creation:** You cannot use `kubectl run` for CronJobs. You must use `kubectl create cronjob <name> --image=<img> --schedule="<cron>"`.
+- **Jobs vs Deployments:** Deployments restart containers if they exit; Jobs consider an exit with status `0` as "Completed" and do not restart them. Make sure you don't use a Pod when you need a Job for a one-off task.
+
+---
+
 ### 🧰 Study Toolbox
 - 🖼️ [**Comic: Jobs & CronJobs - The Contractor's Visit**](./../../comics/pod-design/02-jobs-cronjobs/README.md)
 - 📄 [**Doc: Using StatefulSets - The Bolted-Down Safe**](./../../docs/md-resources/using-statefulsets.md)

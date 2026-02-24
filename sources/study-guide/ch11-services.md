@@ -55,6 +55,12 @@ kubectl get endpoints nginx-intercom
 
 ---
 
+## ⚠️ Common Exam Traps
+- **`port` vs `targetPort` Confusion:** `port` is the port the Service listens on. `targetPort` is the port your container is actually listening on. A mismatch here is the #1 reason a Service fails to forward traffic.
+- **Label Mismatches:** If `kubectl get ep <service>` shows `<none>`, it means the Service's selector does not match the Pod's labels perfectly. Even a single typo in the label stops all traffic.
+
+---
+
 ### 🧰 Study Toolbox
 
 ### 📞 Services (Internal - ClusterIP)

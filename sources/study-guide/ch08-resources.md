@@ -91,6 +91,12 @@ kubectl describe pod <pod-name>
 
 ---
 
+## ⚠️ Common Exam Traps
+- **OOMKilled vs Throttling:** If a container exceeds its CPU `limit`, it is throttled (slows down) but stays running. If it exceeds its Memory `limit`, it is instantly terminated (`OOMKilled`). Focus on memory limits if a Pod keeps spontaneously restarting.
+- **Requests vs Limits:** `requests` are used by the Scheduler to find a Node with enough room. If your total `requests` are higher than any Node's capacity, the Pod stays in `Pending` forever.
+
+---
+
 ### 🧰 Study Toolbox
 
 * 📄 **Doc:** [The Resource Budget (Requests, Limits, & Quotas)](../../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)

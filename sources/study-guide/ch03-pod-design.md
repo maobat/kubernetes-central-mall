@@ -69,6 +69,12 @@ spec:
 
 ---
 
+## ⚠️ Common Exam Traps
+- **The `:latest` Trap:** If you don't specify an image tag, or use `:latest`, Kubernetes sets `imagePullPolicy: Always`. This means it checks the registry *every time* the container restarts. If the cluster loses internet access, your `latest` Pod will fail to restart with `ImagePullBackOff`.
+- **Typos in Image Names:** The most common cause of `ErrImagePull` in the exam is a simple typo (e.g., `niginx` instead of `nginx`). Always verify the spelling using `kubectl describe pod`.
+
+---
+
 ### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Perfect Mannequin - Image Layers](../../comics/pod-design/03-image-updates/README.md)

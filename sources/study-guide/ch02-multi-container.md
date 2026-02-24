@@ -81,6 +81,12 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Blocking InitContainers:** If an `initContainer` fails or runs forever, the main container will *never* start. Always check `kubectl logs <pod> -c <init-container-name>` if a Pod is stuck in `Init:0/1`.
+- **Shared Network Namespace:** Containers in the same Pod share the same `localhost`. If Container A listens on port 80, Container B cannot also listen on port 80, or it will crash with a "Bind: Address already in use" error.
+
+---
+
 ### 🧰 Study Toolbox
 
 - 🖼️ [**Comic: Sidecar Pattern - The Assistant at Work**](./../../comics/pod-design/01-sidecar/README.md)

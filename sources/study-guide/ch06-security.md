@@ -76,6 +76,12 @@ kubectl exec secure-shop -- id
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Pod vs. Container Context:** `securityContext` can be specified at the Pod level (applies to all containers) AND at the Container level. If there is a conflict (e.g., Pod says `runAsUser: 1000`, Container says `runAsUser: 2000`), the Container's setting wins.
+- **Capabilities placement:** Linux `capabilities` (like adding `NET_ADMIN`) can **only** be added at the Container level, not the Pod level. Putting `capabilities` under the Pod spec will result in a validation error.
+
+---
+
 ### 🧰 Study Toolbox
 
 * �️ **Comic:** [The Secure Badge - Pod Identity](../../comics/security/01-the-secure-badge/README.md)

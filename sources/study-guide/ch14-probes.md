@@ -70,6 +70,12 @@ kubectl describe pod <pod-name>
 
 ---
 
+## ⚠️ Common Exam Traps
+- **The `initialDelaySeconds` Death Loop:** If your app takes 30 seconds to start, but your Liveness probe has `initialDelaySeconds: 5`, Kubernetes will constantly kill the container before it ever finishes starting.
+- **Liveness vs Readiness:** A failing **Liveness** probe restarts the container. A failing **Readiness** probe simply removes the Pod from the Service endpoint (stopping traffic) but leaves it running. Don't use a Liveness probe for a database connection issue, or your app will endlessly restart.
+
+---
+
 ## 🧰 Study Toolbox
 
 * 📄 **Doc:** [Worker Safety and Probes](../../docs/md-resources/troubleshooting-kubernetes.md#section-2)

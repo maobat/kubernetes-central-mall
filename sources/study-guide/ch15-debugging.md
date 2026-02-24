@@ -67,6 +67,12 @@ kubectl get events --sort-by='.lastTimestamp'
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Multi-Container Logs:** If a Pod has more than one container, `kubectl logs <pod>` will fail, demanding you specify a container with `-c`. Get used to looking at the Pod description `Containers:` section first.
+- **Ignoring Events:** If a Pod is stuck in `Pending` or `ImagePullBackOff`, the logs will be totally empty! The container hasn't started yet. You MUST use `kubectl describe pod <pod>` and read the `Events` section at the very bottom to find out why.
+
+---
+
 ## 🧰 Study Toolbox
 
 * 📄 **Doc:** [Troubleshooting Kubernetes (The Master Guide)](../../docs/md-resources/troubleshooting-kubernetes.md)

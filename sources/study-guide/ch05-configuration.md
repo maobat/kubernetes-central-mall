@@ -86,6 +86,12 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 
 ---
 
+## ⚠️ Common Exam Traps
+- **The Volume Overwrite Trap:** If you mount a ConfigMap as a volume into `/etc/nginx`, it will hide *all existing files* in that directory! To mount a single file into a directory without overwriting it, you **must use `subPath`**.
+- **Base64 Nuances:** In YAML manifests, Secret data values *must* be base64 encoded. However, if you use `kubectl create secret generic <name> --from-literal=key=value`, `kubectl` automatically encodes it for you. Don't encode it twice!
+
+---
+
 ### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Rulebook & The Uniform - ConfigMaps & Secrets](../../comics/configuration/01-configmap/README.md)

@@ -77,6 +77,12 @@ kubectl describe netpol <policy-name>
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Default Deny Is Instant:** The moment you create a NetworkPolicy that selects a Pod, the default behavior for that Pod changes from "Allow All" to "Deny All" for any traffic direction (Ingress/Egress) not explicitly allowed by the policy rule.
+- **Namespace Selector Pitfalls:** To allow traffic from another namespace, that namespace *must* have the correct labels applied, and your policy must use `namespaceSelector`. If you just use `podSelector`, it only checks pods *in the same namespace*.
+
+---
+
 ## 🧰 Study Toolbox
 
 * 📄 **Doc:** [Network Isolation and Troubleshooting](../../docs/md-resources/troubleshooting-kubernetes.md#section-8-3)

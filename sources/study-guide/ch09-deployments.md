@@ -54,6 +54,12 @@ kubectl rollout undo deployment/clerk-dept
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Selector Mismatches:** Once a Deployment is created, its `matchLabels` selector is **immutable**. You cannot change it to fix a typo. You must delete the Deployment and recreate it.
+- **Rollout History:** If you don't use the `--record` flag (or `CHANGE-CAUSE` annotations), `kubectl rollout history` will show a blank `revision` cause. In recent k8s versions, `--record` is deprecated, so exams may prefer you manually annotate the Deployment.
+
+---
+
 ### 🧰 Study Toolbox
 
 ### 🔵🟢 Blue/Green Strategy

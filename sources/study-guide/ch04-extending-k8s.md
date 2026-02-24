@@ -72,6 +72,12 @@ helm install my-web-shop bitnami/nginx
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Cascading Deletes:** If you delete a `CustomResourceDefinition` (CRD), Kubernetes will instantly delete **all Custom Resources** (CRs) of that type! Be extremely careful when using `kubectl delete crd` in the exam.
+- **CRs vs Operators:** You might be asked to create a Custom Resource, but nothing happens. Remember, the CR is just data. If there isn't a Controller/Operator running in the cluster to process it, it simply sits there. Do not keep modifying the CR thinking it's broken; verify the Controller is running.
+
+---
+
 ### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Operator - The Manager with the Manual](../../comics/architecture/04-operators/README.md)

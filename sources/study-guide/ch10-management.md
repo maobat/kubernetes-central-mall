@@ -57,6 +57,12 @@ kubectl apply -k ./overlays/production
 
 ---
 
+## ⚠️ Common Exam Traps
+- **Apply `-k` vs `-f`:** When deploying a Kustomization directory, you MUST use `kubectl apply -k <dir>`. If you use `-f`, it will ignore the `kustomization.yaml` and try to apply plain files, which usually fails or results in the wrong configuration.
+- **Extracting Values:** When working with Helm, you often need to fetch the default values before customizing them. Use `helm show values <repo/chart> > values.yaml`, modify the file, and then deploy it using `helm install -f values.yaml`.
+
+---
+
 ### 🧰 Study Toolbox
 
 ### 📦 Helm (The Package Manager)
