@@ -32,8 +32,8 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 
 ---
 
-### Resources for this Chapter:
-- [pod-design/02-jobs-cronjobs](file:///home/mauro.battello/projects/kubernetes-central-mall/comics/pod-design/02-jobs-cronjobs/README.md)
-- [using-statefulsets.md](file:///home/mauro.battello/projects/kubernetes-central-mall/docs/md-resources/using-statefulsets.md) (For the "Permanent Desk" workers)
+### 🧰 Study Toolbox
+1️⃣ [Jobs: The Temporary Contractor](../../docs/md-resources/jobs.md)
+2️⃣ [CronJobs: The Scheduled Maintenance Crew](../../docs/md-resources/cronjobs.md)
 
 [Back to Story Index](../story.md) | [Next Chapter: Multi-container Design Patterns >>](ch02-multi-container-design-patterns.md)

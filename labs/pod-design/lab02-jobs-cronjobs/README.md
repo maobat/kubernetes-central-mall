@@ -25,8 +25,8 @@ It explains **Jobs (One-off) vs CronJobs (Scheduled)**.
 
 ## 📘 Reference Docs
 
-- Jobs → [Kubernetes Docs: Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
-- CronJobs → [Kubernetes Docs: CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+- Jobs → [Kubernetes Docs: Jobs](../../../docs/md-resources/jobs.md)
+- CronJobs → [Kubernetes Docs: CronJobs](../../../docs/md-resources/cronjobs.md)
 
 ---
 

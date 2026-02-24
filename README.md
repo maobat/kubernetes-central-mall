@@ -47,6 +47,19 @@ Each concept is explained **twice**:
 
 ---
 
+## 🎓 CKAD Exam Day Playbook
+
+When exam day arrives, stop studying concepts and switch to execution mode. We have a dedicated playbook just for the exam environment:
+
+- 💻 **[Linux Setup (The first 5 minutes)](docs/md-resources/ckad-exam/01-linux-setup.md)**
+- 🚀 **[CKAD Cheatsheet (Commands to memorize)](docs/md-resources/ckad-exam/02-cheatsheet.md)**
+- ⏱️ **[Time Management Strategy](docs/md-resources/ckad-exam/03-time-management.md)**
+- ✅ **[Final Checklist](docs/md-resources/ckad-exam/04-final-checklist.md)**
+
+👉 *[Go to the Exam Playbook Index](docs/md-resources/ckad-exam/README.md)*
+
+---
+
 ## 📚 Repository Structure
 
     ├── comics/ # Visual explanations (comic strips)
@@ -59,12 +72,18 @@ Each concept is explained **twice**:
     └── README.md
 
 ### 📖 `docs/`
-Conceptual explanations, deep dives, and reference material:
-- Traffic & networking
-- Storage
-- Security
-- Deployments & strategies
-- API & control plane concepts
+Conceptual explanations, deep dives, and reference material.
+
+**⭐ Must-Read Core Concepts:**
+- 🎭 **[The Cast of Characters](docs/md-resources/cast-of-characters.md):** A complete mapping of Kubernetes resources to the Mall analogy.
+- 🛤️ **[The Traffic Flow (Customer Journey)](docs/md-resources/traffic-flow.md):** How a request travels from the outside world to a Pod.
+- 🧯 **[Troubleshooting Kubernetes](docs/md-resources/troubleshooting-kubernetes.md):** The ultimate guide to debugging broken shops.
+- 🚑 **[Diagnostic Cheat Sheet](docs/md-resources/diagnostic-cheat-sheet.md):** Quick `kubectl` triage commands.
+
+*Also covers deep-dives into:*
+- Traffic, Storage, and Security
+- Deployments & rollout strategies
+- API & control plane interaction
 
 ---
 
