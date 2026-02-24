@@ -88,3 +88,6 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 - 📄 [**Doc: Understanding Multi-container Pod Patterns**](./../../docs/md-resources/decoupling-pods.md)
 
 ---
+[<< Previous: Workloads](ch01-workloads.md) | [Back to Story Index](../story.md) | [Next: Pod Design >>](ch03-pod-design.md)
+
+---

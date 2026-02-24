@@ -353,3 +353,8 @@ e **Key Takeaways**
 
 - LAB 04 → perfect for **CKAD fundamentals**
 - LAB 05 → perfect for **real-world Kubernetes platforms**
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch12-ingress.md](../../../sources/study-guide/ch12-ingress.md)

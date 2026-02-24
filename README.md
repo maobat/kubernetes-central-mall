@@ -26,13 +26,36 @@ Each concept is explained **twice**:
 
 ---
 
+## 🧭 How to ACTUALLY Use This (The Real Workflow)
+
+### 1️⃣ First Pass (Comprehension)
+- Read the narrative chapter in `sources/story/`
+- Look at the related **Comic**
+- **DO NOT** touch `kubectl`
+
+### 2️⃣ Second Pass (Structuring)
+- Read the technical summary in `sources/study-guide/`
+- Memorize patterns and differences
+- Note down exam traps
+
+### 3️⃣ Third Pass (Muscle Memory)
+- Do the **Lab**
+- Redo the lab without looking
+- Explain it out loud (even to the wall)
+
+> **💡 Ultra-Honest TL;DR:** By strictly separating the Story, Study Guide, and Labs, you get less confusion, zero useless repetitions, and a killer CKAD learning path.
+
+---
+
 ## 📚 Repository Structure
 
     ├── comics/ # Visual explanations (comic strips)
     ├── docs/ # Modular concept documentation
     ├── labs/ # CKAD-style hands-on labs
+    ├── sources/ # The core curriculum
+    │   ├── story/ # Narrative expansions of the mall analogy
+    │   └── study-guide/ # Concise CKAD technical summaries
     ├── antigravity/ # Experimental / advanced material
-    ├── sources/ # Long-form narrative & backups
     └── README.md
 
 ### 📖 `docs/`

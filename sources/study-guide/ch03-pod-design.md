@@ -26,23 +26,23 @@ In the CKAD, you often need to update a shop that is already running. You don`t 
 ### 1. The Quick Uniform Swap (Imperative)
 If your "manager-firm" Deployment is using `nginx:1.14` and you want to upgrade to `nginx:1.16`:
 
-///bash
+```bash
 kubectl set image deployment/manager-firm nginx=nginx:1.16
-///
+```
 
 ### 2. Checking the Change
 How do you know the new mannequin is actually in the window and hasn`t fallen over?
 
-///bash
+```bash
 kubectl rollout status deployment/manager-firm
-///
+```
 
 ### 3. The "Undo" Button (The Rollback)
 If the new uniform looks terrible and customers are complaining, you can undo it instantly. The manager brings the old mannequin back from the backroom.
 
-///bash
+```bash
 kubectl rollout undo deployment/manager-firm
-///
+```
 
 
 
@@ -54,7 +54,7 @@ Sometimes, your mannequins are kept in a **Private Warehouse** (Private Registry
 
 Without this key, the manager will stand at the warehouse door and the Pod will show: `ImagePullBackOff`.
 
-///yaml
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -65,18 +65,15 @@ spec:
     image: private-repo/secret-nginx:latest
   imagePullSecrets:
   - name: my-warehouse-key
-///
+```
 
 ---
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic:** [The Perfect Mannequin - Image Layers](./../../comics/pod-design/03-image-updates/README.md)
-* 🧪 **Lab:** [labs/pod-design/lab03-image-updates/README.md](./../../labs/pod-design/lab03-image-updates/README.md)
-* 📄 **Doc:** [Managing Container Images & Rollouts](./../../docs/md-resources/managing-container-images-and-rollouts.md)
+* 🖼️ **Comic:** [The Perfect Mannequin - Image Layers](../../comics/pod-design/03-image-updates/README.md)
+* 🧪 **Lab:** [Lab 03 - Image Updates & Rollouts](../../labs/pod-design/lab03-image-updates/README.md)
+* 📄 **Doc:** [Managing Container Images & Rollouts](../../docs/md-resources/managing-container-images-and-rollouts.md)
 
 ---
-
-**Next Step:** Now that our staff is dressed and ready, we need to handle the specialized paperwork. In **Chapter 4**, we look at **Special Permits (CRDs & Operators)** for when the mall needs to do something "non-standard."
-
-**Ready to move on to Chapter 4?**
+[<< Previous: Multi-container](ch02-multi-container.md) | [Back to Story Index](../story.md) | [Next: Extending K8s >>](ch04-extending-k8s.md)

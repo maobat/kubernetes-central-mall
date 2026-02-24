@@ -32,4 +32,5 @@ This comic explains:
 ---
 
 ## 🔗 References
+- Chapter → [Chapter 14: Health Checks & Probes](../../../sources/study-guide/ch14-probes.md)
 - Lab → [LAB 01 – Liveness Probes](../../../labs/observability/lab01-liveness-probes-health-inspector/README.md)

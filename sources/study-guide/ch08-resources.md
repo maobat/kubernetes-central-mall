@@ -96,3 +96,6 @@ kubectl describe pod <pod-name>
 * 📄 **Doc:** [The Resource Budget (Requests, Limits, & Quotas)](../../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 * 🧪 **Lab:** [Lab: Managing Resource Constraints](../../docs/md-resources/lab-managing-resource-constraints.md)
 * 🖼️ **Comic:** [The Resource Hog - Why Limits Matter](../../comics/resources/01-the-resource-hog/README.md)
+
+---
+[<< Previous: Identity & RBAC](ch07-identity.md) | [Back to Story Index](../story.md) | [Next: Launch Strategies >>](ch09-deployments.md)

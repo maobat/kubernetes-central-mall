@@ -32,4 +32,5 @@ This comic explains:
 ---
 
 ## 🔗 References
+- Chapter → [Chapter 12: Ingress & Gateway API](../../../sources/study-guide/ch12-ingress.md)
 - Lab → [LAB 03 – Ingress Virtual Host](../../../labs/services-and-networking/lab03-ingress-virtual-host/README.md)

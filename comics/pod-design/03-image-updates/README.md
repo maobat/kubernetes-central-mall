@@ -60,3 +60,8 @@ This comic explains:
 > - **Images**: Built in layers, never changed once created.
 > - **Rolling Updates**: Gradual replacement to ensure zero downtime.
 > - **Rollback**: Keeping the "old versions" in the backroom just in case.
+
+---
+
+## 🔗 References
+- Chapter → [Chapter 3: Pod Design & Images](../../../sources/study-guide/ch03-pod-design.md)

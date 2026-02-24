@@ -65,3 +65,8 @@ This is exactly how Kubernetes security is designed — and how CKAD expects you
 - Verify identity with `kubectl describe pod <pod-name>`
 
 **Pairs with Secrets Comic:** [`lab03-secrets-env-injection`](/labs/security/lab03-secrets-env-injection/README.md)
+
+---
+
+## 🔗 References
+- Chapter → [Chapter 7: Identity & RBAC](../../../sources/study-guide/ch07-identity.md)

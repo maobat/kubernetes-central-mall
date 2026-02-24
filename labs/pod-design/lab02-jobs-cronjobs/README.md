@@ -143,3 +143,8 @@ kubectl apply -f cronjob.yaml
    ```
 
 ✅ **You have master batch processing!**
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch01-workloads.md](../../../sources/study-guide/ch01-workloads.md)

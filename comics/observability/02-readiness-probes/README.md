@@ -20,4 +20,4 @@ A **Readiness Probe** determines if a Pod should receive traffic. If the shelves
 
 ## 🔗 References
 - Lab → [LAB 01 – Liveness Probes: The Health Inspector](../../../labs/observability/lab01-liveness-probes-health-inspector/README.md)
-- Chapter → [Chapter 14: Probes & Health Checks](../../../sources/ch14.md)
+- Chapter → [Chapter 14: Probes & Health Checks](../../../sources/study-guide/ch14-probes.md)

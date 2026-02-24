@@ -114,3 +114,7 @@ ROOT_PASSWORD=password
 - Use `kubectl set env --from=secret`
 - Know application-specific env variable names
 - Never hardcode secrets into Deployments
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch05-configuration.md](../../../sources/study-guide/ch05-configuration.md)

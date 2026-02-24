@@ -99,3 +99,8 @@ kubectl describe deploy manager-firm | grep Image
 ```
 
 ✅ **You have mastered Zero-Downtime Updates!**
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch03-pod-design.md](../../../sources/study-guide/ch03-pod-design.md)

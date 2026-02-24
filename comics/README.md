@@ -230,7 +230,7 @@ Explains:
 **Quick links:**
 
 - 🧪 **Lab:** [`lab01-sidecar-initcontainers`](../labs/pod-design/lab01-sidecar-pattern/README.md)
-- 📖 **Docs:** [`TASK 4`-`docs/md-resources/the-final-simulation.md`](../docs/md-resources/the-final-simulation.md)
+- 📖 **Docs:** [Chapter 02 - Multi-Container Pods](../sources/study-guide/ch02-multi-container.md)
 
 
 Explains:

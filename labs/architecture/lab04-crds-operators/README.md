@@ -92,3 +92,8 @@ helm install my-release bitnami/nginx
 ```
 
 ✅ **You now know how to extend the Mall's capabilities!**
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch04-extending-k8s.md](../../../sources/study-guide/ch04-extending-k8s.md)

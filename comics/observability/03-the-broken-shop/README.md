@@ -22,4 +22,4 @@ Investigating a broken shop requires a step-by-step approach:
 
 ## 🔗 References
 - Lab → [LAB 15 – Fixing the Broken Shop](../../../labs/observability/lab15-fixing-the-broken-shop/README.md)
-- Chapter → [Chapter 15: Debugging & Logs](../../../sources/story/ch15.md)
+- Chapter → [Chapter 15: Debugging & Logs](../../../sources/study-guide/ch15-debugging.md)

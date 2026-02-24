@@ -23,5 +23,6 @@ This comic explains how **Network Policies** (Network Isolation) works in Kubern
 ---
 
 ## 🔗 References
+- Chapter → [Chapter 13: Network Policies](../../../sources/study-guide/ch13-networking.md)
 - Lab → [LAB 06 – Network Policies & Locked Corridors](../../../labs/services-and-networking/lab06-network-policies/README.md)
 - Documentation → [Network Isolation and Troubleshooting](../../../docs/md-resources/troubleshooting-kubernetes.md#section-8-3)

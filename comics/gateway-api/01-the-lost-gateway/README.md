@@ -17,3 +17,7 @@ This comic explains:
 🔗 References:
 - Docs → [gateway-api.md](../../../docs/md-resources/gateway-api.md)
 - Lab → [LAB 05 – Canary Deployments](../../../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
+---
+
+## 🔗 References
+- Chapter → [Chapter 12: Ingress & Gateway API](../../../sources/study-guide/ch12-ingress.md)

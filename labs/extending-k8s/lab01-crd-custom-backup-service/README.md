@@ -54,6 +54,11 @@ This lab uses the following manifests:
 
 ---
 
+## 📖 Related Chapter
+👉 [sources/study-guide/ch04-extending-k8s.md](../../../sources/study-guide/ch04-extending-k8s.md)
+
+---
+
 ## 🧩 Step 1 – Register the New Permit Type (CRD)
 
 Register a new resource type in the Kubernetes API.

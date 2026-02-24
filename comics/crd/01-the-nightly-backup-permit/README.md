@@ -39,4 +39,5 @@ We introduce a new permit:
 ---
 
 ## 🔗 References
+- Chapter → [Chapter 4: Extending K8s](../../../sources/study-guide/ch04-extending-k8s.md)
 - Lab → [LAB 01 – Custom Backup Service (CRD)](../../../labs/extending-k8s/lab01-crd-custom-backup-service/README.md)

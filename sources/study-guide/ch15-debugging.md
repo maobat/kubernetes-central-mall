@@ -73,3 +73,6 @@ kubectl get events --sort-by='.lastTimestamp'
 * 📄 **Doc:** [Diagnostic Cheat Sheet (Commands to Memorize)](../../docs/md-resources/diagnostic-cheat-sheet.md)
 * 🖼️ **Comic:** [The Health Inspector - The Broken Shop](../../comics/observability/03-the-broken-shop/README.md)
 * 🧪 **Lab:** [LAB 15 – Fixing the Broken Shop](../../labs/observability/lab15-fixing-the-broken-shop/README.md)
+
+---
+[<< Previous: Health Checks](ch14-probes.md) | [Back to Story Index](../story.md)

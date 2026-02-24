@@ -195,3 +195,7 @@ Kubernetes is strict by design:
 - No debugging, no mercy
 
 Mastering Liveness Probes means mastering **self-healing workloads**, a core CKAD skill.
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch14-probes.md](../../../sources/study-guide/ch14-probes.md)

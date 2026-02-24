@@ -16,3 +16,8 @@ This comic explains:
 🔗 References:
 - Docs → [`docs/md-resources/core-concepts-configmaps-secrets-and-security.md`](../../../docs/md-resources/core-concepts-configmaps-secrets-and-security.md)
 - Lab → [`labs/security/lab03-secrets-env-injectio`](../../../labs/security/lab03-secrets-env-injection/README.md)
+
+---
+
+## 🔗 References
+- Chapter → [Chapter 5: Configuration](../../../sources/study-guide/ch05-configuration.md)

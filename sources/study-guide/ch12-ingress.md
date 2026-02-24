@@ -89,3 +89,6 @@ spec:
 * 🖼️ **Comic:** [The Lost Gateway - Troubleshooting Gateway API](../../comics/gateway-api/01-the-lost-gateway/README.md)
 * 🧪 **Lab:** [Ingress & Virtual Host Routing](../../labs/services-and-networking/lab03-ingress-virtual-host/README.md)
 * 🧪 **Lab:** [Canary Deployments with Gateway API](../../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
+
+---
+[<< Previous: Networking Services](ch11-services.md) | [Back to Story Index](../story.md) | [Next: Network Policies >>](ch13-networking.md)

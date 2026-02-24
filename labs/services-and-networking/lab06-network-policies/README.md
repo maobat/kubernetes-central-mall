@@ -89,3 +89,8 @@ kubectl describe netpol allow-backend-to-db
 - By default, Pods are **Non-Isolated** (all open).
 - Once a policy selects a Pod, that Pod becomes **Isolated** (deny what's not allowed).
 - Always ensure **DNS** is whitelisted for egress if you use hostnames.
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch13-networking.md](../../../sources/study-guide/ch13-networking.md)

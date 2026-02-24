@@ -187,3 +187,7 @@ Ingress is the foundation for:
 - Virtual hosting
 - Canary & blue-green deployments
 - Gateway API evolution
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch12-ingress.md](../../../sources/study-guide/ch12-ingress.md)

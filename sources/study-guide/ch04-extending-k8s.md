@@ -77,3 +77,6 @@ helm install my-web-shop bitnami/nginx
 * 🖼️ **Comic:** [The Operator - The Manager with the Manual](../../comics/architecture/04-operators/README.md)
 * 🧪 **Lab:** [Lab 04 - CRDs & Operators](../../labs/architecture/lab04-crds-operators/README.md)
 * 📄 **Doc:** [Understanding the Operator Pattern](../../docs/md-resources/understanding-custom-resource-definitions-crds.md)
+
+---
+[<< Previous: Pod Design](ch03-pod-design.md) | [Back to Story Index](../story.md) | [Next: Configuration >>](ch05-configuration.md)

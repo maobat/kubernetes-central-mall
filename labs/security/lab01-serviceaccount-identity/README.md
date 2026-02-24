@@ -120,3 +120,8 @@ Service Account:  secure
 ---
 
 🛍️ *In the Kubernetes Central Mall, every worker needs the right badge to enter the right departments.*
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch06-security.md](../../../sources/study-guide/ch06-security.md)

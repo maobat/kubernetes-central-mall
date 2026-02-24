@@ -76,3 +76,6 @@ kubectl describe pod <pod-name>
 * 🖼️ **Comic:** [The Health Inspector - Liveness vs Readiness](../../comics/observability/01-the-health-inspector/README.md)
 * 🖼️ **Comic:** [The Health Inspector - Readiness](../../comics/observability/02-readiness-probes/README.md)
 * 🧪 **Lab:** [LAB 01 – Liveness Probes: The Health Inspector](../../labs/observability/lab01-liveness-probes-health-inspector/README.md)
+
+---
+[<< Previous: Network Policies](ch13-networking.md) | [Back to Story Index](../story.md) | [Next: Debugging & Logs >>](ch15-debugging.md)

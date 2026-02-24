@@ -66,3 +66,6 @@ kubectl get endpoints nginx-intercom
 * 🖼️ **Comic:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../comics/nodeport/02-cross-namespace/README.md)
 * 📄 **Doc:** [Understanding Traffic Flow Verification](../../docs/md-resources/traffic-flow-verification.md)
 * 🧪 **Lab:** [LAB 02 – NodePort & Cross-Namespace Communication](../../labs/services-and-networking/lab02-nodeport-cross-namespace/README.md)
+
+---
+[<< Previous: Logistics Tools](ch10-management.md) | [Back to Story Index](../story.md) | [Next: Ingress & Gateway API >>](ch12-ingress.md)

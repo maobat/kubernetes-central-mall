@@ -65,3 +65,8 @@ This comic explains:
 > - **InitContainer**: Runs **before** the main app starts. Good for setup.
 > - **Sidecar**: Runs **alongside** the main app. Good for logging/proxying.
 > - **Shared Volume**: The bridge for communication.
+
+---
+
+## 🔗 References
+- Chapter → [Chapter 2: Sidecars & Helpers](../../../sources/study-guide/ch02-multi-container.md)

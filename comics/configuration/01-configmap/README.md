@@ -65,3 +65,8 @@ This comic explains:
 > - **ConfigMap**: Decouples configuration from the code.
 > - **Env Vars**: Simple values (strings, numbers).
 > - **Volume**: Complex config files (JSON, XML, properties).
+
+---
+
+## 🔗 References
+- Chapter → [Chapter 5: Configuration](../../../sources/study-guide/ch05-configuration.md)

@@ -73,3 +73,8 @@ kubectl exec testpod -- wget -qO- support-svc
 
 * 🖼️ **Comic:** [The Internal Intercom (ClusterIP)](../../../comics/clusterip/01-internal-intercom/README.md)
 * 📄 **Doc:** [Service IP Tracker Evolution](../../../docs/md-resources/service-ip-tracker-evolution.md)
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch11-services.md](../../../sources/study-guide/ch11-services.md)

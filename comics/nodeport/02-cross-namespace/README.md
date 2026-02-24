@@ -35,4 +35,5 @@ Traffic doesn’t care about floors — only doors.
 ---
 
 ## 🔗 References
+- Chapter → [Chapter 11: Networking Services](../../../sources/study-guide/ch11-services.md)
 - Lab → [LAB 02 – NodePort Cross Namespace](../../../labs/services-and-networking/lab02-nodeport-cross-namespace/README.md)

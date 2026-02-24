@@ -127,3 +127,8 @@ kubectl apply -f config-pod.yaml
    ```
 
 ✅ **Configuration is decoupled giving you flexibility!**
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch05-configuration.md](../../../sources/study-guide/ch05-configuration.md)

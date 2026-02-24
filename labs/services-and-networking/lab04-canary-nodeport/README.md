@@ -163,3 +163,8 @@ Kubernetes Services do:
 - Ingress-based canaries are often out of scope
 - Know how Services select Pods
 - Always check `describe svc`→ Endpoints
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch09-deployments.md](../../../sources/study-guide/ch09-deployments.md)

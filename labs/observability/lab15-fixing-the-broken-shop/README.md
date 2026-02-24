@@ -7,7 +7,7 @@ Investigate and repair a "broken" shop that refuses to serve customers. You will
 The **Central Mall** security team has reported that one of the new stores is having recurring "incidents." The Mall Manager wants you to look at the **Security Logbook** (Describe) and the **CCTV Tapes** (Logs) to find out what's wrong and fix it.
 
 ## 📖 Related Chapter
-👉 [sources/story/ch15.md](../../../sources/story/ch15.md)
+👉 [sources/study-guide/ch15-debugging.md](../../../sources/study-guide/ch15-debugging.md)
 
 ---
 

@@ -27,4 +27,5 @@ This comic explains:
 ---
 
 ## 🔗 References
+- Chapter → [Chapter 9: Deployment Strategies](../../../sources/study-guide/ch09-deployments.md)
 - Lab → [LAB 04 – Canary with NodePort](../../../labs/services-and-networking/lab04-canary-nodeport/README.md)

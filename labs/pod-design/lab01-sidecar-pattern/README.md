@@ -148,3 +148,8 @@ kubectl exec sidecar-example -c sidecar-helper -- cat /data/index.html
 - **InitContainers** run **sequentially** and **first**. If they fail, the Pod restarts.
 - **Sidecars** run **alongside** the main app.
 - **emptyDir** is perfect for ephemeral shared data within a Pod.
+
+---
+
+## 📖 Related Chapter
+👉 [sources/study-guide/ch02-multi-container.md](../../../sources/study-guide/ch02-multi-container.md)

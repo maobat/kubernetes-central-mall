@@ -68,3 +68,6 @@ kubectl rollout undo deployment/clerk-dept
 
 ### ⚖️ Comparison
 * 📄 **Doc:** [Comparison: Blue/Green vs. Canary](../../docs/md-resources/related-deployment-strategies-comparison.md)
+
+---
+[<< Previous: Resources](ch08-resources.md) | [Back to Story Index](../story.md) | [Next: Logistics Tools >>](ch10-management.md)

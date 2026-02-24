@@ -67,3 +67,8 @@ This comic explains:
 > - **Deployment**: Always running web servers.
 > - **Job**: Run once to completion (Batch task).
 > - **CronJob**: Run on a time schedule (Backup, Report).
+
+---
+
+## 🔗 References
+- Chapter → [Chapter 1: Workloads & Contracts](../../../sources/study-guide/ch01-workloads.md)
