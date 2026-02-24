@@ -9,6 +9,7 @@
 
 ### 🚀 Deploying Applications the DevOps Way
 - **lab05** – [Canary Deployments with Gateway API and native traffic weighting](deploying/lab05-canary-deployment-gateway-api/README.md)
+- **lab06** – [Logistics Tools (Helm & Kustomize)](deploying/lab06-helm-packages/README.md)
 
 ### 👀 Observability & Health
 - **lab01** – [Liveness Probes: The Health Inspector](observability/lab01-liveness-probes-health-inspector/README.md)
@@ -24,6 +25,10 @@
 ### 💾 Storage
 - **lab01** – [Persistent Volumes & Claims (PV/PVC)](storage/lab01-persistent-volume/README.md)
 
-### 🔐 Security
+### 🔐 Security & Identity
 - **lab01** – [Managing Security Settings with ServiceAccounts](security/lab01-serviceaccount-identity/README.md)
+- **lab02** – [Identity & Access (RBAC)](security/lab02-rbac-identity/README.md)
 - **lab03** – [Using Secrets to inject sensitive configuration](security/lab03-secrets-env-injection/README.md)
+
+### 🚰 Resource Management
+- **lab01** – [Managing Resource Constraints (Requests, Limits, OOM)](resources/lab01-managing-resource-constraints/README.md)

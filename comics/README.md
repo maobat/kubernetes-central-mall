@@ -140,7 +140,17 @@ Explains:
 - How applications receive sensitive data safely
 
 ---
-### 🛡️ Service Accounts
+### 🛡️ Security & Identity
+
+    security/
+    ├── 01-the-secure-badge/
+    │   ├── lab01-the-secure-badge.png
+    │   └── README.md
+    └── 02-worker-safety/
+        ├── lab06-worker-safety.png
+        └── README.md
+
+#### 01 - The Secure Badge (RBAC)
 
     security/
     └── 02-the-secure-badge/
@@ -158,6 +168,19 @@ Explains:
 - Why **assigning a ServiceAccount is a security boundary**
 - The CKAD mental model: 
 > *"Pods don't choose permissions — they wear the badge you give them."*
+
+#### 02 - Worker Safety (SecurityContext)
+
+**Story:** *Worker Safety & SecurityContext*
+**Quick links:**
+- 🧪 **Lab:** [`lab01-serviceaccount-identity`](../labs/security/lab01-serviceaccount-identity/README.md)
+- 📖 **Docs:** [`docs/md-resources/securitycontext-worker-safety-and-conduct.md`](../docs/md-resources/securitycontext-worker-safety-and-conduct.md)
+
+Explains:
+- `RunAsUser` vs `RunAsNonRoot`
+- Using `fsGroup` to unlock volumes
+- Giving and taking away Linux Capabilities (`add`/`drop`)
+- The danger of `Privileged` mode
 
 ---
 
@@ -178,6 +201,25 @@ Explains:
 - Why whitelisting is the safest approach
 - How labels act as keycards
 - The critical role of DNS whitelisting
+
+---
+
+### 🚰 Resource Management
+
+    resources/
+    └── 01-the-resource-hog/
+        ├── lab08-the-resource-hog.png
+        └── README.md
+
+**Story:** *The Resource Hog*
+**Quick links:**
+- 🧪 **Lab:** [`lab01-managing-resource-constraints`](../labs/resources/lab01-managing-resource-constraints/README.md)
+- 📖 **Docs:** [`docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md`](../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+
+Explains:
+- Requests vs Limits
+- CPU Throttling vs OOMKilled
+- ResourceQuotas
 
 ---
 

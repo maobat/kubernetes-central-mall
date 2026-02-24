@@ -26,6 +26,7 @@ The Clerk and their Helper (**Sidecar** and **Init Containers**).
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: Sidecar Pattern](./../comics/pod-design/01-sidecar/README.md)
 - 🧪 [Lab: Sidecar Pattern](./../labs/pod-design/lab01-sidecar-pattern/README.md)
+- 📄 [Doc: Decoupling Pods](./../docs/md-resources/decoupling-pods.md)
 
 ---
 
@@ -37,6 +38,7 @@ Mastering the art of building and updating your store's display models (**Docker
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Perfect Mannequin](./../comics/pod-design/03-image-updates/README.md)
 - 🧪 [Lab: Image Updates & Rollouts](./../labs/pod-design/lab03-image-updates/README.md)
+- 📄 [Doc: Managing Images & Rollouts](./../docs/md-resources/managing-container-images-and-rollouts.md)
 
 ---
 
@@ -66,6 +68,7 @@ Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 - 🧪 [Lab: Configuration: ConfigMaps](./../labs/configuration/lab01-configmaps/README.md)
 - 🖼️ [Comic: The Secret of the High-Security Vault](./../comics/secrets/01-secrets-injection/README.md)
 - 🧪 [Lab: Secrets & Env Injection](./../labs/security/lab03-secrets-env-injection/README.md)
+- 📄 [Doc: Configuration Decoupling](./../docs/md-resources/configuration-decoupling.md)
 
 ---
 
@@ -75,6 +78,7 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 **⚡ Study Guide:** [Security & Safety](./study-guide/ch06-security.md)
 
 **🧰 Study Toolbox:**
+- 🖼️ [Comic: Worker Safety & SecurityContext](./../comics/security/02-worker-safety/README.md)
 - 📄 [Doc: Worker Safety and Conduct](./../docs/md-resources/securitycontext-worker-safety-and-conduct.md)
 - 🧪 [Lab: Managing Security Settings (SecurityContext)](./../labs/security/lab01-serviceaccount-identity/README.md)
 
@@ -87,6 +91,7 @@ Assigning roles and permissions to ensure only authorized staff access the backr
 
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Secure Badge](./../comics/security/01-the-secure-badge/README.md)
+- 🧪 [Lab: Identity & Access (RBAC)](./../labs/security/lab02-rbac-identity/README.md)
 - 📄 [Doc: Understanding RBAC](./../docs/md-resources/understanding-role-based-access-control-rbac.md)
 
 ---
@@ -97,6 +102,8 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 **⚡ Study Guide:** [Resources & Quotas](./study-guide/ch08-resources.md)
 
 **🧰 Study Toolbox:**
+- 🖼️ [Comic: The Resource Hog](./../comics/resources/01-the-resource-hog/README.md)
+- 🧪 [Lab: Managing Resource Constraints](./../labs/resources/lab01-managing-resource-constraints/README.md)
 - 📄 [Doc: The Resource Budget](./../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
 ---
@@ -122,6 +129,8 @@ Using standardized tools like **Helm** and **Kustomize** to manage mall layout t
 **⚡ Study Guide:** [Management Tools](./study-guide/ch10-management.md)
 
 **🧰 Study Toolbox:**
+- 🖼️ [Comic: The Logistics Chain](./../comics/deploying/02-the-logistics-chain/README.md)
+- 🧪 [Lab: Logistics Tools (Helm & Kustomize)](./../labs/deploying/lab06-helm-packages/README.md)
 - 📄 [Doc: Using Helm](./../docs/md-resources/using-the-helm-package-manager.md)
 - 📄 [Doc: Using Kustomize](./../docs/md-resources/using-kustomize.md)
 
@@ -153,6 +162,7 @@ Routing customers through the main doors and specialized directories (**Ingress 
 - 🧪 [Lab: Ingress & Virtual Host Routing](./../labs/services-and-networking/lab03-ingress-virtual-host/README.md)
 - 🖼️ [Comic: The Lost Gateway](./../comics/gateway-api/01-the-lost-gateway/README.md)
 - 🧪 [Lab: Canary Deployments with Gateway API](./../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
+- 📄 [Doc: Ingress vs Gateway API](./../docs/md-resources/ingress-vs-gateway.md)
 
 ---
 
