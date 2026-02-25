@@ -10,6 +10,38 @@ The goal is simple:
 
 ---
 
+## 🎓 CKAD Curriculum Alignment (CNCF)
+
+This project is structured to align with the **official CKAD (Certified Kubernetes Application Developer) curriculum** defined by the **Cloud Native Computing Foundation (CNCF)**.
+
+By browsing the official CNCF curriculum, you can review the **exam domains and their weightings**:
+
+🔗 https://github.com/cncf/curriculum/blob/master/ckad/README.md
+
+According to the latest available version of the curriculum (**CKAD Curriculum v1.34**), the exam domains are:
+
+| Domain | Weight |
+|------|--------|
+| Application Design and Build | 20% |
+| Application Deployment | 20% |
+| Application Observability and Maintenance | 15% |
+| Application Environment, Configuration and Security | 25% |
+| Services and Networking | 20% |
+
+📄 Reference document: `CKAD_Curriculum_v1.34.pdf`
+
+### 🧭 How This Repository Maps to the CKAD Domains
+
+Chapters, labs, and comics in this repository are designed to collectively cover **all CKAD exam domains**, with a strong focus on:
+
+- conceptual understanding (storytelling)
+- exam-oriented clarity (study guides)
+- hands-on execution (labs)
+
+The goal is **not** to duplicate the CNCF curriculum, but to **make it tangible, memorable, and executable**.
+
+---
+
 ## 🧠 The Mall Analogy
 
 The mall is your Kubernetes cluster:
