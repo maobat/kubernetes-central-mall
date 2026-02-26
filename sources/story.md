@@ -1,5 +1,17 @@
 # 🏙️ The Central Mall: A CKAD Adventure
-> A narrative guide to mastering Certified Kubernetes Application Developer concepts through the lens of a bustling urban mall.
+> **Narrative Guide:** Master the Certified Kubernetes Application Developer (CKAD) exam through the story of a bustling urban mall.
+
+---
+
+## 🗺️ Welcome to the Grand Opening
+In this journey, you aren't just an engineer; you are the **Mall Architect**. You will hire staff (Pods), define their conduct (SecurityContext), set up their intercoms (Services), and manage the warehouse (Storage).
+
+**How to use this guide:**
+1. **Read the Chapter:** Build the mental model.
+2. **Consult the Study Guide:** Get the technical theory.
+3. **Open the Toolbox:** Practice with Labs and visualize with Comics.
+
+
 
 ---
 
@@ -7,7 +19,7 @@
 > **Focus:** Understanding the core blueprints of the mall, how we hire staff, organize departments, and deploy our "mannequin" images.
 
 ### 📖 Chapter 1: [Choosing the Right Workload](./story/ch01-choosing-the-right-workload.md) 
-When to use a Shop Clerk (**Pod**), a Manager (**Deployment**), a Night-Shift Worker (**Job**), or a Recurring Maintenance Crew (**CronJob**).
+Deciding between a Shop Clerk (**Pod**), a Manager (**Deployment**), or specialized crews (**Jobs/CronJobs**).
 
 **⚡ Study Guide:** [Workloads & Contracts](./study-guide/ch01-workloads.md)
 
@@ -32,7 +44,7 @@ The Clerk and their Helper (**Sidecar** and **Init Containers**).
 
 ---
 
-### 📖 Chapter 3: [Images & Modifications: The Perfect "Mannequin"](story/ch03-images-and-modifications.md)
+### 📖 Chapter 3: [Images & Modifications: The Perfect "Mannequin"](./story/ch03-images-and-modifications.md)
 Mastering the art of building and updating your store's display models (**Docker/OCI Images**).
 
 **⚡ Study Guide:** [Pod Design & Images](./study-guide/ch03-pod-design.md)
@@ -44,7 +56,7 @@ Mastering the art of building and updating your store's display models (**Docker
 
 ---
 
-### 📖 Chapter 4: [Extending the Mall: Special Permits](story/ch04-extending-the-mall.md)
+### 📖 Chapter 4: [Extending the Mall: Special Permits](./story/ch04-extending-the-mall.md)
 Hiring external contractors and obtaining special building permits (**CRDs & Operators**).
 
 **⚡ Study Guide:** [Extending K8s](./study-guide/ch04-extending-k8s.md)
