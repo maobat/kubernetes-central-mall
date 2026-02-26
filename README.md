@@ -197,7 +197,7 @@ Structure:
         └── README.md
 
 
-Comics **do not replace labs** — they reinforce them.
+Comics **do not replace labs**, they reinforce them.
 
 ---
 
@@ -244,4 +244,4 @@ Feedback is highly encouraged.
 
 ---
 
-🛍️ *Welcome to the Kubernetes Central Mall — don’t get lost in the corridors.*
+🛍️ *Welcome to the Kubernetes Central Mall, don’t get lost in the corridors.*

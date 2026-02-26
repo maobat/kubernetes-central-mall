@@ -32,8 +32,8 @@ In a busy mall, electricity and water are shared. If one shop uses too much, eve
 - **Memory (Incompressible):** Terminated when over limit (Crash/OOMKilled).
 
 In exam terms:
-> If a Pod is stuck in `Pending` — check its **Requests**.  
-> If a Pod keeps `Restarting` — check its **Memory Limits**.
+> If a Pod is stuck in `Pending`, check its **Requests**.  
+> If a Pod keeps `Restarting`, check its **Memory Limits**.
 
 ---
 

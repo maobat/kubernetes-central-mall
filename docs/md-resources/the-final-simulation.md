@@ -396,7 +396,7 @@ If the `curl` command returns a **404**, it usually means the Ingress rule is co
 - **Command:** `kubectl run nevaginx --image=nginx:latest --labels="type=webapp"`
 - **Analogy:** You open the "NevaGinx" boutique and give it a "Web App" category sign.
 
-**2. Hang the Store Sign (Create the Service) — CRITICAL STEP** If you don't do this, other pods will get a `bad address` error.
+**2. Hang the Store Sign (Create the Service), CRITICAL STEP** If you don't do this, other pods will get a `bad address` error.
 
 **Command:** `kubectl expose pod nevaginx --port=80`
 

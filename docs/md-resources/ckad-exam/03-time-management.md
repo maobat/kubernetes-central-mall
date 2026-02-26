@@ -17,7 +17,7 @@
 
 ## 🎯 Golden Rule
 
-> **If you’re stuck for 2 minutes — SKIP.**
+> **If you’re stuck for 2 minutes, SKIP.**
 
 Mark it mentally.
 Move on.

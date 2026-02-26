@@ -1,4 +1,4 @@
-# Lab 01 —  👁️ Observability. The Health Inspector (Liveness Probes)
+# Lab 01,  👁️ Observability. The Health Inspector (Liveness Probes)
 
 
 ---
@@ -43,7 +43,7 @@ If the worker doesn’t respond, the shift is terminated.
 
 ## 🛠️ Steps
 
-### Step 1 — Create the Blueprint
+### Step 1, Create the Blueprint
 
 Define a Pod with a **Liveness Probe** using an HTTP check.
 

@@ -20,7 +20,7 @@ Every Pod enters the cluster wearing a **badge**, which determines **what it is 
 - Why ServiceAccounts are a **security boundary**
 - Why Pods **cannot choose or change permissions themselves**
 
-> 🛍️ *Pods don’t ask for access — they wear the badge they’re given.*
+> 🛍️ *Pods don’t ask for access, they wear the badge they’re given.*
 
 ---
 
@@ -32,7 +32,7 @@ Every Pod enters the cluster wearing a **badge**, which determines **what it is 
 - Permissions are attached to the **badge**, not the Pod
 
 In exam terms:
-> If a Pod can access something — it’s because of its **ServiceAccount**, not magic.
+> If a Pod can access something, it’s because of its **ServiceAccount**, not magic.
 
 ---
 # 🔐 How This Aligns with the Secrets Lab
@@ -50,7 +50,7 @@ This comic pairs directly with:
 
 > Identity first → permissions second → data access last
 
-This is exactly how Kubernetes security is designed — and how CKAD expects you to reason.
+This is exactly how Kubernetes security is designed, and how CKAD expects you to reason.
 
 ---
 🔗 **References:**

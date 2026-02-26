@@ -7,7 +7,7 @@ Each comic is tightly coupled with:
 - a **precise CKAD topic**
 - a **single conceptual takeaway**
 
-Comics are **not decorative** — they are a learning tool.
+Comics are **not decorative**, they are a learning tool.
 
 ---
 
@@ -167,7 +167,7 @@ Explains:
 - How **Pods inherit identity from Deployments**
 - Why **assigning a ServiceAccount is a security boundary**
 - The CKAD mental model: 
-> *"Pods don't choose permissions — they wear the badge you give them."*
+> *"Pods don't choose permissions, they wear the badge you give them."*
 
 #### 02 - Worker Safety (SecurityContext)
 
@@ -454,4 +454,4 @@ Explains:
 
 ---
 
-🛍️ *Welcome to the Kubernetes Central Mall — where even control-plane logic has a personality.*
+🛍️ *Welcome to the Kubernetes Central Mall, where even control-plane logic has a personality.*

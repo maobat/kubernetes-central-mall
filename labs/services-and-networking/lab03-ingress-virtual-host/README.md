@@ -51,7 +51,7 @@ using an **Ingress**
 
 We are opening **three identical shops** behind a single branded entrance.
 
-Customers don’t care which shop they enter —  
+Customers don’t care which shop they enter,  
 they just look at the **store sign (hostname)**.
 
 | Kubernetes Concept | Mall Analogy |

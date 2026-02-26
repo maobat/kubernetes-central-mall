@@ -50,7 +50,7 @@ This lab uses the following manifests:
 - [`02-simulated-controller-job.yaml`](./02-simulated-controller-job.yaml)
   - Simulates the Controller creating the actual Job/Pod
 
-📌 Tip: Open the CRD first, then the instance — notice how `spec` fields align.
+📌 Tip: Open the CRD first, then the instance, notice how `spec` fields align.
 
 ---
 

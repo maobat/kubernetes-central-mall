@@ -54,7 +54,7 @@ Modify the PV:
 Apply: `kubectl apply -f pv.yaml --force`
 Check on the node (only **after** a Pod uses it): `minikube ssh`, then `ls /mydata`
 
-#### 5.1.4 Summary Table — hostPath Behavior
+#### 5.1.4 Summary Table, hostPath Behavior
 
 | hostPath Type | Behavior |
 | :--- | :--- |

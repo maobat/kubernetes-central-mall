@@ -1570,7 +1570,7 @@ Modify the PV:
 Apply: `kubectl apply -f pv.yaml --force`
 Check on the node (only **after** a Pod uses it): `minikube ssh`, then `ls /mydata`
 
-#### 5.1.4 Summary Table — hostPath Behavior
+#### 5.1.4 Summary Table, hostPath Behavior
 
 | hostPath Type | Behavior |
 | :--- | :--- |
@@ -4360,7 +4360,7 @@ If the `curl` command returns a **404**, it usually means the Ingress rule is co
 - **Command:** `kubectl run nevaginx --image=nginx:latest --labels="type=webapp"`
 - **Analogy:** You open the "NevaGinx" boutique and give it a "Web App" category sign.
 
-**2. Hang the Store Sign (Create the Service) — CRITICAL STEP** If you don't do this, other pods will get a `bad address` error.
+**2. Hang the Store Sign (Create the Service), CRITICAL STEP** If you don't do this, other pods will get a `bad address` error.
 
 **Command:** `kubectl expose pod nevaginx --port=80`
 

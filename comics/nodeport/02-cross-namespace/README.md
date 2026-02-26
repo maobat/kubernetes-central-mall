@@ -22,7 +22,7 @@ This comic explains:
 - Namespace → Floor inside the mall
 - Pod → Shop
 
-Traffic doesn’t care about floors — only doors.
+Traffic doesn’t care about floors, only doors.
 
 ---
 
