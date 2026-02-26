@@ -23,11 +23,12 @@ export now="--force --grace-period=0"
 ```
 ## ⚡ Optional but Useful Aliases
 ```bash
-alias kgp='kubectl get pods -o wide'
-alias kgs='kubectl get svc'
-alias kgd='kubectl get deploy'
-alias kgn='kubectl get ns'
-alias kga='kubectl get all'
+alias kgetp='k get pods --sort-by=.metadata.creationTimestamp -o wide'
+alias kgp='k get pods -o wide'
+alias kgs='k get svc'
+alias kgd='k get deploy'
+alias kgn='k get ns'
+alias kga='k get all'
 ```
 
 ## 🧠 Editor
