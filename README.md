@@ -10,6 +10,50 @@ The goal is simple:
 
 ---
 
+## 🗺️ The Learning Map: Choose Your Path
+
+In this repository, you can learn Kubernetes through three different lenses. We suggest starting with the **Story** to build your mental model.
+
+---
+
+### 1. 📖 [The Story: Welcome to Central Mall](./sources/story.md)
+*The Big Picture*
+Read the narrative of how a chaotic marketplace transforms into a managed Kubernetes cluster. 
+- **Goal:** Understand "The Why" behind namespaces, pods, and services.
+- **Vibe:** Metaphorical, fun, and non-technical.
+
+---
+
+### 2. 🎨 [The Comics: Visual Insights](comics/README.md)
+*The Mental Hooks*
+Visual breakdowns of specific problems (like "The Lost Gateway" or "Locked Corridors").
+- **Goal:** Create fast mental recall for the CKAD exam.
+- **Link:** Use these alongside the labs to visualize control-plane behavior.
+
+---
+
+### 3. 🧪 [The Labs: Engineering Office](labs/README.md)
+*Hands-on Practice*
+The technical blueprints where you actually build the mall using `kubectl`.
+- **Goal:** Mastery of YAML and imperative commands.
+
+---
+
+
+
+## 🚀 Recommended Workflow
+
+If you are new to a concept, follow this sequence:
+1. **Read the Story Chapter** (e.g., Chapter 12: Ingress).
+2. **Scan the Comic** (e.g., The Virtual Host Show).
+3. **Execute the Lab** (e.g., `lab03-ingress-virtual-host`).
+4. **Review the Docs** (e.g., `ingress-vs-gateway.md`) for technical edge cases.
+
+---
+
+🛍️ *Ready to start? Head over to [Chapter 1: The Mall Floor](./sources/story/ch01-choosing-the-right-workload.md) and hire your first worker!*
+
+---
 ## 🎓 CKAD Curriculum Alignment (CNCF)
 
 This project is structured to align with the **official CKAD (Certified Kubernetes Application Developer) curriculum** defined by the **Cloud Native Computing Foundation (CNCF)**.
