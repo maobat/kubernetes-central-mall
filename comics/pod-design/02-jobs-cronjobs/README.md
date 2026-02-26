@@ -8,7 +8,7 @@ This comic explains:
 - How Kubernetes handles task completion and failures
 
 📌 Read this if:
-- You are working on **LAB 02 (Pod Design)**
+- You are working on **[LAB 02](/labs/pod-design/lab02-jobs-cronjobs/README.md)**.
 - You want to understand **Batch Processing & Scheduling**
 - You want a quick **mental model** using the mall analogy 😄
 

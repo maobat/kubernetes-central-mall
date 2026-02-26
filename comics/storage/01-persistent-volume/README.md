@@ -8,7 +8,7 @@ This comic explains:
 - How data survives even if the Shop (Pod) disappears
 
 📌 Read this if:
-- You are working on **LAB 01 (Storage)**
+- You are working on **[LAB 01](/labs/storage/lab01-persistent-volume/README.md)**.
 - You want to understand **Persistence & Volume Mounting**
 - You want a quick **mental model** using the mall analogy 😄
 

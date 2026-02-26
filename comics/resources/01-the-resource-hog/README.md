@@ -6,7 +6,7 @@ This comic explains **Resource Management (Requests & Limits)** using the *Centr
 In a busy mall, electricity and water are shared. If one shop uses too much, everyone suffers a blackout.
 
 📌 Read this if:
-- You are working on **LAB 08**
+- You are working on **[LAB 01](/labs/resources/lab01-managing-resource-constraints/README.md)**.
 - You want to understand **Requests vs. Limits**
 - You are troubleshooting **OOMKilled** or **Throttling**
 

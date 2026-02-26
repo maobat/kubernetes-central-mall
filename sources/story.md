@@ -14,6 +14,8 @@ When to use a Shop Clerk (**Pod**), a Manager (**Deployment**), a Night-Shift Wo
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: Jobs & CronJobs](./../comics/pod-design/02-jobs-cronjobs/README.md)
 - 🧪 [Lab: Jobs & CronJobs](./../labs/pod-design/lab02-jobs-cronjobs/README.md)
+- 🖼️ [Comic: The Fixed Boutique (StatefulSets)](./../comics/storage/02-statefulsets/README.md)
+- 🧪 [Lab: The Fixed Boutique (StatefulSets)](./../labs/storage/lab02-statefulsets/README.md)
 - 📄 [Doc: Using StatefulSets](./../docs/md-resources/using-statefulsets.md)
 
 ---

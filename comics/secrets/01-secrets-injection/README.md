@@ -9,7 +9,7 @@ This comic explains:
 - The CKAD-safe way to handle passwords without hardcoding them
 
 📌 Read this if:
-- You are working on **LAB 03**
+- You are working on **[LAB 03](/labs/security/lab03-secrets-env-injection/README.md)**.
 - You want to understand **Secrets & Environment Variables**
 - You want a quick **mental model** using the mall analogy 😄
 

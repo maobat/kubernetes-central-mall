@@ -8,7 +8,7 @@ This comic explains:
 - How to inject config via **Env Vars** and **Volumes**
 
 📌 Read this if:
-- You are working on **LAB 01 (Configuration)**
+- You are working on **[LAB 01](/labs/configuration/lab01-configmaps/README.md)**.
 - You want to understand **ConfigMaps & Decoupling**
 - You want a quick **mental model** using the mall analogy 😄
 

@@ -6,7 +6,7 @@ This comic explains **how identity works in Kubernetes** using the *Central Mall
 Every Pod enters the cluster wearing a **badge**, which determines **what it is allowed to do**.
 
 📌 Read this if:
-- You are working on **LAB 01**
+- You are working on **[LAB 01](/labs/security/lab01-serviceaccount-identity/README.md)**.
 - You want to understand **ServiceAccounts & Pod identity**
 - You want a quick **mental model** using the mall analogy 😄
 

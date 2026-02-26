@@ -8,7 +8,7 @@ This comic explains:
 - Why the **Registry** is like a VIP warehouse pass
 
 📌 Read this if:
-- You are working on **LAB 03 (Image Updates)**
+- You are working on **[LAB 03](/labs/pod-design/lab03-image-updates/README.md)**.
 - You want to understand **Image Layers & Rollouts**
 - You want a quick **mental model** using the mall analogy 😄
 

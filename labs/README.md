@@ -24,6 +24,7 @@
 
 ### 💾 Storage
 - **lab01** – [Persistent Volumes & Claims (PV/PVC)](storage/lab01-persistent-volume/README.md)
+- **lab02** – [StatefulSets](storage/lab02-statefulsets/README.md)
 
 ### 🔐 Security & Identity
 - **lab01** – [Managing Security Settings with ServiceAccounts](security/lab01-serviceaccount-identity/README.md)

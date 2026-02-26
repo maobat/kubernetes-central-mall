@@ -10,7 +10,7 @@ This comic explains:
 - who actually controls traffic (GatewayClass / Controller)
 
 📌 Read this if:
-- you are working on **LAB 05**
+- you are working on **[LAB 05](/labs/deploying/lab05-canary-deployment-gateway-api/README.md)**.
 - you see `ADDRESS: <none>` and think something is broken
 - you are under CKAD exam pressure 😄
 

@@ -8,7 +8,7 @@ This comic explains:
 - **Operators**: The specialized "Managers" who know how to handle specific permits.
 
 📌 Read this if:
-- You are working on **LAB 04 (CRDs & Operators)**
+- You are working on **[LAB 04](/labs/architecture/lab04-crds-operators/README.md)**.
 - You want to understand why Kubernetes doesn't know what a "Database" is by default.
 - You want to understand the **Reconciliation Loop** (Observe → Analyze → Act).
 

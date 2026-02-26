@@ -8,7 +8,7 @@ This comic explains:
 - How containers share data using a **Volume**
 
 📌 Read this if:
-- You are working on **LAB 01 (Pod Design)**
+- You are working on **[LAB 01](/labs/pod-design/lab01-sidecar-pattern/README.md)**.
 - You want to understand **Pod patterns & Shared Volumes**
 - You want a quick **mental model** using the mall analogy 😄
 

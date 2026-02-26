@@ -5,7 +5,7 @@
 This comic explains how **ClusterIP** (Internal Services) works in Kubernetes using the Central Mall's intercom analogy.
 
 📌 Read this if:
-- You are working on **CHAPTER 11 (Finding the Stores)**.
+- You are working on **[LAB 01](/labs/services-and-networking/lab01-clusterip-internal-traffic/README.md)**.
 - You want to understand Service load balancing.
 - You want to see how one stable name (`Staff-Support`) connects to many different workers.
 
