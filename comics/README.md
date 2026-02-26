@@ -264,7 +264,7 @@ Explains:
 ### 🧱 Pod Design (InitContainers & Sidecars)
 
     pod-design/
-    └── 01-the-helping-hands/
+    └── 01-sidecar-initcontainers/
         ├── lab01-pod-design-sidecar-init.png
         └── README.md
 
@@ -312,6 +312,33 @@ Explains:
 > “Pods are temporary workers. Data lives in the warehouse.”
 
 ---
+
+### 🗄️ Storage (StatefulSets)
+    storage/
+    └── 02-statefulsets/
+        ├── lab02-statefulsets.png
+        └── README.md
+
+**Story:** The Warehouse
+**Quick links:**
+
+- 🧪 **Lab:** [`lab02-statefulsets`](../labs/storage/lab02-statefulsets/README.md)
+- 📖 **Docs:** [`docs/md-resources/storage-recap-for-dummies.md`](../docs/md-resources/storage-recap-for-dummies.md)
+- 📖 **Docs:** [`docs/md-resources/using-statefulsets.md`](../docs/md-resources/using-statefulsets.md)
+
+Explains:
+
+- Why StatefulSets are needed
+- Stable identities
+- Persistent storage
+- Why StatefulSets are different from Deployments
+
+> **CKAD mental hook:**
+> 
+> “StatefulSets are for when you need stable identities and persistent storage.”
+
+---
+
 
 ### 🧰 Configuration (ConfigMaps & Secrets)
     configuration/
