@@ -1,13 +1,19 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
+  creationTimestamp: null
   name: one-off-task
 spec:
   template:
+    metadata:
+      creationTimestamp: null
     spec:
       containers:
-      - name: main
+      - command:
+        - echo
+        - Hello CKAD
         image: busybox
-        command: ["echo",  "Hello CKAD"]
-      restartPolicy: OnFailure
-  backoffLimit: 4
+        name: one-off-task
+        resources: {}
+      restartPolicy: Never
+status: {}

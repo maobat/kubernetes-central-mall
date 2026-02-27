@@ -1,18 +1,26 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
+  creationTimestamp: null
   name: scheduled-task
 spec:
-  schedule: "*/1 * * * *"
   jobTemplate:
+    metadata:
+      creationTimestamp: null
+      name: scheduled-task
     spec:
       template:
+        metadata:
+          creationTimestamp: null
         spec:
           containers:
-          - name: hello
-            image: busybox
-            command:
+          - command:
             - /bin/sh
             - -c
-            - date; echo This is a scheduled task
+            - date; echo 'This is a schedule task'
+            image: busybox
+            name: scheduled-task
+            resources: {}
           restartPolicy: OnFailure
+  schedule: '*/1 * * * *'
+status: {}

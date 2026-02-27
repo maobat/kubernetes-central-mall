@@ -64,20 +64,9 @@ It explains **Jobs (One-off) vs CronJobs (Scheduled)**.
 
 👉 [Lab 02 - The One-Off Task](./job.yaml)
 
-```yaml
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: one-off-task
-spec:
-  template:
-    spec:
-      containers:
-      - name: main
-        image: busybox
-        command: ["echo",  "Hello CKAD"]
-      restartPolicy: OnFailure
-  backoffLimit: 4
+**CKAD imperative shortcut**
+```bash
+k create job one-off-task --image=busybox $do -- echo "Hello CKAD" > job.yaml
 ```
 
 Apply it:
@@ -94,25 +83,10 @@ kubectl get jobs
 ### 2️⃣ Create a Scheduled CronJob
 
 👉 [Lab 02 - The Scheduled Task](./cronjob.yaml)
-```yaml
-apiVersion: batch/v1
-kind: CronJob
-metadata:
-  name: scheduled-task
-spec:
-  schedule: "*/1 * * * *"
-  jobTemplate:
-    spec:
-      template:
-        spec:
-          containers:
-          - name: hello
-            image: busybox
-            command:
-            - /bin/sh
-            - -c
-            - date; echo This is a scheduled task
-          restartPolicy: OnFailure
+
+**CKAD imperative shortcut**
+```bash
+k create cj scheduled-task --image=busybox --schedule="*/1 * * * *" $do -- /bin/sh -c "date; echo('This is a schedule task')" > cronjob.yaml
 ```
 
 Apply it:
@@ -126,23 +100,44 @@ kubectl apply -f cronjob.yaml
 
 1. **Watch the CronJob spawn Jobs:**
    ```bash
-   kubectl get cronjob scheduled-task --watch
+   k get cronjob scheduled-task --watch
    ```
 
-2. **Wait a minute or two**, then check the Jobs created by the CronJob:
-   ```bash
-   kubectl get jobs
+2. You can use the **Manual Trigger (The Best Way)**
+
+    The `--from` command creates a `one-off Job` using the exact configuration (image, command, environment variables) defined in your CronJob, without waiting for the scheduler.
+    
+    ```Bash
+    k create job --from=cronjob/scheduled-task manual-test-run
+    ```
+
+3. Verification
+Once you run that, the Job starts instantly. You can verify it just like any other job:
+
+    ```Bash
+    # Check the status immediately
+    k get jobs
+
+    # Check the logs of the manual run
+    k logs job/manual-test-run
+    ```   
+   >Adding these two fields will ensure Kubernetes automatically deletes old Job records, keeping your k get jobs output from becoming a mile long:
+   ```yaml
+   spec:
+     schedule: '*/1 * * * *'
+     successfulJobsHistoryLimit: 3  # Keeps only the last 3 successful jobs
+     failedJobsHistoryLimit: 1      # Keeps only the last failed job for debugging
+     concurrencyPolicy: Forbid      # Prevents a new job from starting if the old one is still running
+     jobTemplate:
+       ...
    ```
 
 3. **Check the logs of one of the completed Pods:**
    ```bash
    # Find a pod name from the jobs list
-   kubectl get pods
-   
-   kubectl logs <pod-name-from-cronjob>
+   kgetp # alias kgetp='k get pod -o wide --sort-by=.metadata.creationTimestamp'
+   k logs <pod-name-from-cronjob>
    ```
-
-✅ **You have master batch processing!**
 
 ---
 
