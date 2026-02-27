@@ -51,7 +51,7 @@ Use this for database migrations or report generation.
 kubectl create job paint-wall --image=busybox -- echo `Wall Painted!`
 ```
 ### 3. Creating a CronJob (The Scheduled Clean)
-Use this for nightly backups.
+Use this for nightly cleanings.
 ```bash
 kubectl create cronjob nightly-clean --image=busybox --schedule=`0 23 * * *` -- echo `Cleaning floors...`
 ```

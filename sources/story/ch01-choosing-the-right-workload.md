@@ -56,5 +56,10 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 | A task done on a schedule | **Maintenance Crew** | `CronJob` |
 
 ---
+### 🧰 Study Toolbox
+- 🖼️ [**Comic: Jobs & CronJobs - The Contractor's Visit**](./../../comics/pod-design/02-jobs-cronjobs/README.md)
+- 🖼️ [**Comic: StatefulSets - The Fixed Boutique**](./../../comics/storage/02-statefulsets/README.md)
+
+---
 
 [Back to Story Index](../story.md) | [Next Chapter: Multi-container Design Patterns >>](ch02-multi-container-design-patterns.md)
