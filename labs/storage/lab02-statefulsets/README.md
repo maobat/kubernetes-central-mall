@@ -107,18 +107,14 @@ Add these two blocks. Note that `name: www` must match in both places.
   volumeMounts:
   - name: www
     mountPath: /usr/share/nginx/html
-
-# B. At the bottom of the StatefulSet spec (same level as 'template'):
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "standard"
-      resources:
-        requests:
-          storage: 1Gi
 ```
+
+```yaml
+# B. At the bottom of the StatefulSet spec (same level as 'template'):
+```
+<img src="volumeClaimTemplates.png" alt="Configuration ConfigMaps" width="60%" />
+
+> Note that `standard` is the name of the StorageClass to use. You can check the available storage classes with `k get sc`.
 ---
 
 ## 📝 CKAD Cheat Sheet: The Resulting Checklist

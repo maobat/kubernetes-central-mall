@@ -21,7 +21,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   labels:
-    app: web
+    app: svc-web
   name: web
 spec:
   serviceName: svc-web
