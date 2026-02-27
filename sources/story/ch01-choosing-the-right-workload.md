@@ -17,7 +17,7 @@ However, clerks in the Central Mall are considered "mortal." If a clerk gets sic
 ## 👔 The Store Manager (Deployment)
 Most shops in the mall are run by a **Store Manager**. This is the **Deployment**.
 
-The Manager`s job isn`t to do the work themselves, but to ensure the **"Desired State"** is met. If the owner says, "I need 3 clerks at the jewelry counter," the Manager makes sure 3 people are always there. These clerks are **Stateless**: they are identical and interchangeable. If one disappears, the Manager hires a replacement immediately.
+The Manager's job isn't to do the work themselves, but to ensure the **"Desired State"** is met. If the owner says, "I need 3 clerks at the jewelry counter," the Manager makes sure 3 people are always there. These clerks are **Stateless**: they are identical and interchangeable. If one disappears, the Manager hires a replacement immediately.
 
 ---
 
