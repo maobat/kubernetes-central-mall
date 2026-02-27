@@ -175,7 +175,7 @@ curl -v -H "Host: lab11web.example.com" http://$INGRESS_IP
 - External exposure is fully handled by the Ingress Controller
 - Internal testing is the **exam-safe approach**
 
-📝 **Key Takeaways (CKAD Mindset)**
+## 📝 Key Takeaways (CKAD Mindset)
 
 - Always test Ingress using a **Host header**
 - Don’t rely on `/etc/hosts`

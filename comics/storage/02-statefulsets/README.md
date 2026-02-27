@@ -46,18 +46,6 @@ In the **Central Mall**, standard shops (Deployments) are like pop-up kiosks: if
 
 ---
 
-## 🧠 Key Takeaways (CKAD Mindset)
-
-> **The Central Mall Golden Rule:**
-> A Deployment is an army of anonymous clones. 
-> A StatefulSet is a parade of individuals with a name and a memory.
-
-* **Identity:** Pod names persist across restarts (`web-0` always returns as `web-0`).
-* **Storage:** Each Pod gets its own dedicated PVC generated from the template.
-* **Ordering:** Created one by one (0 -> 1 -> 2) and terminated in reverse order.
-
----
-
 ## 🔗 References
 * 🧪 **Lab:** [LAB 02 – The Fixed Boutique](/labs/storage/lab02-statefulsets/README.md)
 * 📖 **Docs:** [Using StatefulSets](/docs/md-resources/using-statefulsets.md)  

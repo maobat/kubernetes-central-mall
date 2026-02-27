@@ -5,6 +5,39 @@
 Since there is no `kubectl create statefulset` command, you must learn the "Exam Speed-Run" method: Generating a Deployment scaffold and manually converting it into a **StatefulSet**.
 
 ---
+## 📖 Related Comic
+👉 [comics/storage/02-statefulsets/README.md](../../../comics/storage/02-statefulsets/README.md)
+
+It explains **StatefulSets (Fixed Boutiques)**.
+
+---
+## 📖 Reference Docs
+
+- StatefulSets → [Kubernetes Docs: Using StatefulSets](../../../docs/md-resources/using-statefulsets.md)
+
+---
+
+## 📋 Requirements
+
+1. **Create a Headless Service**:
+   - Name: `svc-web`
+   - Type: `ClusterIP` with `None` specified.
+   - Port: `80`.
+
+2. **Create a StatefulSet**:
+   - Name: `web`
+   - Replicas: `3`
+   - Image: `registry.k8s.io/nginx-slim:0.24`
+   - Service Link: Connect to `svc-web`.
+   - Storage: Mount a volume named `www` at `/usr/share/nginx/html`.
+   - Persistence: Use a `volumeClaimTemplate` (1Gi, `ReadWriteOnce`, `standard` storage class).
+
+3. **Verify Persistence**:
+   - Create a file inside `web-0`.
+   - Delete the pod `web-0`.
+   - Confirm the new `web-0` pod retains the file.
+
+---
 
 ## 🏬 Mall Analogy
 Unlike standard clerks (Deployments) who are replaceable and anonymous, **StatefulSet** workers are like specialized shop owners.
@@ -167,10 +200,16 @@ k exec web-0 -- cat /usr/share/nginx/html/index.html
 ✅ **Success:** If the note still says "Boutique 0 Secret," the PVC successfully held the data while the worker was being replaced!
 
 ---
+## 📖 Related Chapter
+👉 [sources/study-guide/ch01-workloads.md](../../../sources/study-guide/ch01-workloads.md)
 
 ## 📝 Key Takeaways (CKAD Mindset)
+
+* **ServiceName** in the StatefulSet must match the Service's `metadata.name`.
 * **No Imperative command** exists for StatefulSets. Use the Deployment scaffold!
 * **Headless Service** is mandatory (`clusterIP: None`).
-* **ServiceName** in the StatefulSet must match the Service's `metadata.name`.
-* **Ordering matters:** StatefulSets are created 0 through N-1 and deleted in reverse.
+* **Identity:** Pod names persist across restarts (`web-0` always returns as `web-0`).
+* **Storage:** Each Pod gets its own dedicated PVC generated from the template.
+* **Ordering:** Created one by one (0 -> 1 -> 2) and terminated in reverse order.
 
+---
