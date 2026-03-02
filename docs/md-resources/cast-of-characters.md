@@ -8,6 +8,8 @@
 |**The Translator**|	**kubectl proxy**|	The Proxy/Phone Line|	A secure "tunnel" that lets standard tools (like curl) talk to Management without needing a complex badge.|
 | **The Stable Counter** | **Service (ClusterIP)** | The Permanent Storefront Sign | A stable, internal "extension number" or counter location. Even if the workers change, the counter stays put. |
 | **The Building** | **Node** | The Mall Building / Wing | A physical or virtual machine that provides CPU, memory, disk, and networking. Pods don’t run “in Kubernetes”, they run inside a Node. |
+| **The Day-Use Locker** | **emptyDir** | The Shift Workspace | **(Storage)** Temporary space shared between workers in the *same* shop (Pod). If the shop closes, the locker is emptied and wiped clean. |
+| **The Warehouse Safe** | **PV / PVC** | The Permanent Vault | **(Storage)** A storage unit in the basement. It stays locked and filled even if the worker is replaced or the shop closes. |
 | **The Worker** | **Pod** | The Individual Employee | The running containerized application that does the actual work (temporary/scalable). |
 | **The Manager** | **Deployment**| The Store Manager | Ensures the correct number of Pods (workers) are always running. |
 | **The Main Gate** | **Ingress Controller**| The Guard at the Main Entrance | The program that reads the Ingress Rules and directs external traffic. |
