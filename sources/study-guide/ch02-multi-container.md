@@ -22,7 +22,7 @@ In Kubernetes, we can put multiple workers (containers) inside the same shop (**
 
 ## 🛠️ 2.2 The Sidecar: The Logging Assistant
 
-Imagine your main worker (`nginx`) is busy serving customers. You need to collect logs, but you don`t want to modify the main worker`s code. You add a **Sidecar**.
+Imagine your main worker (`nginx`) is busy serving customers. You need to collect logs, but you don't want to modify the main worker's code. You add a **Sidecar**.
 
 ### 🧪 Lab Concept: Log Streaming
 The main worker writes to a local file. The Sidecar reads that file and streams it to the console.
