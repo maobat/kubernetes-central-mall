@@ -33,7 +33,7 @@ By separating the "Setup" and the "Side-Tasks" from the Main Worker, we keep our
 ### 🧰 Study Toolbox
 
 ### 🧱 Multi-Container Pods
-* 🖼️ **Comic:** [The Assistant & The Shared Space](../../comics/pod-design/01-sidecar/README.md
+* 🖼️ **Comic:** [The Assistant & The Shared Space](../../comics/pod-design/01-sidecar/README.md)
 
 
 [<< Previous Chapter: Choosing the Right Workload](ch01-choosing-the-right-workload.md) | [Back to Story Index](../story.md) | [Next Chapter: Images & Modifications >>](ch03-images-and-modifications.md)
