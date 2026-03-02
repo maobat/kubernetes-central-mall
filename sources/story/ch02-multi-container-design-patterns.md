@@ -1,4 +1,5 @@
-# Ch. 2: Multi-container Design Patterns: The Clerk and their Helper
+# 📖 Chapter 2: Multi-container Design Patterns
+> **The Clerk and their Helper**
 
 In the Central Mall, some jobs are too complex for a single person. While the **Shop Clerk (Pod)** is the main worker, they often need a **Helper** to handle specific tasks so they can focus on serving customers.
 
@@ -32,7 +33,7 @@ By separating the "Setup" and the "Side-Tasks" from the Main Worker, we keep our
 ### 🧰 Study Toolbox
 
 ### 🧱 Multi-Container Pods
-* 🖼️ **Comic:** [The Assistant & The Shared Space](../../comics/pod-design/01-sidecar/README.md)
-* 🧪 **Lab:** [LAB 01 – Sidecars & InitContainers](../../labs/pod-design/lab01-sidecar-pattern/README.md)
+* 🖼️ **Comic:** [The Assistant & The Shared Space](../../comics/pod-design/01-sidecar/README.md
+
 
 [<< Previous Chapter: Choosing the Right Workload](ch01-choosing-the-right-workload.md) | [Back to Story Index](../story.md) | [Next Chapter: Images & Modifications >>](ch03-images-and-modifications.md)
