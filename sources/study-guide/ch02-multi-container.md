@@ -58,7 +58,7 @@ spec:
 ## 🛠️ The Blueprint (CKAD Speed-Run)
 
 ### 1. Adding a Sidecar via YAML
-Since you can`t add a sidecar via a simple `kubectl` command, you generate the template and edit:
+Since you can't add a sidecar via a simple `kubectl` command, you generate the template and edit:
 
 ```bash
 kubectl run sidecar-pod --image=nginx --dry-run=client -o yaml > pod.yaml
