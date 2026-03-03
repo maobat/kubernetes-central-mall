@@ -1,5 +1,5 @@
-# 📖 Chapter 4: Extending the Mall: Special Permits and External Contractors
-> **The Special Permit and the External Contractor**
+# 📖 Chapter 4: Extending the Mall
+> **Special Permits and External Contractors**
 
 The Central Mall is a thriving ecosystem, but as it grows, the standard shop templates (Pods, Deployments, Services) aren't always enough. Sometimes, the Mall Owner wants to offer a service so specialized that the standard rulebook doesn't cover it.
 
@@ -41,5 +41,6 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 
 ### 🧩 Custom Resource Definitions (CRD)
 * 🖼️ **Comic:** [The Nightly Backup Permit](../../comics/crd/01-the-nightly-backup-permit/README.md)
+
 
 [<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)

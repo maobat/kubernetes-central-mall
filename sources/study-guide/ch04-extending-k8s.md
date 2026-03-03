@@ -31,6 +31,23 @@ Imagine you have a complex application. Instead of you manually clicking buttons
 
 ---
 
+## 📝 4.3 Helm: The All-in-One Store Kit
+
+Sometimes, opening a shop requires 10 different permits, 5 clerks, and 3 safes. Doing this manually is exhausting. **Helm** is like a "Store-in-a-Box" kit.
+
+* **Chart:** The box containing all the blueprints.
+* **Release:** The actual store instance you deployed using that box.
+
+```bash
+# Search for a store kit
+helm search repo nginx
+
+# Deploy the entire store
+helm install my-web-shop bitnami/nginx
+```
+
+---
+
 ## 🛠️ The Blueprint (CKAD Speed-Run)
 
 In the exam, you aren't usually asked to write an Operator from scratch, but you **must** know how to check for them and interact with them.
@@ -51,23 +68,6 @@ kubectl get backups.database.example.com
 
 # Describe a specific one to see why it failed
 kubectl describe backup nightly-db-backup
-```
-
----
-
-## 📝 4.3 Helm: The All-in-One Store Kit
-
-Sometimes, opening a shop requires 10 different permits, 5 clerks, and 3 safes. Doing this manually is exhausting. **Helm** is like a "Store-in-a-Box" kit.
-
-* **Chart:** The box containing all the blueprints.
-* **Release:** The actual store instance you deployed using that box.
-
-```bash
-# Search for a store kit
-helm search repo nginx
-
-# Deploy the entire store
-helm install my-web-shop bitnami/nginx
 ```
 
 ---
