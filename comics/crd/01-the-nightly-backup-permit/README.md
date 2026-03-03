@@ -95,8 +95,8 @@ This loop runs forever.
 ✅ CRD + Controller = Real behavior
 
 🔁 **Reconciliation Loop**
----
 
+---
 ## 🧠 Key Takeaways
 
 - CRDs extend the Kubernetes API
