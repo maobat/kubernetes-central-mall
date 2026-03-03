@@ -1,4 +1,5 @@
-# Ch. 4: Extending the Mall: Special Permits and External Contractors
+# 📖 Chapter 4: Extending the Mall: Special Permits and External Contractors
+> **The Special Permit and the External Contractor**
 
 The Central Mall is a thriving ecosystem, but as it grows, the standard shop templates (Pods, Deployments, Services) aren't always enough. Sometimes, the Mall Owner wants to offer a service so specialized that the standard rulebook doesn't cover it.
 
@@ -40,9 +41,5 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 
 ### 🧩 Custom Resource Definitions (CRD)
 * 🖼️ **Comic:** [The Nightly Backup Permit](../../comics/crd/01-the-nightly-backup-permit/README.md)
-* 🧪 **Lab:** [LAB 01 – Creating a Custom Backup Service (CRD)](../../labs/extending-k8s/lab01-crd-custom-backup-service/README.md)
-
-### 📄 Documentation
-* 📖 **Docs:** [Extending K8s: CRDs & Operators](../../docs/md-resources/extending-k8s-crds-operators.md)
 
 [<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)
