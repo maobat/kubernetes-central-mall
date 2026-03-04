@@ -2,22 +2,30 @@
 
 # 🕵️ The Secret of the High-Security Vault
 
-This comic explains:
+This comic explains how to handle **sensitive data** in Kubernetes without leaking it to the public.
 
-- How to store sensitive data in a **Kubernetes Secret**
-- How to inject secret values into a **Deployment** as environment variables
-- The CKAD-safe way to handle passwords without hardcoding them
+---
 
-📌 Read this if:
-- You are working on **[LAB 03](../../../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)**.
-- You want to understand **Secrets & Environment Variables**
-- You want a quick **mental model** using the mall analogy 😄
+## 🛍️ Mall Analogy
 
-🔗 References:
-- Docs → [`docs/md-resources/core-concepts-configmaps-secrets-and-security.md`](../../../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
-- Lab → [`practice/labs/ch05-config-secrets/lab03-secrets-env-injection`](../../../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
+- **Plain Whiteboard (ConfigMap)** → Anyone walking by can read the rules written here. Not for passwords!
+- **High-Security Vault (Secrets)** → A locked box in the Manager's office. The contents are obscured (Encoded) and only revealed to authorized staff.
+- **The Delivery (Injection)** → A worker receives the password *directly* from the vault into their hand (Env Var) or a locked envelope in their pocket (Volume) just before they start their task.
+
+> 🛍️ *Locks only keep honest people out; Secrets keep your passwords from the public whiteboard.*
+
+---
+
+## 🧠 Key Takeaways
+
+- **Security:** Secrets are similar to ConfigMaps but are intended for sensitive data like passwords, tokens, or keys.
+- **Encoding:** By default, Secrets are stored as Base64 strings. This is *not* encryption, but it prevents accidental exposure in YAML files.
+- **Access Control:** You can limit which workers (ServiceAccounts) have the authority to open specific vaults (Secrets).
+- **CKAD Tip:** When creating a secret from the CLI, use `kubectl create secret generic <name> --from-literal=password=12345`. Kubernetes handles the Base64 encoding for you.
 
 ---
 
 ## 🔗 References
-- Chapter → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
+- **Lab** → [Secrets Injection](../../../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
+- **Docs** → [Secrets & Security](../../../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
+- **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)

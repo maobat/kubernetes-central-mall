@@ -2,27 +2,31 @@
 
 # 🎭 The Locked Corridor
 
-This comic explains how **Network Policies** (Network Isolation) works in Kubernetes using the Central Mall's "Locked Corridor" analogy.
+This comic explains how **Network Policies** (Network Isolation) work in Kubernetes using the Central Mall's "Locked Corridor" analogy.
+
+---
 
 ## 🛍️ Mall Analogy
 
-- **Pod** → A Shop in the mall.
-- **Traffic** → A person walking from one shop to another.
-- **Network Policy** → A high-tech security gate installed in the corridor.
-- **Default Deny** → Locking all corridor doors by default.
-- **Whitelisting** → Giving a specific "Keycard" to authorized employees only.
+- **The Shops (Pods) & Floors (Namespaces)** → By default, all corridors are open. Anyone can walk from the "Toy Store" to the "Bank Vault".
+- **The Security Gate (Network Policy)** → A high-tech barrier installed in a corridor. It only opens for people with the right **ID Badge** (Labels).
+- **Default Deny** → Locking *every* door in the mall. This is the safest way to start—nobody moves until you give them a keycard.
+- **Whitelisting** → The specific list of who is allowed through the gate: "Only the ATM (Pod A) can talk to the Bank Vault (Pod B)."
+
+> 🛍️ *Don't wait for a robbery to lock the doors. Set your policies early.*
+
+---
 
 ## 🧠 Key Takeaways
 
-- By default, all Pods can talk to each other.
-- Use **Network Policies** to restrict traffic based on labels.
-- **Ingress** controls who can enter your shop.
-- **Egress** controls where your employees can go.
-- Don't forget to allow **DNS** traffic!
+- **Default Allow:** In a standard Kubernetes cluster, any Pod can reach any other Pod, even across different namespaces.
+- **Label Selectors:** Network Policies use `podSelector` and `namespaceSelector` to identify which traffic to allow.
+- **Ingress vs. Egress:** **Ingress** controls who can come *in* to your shop; **Egress** controls where your workers are allowed to go *out* to.
+- **CKAD Tip:** When writing a policy, remember that it only applies to the namespace it is created in. If a Pod is not selected by any policy, it remains open.
 
 ---
 
 ## 🔗 References
-- Chapter → [Chapter 13: Network Policies](../../../sources/study-guide/ch13-networking.md)
-- Lab → [LAB 06 – Network Policies & Locked Corridors](../../../../practice/labs/ch13-networking/lab06-network-policies/README.md)
-- Documentation → [Network Isolation and Troubleshooting](../../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
+- **Lab** → [Network Policies](../../../../practice/labs/ch13-networking/lab06-network-policies/README.md)
+- **Docs** → [Network Isolation & Troubleshooting](../../../../reference/md-resources/troubleshooting-kubernetes.md)
+- **Study Guide** → [Chapter 13: Network Policies](../../../../sources/study-guide/ch13-networking.md)

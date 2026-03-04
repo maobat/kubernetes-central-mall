@@ -2,71 +2,31 @@
 
 # 🛡️ The Secure Badge
 
-This comic explains **how identity works in Kubernetes** using the *Central Mall* analogy.  
-Every Pod enters the cluster wearing a **badge**, which determines **what it is allowed to do**.
-
-📌 Read this if:
-- You are working on **[LAB 01](../../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)**.
-- You want to understand **ServiceAccounts & Pod identity**
-- You want a quick **mental model** using the mall analogy 😄
+This comic explains **how identity works in Kubernetes** using the *Central Mall* analogy. Every Pod enters the cluster wearing a **badge**, which determines **what it is allowed to do**.
 
 ---
 
-## 🎯 What This Comic Explains
+## 🛍️ Mall Analogy
 
-- Why **every Pod always has an identity**
-- What the **default ServiceAccount** really represents
-- How **Deployments assign identity to Pods**
-- Why ServiceAccounts are a **security boundary**
-- Why Pods **cannot choose or change permissions themselves**
+- **ServiceAccounts** → The magnetic ID badges issued to staff.
+- **Default Badge** → The generic visitor pass everyone gets unless specified otherwise.
+- **HR Department (Deployments)** → Decides which badge a new hire receives.
+- **Security Gates** → Check the badge (not the person) to grant access.
 
 > 🛍️ *Pods don’t ask for access, they wear the badge they’re given.*
 
 ---
 
-## 🧠 CKAD Mental Model
+## 🧠 Key Takeaways
 
-- **ServiceAccounts = identity**
-- **Pods inherit identity at creation time**
-- **Deployments decide which badge Pods wear**
-- Permissions are attached to the **badge**, not the Pod
-
-In exam terms:
-> If a Pod can access something, it’s because of its **ServiceAccount**, not magic.
-
----
-# 🔐 How This Aligns with the Secrets Lab
-
-This comic pairs directly with:
-
-- 🤫 **Secrets Comic:** The Secret of the High-Security Vault
-🧪 **Lab:** [`lab03-secrets-env-injection`](../../../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
-
-**The combined security story:**
-
-1. 🛡️ **ServiceAccounts** decide who you are
-2. 🤫 **Secrets** decide what sensitive data you receive
-3. 🔗 **RBAC** (later) decides what actions you’re allowed to perform
-
-> Identity first → permissions second → data access last
-
-This is exactly how Kubernetes security is designed, and how CKAD expects you to reason.
-
----
-🔗 **References:**
-- **Docs** → [`docs/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md`](../../../../reference/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)  
-- **Lab** → [`practice/labs/ch06-safety/lab01-serviceaccount-identity`](../../../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
-
-**Key Takeaways (CKAD exam mode):**
-- Pods **always inherit identity** from a ServiceAccount
-- Deployments **assign the badge** to Pods
-- Use `kubectl set sa deployment <name> <sa>` or `serviceAccountName` in Pod spec
-- `--serviceaccount` flag works only with standalone Pods
-- Verify identity with `kubectl describe pod <pod-name>`
-
-**Pairs with Secrets Comic:** [`lab03-secrets-env-injection`](../../../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
+- **Identity first:** Every Pod always has a ServiceAccount identity.
+- **Inheritance:** Pods inherit their identity at creation time; they cannot change badges mid-shift.
+- **Security Boundary:** Permissions are attached to the badge, making ServiceAccounts a critical security layer.
+- **CKAD Tip:** If a Pod is denied access, use `kubectl describe pod` to verify its `ServiceAccount` and ensure it has the correct permissions.
 
 ---
 
 ## 🔗 References
-- Chapter → [Chapter 7: Identity & RBAC](../../../../sources/study-guide/ch07-identity.md)
+- **Lab** → [Managing Security Settings](../../../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
+- **Docs** → [Understanding ServiceAccounts](../../../../reference/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)
+- **Study Guide** → [Chapter 7: Identity & RBAC](../../../../sources/study-guide/ch07-identity.md)

@@ -1,25 +1,32 @@
 <img src="broken-shop.png" alt="Troubleshooting - The Broken Shop" width="40%" />
 
-# 🕵️ The Health Inspector - The Broken Shop
+# 🕵️ The Health Inspector: The Broken Shop
 
-This comic explains the **Troubleshooting toolkit** in Kubernetes using the "Crime Scene Investigation" analogy.
+This comic explains the **CSI (Crime Scene Investigation)** approach to troubleshooting pods in the Central Mall.
+
+---
 
 ## 🛍️ Mall Analogy
 
-- **The Crime Scene** → A Pod that is `CrashLoopBackOff` or `Pending`.
-- **CCTV Tapes** → `kubectl logs`. Watch what the clerk was doing right before the incident.
-- **Security Logbook** → `kubectl describe`. See the Mall Manager's (Kubernetes) official reports on events like "Door Jammed" (ImagePullBackOff) or "Worker Fainted" (OOMKilled).
-- **Walking Inside** → `kubectl exec`. Physically entering the shop to check the shelves and inventory.
+- **The Crime Scene** → A shop that is dark, locked (`Pending`), or has a "Closed" sign (`CrashLoopBackOff`).
+- **The Logbook (describe)** → Checking the Mall Manager's official incident reports. It will tell you if the "Image" (Uniform) was never delivered or if the "Node" (Building) is out of power.
+- **CCTV Tapes (logs)** → Seeing what the worker was doing *inside* the shop right before they fainted. Usually reveals application-level errors.
+- **Physical Inspection (exec)** → Entering the shop with a flashlight to check the inventory and internal settings manually.
 
-## 🧠 Key Takeaway
+> 🛍️ *Check the logbook first; the CCTV second; the floor third.*
 
-Investigating a broken shop requires a step-by-step approach:
-1.  **Check the Logbook (`describe`)** for infrastructure issues.
-2.  **Review the CCTV (`logs`)** for application crashes.
-3.  **Enter the Shop (`exec`)** for deep inspection.
+---
+
+## 🧠 Key Takeaways
+
+- **Order of Operations:** Always check `describe pod` first to rule out infrastructure issues (Scheduling, Storage, Network, Images).
+- **Application Context:** `logs` are for seeing what the container itself is saying. If the pod is crashing, use `--previous` to see the logs from the last failed attempt.
+- **Interactivity:** `kubectl exec -it` is the "last resort" for verifying connectivity or file contents that aren't apparent from logs.
+- **CKAD Tip:** Learn to skim `describe` output for the "Events" section. It's the most valuable part for diagnosing why a pod won't start.
 
 ---
 
 ## 🔗 References
-- Lab → [LAB 15 – Fixing the Broken Shop](../../../../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
-- Chapter → [Chapter 15: Debugging & Logs](../../../sources/study-guide/ch15-debugging.md)
+- **Lab** → [Fixing the Broken Shop](../../../../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
+- **Docs** → [Troubleshooting Guide](../../../../reference/md-resources/troubleshooting-kubernetes.md)
+- **Study Guide** → [Chapter 15: Debugging & Logs](../../../../sources/study-guide/ch15-debugging.md)

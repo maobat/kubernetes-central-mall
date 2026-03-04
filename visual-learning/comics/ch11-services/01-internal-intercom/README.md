@@ -4,32 +4,29 @@
 
 This comic explains how **ClusterIP** (Internal Services) works in Kubernetes using the Central Mall's intercom analogy.
 
-📌 Read this if:
-- You are working on **[LAB 01](../../../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)**.
-- You want to understand Service load balancing.
-- You want to see how one stable name (`Staff-Support`) connects to many different workers.
+---
 
-🔗 References:
-- 📖 **Docs:** [Service IP Trackers & Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)
-- 🧪 **Lab:** [LAB 01 – ClusterIP & Internal Communication](../../../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
+## 🛍️ Mall Analogy
+
+- **Staff-Support (Service Name)** → The stable number everyone in the mall dials when they need help.
+- **Switchboard Operator (Kube-proxy/DNS)** → When you dial "Staff-Support", the operator looks at their board, sees who is available, and connects you.
+- **The Workers (Endpoints)** → Staff-1, Staff-2, and Staff-3. They come and go, but the number you dial (Staff-Support) never changes.
+- **Load Balancing** → The operator doesn't send every call to Staff-1; they spread the work across everyone who is currently answering their phone.
+
+> 🛍️ *Don't dial a person; dial a role. Kubernetes connects you to whoever is free.*
 
 ---
 
-# 📖 Comic Script (Text Version)
+## 🧠 Key Takeaways
 
-### Panel 1: The Request
-**Store Manager (Pod A):** "I need help from Staff Support!"
-**Narrator:** A store manager picks up an internal intercom handset and dials 'Staff-Support'. 
-- **The Service Name:** `Staff-Support` is the stable name everyone dials.
-- **The Caller:** Pod A making an internal request.
-
-### Panel 2: The Routing
-**Kube-proxy/DNS Operator:** "Routing to: STAFF-2"
-**Narrator:** A central switchboard operator (Kube-proxy/DNS) receives the request for 'Staff-Support'. They see three available backend workers (Staff-1, Staff-2, Staff-3) and randomly select one to connect the call.
-- **The Switchboard:** Kubernetes infrastructure managing the connection.
-- **The Endpoints:** The healthy backend Pods currently available.
+- **Internal Only:** ClusterIP is the default service type. It is only accessible from *inside* the cluster (like an internal intercom).
+- **Service Discovery:** Pods can find each other using the Service Name (e.g., `db-service`) instead of tracking changing IP addresses.
+- **Stable IP:** The Service gets a stable "Virtual IP" that stays the same for the life of the Service object.
+- **CKAD Tip:** Practice using `kubectl expose` to quickly create a ClusterIP service and use `nslookup` inside a Pod to verify it can resolve the service name.
 
 ---
 
-> **Key Takeaway:**
-> A **ClusterIP Service** is like an internal intercom. It gives a group of workers a single, stable name and IP. You don't need to know who is working today; you just dial the intercom, and Kubernetes connects you to whoever is available.
+## 🔗 References
+- **Lab** → [ClusterIP & Internal Communication](../../../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
+- **Docs** → [Service IP Tracker Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)
+- **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services-networking.md)

@@ -4,34 +4,28 @@
 
 This comic explains the difference between **Helm** and **Kustomize** using the Central Mall's logistics system.
 
-📌 Read this if:
-- You are working on **CHAPTER 10 (Logistics Tools)**.
-- You want to understand why we need two different ways to manage YAML.
-- You want to remember the difference between **Templating** (Helm) and **Patching** (Kustomize).
+---
 
-🔗 References:
-- Docs → [Using Helm](../../../../reference/md-resources/using-the-helm-package-manager.md)
-- Docs → [Using Kustomize](../../../../reference/md-resources/using-kustomize.md)
-- Lab → [Lab 06 – Helm & Kustomize](../../../../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+## 🛍️ Mall Analogy
+
+- **Store-in-a-Box (Helm)** → A shipping container that contains everything a new shop needs. You just fill out an order form (`values.yaml`) to specify colors and names, and the whole store is unboxed and ready.
+- **The Overlay Blueprint (Kustomize)** → Instead of a new box, you take the original mall plan (Base) and place a transparent sheet of trace paper (Overlay) over it. You just draw the specific changes for your wing without touching the original plan.
+- **Templating vs. Patching** → Helm builds the store from a kit; Kustomize adjusts the existing blueprint.
+
+> 🛍️ *Unbox a complete kit with Helm, or customize your local blueprint with Kustomize.*
 
 ---
 
-# 📖 Comic Script (Text Version)
+## 🧠 Key Takeaways
 
-### Panel 1: Helm - The Store-in-a-Box
-**Worker:** "Just unbox the standard kit with my specific order!"
-**Narrator:** A mall worker stands next to a large shipping container labeled **'Helm Charts - Store-in-a-Box'**. They are unboxing a miniature, fully-furnished gift shop.
-- **Helm Chart:** The shipping container (Standard Kit).
-- **Values.yaml:** The worker's 'Order Form' (Specific customizations like colors or names).
-
-### Panel 2: Kustomize - The Overlay Blueprint
-**Architect:** "I'll just add my custom changes on top without altering the original plan."
-**Narrator:** An architect places a transparent sheet of trace paper (**'Overlay/Kustomize'**) over a solid **'Base Blueprint'**. Instead of rewriting the whole plan, they just draw the changes on the sheet.
-- **Base:** The original, standard blueprint.
-- **Overlays:** The transparent sheets with environment-specific changes (Dev, Prod).
+- **Helm:** A package manager that uses templates to generate YAML. Best for sharing complex applications and managing versions.
+- **Kustomize:** A template-free way to customize YAML. It uses "patches" to merge environment-specific changes into a base configuration.
+- **Integration:** Helm is often used for 3rd-party apps (e.g., Ingress Controllers), while Kustomize is built into `kubectl` and is great for maintaining your own simple environment variations (Dev, Staging, Prod).
+- **CKAD Tip:** You don't need to be an expert in Helm for the exam, but you should know how to use `kubectl kustomize <dir>` or `kubectl apply -k <dir>`.
 
 ---
 
-> **Key Takeaway:**
-> - **Helm**: Use it when you want a complete, pre-packaged solution where you just fill in the blanks.
-> - **Kustomize**: Use it when you want to keep your central blueprints "pure" and apply different adjustments for different mall locations.
+## 🔗 References
+- **Lab** → [Helm & Kustomize](../../../../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+- **Docs** → [Using Helm](../../../../reference/md-resources/using-the-helm-package-manager.md)
+- **Study Guide** → [Chapter 10: Logistics Tools](../../../../sources/study-guide/ch10-logistics.md)

@@ -2,66 +2,32 @@
 
 # 🎭 The Perfect Mannequin
 
-This comic explains:
-- How **Container Images** (Mannequins) are built in layers
-- How **Rolling Updates** swap old models for new ones
-- Why the **Registry** is like a VIP warehouse pass
-
-📌 Read this if:
-- You are working on **[LAB 03](../../../../practice/labs/ch03-images/lab03-image-updates/README.md)**.
-- You want to understand **Image Layers & Rollouts**
-- You want a quick **mental model** using the mall analogy 😄
-
-🔗 References:
-- Docs → [Kubernetes Docs: Updating a Deployment](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
-- Lab → [`practice/labs/ch03-images/lab03-image-updates`](../../../../practice/labs/ch03-images/lab03-image-updates/README.md)
+This comic explains how **Container Images** are built and how **Rolling Updates** ensure the mall stays fresh without closing its doors.
 
 ---
 
-# 📖 Comic Script (Text Version)
+## 🛍️ Mall Analogy
 
-*> **Scene 1:** The window display needs a refresh. In the mall, we don't repaint the workers; we swap the mannequins.*
+- **The Mannequin (Container Image)** → An immutable display model. We don't repaint it while it's in the window; we order a new one from the factory.
+- **Layers** → Building the mannequin: start with a plastic base (Base Image), add the internal mechanics (Runtime), and finally the uniform (App Code).
+- **The Factory Warehouse (Registry)** → Where all mannequin models are stored. You need a **VIP Pass (imagePullSecret)** to get the exclusive models.
+- **Rolling Update** → Swapping mannequins one at a time. Customers never see an empty display because there's always at least one model standing.
+- **The Rollback** → Reaching into the backroom to bring back last season's model because the new one turned out to be broken.
 
----
-
-### Frame 1: The Base Layer
-**Tailor (Docker):** "Here is the standard plastic base. That's our **Base Image** (Alpine/Ubuntu)."
-**Designer:** "Now add the internal gears. That's the **Runtime** (Python/Node)."
-**Designer:** "Finally, dress it in our uniform. That's the **App Code**."
-**Result:** "The 'Perfect Mannequin' is ready! It's an **Immutable Image**."
+> 🛍️ *Don't fix the mannequin; replace it with a better version.*
 
 ---
 
-### Frame 2: The Warehouse (Registry)
-**Manager (K8s):** "We need 3 clerks for the New Arrivals section."
-**Manager:** "Wait, I don't have the key to the **Private Warehouse**!"
-**System:** `ImagePullBackOff` ❌
-**Manager:** "Quick, get the `imagePullSecret`! It's the VIP pass for the warehouse."
+## 🧠 Key Takeaways
 
----
-
-### Frame 3: The Rolling Update
-**Manager:** "HQ says we need to switch from the 'Summer 2023' uniform to 'Winter 2024'."
-**Manager:** "Don't swap them all at once! Customers will see an empty shop."
-**Manager:** "Swap **one at a time**. Bring in 1 new mannequin, then remove 1 old one."
-**Result:** "A smooth **Rolling Update**. The shop never closed!" 👗✨
-
----
-
-### Frame 4: The Rollback
-**Staff:** "Wait! The new uniform has no pockets! The clerks can't hold their scanners!"
-**Manager:** "**Undo!** Bring back the old mannequins from the backroom immediately!"
-**Command:** `kubectl rollout undo deployment/clerk-squad`
-**Result:** "The shop is back to normal. crisis averted." 😅
-
----
-
-> **Key Takeaway:**
-> - **Images**: Built in layers, never changed once created.
-> - **Rolling Updates**: Gradual replacement to ensure zero downtime.
-> - **Rollback**: Keeping the "old versions" in the backroom just in case.
+- **Immutability:** Once an image is "tagged" and stored, it should never change. Updates involve creating a new version of the image.
+- **Rolling Update:** The default strategy for Deployments. It gradually replaces old Pods with new ones, maintaining availability.
+- **ImagePullPolicy:** `Always` ensures you always get the latest version from the factory; `IfNotPresent` saves time by using what's already in the backroom.
+- **CKAD Tip:** Use `kubectl rollout history` to see previous versions and `kubectl rollout undo` to quickly revert a failed update.
 
 ---
 
 ## 🔗 References
-- Chapter → [Chapter 3: Pod Design & Images](../../../../sources/study-guide/ch03-pod-design.md)
+- **Lab** → [Image Updates & Rollouts](../../../../practice/labs/ch03-images/lab03-image-updates/README.md)
+- **Docs** → [Managing Images & Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
+- **Study Guide** → [Chapter 3: Pod Design & Images](../../../../sources/study-guide/ch03-pod-design.md)

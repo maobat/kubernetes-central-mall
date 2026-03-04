@@ -2,109 +2,31 @@
 
 # 🗂️ The Nightly Backup Permit
 
-This comic explains:
-
-- what a **Custom Resource Definition (CRD)** really is
-- why creating a **Custom Resource (CR)** does nothing by itself
-- who turns intent into action (**Controllers / Operators**)
-- how the **Reconciliation Loop** works
-
-Read this if:
-- you are working on [LAB 01](../../../../practice/labs/ch04-extending/lab01-crd-custom-backup-service/README.md)
-- you want to understand CRDs and Operators.
-- you are preparing for the CKAD exam.
-
-## 🔗 References
-- Docs → [Extending K8s: CRDs & Operators](../../../../sources/study-guide/ch04-extending-k8s.md)
-- Lab → [LAB 01 – Creating a Custom Backup Service (CRD)](../../../../practice/labs/ch04-extending/lab01-crd-custom-backup-service/README.md)
+This comic explains how **Custom Resource Definitions (CRDs)** and **Operators** extend the mall's capabilities beyond standard building rules.
 
 ---
 
-### 📖 Comic Script: The Secret of Custom Resources (4 Panels)
+## 🛍️ Mall Analogy
+
+- **Mall Ledger (API Server)** → The official book of mall rules and records.
+- **Custom Permit (CRD)** → Teaching the Mall Manager a new concept, like "Nightly Backup". Without this permit, the Manager doesn't even know what a "Backup" is.
+- **Special Permit Form (Custom Resource)** → A shop owner fills out this new form to request a backup.
+- **External Contractor (Operator/Controller)** → A specialized worker who watches the Ledger. When they see a "Backup" form, they are the ones who actually go and do the job.
+
+> 🛍️ *Permits record the intent; Contractors perform the action.*
 
 ---
 
-#### **Panel 1: The Limit**
-**Mall Manager (Kubernetes):**
-> <i>“I only understand Deployments and Services.”</i>
-
-**Narrator:**
-Backups are not a native Kubernetes concept.
-
-**❌ No CRD → No Backup**
-
-
-
----
-
-#### **Panel 2: The New Word (CRD)**
-**Engineer:**
-> <i>“I’ll teach you a new resource: `Backup`.”</i>
-
-```yaml
-# kubectl apply -f backup-crd.yaml
-apiVersion: apiextensions.k8s.io/v1
-kind: CustomResourceDefinition
-metadata:
-  name: backups.mall.com
-```
----
-
-**Narrator**:
-Kubernetes now recognizes Backup objects, but still does nothing.
-
-⚠️ **CRD = definition only**
-
-**Panel 3: The Request**
-**Shop Owner:**
-
-> <i>I want a nightly backup.</i>
-
-```yaml
-# kubectl apply -f backup.yaml
-apiVersion: [mall.com/v1](https://mall.com/v1)
-kind: Backup
-metadata:
-  name: nightly-inventory
-spec:
-  schedule: "0 0 * * *"
-```
-
-**Mall Manager:**
-> "Request received and stored in the Ledger."
-
-**Narrator:**
-The resource is now in etcd, but nothing happens.
-
-📄 **Intent recorded, no execution**
-
----
-**Panel 4: The Controller**
-
-**Backup Controller:**
-
-> <i>I see a Backup request!</i>
-
-**Controller:**
-
-> <i>I’ll create a Job → Pod to run it.</i>
-
-**Narrator:**
-This loop runs forever.
-
-✅ CRD + Controller = Real behavior
-
-🔁 **Reconciliation Loop**
-
----
 ## 🧠 Key Takeaways
 
-- CRDs extend the Kubernetes API
-- CRs only store **desired state**
-- Controllers reconcile desired vs actual state
-- Without a Controller, nothing happens
+- **Extension:** CRDs allow you to extend the Kubernetes API with any resource type you need.
+- **Model vs Action:** Creating a CRD only defines a "word"; you still need a **Controller** to make it do something.
+- **Desired vs Actual:** The **Reconciliation Loop** is the Controller's "brain" that keeps checking the Ledger to see if it needs to act.
+- **CKAD Tip:** In the exam, you may need to interact with CRDs. Remember that they behave like built-in resources once defined.
 
 ---
 
 ## 🔗 References
-- Chapter → [Chapter 4: Extending K8s](../../../../sources/study-guide/ch04-extending-k8s.md)
+- **Lab** → [Custom Backup Service (CRD)](../../../../practice/labs/ch04-extending/lab01-crd-custom-backup-service/README.md)
+- **Docs** → [Extending K8s with CRDs](../../../../reference/md-resources/extending-k8s-crds-operators.md)
+- **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)

@@ -2,73 +2,30 @@
 
 # 🖌️ The Painter & The Cleaning Crew
 
-This comic explains:
-- The difference between **Deployments** (Services) and **Jobs** (Tasks)
-- How **CronJobs** schedule recurring work
-- How Kubernetes handles task completion and failures
-
-📌 Read this if:
-- You are working on **[LAB 02](../../../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)**.
-- You want to understand **Batch Processing & Scheduling**
-- You want a quick **mental model** using the mall analogy 😄
-
-🔗 References:
-- Docs → [Kubernetes Docs: Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
-- Lab → [`practice/labs/ch01-workloads/lab02-jobs-cronjobs`](../../../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
+This comic explains the difference between **standard staff (Deployments)** and **specialized contractors (Jobs/CronJobs)** in the Central Mall.
 
 ---
 
-# 📖 Comic Script (Text Version)
+## 🛍️ Mall Analogy
 
-*> **Scene 1:** Not everyone works 9-to-5. Some tasks are one-off or scheduled.*
+- **Receptionist (Deployment)** → Stays at the desk 24/7. If they leave, they are replaced immediately.
+- **Painter (Job)** → Comes in once, paints the wall, and goes home forever upon completion.
+- **Nightly Cleaning Crew (CronJob)** → A specialized Job that shows up on a specific schedule (e.g., midnight) to perform routine maintenance.
 
----
-
-### Frame 1: The Standard Worker (Deployment)
-**Manager (K8s):** "Hey Receptionist! Are you at your desk?"
-**Receptionist (Pod):** "Always! 24/7! I never leave!"
-**Manager:** "Good. That’s a **Deployment**."
+> 🛍️ *Hire a manager for the store, but hire a contractor for the leak.*
 
 ---
 
-### Frame 2: The One-Off Task (Job)
-**Manager:** "The wall looks dirty. I need a **Painter**."
-**Painter (Job Pod):** "I’m here!"
-**Manager:** "Paint the wall, then go home."
-**Painter:** "On it!"
-*(Painter paints the wall)* 🖌️
-**Painter:** "Done! I’m leaving."
-*(Painter exits successfully: `Completed`)*
+## 🧠 Key Takeaways
 
----
-
-### Frame 3: What if it fails?
-**Painter 2:** "I tried to paint but I spilled the bucket!" (Crash)
-**Manager:** "No worries. **Restart Policy: OnFailure**. Try again."
-**Painter 3:** "Okay, done this time!"
-*(Manager marks task as `1/1 Succeeded`)*
-
----
-
-### Frame 4: The Scheduled Crew (CronJob)
-**Manager:** "The mall gets dirty every night. I can't call a cleaner manually every day."
-**Manager:** "I’ll set a **Schedule: '0 2 * * *'** (2 AM everyday)."
-
-*(Clock strikes 2 AM)* 🕑
-**Cleaner (CronJob Pod):** "Time to clean!"
-*(Cleaner works and leaves)*
-
-*(Next day, 2 AM)* 🕑
-**Cleaner:** "Here I go again!"
-
----
-
-> **Key Takeaway:**
-> - **Deployment**: Always running web servers.
-> - **Job**: Run once to completion (Batch task).
-> - **CronJob**: Run on a time schedule (Backup, Report).
+- **Jobs** are for tasks that run once to completion. They are successful when the Pod exits with status `0`.
+- **CronJobs** schedule Jobs to run at specific times using Linux `cron` syntax.
+- **Persistence:** Unlike Deployments, Jobs expect to "finish". If they fail, Kubernetes can retry them based on the `backoffLimit`.
+- **CKAD Tip:** Memorize the `cron` schedule format (`* * * * *`) and know how to use `kubectl create job --from=cronjob` for manual testing.
 
 ---
 
 ## 🔗 References
-- Chapter → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
+- **Lab** → [Jobs & CronJobs](../../../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
+- **Docs** → [Scheduled Maintenance Guide](../../../../reference/md-resources/cronjobs.md)
+- **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)

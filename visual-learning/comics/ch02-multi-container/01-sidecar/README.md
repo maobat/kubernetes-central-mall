@@ -2,71 +2,31 @@
 
 # 🤝 The Assistant & The Shared Space
 
-This comic explains:
-- How **Multi-Container Pods** work
-- The role of **Sidecar** and **InitContainers**
-- How containers share data using a **Volume**
-
-📌 Read this if:
-- You are working on **[LAB 01](../../../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)**.
-- You want to understand **Pod patterns & Shared Volumes**
-- You want a quick **mental model** using the mall analogy 😄
-
-🔗 References:
-- Docs → [`docs/md-resources/decoupling-pods.md`](../../../../reference/md-resources/decoupling-pods.md)
-- Lab → [`practice/labs/ch02-multi-container/lab01-sidecar-pattern`](../../../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
+This comic explains how **Multi-Container Pods** work and how they share resources to accomplish a single goal.
 
 ---
 
-# 📖 Comic Script (Text Version)
+## 🛍️ Mall Analogy
 
-*> **Scene 1:** One person can’t do everything. Sometimes even a great Pod needs a helper.*
+- **The Main Shop Clerk (Nginx)** → The primary worker who serves customers (traffic).
+- **The Specialized Assistant (Sidecar)** → A helper who performs background tasks like fetching new inventory or sorting logs.
+- **The Renovation Crew (InitContainer)** → Workers who arrive *before* the shop opens to paint the walls. They leave once the job is done, allowing the clerks to enter.
+- **The Shared Locker (Volume)** → A common space where the clerk and the assistant can exchange files or data.
 
----
-
-### Frame 1: The Problem with One Container
-**Manager (K8s):** "Hey Nginx! Your job is to serve files."
-**Worker 1 (Nginx):** "Okay!"
-**Manager:** "Oh, and also fetch logs, update the website content, and monitor metrics."
-**Worker 1:** "Wait... I only know how to serve files! I can't be everywhere at once!"
-*(Worker looks overwhelmed)* 🤯
+> 🛍️ *Init workers build the shop; Sidecars help manage it.*
 
 ---
 
-### Frame 2: The Solution - The Assistant (Sidecar)
-**Manager:** "Fine. I’ll send you an **Assistant (Sidecar Container)**."
-**Worker 2 (Sidecar):** "Hi! I’m highly specialized. I just check for updates."
-**Worker 1:** "Great! I'll focus on customers."
+## 🧠 Key Takeaways
 
----
-
-### Frame 3: The Setup Crew (InitContainer)
-**Manager:** "Wait! Before the store opens, we need to paint the walls."
-**Worker 3 (InitContainer):** "I’m the renovation crew. I work **first**. When I’m done, I leave, and then you guys can start."
-*(InitContainer paints 'Welcome' on the wall and disappears.)* 🎨
-
----
-
-### Frame 4: Sharing Information (Shared Volume)
-**Worker 1 (Nginx):** "How do we talk?"
-**Worker 2 (Sidecar):** "We share a **Locker (Volume)** in the backroom."
-**Worker 2:** "I put new files in the locker."
-**Worker 1:** "And I take them out and show them to customers!"
-
-*(Worker 2 puts a file in a box labeled `/data`)*
-*(Worker 1 takes the same file out of the same box)*
-
----
-
-### Frame 5: Teamwork
-**Manager:** "This is efficient! Separate roles, shared goal."
-
-> **Key Takeaway:**
-> - **InitContainer**: Runs **before** the main app starts. Good for setup.
-> - **Sidecar**: Runs **alongside** the main app. Good for logging/proxying.
-> - **Shared Volume**: The bridge for communication.
+- **Atomic Life:** All containers in a Pod are scheduled, started, and stopped together on the same Node.
+- **Shared Network & Storage:** Containers in the same Pod share the same IP address (localhost) and can share local disk space via Volumes.
+- **Lifecycle:** InitContainers must finish successfully before the main containers start. Sidecars run for the entire duration of the Pod's life.
+- **CKAD Tip:** When troubleshooting a multi-container Pod, remember to specify the container name: `kubectl logs <pod-name> -c <container-name>`.
 
 ---
 
 ## 🔗 References
-- Chapter → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)
+- **Lab** → [Sidecar Pattern](../../../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
+- **Docs** → [Decoupling Pods](../../../../reference/md-resources/decoupling-pods.md)
+- **Study Guide** → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)

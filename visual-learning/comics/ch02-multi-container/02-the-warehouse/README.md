@@ -2,70 +2,31 @@
 
 # 📦 The Warehouse & The Rental Contract
 
-This comic explains:
-- How **PersistentVolumes (PV)** represent physical storage
-- How **PersistentVolumeClaims (PVC)** act as rental contracts
-- How data survives even if the Shop (Pod) disappears
-
-📌 Read this if:
-- You are working on **[LAB 02](../../../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)**.
-- You want to understand **Persistence & Volume Mounting**
-- You want a quick **mental model** using the mall analogy 😄
-
-🔗 References:
-- Docs → [`docs/md-resources/creating-a-persistentvolume.md`](../../../../reference/md-resources/creating-a-persistentvolume.md)
-- Lab → [`practice/labs/ch02-multi-container/lab02-pv-pvc`](../../../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+This comic explains how **Persistent Storage** allows data to survive even if the shop (Pod) shuts down or moves to a new building.
 
 ---
 
-# 📖 Comic Script (Text Version)
+## 🛍️ Mall Analogy
 
-*> **Scene 1:** Ideally, the Shop (Pod) has everything it needs on the shelves.*
-*> But sometimes, you need **bulk storage** that survives even if the shop closes or moves.*
+- **In-Pocket Storage (Ephemeral)** → Keeping records in your apron. If you go home (Pod restart), the records are lost forever.
+- **The Warehouse (PersistentVolume)** → A concrete storage unit in the mall's basement. It's a real, physical space that exists regardless of who is using it.
+- **The Rental Contract (PersistentVolumeClaim)** → A request from a shop owner for a specific amount of space (e.g., 500Mi) with specific rules (e.g., "only I can use it").
+- **The Freight Elevator (Volume Mount)** → The connection that allows a shop to drop files directly into their secured warehouse unit.
 
----
-
-### Frame 1: The Problem with Local Storage
-**Manager (K8s):** "Hey Worker! Where are you keeping the sales records?"
-**Worker (Pod):** "In my pocket (Container Filesystem)!"
-**Manager:** "But what if you go home (Pod Restart)?"
-**Worker:** "Then the records disappear forever!"
-*(Manager facepalms)* 🤦
+> 🛍️ *The Warehouse stays; only the clerks come and go.*
 
 ---
 
-### Frame 2: The Solution - The Warehouse (PV)
-**Facility Manager (Admin):** "I have built a secure **Warehouse Unit (PersistentVolume)** in the basement. It’s physical, it’s real, and it stays there forever."
-**Feature:** `Capacity: 1Gi`, `AccessMode: ReadWriteOnce`
+## 🧠 Key Takeaways
+
+- **Decoupling:** Storage (PV) is managed separately from the compute (Pods). This allows data to persist independently of the Pod lifecycle.
+- **Binding:** A **PVC** "claims" a **PV**. Once bound, that piece of storage is reserved for that specific claim.
+- **Access Modes:** `ReadWriteOnce` means only one Node can use the storage at a time; `ReadWriteMany` allows multiple shops to share the same unit.
+- **CKAD Tip:** When creating a PVC, the `accessModes` and `resources.requests.storage` must match (or be less than) what the available PV offers.
 
 ---
 
-### Frame 3: The Rental Request (PVC)
-**Manager (K8s) to Worker:** "You can't just walk into the warehouse. You need a **Rental Contract (PersistentVolumeClaim)**."
-**Worker:** "I claim 500Mi of space!"
-*(Worker holds up a ticket: 'Claim: 500Mi')*
-
----
-
-### Frame 4: The Connection (Binding & Mounting)
-**Manager:** "Approved! Here is the key."
-*(Manager connects the **Contract (PVC)** to the **Warehouse Unit (PV)**)*.
-**Manager:** "Now, I will install a **Freight Elevator (Volume Mount)** directly from your shop to that unit."
-
-*(Worker drops a file down the chute. It lands safely in the warehouse.)*
-
----
-
-### Frame 5: Persistence
-*(The Shop (Pod) catches fire and disappears.)* 🔥
-*(New Shop (Pod) appears instantly.)* ✨
-**New Worker:** "Where are the records?"
-*(Worker opens the Freight Elevator)*
-**New Worker:** "They are still here! The Warehouse never moved!"
-
----
-
-> **Key Takeaway:**
-> - **PV**: The physical hard drive/cloud disk (The Warehouse).
-> - **PVC**: The ticket to use it (The Contract).
-> - **Pod**: Just a temporary user.
+## 🔗 References
+- **Lab** → [The Warehouse (PV/PVC)](../../../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+- **Docs** → [Creating a PersistentVolume](../../../../reference/md-resources/creating-a-persistentvolume.md)
+- **Study Guide** → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)
