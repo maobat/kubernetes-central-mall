@@ -36,5 +36,6 @@ By using Images, the mall ensures that every worker is **exactly the same**. No 
 
 ### 🏗️ Image Updates & Rollouts
 * 🖼️ **Comic:** [The Perfect Mannequin](../../visual-learning/comics/ch03-images/03-image-updates/README.md)
+* 🧪 **Lab:** [LAB 03 – Image Updates](../../practice/labs/ch03-images/lab03-image-updates/README.md)
 
 [<< Previous Chapter: Multi-container Design Patterns](ch02-multi-container-design-patterns.md) | [Back to Story Index](../story.md) | [Next Chapter: Extending the Mall >>](ch04-extending-the-mall.md)
