@@ -64,14 +64,14 @@ kubectl get endpoints nginx-intercom
 ### 🧰 Study Toolbox
 
 ### 📞 Services (Internal - ClusterIP)
-* 🖼️ **Comic:** [The Internal Intercom - ClusterIP Balances Traffic](../../comics/clusterip/01-internal-intercom/README.md)
-* 📄 **Doc:** [Service IP Trackers & Evolution](../../docs/md-resources/service-ip-tracker-evolution.md)
-* 🧪 **Lab:** [LAB 01 – ClusterIP & Internal Communication](../../labs/services-and-networking/lab01-clusterip-internal-traffic/README.md)
+* 🖼️ **Comic:** [The Internal Intercom - ClusterIP Balances Traffic](../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
+* 📄 **Doc:** [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)
+* 🧪 **Lab:** [LAB 01 – ClusterIP & Internal Communication](../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
     
 ### 🚪 Services (External - NodePort)
-* 🖼️ **Comic:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../comics/nodeport/02-cross-namespace/README.md)
-* 📄 **Doc:** [Understanding Traffic Flow Verification](../../docs/md-resources/traffic-flow-verification.md)
-* 🧪 **Lab:** [LAB 02 – NodePort & Cross-Namespace Communication](../../labs/services-and-networking/lab02-nodeport-cross-namespace/README.md)
+* 🖼️ **Comic:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+* 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
+* 🧪 **Lab:** [LAB 02 – NodePort & Cross-Namespace Communication](../../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
 
 ---
 [<< Previous: Logistics Tools](ch10-management.md) | [Back to Story Index](../story.md) | [Next: Ingress & Gateway API >>](ch12-ingress.md)

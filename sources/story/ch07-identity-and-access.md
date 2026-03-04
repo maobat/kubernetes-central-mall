@@ -1,4 +1,4 @@
-# Ch. 7: Identity & Access (RBAC): The Magnetic ID Badge and the HR Manual
+# 📖 Chapter 7: Identity & Access (RBAC): The Magnetic ID Badge and the HR Manual
 
 In the early days of the Central Mall, every worker had a generic "Guest" badge. They could walk the halls, but if they tried to ask the **Management Office** for a list of other workers or a look at the delivery schedules, they were turned away. To get anything done, a worker needs a proper identity and permission.
 
@@ -38,10 +38,10 @@ You might wonder why the Mall doesn't just write the permissions directly onto t
 ### 🧰 Study Toolbox
 
 ### 🔐 Identity & Access (ServiceAccounts)
-* 🖼️ **Comic:** [The Secure Badge](../../comics/security/01-the-secure-badge/README.md)
-* 🧪 **Lab:** [LAB 01 – Managing Security Settings (ServiceAccount)](../../labs/security/lab01-serviceaccount-identity/README.md)
+* 🖼️ **Comic:** [The Secure Badge](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
+* 🧪 **Lab:** [LAB 01 – Managing Security Settings (ServiceAccount)](../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
 
 ### 📄 Documentation
-* 📖 **Docs:** [Understanding RBAC](../../docs/md-resources/understanding-role-based-access-control-rbac.md)
+* 📖 **Docs:** [Understanding RBAC](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
 
 [<< Previous Chapter: Worker Safety & Conduct](ch06-worker-safety-and-conduct.md) | [Back to Story Index](../story.md) | [Next Chapter: Resource Budgets >>](ch08-resource-budgets.md)

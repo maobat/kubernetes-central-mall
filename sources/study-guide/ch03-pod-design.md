@@ -77,9 +77,9 @@ spec:
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic:** [The Perfect Mannequin - Image Layers](../../comics/pod-design/03-image-updates/README.md)
-* 🧪 **Lab:** [Lab 03 - Image Updates & Rollouts](../../labs/pod-design/lab03-image-updates/README.md)
-* 📄 **Doc:** [Managing Container Images & Rollouts](../../docs/md-resources/managing-container-images-and-rollouts.md)
+* 🖼️ **Comic:** [The Perfect Mannequin - Image Layers](../../visual-learning/comics/ch03-images/03-image-updates/README.md)
+* 🧪 **Lab:** [Lab 03 - Image Updates & Rollouts](../../practice/labs/ch03-images/lab03-image-updates/README.md)
+* 📄 **Doc:** [Managing Container Images & Rollouts](../../reference/md-resources/managing-container-images-and-rollouts.md)
 
 ---
 [<< Previous: Multi-container](ch02-multi-container.md) | [Back to Story Index](../story.md) | [Next: Extending K8s >>](ch04-extending-k8s.md)

@@ -31,7 +31,7 @@ If we used a standard **Management Firm (Deployment)** for the Jewelry Boutique 
 * The Firm would hire a new jeweler on a different floor.
 * **The Problem:** The new jeweler would have a brand new, **empty** safe. The diamonds are still stuck in the old rubble!
 
-### ✅ [The StatefulSet Solution](../../labs/storage/lab02-statefulsets/README.md)
+### ✅ [The StatefulSet Solution](../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
 A **StatefulSet** ensures that:
 * **Sequential Naming:** Workers are named `boutique-0`, `boutique-1`, etc., so they are easy to track.
 * **Persistent Storage (The Safe):** When `boutique-0` moves to a new floor, Kubernetes `unbolts` the safe from the old floor and `re-bolts` it to the new one. The data follows the worker!
@@ -64,8 +64,8 @@ kubectl create cronjob nightly-clean --image=busybox --schedule=`0 23 * * *` -- 
 ---
 
 ### 🧰 Study Toolbox
-- 🖼️ [**Comic: Jobs & CronJobs - The Contractor's Visit**](./../../comics/pod-design/02-jobs-cronjobs/README.md)
-- 🖼️ [**Comic: StatefulSets - The Fixed Boutique**](./../../comics/storage/02-statefulsets/README.md)
-- 📄 [**Doc: Using StatefulSets - The Bolted-Down Safe**](./../../docs/md-resources/using-statefulsets.md)
-- 🧪 [**Lab: labs/pod-design/lab02-jobs-cronjobs**](./../../labs/pod-design/lab02-jobs-cronjobs/README.md)
-- 🧪 [**Lab: labs/storage/lab02-statefulsets**](./../../labs/storage/lab02-statefulsets/README.md)
+- 🖼️ [**Comic: Jobs & CronJobs - The Contractor's Visit**](./../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
+- 🖼️ [**Comic: StatefulSets - The Fixed Boutique**](./../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
+- 📄 [**Doc: Using StatefulSets - The Bolted-Down Safe**](./../../reference/md-resources/using-statefulsets.md)
+- 🧪 [**Lab: labs/pod-design/lab02-jobs-cronjobs**](./../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
+- 🧪 [**Lab: labs/storage/lab02-statefulsets**](./../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)

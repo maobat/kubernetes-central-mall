@@ -83,9 +83,9 @@ If a worker needs to see shops in **every** floor of the mall (all Namespaces), 
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic:** [The Secure Badge - Pod Identity](../../comics/security/01-the-secure-badge/README.md)
-* 🧪 **Lab:** [Implementing RBAC (The HR Process)](../../docs/md-resources/implementing-rbac-with-roles-and-bindings-the-hr-process.md)
-* 📄 **Doc:** [Understanding Role-Based Access Control (RBAC)](../../docs/md-resources/understanding-role-based-access-control-rbac.md)
+* 🖼️ **Comic:** [The Secure Badge - Pod Identity](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
+* 🧪 **Lab:** [Implementing RBAC (The HR Process)](../../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
+* 📄 **Doc:** [Understanding Role-Based Access Control (RBAC)](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
 
 ---
 [<< Previous: Security](ch06-security.md) | [Back to Story Index](../story.md) | [Next: Resources & Quotas >>](ch08-resources.md)

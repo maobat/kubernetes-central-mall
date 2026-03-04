@@ -89,9 +89,11 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 
 ### 🧰 Study Toolbox
 
-- 🖼️ [**Comic: Sidecar Pattern - The Assistant at Work**](./../../comics/pod-design/01-sidecar/README.md)
-- 🧪 [**Lab: labs/pod-design/lab01-sidecar-pattern**](./../../labs/pod-design/lab01-sidecar-pattern/README.md)
-- 📄 [**Doc: Understanding Multi-container Pod Patterns**](./../../docs/md-resources/decoupling-pods.md)
+- 🖼️ [**Comic: Sidecar Pattern - The Assistant at Work**](./../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
+- 🧪 [**Lab: Sidecar Pattern**](./../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
+- 🖼️ [**Comic: The Warehouse (PV/PVC)**](./../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
+- 🧪 [**Lab: The Warehouse (PV/PVC)**](./../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+- 📄 [**Doc: Understanding Multi-container Pod Patterns**](./../../reference/md-resources/decoupling-pods.md)
 
 ---
 [<< Previous: Workloads](ch01-workloads.md) | [Back to Story Index](../story.md) | [Next: Pod Design >>](ch03-pod-design.md)

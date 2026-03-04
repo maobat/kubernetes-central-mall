@@ -1,4 +1,4 @@
-# Ch. 13: Network Policies: Locked Corridors and Badge Access
+# 📖 Chapter 13: Network Policies: Locked Corridors and Badge Access
 
 In a busy mall, not everyone should be allowed everywhere. You don't want a customer from the "Pet Store" accidentally wandering into the "Jewelry Vault," nor do you want a rival "Pizza Shop" employee spying on the secret recipe of the "Burger Joint." To prevent this, the Mall Owner installs **Locked Corridors**.
 
@@ -23,10 +23,10 @@ By locking the corridors between competing departments and only allowing necessa
 ### 🧰 Study Toolbox
 
 ### 🛡️ Network Security
-* 🖼️ **Comic:** [The Locked Corridor - Whitelisting Traffic](../../comics/network-policies/01-locked-corridors/README.md)
-* 🧪 **Lab:** [LAB 06 – Network Policies & Locked Corridors](../../labs/services-and-networking/lab06-network-policies/README.md)
+* 🖼️ **Comic:** [The Locked Corridor - Whitelisting Traffic](../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
+* 🧪 **Lab:** [LAB 06 – Network Policies & Locked Corridors](../../practice/labs/ch13-networking/lab06-network-policies/README.md)
 
 ### 📄 Documentation
-* 📖 **Docs:** [Network Policies: Concept and Application](../../docs/md-resources/troubleshooting-kubernetes.md#section-8-3) (Refer to Section 8.3)
+* 📖 **Docs:** [Network Policies: Concept and Application](../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3) (Refer to Section 8.3)
 
 [<< Previous Chapter: Ingress & Gateway API](ch12-ingress-and-gateway-api.md) | [Back to Story Index](../story.md) | [Next Chapter: Probes & Health Checks >>](ch14-probes-and-health-checks.md)

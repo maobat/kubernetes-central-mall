@@ -1,4 +1,4 @@
-# Ch. 5: ConfigMaps & Secrets: The Price List and the Vault Combination
+# 📖 Chapter 5: ConfigMaps & Secrets: The Price List and the Vault Combination
 
 Running a shop in the Central Mall requires more than just staff and a storefront. You need information. Some of that information is public and changes frequently, like the **Price List**. Other information is highly sensitive and must be kept under lock and key, like the **Vault Combination**.
 
@@ -36,11 +36,11 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 ### 🧰 Study Toolbox
 
 ### ⚙️ Configuration (ConfigMaps)
-* 🖼️ **Comic:** [The Rulebook & The Uniform](../../comics/configuration/01-configmap/README.md)
-* 🧪 **Lab:** [LAB 01 – Configuration: ConfigMaps](../../labs/configuration/lab01-configmaps/README.md)
+* 🖼️ **Comic:** [The Rulebook & The Uniform](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
+* 🧪 **Lab:** [LAB 01 – Configuration: ConfigMaps](../../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
 
 ### 🤫 Security (Secrets)
-* 🖼️ **Comic:** [The Secret of the High-Security Vault](../../comics/secrets/01-secrets-injection/README.md)
-* 🧪 **Lab:** [LAB 03 – Using Secrets to Inject Sensitive Configuration](../../labs/security/lab03-secrets-env-injection/README.md)
+* 🖼️ **Comic:** [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
+* 🧪 **Lab:** [LAB 03 – Using Secrets to Inject Sensitive Configuration](../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
 
 [<< Previous Chapter: Extending the Mall](ch04-extending-the-mall.md) | [Back to Story Index](../story.md) | [Next Chapter: Worker Safety & Conduct >>](ch06-worker-safety-and-conduct.md)

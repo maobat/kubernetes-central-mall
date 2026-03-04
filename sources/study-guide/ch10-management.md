@@ -66,14 +66,15 @@ kubectl apply -k ./overlays/production
 ### 🧰 Study Toolbox
 
 ### 📦 Helm (The Package Manager)
-* 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../comics/deploying/02-the-logistics-chain/README.md)
-* 📄 **Doc:** [Using the Helm Package Manager](../../docs/md-resources/using-the-helm-package-manager.md)
-* 📄 **Doc:** [Working with Helm Charts](../../docs/md-resources/working-with-helm-charts.md)
-* 🧪 **Lab:** [Architecture: CRDs & Operators (Helm Section)](../../labs/architecture/lab04-crds-operators/README.md#4-the-store-in-a-box-helm)
+* 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+* 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
+* 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
+* 🧪 **Lab:** [Lab 06: Helm Packages](../../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+* 🧪 **Lab:** [Architecture: CRDs & Operators (Helm Section)](../../practice/labs/ch04-extending/lab04-crds-operators/README.md#4-the-store-in-a-box-helm)
 
 ### 🧩 Kustomize (Blueprint Overlays)
-* 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../comics/deploying/02-the-logistics-chain/README.md)
-* 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../docs/md-resources/using-kustomize.md)
+* 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+* 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
 
 ---
 [<< Previous: Launch Strategies](ch09-deployments.md) | [Back to Story Index](../story.md) | [Next: Intercoms & Delivery Bays >>](ch11-services.md)

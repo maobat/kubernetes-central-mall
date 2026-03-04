@@ -1,4 +1,4 @@
-# Ch. 15: Debugging & Logs: CCTV and Incident Reports
+# 📖 Chapter 15: Debugging & Logs: CCTV and Incident Reports
 
 Even in the best-managed mall, things occasionally go wrong. A lightbulb flickers, a pipe bursts, or a shop clerk goes missing. To fix these problems, the Mall Owner relies on two main tools: the security cameras and the incident logbook.
 
@@ -32,7 +32,11 @@ This is `kubectl exec`. It allows you to step inside a running pod and run comma
 ### 🧰 Study Toolbox
 
 ### 📄 Documentation
-* 📖 **Docs:** [Troubleshooting Kubernetes Guide](../../docs/md-resources/troubleshooting-kubernetes.md)
-* 📖 **Docs:** [Diagnostic Cheat Sheet](../../docs/md-resources/diagnostic-cheat-sheet.md)
+* 📖 **Docs:** [Troubleshooting Kubernetes Guide](../../reference/md-resources/troubleshooting-kubernetes.md)
+* 📖 **Docs:** [Diagnostic Cheat Sheet](../../reference/md-resources/diagnostic-cheat-sheet.md)
+
+### 🩺 Debugging & Analysis
+* 🖼️ **Comic:** [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
+* 🧪 **Lab:** [LAB 15 – Fixing the Broken Shop](../../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
 
 [<< Previous Chapter: Probes & Health Checks](ch14-probes-and-health-checks.md) | [Back to Story Index](../story.md)

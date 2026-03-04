@@ -1,4 +1,4 @@
-# Ch. 8: Resource Budgets: Water and Electricity Limits
+# 📖 Chapter 8: Resource Budgets: Water and Electricity Limits
 
 The Central Mall is a shared space. It has a limited supply of water, electricity, and air conditioning. If one shop—say, a massive "Gelato Factory"—starts using all the electricity for its freezers, the "Bookstore" next door might experience a blackout. To keep the mall running smoothly, the Owner enforces **Resource Budgets**.
 
@@ -34,7 +34,11 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 
 ### 🧰 Study Toolbox
 
+### 🚰 Resource Management
+* 🖼️ **Comic:** [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+* 🧪 **Lab:** [Managing Resource Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
+
 ### 📄 Documentation
-* 📖 **Docs:** [Resource Requests, Limits, and Quotas](../../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+* 📖 **Docs:** [Resource Requests, Limits, and Quotas](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
 [<< Previous Chapter: Identity & Access](ch07-identity-and-access.md) | [Back to Story Index](../story.md) | [Next Chapter: Launch Strategies >>](ch09-launch-strategies.md)

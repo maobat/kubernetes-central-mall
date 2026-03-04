@@ -1,4 +1,4 @@
-# Ch. 9: Launch Strategies: The Sign Swap and the Taste Test
+# 📖 Chapter 9: Launch Strategies: The Sign Swap and the Taste Test
 
 In the Central Mall, opening a new store or updating an existing one is a major event. You don't just shut down the mall, change everything, and hope for the best. You need a strategy to ensure customers aren't disappointed and the business keeps running.
 
@@ -9,6 +9,9 @@ Imagine the "Main Café" is getting a complete makeover. Instead of closing the 
 For a while, both cafés exist. The old one is still serving customers. Once the New Café is perfect, the Owner simply swaps the signs. One minute, the "Main Café" sign points to the old shop; the next minute, it points to the new one. 
 
 In Kubernetes, this is a **Blue/Green Deployment**. You have two full versions of your app (Blue and Green). You switch the **Service** (the sign) to point to the new version once it's ready. If something goes wrong with the New Café, you just swap the sign back to the old one. Zero downtime, zero risk.
+
+### 🔵🟢 Blue/Green Strategy
+* 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 
 ## The Taste Test (Canary Deployment)
 
@@ -29,10 +32,10 @@ This is the default **Rolling Update** in Kubernetes. One by one, old pods are r
 ### 🧰 Study Toolbox
 
 ### 🚪 Services (External - NodePort & Canary)
-* 🖼️ **Comic:** [Canary Traffic at the Side Entrance](../../comics/nodeport/01-canary-nodeport/README.md)
-* 🧪 **Lab:** [LAB 04 – Canary Deployments with NodePort](../../labs/services-and-networking/lab04-canary-nodeport/README.md)
+* 🖼️ **Comic:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+* 🧪 **Lab:** [LAB 04 – Canary Deployments with NodePort](../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
 
 ### 📄 Documentation
-* 📖 **Docs:** [Implementing Canary Deployments](../../docs/md-resources/implementing-canary-deployments.md)
+* 📖 **Docs:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
 
 [<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md)

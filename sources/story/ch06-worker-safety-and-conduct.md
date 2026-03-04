@@ -1,4 +1,4 @@
-# Ch. 6: Worker Safety: Safety Gear and Conduct Protocols
+# 📖 Chapter 6: Worker Safety: Safety Gear and Conduct Protocols
 
 In a massive, crowded mall, a small fire in one shop can quickly become a disaster for everyone. To prevent this, the Mall Owner doesn't just hire workers and give them instructions; they also enforce strict **Safety Gear** and **Conduct Protocols**. In the world of Kubernetes, these are the **SecurityContexts**.
 
@@ -32,7 +32,7 @@ By defining **Worker Safety & Conduct**, the Mall Owner ensures that the entire 
 ### 🧰 Study Toolbox
 
 ### 📄 Documentation
-* 📖 **Docs:** [SecurityContext: Worker Safety & Conduct](../../docs/md-resources/securitycontext-worker-safety-and-conduct.md)
-* 📖 **Docs:** [Lab: Managing Security Settings](../../docs/md-resources/lab-managing-security-settings.md)
+* 📖 **Docs:** [SecurityContext: Worker Safety & Conduct](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+* 📖 **Docs:** [Lab: Managing Security Settings](../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
 
 [<< Previous Chapter: ConfigMaps & Secrets](ch05-configmaps-and-secrets.md) | [Back to Story Index](../story.md) | [Next Chapter: Identity & Access >>](ch07-identity-and-access.md)

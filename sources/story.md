@@ -24,11 +24,11 @@ Deciding between a Shop Clerk (**Pod**), a Manager (**Deployment**), or speciali
 **⚡ Study Guide:** [Workloads & Contracts](./study-guide/ch01-workloads.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Jobs & CronJobs](./../comics/pod-design/02-jobs-cronjobs/README.md)
-- 🧪 [Lab: Jobs & CronJobs](./../labs/pod-design/lab02-jobs-cronjobs/README.md)
-- 🖼️ [Comic: The Fixed Boutique (StatefulSets)](./../comics/storage/02-statefulsets/README.md)
-- 🧪 [Lab: The Fixed Boutique (StatefulSets)](./../labs/storage/lab02-statefulsets/README.md)
-- 📄 [Doc: Using StatefulSets](./../docs/md-resources/using-statefulsets.md)
+- 🖼️ [Comic: Jobs & CronJobs](./../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
+- 🧪 [Lab: Jobs & CronJobs](./../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
+- 🖼️ [Comic: The Fixed Boutique (StatefulSets)](./../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
+- 🧪 [Lab: The Fixed Boutique (StatefulSets)](./../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
+- 📄 [Doc: Using StatefulSets](./../reference/md-resources/using-statefulsets.md)
 
 ---
 
@@ -38,9 +38,11 @@ The Clerk and their Helper (**Sidecar** and **Init Containers**).
 **⚡ Study Guide:** [Sidecars & Helpers](./study-guide/ch02-multi-container.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Sidecar Pattern](./../comics/pod-design/01-sidecar/README.md)
-- 🧪 [Lab: Sidecar Pattern](./../labs/pod-design/lab01-sidecar-pattern/README.md)
-- 📄 [Doc: Decoupling Pods](./../docs/md-resources/decoupling-pods.md)
+- 🖼️ [Comic: Sidecar Pattern](./../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
+- 🧪 [Lab: Sidecar Pattern](./../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
+- 🖼️ [Comic: The Warehouse (PV/PVC)](./../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
+- 🧪 [Lab: The Warehouse (PV/PVC)](./../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+- 📄 [Doc: Decoupling Pods]../../reference/md-resources/decoupling-pods.md)
 
 ---
 
@@ -50,9 +52,9 @@ Mastering the art of building and updating your store's display models (**Docker
 **⚡ Study Guide:** [Pod Design & Images](./study-guide/ch03-pod-design.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Perfect Mannequin](./../comics/pod-design/03-image-updates/README.md)
-- 🧪 [Lab: Image Updates & Rollouts](./../labs/pod-design/lab03-image-updates/README.md)
-- 📄 [Doc: Managing Images & Rollouts](./../docs/md-resources/managing-container-images-and-rollouts.md)
+- 🖼️ [Comic: The Perfect Mannequin](./../visual-learning/comics/ch03-images/03-image-updates/README.md)
+- 🧪 [Lab: Image Updates & Rollouts](./../practice/labs/ch03-images/lab03-image-updates/README.md)
+- 📄 [Doc: Managing Images & Rollouts]../../reference/md-resources/managing-container-images-and-rollouts.md)
 
 ---
 
@@ -62,10 +64,10 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 **⚡ Study Guide:** [Extending K8s](./study-guide/ch04-extending-k8s.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Nightly Backup Permit](./../comics/crd/01-the-nightly-backup-permit/README.md)
-- 🧪 [Lab: Custom Backup Service (CRD)](./../labs/extending-k8s/lab01-crd-custom-backup-service/README.md)
-- 🧪 [Lab: CRDs & Operators](./../labs/architecture/lab04-crds-operators/README.md)
-- 📄 [Doc: Extending K8s with CRDs](./../docs/md-resources/extending-k8s-crds-operators.md)
+- 🖼️ [Comic: The Nightly Backup Permit](./../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
+- 🧪 [Lab: Custom Backup Service (CRD)](./../practice/labs/ch04-extending/lab01-crd-custom-backup-service/README.md)
+- 🧪 [Lab: CRDs & Operators](./../practice/labs/ch04-extending/lab04-crds-operators/README.md)
+- 📄 [Doc: Extending K8s with CRDs]../../reference/md-resources/extending-k8s-crds-operators.md)
 
 ---
 
@@ -78,11 +80,11 @@ Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 **⚡ Study Guide:** [Configuration](./study-guide/ch05-configuration.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Rulebook & The Uniform](./../comics/configuration/01-configmap/README.md)
-- 🧪 [Lab: Configuration: ConfigMaps](./../labs/configuration/lab01-configmaps/README.md)
-- 🖼️ [Comic: The Secret of the High-Security Vault](./../comics/secrets/01-secrets-injection/README.md)
-- 🧪 [Lab: Secrets & Env Injection](./../labs/security/lab03-secrets-env-injection/README.md)
-- 📄 [Doc: Configuration Decoupling](./../docs/md-resources/configuration-decoupling.md)
+- 🖼️ [Comic: The Rulebook & The Uniform](./../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
+- 🧪 [Lab: Configuration: ConfigMaps](./../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
+- 🖼️ [Comic: The Secret of the High-Security Vault](./../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
+- 🧪 [Lab: Secrets & Env Injection](./../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
+- 📄 [Doc: Configuration Decoupling]../../reference/md-resources/configuration-decoupling.md)
 
 ---
 
@@ -92,9 +94,9 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 **⚡ Study Guide:** [Security & Safety](./study-guide/ch06-security.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Worker Safety & SecurityContext](./../comics/security/02-worker-safety/README.md)
-- 📄 [Doc: Worker Safety and Conduct](./../docs/md-resources/securitycontext-worker-safety-and-conduct.md)
-- 🧪 [Lab: Managing Security Settings (SecurityContext)](./../labs/security/lab01-serviceaccount-identity/README.md)
+- 🖼️ [Comic: Worker Safety & SecurityContext](./visual-learning/comics/ch06-safety/02-worker-safety/README.md)
+- 📄 [Doc: Worker Safety and Conduct]../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+- 🧪 [Lab: Managing Security Settings (SecurityContext)](./practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
 
 ---
 
@@ -104,9 +106,9 @@ Assigning roles and permissions to ensure only authorized staff access the backr
 **⚡ Study Guide:** [Identity & RBAC](./study-guide/ch07-identity.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Secure Badge](./../comics/security/01-the-secure-badge/README.md)
-- 🧪 [Lab: Identity & Access (RBAC)](./../labs/security/lab02-rbac-identity/README.md)
-- 📄 [Doc: Understanding RBAC](./../docs/md-resources/understanding-role-based-access-control-rbac.md)
+- 🖼️ [Comic: The Secure Badge](./visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
+- 🧪 [Lab: Identity & Access (RBAC)](./practice/labs/ch07-identity/lab02-rbac-identity/README.md)
+- 📄 [Doc: Understanding RBAC]../reference/md-resources/understanding-role-based-access-control-rbac.md)
 
 ---
 
@@ -116,9 +118,9 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 **⚡ Study Guide:** [Resources & Quotas](./study-guide/ch08-resources.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Resource Hog](./../comics/resources/01-the-resource-hog/README.md)
-- 🧪 [Lab: Managing Resource Constraints](./../labs/resources/lab01-managing-resource-constraints/README.md)
-- 📄 [Doc: The Resource Budget](./../docs/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+- 🖼️ [Comic: The Resource Hog](./visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+- 🧪 [Lab: Managing Resource Constraints](./practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
+- 📄 [Doc: The Resource Budget]../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
 ---
 
@@ -131,9 +133,9 @@ Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 **⚡ Study Guide:** [Deployment Strategies](./study-guide/ch09-deployments.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Canary Traffic at the Side Entrance](./../comics/nodeport/01-canary-nodeport/README.md)
-- 📄 [Doc: Implementing Canary Deployments](./../docs/md-resources/implementing-canary-deployments.md)
-- 🧪 [Lab: Canary Deployments with NodePort](./../labs/services-and-networking/lab04-canary-nodeport/README.md)
+- 🖼️ [Comic: The Canary Side Entrance](../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+- 📄 [Doc: Implementing Canary Deployments](../reference/md-resources/implementing-canary-deployments.md)
+- 🧪 [Lab: Canary Deployments with NodePort](../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
 
 ---
 
@@ -143,10 +145,10 @@ Using standardized tools like **Helm** and **Kustomize** to manage mall layout t
 **⚡ Study Guide:** [Management Tools](./study-guide/ch10-management.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Logistics Chain](./../comics/deploying/02-the-logistics-chain/README.md)
-- 🧪 [Lab: Logistics Tools (Helm & Kustomize)](./../labs/deploying/lab06-helm-packages/README.md)
-- 📄 [Doc: Using Helm](./../docs/md-resources/using-the-helm-package-manager.md)
-- 📄 [Doc: Using Kustomize](./../docs/md-resources/using-kustomize.md)
+- 🖼️ [Comic: The Logistics Chain](../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+- 🧪 [Lab: Logistics Tools (Helm & Kustomize)](../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+- 📄 [Doc: Using Helm](../reference/md-resources/using-the-helm-package-manager.md)
+- 📄 [Doc: Using Kustomize](../reference/md-resources/using-kustomize.md)
 
 ---
 
@@ -159,10 +161,10 @@ Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 **⚡ Study Guide:** [Networking Services](./study-guide/ch11-services.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The NodePort Traffic Adventure](./../comics/nodeport/02-cross-namespace/README.md)
-- 🧪 [Lab: ClusterIP & Internal Communication](./../labs/services-and-networking/lab01-clusterip-internal-traffic/README.md)
-- 🧪 [Lab: NodePort & Cross-Namespace Access](./../labs/services-and-networking/lab02-nodeport-cross-namespace/README.md)
-- 📄 [Doc: Service IP Trackers](./../docs/md-resources/service-ip-tracker-evolution.md)
+- 🖼️ [Comic: The NodePort Traffic Adventure](../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+- 🧪 [Lab: ClusterIP & Internal Communication](../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
+- 🧪 [Lab: NodePort & Cross-Namespace Access](../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
+- 📄 [Doc: Service IP Trackers](../reference/md-resources/service-ip-tracker-evolution.md)
 
 ---
 
@@ -172,11 +174,11 @@ Routing customers through the main doors and specialized directories (**Ingress 
 **⚡ Study Guide:** [Ingress & Gateway API](./study-guide/ch12-ingress.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Virtual Host Gateway Show](./../comics/ingress/01-virtual-host/README.md)
-- 🧪 [Lab: Ingress & Virtual Host Routing](./../labs/services-and-networking/lab03-ingress-virtual-host/README.md)
-- 🖼️ [Comic: The Lost Gateway](./../comics/gateway-api/01-the-lost-gateway/README.md)
-- 🧪 [Lab: Canary Deployments with Gateway API](./../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
-- 📄 [Doc: Ingress vs Gateway API](./../docs/md-resources/ingress-vs-gateway.md)
+- 🖼️ [Comic: Virtual Host Gateway Show](../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
+- 🧪 [Lab: Ingress & Virtual Host Routing](../practice/labs/ch12-ingress/lab03-ingress-virtual-host/README.md)
+- 🖼️ [Comic: The Lost Gateway](../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
+- 🧪 [Lab: Canary Deployments with Gateway API](../practice/labs/ch12-ingress/lab05-canary-deployment-gateway-api/README.md)
+- 📄 [Doc: Ingress vs Gateway API](../reference/md-resources/ingress-vs-gateway.md)
 
 ---
 
@@ -186,9 +188,9 @@ Restricting movement between departments to protect the mall's security.
 **⚡ Study Guide:** [Network Policies](./study-guide/ch13-networking.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Locked Corridor - Whitelisting Traffic](./../comics/network-policies/01-locked-corridors/README.md)
-- 🧪 [Lab: Network Policies & Locked Corridors](./../labs/services-and-networking/lab06-network-policies/README.md)
-- 📄 [Doc: Network Isolation Concept](./../docs/md-resources/troubleshooting-kubernetes.md#section-8-3)
+- 🖼️ [Comic: The Locked Corridor](../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
+- 🧪 [Lab: Network Policies & Locked Corridors](../practice/labs/ch13-networking/lab06-network-policies/README.md)
+- 📄 [Doc: Network Isolation Concept](../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
 
 ---
 
@@ -201,10 +203,10 @@ Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Pr
 **⚡ Study Guide:** [Health Checks & Probes](./study-guide/ch14-probes.md)
 
 **🧰 Study Toolbox:**
-- 📄 [Doc: Worker Safety and Probes](./../docs/md-resources/troubleshooting-kubernetes.md#section-2)
-- 🖼️ [Comic: The Health Inspector - Liveness vs Readiness](./../comics/observability/01-the-health-inspector/README.md)
-- 🖼️ [Comic: The Health Inspector - Readiness](./../comics/observability/02-readiness-probes/README.md)
-- 🧪 [Lab: Liveness Probes: The Health Inspector](./../labs/observability/lab01-liveness-probes-health-inspector/README.md)
+- 📄 [Doc: Worker Safety and Probes](../reference/md-resources/troubleshooting-kubernetes.md#section-2)
+- 🖼️ [Comic: The Health Inspector - Liveness vs Readiness](../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
+- 🖼️ [Comic: The Health Inspector - Readiness](../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
+- 🧪 [Lab: Liveness Probes: The Health Inspector](../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
 
 ---
 
@@ -214,9 +216,9 @@ Investigating "incidents" using logs and real-time inspections (**Logs, Describe
 **⚡ Study Guide:** [Debugging & Logs](./study-guide/ch15-debugging.md)
 
 **🧰 Study Toolbox:**
-- 📄 [Doc: Troubleshooting Guide](./../docs/md-resources/troubleshooting-kubernetes.md)
-- 📄 [Doc: Diagnostic Cheat Sheet](./../docs/md-resources/diagnostic-cheat-sheet.md)
-- 🖼️ [Comic: The Broken Shop](./../comics/observability/03-the-broken-shop/README.md)
-- 🧪 [Lab: Fixing the Broken Shop](./../labs/observability/lab15-fixing-the-broken-shop/README.md)
+- 📄 [Doc: Troubleshooting Guide](../reference/md-resources/troubleshooting-kubernetes.md)
+- 📄 [Doc: Diagnostic Cheat Sheet](../reference/md-resources/diagnostic-cheat-sheet.md)
+- 🖼️ [Comic: The Broken Shop](../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
+- 🧪 [Lab: Fixing the Broken Shop](../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
 
 ---

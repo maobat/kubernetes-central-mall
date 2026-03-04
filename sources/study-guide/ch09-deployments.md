@@ -63,17 +63,17 @@ kubectl rollout undo deployment/clerk-dept
 ### 🧰 Study Toolbox
 
 ### 🔵🟢 Blue/Green Strategy
-* �🖼️ **Comic:** [Blue/Green Sign Swap](../../comics/deploying/01-blue-green-sign-swap/README.md)
-* � **Doc:** [Implementing Blue/Green Deployments](../../docs/md-resources/implementing-bluegreen-deployments.md)
-* 🧪 **Lab:** [Lab: Blue/Green Traffic Transition](../../docs/md-resources/lab-deployment-steps-full-traffic-transition-demo.md)
+*🖼️ **Comic:*[Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+* � **Doc:*[Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
+* 🧪 **Lab:*[Lab: Blue/Green Traffic Transition](../../reference/md-resources/lab-deployment-steps-full-traffic-transition-demo.md)
 
 ### 🐤 Canary Strategy
-* �🖼️ **Comic:** [Replica Weighting - Canary at the Side Entrance](../../comics/canary-nodeport/01-canary-replica-weighting/README.md)
-* 📄 **Doc:** [Implementing Canary Deployments](../../docs/md-resources/implementing-canary-deployments.md)
-* 🧪 **Lab:** [Lab 04 - Canary Deployments](../../labs/deploying/lab04-canary-nodeport/README.md)
+*🖼️ **Comic:*[Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+📄 **Doc:*[Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
+* 🧪 **Lab:*[Lab 04 - Canary Deployments](../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
 
 ### ⚖️ Comparison
-* 📄 **Doc:** [Comparison: Blue/Green vs. Canary](../../docs/md-resources/related-deployment-strategies-comparison.md)
+📄 **Doc:*[Comparison: Blue/Green vs. Canary](../../reference/md-resources/related-deployment-strategies-comparison.md)
 
 ---
-[<< Previous: Resources](ch08-resources.md) | [Back to Story Index](../story.md) | [Next: Logistics Tools >>](ch10-management.md)
+[<< Previous: Resources](ch08-resources.md) [Back to Story Index](../story.md) [Next: Logistics Tools >>](ch10-management.md)

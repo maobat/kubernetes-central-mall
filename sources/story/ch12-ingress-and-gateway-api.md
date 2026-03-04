@@ -1,4 +1,4 @@
-# Ch. 12: Ingress & Gateway API: The Grand Entrance and the Smart Directory
+# 📖 Chapter 12: Ingress & Gateway API: The Grand Entrance and the Smart Directory
 
 While every shop has an intercom (Service), you don't want customers wandering around the back corridors or delivery bays to find what they need. For a professional experience, you need a **Grand Entrance**.
 
@@ -28,11 +28,11 @@ The Gateway API is "Role-Based." It allows different people to manage different 
 ### 🧰 Study Toolbox
 
 ### 🌐 Ingress & Virtual Hosts
-* 🖼️ **Comic:** [Virtual Host Gateway Show](../../comics/ingress/01-virtual-host/README.md)
-* 🧪 **Lab:** [LAB 03 – Ingress & Virtual Host Routing](../../labs/services-and-networking/lab03-ingress-virtual-host/README.md)
+* 🖼️ **Comic:** [Virtual Host Gateway Show](../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
+* 🧪 **Lab:** [LAB 03 – Ingress & Virtual Host Routing](../../practice/labs/ch12-ingress/lab03-ingress-virtual-host/README.md)
 
 ### 📡 Gateway API
-* 🖼️ **Comic:** [The Lost Gateway](../../comics/gateway-api/01-the-lost-gateway/README.md)
-* 🧪 **Lab:** [LAB 05 – Canary Deployments with Gateway API](../../labs/deploying/lab05-canary-deployment-gateway-api/README.md)
+* 🖼️ **Comic:** [The Lost Gateway](../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
+* 🧪 **Lab:** [LAB 05 – Canary Deployments with Gateway API](../../practice/labs/ch12-ingress/lab05-canary-deployment-gateway-api/README.md)
 
 [<< Previous Chapter: Finding the Stores](ch11-finding-the-stores.md) | [Back to Story Index](../story.md) | [Next Chapter: Network Policies >>](ch13-network-policies.md)

@@ -75,10 +75,10 @@ kubectl get events --sort-by='.lastTimestamp'
 
 ## 🧰 Study Toolbox
 
-* 📄 **Doc:** [Troubleshooting Kubernetes (The Master Guide)](../../docs/md-resources/troubleshooting-kubernetes.md)
-* 📄 **Doc:** [Diagnostic Cheat Sheet (Commands to Memorize)](../../docs/md-resources/diagnostic-cheat-sheet.md)
-* 🖼️ **Comic:** [The Health Inspector - The Broken Shop](../../comics/observability/03-the-broken-shop/README.md)
-* 🧪 **Lab:** [LAB 15 – Fixing the Broken Shop](../../labs/observability/lab15-fixing-the-broken-shop/README.md)
+* 📄 **Doc:** [Troubleshooting Kubernetes (The Master Guide)](../../reference/md-resources/troubleshooting-kubernetes.md)
+* 📄 **Doc:** [Diagnostic Cheat Sheet (Commands to Memorize)](../../reference/md-resources/diagnostic-cheat-sheet.md)
+* 🖼️ **Comic:** [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
+* 🧪 **Lab:** [LAB 15 – Fixing the Broken Shop](../../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
 
 ---
 [<< Previous: Health Checks](ch14-probes.md) | [Back to Story Index](../story.md)

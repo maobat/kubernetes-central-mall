@@ -40,7 +40,7 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 ### 🧰 Study Toolbox
 
 ### 🧩 Custom Resource Definitions (CRD)
-* 🖼️ **Comic:** [The Nightly Backup Permit](../../comics/crd/01-the-nightly-backup-permit/README.md)
+* 🖼️ **Comic:** [The Nightly Backup Permit](../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
 
 
 [<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)

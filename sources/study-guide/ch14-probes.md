@@ -78,10 +78,10 @@ kubectl describe pod <pod-name>
 
 ## 🧰 Study Toolbox
 
-* 📄 **Doc:** [Worker Safety and Probes](../../docs/md-resources/troubleshooting-kubernetes.md#section-2)
-* 🖼️ **Comic:** [The Health Inspector - Liveness vs Readiness](../../comics/observability/01-the-health-inspector/README.md)
-* 🖼️ **Comic:** [The Health Inspector - Readiness](../../comics/observability/02-readiness-probes/README.md)
-* 🧪 **Lab:** [LAB 01 – Liveness Probes: The Health Inspector](../../labs/observability/lab01-liveness-probes-health-inspector/README.md)
+* 📄 **Doc:** [Worker Safety and Probes](../../reference/md-resources/troubleshooting-kubernetes.md#section-2)
+* 🖼️ **Comic:** [The Health Inspector - Liveness vs Readiness](../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
+* 🖼️ **Comic:** [The Health Inspector - Readiness](../../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
+* 🧪 **Lab:** [LAB 01 – Liveness Probes: The Health Inspector](../../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
 
 ---
 [<< Previous: Network Policies](ch13-networking.md) | [Back to Story Index](../story.md) | [Next: Debugging & Logs >>](ch15-debugging.md)
