@@ -161,6 +161,7 @@ Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 **⚡ Study Guide:** [Networking Services](./study-guide/ch11-services.md)
 
 **🧰 Study Toolbox:**
+- 🖼️ [Comic: The Internal Intercom (ClusterIP)](../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
 - 🖼️ [Comic: The NodePort Traffic Adventure](../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
 - 🧪 [Lab: ClusterIP & Internal Communication](../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
 - 🧪 [Lab: NodePort & Cross-Namespace Access](../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
