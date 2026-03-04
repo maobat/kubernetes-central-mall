@@ -35,6 +35,7 @@ By separating the "Setup" and the "Side-Tasks" from the Main Worker, we keep our
 ### 🧱 Multi-Container Pods & Shared Storage
 * 🖼️ **Comic:** [The Assistant & The Shared Space](../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
 * 🖼️ **Comic:** [The Warehouse (PV/PVC)](../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
+* 🧪 **Lab:** [LAB 01 – The Assistant (Sidecar Pattern)](../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
 * 🧪 **Lab:** [LAB 02 – The Warehouse (PV/PVC)](../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
 
 
