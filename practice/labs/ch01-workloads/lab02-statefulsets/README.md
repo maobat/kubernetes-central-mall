@@ -67,29 +67,9 @@ Open `sfs.yaml` and perform these transforms:
 3. Add `volumeMounts` inside the container.
 4. Add the `volumeClaimTemplates` block at the bottom of the StatefulSet `spec`.
 
-```yaml
-kind: StatefulSet
-spec:
-  serviceName: "svc-web"
-  replicas: 3
-  template:
-    spec:
-      containers:
-      - name: web
-        image: registry.k8s.io/nginx-slim:0.24
-        volumeMounts:
-        - name: www
-          mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "standard"
-      resources:
-        requests:
-          storage: 1Gi
-```
+    <img src="volumeClaimTemplates.png" alt="Configuration ConfigMaps" width="60%" />
+
+    > Note that `standard` is the name of the StorageClass to use. You can check the available storage classes with `k get sc`.
 
 ---
 
