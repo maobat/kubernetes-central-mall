@@ -1,4 +1,4 @@
-# 🧪 LAB 01 – ClusterIP & Internal Communication
+# 🧪 LAB 01: The Internal Intercom (ClusterIP)
 
 ## Services and Networking – Managing Internal Traffic
 
@@ -8,73 +8,84 @@
 
 This lab focuses on **ClusterIP Services**. You will learn how to create a stable entry point for a group of Pods, enabling internal communication within the "mall" (cluster).
 
----
-
-## 📖 Related Comic
-👉 [visual-learning/comics/ch11-services/01-internal-intercom/README.md](../../../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
+> **CKAD Importance:** Fundamental. Every microservice communication scenario starts with understanding ClusterIP.
 
 ---
 
-## 🏬 Mall Analogy
+## 🛍️ Mall Analogy
 
-We are setting up a **Staff Support** desk that can be reached from any internal intercom in the mall.
+In the **Central Mall**, shops needs to talk to each other (e.g., The Cafe needs to check the Warehouse inventory).
+
+- **The Worker (Pod)** → A staff member at a specific desk. Their desk might move (Pod IP changes), making it hard to find them.
+- **The Intercom Extension (Service Name)** → A stable phone number (DNS name) like `extension-101`. No matter which desk the worker is at, if you dial `101`, the intercom finds them.
+- **The Switchboard (ClusterIP)** → The internal wiring of the mall. It only works for people *inside* the building. You can't call this extension from your house.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Pod: staff-support** | A staff member ready to help. |
-| **Service: ClusterIP** | The internal intercom system. |
-| **Service Name: support-svc** | The extension number everyone dials. |
-| **testpod (BusyBox)** | A store manager calling for help. |
+| **ClusterIP** | The internal intercom system. |
+| **DNS Name** | The extension number everyone dials. |
+| **Selector** | The rule that determines which workers belong to that extension. |
 
 ---
 
 ## 📋 Requirements
 
-1. Create a Deployment named **`staff-support`**:
-   - Image: `nginx`
-   - Replicas: `2`
-2. Expose the Deployment via a **ClusterIP Service** named `support-svc` on port **80**.
-3. In the **default** Namespace, run a **BusyBox Pod** named `testpod`.
-4. **Verification:**
-   - `testpod` must reach the `support-svc` using its DNS name.
+1. **Deployment**: Create `staff-support` (nginx, 2 replicas).
+2. **Service**: Create a ClusterIP named `support-svc` on port 80.
+3. **Internal Test**: Use a BusyBox Pod (`testpod`) to call the service by name.
 
 ---
 
-## 🛠️ Solution
+## 🛠️ Step-by-Step Solution
 
-### 1. Deploy the Staff Support Team
+### 1. Deploy the Support Team
 ```bash
-kubectl create deployment staff-support --image=nginx --replicas=2
+k create deploy staff-support --image=nginx --replicas=2
 ```
 
-### 2. Install the Internal Intercom (ClusterIP Service)
+### 2. Install the Intercom (Service)
+Fastest way:
 ```bash
-kubectl expose deployment staff-support --name=support-svc --port=80
+k expose deploy staff-support --name=support-svc --port=80
 ```
 
-### 3. Test the Connection
+### 3. Dial the Extension
 ```bash
-# Start a test worker
-kubectl run testpod --image=busybox -- sleep infinity
+# Run a test worker
+k run testpod --image=busybox -- sleep infinity
 
-# Dial the Staff Support extension
-kubectl exec testpod -- wget -qO- support-svc
+# Test the connection via DNS
+k exec testpod -- wget -qO- support-svc
 ```
 
 ---
 
-## 🔎 Verification Results
+## 🔎 Verification
 
-✅ **Internal Check:** `testpod` successfully receives a response from `support-svc`.
+1. **Check DNS Resolution:**
+   ```bash
+   k exec testpod -- nslookup support-svc
+   # Should return the ClusterIP of the service.
+   ```
+
+2. **Check Endpoints:**
+   ```bash
+   k get ep support-svc
+   # You should see two IP addresses (one for each support pod).
+   ```
 
 ---
 
-## 🧰 Study Toolbox
+## 🧠 Key Takeaways
 
-* 🖼️ **Comic:** [The Internal Intercom (ClusterIP)](../../../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
-* 📄 **Doc:** [Service IP Tracker Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)
+- **Internal Only:** ClusterIP is the default service type. It is NOT reachable from the internet.
+- **Service Discovery:** Kubernetes handles the DNS automatically. You don't need to know the IP, just the name.
+- **Load Balancing:** If you have multiple pods, the intercom automatically sends your call to the next available worker.
+- **CKAD Tip:** `kubectl expose` is your best friend. It automatically creates the selectors and ports based on your deployment.
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch11-services.md](../../../../sources/study-guide/ch11-services.md)
+## 🔗 References
+- **Comic** → [Internal Intercom](../../../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
+- **Docs** → [Service DNS](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
+- **Study Guide** → [Chapter 11: Services](../../../../sources/study-guide/ch11-services.md)

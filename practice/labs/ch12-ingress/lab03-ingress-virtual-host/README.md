@@ -1,95 +1,57 @@
-# LAB 02 – Ingress & Virtual Host Routing
+# 🧪 LAB 03: The Branded Entrance (Ingress & Virtual Hosts)
 
 ## Services and Networking – Managing Incoming Traffic
-
-
 
 ---
 
 ## 🎯 Lab Goal
 
-This lab introduces **Ingress** and **virtual host–based routing**.
+This lab introduces **Ingress** and **virtual host–based routing**. You will learn how to route traffic using the HTTP `Host` header, allowing multiple "branded" shops to share a single mall entrance (the Ingress Controller).
 
-You will learn how to:
-- Deploy a multi-replica application
-- Expose it internally via a **Service**
-- Route traffic using an **Ingress** based on the HTTP `Host` header
-- Verify Ingress behavior **from inside the cluster** (CKAD-style)
+> **CKAD Importance:** Very High. Ingress is a core component of the exam. You must know how to write an Ingress resource and how to test it without DNS.
 
 ---
 
-## 📖 Related Comic
-👉 [visual-learning/comics/ch12-ingress/01-virtual-host/README.md](../../../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
+## 🛍️ Mall Analogy
+
+In the **Central Mall**, we have one massive **Main Entrance (Ingress Controller)**.
+
+- **The Shop (Pod)** → The actually physical store where goods are sold.
+- **The Internal Walkway (Service)** → The hallway that leads customers to the shop.
+- **The Branded Sign (Host Header)** → The name on the entrance door (e.g., `fashion.example.com`).
+- **The Concierge (Ingress Controller)** → The person standing at the main entrance. When a customer says "I'm here for Fashion," the concierge looks at the sign and points them to the correct hallway.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **Ingress Controller** | The main mall entrance and concierge. |
+| **Ingress Resource** | The instruction manual for the concierge. |
+| **Host Header** | The name of the store written on the customer's invite. |
 
 ---
-
-## 📘 Reference Docs
-
-- Understanding Traffic Flow (Ingress) → [`docs/md-resources/traffic-flow.md`](../../../../reference/md-resources/traffic-flow.md)
-
-- Ingress vs Gateway API → [`docs/md-resources/ingress-vs-gateway.md`](../../../../reference/md-resources/ingress-vs-gateway.md)
-
----
-
-
 
 ## 📋 Requirements
 
-1. Create a **Deployment** named `lab11web`
-   - Image: `nginx`
-   - Replicas: `3`
-2. Expose the Deployment via a **Service** on port `80`
-3. Make the application reachable at:
-   - `http://lab11web.example.com`
-
-```yaml
-using an **Ingress**
-```
-
----
-## 🏬 Mall Analogy
-
-We are opening **three identical shops** behind a single branded entrance.
-
-Customers don’t care which shop they enter,  
-they just look at the **store sign (hostname)**.
-
-| Kubernetes Concept | Mall Analogy |
-|-------------------|--------------|
-| **Deployment (3 replicas)** | Three identical shops |
-| **Service (ClusterIP)** | Internal hallway connecting the shops |
-| **Ingress** | The main mall entrance |
-| **Host: lab11web.example.com** | The shop’s name on the sign |
+1. **Deployment**: `lab11web` (nginx, 3 replicas).
+2. **Service**: Expose as ClusterIP on port 80.
+3. **Ingress**: Create a rule for `lab11web.example.com` to route to the service.
+4. **Internal Test**: Spoof the Host header using `curl` from a test pod.
 
 ---
 
-## 🛠️ Solution
+## 🛠️ Step-by-Step Solution
 
-### 1️⃣ Enable the Ingress Controller (Minikube)
-
+### 1. Enable the Gateway (Minikube)
 ```bash
 minikube addons enable ingress
 ```
-### 2️⃣ Create the Deployment
 
+### 2. Deploy the Shops
 ```bash
-kubectl create deployment lab11web \
-  --image=nginx \
-  --replicas=3
+k create deploy lab11web --image=nginx --replicas=3
+k expose deploy lab11web --port=80
 ```
 
-### 3️⃣ Expose the Deployment with a Service
-
-```bash
-kubectl expose deployment lab11web --port=80
-```
-
-This creates a **ClusterIP Service**, which is perfect for Ingress.
-
-### 4️⃣ Create the Ingress Resource
-
-Create a file named `ingress.yaml`:
-
+### 3. Create the Ingress Rule
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -104,90 +66,37 @@ spec:
         pathType: Prefix
         backend:
           service:
+            name: lab11web
+            port:
+              number: 80
 ```
-
-Apply it:
-
-```bash
-kubectl apply -f ingress.yaml
-```
-
-### 🔎 Verification (CKAD-Style)
-
-> ⚠️ In the CKAD exam, you **won’t edit** `/etc/hosts`.
-
-> You will test **from inside the cluster**.
-
-### 1️⃣ Start a Temporary Tester Pod
-
-```bash
-kubectl run dns-test \
-  --image=curlimages/curl \
-  --rm -it \
-  --restart=Never -- sh
-```
-
-### 2️⃣ Try Direct Access (Expected to Fail)
-
-```bash
-curl -v http://lab11web.example.com
-```
-
-❌ Possible results:
-
-- `Could not resolve host`
-- `404 Not Found`
-
-**Why?**
-CoreDNS doesn’t know about `example.com`.
-
-Ingress routing depends on the **Host header**, not DNS resolution.
 
 ---
-### 3️⃣ Get the Ingress Controller ClusterIP
 
-```bash
-INGRESS_IP=$(kubectl get svc -n ingress-nginx ingress-nginx-controller \
-  -o jsonpath='{.spec.clusterIP}')
-echo $INGRESS_IP
-```
----
-### 4️⃣ Spoof the Host Header (Correct Test)
-```bash
-curl -v -H "Host: lab11web.example.com" http://$INGRESS_IP
-```
+## 🔎 Verification
 
-✅ **Expected result:**
-`Welcome to nginx!`
+1. **The Spoof Test (CKAD-style):**
+   In the exam, you can't edit DNS. You must test from inside a pod:
+   ```bash
+   # Get the Ingress Controller IP
+   IC_IP=$(k get svc -n ingress-nginx ingress-nginx-controller -o jsonpath='{.spec.clusterIP}')
 
-🔄 Understanding the Traffic Flow
+   # Test with the Host header
+   k run tester --image=curlimages/curl --rm -it --restart=Never -- \
+     curl -v -H "Host: lab11web.example.com" http://$IC_IP
+   ```
 
-1. **Tester Pod** sends the HTTP request
-2. **Ingress Controller** receives it
-3. **Ingress rules** inspect the Host header
-4. **Service** routes traffic to one of the Pods
-5. **One nginx Pod** responds
-
-🧠 **Expert Summary**
-
-- Ingress routing is **header-based**, not DNS-based
-- Services remain **ClusterIP**
-- External exposure is fully handled by the Ingress Controller
-- Internal testing is the **exam-safe approach**
-
-## 📝 Key Takeaways (CKAD Mindset)
-
-- Always test Ingress using a **Host header**
-- Don’t rely on `/etc/hosts`
-- Think in terms of:
-```nginx
-    
-Ingress is the foundation for:
-
-- Virtual hosting
-- Canary & blue-green deployments
-- Gateway API evolution
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch12-ingress.md](../../../../sources/study-guide/ch12-ingress.md)
+## 🧠 Key Takeaways
+
+- **DNS vs Headers:** Ingress routing is about the **HTTP Host Header**, not just the IP address.
+- **Path Types:** `Prefix` means anything starting with `/` matches. `Exact` is for specific pages.
+- **CKAD Tip:** Never use `minikube ip` in the exam. Always test from a pod using the Ingress Controller's internal Service IP.
+
+---
+
+## 🔗 References
+- **Comic** → [Virtual Host Routing](../../../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
+- **Docs** → [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+- **Study Guide** → [Chapter 12: Ingress](../../../../sources/study-guide/ch12-ingress.md)

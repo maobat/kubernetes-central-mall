@@ -1,135 +1,92 @@
-# LAB 01 – Creating a Custom Backup Service (CRD)
+# 🧪 LAB 01: The Nightly Backup Permit (Custom Resources)
 
-
+## Architecture – Extending Kubernetes with CRDs
 
 ---
+
 ## 🎯 Lab Goal
-Learn how Kubernetes can be extended using **Custom Resource Definitions (CRDs)**  
-by introducing a new resource type: **BackUp**.
 
----
+Learn how Kubernetes can be extended using **Custom Resource Definitions (CRDs)**. You will introduce a new resource type, **BackUp**, to the cluster's "Rulebook" and see how it differs from a standard resource.
 
-## 📖 Related Comic
-👉 [visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md](../../../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
+> **CKAD Importance:** Medium. You should know how to identify and create custom resources, even if you don't write the Controller logic.
 
-It explains **why CRDs are useful** and how they work.
----
-
-## 📘 Reference Docs
-
-- Understanding Custom Resource Definitions (CRDs) → [`docs/md-resources/understanding-custom-resource-definitions-crds.md`](../../../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
-
-- Extending K8s Crds Operators → [`docs/md-resources/extending-k8s-crds-operators.md`](../../../../reference/md-resources/extending-k8s-crds-operators.md)
-
-- Crd Demo Creating A Custom Service → [`docs/md-resources/crd-demo-creating-a-custom-service.md`](../../../../reference/md-resources/crd-demo-creating-a-custom-service.md)
 ---
 
 ## 🛍️ Mall Analogy
-By default, Mall Management only understands:
-- Stores → Deployments
-- Pick-up Points → Services
-- Licenses → Pods
 
-We introduce a **new permit type**:  
-👉 **Nightly Backup Service**
+By default, Mall Management only understands standard stores (Deployments) and permits (Pods). But what if you want a **Nightly Backup Service** for all shops?
 
----
+- **The Rulebook Extension (CRD)** → Adding a new type of permit to the Mall's computer system. Now the manager can recognize the word "BackUp."
+- **The Backup Request (Custom Resource)** → A specific shop owner filling out the new "BackUp Permit" form. "Please back up my vault at 2:00 AM."
+- **The Specialized Manager (Controller/Operator)** → A dedicated staff member whose *only* job is to watch for "BackUp Permits" and hire workers to do the actual work.
 
-## 📁 Lab Files
-
-This lab uses the following manifests:
-
-- [`00-crd-backup.yaml`](./00-crd-backup.yaml)
-  - Defines the **Custom Resource Definition**
-  - Extends the Kubernetes API with a new resource: `BackUp`
-
-- [`01-backup-instance.yaml`](./01-backup-instance.yaml)
-  - Defines a **Custom Resource instance**
-  - Represents a concrete Nightly Backup request
-
-- [`02-simulated-controller-job.yaml`](./02-simulated-controller-job.yaml)
-  - Simulates the Controller creating the actual Job/Pod
-
-📌 Tip: Open the CRD first, then the instance, notice how `spec` fields align.
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **CRD** | The definition of a new permit type (BackUp). |
+| **Custom Resource (CR)** | A specific instance of that permit (Joe's-Backup). |
+| **Controller** | The staff member who reconciles the permit into action. |
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch04-extending-k8s.md](../../../../sources/study-guide/ch04-extending-k8s.md)
+## 📋 Requirements
+
+1. **Register the CRD**: Add the `BackUp` resource type to your cluster.
+2. **Submit a Request**: Create an instance of a `BackUp` resource.
+3. **Simulate the Action**: Understand why a CR needs a Controller to actually *do* something.
 
 ---
 
-## 🧩 Step 1 – Register the New Permit Type (CRD)
+## 🛠️ Step-by-Step Solution
 
-Register a new resource type in the Kubernetes API.
-
+### 1. Register the Rule (CRD)
+Apply the definition so Kubernetes learns what a "BackUp" is.
 ```bash
-kubectl apply -f 00-crd-backup.yaml
-kubectl api-resources | grep backup
+k apply -f 00-crd-backup.yaml
+k api-resources | grep backup
+# You should see 'backups' or 'bks' in the list now!
 ```
-✔️ The Mall Rulebook now includes **BackUp permits**
-✔️ The API server now recognizes `kind: BackUp`
 
----
-## 🧾 Step 2 – Request a Backup Service (Custom Resource)
+### 2. File the Request (CR Instance)
+Submit a desired state. "I want a backup of my MariaDB vault."
 ```bash
-kubectl apply -f 01-backup-instance.yaml
-kubectl get bks
+k apply -f 01-backup-instance.yaml
+k get bks
+# The request is accepted and stored in the database (etcd).
 ```
-At this stage:
-- ✅ The request exists in etcd
-- ❌ No Pod / Job is created
 
-**Why?**
-
-👉 A CR only describes desired state
-👉 No Controller is managing BackUp resources yet
-
-This is expected behavior.
-
----
-## 🤖 Step 3 – Simulating the Controller Action
-
-In a real-world Operator:
-
-- A Controller watches BackUp resources
-- It reconciles desired state with actual state
-- It creates Jobs / Pods accordingly
-
-For **CKAD purposes**, we simulate this behavior manually:
+### 3. Simulating the Controller
+Notice that `k get pods` shows nothing new. This is because we haven't hired the "Specialized Manager" (Operator) yet. In this lab, we simulate the manager by manually running the job they would have created:
 ```bash
-kubectl apply -f 02-simulated-controller-job.yaml
-kubectl get jobs
-kubectl logs job-nightly-backup
+k apply -f 02-simulated-controller-job.yaml
 ```
-This Job represents what a Controller **would** create after observing the CR.
 
 ---
 
-> ⚠️ Note  
-> If the Job Pod is stuck in `ImagePullBackOff`, this is **not related to CRDs**.
-> It usually indicates network restrictions (VPN, proxy, air-gapped cluster).
-> The CRD and reconciliation logic are still working correctly.
+## 🔎 Verification
+
+1. **Check API Knowledge:**
+   ```bash
+   k explain backups
+   # If this works, the cluster successfully learned the new permit!
+   ```
+
+2. **Check the Jobs:**
+   ```bash
+   k get jobs
+   k logs job/nightly-backup
+   ```
 
 ---
 
 ## 🧠 Key Takeaways
-- CRDs extend the Kubernetes API
-- Custom Resources store **desired state**
-- Controllers perform the reconciliation loop
-- Without a Controller, a CR is pure configuration
-- CKAD focuses on **using CRDs**, not writing Operators
+
+- **Custom API:** CRDs allow you to create your own "verbs" and "nouns" in Kubernetes.
+- **Desired State:** Like a Pod, a CR only describes what you *want*. You need a **Controller** to make it happen (Actual State).
+- **CKAD Tip:** If an exam question asks you to "List all resources of type X" and standard `k get` doesn't work, first check `k api-resources` to see if it's a Custom Resource.
 
 ---
 
-## ✅ Exam Tips (CKAD)
-
-You may be asked to:
-
-- Inspect existing CRDs (`kubectl get crd`)
-- Create Custom Resource instances (`kubectl apply -f ...`)
-- Understand who is responsible for acting on them
-
-You will **NOT** be asked to:
-- Write Go controllers
-- Build full Operators
+## 🔗 References
+- **Comic** → [The Nightly Backup Permit](../../../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
+- **Docs** → [Understanding CRDs](../../../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
+- **Study Guide** → [Chapter 4: Extending K8s](../../../../sources/study-guide/ch04-extending-k8s.md)

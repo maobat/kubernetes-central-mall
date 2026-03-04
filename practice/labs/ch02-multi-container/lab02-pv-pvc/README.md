@@ -1,4 +1,4 @@
-# Lab 01 – Storage: Persistent Volumes & Claims
+# 🧪 LAB 02: Warehouse Safes (PV & PVC)
 
 ## Storage – Data Persistence & Volume Management
 
@@ -6,104 +6,69 @@
 
 ## 🎯 Lab Goal
 
-This lab focuses on **managing stateful data** in Kubernetes using **PersistentVolumes (PV)** and **PersistentVolumeClaims (PVC)**.
-
-You will learn how to:
+This lab focuses on **managing stateful data** using **PersistentVolumes (PV)** and **PersistentVolumeClaims (PVC)**. You will learn how to:
 - Create a **PersistentVolume (PV)** representing physical storage.
 - Create a **PersistentVolumeClaim (PVC)** to request storage.
-- Mount the PVC into a **Pod** to persist data.
-- Verify that data survives Pod restarts (persistence).
+- Mount the PVC into a **Pod** to persist data across restarts.
 
-This is a **core CKAD topic**.
-
----
-
-## 📖 Related Comic
-👉 [visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md](../../../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
-
-It explains **PVs, PVCs, and Mounting** using a warehouse analogy.
+> **CKAD Importance:** Very High. You will almost certainly have to mount a volume or create a PVC during the exam.
 
 ---
 
-## 📘 Reference Docs
+## 🛍️ Mall Analogy
 
-- Access Modes (RWO vs RWM) → [`docs/md-resources/access-modes-rwo-vs-rwm.md`](../../../../reference/md-resources/access-modes-rwo-vs-rwm.md)
-- PV Creation → [`docs/md-resources/creating-a-persistentvolume.md`](../../../../reference/md-resources/creating-a-persistentvolume.md)
-- PVC Binding → [`docs/md-resources/pvc-definition-binding.md`](../../../../reference/md-resources/pvc-definition-binding.md)
-- Static vs Dynamic → [`docs/md-resources/static-vs-dynamic-provisioning.md`](../../../../reference/md-resources/static-vs-dynamic-provisioning.md)
+In the **Central Mall**, if a shop wants to keep inventory safe even when the staff changes, they need a dedicated space in the basement.
+
+- **The Warehouse Unit (PV)** → A physical safe located in the mall's basement. It has a specific size (1Gi) and access rules (Who can open it).
+- **The Rental Contract (PVC)** → A ticket the shop owner takes to the Mall Manager. "I need a 500MB safe." The manager looks at the basement and matches the contract to an available unit.
+- **The Chute (Volume Mount)** → The physical connection between the shop upstairs and the safe in the basement.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **PersistentVolume** | The actual physical storage units in the basement. |
+| **PersistentVolumeClaim** | The request for a unit. |
+| **accessModes** | "Is this unit for one clerk (RWO) or many (RWM)?" |
+| **storageClassName** | "Is this a standard locker or a high-speed SSD safe?" |
 
 ---
 
 ## 📋 Requirements
 
-1. Create a **PersistentVolume** named `task-pv-volume`
-   - Class: `manual`
+1. **Create a PersistentVolume** named `task-pv-volume`:
    - Capacity: `1Gi`
    - Access: `ReadWriteOnce`
-   - HostPath: `/mnt/data`
+   - StorageClass: `manual`
+   - Path: `/mnt/data` (on the host)
 
-2. Create a **PersistentVolumeClaim** named `task-pv-claim`
+2. **Create a PersistentVolumeClaim** named `task-pv-claim`:
    - Request: `500Mi`
-   - Class: `manual`
+   - Access: `ReadWriteOnce`
+   - StorageClass: `manual`
 
-3. Create a **Pod** named `task-pv-pod`
+3. **Create a Pod** named `task-pv-pod`:
    - Image: `nginx`
-   - Mount the PVC to `/usr/share/nginx/html`
-
-4. **Verify Persistence**:
-   - Write a file to the mount path.
-   - Delete and recreate the Pod.
-   - Verify the file still exists.
+   - Mount: Connect `task-pv-claim` to `/usr/share/nginx/html`.
 
 ---
 
-## 🏬 Mall Analogy
+## 🛠️ Step-by-Step Solution
 
-| Kubernetes Concept | Mall Analogy |
-|-------------------|-------------|
-| **PersistentVolume (PV)** | A physical **Warehouse Unit** in the mall basement. |
-| **PersistentVolumeClaim (PVC)** | A **Rental Contract** (ticket) allowing a shop to use a unit. |
-| **Volume Mount** | The **Elevator/Chute** connecting the shop to the warehouse. |
-| **StorageClass** | The **Type of Warehouse** (Standard, Premium/SSD, etc.). |
-
----
-
-## 🛠️ Solution
-
-### 1️⃣ Create the PersistentVolume (PV)
-
-This represents the actual physical storage available in the cluster (or on the node, in this case).
-
-👉 [Lab 01 - The Nightly Backup Permit](./pv.yaml)
-
+### 1. The Warehouse Unit (PV)
 ```yaml
 apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: task-pv-volume
-  labels:
-    type: local
 spec:
   storageClassName: manual
   capacity:
     storage: 1Gi
-  accessModes:
-    - ReadWriteOnce
+  accessModes: [ "ReadWriteOnce" ]
   hostPath:
     path: "/mnt/data"
 ```
 
-Apply it:
-```bash
-kubectl apply -f pv.yaml
-```
-
-### 2️⃣ Create the PersistentVolumeClaim (PVC)
-
-This is the request for storage. Kubernetes looks for a PV that matches the request.
-
-👉 [Lab 01 - The Rental Contract](./pvc.yaml)
-
+### 2. The Rental Contract (PVC)
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -111,27 +76,13 @@ metadata:
   name: task-pv-claim
 spec:
   storageClassName: manual
-  accessModes:
-    - ReadWriteOnce
+  accessModes: [ "ReadWriteOnce" ]
   resources:
     requests:
       storage: 500Mi
 ```
 
-Apply it:
-```bash
-kubectl apply -f pvc.yaml
-```
-
-**Verify Binding:**
-```bash
-kubectl get pvc task-pv-claim
-# STATUS should be 'Bound'
-```
-
-### 3️⃣ Create the Pod with the Mounted Volume
-
-👉 [Lab 01 - The Delivery Truck](./pod.yaml)
+### 3. The Shop (Pod)
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -139,52 +90,52 @@ metadata:
   name: task-pv-pod
 spec:
   volumes:
-    - name: task-pv-storage
-      persistentVolumeClaim:
-        claimName: task-pv-claim
+  - name: storage-locker
+    persistentVolumeClaim:
+      claimName: task-pv-claim
   containers:
-    - name: task-pv-container
-      image: nginx
-      ports:
-        - containerPort: 80
-          name: "http-server"
-      volumeMounts:
-        - mountPath: "/usr/share/nginx/html"
-          name: task-pv-storage
-```
-
-Apply it:
-```bash
-kubectl apply -f pod.yaml
+  - name: clerk
+    image: nginx
+    volumeMounts:
+    - name: storage-locker
+      mountPath: "/usr/share/nginx/html"
 ```
 
 ---
 
-### 🔎 Verification (Persistence Test)
+## 🔎 Verification
 
-1. **Exec into the Pod and create a file in the volume:**
+1. **Check Binding:**
    ```bash
-   kubectl exec task-pv-pod -- sh -c "echo 'Hello from Persistent Storage' > /usr/share/nginx/html/index.html"
+   k get pv,pvc
+   # The PVC status must be 'Bound'. If it's 'Pending', check the StorageClass.
    ```
 
-2. **Verify the file exists:**
+2. **Test Persistence:**
    ```bash
-   kubectl exec task-pv-pod -- cat /usr/share/nginx/html/index.html
+   # 1. Write data
+   k exec task-pv-pod -- sh -c "echo 'Warehouse Secret' > /usr/share/nginx/html/index.html"
+   
+   # 2. Simulate a crash
+   k delete pod task-pv-pod
+   
+   # 3. Recreate and verify
+   k apply -f pod.yaml
+   k exec task-pv-pod -- cat /usr/share/nginx/html/index.html
    ```
 
-3. **Delete the Pod (simulate a crash/restart):**
-   ```bash
-   kubectl delete pod task-pv-pod
-   ```
+---
 
-4. **Recreate the Pod:**
-   ```bash
-   kubectl apply -f pod.yaml
-   ```
+## 🧠 Key Takeaways
 
-5. **Verify the file is still there:**
-   ```bash
-   kubectl exec task-pv-pod -- cat /usr/share/nginx/html/index.html
-   ```
+- **Static Provisioning:** This lab uses static provisioning (pre-creating the PV). In production, `StorageClasses` usually create the PV automatically when you submit a PVC.
+- **Labels & Selectors:** You can use labels on PVs and selectors on PVCs to ensure a specific shop gets a specific safe.
+- **Reclaim Policy:** `Retain` means the safe isn't wiped when the contract ends; `Delete` means the safe is destroyed.
+- **CKAD Tip:** If your PVC is stuck in `Pending`, use `kubectl describe pvc` to find out why. Usually, it's a mismatch in `accessModes` or `storageClassName`.
 
-✅ **If you see "Hello from Persistent Storage", persistence is working!**
+---
+
+## 🔗 References
+- **Comic** → [Warehouse Safes](../../../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
+- **Docs** → [PV Creation](../../../../reference/md-resources/creating-a-persistentvolume.md) | [PVC Binding](../../../../reference/md-resources/pvc-definition-binding.md)
+- **Study Guide** → [Chapter 2: Storage](../../../../sources/study-guide/ch02-multi-container.md)

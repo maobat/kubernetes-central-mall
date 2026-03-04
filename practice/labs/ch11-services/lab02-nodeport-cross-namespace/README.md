@@ -1,116 +1,96 @@
-# 🧪 LAB 02 – NodePort & Cross-Namespace Communication
-## Services and Networking – Managing Services
+# 🧪 LAB 02: The Side Entrance (NodePort & Multi-Namespace)
+
+## Services and Networking – Cross-Wing Communication
 
 ---
 
 ## 🎯 Lab Goal
-This lab focuses on **Service exposure** and **cross-namespace communication**. You will learn to expose a Pod using a NodePort Service and access it from a different "wing" of the cluster.
+
+This lab focuses on **Service exposure** and **cross-namespace communication**. You will learn how to expose a shop to the outside world using a **NodePort** and how workers in different "wings" (Namespaces) can still talk to each other using the Full Qualified Domain Name (FQDN).
+
+> **CKAD Importance:** Very High. NodePort is the standard way to expose services in many exam tasks, and multi-namespace connectivity is a frequent troubleshooting topic.
 
 ---
 
-## 📖 Related Comic
-👉 [visual-learning/comics/ch11-services/02-cross-namespace/README.md](../../../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+## 🛍️ Mall Analogy
 
----
+We are opening a luxury boutique in a brand-new wing of the mall called **"remote"**.
 
-
-
----
-
-## 🏬 Mall Analogy
-We are opening a boutique in a new, separate wing of the mall called **"remote"**.
+- **The New Wing (Namespace: remote)** → A separate area with its own staff and rules.
+- **The Boutique (Pod: remoteweb)** → The shop itself, hidden deep in the `remote` wing.
+- **The Side Entrance (NodePort)** → A literal door on the outside wall of the mall (`port 31999`). Customers on the street can enter here directly without going through the main lobby.
+- **The Long Intercom (FQDN)** → If a worker in the `default` wing wants to call the boutique, they can't just dial `remoteweb`. They have to use the full address: `remoteweb.remote.wing.mall`.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Namespace: remote** | A new, separate wing of the mall. |
-| **Pod: remoteweb** | The Nginx boutique store. |
-| **Service: NodePort** | A shop sign with a street-level entrance. |
-| **NodePort: 31999** | The specific gate number on the mall exterior. |
-| **testpod (BusyBox)** | A worker in the default wing testing the internal intercom. |
+| **NodePort** | A gate on the exterior wall of the mall. |
+| **Namespace** | A distinct wing of the mall. |
+| **FQDN** | The full mailing address including the wing name. |
 
 ---
 
 ## 📋 Requirements
-1. Create a Namespace named **`remote`**.
-2. In the `remote` Namespace:
-   - Run an **Nginx Pod** named `remoteweb`.
-   - Expose it via **NodePort Service** on port **31999**.
-3. In the **default** Namespace:
-   - Run a **BusyBox Pod** named `testpod`.
-4. **Verification:**
-   - Internal: `testpod` must reach `remoteweb` via DNS.
-   - External: Reach the page via **Minikube IP + 31999**.
+
+1. **Namespace**: Create a wing named `remote`.
+2. **Shop**: Run `remoteweb` (nginx) inside the `remote` namespace.
+3. **Entrance**: Expose it on the exterior wall using **NodePort 31999**.
+4. **Intercom**: Verify that a worker in the `default` namespace can reach it.
 
 ---
 
-## 🛠️ Solution
+## 🛠️ Step-by-Step Solution
 
-### 1. Build the Remote Wing and the Store
+### 1. Build the Wing and the Store
 ```bash
-# Create the new Namespace
-kubectl create ns remote
-
-# Run the Nginx Pod inside it
-kubectl -n remote run remoteweb --image=nginx
+k create ns remote
+k run remoteweb --image=nginx -n remote
 ```
 
-### 2. Install the Side Entrance (NodePort Service)
+### 2. Install the Side Entrance (NodePort)
 ```bash
-# Generate the manifest first
-kubectl -n remote expose pod remoteweb \
-  --port=80 \
-  --type=NodePort \
-  --dry-run=client -o yaml > svc-nodeport.yaml
+k expose pod remoteweb -n remote --port=80 --type=NodePort --overrides='{"spec":{"ports":[{"port":80,"nodePort":31999}]}}'
 ```
 
-**Edit `svc-nodeport.yaml` to add the `nodePort` field:**
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: remoteweb
-  namespace: remote
-spec:
-  type: NodePort
-  selector:
-    run: remoteweb
-  ports:
-    - port: 80
-      targetPort: 80
-      nodePort: 31999
-```
-
+### 3. Test the Long Intercom (Cross-Namespace)
 ```bash
-kubectl apply -f svc-nodeport.yaml
-```
+# Start a test worker in the DEFAULT wing
+k run testpod --image=busybox -- sleep infinity
 
-### 3. Test Access (The "Mall Phone Call")
-Create a worker in the **default** Namespace and call the boutique in the **remote** wing.
-
-```bash
-# Start the test worker
-kubectl run testpod --image=busybox -- sleep infinity
-
-# Test internal DNS connectivity
-kubectl exec testpod -- wget --spider --timeout=1 remoteweb.remote.svc.cluster.local
+# Dial the remote wing using FQDN
+k exec testpod -- wget -qO- remoteweb.remote.svc.cluster.local
 ```
 
 ---
 
-## 🔎 Verification Results
+## 🔎 Verification
 
-✅ **Internal Check:** Successful connection via `remoteweb.remote`.
-✅ **External Check:** `curl $(minikube ip):31999` returns "Welcome to nginx!".
+1. **Internal Check:**
+   ```bash
+   k exec testpod -- nslookup remoteweb.remote
+   # DNS should resolve to the Service IP in the remote namespace.
+   ```
+
+2. **External Check:**
+   ```bash
+   curl $(minikube ip):31999
+   # Should return "Welcome to nginx!" from outside the cluster.
+   ```
 
 ---
 
-## 🧰 Study Toolbox
+## 🧠 Key Takeaways
 
-* 🖼️ **Comic:** [The Internal Intercom (ClusterIP)](../../../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
-* 🖼️ **Comic:** [The NodePort Traffic Adventure](../../../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
-* 📄 **Doc:** [Service IP Tracker Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)
+- **NodePort Range:** By default, NodePorts must be between **30000-32767**.
+- **FQDN Anatomy:** `<service>.<namespace>.svc.cluster.local`. This is how you navigate between wings.
+- **Port vs TargetPort vs NodePort:**
+  - `port`: Exposed on the Service.
+  - `targetPort`: The port the application is listening on.
+  - `nodePort`: The port exposed on the physical server.
+- **CKAD Tip:** If you forget the FQDN, just remember: `service-name.namespace`. Usually, that's enough for `wget` or `curl` to find the target.
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch11-services.md](../../../../sources/study-guide/ch11-services.md)
+## 🔗 References
+- **Comic** → [NodePort Traffic Adventure](../../../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+- **Docs** → [NodePort Service](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)
+- **Study Guide** → [Chapter 11: Services](../../../../sources/study-guide/ch11-services.md)

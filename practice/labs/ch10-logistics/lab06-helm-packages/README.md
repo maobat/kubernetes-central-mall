@@ -1,139 +1,111 @@
-# LAB 06 – Logistics Tools: Helm & Kustomize
+# 🧪 LAB 06: Prefab Stores & Blueprint Overlays (Helm & Kustomize)
+
+## Logistics Tools – Managing Complex Manifests
 
 ---
 
 ## 🎯 Lab Goal
-Learn how to deploy "Prefabricated Stores" (Helm Charts) and how to overlay "Custom Blueprints" (Kustomize) on top of standard Mall layouts.
 
----
+Learn how to manage Kubernetes resources at scale. You will use **Helm** to deploy fully "Prefabricated stores" from a catalog and **Kustomize** to apply custom overlays (like stickers or new paint) to standard blueprints without changing the original source.
 
-## 📖 Related Chapter
-👉 [Chapter 10: Logistics Tools](../../../sources/study-guide/ch10-management.md)
-
----
-
-## 📖 Related Comic
-👉 [visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md](../../../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+> **CKAD Importance:** Medium-High. You must know basic Helm commands (`install`, `list`, `uninstall`) and how to use `kubectl apply -k`.
 
 ---
 
 ## 🛍️ Mall Analogy
-- **Helm:** Ordering a fully prefabricated store from a catalog (like a Bitnami MySQL store). You tell the factory "I want 3 registers and blue paint" via a `values.yaml` form.
-- **Kustomize:** Taking a standard floor plan (base) and putting a piece of tracing paper over it (overlay) to cross out "1 Register" and draw in "5 Registers".
+
+In the **Central Mall**, we have two ways of building shops:
+
+- **The Store-in-a-Box (Helm)** → You order a fully built MariaDB or WordPress shop from a catalog. You just fill out a form (`values.yaml`) to say how many registers you want, and the factory delivers the whole thing.
+- **The Blueprint Overlay (Kustomize)** → You have a standard "Base" blueprint for a generic coffee shop. Instead of drawing on the original blueprint, you put a piece of tracing paper (Overlay) over it. You draw "Big Neon Sign" on the paper, and the final shop looks like the base *plus* your neon sign.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **Helm** | A package manager for full applications. |
+| **Values.yaml** | The order form for your prefab store. |
+| **Kustomize** | A tool to modify existing YAMLs without editing them. |
+| **Base / Overlay** | The original blueprint and the custom "tracing paper." |
 
 ---
 
-## 📦 Part 1: Helm (The Prefab Store)
+## 📋 Requirements
 
-**Step 1.1: Add the Bitnami Catalog (Repo)**
+1. **Helm**: Install an Nginx chart from the Bitnami repo with 2 replicas.
+2. **Kustomize**:
+   - Create a **Base** deployment (1 replica).
+   - Create a **Staging Overlay** that patches the base to use 3 replicas.
+   - Deploy using `kubectl -k`.
+
+---
+
+## 🛠️ Step-by-Step Solution
+
+### 1. Helm: The Prefab Delivery
 ```bash
+# Add repo and update
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
+
+# Customize and install
+helm install my-mall bitnami/nginx --set replicaCount=2
 ```
 
-**Step 1.2: Inspect the Blueprint (Show Values)**
-Before buying, let's see what options we can customize:
-```bash
-helm show values bitnami/nginx > nginx-values.yaml
-```
-
-**Step 1.3: Customize the Order**
-Edit `nginx-values.yaml` and change `replicaCount: 1` to `replicaCount: 2`.
-
-**Step 1.4: Install the Store**
-Install the NGINX store using your custom order form:
-```bash
-helm install my-mall-nginx bitnami/nginx -f nginx-values.yaml
-```
-
-**Step 1.5: Verify the Delivery**
-```bash
-helm list
-kubectl get pods
-# You should see two NGINX pods running.
-```
-
----
-
-## 📐 Part 2: Kustomize (The Blueprint Overlay)
-
-**Step 2.1: Create the Base Blueprint**
-Create a directory `base/` and put a simple Deployment in it:
+### 2. Kustomize: The Blueprint Surgery
+Create the **Base**:
 ```bash
 mkdir base
-cat <<EOF > base/deployment.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mall-app
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: mall
-  template:
-    metadata:
-      labels:
-        app: mall
-    spec:
-      containers:
-      - name: app
-        image: nginx:alpine
+# [Create deployment.yaml inside base/]
+cat <<EOF > base/kustomization.yaml
+resources:
+- deployment.yaml
 EOF
 ```
 
-Create exactly `base/kustomization.yaml`:
-```yaml
-resources:
-- deployment.yaml
-```
-
-**Step 2.2: Create the Staging Overlay**
-Create a directory `overlays/staging/`:
+Create the **Overlay**:
 ```bash
 mkdir -p overlays/staging
-```
-
-Create an overlay that changes the replicas to 3 without touching the base deployment file:
-```yaml
-# overlays/staging/kustomization.yaml
+# [Create patch.yaml to set replicas: 3]
+cat <<EOF > overlays/staging/kustomization.yaml
 resources:
 - ../../base
 patchesStrategicMerge:
 - patch.yaml
+EOF
 ```
 
-```yaml
-# overlays/staging/patch.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mall-app
-spec:
-  replicas: 3
-```
-
-**Step 2.3: Build and Apply the Blueprint**
-Instead of applying the base, apply the overlay using `-k`:
+Apply the final result:
 ```bash
 kubectl apply -k overlays/staging
-kubectl get pods
-# You should see three pods running!
 ```
 
 ---
 
-## 🧹 Cleanup
-```bash
-helm uninstall my-mall-nginx
-kubectl delete -k overlays/staging
-```
+## 🔎 Verification
+
+1. **Helm Check:**
+   ```bash
+   helm list
+   kubectl get pods -l app.kubernetes.io/name=nginx
+   # Should see 2 pods.
+   ```
+
+2. **Kustomize Check:**
+   ```bash
+   kubectl get pods -l app=mall
+   # Should see 3 pods (the overlay worked!).
+   ```
 
 ---
 
-## 🧠 Key Takeaways for CKAD
+## 🧠 Key Takeaways
 
-- **Helm** uses `helm install` and `helm upgrade`, customizing via `values.yaml`.
-- **Kustomize** is built natively into `kubectl apply -k`. It applies overlays to base resources using `patchesStrategicMerge` or `patchesJson6902`.
-- You don't need to write complex Helm templates in the exam, but you *must* know how to pull a chart, modify its values, and deploy it.
-- For Kustomize, practice creating `kustomization.yaml` files and changing basic fields like replicas or image versions.
+- **Helm for Consumption:** Use Helm when you want to deploy someone else's complex app (like Prometheus or Postgres).
+- **Kustomize for Development:** Use Kustomize to manage your *own* apps across environments (Dev, Test, Prod) while keeping the base logic clean.
+- **CKAD Tip:** `kubectl apply -k` is the magic command for Kustomize. You will likely see one question asking you to apply a kustomization directory.
+
+---
+
+## 🔗 References
+- **Comic** → [Logistics Chain](../../../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+- **Docs** → [Helm Docs](https://helm.sh/docs/) | [Kustomize Docs](https://kustomize.io/)
+- **Study Guide** → [Chapter 10: Management](../../../sources/study-guide/ch10-management.md)

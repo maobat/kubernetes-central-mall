@@ -1,201 +1,96 @@
-# Lab 01,  👁️ Observability. The Health Inspector (Liveness Probes)
+# 🧪 LAB 01: The Health Inspector (Liveness Probes)
 
+## Observability – Automated Self-Healing
 
 ---
+
 ## 🎯 Lab Goal
 
-Understand **how Kubernetes detects unhealthy containers** using **Liveness Probes** and what happens **when a probe fails**.
+Understand how Kubernetes detects and fixes unhealthy containers using **Liveness Probes**. You will observe what happens when a worker "faints" (fails a probe) and how the Mall Manager (Kubernetes) handles the situation based on the `restartPolicy`.
 
-You will observe how Kubernetes:
-
-- Checks if a container is still alive
-- Marks a Pod as failed when health checks fail
-- **Does NOT restart** the Pod when `restartPolicy: Never` is used
----
-
-## 📖 Related Comic
-👉 [visual-learning/comics/ch14-probes/01-the-health-inspector/README.md](../../../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
+> **CKAD Importance:** Very High. You must know how to configure `livenessProbe` and `readinessProbe` and understand their different effects.
 
 ---
-
-## 📘 Reference Docs
-
-- Troubleshooting: Probes & Health Checks → [`docs/md-resources/troubleshooting-kubernetes.md`](../../../../reference/md-resources/troubleshooting-kubernetes.md)
-
----
-
-
 
 ## 🛍️ Mall Analogy
 
-| **Kubernetes Concept** | **Mall Analogy** |
-|-------------------|-------------|
-| Liveness Probe | Security Guard checking the worker |
-| `initialDelaySeconds` | Time to put on the uniform before inspection |
-| `periodSeconds` | Guard walks by every X seconds |
-| httpGet `/healthz` | “Are you okay?” check |
-| `restartPolicy: Never` | The worker is fired and **never rehired** |
+In the **Central Mall**, we have a dedicated **Health Inspector** who walks the floors.
 
-A **Security Guard** periodically checks a shop worker.
-If the worker doesn’t respond, the shift is terminated.
+- **The Worker (Container)** → A shop assistant at their station.
+- **The Health Check (Liveness Probe)** → The Inspector stops by every few minutes and asks, "Are you still conscious?" (HTTP GET).
+- **The Startup Time (initialDelaySeconds)** → The worker is allowed 30 seconds to get their coffee and set up before the Inspector starts checking.
+- **The Faint (Failure)** → If the worker doesn't respond for 3 checks in a row, the Inspector declares an emergency.
+- **The Firing (Never Restart)** → If `restartPolicy` is set to `Never`, the worker is sent home and the station remains empty for safety investigation.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **Liveness Probe** | "Are you still alive?" check. |
+| **Readiness Probe** | "Are you ready for customers?" check. |
+| **initialDelaySeconds** | Grace period to let the app start up. |
 
 ---
 
-## 🛠️ Steps
+## 📋 Requirements
 
-### Step 1, Create the Blueprint
+1. **Pod**: Create `probed` (nginx).
+2. **Liveness Probe**: Add an HTTP check to `/healthz` on port 80.
+3. **Restart Policy**: Set to `Never` to observe the terminal failure.
+4. **Observe**: Watch the Pod transition from `Running` to `Completed` as the probe fails.
 
-Define a Pod with a **Liveness Probe** using an HTTP check.
+---
 
-> ⚠️ CKAD-style note
-> nginx does not expose /healthz by default.
-> This is intentional: a failing probe lets you **no observe restart behavior** beacuse of `--restart=Never` parameter, which is exactly what this lab is about.
+## 🛠️ Step-by-Step Solution
 
-### 1️⃣ Generate a skeleton imperatively
+### 1. Create the Blueprint
+Generate a skeleton:
 ```bash
-kubectl run probed \
-  --image=nginx \
-  --restart=Never \
-  --port=80 \
-  --dry-run=client -o yaml > healthz_probe.yaml
+k run probed --image=nginx --restart=Never --dry-run=client -o yaml > probe.yaml
 ```
----
-### 2️⃣ Edit and add the livenessProbe
 
-Open the file and add **only** the probe:
-
+### 2. Add the Health Inspector
+Edit `probe.yaml` to include the probe:
 ```yaml
 livenessProbe:
   httpGet:
-    path: /healthz
+    path: /healthz # This will fail in standard Nginx
     port: 80
   initialDelaySeconds: 30
   periodSeconds: 10
 ```
 
-Then apply:
-
+### 3. Apply and Watch
 ```bash
-kubectl apply -f healthz_probe.yaml
-```
-
-
-Watch the Pod status and no restart count:
-```shell
+k apply -f probe.yaml
 k get pod probed -w
-
-NAME     READY   STATUS              RESTARTS   AGE
-probed   0/1     ContainerCreating   0          2s
-probed   1/1     Running             0          3s
-probed   1/1     Running             0          61s
-probed   0/1     Completed           0          61s
-probed   0/1     Completed           0          63s
-```
-
-Here is the step-by-step breakdown of what happened:
-
-## 1. The Startup (0s - 3s)
-The Pod goes from `ContainerCreating` to `Running`. At this point, Nginx is up, but the **Liveness Probe** hasn't started yet because of your `initialDelaySeconds: 30`.
-
-## 2. The Grace Period (3s - 61s)
-For about 58 seconds, the Pod stays `1/1 Running`.
-
-- **The First 30s:** Kubernetes is waiting (initial delay).
-- **The Next 30s:** The probe starts running every 10 seconds. It checks `http://<pod-ip>:80/healthz`.
-- **The Failure:** Since standard Nginx does not have a `/healthz` path by default, it returns a `404 Not Found`.
-
-## 3. The "Death" (61s)
-By default, the `failureThreshold` is 3.
-
-- Probe 1 (at 30s): Fails.
-- Probe 2 (at 40s): Fails.
-- Probe 3 (at 50s): Fails.
-- Once the threshold is hit, Kubernetes decides the container is "dead" and kills the process.
-
-## 4. Why it says Completed instead of Error
-This is the most interesting part of your output. Because Nginx received the "kill" signal from Kubernetes and shut down gracefully, and because you set:
-`restartPolicy: Never`
-
-Kubernetes says: <i>"The container finished. I'm not allowed to restart it, so I'll just mark the Pod as 'Completed' and leave it there."</i> If your policy was `Always`, you would see the `RESTARTS` count jump to 1 and the status go back to `Running`.
-
----
-
-### Summary Table
-
-| Time | Status | Ready | What's happening? |
-|------|--------|-------|-------------------|
-| 2s | ContainerCreating | 0/1 | Pulling image/Starting. |
-| 3s | Running | 1/1 | Nginx is alive; Probe is waiting 30s. |
-| 61s | Running | 1/1 | 3 failed probes later, Kube kills the container. |
-| 61s+ | Completed | 0/1 | Process exited. restartPolicy: Never prevents a reboot. |
-
----
-
-🔍 **What You Are Observing**
-
-Typical lifecycle:
-
-- `0/1 Running`
-  Pod exists, but the probe hasn’t run or passed yet
-
-- `1/1 Running`
-  Probe passed → worker is “open for business”
-
-- `RESTARTS` **no increasing**
-  Probe is failing → Because of `restartPolicy: Never` Kubernetes kills and **does not recreate** the Pod
-
-In this lab, `/healthz` returns 404, so the Liveness Probe fails and the Pod is **not restarted**.
-
-If you want this Pod to stay running, you should change the path to one that actually exists in Nginx (like the default index):
-```yaml
-      httpGet:
-        path: /  # Use / instead of /healthz
-        port: 80
 ```
 
 ---
 
-### ⚠️ CKAD Notes
+## 🔎 Verification
 
-**Liveness ≠ Readiness**
+1. **Observe the Failure:**
+   - At 30s: Probes start.
+   - At 60s: After 3 failures (Nginx returns 404 for `/healthz`), the container is killed.
+   - Status: Moves to `Completed` because `restartPolicy: Never` prevents a reboot.
 
-- **Liveness** → kills and restarts the Pod
-- **Readiness** → removes the Pod from traffic
-
-Confusing the two is a **classic exam trap**.
-
-### Initial Delay Matters
-
-- Too short → `CrashLoopBackOff`
-
-- Always give the app time to start before probing
+2. **Check the Management Report:**
+   ```bash
+   k describe pod probed
+   # Look for 'Unhealthy' events in the log.
+   ```
 
 ---
 
-### Endpoints Must Exist
+## 🧠 Key Takeaways
 
-- Wrong path or port = **infinite restarts**
-
-- Always verify:
-  - Path
-  - Port
-  - Startup time
+- **Liveness kills Pods:** If a liveness probe fails, Kubernetes terminates the container to try and fix it (if allowed by policy).
+- **Readiness hides Pods:** If a readiness probe fails, Kubernetes just stops sending traffic to the pod (Service stops routing to it).
+- **Grace Periods are Critical:** If your `initialDelaySeconds` is too short, Kubernetes might kill your app before it even finishes starting up!
+- **CKAD Tip:** Confusing Liveness and Readiness is a classic exam trap. Remember: **Liveness restarts, Readiness removes.**
 
 ---
 
-🧠 Key Takeaways
-
-Liveness Probes answer **one brutal question**:
-
-> “Should this Pod be restarted?”
-
-Kubernetes is strict by design:
-
-- Failing health → **replace immediately**
-- No debugging, no mercy
-
-Mastering Liveness Probes means mastering **self-healing workloads**, a core CKAD skill.
----
-
-## 📖 Related Chapter
-👉 [sources/study-guide/ch14-probes.md](../../../../sources/study-guide/ch14-probes.md)
+## 🔗 References
+- **Comic** → [The Health Inspector](../../../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
+- **Docs** → [Configure Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+- **Study Guide** → [Chapter 14: Observability](../../../../sources/study-guide/ch14-probes.md)

@@ -1,120 +1,94 @@
-# LAB 03 – Using Secrets to Inject Sensitive Configuration
+# 🧪 LAB 03: The High-Security Vault (Secrets)
 
-## Security – Secrets & Environment Variables
-
-   
+## Environment & Configuration – Handling Sensitive Data
 
 ---
 
 ## 🎯 Lab Goal
 
-This lab demonstrates how to:
-- Store sensitive data using a **Kubernetes Secret**
-- Inject secret values into a **Deployment** as environment variables
-- Safely configure an application without hardcoding credentials
+This lab demonstrates how to handle **sensitive data** (passwords, tokens) in Kubernetes. You will learn how to:
+- Store sensitive data using a **Kubernetes Secret**.
+- Inject secret values into a **Deployment** as environment variables.
+- Use **Prefixing** to map internal keys to application-specific variables.
 
-This is a **high-probability CKAD topic**.
-
----
-
-## 📖 Related Comic
-👉 [visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md](../../../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
-
-It explains **Secrets, Deployment, and Environment Variable Injection** in a CKAD-friendly way.
+> **CKAD Importance:** Very High. Handling sensitive data correctly is a key security requirement for the exam.
 
 ---
 
-## 📘 Reference Docs
+## 🛍️ Mall Analogy
 
-- Core Concepts: ConfigMaps & Secrets → [`docs/md-resources/core-concepts-configmaps-secrets-and-security.md`](../../../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
+In the **Central Mall**, some things can't be posted on the breakroom board.
 
-- Secrets: Use Cases & Application Integration → [`docs/md-resources/secrets-use-cases-and-application-integration.md`](../../../../reference/md-resources/secrets-use-cases-and-application-integration.md) 
+- **The High-Security Vault (Secret)** → A literal safe with a combination. Only authorized staff know how to open it.
+- **The Secret Whisper (Env Injection)** → Instead of printing the code, the manager whispers it to the worker exactly when they need it.
+- **The Application Requirement** → The MariaDB shop *requires* the vault code to open its doors.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **Secret** | A secure storage for sensitive data. |
+| **Environment Variable** | Injecting the confidential data into the process. |
+| **Prefixing** | Renaming a general code (ROOT) to a specific one (MARIADB_ROOT). |
 
 ---
 
 ## 📋 Requirements
 
-1. Create a **Deployment** named `secretlab`
+1. **Create a Secret** named `supersecret`:
+   - Key: `PASSWORD` -> Value: `password`
+2. **Deploy MariaDB** named `secretlab`:
    - Image: `mariadb`
-2. Create a **Secret** named `supersecret`
-   - Key: `ROOT_PASSWORD`
-   - Value: `password`
-3. Ensure the Deployment receives:
-   - `MARIADB_ROOT_PASSWORD=password`
+   - Requirement: Inject the password from the secret as `MARIADB_ROOT_PASSWORD`.
 
 ---
 
-## 🏬 Mall Analogy
+## 🛠️ Step-by-Step Solution
 
-We are opening a **high-security vault** in the mall.
+### 1. Create the Vault (Secret)
+```bash
+k create secret generic supersecret --from-literal=PASSWORD=password
+```
 
-The password:
-- Must be stored in a **locked safe**
-- Must be handed to staff **without writing it on the wall**
+### 2. Deploy the Shop
+```bash
+k create deploy secretlab --image=mariadb
+```
 
-| Kubernetes Concept | Mall Analogy |
-|-------------------|-------------|
-| **Secret** | Locked safe with a combination |
-| **Deployment** | Vault control room |
-| **Env Variable Injection** | Secure whisper to staff |
-| **MARIADB_ROOT_PASSWORD** | Master vault code |
+### 3. The Secret Whisper (Injection)
+Use the `set env` command with a prefix to match what MariaDB expects!
+```bash
+k set env deployment/secretlab --from=secret/supersecret --prefix=MARIADB_ROOT_
+```
+*Internal result:* `PASSWORD` becomes `MARIADB_ROOT_PASSWORD`.
 
 ---
-
-## 🛠️ Solution
-```bash
-kubectl create deployment secretlab --image=mariadb
-```
-
-### 2️⃣ Create the Secret
-```bash
-kubectl create secret generic supersecret \
-  --from-literal=ROOT_PASSWORD=password
-```
-
-Verify it exists:
-
-```bash
-kubectl get secret supersecret
-```
-### 3️⃣ Inject the Secret into the Deployment
-
-```bash
-kubectl set env deployment/secretlab \
-  --from=secret/supersecret \
-  --prefix=MARIADB_
-```
-This produces:
-```nginx
-ROOT_PASSWORD  →  MARIADB_ROOT_PASSWORD
-```
-Exactly what MariaDB expects.
 
 ## 🔎 Verification
-### Check the Environment Variable
-```bash
-kubectl exec deploy/secretlab -- env | grep MARIADB
-```
 
-✅ **Expected result:**
+1. **Check the Badge (Env):**
+   ```bash
+   k exec deploy/secretlab -- env | grep MARIADB
+   # Output: MARIADB_ROOT_PASSWORD=password
+   ```
 
-```
-ROOT_PASSWORD=password
-```
-## 🧠 Expert Summary
+2. **Check Secret Encoding:**
+   Remember that secrets are Base64 encoded, not encrypted by default!
+   ```bash
+   k get secret supersecret -o yaml
+   # Notice the value is scrambled (base64).
+   ```
 
-- Secrets decouple **sensitive data** from application manifests
-- Prefixing allows clean mapping to application-specific variables
-- No passwords are stored in YAML or images
-- This pattern is **CKAD gold**
-
-### 📝 Key Takeaways (Exam Mode)
-
-- Prefer `kubectl create secret generic`
-- Use `kubectl set env --from=secret`
-- Know application-specific env variable names
-- Never hardcode secrets into Deployments
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch05-configuration.md](../../../../sources/study-guide/ch05-configuration.md)
+## 🧠 Key Takeaways
+
+- **Security:** Secrets avoid putting passwords in plain text in your YAML files or container images.
+- **Base64:** Secrets are obscured but easy to decode. In a real mall, you'd add encryption.
+- **Application Logic:** Many database images *refuse* to start unless you provide a specific environment variable for the root password.
+- **CKAD Tip:** `kubectl set env --from=secret/name` is the fastest way to inject all keys from a secret during the exam.
+
+---
+
+## 🔗 References
+- **Comic** → [Secrets](../../../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
+- **Docs** → [Secrets Use Cases](../../../../reference/md-resources/secrets-use-cases-and-application-integration.md)
+- **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)

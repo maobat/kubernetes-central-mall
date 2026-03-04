@@ -1,170 +1,91 @@
-# LAB 04 – Canary Deployments with NodePort and Replica Weighting
+# 🧪 LAB 04: The New Fashion Test (Canary Deployments)
 
-## Deploying Applications the DevOps Way – Canary Release (No Ingress)
-
-
+## Launch Strategies – Traffic Splitting & Testing in Production
 
 ---
+
 ## 🎯 Lab Goal
 
-Implement a **Canary Deployment** using **NodePort** and **replica weighting** to control traffic distribution.
+Implement a **Canary Deployment** using **NodePort** and **replica weighting**. You will learn how to route a small percentage of customers to a new version of your shop to test it before a full rollout.
+
+> **CKAD Importance:** Medium. While complex traffic tools (Istio) are out of scope, the "Service Label Selector" trick for simple canaries is a classic CKAD pattern.
 
 ---
 
-## 📖 Related Comic
-👉 [visual-learning/comics/ch09-launch/01-canary-nodeport/README.md](../../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+## 🛍️ Mall Analogy
 
----
-## 📘 Reference Docs
+In the **Central Mall**, we are testing a experimental new uniforms for our staff.
 
-- Canary deployments → [`docs/md-resources/canary-deployments.md`](../../../reference/md-resources/lab-canary-deployments-the-new-recipe-test.md)
-- Introduction to Canary Deployments → [Implementing Canary Deployments](../../../reference/md-resources/implementing-canary-deployments.md)
-- Reference: Blue/Green vs Canary → [Comparison](../../../reference/md-resources/related-deployment-strategies-comparison.md)
-- Next Step: Advanced Traffic Splitting (Gateway API) → [Advanced Traffic Splitting](../../../reference/md-resources/advanced-traffic-splitting.md)
-
-
-
----
-## 📋 Requirements
-
-1. Run a Deployment named **oldbird**
-   - Image: `nginx:1.18`
-2. Run a Deployment named **newbird**
-   - Image: `nginx:latest`
-3. Expose both Deployments via **one NodePort Service**
-4. Route traffic approximately:
-   - **90% → oldbird**
-   - **10% → newbird**
-
----
-
-## 🏬 Mall Analogy
-
-We are testing a **new shop layout** without rebuilding the mall entrance.
+- **The Old Guard (oldbird)** → 9 workers in the classic blue uniform.
+- **The New Guard (newbird)** → 1 worker in the experimental neon uniform.
+- **The Common Entrance (Service)** → A single front door label "Fashion Outlet".
+- **The Customer Experience (Traffic)** → Since there's only 1 neon worker out of 10 total staff, any customer walking through the door has a 10% chance of being served by the "Canary".
 
 | Kubernetes Concept | Mall Analogy |
-|-------------------|-------------|
-| **oldbird Pods** | The trusted, old shop layout |
-| **newbird Pods** | The experimental new layout |
-| **Shared Service** | A single front door |
-| **Replica count** | Number of shop assistants |
-| **Traffic split** | Probability of who serves the customer |
-
-Kubernetes doesn’t do percentages, it does **math with Pods**.
+| :--- | :--- |
+| **oldbird / newbird** | Two different implementations of the same shop. |
+| **Shared Selector Label** | The common sign above the door (`type=bird`). |
+| **Replica Count** | Determining the probability of who serves the user. |
 
 ---
 
-## 🛠️ Solution
+## 📋 Requirements
 
-### 1️⃣ Create the Base Deployment (oldbird)
-
-```bash
-kubectl create deploy oldbird \
-  --image=nginx:1.18 \
-  --dry-run=client -o yaml > old.yaml
-```
-Edit `old.yaml` and add a **shared label**:
-```yaml
-metadata:
-  labels:
-    type: bird
-spec:
-  template:
-    metadata:
-      labels:
-        type: bird
-```
-Apply it:
-```bash
-kubectl apply -f old.yaml
-```
-### 2️⃣ Create the Canary Deployment (newbird)
-Reuse the same file:
-```bash 
-vim old.yaml
-```
-Replace `oldbird` with `newbird` and `nginx:1.18` with `nginx:latest`:
-Quick Vim helpers:
-```vim
-:%s/oldbird/newbird/g
-:%s/nginx:1.18/nginx:latest/g
-```
-Apply it:
-```bash
-kubectl apply -f old.yaml
-```
-Verify:
-```bash
-kubectl get pods -l type=bird
-```
-### 3️⃣ Expose Both Deployments via One Service
-Create a **NodePort Service** that selects **all bird pods**:
-```bash
-kubectl expose deploy oldbird \
-  --name=bird \
-  --port=80 \
-  --selector=type=bird \
-  --type=NodePort
-```
-Check the service:
-```bash
-kubectl get svc bird
-```
-### 4️⃣ Observe Traffic Distribution (Initial State)
-```bash
-curl $(minikube ip):<NODEPORT>
-```
-At this point:
-
-- oldbird = 1 pod
-- newbird = 1 pod
-→ ~ **50/50 traffic**
-
-### 5️⃣ Shift Traffic to 90/10 (The Canary Step)
-
-Scale only the old Deployment:
-```bash
-kubectl scale deploy oldbird --replicas=9
-```
-Check the pods:
-```bash
-kubectl get pods -l type=bird
-```
-At this point:
-
-- oldbird = 9 pods
-- newbird = 1 pod
-
-  → ~ **90/10 traffic split**
-
-Verify again:
-```bash
-kubectl describe svc bird
-```
-🔎 **How Traffic Is Really Split**
-
-Kubernetes Services do:
-
-- Round-robin across Endpoints
-- No weights
-- No intelligence
-- Traffic ratio = **number of Pods**
-
-🧠 **Expert Summary**
-
-- Canary deployments can be implemented without Ingress
-- Replica count = traffic percentage
-- NodePort + selector = shared entry point
-- This is a **low-level**, **exam-friendly pattern**
-
-📝 **CKAD Exam Tips**
-
-- Expect **NodePort-based canaries**
-- Ingress-based canaries are often out of scope
-- Know how Services select Pods
-- Always check `describe svc`→ Endpoints
+1. **V1 Deployment**: `oldbird` (nginx:1.18), 9 replicas.
+2. **V2 Deployment**: `newbird` (nginx:latest), 1 replica.
+3. **Shared Label**: Both must have the label `type: bird`.
+4. **Service**: Create a NodePort service that selects `type: bird`.
+5. **Verify**: Observe that roughly 10% of requests hit the latest version.
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch09-deployments.md](../../../sources/study-guide/ch09-deployments.md)
+## 🛠️ Step-by-Step Solution
+
+### 1. Deploy the Standard Shop (V1)
+```bash
+k create deploy oldbird --image=nginx:1.18 --replicas=9
+k label deploy oldbird type=bird --overwrite
+# Ensure pods also have the label!
+```
+
+### 2. Deploy the Canary (V2)
+```bash
+k create deploy newbird --image=nginx:latest --replicas=1
+k label deploy newbird type=bird --overwrite
+```
+
+### 3. Open the Common Entrance
+```bash
+k expose deploy oldbird --name=bird-portal --port=80 --type=NodePort --selector=type=bird
+```
+
+---
+
+## 🔎 Verification
+
+1. **Check Endpoints:**
+   ```bash
+   k describe svc bird-portal
+   # You should see 10 IP addresses (9 from oldbird, 1 from newbird).
+   ```
+
+2. **Test Traffic Split:**
+   ```bash
+   for i in {1..10}; do curl -s $(minikube ip):<NODEPORT> | grep "nginx"; done
+   # Statistically, you'll see one or two "latest" responses.
+   ```
+
+---
+
+## 🧠 Key Takeaways
+
+- **Math with Pods:** A Service simply sends traffic to all Pods matching its selector. It doesn't care about versions.
+- **Simplicity:** This is the easiest way to do a canary without complex Ingress controllers or Service Meshes.
+- **CKAD Tip:** Always use `k describe svc` to check the **Endpoints**. If you don't see both Deployment IPs listed, your labels are inconsistent.
+
+---
+
+## 🔗 References
+- **Comic** → [Canary NodePort](../../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+- **Docs** → [Canary Deployments](../../../reference/md-resources/lab-canary-deployments-the-new-recipe-test.md)
+- **Study Guide** → [Chapter 9: Launch Strategies](../../../sources/study-guide/ch09-deployments.md)

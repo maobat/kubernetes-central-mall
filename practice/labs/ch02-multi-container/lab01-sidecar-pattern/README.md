@@ -1,225 +1,124 @@
-# Lab 01 – Multi-Container Pods: Sidecars & InitContainers
+# 🧪 LAB 01: The Sidecar & The Renovation Crew
 
 ## Pod Design – Advanced Pod Patterns
 
-
+---
 
 ## 🎯 Lab Goal
 
-This lab introduces the **Multi-Container Pod** pattern. You will learn how to:
-
-- Run multiple containers in a single Pod.
+This lab introduces the **Multi-Container Pod** patterns. You will learn how to:
 - Use an **InitContainer** to perform setup tasks (creating configuration files).
-- Use a **Sidecar Container** to assist the main application.
+- Use a **Sidecar Container** to assist the main application (logging/monitoring).
 - Share data between containers using a shared **Volume (`emptyDir`)**.
 
-This is a **high-probability CKAD topic**.
+> **CKAD Importance:** Very High. Pod design patterns like these are a staple of the exam.
 
 ---
 
-## 📖 Related Comic
-👉 [visual-learning/comics/ch02-multi-container/01-sidecar/README.md](../../../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
+## 🛍️ Mall Analogy
 
-It explains **Sidecars, InitContainers, and Shared Volumes**.
+In the **Central Mall**, a single shop (Pod) might have multiple workers:
 
----
+- **The Renovation Crew (InitContainer)** → They come in *before* the shop opens, paint the walls, and set up the shelves. Once they finish, they leave. The shop can't open until they are done.
+- **The Salesperson (Main Container)** → The person serving customers (Nginx).
+- **The Assistant (Sidecar Container)** → Someone in the back room watching inventory or security cameras (Busybox). They work while the salesperson works.
+- **The Stockroom (Shared Volume)** → A common closet inside the shop where all three can leave notes or tools for each other.
 
-## 📘 Reference Docs
-
-- Multi-Container Pods → [`docs/md-resources/decoupling-pods.md`](../../../../reference/md-resources/decoupling-pods.md)
-- Init Containers → [Kubernetes Docs: Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-- Volumes (emptyDir) → [`docs/md-resources/storage-recap-for-dummies.md`](../../../../reference/md-resources/storage-recap-for-dummies.md)
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **Pod** | A single shop unit. |
+| **Main Container** | The primary business logic. |
+| **InitContainer** | Setup script that runs once. |
+| **Sidecar** | Helper process that runs alongside. |
+| **emptyDir** | A temporary storage closet for that shop only. |
 
 ---
 
 ## 📋 Requirements
 
-1. Create a Pod named `sidecar-example`
+1. **Create a Pod** named `sidecar-example`.
 2. **InitContainer** (`init-myfile`):
    - Image: `busybox`
-   - Command: Create a file `message` with content "hello" in `/data`
+   - Action: Create `index.html` in `/data` with content "Hello from Init".
 3. **Main Container** (`nginx`):
    - Image: `nginx`
-   - Mount `/data` to `/usr/share/nginx/html` (so it serves the file created by init)
-4. **Sidecar Container** (`busybox`):
+   - Action: Serve the shared `/data` folder.
+4. **Sidecar Container** (`sidecar-helper`):
    - Image: `busybox`
-   - Command: Sleep forever (just to keep running)
-   - Mount `/data` to access the shared file
-5. **Volume**:
-   - Type: `emptyDir`
-   - Name: `shared-data`
+   - Action: Stay alive and monitor the shared file.
+5. **Shared Storage**: Use an `emptyDir` named `shared-data`.
 
 ---
 
-## 🏬 Mall Analogy
+## 🛠️ Step-by-Step Solution
 
-| Kubernetes Concept | Mall Analogy |
-|-------------------|-------------|
-| **Pod** | A single **Store** unit. |
-| **Main Container** | The **Salesperson** serving customers (Nginx). |
-| **InitContainer** | The **Renovation Crew** that sets up the store before it opens. |
-| **Sidecar Container** | The **Assistant** checking inventory in the back (Busybox). |
-| **Shared Volume** | The **Stockroom** accessible by all staff. |
+### 1. Generate the Scaffold
+You can't create multiple containers with a single command, so we start with one and edit.
+```bash
+k run sidecar-example --image=nginx --port=80 $do > pod-multi.yaml
+```
 
----
-
-## 🛠️ Solution
-
-### 1️⃣ Define the Multi-Container Pod
-
-We will use an `emptyDir` volume to share data between the InitContainer and the Main Container.
-
-👉 [Lab 01 - The Sidecar](./pod-sidecar.yaml)
+### 2. Manual Surgery (vi)
+Add the Init and Sidecar blocks.
 
 ```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    run: sidecar-example
-  name: sidecar-example
 spec:
-  # 1. InitContainers run to completion BEFORE the main containers start
   initContainers:
   - name: init-myfile
     image: busybox
-    command:
-    - sh
-    - -c
-    - echo "Hello from Init" > /data/index.html
+    command: ["sh", "-c", "echo 'Hello from Init' > /data/index.html"]
     volumeMounts:
     - name: shared-data
       mountPath: /data
-
-  # 2. Main Containers run in parallel
   containers:
-  - image: nginx
-    name: sidecar-example
-    ports:
-      - containerPort: 80
+  - name: sidecar-example # Main Nginx
+    image: nginx
     volumeMounts:
     - name: shared-data
       mountPath: /usr/share/nginx/html
-
-  - name: sidecar-helper
+  - name: sidecar-helper # Sidecar
     image: busybox
-    command:
-    - sh
-    - -c
-    - tail -f /dev/null
+    command: ["sh", "-c", "tail -f /dev/null"]
     volumeMounts:
     - name: shared-data
       mountPath: /data
-
-  # 3. Shared Volume
   volumes:
   - name: shared-data
     emptyDir: {}
 ```
 
-## 🛠️ Solution
-
-### Imperative way: smart solution
-
-```bash
-k run sidecar-example --image=nginx --port=80 $do > pod-sidecar.yaml
-```
 ---
 
-## 🛠️ The "Surgery" (vi routine)
-Open `pod-sidecar.yaml`. You need to add the **Setup Crew**, the **Assistant**, and the **Shared Locker** (emptyDir).
+## 🔎 Verification
 
-### 1. The Setup Crew (InitContainer)
-Add this **above** the `containers:` block. These workers finish their job *before* the shop opens.
-```yaml
-spec:
-  initContainers:
-  - name: init-myfile
-    image: busybox
-    command:
-    - sh
-    - -c
-    - echo "Hello from Init" > /data/index.html
-    volumeMounts:
-    - name: shared-data
-      mountPath: /data
-```
----
+1. **Check Startup Sequence:**
+   ```bash
+   k apply -f pod-multi.yaml
+   k get pods -w
+   # Watch it go from Init:0/1 -> PodInitializing -> Running
+   ```
 
-### 2. The Assistant (Sidecar Container)
-Add this **below** the first container. This worker watches the main app.
-```yaml
-  - name: sidecar-helper
-    image: busybox
-    command: 
-    - sh
-    - -c
-    - tail -f /dev/null
-    volumeMounts:
-    - name: shared-data
-      mountPath: /data
-```
----
-
-### 3. The Shared Locker (Volume)
-At the bottom of the `spec:`, create the space where they exchange tools.
-```yaml
-  volumes:
-  - name: shared-data
-    emptyDir: {}
-```
----
-
-### 4. Adding the Volume Mount to the Clerk (Main Container)
-```yaml
-  ...
-    volumeMounts:
-    - name: shared-data
-      mountPath: /usr/share/nginx/html
-  ...
-```
----
-### Apply and Verify
-
-Apply the manifest:
-```bash
-k apply -f pod-sidecar.yaml
-```
-
-**Verify the Init Stage:**
-Watch the Pod status carefully. You should see `Init:0/1` -> `PodInitializing` -> `Running`.
-
-```bash
-k get pod sidecar-example -w
-```
-
-**Verify the Shared Content:**
-The InitContainer created `index.html` in the shared volume.
-The Nginx container mounted that volume to its web root.
-
-Let's curl the Nginx container:
-```bash
-k exec sidecar-example -c sidecar-example -- curl localhost 
-```
-
-✅ **Expected Output:**
-`Hello from Init`
-
-**Verify from the Sidecar:**
-The sidecar also has access to the data.
-```bash
-kubectl exec sidecar-example -c sidecar-helper -- cat /data/index.html
-```
+2. **Test Shared Data:**
+   ```bash
+   # Check Nginx output (served from the shared volume)
+   k exec sidecar-example -c sidecar-example -- curl localhost
+   
+   # Check the sidecar can see the same file
+   k exec sidecar-example -c sidecar-helper -- cat /data/index.html
+   ```
 
 ---
 
-### 🧠 Key Takeaways
+## 🧠 Key Takeaways
 
-- **InitContainers** run **sequentially** and **first**. If they fail, the Pod restarts.
-- **Sidecars** run **alongside** the main app.
-- **emptyDir** is perfect for ephemeral shared data within a Pod.
+- **Initialization:** InitContainers run one by one and *must* exit successfully before the main containers even start.
+- **Shared Lifecycle:** All containers in a Pod are scheduled on the same Node and share the same network (localhost).
+- **Communication:** `emptyDir` is only shared between containers *in the same Pod*. If the Pod is deleted, the data is gone.
+- **CKAD Tip:** If your Pod is stuck in `Init:CrashLoopBackOff`, check the logs of the Init container specifically: `k logs pod-name -c init-container-name`.
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch02-multi-container.md](../../../../sources/study-guide/ch02-multi-container.md)
+## 🔗 References
+- **Comic** → [Sidecars](../../../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
+- **Docs** → [Decoupling Pods](../../../../reference/md-resources/decoupling-pods.md) | [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+- **Study Guide** → [Chapter 2: Multi-Container Patterns](../../../../sources/study-guide/ch02-multi-container.md)

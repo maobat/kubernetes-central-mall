@@ -1,106 +1,107 @@
-# Lab 03 – Pod Design: Image Updates & Rollouts
+# 🧪 LAB 03: Swapping the Mannequins (Image Updates & Rollouts)
 
-## Swapping the Mannequins
+## Pod Design – Image Lifecycle & Deployment Rollouts
 
 ---
 
 ## 🎯 Lab Goal
 
 This lab focuses on the **lifecycle of a Deployment**. You will learn how to:
-
 - Create a Deployment with a specific image version.
-- Perform a **Rolling Update** to a newer version.
-- Observe the rollout status.
-- Perform a **Rollback** (Undo) when something goes wrong.
+- Perform a **Rolling Update** to a newer version without downtime.
+- Observe the rollout status and history.
+- Perform a **Rollback** (Undo) when a new version is "buggy."
 
-This is a **fundamental CKAD skill** (Application Deployment).
-
----
-
-## 📖 Related Comic
-👉 [visual-learning/comics/ch03-images/03-image-updates/README.md](../../../../visual-learning/comics/ch03-images/03-image-updates/README.md)
-
-It explains **Image Layers and Rolling Updates**.
+> **CKAD Importance:** Fundamental. Expect to perform at least one rolling update and potentially a rollback.
 
 ---
 
-## 📘 Reference Docs
+## 🛍️ Mall Analogy
 
-- Updating a Deployment → [6.3.4.5 managing container images and rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
-- Rollback → [6.3.4.5 managing container images and rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
+In the **Central Mall**, a **Deployment** is like a store's management firm. Instead of closing the shop to change everyone's clothes, they do it one worker at a time.
+
+- **The Mannequin (Image Layer)** → A frozen, unchangeable blueprint of a worker.
+- **The Uniform Swap (Rolling Update)** → Swapping the old mannequins for new ones one by one, so there's always someone at the counter.
+- **The Backroom Records (Rollout History)** → A list of all the old uniform sets we used to have.
+- **The Undo Button (Rollback)** → Realizing the new uniforms are ugly and immediately bringing back the old ones from the backroom.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **Rolling Update** | Swapping workers one by one until everyone has the new uniform. |
+| **Rollback** | Returning to a previous "Revision" of the uniform. |
+| **Rollout History** | The history of all uniform changes. |
 
 ---
 
 ## 📋 Requirements
 
-1. Create a **Deployment** named `manager-firm` using the provided `deployment.yaml`.
-   - Initial Image: `nginx:1.14`
-2. **Update** the image to `nginx:1.16` using an imperative command.
-3. **Verify** the update status and history.
-4. **Roll back** the deployment to the previous version (`nginx:1.14`).
+1. **Deploy the initial version**:
+   - Deployment Name: `manager-firm`
+   - Replicas: `3`
+   - Image: `nginx:1.14`
+2. **Perform an Update**: Change the image to `nginx:1.16`.
+3. **Check the Rollout**: Monitor the status until completion.
+4. **Undo the Change**: Roll back to the previous version (`1.14`).
 
 ---
 
-## 🏬 Mall Analogy
+## 🛠️ Step-by-Step Solution
 
-| Kubernetes Concept | Mall Analogy |
-|-------------------|-------------|
-| **Container Image** | The **Mannequin** (Frozen blueprint of a worker). |
-| **Deployment Update** | Swapping the **Uniform** on the mannequins one by one. |
-| **Rollback** | Bringing back the **Old Uniform** from the backroom. |
+### 1. Deploy the Shop
+```bash
+k apply -f deployment.yaml
+# Or imperatively:
+k create deploy manager-firm --image=nginx:1.14 --replicas=3
+```
+
+### 2. The Uniform Swap (Update)
+Use the imperative command—it's much faster than editing YAML in the exam!
+```bash
+k set image deployment/manager-firm nginx=nginx:1.16
+```
+
+### 3. Watching the Rollout
+```bash
+k rollout status deployment/manager-firm
+```
+
+### 4. The Emergency Undo (Rollback)
+```bash
+# Check history first
+k rollout history deployment/manager-firm
+
+# Undo the last change
+k rollout undo deployment/manager-firm
+```
 
 ---
 
-## 🛠️ Solution
+## 🔎 Verification
 
-### 1️⃣ Deploy the Initial Version
+1. **Check the Image:**
+   ```bash
+   k describe deploy manager-firm | grep Image
+   # Should show 1.14 again after the rollback.
+   ```
 
-👉 [Lab 03 - Initial Deployment](./deployment.yaml)
-
-Apply the manifest:
-```bash
-kubectl apply -f deployment.yaml
-```
-
-Check the version currently running:
-```bash
-kubectl describe deploy manager-firm | grep Image
-```
-
-### 2️⃣ Perform a Rolling Update (The Uniform Swap)
-
-Update the image to `nginx:1.16`:
-```bash
-kubectl set image deployment/manager-firm nginx=nginx:1.16
-```
-
-**Watch the rollout progress:**
-```bash
-kubectl rollout status deployment/manager-firm
-```
-
-### 3️⃣ Check History
-
-See how many "Uniform Sets" (Revisions) you have in the backroom:
-```bash
-kubectl rollout history deployment/manager-firm
-```
-
-### 4️⃣ The "Undo" Button (Rollback)
-
-Oops! The new uniform version is buggy. Roll back to the previous version:
-```bash
-kubectl rollout undo deployment/manager-firm
-```
-
-**Verify the version is back to 1.14:**
-```bash
-kubectl describe deploy manager-firm | grep Image
-```
-
-✅ **You have mastered Zero-Downtime Updates!**
+2. **Check Pod Events:**
+   ```bash
+   k get pods
+   # Notice that pods are being terminated and new ones created during the rollout.
+   ```
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch03-pod-design.md](../../../../sources/study-guide/ch03-pod-design.md)
+## 🧠 Key Takeaways
+
+- **Immutability:** You don't "update" a container; you replace its image/uniform.
+- **Zero Downtime:** Rolling updates ensure your shop stays open during the swap.
+- **Revision History:** Kubernetes keeps track of changes, allowing you to `undo` effortlessly.
+- **CKAD Tip:** Always use `k rollout status` after a `set image` to ensure the update actually finished before moving to the next task.
+
+---
+
+## 🔗 References
+- **Comic** → [Image Updates & Rollouts](../../../../visual-learning/comics/ch03-images/03-image-updates/README.md)
+- **Docs** → [Managing Images and Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
+- **Study Guide** → [Chapter 3: Pod Design](../../../../sources/study-guide/ch03-pod-design.md)

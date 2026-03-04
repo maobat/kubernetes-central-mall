@@ -1,145 +1,114 @@
-# Lab 02 – Pod Design: Jobs & CronJobs
+# 🧪 LAB 02: The Painter & The Garbage Truck (Jobs & CronJobs)
 
-## Batch Processing & Scheduled Tasks
+## Pod Design – Batch Processing & Scheduled Tasks
 
 ---
 
 ## 🎯 Lab Goal
 
 This lab focuses on **short-lived processes** in Kubernetes. You will learn how to:
-
 - Run a one-off task using a **Job**.
 - Schedule a recurring task using a **CronJob**.
-- Manage completions and parallelism.
+- Manage completions, parallelism, and job history.
 
-This is a **high-probability CKAD topic**.
-
----
-
-## 📖 Related Comic
-👉 [visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md](../../../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
-
-It explains **Jobs (One-off) vs CronJobs (Scheduled)**.
+> **CKAD Importance:** High. Expect at least one question on Jobs or CronJobs.
 
 ---
 
-## 📘 Reference Docs
+## 🛍️ Mall Analogy
 
-- Jobs → [Kubernetes Docs: Jobs](../../../../reference/md-resources/jobs.md)
-- CronJobs → [Kubernetes Docs: CronJobs](../../../../reference/md-resources/cronjobs.md)
+In the **Central Mall**, not every worker stays forever. 
+
+- **The Painter (Job)** → Hired to paint a specific wall. Once the wall is painted, the painter packs up and leaves. If they fainted (crashed), we hire another one to finish the job.
+- **The Garbage Truck (CronJob)** → Doesn't stay at the mall. It arrives exactly at 6:00 AM every morning, does its work, and leaves.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **Job** | A one-off task that terminates once successful. |
+| **CronJob** | A scheduled task that creates new Jobs periodically. |
+| **Completions** | How many walls the painter needs to finish. |
+| **Parallelism** | How many painters can work at the same time. |
 
 ---
 
 ## 📋 Requirements
 
-1. Create a **Job** named `one-off-task`
+1. **Create a Job** named `one-off-task`:
    - Image: `busybox`
-   - Command: Print "Hello CKAD" and exit.
-   - Completions: 1
+   - Command: `echo "Hello CKAD" && sleep 5`
+   - Requirement: Must complete exactly 1 time.
 
-2. Create a **CronJob** named `scheduled-task`
-   - Schedule: Run every minute (`*/1 * * * *`)
+2. **Create a CronJob** named `scheduled-task`:
+   - Schedule: Run every minute (`*/1 * * * *`).
    - Image: `busybox`
-   - Command: Print "This is a scheduled task".
-
-3. **Verify**:
-   - Check that the Job completes successfully (`Completed` status).
-   - Check that the CronJob spawns new Jobs over time.
+   - Command: `date; echo "This is a scheduled task"`.
+   - History: Keep only the 3 most recent successful jobs.
 
 ---
 
-## 🏬 Mall Analogy
+## 🛠️ Step-by-Step Solution
 
-| Kubernetes Concept | Mall Analogy |
-|-------------------|-------------|
-| **Deployment** | The **Mall Customer Service Desk** (Always open). |
-| **Job** | The **Painter** who paints a wall and leaves when finished. |
-| **CronJob** | The **Garbage Truck** that comes every Monday morning. |
+### 1. The One-Off Job
+Use the imperative shortcut to generate the blueprint.
 
----
-
-## 🛠️ Solution
-
-### 1️⃣ Create a One-Off Job
-
-👉 [Lab 02 - The One-Off Task](./job.yaml)
-
-**CKAD imperative shortcut**
 ```bash
-k create job one-off-task --image=busybox $do -- echo "Hello CKAD" > job.yaml
+# Generate the scaffold
+k create job one-off-task --image=busybox $do -- sh -c 'echo "Hello CKAD" && sleep 5' > job.yaml
+
+# Apply the job
+k apply -f job.yaml
 ```
 
-Apply it:
+### 2. The Scheduled CronJob
+CronJobs have a specific imperative command as well.
+
 ```bash
-kubectl apply -f job.yaml
+# Generate the scaffold
+k create cj scheduled-task --image=busybox --schedule="*/1 * * * *" $do -- sh -c 'date; echo "This is a scheduled task"' > cronjob.yaml
 ```
 
-**Verify Completion:**
-```bash
-kubectl get jobs
-# COMPLETIONS should become 1/1
-```
-
-### 2️⃣ Create a Scheduled CronJob
-
-👉 [Lab 02 - The Scheduled Task](./cronjob.yaml)
-
-**CKAD imperative shortcut**
-```bash
-k create cj scheduled-task --image=busybox --schedule="*/1 * * * *" $do -- /bin/sh -c "date; echo('This is a schedule task')" > cronjob.yaml
-```
-
-Apply it:
-```bash
-kubectl apply -f cronjob.yaml
+**Manual Edit:** Add the history limit to keep the "Mall Records" clean.
+```yaml
+spec:
+  successfulJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          ...
 ```
 
 ---
 
-### 🔎 Verification
+## 🔎 Verification
 
-1. **Watch the CronJob spawn Jobs:**
+1. **Check Job Status:**
    ```bash
-   k get cronjob scheduled-task --watch
+   k get jobs
+   # Check that COMPLETIONS is 1/1
    ```
 
-2. You can use the **Manual Trigger (The Best Way)**
-
-    The `--from` command creates a `one-off Job` using the exact configuration (image, command, environment variables) defined in your CronJob, without waiting for the scheduler.
-    
-    ```Bash
-    k create job --from=cronjob/scheduled-task manual-test-run
-    ```
-
-3. Verification
-Once you run that, the Job starts instantly. You can verify it just like any other job:
-
-    ```Bash
-    # Check the status immediately
-    k get jobs
-
-    # Check the logs of the manual run
-    k logs job/manual-test-run
-    ```   
-   >Adding these two fields will ensure Kubernetes automatically deletes old Job records, keeping your k get jobs output from becoming a mile long:
-   ```yaml
-   spec:
-     schedule: '*/1 * * * *'
-     successfulJobsHistoryLimit: 3  # Keeps only the last 3 successful jobs
-     failedJobsHistoryLimit: 1      # Keeps only the last failed job for debugging
-     concurrencyPolicy: Forbid      # Prevents a new job from starting if the old one is still running
-     jobTemplate:
-       ...
-   ```
-
-3. **Check the logs of one of the completed Pods:**
+2. **Trigger CronJob Manually:**
+   Don't wait for the clock! This is the best way to test if your CronJob works.
    ```bash
-   # Find a pod name from the jobs list
-   kgetp # alias kgetp='k get pod -o wide --sort-by=.metadata.creationTimestamp'
-   k logs <pod-name-from-cronjob>
+   k create job --from=cronjob/scheduled-task manual-test-run
+   k get jobs
+   k logs job/manual-test-run
    ```
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch01-workloads.md](../../../../sources/study-guide/ch01-workloads.md)
+## 🧠 Key Takeaways
+
+- **Restart Policy:** Jobs and CronJobs *cannot* use `Always`. They must use `OnFailure` or `Never`.
+- **Active Deadline:** Use `activeDeadlineSeconds` to fire a painter who is taking too long to finish.
+- **Completions vs Parallelism:** `completions` is the total work; `parallelism` is how many work at once.
+- **CKAD Tip:** If you need to fix a CronJob during the exam, it's often faster to `k delete` and `k apply` rather than trying to edit the live object.
+
+---
+
+## 🔗 References
+- **Comic** → [Jobs & CronJobs](../../../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
+- **Docs** → [Jobs](../../../../reference/md-resources/jobs.md) | [CronJobs](../../../../reference/md-resources/cronjobs.md)
+- **Study Guide** → [Chapter 1: Workloads](../../../../sources/study-guide/ch01-workloads.md)

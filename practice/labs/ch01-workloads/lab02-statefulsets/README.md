@@ -1,19 +1,30 @@
 # 🧪 LAB 02: The Fixed Boutique (StatefulSets)
+
 ## Pod Design – Managing Stateful Applications
 
+---
+
 ## 🎯 Lab Goal
+
 Since there is no `kubectl create statefulset` command, you must learn the "Exam Speed-Run" method: Generating a Deployment scaffold and manually converting it into a **StatefulSet**.
 
----
-## 📖 Related Comic
-👉 [visual-learning/comics/ch01-workloads/02-statefulsets/README.md](../../../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
-
-It explains **StatefulSets (Fixed Boutiques)**.
+> **CKAD Importance:** Crucial. StatefulSets are often where students lose time due to manual YAML editing.
 
 ---
-## 📖 Reference Docs
 
-- StatefulSets → [Kubernetes Docs: Using StatefulSets](../../../../reference/md-resources/using-statefulsets.md)
+## 🛍️ Mall Analogy
+
+Unlike standard clerks (Deployments) who are replaceable and anonymous, **StatefulSet** workers are like specialized shop owners.
+
+- **Fixed Address (Ordinal Index)** → Each owner has a permanent spot: Shop-0, Shop-1, Shop-2. They never swap places.
+- **The Directory (Headless Service)** → A specific mall directory that lets you dial "Boutique-0" directly instead of getting a random worker.
+- **Personal Safes (Persistent Volumes)** → Each shop has its own dedicated safe. If an owner leaves and a new one is hired for Shop-0, they inherited the *same* safe that belonged to Shop-0 before.
+
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **StatefulSet** | A row of boutiques with permanent IDs. |
+| **Headless Service** | The direct-dial directory (`clusterIP: None`). |
+| **volumeClaimTemplate** | The contract that ensures Shop-X always gets Safe-X. |
 
 ---
 
@@ -32,180 +43,89 @@ It explains **StatefulSets (Fixed Boutiques)**.
    - Storage: Mount a volume named `www` at `/usr/share/nginx/html`.
    - Persistence: Use a `volumeClaimTemplate` (1Gi, `ReadWriteOnce`, `standard` storage class).
 
-3. **Verify Persistence**:
-   - Create a file inside `web-0`.
-   - Delete the pod `web-0`.
-   - Confirm the new `web-0` pod retains the file.
-
 ---
 
-## 🏬 Mall Analogy
-Unlike standard clerks (Deployments) who are replaceable and anonymous, **StatefulSet** workers are like specialized shop owners.
-* Each has a **Fixed Address** (Ordinal index: 0, 1, 2).
-* Each has their own **Personal Safe** (Persistent Volume) that follows them if they move.
+## 🛠️ Step-by-Step Solution (Speed-Run)
 
-| Kubernetes Concept | Mall Analogy |
-| :--- | :--- |
-| **StatefulSet** | A row of boutiques with permanent IDs (Shop-0, Shop-1). |
-| **Headless Service** | The mall directory that points to specific shop IDs instead of a random clerk. |
-| **volumeClaimTemplate** | The contract that ensures Shop-0 always gets Warehouse-Safe-0. |
-
----
-
-## 🛠️ The Blueprint (CKAD Speed-Run)
-
-# ⚡ The Imperative Speed-Run
-*Generating StatefulSets without typing the whole YAML*
-
-In the **Central Mall**, if you don`t have a pre-printed form (StatefulSet), you take a standard Employment Contract (Deployment), cross out the name, and scribble in the special rules.
-
----
-
-## 🛠️ Step 1: The Headless Service
-We generate the "Mall Directory" first. The key is `--clusterip=None`.
-
+### 1. The Headless Service
+The key is `--clusterip=None`.
 ```bash
- k create svc clusterip svc-web --tcp=80:80 --clusterip=None $do > sfs.yaml
+k create svc clusterip svc-web --tcp=80:80 --clusterip=None $do > sfs.yaml
 ```
 
----
-
-## 🛠️ Step 2: The Scaffold (Deployment)
-We use the Deployment generator to build the container, labels, and image. We append it to our file with `---`.
-
+### 2. The Deployment Scaffold
+Generate the container spec and append it.
 ```bash
 echo "---" >> sfs.yaml
-
 k create deploy web --image=registry.k8s.io/nginx-slim:0.24 --replicas=3 $do >> sfs.yaml
 ```
 
+### 3. The Surgery (Manual Edits)
+Open `sfs.yaml` and perform these transforms:
+1. Change `kind: Deployment` to `kind: StatefulSet`.
+2. Add `serviceName: "svc-web"` under the first `spec:`.
+3. Add `volumeMounts` inside the container.
+4. Add the `volumeClaimTemplates` block at the bottom of the StatefulSet `spec`.
 
----
-## 🛠️ Step 3: The Surgery (Manual Edits)
-Open `sfs.yaml` in `vi`. This is where you connect the "Directory" to the "Shop."
-
-**1. Clean Up:**
-Remove the generated unused lines.
 ```yaml
-creationTimestamp: null
-
-strategy: {}
-```
-
-**2. Kind & Identity:**
-```yaml
-kind: StatefulSet # From Deployment
+kind: StatefulSet
 spec:
-  serviceName: "svc-web" # MUST match the Service name
+  serviceName: "svc-web"
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: web
+        image: registry.k8s.io/nginx-slim:0.24
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "standard"
+      resources:
+        requests:
+          storage: 1Gi
 ```
-
-**3. The Storage Connection:**
-Add these two blocks. Note that `name: www` must match in both places.
-
-```yaml
-# A. Inside the container spec:
-  volumeMounts:
-  - name: www
-    mountPath: /usr/share/nginx/html
-```
-
-```yaml
-# B. At the bottom of the StatefulSet spec (same level as 'template'):
-```
-<img src="volumeClaimTemplates.png" alt="Configuration ConfigMaps" width="60%" />
-
-> Note that `standard` is the name of the StorageClass to use. You can check the available storage classes with `k get sc`.
----
-
-## 📝 CKAD Cheat Sheet: The Resulting Checklist
-When you finish your "Surgery," check these 4 points:
-* [ ] **Service:** `clusterIP: None`?
-* [ ] **Selectors:** Does Service `selector.app` match Pod `labels.app`?
-* [ ] **Link:** Does StatefulSet `serviceName` match Service `metadata.name`?
-* [ ] **Storage:** Does `volumeMounts[0].name` match `volumeClaimTemplates[0].metadata.name`?
 
 ---
 
 ## 🔎 Verification
-Apply your manifest and watch the "Ordered Startup":
-```bash
-k apply -f sfs.yaml
-k get pods -w
-```
 
-✅ **Success Check:** You should see pods starting one-by-one: `web-0`, then `web-1`, then `web-2`.
+1. **Ordered Startup:**
+   ```bash
+   k apply -f sfs.yaml
+   k get pods -w
+   # Watch them start one-by-one: web-0, then web-1...
+   ```
 
----
-# 🔍 Verifying the Warehouse Safes
-*Tracking PVCs in a StatefulSet*
-
-When you use a `volumeClaimTemplate`, Kubernetes acts as an automated lawyer. It creates a **PersistentVolumeClaim (PVC)** for every pod index. Unlike a Deployment, if `web-0` faints and a new `web-0` is hired, the new clerk automatically picks up the old `web-0` contract.
-
----
-
-## 🛠️ The Inspection Toolkit
-
-### 1. The Quick Inventory
-See all the active rental contracts in your floor (Namespace).
-
-```bash
-k get pvc
-```
-
-**What to look for:**
-* **NAME:** Will follow the pattern `{ClaimName}-{PodName}-{Index}` (e.g., `www-web-0`).
-* **STATUS:** Should be `Bound`. This means the safe is successfully locked to the shop.
-* **VOLUME:** This is the ID of the actual physical safe (PV) in the basement.
-
-
+2. **Test Persistence:**
+   ```bash
+   # Write data to web-0
+   k exec web-0 -- sh -c 'echo "Boutique 0 Secret" > /usr/share/nginx/html/index.html'
+   
+   # Delete web-0
+   k delete pod web-0
+   
+   # Wait for recreation and check
+   k exec web-0 -- cat /usr/share/nginx/html/index.html
+   ```
 
 ---
 
-## 🔬 2. The Deep Dive (Which Pod has which Safe?)
-If you want to see exactly how the "Boutique" is holding the "Safe," inspect the Pod itself.
+## 🧠 Key Takeaways
 
-```bash
-k describe pod web-0
-```
-
-**Scroll down to the `Volumes` section. You will see:**
-```text
-Volumes:
-  www:
-    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
-    ClaimName:  www-web-0
-    ReadOnly:   false
-```
+- **ServiceName Link:** The `serviceName` in the SS *must* match the `metadata.name` of the Headless Service.
+- **Identity:** Pod names are 100% predictable: `{name}-0`, `{name}-1`.
+- **Storage Sticky-ness:** PVCs created by SS are *never* automatically deleted when the SS is deleted. You must clean them up manually if you want to save space.
+- **CKAD Tip:** If the question asks for a "Stable Network Identity," they are almost always asking for a StatefulSet + Headless Service.
 
 ---
 
-## 🛠️ 3. The "CCTV" Check (Testing Data Persistence)
-The best way to verify the PVC is working is to let the clerk write a "Secret Note" in the safe, fire the clerk, and see if the new clerk can read it.
-
-```bash
-# 1. Write a note in web-0
-k exec web-0 -- sh -c 'echo "Boutique 0 Secret" > /usr/share/nginx/html/index.html'
-
-# 2. Fire the clerk (Delete the pod)
-k delete pod web-0
-
-# 3. Wait for the replacement and read the note
-k exec web-0 -- cat /usr/share/nginx/html/index.html
-```
-
-✅ **Success:** If the note still says "Boutique 0 Secret," the PVC successfully held the data while the worker was being replaced!
-
----
-## 📖 Related Chapter
-👉 [sources/study-guide/ch01-workloads.md](../../../../sources/study-guide/ch01-workloads.md)
-
-## 📝 Key Takeaways (CKAD Mindset)
-
-* **ServiceName** in the StatefulSet must match the Service's `metadata.name`.
-* **No Imperative command** exists for StatefulSets. Use the Deployment scaffold!
-* **Headless Service** is mandatory (`clusterIP: None`).
-* **Identity:** Pod names persist across restarts (`web-0` always returns as `web-0`).
-* **Storage:** Each Pod gets its own dedicated PVC generated from the template.
-* **Ordering:** Created one by one (0 -> 1 -> 2) and terminated in reverse order.
-
----
+## 🔗 References
+- **Comic** → [StatefulSets](../../../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
+- **Docs** → [Using StatefulSets](../../../../reference/md-resources/using-statefulsets.md)
+- **Study Guide** → [Chapter 1: Workloads](../../../../sources/study-guide/ch01-workloads.md)

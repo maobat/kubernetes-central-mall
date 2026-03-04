@@ -1,134 +1,113 @@
-# Lab 01 – Configuration: ConfigMaps
+# 🧪 LAB 01: The Breakroom Rules (ConfigMaps)
 
-## Decoupling Configuration from Application Code
+## Environment & Configuration – Decoupling Configuration
 
 ---
 
 ## 🎯 Lab Goal
 
 This lab focuses on **managing application configuration** using **ConfigMaps**. You will learn how to:
-
 - **Decouple** configuration from container images.
 - Create a **ConfigMap** imperatively (from literal).
 - Inject configuration as **Environment Variables**.
 - Mount configuration files as **Volumes**.
 
-This is a **core CKAD topic**.
+> **CKAD Importance:** Core. ConfigMaps are a fundamental part of almost every CKAD scenario involving application behavior.
 
 ---
 
-## 📖 Related Comic
-👉 [visual-learning/comics/ch05-config-secrets/01-configmap/README.md](../../../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
+## 🛍️ Mall Analogy
 
-It explains **ConfigMaps, Env Vars, and Decoupling**.
+In the **Central Mall**, you don't paint the rules on the shop walls. Instead, you use a modular system.
 
----
+- **The Rules Board (ConfigMap)** → A central board in the mall's breakroom where management posts store-wide rules (e.g., `THEME_COLOR=blue`).
+- **The Morning Briefing (Env Vars)** → Telling a worker exactly what rules to follow for the day before they start their shift.
+- **The Employee Handbook (Volume Mount)** → Giving the worker a physical book that they can read whenever they need to check a rule. If management changes the board, the book in the worker's pocket is eventually updated too.
 
-## 📘 Reference Docs
-
-- ConfigMaps vs Secrets → [`docs/md-resources/core-concepts-configmaps-secrets-and-security.md`](../../../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
-- Configuration Decoupling → [`docs/md-resources/configuration-decoupling.md`](../../../../reference/md-resources/configuration-decoupling.md)
-- Variables vs Files → [`docs/md-resources/configmaps-variables-vs-configuration-files.md`](../../../../reference/md-resources/configmaps-variables-vs-configuration-files.md)
+| Kubernetes Concept | Mall Analogy |
+| :--- | :--- |
+| **ConfigMap** | A collection of non-sensitive configuration settings. |
+| **Env Var KeyRef** | Injecting a specific rule as a variable. |
+| **Volume Mount** | Rendering the rules as files inside the shop. |
 
 ---
 
 ## 📋 Requirements
 
-1. Create a **ConfigMap** named `app-config`
-   - Key: `APP_COLOR` -> Value: `blue`
-   - Key: `APP_MODE` -> Value: `prod`
-
-2. Create a Pod named `config-pod` (image: `nginx`)
-   - Inject `APP_COLOR` as an environment variable named `COLOR`.
-   - Mount the entire ConfigMap as a volume at `/etc/config`.
-
-3. **Verify**:
-   - Check the environment variable inside the Pod.
-   - Check the file `/etc/config/APP_MODE` inside the Pod.
+1. **Create a ConfigMap** named `app-config`:
+   - `APP_COLOR`: `blue`
+   - `APP_MODE`: `prod`
+2. **Deploy a Pod** named `config-pod`:
+   - Image: `nginx`
+   - Env Var: Map `APP_COLOR` to a variable named `COLOR`.
+   - Volume: Mount the entire `app-config` to `/etc/config`.
 
 ---
 
-## 🏬 Mall Analogy
+## 🛠️ Step-by-Step Solution
 
-| Kubernetes Concept | Mall Analogy |
-|-------------------|-------------|
-| **ConfigMap** | The **Rules & Guidelines** board in the breakroom. |
-| **Env Var Injection** | Telling the employee "Wear the **Blue** uniform today". |
-| **Volume Mount** | Giving the employee a **Rulebook** to keep in their pocket. |
-
----
-
-## 🛠️ Solution
-
-### 1️⃣ Create the ConfigMap Imperatively
-
-Fastest way for CKAD:
-
+### 1. Create the ConfigMap (Imperative)
+Avoid writing YAML for simple key-value pairs!
 ```bash
-kubectl create configmap app-config \
-  --from-literal=APP_COLOR=blue \
-  --from-literal=APP_MODE=prod
+k create configmap app-config --from-literal=APP_COLOR=blue --from-literal=APP_MODE=prod
 ```
 
-### 2️⃣ Create the Pod with Env Vars and Volume Mount
+### 2. Create the Shop (Pod)
+Generate the scaffold and add the special configuration.
+```bash
+k run config-pod --image=nginx $do > config-pod.yaml
+```
 
-👉 [Lab 01 - The ConfigPod](./config-pod.yaml)
-
+**Manual Surgery:**
 ```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: config-pod
 spec:
   containers:
   - name: nginx
     image: nginx
-    # 1. Inject as Environment Variable
     env:
     - name: COLOR
       valueFrom:
         configMapKeyRef:
           name: app-config
           key: APP_COLOR
-    
-    # 2. Mount as Volume
     volumeMounts:
-    - name: config-volume
+    - name: config-vol
       mountPath: /etc/config
-  
   volumes:
-  - name: config-volume
+  - name: config-vol
     configMap:
       name: app-config
 ```
 
-Apply it:
-```bash
-kubectl apply -f config-pod.yaml
-```
-
 ---
 
-### 🔎 Verification
+## 🔎 Verification
 
-1. **Check Environment Variable:**
+1. **Check the Variable:**
    ```bash
-   kubectl exec config-pod -- env | grep COLOR
+   k exec config-pod -- env | grep COLOR
    # Output: COLOR=blue
    ```
 
-2. **Check Mounted File:**
+2. **Check the Rulebook (Files):**
    ```bash
-   kubectl exec config-pod -- ls /etc/config
-   # Output: APP_COLOR  APP_MODE
-   
-   kubectl exec config-pod -- cat /etc/config/APP_MODE
+   k exec config-pod -- ls /etc/config
+   # Output: APP_COLOR, APP_MODE
+   k exec config-pod -- cat /etc/config/APP_MODE
    # Output: prod
    ```
 
-✅ **Configuration is decoupled giving you flexibility!**
+---
+
+## 🧠 Key Takeaways
+
+- **Decoupling:** ConfigMaps allow you to use the *same* image for Dev, Staging, and Prod by changing only the ConfigMap.
+- **Updates:** If you update a ConfigMap, Environment Variables in a running Pod *do not* update. However, Volume Mounts *will* update (eventually).
+- **CKAD Tip:** If you need to inject *all* keys from a ConfigMap as env vars, use `envFrom` instead of `env` with `configMapKeyRef`.
 
 ---
 
-## 📖 Related Chapter
-👉 [sources/study-guide/ch05-configuration.md](../../../../sources/study-guide/ch05-configuration.md)
+## 🔗 References
+- **Comic** → [ConfigMaps](../../../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
+- **Docs** → [Configuration Decoupling](../../../../reference/md-resources/configuration-decoupling.md)
+- **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
