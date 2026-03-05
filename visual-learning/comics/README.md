@@ -4,6 +4,12 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 
 ---
 
+## 🎭 Prologue: The Grand Ensemble
+
+- **Ch. 00** – [The Grand Ensemble (Full Cast of Characters)](ch00-introduction/01-the-cast-of-characters/README.md)
+
+---
+
 ## 🏗️ Part 1: Application Design and Build `[ 20% ]`
 > **Focus:** Understanding the core blueprints of the mall, how we hire staff, organize departments, and deploy our "mannequin" images.
 

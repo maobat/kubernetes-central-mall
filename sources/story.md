@@ -11,6 +11,8 @@ In this journey, you aren't just an engineer; you are the **Mall Architect**. Yo
 2. **Consult the Study Guide:** Get the technical theory.
 3. **Open the Toolbox:** Practice with Labs and visualize with Comics.
 
+**🎭 Before you start:**
+- 🖼️ [Comic: The Grand Ensemble – Full Cast of Characters](./../visual-learning/comics/ch00-introduction/01-the-cast-of-characters/README.md)
 
 
 ---
