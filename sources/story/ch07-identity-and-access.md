@@ -27,6 +27,17 @@ This letter officially states: "The person holding Badge #123 (ServiceAccount) i
 
 The moment this letter is signed and filed in the **Mall Ledger (etcd)**, the worker's badge "flashes green." When they tap it at the Front Desk, the clerk checks the Assignment Letter and says, "Welcome, Coordinator. Here is the Delivery Ledger you requested."
 
+## The Entry Permit Office (Admission Control)
+
+Even if you have a valid badge and a job description, you might still be stopped at the door. Before any worker can actually enter the mall, they must pass through the **Entry Permit Office**. This is **Admission Control**.
+
+Think of it as a final compliance check:
+- "Is this worker wearing the required safety vest?" (Resource Limits check)
+- "Are they bringing any prohibited items?" (Security Policy check)
+- "Is the shop already too crowded?" (Quota check)
+
+The Admission Controllers can either **Validate** (check the rules) or **Mutate** (automatically add a safety vest if the worker forgot theirs). If the Permit Office says "No," the worker is rejected before they even get a chance to start their shift.
+
 ## Why Three Parts?
 
 You might wonder why the Mall doesn't just write the permissions directly onto the badge. By separating the **Badge (Identity)**, the **Job Description (Group of Permissions)**, and the **Assignment Letter (The Link)**, the Mall stays organized:
@@ -39,8 +50,13 @@ You might wonder why the Mall doesn't just write the permissions directly onto t
 
 ### 🔐 Identity & Access (ServiceAccounts)
 * 🖼️ **Comic:** [The Secure Badge](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
+* 🖼️ **Comic:** [The HR Manual (Role)](../../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
+* 🖼️ **Comic:** [The Entry Permit Office (Admission Control)](../../visual-learning/comics/ch07-identity/03-admission-control/README.md)
 
 ### 📄 Documentation
 * 📖 **Docs:** [Understanding RBAC](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
+
+### 🧪 Labs
+* 🧪 **Lab:** [Entry Permit Office (Admission Control)](../../practice/labs/ch07-identity/lab03-admission-control-entry-permit/README.md)
 
 [<< Previous Chapter: Worker Safety & Conduct](ch06-worker-safety-and-conduct.md) | [Back to Story Index](../story.md) | [Next Chapter: Resource Budgets >>](ch08-resource-budgets.md)

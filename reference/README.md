@@ -9,6 +9,9 @@ The documents are designed to be read sequentially, but each section is also sel
 
 ## Contents
 
+- [1.0 Application Design and Build](md-resources/cast-of-characters.md)  
+  Foundational skills for designing and building Kubernetes applications, including core concepts, multi-container pods, and DaemonSets.
+
 - [2.0 The Core Idea: Storage Decoupling](md-resources/storage-decoupling.md)  
   A concise overview of the Kubernetes storage decoupling principle, explaining PersistentVolumes, PersistentVolumeClaims, and the binding process.
 
@@ -18,7 +21,7 @@ The documents are designed to be read sequentially, but each section is also sel
 - [2.2 CronJobs: The Scheduled Maintenance Crew](md-resources/cronjobs.md)  
   Repeating tasks and routine inspections on a timer.
 
-- [3.0 The Cast of Characters (Internal & External Components)](md-resources/cast-of-characters.md)  
+- [3.0 Services and Networking](md-resources/cast-of-characters.md)  
   A complete mapping of core Kubernetes resources to the Central Mall analogy, covering Pods, Deployments, Services, Ingress, RBAC, and Gateway components.
 
 - [3.1 Understanding the Traffic Flow (The "Customer Journey")](md-resources/traffic-flow.md)  
@@ -41,7 +44,7 @@ The documents are designed to be read sequentially, but each section is also sel
   A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
 - [4.0 The Evolution of the Service IP Tracker](md-resources/service-ip-tracker-evolution.md)  
   Endpoints vs EndpointSlice.
-- [4.1 Configuration Decoupling](md-resources/configuration-decoupling.md)  
+- [4.1 Application Environment, Configuration and Security](md-resources/configuration-decoupling.md)  
   ConfigMaps, Secrets, Tokens.
 - [4.1.1 Core Concepts](md-resources/core-concepts-configmaps-secrets-and-security.md)  
   Intro to ConfigMaps & Secrets.
@@ -117,7 +120,7 @@ The documents are designed to be read sequentially, but each section is also sel
   Breakdown of the Dynamic Provisioning (1-File) binding process.
 - [5.8.2 Static Binding (Manual Matching)](md-resources/static-binding-manual-matching.md)  
   Breakdown of the Static Provisioning (Manual Matching) binding process.
-- [6.0 Deploying Applications the DevOps Way (Helm, Kustomize, CD)](md-resources/deploying-applications-the-devops-way.md)  
+- [6.0 Application Deployment](md-resources/deploying-applications-the-devops-way.md)  
   Advanced deployment strategies packaging, and lifecycle management.
 - [6.1 Using the Helm Package Manager](md-resources/using-the-helm-package-manager.md)  
   Overview of Helm as the package manager.
@@ -157,7 +160,7 @@ The documents are designed to be read sequentially, but each section is also sel
   Advanced networking and security patterns for inter-service communication.
 - [7.0 The Chronicles of the Central Mall: The Full Narrative](md-resources/the-chronicles-of-the-central-mall-the-full-narrative.md)  
   The definitive epic of the Central Mall
-- [8.0 Troubleshooting Kubernetes](md-resources/troubleshooting-kubernetes.md)  
+- [8.0 Application Observability and Maintenance](md-resources/troubleshooting-kubernetes.md)  
   A hands-on example of using shared volumes between two containers in a single Pod.
 - [9.0 Sample Exam](md-resources/sample-ckad-exam-flow.md)  
   Final practice simulation, time management, and triage.

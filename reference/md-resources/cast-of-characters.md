@@ -12,6 +12,7 @@
 | **The Warehouse Safe** | **PV / PVC** | The Permanent Vault | **(Storage)** A storage unit in the basement. It stays locked and filled even if the worker is replaced or the shop closes. |
 | **The Worker** | **Pod** | The Individual Employee | The running containerized application that does the actual work (temporary/scalable). |
 | **The Manager** | **Deployment**| The Store Manager | Ensures the correct number of Pods (workers) are always running. |
+| **The Floor Security** | **DaemonSet** | The Mall-wide Security Guard | Ensures exactly one worker (Pod) remains on every single building (Node) at all times. Ideal for mall-wide tasks like background music, air filtration, or security. |
 | **The Main Gate** | **Ingress Controller**| The Guard at the Main Entrance | The program that reads the Ingress Rules and directs external traffic. |
 | **The Rulebook** | **Ingress Resource**| The Guard's Rule Sheet (YAML) | **(Legacy)** A single file that lists every store. If the Boutique changes its hours, the Guard has to update the entire list for the whole mall. |
 | **The Guest List** |	**EndpointSlice**| The Digital Staff List |	The real-time list of which workers are currently at their desks.|

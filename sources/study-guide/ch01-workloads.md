@@ -15,6 +15,7 @@ In Kubernetes, we have different `Contracts` for how workers are managed. Choosi
 | **StatefulSet** | **The Boutique with a Safe** | For workers who need a specific identity and a **bolted-down safe** (Data) that must stay with them even if they move. |
 | **Job** | **The Contractor** | Someone hired for a specific task (e.g., `Fix the leak`). Once done, they leave. |
 | **CronJob** | **The Nightly Janitor** | A contractor that shows up on a schedule (e.g., `Every night at 11 PM`). |
+| **DaemonSet** | **The Floor Security** | A guard on **every single floor**. If a new floor opens, a guard is hired automatically. |
 
 ---
 
@@ -66,6 +67,8 @@ kubectl create cronjob nightly-clean --image=busybox --schedule=`0 23 * * *` -- 
 ### 🧰 Study Toolbox
 - 🖼️ [**Comic: Jobs & CronJobs - The Contractor's Visit**](./../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
 - 🖼️ [**Comic: StatefulSets - The Fixed Boutique**](./../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
+- 🖼️ [**Comic: Floor Security (DaemonSet)**](./../../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
 - 📄 [**Doc: Using StatefulSets - The Bolted-Down Safe**](./../../reference/md-resources/using-statefulsets.md)
-- 🧪 [**Lab: labs/pod-design/lab02-jobs-cronjobs**](./../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
-- 🧪 [**Lab: labs/storage/lab02-statefulsets**](./../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
+- 🧪 [**Lab: Jobs & CronJobs**](./../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
+- 🧪 [**Lab: StatefulSets**](./../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
+- 🧪 [**Lab: Floor Security (DaemonSet)**](./../../practice/labs/ch01-workloads/lab03-daemonset-floor-security/README.md)

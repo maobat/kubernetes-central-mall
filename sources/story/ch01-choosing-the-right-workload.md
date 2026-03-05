@@ -30,6 +30,13 @@ If the owner of **Boutique-0** leaves, their replacement **must** take over the 
 
 ---
 
+## 💂 The Floor Security (DaemonSet)
+In the Central Mall, some staff aren't assigned to a single boutique. Instead, the mall owner ensures there is exactly one **Security Guard** on **every single floor** of the building. This is the **DaemonSet**.
+
+As soon as a new floor (Node) is added to the mall, a Security Guard (Pod) is automatically hired to work there. If a floor is removed, the Guard leaves. DaemonSets are perfect for mall-wide services like background music (logging), air filtration (monitoring), or general security (networking).
+
+---
+
 ## 🌙 The Night-Shift Worker (Job)
 Sometimes, the mall needs a specific task done just once—like moving a heavy safe or performing a one-time inventory count. For this, we hire a **Night-Shift Worker**. This is the **Job**.
 
@@ -52,6 +59,7 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 | :--- | :--- | :--- |
 | A permanent, interchangeable team | **Store Manager** | `Deployment` |
 | Specialized owners with fixed data | **Boutique Owner** | `StatefulSet` |
+| A worker on every single floor | **Floor Security** | `DaemonSet` |
 | A one-time task completed | **Night-Shift Worker** | `Job` |
 | A task done on a schedule | **Maintenance Crew** | `CronJob` |
 
@@ -59,6 +67,7 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 ### 🧰 Study Toolbox
 - 🖼️ [**Comic: Jobs & CronJobs - The Contractor's Visit**](./../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
 - 🖼️ [**Comic: StatefulSets - The Fixed Boutique**](./../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
+- 🖼️ [**Comic: Floor Security (DaemonSet)**](./../../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
 
 ---
 

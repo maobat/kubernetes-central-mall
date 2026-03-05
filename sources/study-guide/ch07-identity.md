@@ -84,7 +84,10 @@ If a worker needs to see shops in **every** floor of the mall (all Namespaces), 
 ### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Secure Badge - Pod Identity](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
+* 🖼️ **Comic:** [The HR Manual (Role)](../../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
+* 🖼️ **Comic:** [The Entry Permit Office (Admission Control)](../../visual-learning/comics/ch07-identity/03-admission-control/README.md)
 * 🧪 **Lab:** [Implementing RBAC (The HR Process)](../../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
+* 🧪 **Lab:** [Entry Permit Office (Admission Control)](../../practice/labs/ch07-identity/lab03-admission-control-entry-permit/README.md)
 * 📄 **Doc:** [Understanding Role-Based Access Control (RBAC)](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
 
 ---

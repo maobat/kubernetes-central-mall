@@ -97,6 +97,10 @@ kubectl get pvc
 
 # Apply a PVC manifest
 kubectl apply -f pvc.yaml
+
+> [!TIP]
+> **No Imperative command for PV/PVC!**  
+> There is no `kubectl create pv` or `kubectl create pvc` command. You **must** use a YAML file. Copy an example from the official documentation during the exam.
 ```
 
 ## 🧩 Multi-Container / Sidecar

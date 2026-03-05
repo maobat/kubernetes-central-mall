@@ -28,6 +28,7 @@ Deciding between a Shop Clerk (**Pod**), a Manager (**Deployment**), or speciali
 - 🧪 [Lab: Jobs & CronJobs](./../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
 - 🖼️ [Comic: The Fixed Boutique (StatefulSets)](./../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
 - 🧪 [Lab: The Fixed Boutique (StatefulSets)](./../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
+- 🖼️ [Comic: Floor Security (DaemonSet)](./../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
 - 📄 [Doc: Using StatefulSets](./../reference/md-resources/using-statefulsets.md)
 
 ---
@@ -66,6 +67,7 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Nightly Backup Permit](./../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
 - 🧪 [Lab: Custom Backup Service (CRD)](./../practice/labs/ch04-extending/lab01-crd-custom-backup-service/README.md)
+- 🖼️ [Comic: The Manager with the Manual (Operators)](./../visual-learning/comics/ch04-extending/04-operators/README.md)
 - 🧪 [Lab: CRDs & Operators](./../practice/labs/ch04-extending/lab04-crds-operators/README.md)
 - 📄 [Doc: Extending K8s with CRDs]../../reference/md-resources/extending-k8s-crds-operators.md)
 
@@ -94,9 +96,9 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 **⚡ Study Guide:** [Security & Safety](./study-guide/ch06-security.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: Worker Safety & SecurityContext](./visual-learning/comics/ch06-safety/02-worker-safety/README.md)
+- 🖼️ [Comic: Worker Safety & SecurityContext](./../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
 - 📄 [Doc: Worker Safety and Conduct]../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
-- 🧪 [Lab: Managing Security Settings (SecurityContext)](./practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
+- 🧪 [Lab: Managing Security Settings (SecurityContext)](./../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
 
 ---
 
@@ -106,8 +108,10 @@ Assigning roles and permissions to ensure only authorized staff access the backr
 **⚡ Study Guide:** [Identity & RBAC](./study-guide/ch07-identity.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Secure Badge](./visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
+- 🖼️ [Comic: The Secure Badge](./../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
 - 🧪 [Lab: Identity & Access (RBAC)](./practice/labs/ch07-identity/lab02-rbac-identity/README.md)
+- 🖼️ [Comic: The HR Manual (Role)](./../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
+- 🖼️ [Comic: The Entry Permit Office (Admission Control)](./../visual-learning/comics/ch07-identity/03-admission-control/README.md)
 - 📄 [Doc: Understanding RBAC]../reference/md-resources/understanding-role-based-access-control-rbac.md)
 
 ---
@@ -118,7 +122,7 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 **⚡ Study Guide:** [Resources & Quotas](./study-guide/ch08-resources.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Resource Hog](./visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+- 🖼️ [Comic: The Resource Hog](./../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 - 🧪 [Lab: Managing Resource Constraints](./practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
 - 📄 [Doc: The Resource Budget]../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
@@ -134,6 +138,7 @@ Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Canary Side Entrance](../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+- 🖼️ [Comic: The Sign Swap (Blue/Green)](./../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 - 📄 [Doc: Implementing Canary Deployments](../reference/md-resources/implementing-canary-deployments.md)
 - 🧪 [Lab: Canary Deployments with NodePort](../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
 

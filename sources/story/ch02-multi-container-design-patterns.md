@@ -14,6 +14,9 @@ The owner hires an **Assistant**. This is the **Sidecar container**.
 - They watch what the Clerk does and handle the "boring" stuff, like logging sales, collecting trash, or providing a secure phone line (Proxy).
 - Because they are in the same Pod, they can "see" each other's work instantly.
 
+- **The Shared Locker (Volume)** → A common space where the clerk and the assistant can exchange files or data.
+- **The Temporary Work Table (EmptyDir)** → A surface provided just for the duration of the shift. It's great for holding tools while working, but once the Pod (the team) leaves the shop, the table is cleared of everything.
+
 ## The Setup Crew (Init Containers)
 Before a shop can open, it needs to be prepared. The shelves need to be stocked, or the security system needs to be initialized. You don't want the Clerk (the Main App) to do this while customers are waiting.
 

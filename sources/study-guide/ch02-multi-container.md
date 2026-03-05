@@ -16,6 +16,13 @@ In Kubernetes, we can put multiple workers (containers) inside the same shop (**
 | **Adapter** | **The Translator** | Takes the clerk`s messy notes and converts them into a standardized format for the Mall Management. |
 | **Ambassador** | **The Delivery Courier** | Handles all outgoing requests. The clerk just hands them a package, and the courier finds the way to the customer. |
 
+---
+
+## 🛠️ 2.1.1 Ephemeral Storage: The Temporary Work Table
+Some workers need a surface to lay out their tools during a shift. They share a **Temporary Work Table** (**emptyDir** volume).
+- **Teamwork:** Both the Clerk and the Assistant can put tools on the table.
+- **Cleanup:** As soon as the shop closes (the Pod exits), the table is wiped clean. No tools or data remain for the next shift.
+
 
 
 ---
@@ -84,6 +91,7 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 ## ⚠️ Common Exam Traps
 - **Blocking InitContainers:** If an `initContainer` fails or runs forever, the main container will *never* start. Always check `kubectl logs <pod> -c <init-container-name>` if a Pod is stuck in `Init:0/1`.
 - **Shared Network Namespace:** Containers in the same Pod share the same `localhost`. If Container A listens on port 80, Container B cannot also listen on port 80, or it will crash with a "Bind: Address already in use" error.
+- **No Imperative PV/PVC:** You cannot create PVs or PVCs using `kubectl create`. Always search the official docs for a YAML template to copy and modify.
 
 ---
 

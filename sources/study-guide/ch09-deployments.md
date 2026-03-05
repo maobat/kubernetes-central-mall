@@ -13,9 +13,7 @@ Imagine you have two identical storefronts: **Store A (Blue)** and **Store B (Gr
 2. **Green (New):** You build the entire green shop behind a curtain. You test the lights and stock the shelves while nobody is looking.
 3. **The Swap:** Once Green is ready, you simply move the "Main Entrance" sign from Blue to Green.
 
-In Kubernetes, this is done by updating a **Service`s selector** to point to the Green shop`s labels.
-
-
+In Kubernetes, this is done by updating a **Service's selector** to point to the Green shop's labels.
 
 ---
 
@@ -28,8 +26,6 @@ A **Canary Deployment** is like a free sample station. You don't move everyone a
 
 **Lab Tip:** In Kubernetes, we do this by having two Deployments (v1.14 and latest) sharing the same **Service**. By adjusting the **number of replicas** (e.g., 3 Old, 1 Canary), you control the traffic split!
 
-
-
 ---
 
 ## 🛠️ The Blueprint (CKAD Speed-Run)
@@ -41,7 +37,7 @@ kubectl set image deployment/clerk-dept clerk=nginx:1.21 --record
 ```
 
 ### 2. Monitoring the Launch
-Always watch the rollout to make sure the manager isn`t struggling:
+Always watch the rollout to make sure the manager isn't struggling:
 ```bash
 kubectl rollout status deployment/clerk-dept
 ```
@@ -63,17 +59,17 @@ kubectl rollout undo deployment/clerk-dept
 ### 🧰 Study Toolbox
 
 ### 🔵🟢 Blue/Green Strategy
-*🖼️ **Comic:*[Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
-* � **Doc:*[Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
-* 🧪 **Lab:*[Lab: Blue/Green Traffic Transition](../../reference/md-resources/lab-deployment-steps-full-traffic-transition-demo.md)
+* 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+* 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
+* 🧪 **Lab:** [Blue/Green Traffic Transition](../../practice/labs/ch09-launch/lab04-blue-green-traffic-transition/README.md)
 
 ### 🐤 Canary Strategy
-*🖼️ **Comic:*[Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-📄 **Doc:*[Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
-* 🧪 **Lab:*[Lab 04 - Canary Deployments](../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
+* 🖼️ **Comic:** [Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+* 📄 **Doc:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
+* 🧪 **Lab:** [Lab 04 - Canary Deployments](../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
 
 ### ⚖️ Comparison
-📄 **Doc:*[Comparison: Blue/Green vs. Canary](../../reference/md-resources/related-deployment-strategies-comparison.md)
+* 📄 **Doc:** [Comparison: Blue/Green vs. Canary](../../reference/md-resources/related-deployment-strategies-comparison.md)
 
 ---
-[<< Previous: Resources](ch08-resources.md) [Back to Story Index](../story.md) [Next: Logistics Tools >>](ch10-management.md)
+[<< Previous: Resources](ch08-resources.md) | [Back to Story Index](../story.md) | [Next: Logistics Tools >>](ch10-management.md)

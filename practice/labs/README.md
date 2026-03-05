@@ -9,6 +9,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 
 - **Ch. 01** – [Jobs & CronJobs](ch01-workloads/lab02-jobs-cronjobs/README.md)
 - **Ch. 01** – [The Fixed Boutique (StatefulSets)](ch01-workloads/lab02-statefulsets/README.md)
+- **Ch. 01** – [Floor Security Guard (DaemonSet)](ch01-workloads/lab03-daemonset-floor-security/README.md)
 - **Ch. 02** – [Sidecar & InitContainers](ch02-multi-container/lab01-sidecar-pattern/README.md)
 - **Ch. 02** – [The Warehouse (PV/PVC)](ch02-multi-container/lab02-pv-pvc/README.md)
 - **Ch. 03** – [Image Updates & Rollouts](ch03-images/lab03-image-updates/README.md)
@@ -24,6 +25,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 05** – [Vault Combination (Secrets & Env Injection)](ch05-config-secrets/lab03-secrets-env-injection/README.md)
 - **Ch. 06** – [Worker Safety (SecurityContext)](ch06-safety/lab01-serviceaccount-identity/README.md)
 - **Ch. 07** – [Identity & Access (RBAC)](ch07-identity/lab02-rbac-identity/README.md)
+- **Ch. 07** – [Entry Permit Office (Admission Control)](ch07-identity/lab03-admission-control-entry-permit/README.md)
 - **Ch. 08** – [Resource Budgets (Constraints)](ch08-resources/lab01-managing-resource-constraints/README.md)
 
 ---
