@@ -37,10 +37,8 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 
 ### ⚙️ Configuration (ConfigMaps)
 * 🖼️ **Comic:** [The Rulebook & The Uniform](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
-* 🧪 **Lab:** [LAB 01 – Configuration: ConfigMaps](../../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
 
 ### 🤫 Security (Secrets)
 * 🖼️ **Comic:** [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
-* 🧪 **Lab:** [LAB 03 – Using Secrets to Inject Sensitive Configuration](../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
 
 [<< Previous Chapter: Extending the Mall](ch04-extending-the-mall.md) | [Back to Story Index](../story.md) | [Next Chapter: Worker Safety & Conduct >>](ch06-worker-safety-and-conduct.md)

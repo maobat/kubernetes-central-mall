@@ -32,6 +32,5 @@ For massive department stores that take a very long time to open their heavy shu
 * 📖 **Docs:** [Worker Safety and Probes](../../reference/md-resources/troubleshooting-kubernetes.md#section-2)
 * 🖼️ **Comic:** [The Health Inspector - Liveness vs Readiness](../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
 * 🖼️ **Comic:** [The Health Inspector - Readiness](../../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
-* 🧪 **Lab:** [LAB 01 – Liveness Probes: The Health Inspector](../../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
 
 [<< Previous Chapter: Network Policies](ch13-network-policies.md) | [Back to Story Index](../story.md) | [Next Chapter: Debugging & Logs >>](ch15-debugging-and-logs.md)

@@ -33,6 +33,5 @@ By defining **Worker Safety & Conduct**, the Mall Owner ensures that the entire 
 
 ### 📄 Documentation
 * 📖 **Docs:** [SecurityContext: Worker Safety & Conduct](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
-* 🧪 **Lab:** [LAB 01 – ServiceAccount Identity & Safety Settings](../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
 
 [<< Previous Chapter: ConfigMaps & Secrets](ch05-configmaps-and-secrets.md) | [Back to Story Index](../story.md) | [Next Chapter: Identity & Access >>](ch07-identity-and-access.md)

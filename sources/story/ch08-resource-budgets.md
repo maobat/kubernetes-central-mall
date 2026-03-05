@@ -36,7 +36,6 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 
 ### 🚰 Resource Management
 * 🖼️ **Comic:** [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
-* 🧪 **Lab:** [Managing Resource Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
 
 ### 📄 Documentation
 * 📖 **Docs:** [Resource Requests, Limits, and Quotas](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)

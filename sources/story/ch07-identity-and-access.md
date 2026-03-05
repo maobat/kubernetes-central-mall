@@ -39,8 +39,6 @@ You might wonder why the Mall doesn't just write the permissions directly onto t
 
 ### 🔐 Identity & Access (ServiceAccounts)
 * 🖼️ **Comic:** [The Secure Badge](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
-* 🧪 **Lab:** [LAB 01 – ServiceAccount Identity](../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
-* 🧪 **Lab:** [LAB 02 – RBAC Identity](../../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
 
 ### 📄 Documentation
 * 📖 **Docs:** [Understanding RBAC](../../reference/md-resources/understanding-role-based-access-control-rbac.md)

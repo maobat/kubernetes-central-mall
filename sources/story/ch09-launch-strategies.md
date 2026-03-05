@@ -33,7 +33,6 @@ This is the default **Rolling Update** in Kubernetes. One by one, old pods are r
 
 ### 🚪 Services (External - NodePort & Canary)
 * 🖼️ **Comic:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-* 🧪 **Lab:** [LAB 04 – Canary Deployments with NodePort](../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
 
 ### 📄 Documentation
 * 📖 **Docs:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
