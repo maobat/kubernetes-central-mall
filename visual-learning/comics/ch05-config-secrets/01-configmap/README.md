@@ -27,6 +27,6 @@ This comic explains how to **decouple configuration** from your store's workers 
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
 - **Lab** → [Configuration: ConfigMaps](../../../../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
 - **Docs** → [Configuration Decoupling](../../../../reference/md-resources/configuration-decoupling.md)
-- **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)

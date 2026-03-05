@@ -27,6 +27,6 @@ This comic explains how **Persistent Storage** allows data to survive even if th
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)
 - **Lab** → [The Warehouse (PV/PVC)](../../../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
 - **Docs** → [Creating a PersistentVolume](../../../../reference/md-resources/creating-a-persistentvolume.md)
-- **Study Guide** → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)

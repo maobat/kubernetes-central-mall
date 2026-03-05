@@ -27,6 +27,6 @@ This comic explains how **ClusterIP** (Internal Services) works in Kubernetes us
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services-networking.md)
 - **Lab** → [ClusterIP & Internal Communication](../../../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
 - **Docs** → [Service IP Tracker Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)
-- **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services-networking.md)

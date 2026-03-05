@@ -27,6 +27,6 @@ This comic explains the complexities of the **Gateway API** and why your gateway
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 12: Ingress & Gateway API](../../../../sources/study-guide/ch12-ingress.md)
 - **Lab** → [Canary with Gateway API](../../../../practice/labs/ch12-ingress/lab05-canary-deployment-gateway-api/README.md)
 - **Docs** → [Understanding Gateway API](../../../../reference/md-resources/gateway-api.md)
-- **Study Guide** → [Chapter 12: Ingress & Gateway API](../../../../sources/study-guide/ch12-ingress.md)

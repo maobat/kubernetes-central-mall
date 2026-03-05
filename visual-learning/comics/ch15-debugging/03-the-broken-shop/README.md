@@ -27,6 +27,6 @@ This comic explains the **CSI (Crime Scene Investigation)** approach to troubles
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 15: Debugging & Logs](../../../../sources/study-guide/ch15-debugging.md)
 - **Lab** → [Fixing the Broken Shop](../../../../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
 - **Docs** → [Troubleshooting Guide](../../../../reference/md-resources/troubleshooting-kubernetes.md)
-- **Study Guide** → [Chapter 15: Debugging & Logs](../../../../sources/study-guide/ch15-debugging.md)

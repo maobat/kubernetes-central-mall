@@ -26,6 +26,6 @@ This comic explains the difference between **Helm** and **Kustomize** using the 
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 10: Logistics Tools](../../../../sources/study-guide/ch10-logistics.md)
 - **Lab** → [Helm & Kustomize](../../../../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
 - **Docs** → [Using Helm](../../../../reference/md-resources/using-the-helm-package-manager.md)
-- **Study Guide** → [Chapter 10: Logistics Tools](../../../../sources/study-guide/ch10-logistics.md)

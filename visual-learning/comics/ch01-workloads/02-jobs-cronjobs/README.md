@@ -26,6 +26,6 @@ This comic explains the difference between **standard staff (Deployments)** and 
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
 - **Lab** → [Jobs & CronJobs](../../../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
 - **Docs** → [Scheduled Maintenance Guide](../../../../reference/md-resources/cronjobs.md)
-- **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)

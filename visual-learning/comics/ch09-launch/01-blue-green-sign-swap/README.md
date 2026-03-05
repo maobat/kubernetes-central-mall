@@ -27,6 +27,6 @@ This comic explains the **Blue/Green Strategy** using the *Central Mall* storefr
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 9: Launch Day](../../../../sources/study-guide/ch09-deployments.md)
 - **Lab** → [Blue/Green Traffic Transition](../../../../practice/labs/ch09-launch/lab04-blue-green-traffic-transition/README.md)
 - **Docs** → [Implementing Blue/Green Deployments](../../../../reference/md-resources/implementing-bluegreen-deployments.md)
-- **Study Guide** → [Chapter 9: Launch Day](../../../../sources/study-guide/ch09-deployments.md)

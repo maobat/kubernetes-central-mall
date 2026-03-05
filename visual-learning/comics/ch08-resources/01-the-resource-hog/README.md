@@ -28,6 +28,6 @@ This comic explains **Resource Management (Requests & Limits)** using the *Centr
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 8: Resource Budgets](../../../../sources/study-guide/ch08-resource-budgets.md)
 - **Lab** → [Managing Resource Constraints](../../../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
 - **Docs** → [Resource Budget Guide](../../../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
-- **Study Guide** → [Chapter 8: Resource Budgets](../../../../sources/study-guide/ch08-resource-budgets.md)

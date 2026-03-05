@@ -27,6 +27,6 @@ This comic explains why **StatefulSets** are the "VIPs" of the Kubernetes world 
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
 - **Lab** → [The Fixed Boutique (StatefulSets)](../../../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
 - **Docs** → [Using StatefulSets](../../../../reference/md-resources/using-statefulsets.md)
-- **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)

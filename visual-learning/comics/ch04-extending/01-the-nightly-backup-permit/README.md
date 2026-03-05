@@ -27,6 +27,6 @@ This comic explains how **Custom Resource Definitions (CRDs)** and **Operators**
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)
 - **Lab** → [Custom Backup Service (CRD)](../../../../practice/labs/ch04-extending/lab01-crd-custom-backup-service/README.md)
 - **Docs** → [Extending K8s with CRDs](../../../../reference/md-resources/extending-k8s-crds-operators.md)
-- **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)

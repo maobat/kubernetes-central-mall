@@ -27,6 +27,6 @@ This comic explains why Kubernetes doesn't know what a "Database" is by default 
 ---
 
 ## 🔗 References
+- **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)
 - **Lab** → [CRDs & Operators](../../../../practice/labs/ch04-extending/lab04-crds-operators/README.md)
 - **Docs** → [Understanding CRDs](../../../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
-- **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)
