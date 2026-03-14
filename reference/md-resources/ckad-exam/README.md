@@ -23,6 +23,7 @@ If today is exam day:
 
 👉 Continue with:
 
+- [Study Environments](./00-study-environments.md)
 - [Linux Setup](./01-linux-setup.md)
 - [CKAD Cheatsheet](./02-cheatsheet.md)
 - [Time Strategy](./03-time-management.md)

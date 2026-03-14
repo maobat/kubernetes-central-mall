@@ -239,6 +239,7 @@ Investigating "incidents" using logs and real-time inspections (**Logs, Describe
 Quick guides for surviving the practical exam enviornment.
 
 **🧰 Study Toolbox:**
+- 📄 [Doc: Study Environments & Tools](../reference/md-resources/ckad-exam/00-study-environments.md)
 - 🖼️ [Comic: SSH and Contexts (Service Elevator)](../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
 - 📄 [Doc: Linux Setup Tips](../reference/md-resources/ckad-exam/01-linux-setup.md)
 - 📄 [Doc: Time Management](../reference/md-resources/ckad-exam/03-time-management.md)
