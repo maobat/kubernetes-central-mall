@@ -33,11 +33,42 @@ alias kga='k get all'
 
 ## 🧠 Editor
 
-Default editor is `vi`.
+Default editor is `vim`.
+
+## `Vim` Setup
+Persist Vim settings in `.vimrc`
+
+---
+### Settings
+First create or open (if already exists) file `.vimrc`:
+```shell
+vim ~/vimrc
+```
+
+Now enter (in insert-mode activated with i) the following lines:
+```shell
+set expandtab
+set tabstop=2
+set shiftwidth=2
+```
+Save and close the file by pressing `Esc` followed by `:x` and `Enter`.
+
+### Explanation
+Whenever you open Vim now as the current user, these settings will be used.
+If you ssh onto a different server, these settings will **not** be transferred.
+
+Settings explained:
+```shell
+expandtab: use spaces for tab
+tabstop: amount of spaces used for tab
+shiftwidth: amount of spaces used during indentation
+```
+
 
 Useful commands:
 
 - `i` → insert
+- :`set paste`/`nopaste` -> enable/disable mode paste
 - `:wq` → save & quit
 - `:q!` → quit without saving
 

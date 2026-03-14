@@ -124,9 +124,10 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 **⚡ Study Guide:** [Resources & Quotas](./study-guide/ch08-resources.md)
 
 **🧰 Study Toolbox:**
-- 🖼️ [Comic: The Resource Hog](./../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
-- 🧪 [Lab: Managing Resource Constraints](./practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
-- 📄 [Doc: The Resource Budget]../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+- 🖼️ [Comic: The Resource Hog](../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+- 🧪 [Lab: Managing Resource Constraints](../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
+- 🧪 [Lab: Resource Checker (Requests & Limits)](../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+- 📄 [Doc: The Resource Budget](../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
 ---
 
@@ -228,5 +229,18 @@ Investigating "incidents" using logs and real-time inspections (**Logs, Describe
 - 📄 [Doc: Diagnostic Cheat Sheet](../reference/md-resources/diagnostic-cheat-sheet.md)
 - 🖼️ [Comic: The Broken Shop](../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
 - 🧪 [Lab: Fixing the Broken Shop](../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
+
+---
+
+## 🎓 Part 6: CKAD Exam Preparation
+> **Focus:** Specialized tips, analogies, and guides for the CKAD certification.
+
+### 📖 [Exam Guide: Setup & Strategies](../reference/md-resources/ckad-exam/README.md)
+Quick guides for surviving the practical exam enviornment.
+
+**🧰 Study Toolbox:**
+- 🖼️ [Comic: SSH and Contexts (Service Elevator)](../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
+- 📄 [Doc: Linux Setup Tips](../reference/md-resources/ckad-exam/01-linux-setup.md)
+- 📄 [Doc: Time Management](../reference/md-resources/ckad-exam/03-time-management.md)
 
 ---

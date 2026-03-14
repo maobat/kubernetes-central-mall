@@ -27,6 +27,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 07** – [Identity & Access (RBAC)](ch07-identity/lab02-rbac-identity/README.md)
 - **Ch. 07** – [Entry Permit Office (Admission Control)](ch07-identity/lab03-admission-control-entry-permit/README.md)
 - **Ch. 08** – [Resource Budgets (Constraints)](ch08-resources/lab01-managing-resource-constraints/README.md)
+- **Ch. 08** – [Resource Checker (Requests & Limits)](ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
 
 ---
 

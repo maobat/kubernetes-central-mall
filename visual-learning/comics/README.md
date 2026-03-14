@@ -62,6 +62,12 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 
 - **Ch. 14** – [The Health Inspector - Liveness/Readiness](ch14-probes/01-the-health-inspector/README.md)
 - **Ch. 15** – [The Broken Shop (Troubleshooting)](ch15-debugging/03-the-broken-shop/README.md)
+---
+
+## 🎓 Part 6: CKAD Exam Preparation
+> **Focus:** Specialized tips, analogies, and guides for the CKAD certification.
+
+- **Exam Tips** – [SSH and Contexts (Service Elevator)](ckad-exam/05-ssh-and-contexts/README.md)
 
 ---
 [Back to Main Index](../../README.md)

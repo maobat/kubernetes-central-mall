@@ -35,6 +35,8 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 ### 🧰 Study Toolbox
 
 ### 🚰 Resource Management
+* 🧪 **Lab:** [Managing Resource Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
+* 🧪 **Lab:** [Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
 * 🖼️ **Comic:** [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 
 ### 📄 Documentation

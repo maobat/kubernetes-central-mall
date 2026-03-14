@@ -37,5 +37,6 @@ This is `kubectl exec`. It allows you to step inside a running pod and run comma
 
 ### 🩺 Debugging & Analysis
 * 🖼️ **Comic:** [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
+* 🖼️ **Comic:** [SSH and Contexts (Service Elevator)](../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
 
 [<< Previous Chapter: Probes & Health Checks](ch14-probes-and-health-checks.md) | [Back to Story Index](../story.md)

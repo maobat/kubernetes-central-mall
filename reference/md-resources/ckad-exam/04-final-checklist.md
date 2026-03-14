@@ -11,3 +11,6 @@ k get svc -A
 k get job -A
 k get cronjob -A
 ```
+
+---
+- [ssh & context](05-ssh-and-contexts.md)
