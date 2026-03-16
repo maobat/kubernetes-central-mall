@@ -113,6 +113,41 @@ space-alien-welcome-message-generator   0/1     1            0           40s
 
 We can also run `k describe deploy` to see info about failed `ReadinessProbes`.
 
+### 4. Make the Deployment Ready
+Now, let's stock the shelves so the Inspector passes the shop. We need to create the `/tmp/ready` file inside the Pod.
+
+First, get the Pod name:
+```bash
+k get pod -l app=space-alien-welcome-message-generator
+```
+
+Then, execute a command inside the Pod to create the file (replace the pod name with yours):
+```bash
+k exec <pod-name> -- touch /tmp/ready
+```
+
+### 5. Final Observation
+After waiting for the next probe interval (up to 5 seconds), observe that the Pod is now marked as ready.
+
+We see `1/1` in the `READY` column.
+
+```bash
+controlplane $ k get deploy
+NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE
+space-alien-welcome-message-generator   1/1     1            0           3m53s
+```
+
+> **Alternative Check Method (HTTP)**
+> Alternatively, if the app served a web page, you might configure an HTTP readiness probe instead of checking for a file. For example:
+> ```yaml
+>         readinessProbe:
+>           httpGet:
+>             path: /
+>             port: 80
+>           initialDelaySeconds: 5
+>           periodSeconds: 5
+> ```
+
 ---
 
 ## 🔗 References
