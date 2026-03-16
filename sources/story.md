@@ -218,6 +218,7 @@ Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Pr
 - 🖼️ [Comic: The Health Inspector - Liveness vs Readiness](../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
 - 🖼️ [Comic: The Health Inspector - Readiness](../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
 - 🧪 [Lab: Liveness Probes: The Health Inspector](../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
+- 🧪 [Lab: Readiness Probes](../practice/labs/ch14-probes/lab02-readiness-probes/README.md)
 
 ---
 

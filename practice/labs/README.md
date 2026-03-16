@@ -56,6 +56,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 > **Focus:** Health inspections, incident investigations, and the mall control room.
 
 - **Ch. 14** – [Liveness Probes: The Health Inspector](ch14-probes/lab01-liveness-probes-health-inspector/README.md)
+- **Ch. 14** – [Readiness Probes](ch14-probes/lab02-readiness-probes/README.md)
 - **Ch. 15** – [Fixing the Broken Shop (CCTV & Logs)](ch15-debugging/lab15-fixing-the-broken-shop/README.md)
 
 ---
