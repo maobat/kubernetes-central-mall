@@ -58,6 +58,10 @@ kubectl rollout undo deployment/clerk-dept
 
 ### 🧰 Study Toolbox
 
+### ⚖️ Rolling Update Strategy (The Default)
+* 🖼️ **Comic:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
+* 🧪 **Lab:** [Lab 01 - The "Wonderful" Boutique Makeover](../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
+
 ### 🔵🟢 Blue/Green Strategy
 * 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 * 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)

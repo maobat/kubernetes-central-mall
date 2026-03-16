@@ -29,12 +29,17 @@ This is the default **Rolling Update** in Kubernetes. One by one, old pods are r
 
 ---
 
-### 🧰 Study Toolbox
+### ⚖️ Rolling Update
+* 🖼️ **Comic:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
 
-### 🚪 Services (External - NodePort & Canary)
+### 🔵🟢 Blue/Green
+* 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+
+### 🐤 Canary
 * 🖼️ **Comic:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
 
 ### 📄 Documentation
 * 📖 **Docs:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
+* 📖 **Docs:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
 
 [<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md)

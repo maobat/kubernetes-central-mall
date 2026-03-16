@@ -40,6 +40,7 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 ## 🚀 Part 3: Application Deployment `[ 20% ]`
 > **Focus:** Grand openings, logistics pipelines, and managing change without disappointing customers.
 
+- **Ch. 09** – [The Trend Spot (Rolling Renovation)](ch09-launch/01-rolling-update/README.md)
 - **Ch. 09** – [The Canary Side Entrance](ch09-launch/01-canary-nodeport/README.md)
 - **Ch. 09** – [The Sign Swap (Blue/Green)](ch09-launch/01-blue-green-sign-swap/README.md)
 - **Ch. 10** – [The Logistics Chain (Helm & Kustomize)](ch10-logistics/02-the-logistics-chain/README.md)
