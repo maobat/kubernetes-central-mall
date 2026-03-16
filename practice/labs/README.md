@@ -12,6 +12,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 01** – [Floor Security Guard (DaemonSet)](ch01-workloads/lab03-daemonset-floor-security/README.md)
 - **Ch. 02** – [Sidecar & InitContainers](ch02-multi-container/lab01-sidecar-pattern/README.md)
 - **Ch. 02** – [The Warehouse (PV/PVC)](ch02-multi-container/lab02-pv-pvc/README.md)
+- **Ch. 03** – [Build Container from Scratch](ch03-images/lab01-build-container-from-scratch/README.md)
 - **Ch. 03** – [Image Updates & Rollouts](ch03-images/lab03-image-updates/README.md)
 - **Ch. 04** – [Custom Backup Service (CRD)](ch04-extending/lab01-crd-custom-backup-service/README.md)
 - **Ch. 04** – [CRDs & Operators](ch04-extending/lab04-crds-operators/README.md)

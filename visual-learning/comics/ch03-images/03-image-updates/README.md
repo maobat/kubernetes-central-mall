@@ -29,5 +29,6 @@ This comic explains how **Container Images** are built and how **Rolling Updates
 
 ## 🔗 References
 - **Study Guide** → [Chapter 3: Pod Design & Images](../../../../sources/study-guide/ch03-pod-design.md)
+- **Lab** → [Build Container from Scratch](../../../../practice/labs/ch03-images/lab01-build-container-from-scratch/README.md)
 - **Lab** → [Image Updates & Rollouts](../../../../practice/labs/ch03-images/lab03-image-updates/README.md)
 - **Docs** → [Managing Images & Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)

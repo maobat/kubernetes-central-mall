@@ -56,6 +56,7 @@ Mastering the art of building and updating your store's display models (**Docker
 
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Perfect Mannequin](./../visual-learning/comics/ch03-images/03-image-updates/README.md)
+- 🧪 [Lab: Build Container from Scratch](./../practice/labs/ch03-images/lab01-build-container-from-scratch/README.md)
 - 🧪 [Lab: Image Updates & Rollouts](./../practice/labs/ch03-images/lab03-image-updates/README.md)
 - 📄 [Doc: Managing Images & Rollouts]../../reference/md-resources/managing-container-images-and-rollouts.md)
 
