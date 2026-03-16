@@ -4,7 +4,7 @@
 
 > *Before the mall opens, let's meet everyone who keeps it running.*
 
-This is your **introductory overview** of every character in *The Central Mall: A Kubernetes Adventure* — a living guide to the Kubernetes ecosystem through the eyes of a bustling urban mall.
+This is an **introductory overview** of every character in *The Central Mall*, a living guide to the Kubernetes ecosystem through the eyes of a bustling urban mall.
 
 ---
 
