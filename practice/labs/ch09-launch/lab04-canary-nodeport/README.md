@@ -86,6 +86,6 @@ k expose deploy oldbird --name=bird-portal --port=80 --type=NodePort --selector=
 ---
 
 ## 🔗 References
-- **Comic** → [Canary NodePort](../../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-- **Docs** → [Canary Deployments](../../../reference/md-resources/lab-canary-deployments-the-new-recipe-test.md)
-- **Study Guide** → [Chapter 9: Launch Strategies](../../../sources/study-guide/ch09-deployments.md)
+- **Comic** → [Canary NodePort](../../../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+- **Docs** → [Canary Deployments](../../../../reference/md-resources/lab-canary-deployments-the-new-recipe-test.md)
+- **Study Guide** → [Chapter 9: Launch Strategies](../../../../sources/study-guide/ch09-deployments.md)

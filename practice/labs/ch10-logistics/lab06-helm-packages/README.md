@@ -108,4 +108,4 @@ kubectl apply -k overlays/staging
 ## 🔗 References
 - **Comic** → [Logistics Chain](../../../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 - **Docs** → [Helm Docs](https://helm.sh/docs/) | [Kustomize Docs](https://kustomize.io/)
-- **Study Guide** → [Chapter 10: Management](../../../sources/study-guide/ch10-management.md)
+- **Study Guide** → [Chapter 10: Management](../../../../sources/study-guide/ch10-management.md)
