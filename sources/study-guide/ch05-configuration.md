@@ -96,6 +96,8 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 
 * 🖼️ **Comic:** [The Rulebook & The Uniform - ConfigMaps & Secrets](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
 * 🧪 **Lab:** [Lab 01 - ConfigMaps](../../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
+* 🧪 **Lab:** [Lab 02 - Breakroom Rules (ConfigMap Access)](../../practice/labs/ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
+* 🧪 **Lab:** [Lab 04 - Reading the Rules (ConfigMap Pod Access)](../../practice/labs/ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
 * 📄 **Doc:** [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
 
 ---

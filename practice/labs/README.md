@@ -22,7 +22,9 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 > **Focus:** Managing the mall's vault, setting employee conduct rules, and balancing the utility budget.
 
 - **Ch. 05** – [Price List (ConfigMaps)](ch05-config-secrets/lab01-configmaps/README.md)
+- **Ch. 05** – [Breakroom Rules (ConfigMap Access)](ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
 - **Ch. 05** – [Vault Combination (Secrets & Env Injection)](ch05-config-secrets/lab03-secrets-env-injection/README.md)
+- **Ch. 05** – [Reading the Rules (ConfigMap Pod Access)](ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
 - **Ch. 06** – [Worker Safety (SecurityContext)](ch06-safety/lab01-serviceaccount-identity/README.md)
 - **Ch. 07** – [Identity & Access (RBAC)](ch07-identity/lab02-rbac-identity/README.md)
 - **Ch. 07** – [Entry Permit Office (Admission Control)](ch07-identity/lab03-admission-control-entry-permit/README.md)
