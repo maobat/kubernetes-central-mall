@@ -21,11 +21,36 @@ Most customers (95%) go to the main counter for vanilla. A few adventurous souls
 
 In Kubernetes, this is a **Canary Deployment**. You run a small number of new pods alongside the old ones. The **Service** (the entrance) distributes traffic between them. As you gain confidence, you scale up the new version and scale down the old one.
 
-## The Rolling Update
+## The Rolling Update: The Seamless Renovation
 
 Sometimes, you don't need a separate shop or a sample station. You just need to update the furniture in your existing store. You don't close the store; instead, you move customers to one side, replace two chairs, then move them back and replace the next two.
 
 This is the default **Rolling Update** in Kubernetes. One by one, old pods are replaced by new ones, ensuring that the shop is always open for business.
+
+**The Progression:**
+```text
+Old version:  v1 v1 v1 v1
+Update →      v2 v1 v1 v1
+              v2 v2 v1 v1
+              v2 v2 v2 v1
+              v2 v2 v2 v2
+```
+
+**What Happens:**
+1. **Old workers** keep serving customers.
+2. **New workers** arrive and set up their counters.
+3. Once a new counter is ready, an **old worker** clocks out.
+4. Traffic automatically shifts as the workforce changes.
+
+---
+
+## 🏬 Mall Analogy: Fast Recall
+
+| Strategy | Mall Story |
+| :--- | :--- |
+| **Rolling Update** | Replace chairs in the café one by one while customers sit elsewhere. |
+| **Blue-Green** | Build an entirely new café across the hall, then move the sign overnight. |
+| **Canary** | Offer a new flavor at a tiny sample counter first before changing the main menu. |
 
 ---
 

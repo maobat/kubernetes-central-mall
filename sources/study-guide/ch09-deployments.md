@@ -5,7 +5,22 @@ In the **Central Mall**, a grand opening is a high-stakes event. If you open a n
 
 ---
 
-## 🎭 9.1 Blue/Green Deployment: The Sign Swap
+## 🎭 9.1 Rolling Update: The Seamless Renovation
+
+This is the default strategy for a reason. Kubernetes replaces old workers with new ones, one by one, ensuring that the shop is always open for business.
+
+1. **Old workers** keep serving customers.
+2. **New workers** arrive and set up their counters.
+3. Once a new counter is ready, an **old worker** clocks out.
+4. Traffic automatically shifts as the workforce changes.
+
+**Tuning the Change:**
+- `maxSurge`: How many extra temporary workers you can hire during the move.
+- `maxUnavailable`: How many empty counters you can tolerate during the move.
+
+---
+
+## 🎭 9.2 Blue/Green Deployment: The Sign Swap
 
 Imagine you have two identical storefronts: **Store A (Blue)** and **Store B (Green)**. 
 
@@ -17,14 +32,43 @@ In Kubernetes, this is done by updating a **Service's selector** to point to the
 
 ---
 
-## 🎭 9.2 Canary Deployment: The Taste Test
+## 🎭 9.3 Canary Deployment: The Taste Test
 
 A **Canary Deployment** is like a free sample station. You don't move everyone at once. 
 
 1. You open a tiny corner of the new shop (the "Canary") and invite 10% of your customers to try it.
 2. If they like it, you slowly expand the corner until the new version takes over.
 
-**Lab Tip:** In Kubernetes, we do this by having two Deployments (v1.14 and latest) sharing the same **Service**. By adjusting the **number of replicas** (e.g., 3 Old, 1 Canary), you control the traffic split!
+**Lab Tip:** In Kubernetes, we do this by having two Deployments (v1.14 and latest) sharing the same **Service**. By adjusting the **number of replicas** (e.g., 3 Old, 1 Canary), you control the traffic split! For more advanced control, you'd use an **Ingress** or **Service Mesh**.
+
+---
+
+## ⚖️ Strategy Comparison
+
+| Feature | Rolling Update | Blue-Green | Canary |
+| :--- | :--- | :--- | :--- |
+| **Native in Deploy?**| ✅ Yes | ❌ No (Pattern) | ❌ No (Pattern) |
+| **Mixed Versions?** | ⚠️ Yes | ✅ No | ⚠️ Yes (by design) |
+| **Rollback Speed** | 🐢 Slow | ⚡ Instant | ⚡ Instant |
+| **Resources** | 🪙 Normal | 💰 2x Needed | 🪙 Normal |
+
+### Pros & Cons
+- **Rolling Update:** Zero downtime and automatic, but rollback is slower and versions mix during the move.
+- **Blue-Green:** Instant rollback and no version mixing, but requires double resources and a manual switch.
+- **Canary:** Safest for real-user testing and gradual risk, but requires more complex routing (Ingress/Mesh).
+
+---
+
+## 🧠 Quick CKAD Memory Trick
+
+| Strategy | Traffic Style | Pod State |
+| :--- | :--- | :--- |
+| **Rolling Update** | Gradual replacement | Mixed versions |
+| **Blue-Green** | Instant switch | Separate environments |
+| **Canary** | Partial traffic testing | Percentage-based |
+
+> [!IMPORTANT]
+> **Exam Note:** Only `RollingUpdate` is native to the `Deployment` spec. Blue-Green and Canary are architectural patterns implemented using Services, Ingress, or Service Mesh.
 
 ---
 
