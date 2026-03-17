@@ -1,91 +1,110 @@
-# 🧪 LAB 04: The New Fashion Test (Canary Deployments)
+# 🧪 LAB 03: The Canary Corner (Wonderful Boutique)
 
-## Launch Strategies – Traffic Splitting & Testing in Production
+## Launch Strategies – Traffic Weighting & Testing in Production
 
 ---
 
 ## 🎯 Lab Goal
 
-Implement a **Canary Deployment** using **NodePort** and **replica weighting**. You will learn how to route a small percentage of customers to a new version of your shop to test it before a full rollout.
+Implement a **Canary Deployment** using **replica weighting** and a shared Service selector. You will learn how to route a small percentage of customers to a new version of your shop to test it before a full rollout.
 
-> **CKAD Importance:** Medium. While complex traffic tools (Istio) are out of scope, the "Service Label Selector" trick for simple canaries is a classic CKAD pattern.
+> **CKAD Importance:** Medium. In the CKAD, you perform canary testing manually by adjusting the **Replica Count** of shared deployments since advanced traffic management tools like Istio are out of scope.
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, we are testing a experimental new uniforms for our staff.
+In the **Central Mall**, a **Canary Rollout** is like having 10 shop assistants. To test a new uniform, you give it to only 2 assistants (20%). 
 
-- **The Old Guard (oldbird)** → 9 workers in the classic blue uniform.
-- **The New Guard (newbird)** → 1 worker in the experimental neon uniform.
-- **The Common Entrance (Service)** → A single front door label "Fashion Outlet".
-- **The Customer Experience (Traffic)** → Since there's only 1 neon worker out of 10 total staff, any customer walking through the door has a 10% chance of being served by the "Canary".
+Customers have an 80% chance of meeting the old style and a 20% chance of meeting the new one as they walk through the main entrance. We keep the main entrance (Service) exactly as it is; the workers just "join" the team by wearing the same brand badge (`app: wonderful`).
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **oldbird / newbird** | Two different implementations of the same shop. |
-| **Shared Selector Label** | The common sign above the door (`type=bird`). |
-| **Replica Count** | Determining the probability of who serves the user. |
+| **Shared Selector Label** | The "Wonderful Boutique" badge (`app: wonderful`) both teams wear. |
+| **Replica Count Strategy** | Hiring 8 classic workers and 2 "canary" workers to hit the 20% target. |
+| **Probability Routing** | The random chance of a customer meeting a specific worker. |
 
 ---
 
 ## 📋 Requirements
 
-1. **V1 Deployment**: `oldbird` (nginx:1.18), 9 replicas.
-2. **V2 Deployment**: `newbird` (nginx:latest), 1 replica.
-3. **Shared Label**: Both must have the label `type: bird`.
-4. **Service**: Create a NodePort service that selects `type: bird`.
-5. **Verify**: Observe that roughly 10% of requests hit the latest version.
+The Manager wants to test `nginx:alpine` but is afraid of a total failure. 
+
+1. **The Math (80/20 Rule):** To achieve the 80/20 split with 10 total Pods:
+   - **Blue (v1):** 8 replicas (`httpd:alpine`).
+   - **Canary (v2):** 2 replicas (`nginx:alpine`).
+2. **Current (v1):** Deployment `wonderful-v1` is running. Scale it to 8.
+3. **New (v2):** Create Deployment `wonderful-v2` with 2 replicas.
+4. **Shared Identity:** Both must have the label `app: wonderful`.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Deploy the Standard Shop (V1)
+### 1. Adjust the Main Squad (v1)
+Scale the existing deployment to make room for the Canary.
+
 ```bash
-k create deploy oldbird --image=nginx:1.18 --replicas=9
-k label deploy oldbird type=bird --overwrite
-# Ensure pods also have the label!
+kubectl scale deploy wonderful-v1 --replicas=8
 ```
 
-### 2. Deploy the Canary (V2)
+### 2. Launch the Canary (v2)
+Create the new deployment. **Crucial:** It must share the same `app: wonderful` label so the existing Service can find it.
+
 ```bash
-k create deploy newbird --image=nginx:latest --replicas=1
-k label deploy newbird type=bird --overwrite
+kubectl create deploy wonderful-v2 --image=nginx:alpine --replicas=2 --dry-run=client -o yaml > canary.yaml
 ```
 
-### 3. Open the Common Entrance
-```bash
-k expose deploy oldbird --name=bird-portal --port=80 --type=NodePort --selector=type=bird
+**Edit `canary.yaml` to ensure the labels match the Service selector:**
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wonderful-v2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wonderful # Must match the Service selector!
+  template:
+    metadata:
+      labels:
+        app: wonderful # The "intercom" label
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
 ```
 
 ---
 
 ## 🔎 Verification
 
-1. **Check Endpoints:**
+Since both Deployments share the label `app: wonderful`, the Service will distribute traffic randomly (Round Robin) among all 10 Pods.
+
+1. **Check the Endpoints:** (You should see 10 IP addresses)
    ```bash
-   k describe svc bird-portal
-   # You should see 10 IP addresses (9 from oldbird, 1 from newbird).
+   kubectl describe svc wonderful
    ```
 
 2. **Test Traffic Split:**
    ```bash
-   for i in {1..10}; do curl -s $(minikube ip):<NODEPORT> | grep "nginx"; done
-   # Statistically, you'll see one or two "latest" responses.
+   # Run multiple curls to see the different responses
+   for i in {1..10}; do curl -s wonderful:30080 | grep -i "Server"; done
    ```
+   *Statistically, you should see 'httpd' about 8 times and 'nginx' about 2 times.*
 
 ---
 
 ## 🧠 Key Takeaways
 
-- **Math with Pods:** A Service simply sends traffic to all Pods matching its selector. It doesn't care about versions.
-- **Simplicity:** This is the easiest way to do a canary without complex Ingress controllers or Service Meshes.
-- **CKAD Tip:** Always use `k describe svc` to check the **Endpoints**. If you don't see both Deployment IPs listed, your labels are inconsistent.
+- **The Selector is Key:** In Blue-Green, we change the Service selector. In Canary, we keep the Service selector fixed and let new Pods "join" the pool by sharing the same label.
+- **CKAD Probability:** You control the traffic weight manually via the **Replica Count**.
+- **Low Risk:** If the "Canary" Pods fail, only 20% of the customers are affected while you investigate.
 
 ---
 
 ## 🔗 References
-- **Comic** → [Canary NodePort](../../../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-- **Docs** → [Canary Deployments](../../../../reference/md-resources/lab-canary-deployments-the-new-recipe-test.md)
+- **Comic** → [Canary Traffic at the Side Entrance](../../../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
 - **Study Guide** → [Chapter 9: Launch Strategies](../../../../sources/study-guide/ch09-deployments.md)
