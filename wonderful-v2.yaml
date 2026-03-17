@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: wonderful
+  name: wonderful-v2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: wonderful
+      version: v2
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: wonderful
+        version: v2
+    spec:
+      containers:
+      - image: nginx:alpine
+        name: nginx
+        resources: {}
