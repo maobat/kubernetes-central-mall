@@ -109,8 +109,9 @@ kubectl rollout undo deployment/clerk-dept
 ### 🔵🟢 Blue/Green Strategy
 * 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 * 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
-* 🧪 **Lab:** [Lab 02 - Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
-* 🧪 **Lab:** [Blue/Green Traffic Transition](../../practice/labs/ch09-launch/lab04-blue-green-traffic-transition/README.md)
+* 🧪 **Lab:** [Lab 02 - Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md
+)
+* 🧪 **Lab:** [Blue/Green Traffic Transition](../../practice/labs/ch09-launch/lab02-blue-green-traffic-transition/README.md)
 
 ### 🐤 Canary Strategy
 * 🖼️ **Comic:** [Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
