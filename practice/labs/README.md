@@ -37,8 +37,9 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 ## 🚀 Part 3: Application Deployment `[ 20% ]`
 > **Focus:** Grand openings, logistics pipelines, and managing change without disappointing customers.
 
-- **Ch. 09** – [The "Wonderful" Boutique Makeover (Rolling Update)](ch09-launch/lab01-rolling-update-wonderful/README.md)
-- **Ch. 09** – [Canary Deployments (NodePort)](ch09-launch/lab04-canary-nodeport/README.md)
+- **Ch. 09** – [Rolling Update Boutique (Wonderful)](ch09-launch/lab01-rolling-update-wonderful/README.md)
+- **Ch. 09** – [Blue-Green Sign Swap (Wonderful)](ch09-launch/lab02-blue-green-wonderful/README.md)
+- **Ch. 09** – [Canary Taste Test (Wonderful)](ch09-launch/lab03-canary-wonderful/README.md)
 - **Ch. 10** – [Logistics Tools (Helm & Kustomize)](ch10-logistics/lab06-helm-packages/README.md)
 
 ---
