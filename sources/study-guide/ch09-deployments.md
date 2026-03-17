@@ -1,7 +1,7 @@
 # 📖 Chapter 9: Launch Strategies
-*The Sign Swap and the Taste Test*
+*The Renovation, the Sign Swap, and the Taste Test*
 
-In the **Central Mall**, a grand opening is a high-stakes event. If you open a new shop and the lights don't work, customers leave disappointed. To prevent this, successful managers use two strategies: the **Sign Swap** (Blue/Green) and the **Taste Test** (Canary).
+In the **Central Mall**, a grand opening is a high-stakes event. If you open a new shop and the lights don't work, customers leave disappointed. To prevent this, successful managers use three strategies: the **Seamless Renovation** (Rolling Update), the **Sign Swap** (Blue/Green), and the **Taste Test** (Canary).
 
 ---
 
