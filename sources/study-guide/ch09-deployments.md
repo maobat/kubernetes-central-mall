@@ -32,6 +32,29 @@ In Kubernetes, this is done by updating a **Service's selector** to point to the
 
 ---
 
+## ☎️ Resource: Service Selectors & Label Matching
+
+In the **Central Mall**, a Service is an intercom system. The `--selector` flag defines exactly which desks will ring when a customer calls.
+
+### 🧩 The "Hard-Coded" Selector
+When using `kubectl expose --selector=key=value`, you are overriding the default behavior.
+
+| Component | Function | Mall Analogy |
+| :--- | :--- | :--- |
+| **Service Name** | `wonderful` | The name on the directory board. |
+| **Port** | `80` | The number the customer dials. |
+| **Target Port** | `80` | The phone on the worker's desk. |
+| **Selector** | `app=w,version=v1` | The specific "Skills" or "Badges" required to answer. |
+
+### 🛠️ Practice Tip
+To swap traffic in a Blue-Green scenario without deleting resources:
+```bash
+kubectl patch svc wonderful -p '{"spec":{"selector":{"version":"v2"}}}'
+```
+This command "re-wires" the intercom to the new office (v2) in milliseconds.
+
+---
+
 ## 🎭 9.3 Canary Deployment: The Taste Test
 
 A **Canary Deployment** is like a free sample station. You don't move everyone at once. 

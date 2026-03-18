@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: wonderful
+  name: wonderful-v1
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: wonderful
+  template:
+    metadata:
+      labels:
+        app: wonderful
+    spec:
+      containers:
+      - image: httpd:alpine
+        name: httpd

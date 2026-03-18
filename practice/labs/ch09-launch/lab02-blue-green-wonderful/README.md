@@ -95,6 +95,9 @@ spec:
     version: v2  # Switch from v1 to v2
 ```
 
+> [!TIP]
+> **Deep Dive:** Want to know why this works and how to do it even faster with `kubectl patch`? Check out the [Service Selectors & Label Matching](../../../../sources/study-guide/ch09-deployments.md#☎️-resource-service-selectors--label-matching) resource in the Study Guide.
+
 ---
 
 ## 🔎 Verification

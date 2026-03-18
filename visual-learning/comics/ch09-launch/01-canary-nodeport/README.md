@@ -27,6 +27,6 @@ This comic explains how the **Canary Strategy** works when you only have a singl
 ---
 
 ## 🔗 References
-- **Study Guide** → [Chapter 9: Launch Day](../../../sources/study-guide/ch09-deployments.md)
-- **Lab** → [Canary with NodePort](../../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
-- **Docs** → [Deployment Strategies Comparison](../../../reference/md-resources/related-deployment-strategies-comparison.md)
+- **Study Guide** → [Chapter 9: Launch Day](../../../../sources/study-guide/ch09-deployments.md)
+- **Lab** → [Canary with NodePort](../../../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
+- **Docs** → [Deployment Strategies Comparison](../../../../reference/md-resources/related-deployment-strategies-comparison.md)

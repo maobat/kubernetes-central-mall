@@ -8,7 +8,7 @@
 
 Implement a **Canary Deployment** using **replica weighting** and a shared Service selector. You will learn how to route a small percentage of customers to a new version of your shop to test it before a full rollout.
 
-> **CKAD Importance:** Medium. In the CKAD, you perform canary testing manually by adjusting the **Replica Count** of shared deployments since advanced traffic management tools like Istio are out of scope.
+> **CKAD Importance:** Medium. In the CKAD, you perform canary testing manually by adjusting the **Replica Count** of shared deployments since advanced traffic management tools are often out of scope for basic setups.
 
 ---
 
@@ -30,12 +30,14 @@ Customers have an 80% chance of meeting the old style and a 20% chance of meetin
 
 The Manager wants to test `nginx:alpine` but is afraid of a total failure. 
 
+**Initial State:** The application YAML is available at `/wonderful/init.yaml` (v1: `httpd:alpine`).
+
 1. **The Math (80/20 Rule):** To achieve the 80/20 split with 10 total Pods:
-   - **Blue (v1):** 8 replicas (`httpd:alpine`).
-   - **Canary (v2):** 2 replicas (`nginx:alpine`).
-2. **Current (v1):** Deployment `wonderful-v1` is running. Scale it to 8.
-3. **New (v2):** Create Deployment `wonderful-v2` with 2 replicas.
-4. **Shared Identity:** Both must have the label `app: wonderful`.
+   - **wonderful-v1:** 8 replicas (`httpd:alpine`).
+   - **wonderful-v2:** 2 replicas (`nginx:alpine`).
+2. **Current (v1):** Reduce the replicas of the old deployment to 8.
+3. **New (v2):** Create a new Deployment `wonderful-v2` with 2 replicas using `nginx:alpine`.
+4. **Shared Identity:** Both must have the label `app: wonderful` to be reached through the `NodePort` Service.
 
 ---
 
@@ -70,7 +72,7 @@ spec:
   template:
     metadata:
       labels:
-        app: wonderful # The "intercom" label
+        app: wonderful # The "intercom" label shared with v1
     spec:
       containers:
       - name: nginx
@@ -90,8 +92,12 @@ Since both Deployments share the label `app: wonderful`, the Service will distri
 
 2. **Test Traffic Split:**
    ```bash
+   k get nodes -o wide
+   NAME       STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION      CONTAINER-RUNTIME
+   minikube   Ready    control-plane   13d   v1.35.0   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.8.0-101-generic   docker://29.2.0
+   
    # Run multiple curls to see the different responses
-   for i in {1..10}; do curl -s wonderful:30080 | grep -i "Server"; done
+   for i in {1..10}; do curl -sI 192.168.49.2:32646 | grep -i "Server"; done
    ```
    *Statistically, you should see 'httpd' about 8 times and 'nginx' about 2 times.*
 
@@ -100,7 +106,7 @@ Since both Deployments share the label `app: wonderful`, the Service will distri
 ## 🧠 Key Takeaways
 
 - **The Selector is Key:** In Blue-Green, we change the Service selector. In Canary, we keep the Service selector fixed and let new Pods "join" the pool by sharing the same label.
-- **CKAD Probability:** You control the traffic weight manually via the **Replica Count**.
+- **Standardization:** In the real world, tools like **Gateway API** or **Ingress-Nginx** handle this with percentages (Weights). In the CKAD, you often do it manually with the **Replica Count**.
 - **Low Risk:** If the "Canary" Pods fail, only 20% of the customers are affected while you investigate.
 
 ---
