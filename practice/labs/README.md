@@ -15,7 +15,8 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 03** – [Build Container from Scratch](ch03-images/lab01-build-container-from-scratch/README.md)
 - **Ch. 03** – [Image Updates & Rollouts](ch03-images/lab03-image-updates/README.md)
 - **Ch. 04** – [Custom Backup Service (CRD)](ch04-extending/lab01-crd-custom-backup-service/README.md)
-- **Ch. 04** – [CRDs & Operators](ch04-extending/lab04-crds-operators/README.md)
+- **Ch. 04** – [CRD Discovery & Auditing](ch04-extending/lab04-crds-operators/discovery-lab.md)
+- **Ch. 04** – [Operators & Helm Packages](ch04-extending/lab04-crds-operators/README.md)
 
 ---
 
