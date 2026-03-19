@@ -37,13 +37,13 @@ The Manager wants to test `nginx:alpine` but is afraid of a total failure.
    - **wonderful-v2:** 2 replicas (`nginx:alpine`).
 2. **Current (v1):** Reduce the replicas of the old deployment to 8.
 3. **New (v2):** Create a new Deployment `wonderful-v2` with 2 replicas using `nginx:alpine`.
-4. **Shared Identity:** Both must have the label `app: wonderful` to be reached through the `NodePort` Service.
-
+4. **Shared Identity:** Both must have the label `app: wonderful` to be reached through the `NodePort` Service
+   
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Adjust the Main Squad (v1)
+### 1. Adjust the Main Squad (v1 - httpd:alpine - initial deployment)
 Scale the existing deployment to make room for the Canary.
 
 ```bash
@@ -78,6 +78,10 @@ spec:
       - name: nginx
         image: nginx:alpine
 ```
+Then apply the canary deployment
+```bash
+kubectl apply -f canary.yaml
+```
 
 ---
 
@@ -87,17 +91,20 @@ Since both Deployments share the label `app: wonderful`, the Service will distri
 
 1. **Check the Endpoints:** (You should see 10 IP addresses)
    ```bash
-   kubectl describe svc wonderful
+   k describe svc wonderful
+   ```
+   obviously previoulsly you need to expose the service
+
+   ```bash
+   k expose deploy wonderful-v1 --name=wonderful --type=NodePort --port=80 --target-port=80 --selector=app=wonderful
    ```
 
 2. **Test Traffic Split:**
    ```bash
-   k get nodes -o wide
-   NAME       STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION      CONTAINER-RUNTIME
-   minikube   Ready    control-plane   13d   v1.35.0   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.8.0-101-generic   docker://29.2.0
+   PORT=$(kubectl get svc wonderful -o jsonpath='{.spec.ports[0].nodePort}')
    
    # Run multiple curls to see the different responses
-   for i in {1..10}; do curl -sI 192.168.49.2:32646 | grep -i "Server"; done
+   for i in {1..10}; do curl -sI $(minikube ip):$PORT | grep -i "Server"; done
    ```
    *Statistically, you should see 'httpd' about 8 times and 'nginx' about 2 times.*
 
