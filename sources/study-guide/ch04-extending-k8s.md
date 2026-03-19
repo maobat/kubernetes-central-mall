@@ -81,6 +81,7 @@ kubectl describe backup nightly-db-backup
 ### 🧰 Study Toolbox
 
 * 🖼️ **Comic:** [The Operator - The Manager with the Manual](../../visual-learning/comics/ch04-extending/04-operators/README.md)
+* 🧪 **Lab:** [Lab 01 - CRD Installation (Shopping Items)](../../practice/labs/ch04-extending/lab01-crd-shopping-items/README.md)
 * 🧪 **Lab:** [Lab 04b - CRD Discovery & Auditing](../../practice/labs/ch04-extending/lab04-crds-operators/discovery-lab.md)
 * 🧪 **Lab:** [Lab 04 - Operators & Helm Packages](../../practice/labs/ch04-extending/lab04-crds-operators/README.md)
 * 📄 **Doc:** [Understanding the Operator Pattern](../../reference/md-resources/understanding-custom-resource-definitions-crds.md)

@@ -41,7 +41,7 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 
 ### 🧩 Custom Resource Definitions (CRD)
 * 🖼️ **Comic:** [The Nightly Backup Permit](../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
-* 🧪 **Lab:** [Lab 04b - CRD Discovery & Auditing](../../practice/labs/ch04-extending/lab04-crds-operators/discovery-lab.md)
+* 🧪 **Lab:** [Lab 01 - Shopping Items CRD](../../practice/labs/ch04-extending/lab01-crd-shopping-items/README.md)
 
 
 [<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)

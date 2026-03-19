@@ -1,0 +1,7 @@
+apiVersion: "beta.killercoda.com/v1"
+kind: ShoppingItem
+metadata:
+  name: bananas
+spec:
+  description: buy yellow ones
+  dueDate: tomorrow
