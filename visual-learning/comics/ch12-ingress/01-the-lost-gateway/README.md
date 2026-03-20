@@ -1,6 +1,7 @@
 <img src="lab05-il-giallo-del-gateway-perduto.png" alt="The Lost Gateway" width="40%" />
 
-# 🕵️ The Mystery of the Lost Gateway
+# 🖼️ Comic: The Lost Gateway
+## Chapter 12: Ingress – Troubleshooting
 
 This comic explains the complexities of the **Gateway API** and why your gateway might seem "lost" or unresponsive.
 
@@ -28,5 +29,5 @@ This comic explains the complexities of the **Gateway API** and why your gateway
 
 ## 🔗 References
 - **Study Guide** → [Chapter 12: Ingress & Gateway API](../../../../sources/study-guide/ch12-ingress.md)
-- **Lab** → [Canary with Gateway API](../../../../practice/labs/ch12-ingress/lab05-canary-deployment-gateway-api/README.md)
+- **Lab** → [Lab 04 - Gateway API & Canary](../../../../practice/labs/ch12-ingress/lab04-gateway-api-canary/README.md)
 - **Docs** → [Understanding Gateway API](../../../../reference/md-resources/gateway-api.md)

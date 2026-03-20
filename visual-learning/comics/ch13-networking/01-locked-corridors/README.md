@@ -1,6 +1,7 @@
 <img src="locked-corridors.png" alt="The Locked Corridor" width="40%" />
 
-# 🎭 The Locked Corridor
+# 🖼️ Comic: Locked Corridors
+## Chapter 13: Networking – Network Policies
 
 This comic explains how **Network Policies** (Network Isolation) work in Kubernetes using the Central Mall's "Locked Corridor" analogy.
 
@@ -28,5 +29,5 @@ This comic explains how **Network Policies** (Network Isolation) work in Kuberne
 
 ## 🔗 References
 - **Study Guide** → [Chapter 13: Network Policies](../../../../sources/study-guide/ch13-networking.md)
-- **Lab** → [Network Policies](../../../../practice/labs/ch13-networking/lab06-network-policies/README.md)
+- **Lab** → [Lab 01 - Network Policies](../../../../practice/labs/ch13-networking/lab01-network-policies/README.md)
 - **Docs** → [Network Isolation & Troubleshooting](../../../../reference/md-resources/troubleshooting-kubernetes.md)

@@ -1,20 +1,7 @@
-# 🖼️ Comic: The Trend Spot - Rolling Renovation
-
-## Launch Strategies: Minimizing Downtime
-
-> **Concept:** Rolling Updates
-> **Component:** Deployment (`.spec.strategy.rollingUpdate`)
-> **Subject:** `maxSurge` & `maxUnavailable`
-
----
-
-## 🎨 The Comic Strip
-
 <img src="rolling-update.png" alt="Rolling Update Demonstration" width="40%" />
 
----
-
-## 📖 The Story
+# �️ Comic: The Rolling Renovation
+## Chapter 09: Launch – Rolling Updates
 
 In the **Central Mall**, when a popular boutique like "The Trend Spot" needs a renovation, they can't afford to close their doors and lose revenue. Instead, they use a **Rolling Update** strategy.
 

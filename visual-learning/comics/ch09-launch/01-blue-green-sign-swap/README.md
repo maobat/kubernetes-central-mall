@@ -1,6 +1,7 @@
 <img src="lab04-blue-green-sign-swap.png" alt="Blue/Green Sign Swap" width="40%" />
 
-# 🔵🟢 The Sign Swap (Blue/Green Deployment)
+# 🖼️ Comic: The Blue-Green Sign Swap
+## Chapter 09: Launch – Deployment Strategies
 
 This comic explains the **Blue/Green Strategy** using the *Central Mall* storefront analogy. Instead of changing a shop while customers are inside, we build a perfect replica next door.
 
@@ -28,5 +29,5 @@ This comic explains the **Blue/Green Strategy** using the *Central Mall* storefr
 
 ## 🔗 References
 - **Study Guide** → [Chapter 9: Launch Day](../../../../sources/study-guide/ch09-deployments.md)
-- **Lab** → [Blue/Green Traffic Transition](../../../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
+- **Lab** → [Lab 02 - Blue-Green Sign Swap](../../../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
 - **Docs** → [Implementing Blue/Green Deployments](../../../../reference/md-resources/implementing-bluegreen-deployments.md)

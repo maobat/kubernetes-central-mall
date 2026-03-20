@@ -1,6 +1,7 @@
 <img src="the-logistics-chain.png" alt="The Logistics Chain" width="40%" />
 
-# 🎭 The Logistics Chain
+# 🖼️ Comic: The Logistics Chain
+## Chapter 10: Logistics – Package Management
 
 This comic explains the difference between **Helm** and **Kustomize** using the Central Mall's logistics system.
 
@@ -27,5 +28,5 @@ This comic explains the difference between **Helm** and **Kustomize** using the 
 
 ## 🔗 References
 - **Study Guide** → [Chapter 10: Logistics Tools](../../../../sources/study-guide/ch10-logistics.md)
-- **Lab** → [Helm & Kustomize](../../../../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+- **Lab** → [Lab 01 - The Mall Audit](../../../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
 - **Docs** → [Using Helm](../../../../reference/md-resources/using-the-helm-package-manager.md)

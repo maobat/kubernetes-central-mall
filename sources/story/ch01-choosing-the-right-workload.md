@@ -1,16 +1,14 @@
 # 📖 Chapter 1: Choosing the Right Workload
 > **The Mall Architect's Guide to Hiring**
 
-In the **Central Mall**, every task requires a different type of staff. You wouldn`t hire a permanent manager to sweep the floors once a week, nor would you hire a temporary worker to run the main jewelry counter. Kubernetes works the same way.
+In the **Central Mall**, every task requires a different type of staff. You wouldn't hire a permanent manager to sweep the floors once a week, nor would you hire a temporary worker to run the main jewelry counter. Kubernetes works the same way.
 
 ---
 
 ## 👤 The Shop Clerk (Pod)
 The **Pod** is the most basic unit—the **individual employee**. A clerk has a specific skill (running a containerized app) and is assigned to a specific shop (Namespace).
 
-However, clerks in the Central Mall are considered "mortal." If a clerk gets sick or decides to leave, they don`t automatically come back. For a robust business, you need someone to oversee them.
-
-
+However, clerks in the Central Mall are considered "mortal." If a clerk gets sick or decides to leave, they don't automatically come back. For a robust business, you need someone to oversee them.
 
 ---
 
@@ -25,8 +23,6 @@ The Manager's job isn't to do the work themselves, but to ensure the **"Desired 
 Unlike interchangeable clerks, some shops require specialized owners who need a **Fixed Address** and a **Personal Safe**. This is the **StatefulSet**.
 
 If the owner of **Boutique-0** leaves, their replacement **must** take over the same desk (Network Identity) and the same safe (Persistent Volume). In a StatefulSet, every worker is an individual with a unique ID (0, 1, 2) that never changes.
-
-
 
 ---
 
@@ -45,11 +41,9 @@ Unlike a Clerk who stays as long as the shop is open, a Night-Shift Worker arriv
 ---
 
 ## ⏰ The Recurring Maintenance Crew (CronJob)
-What if the mall needs the windows cleaned every Monday morning? You don`t want a worker sitting around all week waiting. Instead, you hire a **Recurring Maintenance Crew**. This is the **CronJob**.
+What if the mall needs the windows cleaned every Monday morning? You don't want a worker sitting around all week waiting. Instead, you hire a **Recurring Maintenance Crew**. This is the **CronJob**.
 
 The CronJob follows a strict schedule (the "Cron" format). When the time comes, it automatically "hires" a Night-Shift Worker (Job) to perform the task. Once the windows are sparkling, the worker leaves.
-
-
 
 ---
 
@@ -65,9 +59,11 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 
 ---
 ### 🧰 Study Toolbox
-- 🖼️ [**Comic: Jobs & CronJobs - The Contractor's Visit**](./../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
-- 🖼️ [**Comic: StatefulSets - The Fixed Boutique**](./../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
-- 🖼️ [**Comic: Floor Security (DaemonSet)**](./../../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
+* 🖼️ **Comic:** [The Night Shift (Jobs & CronJobs)](../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
+* 🖼️ **Comic:** [The Fixed Boutique (StatefulSets)](../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
+* 🧪 **Lab:** [Lab 01 - Jobs & CronJobs](../../practice/labs/ch01-workloads/lab01-jobs-cronjobs/README.md)
+* 🧪 **Lab:** [Lab 02 - StatefulSets](../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
+* 🧪 **Lab:** [Lab 03 - DaemonSets](../../practice/labs/ch01-workloads/lab03-daemonsets/README.md)
 
 ---
 

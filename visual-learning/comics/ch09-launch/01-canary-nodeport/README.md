@@ -1,6 +1,7 @@
 <img src="lab04-canary-nodeport.png" alt="Canary NodePort" width="40%" />
 
-# 🕵️ Canary Traffic at the Side Entrance
+# 🖼️ Comic: The Canary Taste Test
+## Chapter 09: Launch – Traffic Analysis
 
 This comic explains how the **Canary Strategy** works when you only have a single entrance and no advanced traffic management tools.
 
@@ -28,5 +29,5 @@ This comic explains how the **Canary Strategy** works when you only have a singl
 
 ## 🔗 References
 - **Study Guide** → [Chapter 9: Launch Day](../../../../sources/study-guide/ch09-deployments.md)
-- **Lab** → [Canary with NodePort](../../../../practice/labs/ch09-launch/lab04-canary-nodeport/README.md)
+- **Lab** → [Lab 04 - Canary Taste Test](../../../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
 - **Docs** → [Deployment Strategies Comparison](../../../../reference/md-resources/related-deployment-strategies-comparison.md)

@@ -1,6 +1,7 @@
 <img src="lab08-the-resource-hog.png" alt="The Resource Hog" width="40%" />
 
-# 🐷 The Resource Hog
+# 🖼️ Comic: The Resource Hog
+## Chapter 08: Resources – Requests & Limits
 
 This comic explains **Resource Management (Requests & Limits)** using the *Central Mall* analogy. In a busy mall, electricity and water are shared. If one shop uses too much ground-resources, everyone suffers.
 
@@ -29,5 +30,5 @@ This comic explains **Resource Management (Requests & Limits)** using the *Centr
 
 ## 🔗 References
 - **Study Guide** → [Chapter 8: Resource Budgets](../../../../sources/study-guide/ch08-resource-budgets.md)
-- **Lab** → [Managing Resource Constraints](../../../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
+- **Lab** → [Lab 01 - Managing Resource Constraints](../../../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
 - **Docs** → [Resource Budget Guide](../../../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)

@@ -1,6 +1,7 @@
 <img src="readiness-probes.png" alt="Readiness Probes - The Stocked Shelves" width="40%" />
 
-# 📦 The Health Inspector: Readiness Probes
+# 🖼️ Comic: The Velvet Rope
+## Chapter 14: Probes – Readiness Checks
 
 This comic explains the "Stocked Shelves" analogy—understanding that being "alive" doesn't necessarily mean you are "ready" to serve customers.
 
@@ -28,5 +29,5 @@ This comic explains the "Stocked Shelves" analogy—understanding that being "al
 
 ## 🔗 References
 - **Study Guide** → [Chapter 14: Health Checks & Probes](../../../../sources/study-guide/ch14-probes.md)
-- **Lab** → [Readiness Probes](../../../../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
+- **Lab** → [Lab 02 - Readiness Probes](../../../../practice/labs/ch14-probes/lab02-readiness-probes/README.md)
 - **Docs** → [Troubleshooting Guide](../../../../reference/md-resources/troubleshooting-kubernetes.md)

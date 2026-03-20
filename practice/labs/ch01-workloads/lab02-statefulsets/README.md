@@ -1,111 +1,84 @@
 # 🧪 LAB 02: The Fixed Boutique (StatefulSets)
 
-## Pod Design – Managing Stateful Applications
+## Application Design and Build – Ordered Deployment and Persistent Identity
 
 ---
 
 ## 🎯 Lab Goal
 
-Since there is no `kubectl create statefulset` command, you must learn the "Exam Speed-Run" method: Generating a Deployment scaffold and manually converting it into a **StatefulSet**.
-
-> **CKAD Importance:** Crucial. StatefulSets are often where students lose time due to manual YAML editing.
+Understand how to manage staff members who need their own specific "locker" and identity. You will deploy a **StatefulSet**, observing how each pod receives a unique name that persists even if the pod is replaced.
 
 ---
 
 ## 🛍️ Mall Analogy
 
-Unlike standard clerks (Deployments) who are replaceable and anonymous, **StatefulSet** workers are like specialized shop owners.
+In Most shops, staff are interchangeable. If one leaves, another replaces them. But in a **High-End Boutique (StatefulSet)**:
 
-- **Fixed Address (Ordinal Index)** → Each owner has a permanent spot: Shop-0, Shop-1, Shop-2. They never swap places.
-- **The Directory (Headless Service)** → A specific mall directory that lets you dial "Boutique-0" directly instead of getting a random worker.
-- **Personal Safes (Persistent Volumes)** → Each shop has its own dedicated safe. If an owner leaves and a new one is hired for Shop-0, they inherited the *same* safe that belonged to Shop-0 before.
+- **The Specialist Pods** → Every worker has a permanent name-tag (e.g., `boutique-0`, `boutique-1`).
+- **The Dedicated Lockers (PVCs)** → When `boutique-0` goes home, their unique locker is saved for when they return. A new worker doesn't take over a random locker; they take *their* locker.
+- **The Orderly Queue** → Staff arrive one at a time. Worker 1 doesn't enter until Worker 0 is at their post.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **StatefulSet** | A row of boutiques with permanent IDs. |
-| **Headless Service** | The direct-dial directory (`clusterIP: None`). |
-| **volumeClaimTemplate** | The contract that ensures Shop-X always gets Safe-X. |
+| **StatefulSet** | A boutique with specialized, named workers. |
+| **Ordinal Index** | The number on the name-tag (0, 1, 2). |
+| **Stable Storage** | A locker that only belongs to one specific staff member. |
 
 ---
 
 ## 📋 Requirements
 
-1. **Create a Headless Service**:
-   - Name: `svc-web`
-   - Type: `ClusterIP` with `None` specified.
-   - Port: `80`.
+The Boutique needs a set of 3 specialized managers.
 
-2. **Create a StatefulSet**:
-   - Name: `web`
-   - Replicas: `3`
-   - Image: `registry.k8s.io/nginx-slim:0.24`
-   - Service Link: Connect to `svc-web`.
-   - Storage: Mount a volume named `www` at `/usr/share/nginx/html`.
-   - Persistence: Use a `volumeClaimTemplate` (1Gi, `ReadWriteOnce`, `standard` storage class).
+1. **Deployment Type:** StatefulSet.
+2. **Name:** `boutique`.
+3. **Replicas:** 3.
+4. **Image:** `nginx:alpine`.
+5. **Headless Service:** Create a service named `boutique` (ClusterIP: None).
 
 ---
 
-## 🛠️ Step-by-Step Solution (Speed-Run)
+## 🛠️ Step-by-Step Solution
 
-### 1. The Headless Service
-The key is `--clusterip=None`.
+### 1. Create the Headless Service
+StatefulSets require a service to manage their identities.
 ```bash
-k create svc clusterip svc-web --tcp=80:80 --clusterip=None $do > sfs.yaml
+kubectl create service clusterip boutique --tcp=80:80 --clusterip="None"
 ```
 
-### 2. The Deployment Scaffold
-Generate the container spec and append it.
+### 2. Create the StatefulSet
 ```bash
-echo "---" >> sfs.yaml
-k create deploy web --image=registry.k8s.io/nginx-slim:0.24 --replicas=3 $do >> sfs.yaml
+# Using shorthand or generating YAML
+kubectl create statefulset boutique --image=nginx:alpine --replicas=3
 ```
-
-### 3. The Surgery (Manual Edits)
-Open `sfs.yaml` and perform these transforms:
-1. Change `kind: Deployment` to `kind: StatefulSet`.
-2. Add `serviceName: "svc-web"` under the first `spec:`.
-3. Add `volumeMounts` inside the container.
-4. Add the `volumeClaimTemplates` block at the bottom of the StatefulSet `spec`.
-
-    <img src="volumeClaimTemplates.png" alt="Configuration ConfigMaps" width="60%" />
-
-    > Note that `standard` is the name of the StorageClass to use. You can check the available storage classes with `k get sc`.
 
 ---
 
 ## 🔎 Verification
 
-1. **Ordered Startup:**
+1. **Watch the Rollout:**
    ```bash
-   k apply -f sfs.yaml
-   k get pods -w
-   # Watch them start one-by-one: web-0, then web-1...
+   kubectl get pods -w
+   # Observe that they start in order: boutique-0, then boutique-1, then boutique-2.
    ```
 
-2. **Test Persistence:**
+2. **Check the Names:**
    ```bash
-   # Write data to web-0
-   k exec web-0 -- sh -c 'echo "Boutique 0 Secret" > /usr/share/nginx/html/index.html'
-   
-   # Delete web-0
-   k delete pod web-0
-   
-   # Wait for recreation and check
-   k exec web-0 -- cat /usr/share/nginx/html/index.html
+   kubectl get pods -l app=boutique
+   # Verify the numbered suffixes.
    ```
 
 ---
 
 ## 🧠 Key Takeaways
 
-- **ServiceName Link:** The `serviceName` in the SS *must* match the `metadata.name` of the Headless Service.
-- **Identity:** Pod names are 100% predictable: `{name}-0`, `{name}-1`.
-- **Storage Sticky-ness:** PVCs created by SS are *never* automatically deleted when the SS is deleted. You must clean them up manually if you want to save space.
-- **CKAD Tip:** If the question asks for a "Stable Network Identity," they are almost always asking for a StatefulSet + Headless Service.
+- **Identity Matters:** Use StatefulSets for databases (like MariaDB or MongoDB) or any app where pods aren't identical.
+- **Scalability:** They scale up from 0 to N and down from N to 0, always in order.
+- **CKAD Tip:** Don't forget the **Headless Service**! Without it, the pods won't have stable network names.
 
 ---
 
 ## 🔗 References
-- **Comic** → [StatefulSets](../../../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
-- **Docs** → [Using StatefulSets](../../../../reference/md-resources/using-statefulsets.md)
-- **Study Guide** → [Chapter 1: Workloads](../../../../sources/study-guide/ch01-workloads.md)
+- **Comic** → [Workload Types](../../../visual-learning/comics/ch01-workloads/README.md)
+- **Docs** → [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+- **Study Guide** → [Chapter 01: Workloads](../../../sources/study-guide/ch01-workloads.md)

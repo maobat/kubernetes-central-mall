@@ -1,6 +1,7 @@
 <img src="lab01-pod-design-sidecar.png" alt="Pod Design Sidecar" width="40%" />
 
-# 🤝 The Assistant & The Shared Space
+# 🖼️ Comic: The Sidecar Assistant
+## Chapter 02: Multi-Container – Design Patterns
 
 This comic explains how **Multi-Container Pods** work and how they share resources to accomplish a single goal.
 
@@ -28,5 +29,5 @@ This comic explains how **Multi-Container Pods** work and how they share resourc
 
 ## 🔗 References
 - **Study Guide** → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)
-- **Lab** → [Sidecar Pattern](../../../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
+- **Lab** → [Lab 01 - Sidecar Pattern](../../../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
 - **Docs** → [Decoupling Pods](../../../../reference/md-resources/decoupling-pods.md)

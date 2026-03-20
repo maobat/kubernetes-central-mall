@@ -1,6 +1,7 @@
 <img src="lab01-crd-nightly-backup_II.png" alt="The Nightly Backup Permit" width="40%" />
 
-# 🗂️ The Nightly Backup Permit
+# 🖼️ Comic: The Nightly Backup Permit
+## Chapter 04: Extending – Custom Resource Definitions
 
 This comic explains how **Custom Resource Definitions (CRDs)** and **Operators** extend the mall's capabilities beyond standard building rules.
 
@@ -28,5 +29,5 @@ This comic explains how **Custom Resource Definitions (CRDs)** and **Operators**
 
 ## 🔗 References
 - **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)
-- **Lab** → [Custom Backup Service (CRD)](../../../../practice/labs/ch04-extending/lab01-crd-custom-backup-service/README.md)
+- **Lab** → [Lab 01 - Shopping Items CRD](../../../../practice/labs/ch04-extending/lab01-crd-install/README.md)
 - **Docs** → [Extending K8s with CRDs](../../../../reference/md-resources/extending-k8s-crds-operators.md)

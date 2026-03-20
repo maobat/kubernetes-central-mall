@@ -1,6 +1,7 @@
 <img src="the-grand-ensemble.png" alt="The Central Mall: A Kubernetes Adventure – Grand Ensemble" width="60%" />
 
-# 🎭 The Grand Ensemble: Meet the Cast
+# 🖼️ Comic: The Cast of Characters
+## Chapter 00: Introduction – The Mall Staff
 
 > *Before the mall opens, let's meet everyone who keeps it running.*
 

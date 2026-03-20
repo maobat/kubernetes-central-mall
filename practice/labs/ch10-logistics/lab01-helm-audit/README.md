@@ -1,4 +1,4 @@
-# 🧪 LAB 05: The Mall Catalog Audit (Helm Management)
+# 🧪 LAB 01: The Mall Catalog Audit (Helm Management)
 
 ## Logistics Tools – Inventory & Decommissioning
 
@@ -7,8 +7,6 @@
 ## 🎯 Lab Goal
 
 Learn how to audit and manage installed application packages in the Mall. You will practice listing all current "Prefab Kits" (Helm releases), exporting the inventory, and uninstalling defunct managers.
-
-> **CKAD Importance:** Medium. Fast retrieval of Helm release information and basic lifecycle management (uninstall/install) are common tasks in the "Application Deployment" section.
 
 ---
 
@@ -32,38 +30,29 @@ In the **Central Mall**, some services are provided by external partners.
 
 The Mall Logistics department needs to audit existing kits and install new safety equipment.
 
-1. **Install Safety Kit (Helm Install):** Install the `falcosecurity/falco` chart into the `team-yellow` namespace. Name the release `dev`.
-2. **Audit & Check (Helm List):** Verify that the new kit is running and export the list of all Mall releases to `releases`.
-3. **Decommission a Store (Helm Uninstall):** Remove the Helm release named `dev` (the one you just installed) to clean up the wing.
+1. **Install Safety Kit:** Install the `falcosecurity/falco` chart into the `team-yellow` namespace. Name the release `dev`.
+2. **Audit & Check:** Verify that the new kit is running and export the list of all Mall releases to `releases`.
+3. **Decommission a Store:** Remove the Helm release named `dev` to clean up the wing.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
 ### 1. Install the New Safety Kit
-Add the safety equipment provider and install the "Falco" health scanner.
 ```bash
 helm repo add falcosecurity https://falcosecurity.github.io/charts
 helm repo update
-
-# Install the kit named 'dev' into the yellow wing
 helm -n team-yellow install dev falcosecurity/falco
 ```
 
 ### 2. Audit and Check
-Verify the installation and export the global inventory to the ledger.
 ```bash
-# Verify 'dev' is deployed
 helm -n team-yellow list
-
-# List all releases in all namespaces and save to a file
 helm ls -A > releases
 ```
 
 ### 3. Decommission the Kit
-Remove the specialized manager once the audit is complete.
 ```bash
-# Uninstall the 'dev' release from team-yellow
 helm -n team-yellow uninstall dev
 ```
 
@@ -74,26 +63,25 @@ helm -n team-yellow uninstall dev
 1. **Check the Ledger:**
    ```bash
    cat releases
-   # Should list 'dev' (proving it was installed in Step 1 and audited in Step 2).
+   # Should list 'dev'
    ```
 
 2. **Verify Decommissioning:**
    ```bash
    helm ls -A | grep dev
-   # Should return nothing (proving Step 3 worked).
+   # Should return nothing.
    ```
 
 ---
 
 ## 🧠 Key Takeaways
 
-- **Global Scope:** Always use `-A` when auditing, or you might miss kits installed in specialized mall wings.
-- **Cleanup:** Uninstalling a release via Helm ensures all associated resources (Pods, Services, etc.) are removed cleanly.
-- **Naming:** The "Release Name" (like `dev`) is your way of identifying that specific instance of a kit.
+- **Global Scope:** Always use `-A` when auditing to see all namespaces.
+- **Cleanup:** Uninstalling via Helm removes all associated k8s objects.
 
 ---
 
 ## 🔗 References
-- **Comic** → [Logistics Chain](../../../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
-- **Docs** → [Helm Command Line Reference](https://helm.sh/docs/helm/helm/)
+- **Comic** → [The Logistics Chain](../../../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+- **Docs** → [Helm CLI](https://helm.sh/docs/helm/helm/)
 - **Study Guide** → [Chapter 10: Management](../../../../sources/study-guide/ch10-management.md)

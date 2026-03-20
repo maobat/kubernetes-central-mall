@@ -1,6 +1,7 @@
 <img src="broken-shop.png" alt="Troubleshooting - The Broken Shop" width="40%" />
 
-# 🕵️ The Health Inspector: The Broken Shop
+# 🖼️ Comic: The Broken Shop
+## Chapter 15: Debugging – Investigation
 
 This comic explains the **CSI (Crime Scene Investigation)** approach to troubleshooting pods in the Central Mall.
 
@@ -28,5 +29,5 @@ This comic explains the **CSI (Crime Scene Investigation)** approach to troubles
 
 ## 🔗 References
 - **Study Guide** → [Chapter 15: Debugging & Logs](../../../../sources/study-guide/ch15-debugging.md)
-- **Lab** → [Fixing the Broken Shop](../../../../practice/labs/ch15-debugging/lab15-fixing-the-broken-shop/README.md)
+- **Lab** → [Lab 01 - Debugging Shop](../../../../practice/labs/ch15-debugging/lab01-debugging-shop/README.md)
 - **Docs** → [Troubleshooting Guide](../../../../reference/md-resources/troubleshooting-kubernetes.md)

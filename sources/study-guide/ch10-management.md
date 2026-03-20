@@ -70,7 +70,8 @@ kubectl apply -k ./overlays/production
 * 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
 * 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
 * 🧪 **Lab:** [Lab 05: Helm Catalog Audit](../../practice/labs/ch10-logistics/lab05-helm-audit/README.md)
-* 🧪 **Lab:** [Lab 06: Prefab Stores & Blueprint Overlays](../../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+* 🧪 **Lab:** [Lab 01: Helm Audit](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
+* 🧪 **Lab:** [Lab 02: Kustomize Overlays](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
 * 🧪 **Lab:** [Architecture: CRDs & Operators (Helm Section)](../../practice/labs/ch04-extending/lab04-crds-operators/README.md#4-the-store-in-a-box-helm)
 
 ### 🧩 Kustomize (Blueprint Overlays)

@@ -1,6 +1,7 @@
 <img src="hr-manual.png" alt="The HR Manual - Role" width="40%" />
 
-# 📖 The HR Manual: A Role Story
+# 🖼️ Comic: The HR Manual
+## Chapter 07: Identity – RBAC Role
 
 In the **Central Mall**, security isn't just a badge; it's a **Permit**. The **HR Manual** contains the standard job descriptions that define exactly what an employee is allowed to do in a specific shop.
 
@@ -31,5 +32,5 @@ In the **Central Mall**, security isn't just a badge; it's a **Permit**. The **H
 
 ## 🔗 References
 - **Study Guide** → [Chapter 7: Identity & Access](../../../../sources/study-guide/ch07-identity.md)
-- **Lab** → [Implementing RBAC](../../../../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
+- **Lab** → [Lab 02 - RBAC & Identity](../../../../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
 - **Docs** → [Understanding RBAC](../../../../reference/md-resources/understanding-role-based-access-control-rbac.md)

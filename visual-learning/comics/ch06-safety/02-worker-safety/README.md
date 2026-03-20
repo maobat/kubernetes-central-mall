@@ -1,6 +1,7 @@
 <img src="lab06-worker-safety.png" alt="Worker Safety and SecurityContext" width="40%" />
 
-# 🦺 Worker Safety: SecurityContext
+# 🖼️ Comic: Worker Safety
+## Chapter 06: Safety – SecurityContext
 
 This comic explains **SecurityContexts & Capabilities** using the *Central Mall* analogy. In a large mall, some maintenance requires specialized tools. If every clerk had a master key and a chainsaw, the mall wouldn't be very safe.
 
@@ -28,5 +29,5 @@ This comic explains **SecurityContexts & Capabilities** using the *Central Mall*
 
 ## 🔗 References
 - **Study Guide** → [Chapter 6: Safety & Conduct](../../../../sources/study-guide/ch06-security.md)
-- **Lab** → [Managing Security Settings](../../../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
+- **Lab** → [Lab 01 - Worker Safety (SecurityContext)](../../../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
 - **Docs** → [Worker Safety and Conduct](../../../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)

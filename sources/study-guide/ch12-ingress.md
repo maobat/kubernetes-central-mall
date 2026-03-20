@@ -93,8 +93,12 @@ spec:
 
 * 🖼️ **Comic:** [Virtual Host Gateway Show - Host-based Routing](../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
 * 🖼️ **Comic:** [The Lost Gateway - Troubleshooting Gateway API](../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
-* 🧪 **Lab:** [Ingress & Virtual Host Routing](../../practice/labs/ch12-ingress/lab03-ingress-virtual-host/README.md)
-* 🧪 **Lab:** [Canary Deployments with Gateway API](../../practice/labs/ch12-ingress/lab05-canary-deployment-gateway-api/README.md)
+* 🖼️ **Comic:** [The Grand Entrance (Path-Based Routing)](../../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
+* 🧪 **Lab:** [Lab 01: Virtual Host Routing](../../practice/labs/ch12-ingress/lab01-virtual-host/README.md)
+* 🧪 **Lab:** [Lab 02: Path-Based Routing](../../practice/labs/ch12-ingress/lab02-path-routing/README.md)
+* 🧪 **Lab:** [Lab 03: Ingress Rewrites](../../practice/labs/ch12-ingress/lab03-advanced-ingress/README.md)
+* 📄 **Doc:** [Ingress vs Gateway](../../reference/md-resources/ingress-vs-gateway.md)
+* 🧪 **Lab:** [Lab 04: Canary Deployments with Gateway API](../../practice/labs/ch12-ingress/lab04-gateway-api-canary/README.md)
 
 ---
 [<< Previous: Networking Services](ch11-services.md) | [Back to Story Index](../story.md) | [Next: Network Policies >>](ch13-networking.md)

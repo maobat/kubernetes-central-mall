@@ -1,6 +1,7 @@
 <img src="lab02-pod-design-jobs-cronjobs.png" alt="Pod Design Jobs CronJobs" width="40%" />
 
-# 🖌️ The Painter & The Cleaning Crew
+# 🖼️ Comic: The Night Shift
+## Chapter 01: Workloads – Jobs & CronJobs
 
 This comic explains the difference between **standard staff (Deployments)** and **specialized contractors (Jobs/CronJobs)** in the Central Mall.
 
@@ -27,5 +28,5 @@ This comic explains the difference between **standard staff (Deployments)** and 
 
 ## 🔗 References
 - **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
-- **Lab** → [Jobs & CronJobs](../../../../practice/labs/ch01-workloads/lab02-jobs-cronjobs/README.md)
+- **Lab** → [Lab 01 - Jobs & CronJobs](../../../../practice/labs/ch01-workloads/lab01-jobs-cronjobs/README.md)
 - **Docs** → [Scheduled Maintenance Guide](../../../../reference/md-resources/cronjobs.md)

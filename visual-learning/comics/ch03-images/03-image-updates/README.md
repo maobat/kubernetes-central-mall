@@ -1,6 +1,7 @@
 <img src="lab03-pod-design-image-updates.png" alt="Pod Design Image Updates" width="40%" />
 
-# 🎭 The Perfect Mannequin
+# 🖼️ Comic: Seasonal Mannequins
+## Chapter 03: Images – Updates & Rollouts
 
 This comic explains how **Container Images** are built and how **Rolling Updates** ensure the mall stays fresh without closing its doors.
 
@@ -29,6 +30,6 @@ This comic explains how **Container Images** are built and how **Rolling Updates
 
 ## 🔗 References
 - **Study Guide** → [Chapter 3: Pod Design & Images](../../../../sources/study-guide/ch03-pod-design.md)
-- **Lab** → [Build Container from Scratch](../../../../practice/labs/ch03-images/lab01-build-container-from-scratch/README.md)
-- **Lab** → [Image Updates & Rollouts](../../../../practice/labs/ch03-images/lab03-image-updates/README.md)
-- **Docs** → [Managing Images & Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
+- **Lab** → [Lab 01 - Build Container from Scratch](../../../../practice/labs/ch03-images/lab01-build-container-from-scratch/README.md)
+- **Lab** → [Lab 03 - Image Updates & Rollouts](../../../../practice/labs/ch03-images/lab03-image-updates/README.md)
+- **Docs** → [Managing Container Images and Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)

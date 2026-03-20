@@ -1,6 +1,7 @@
 <img src="admission-gate.png" alt="The Entry Permit Office - Admission Control" width="40%" />
 
-# 🏢 The Entry Permit Office: An Admission Control Story
+# 🖼️ Comic: The Entry Permit Office
+## Chapter 07: Identity – Admission Control
 
 Even with a badge and a job description, you might still be stopped at the gate. The **Entry Permit Office** is the final compliance checkpoint for every worker entering the **Central Mall**.
 
@@ -30,5 +31,5 @@ Even with a badge and a job description, you might still be stopped at the gate.
 
 ## 🔗 References
 - **Study Guide** → [Chapter 7: Identity & Access](../../../../sources/study-guide/ch07-identity.md)
-- **Lab** → [The Entry Permit Office (Admission Control)](../../../../practice/labs/ch07-identity/lab03-admission-control-entry-permit/README.md)
+- **Lab** → [Lab 03 - Admission Control](../../../../practice/labs/ch07-identity/lab03-admission-control-entry-permit/README.md)
 - **Docs** → [The Cast of Characters](../../../../reference/md-resources/cast-of-characters.md)

@@ -1,6 +1,7 @@
 <img src="lab01-nodeport-cross-namespace.png" alt="NodePort Cross Namespace" width="40%" />
 
-# 🕵️ The NodePort Traffic Adventure
+# 🖼️ Comic: The NodePort Traffic Adventure
+## Chapter 11: Services – NodePort
 
 This comic explains how **NodePorts** allow external traffic to reach your shop, regardless of which floor (Namespace) it's on.
 
@@ -28,5 +29,5 @@ This comic explains how **NodePorts** allow external traffic to reach your shop,
 
 ## 🔗 References
 - **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services-networking.md)
-- **Lab** → [NodePort & Cross-Namespace](../../../../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
+- **Lab** → [Lab 02 - NodePort Cross-Namespace](../../../../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
 - **Docs** → [Service IP Tracker Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)

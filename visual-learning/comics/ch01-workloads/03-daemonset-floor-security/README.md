@@ -1,6 +1,7 @@
 <img src="floor-security.png" alt="Floor Security Guard - DaemonSet" width="40%" />
 
-# 💂 The Floor Security Guard: A DaemonSet Story
+# 🖼️ Comic: Floor Security
+## Chapter 01: Workloads – DaemonSets
 
 In the **Central Mall**, some employees are assigned to specific shops, but the **Security Guard** is different. The Mall Owner requires exactly one guard to be stationed on **every single floor** of the mall.
 
@@ -31,5 +32,5 @@ In the **Central Mall**, some employees are assigned to specific shops, but the 
 
 ## 🔗 References
 - **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
-- **Lab** → [Floor Security (DaemonSets)](../../../../practice/labs/ch01-workloads/lab03-daemonset-floor-security/README.md)
+- **Lab** → [Lab 03 - DaemonSets](../../../../practice/labs/ch01-workloads/lab03-daemonsets/README.md)
 - **Docs** → [The Cast of Characters](../../../../reference/md-resources/cast-of-characters.md)

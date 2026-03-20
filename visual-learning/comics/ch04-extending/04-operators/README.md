@@ -1,6 +1,7 @@
 <img src="lab04-architecture-operators.png" alt="Special Permit & Automated Manager" width="40%" />
 
-# 🎭 The Manager with the Manual
+# 🖼️ Comic: The Manager with the Manual
+## Chapter 04: Extending – Operators
 
 This comic explains why Kubernetes doesn't know what a "Database" is by default and how the **Operator Pattern** solves this.
 
@@ -28,5 +29,5 @@ This comic explains why Kubernetes doesn't know what a "Database" is by default 
 
 ## 🔗 References
 - **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)
-- **Lab** → [CRDs & Operators](../../../../practice/labs/ch04-extending/lab04-crds-operators/README.md)
+- **Lab** → [Lab 04 - CRDs & Operators](../../../../practice/labs/ch04-extending/lab04-operators/README.md)
 - **Docs** → [Understanding CRDs](../../../../reference/md-resources/understanding-custom-resource-definitions-crds.md)

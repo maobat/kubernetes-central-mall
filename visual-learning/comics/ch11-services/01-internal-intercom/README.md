@@ -1,6 +1,7 @@
 <img src="internal-intercom.png" alt="The Internal Intercom" width="40%" />
 
-# 🎭 The Internal Intercom
+# 🖼️ Comic: The Internal Intercom
+## Chapter 11: Services – ClusterIP
 
 This comic explains how **ClusterIP** (Internal Services) works in Kubernetes using the Central Mall's intercom analogy.
 
@@ -28,5 +29,5 @@ This comic explains how **ClusterIP** (Internal Services) works in Kubernetes us
 
 ## 🔗 References
 - **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services-networking.md)
-- **Lab** → [ClusterIP & Internal Communication](../../../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
+- **Lab** → [Lab 01 - ClusterIP Internal Traffic](../../../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
 - **Docs** → [Service IP Tracker Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)

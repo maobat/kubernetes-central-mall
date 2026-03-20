@@ -1,9 +1,9 @@
-# 🔑 Mall Logistics: SSH and Contexts
-*Navigating the Central Mall Infrastructure*
-
 <img src="comic.png" alt="SSH and Contexts Comic" width="40%" />
 
-## 📖 The Developer's Translation
+# 🖼️ Comic: The Service Elevator
+## Chapter 16: CKAD Exam – SSH & Contexts
+
+### 📖 The Developer's Translation
 
 This comic illustrates the difference between **SSH** and **Kubectl Contexts**, which are critical concepts for the CKAD exam.
 

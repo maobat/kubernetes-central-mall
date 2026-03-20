@@ -1,6 +1,7 @@
 <img src="lab02-statefulsets.png" alt="Pod Design Image Updates" width="40%" />
 
-# 🎭 The Fixed Boutique: A StatefulSet Story
+# 🖼️ Comic: The Fixed Boutique
+## Chapter 01: Workloads – StatefulSets
 
 This comic explains why **StatefulSets** are the "VIPs" of the Kubernetes world and why their identity is tied to both their name and their "Warehouse Safe" (Volume).
 
@@ -28,5 +29,5 @@ This comic explains why **StatefulSets** are the "VIPs" of the Kubernetes world 
 
 ## 🔗 References
 - **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
-- **Lab** → [The Fixed Boutique (StatefulSets)](../../../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
+- **Lab** → [Lab 02 - StatefulSets](../../../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
 - **Docs** → [Using StatefulSets](../../../../reference/md-resources/using-statefulsets.md)

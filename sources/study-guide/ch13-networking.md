@@ -34,7 +34,7 @@ The safest way to run a mall is to lock *every* door and then only unlock the on
 ### 1. The "Only My Friends" Rule
 Imagine the `database` shop only wants to hear from the `backend` shop.
 
-///yaml
+```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -53,27 +53,27 @@ spec:
     ports:
     - protocol: TCP
       port: 5432
-///
+```
 
 ### 2. The Namespace Wall
 You can also lock doors based on which floor (Namespace) the person is coming from.
-///yaml
+```yaml
   ingress:
   - from:
     - namespaceSelector:
         matchLabels:
           floor: finance # Only people from the Finance floor allowed
-///
+```
 
 ---
 
 ## ⚠️ The "Gotcha" (Exam Tip)
 In the CKAD, if you apply a Network Policy and everything stops working, it’s usually because you forgot to allow **DNS**. If the clerk can't talk to the Mall Directory (DNS), they can't find the address of the shop they are supposed to visit!
 
-///bash
+```bash
 # Check if a policy is blocking your Pod
 kubectl describe netpol <policy-name>
-///
+```
 
 ---
 
@@ -87,7 +87,7 @@ kubectl describe netpol <policy-name>
 
 * 📄 **Doc:** [Network Isolation and Troubleshooting](../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
 * 🖼️ **Comic:** [The Locked Corridor - Whitelisting Traffic](../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
-* 🧪 **Lab:** [LAB 06 – Network Policies & Locked Corridors](../../practice/labs/ch13-networking/lab06-network-policies/README.md)
+* 🧪 **Lab:** [Lab 01 - Network Policies](../../practice/labs/ch13-networking/lab01-network-policies/README.md)
 
 ---
 [<< Previous: Ingress & Gateway API](ch12-ingress.md) | [Back to Story Index](../story.md) | [Next: Health Checks & Probes >>](ch14-probes.md)

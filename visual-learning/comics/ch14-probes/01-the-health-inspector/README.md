@@ -1,6 +1,7 @@
 <img src="lab01-observability-health-inspector.png" alt="Observability Health Inspector" width="40%" />
 
-# 👁️ The Health Inspector: Liveness Probes
+# 🖼️ Comic: The Health Inspector
+## Chapter 14: Probes – Liveness Checks
 
 This comic explains the difference between **Liveness** and **Readiness** probes using the "Health Inspector" analogy.
 
@@ -28,5 +29,5 @@ This comic explains the difference between **Liveness** and **Readiness** probes
 
 ## 🔗 References
 - **Study Guide** → [Chapter 14: Health Checks & Probes](../../../../sources/study-guide/ch14-probes.md)
-- **Lab** → [Liveness Probes](../../../../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
+- **Lab** → [Lab 01 - Liveness Probes](../../../../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
 - **Docs** → [Troubleshooting Guide](../../../../reference/md-resources/troubleshooting-kubernetes.md)

@@ -1,6 +1,7 @@
 <img src="lab01-the-secure-badge.png" alt="The Secure Badge" width="40%" />
 
-# 🛡️ The Secure Badge
+# 🖼️ Comic: The Secure Badge
+## Chapter 07: Identity – ServiceAccounts
 
 This comic explains **how identity works in Kubernetes** using the *Central Mall* analogy. Every Pod enters the cluster wearing a **badge**, which determines **what it is allowed to do**.
 
@@ -28,5 +29,5 @@ This comic explains **how identity works in Kubernetes** using the *Central Mall
 
 ## 🔗 References
 - **Study Guide** → [Chapter 7: Identity & RBAC](../../../../sources/study-guide/ch07-identity.md)
-- **Lab** → [Managing Security Settings](../../../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
+- **Lab** → [Lab 01 - ServiceAccount Identity](../../../../practice/labs/ch07-identity/lab01-serviceaccount-identity/README.md)
 - **Docs** → [Understanding ServiceAccounts](../../../../reference/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)

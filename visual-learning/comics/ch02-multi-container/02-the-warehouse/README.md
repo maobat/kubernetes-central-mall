@@ -1,6 +1,7 @@
 <img src="lab01-persistent-storage-PV-PVC.png" alt="Storage Persistent Volume" width="40%" />
 
-# 📦 The Warehouse & The Rental Contract
+# 🖼️ Comic: The Warehouse
+## Chapter 02: Multi-Container – Storage & PVs
 
 This comic explains how **Persistent Storage** allows data to survive even if the shop (Pod) shuts down or moves to a new building.
 
@@ -28,5 +29,5 @@ This comic explains how **Persistent Storage** allows data to survive even if th
 
 ## 🔗 References
 - **Study Guide** → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)
-- **Lab** → [The Warehouse (PV/PVC)](../../../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+- **Lab** → [Lab 02 - Warehouse (PV/PVC)](../../../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
 - **Docs** → [Creating a PersistentVolume](../../../../reference/md-resources/creating-a-persistentvolume.md)

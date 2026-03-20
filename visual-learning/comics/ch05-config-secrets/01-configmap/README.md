@@ -1,6 +1,7 @@
 <img src="lab01-configuration-configmaps.png" alt="Configuration ConfigMaps" width="40%" />
 
-# 📋 The Rulebook & The Uniform
+# 🖼️ Comic: The Rulebook & The Uniform
+## Chapter 05: Configuration – ConfigMaps
 
 This comic explains how to **decouple configuration** from your store's workers so you can change rules without rehiring everyone.
 
@@ -28,5 +29,5 @@ This comic explains how to **decouple configuration** from your store's workers 
 
 ## 🔗 References
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
-- **Lab** → [Configuration: ConfigMaps](../../../../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
+- **Lab** → [Lab 01 - ConfigMaps](../../../../practice/labs/ch05-config-secrets/lab01-configmap-rulebook/README.md)
 - **Docs** → [Configuration Decoupling](../../../../reference/md-resources/configuration-decoupling.md)

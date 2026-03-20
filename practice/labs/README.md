@@ -7,64 +7,64 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 ## 🏗️ Part 1: Application Design and Build `[ 20% ]`
 > **Focus:** Understanding the core blueprints of the mall, how we hire staff, organize departments, and deploy our "mannequin" images.
 
-- **Ch. 01** – [Jobs & CronJobs](ch01-workloads/lab02-jobs-cronjobs/README.md)
-- **Ch. 01** – [The Fixed Boutique (StatefulSets)](ch01-workloads/lab02-statefulsets/README.md)
-- **Ch. 01** – [Floor Security Guard (DaemonSet)](ch01-workloads/lab03-daemonset-floor-security/README.md)
-- **Ch. 02** – [Sidecar & InitContainers](ch02-multi-container/lab01-sidecar-pattern/README.md)
-- **Ch. 02** – [The Warehouse (PV/PVC)](ch02-multi-container/lab02-pv-pvc/README.md)
-- **Ch. 03** – [Build Container from Scratch](ch03-images/lab01-build-container-from-scratch/README.md)
-- **Ch. 03** – [Image Updates & Rollouts](ch03-images/lab03-image-updates/README.md)
-- **Ch. 04** – [Custom Resources (Shopping Items)](ch04-extending/lab01-crd-shopping-items/README.md)
-- **Ch. 04** – [CRD Discovery & Auditing](ch04-extending/lab04-crds-operators/discovery-lab.md)
-- **Ch. 04** – [Operators & Helm Packages](ch04-extending/lab04-crds-operators/README.md)
-- **Ch. 04** – [Cleanup: Revoking the Charter](ch04-extending/lab01-crd-shopping-items/cleanup.md)
+- **Ch. 01** – [Lab 01: Jobs & CronJobs](ch01-workloads/lab01-jobs-cronjobs/README.md)
+- **Ch. 01** – [Lab 02: Fixed Boutique (StatefulSets)](ch01-workloads/lab02-statefulsets/README.md)
+- **Ch. 01** – [Lab 03: Floor Security (DaemonSets)](ch01-workloads/lab03-daemonsets/README.md)
+- **Ch. 02** – [Lab 01: Sidecar & InitContainers](ch02-multi-container/lab01-sidecar-pattern/README.md)
+- **Ch. 02** – [Lab 02: Warehouse (PV/PVC)](ch02-multi-container/lab02-pv-pvc/README.md)
+- **Ch. 03** – [Lab 01: Build Container from Scratch](ch03-images/lab01-build-container-from-scratch/README.md)
+- **Ch. 03** – [Lab 03: Image Updates & Rollouts](ch03-images/lab03-image-updates/README.md)
+- **Ch. 04** – [Lab 01: Shopping Items CRD](ch04-extending/lab01-crd-install/README.md)
+- **Ch. 04** – [Lab 02: CRD Discovery & Auditing](ch04-extending/lab02-crd-discovery/README.md)
+- **Ch. 04** – [Lab 03: Operators & Helm Packages](ch04-extending/lab03-operators-helm/README.md)
 
 ---
 
 ## 🔐 Part 2: Environment, Configuration and Security `[ 25% ]`
 > **Focus:** Managing the mall's vault, setting employee conduct rules, and balancing the utility budget.
 
-- **Ch. 05** – [Price List (ConfigMaps)](ch05-config-secrets/lab01-configmaps/README.md)
-- **Ch. 05** – [Breakroom Rules (ConfigMap Access)](ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
-- **Ch. 05** – [Vault Combination (Secrets & Env Injection)](ch05-config-secrets/lab03-secrets-env-injection/README.md)
-- **Ch. 05** – [Reading the Rules (ConfigMap Pod Access)](ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
-- **Ch. 06** – [Worker Safety (SecurityContext)](ch06-safety/lab01-serviceaccount-identity/README.md)
-- **Ch. 07** – [Identity & Access (RBAC)](ch07-identity/lab02-rbac-identity/README.md)
-- **Ch. 07** – [Entry Permit Office (Admission Control)](ch07-identity/lab03-admission-control-entry-permit/README.md)
-- **Ch. 08** – [Resource Budgets (Constraints)](ch08-resources/lab01-managing-resource-constraints/README.md)
-- **Ch. 08** – [Resource Checker (Requests & Limits)](ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+- **Ch. 05** – [Lab 01: Price List (ConfigMaps)](ch05-config-secrets/lab01-configmaps/README.md)
+- **Ch. 05** – [Lab 02: Breakroom Rules (Access)](ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
+- **Ch. 05** – [Lab 03: Vault (Secrets & Env Injection)](ch05-config-secrets/lab03-secrets-env-injection/README.md)
+- **Ch. 05** – [Lab 04: Reading the Rules (Pod Access)](ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
+- **Ch. 06** – [Lab 01: Worker Safety (SecurityContext)](ch06-safety/lab01-serviceaccount-identity/README.md)
+- **Ch. 07** – [Lab 02: RBAC & Identity](ch07-identity/lab02-rbac-identity/README.md)
+- **Ch. 07** – [Lab 03: Entry Permits (Admission Control)](ch07-identity/lab03-admission-control-entry-permit/README.md)
+- **Ch. 08** – [Lab 01: Managing Constraints](ch08-resources/lab01-managing-resource-constraints/README.md)
+- **Ch. 08** – [Lab 02: Resource Checker (Requests/Limits)](ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
 
 ---
 
 ## 🚀 Part 3: Application Deployment `[ 20% ]`
 > **Focus:** Grand openings, logistics pipelines, and managing change without disappointing customers.
 
-- **Ch. 09** – [Rolling Update Boutique (Wonderful)](ch09-launch/lab01-rolling-update-wonderful/README.md)
-- **Ch. 09** – [Blue-Green Sign Swap (Wonderful)](ch09-launch/lab02-blue-green-wonderful/README.md)
-- **Ch. 09** – [Canary Taste Test (Wonderful)](ch09-launch/lab03-canary-wonderful/README.md)
-- **Ch. 10** – [The Mall Catalog Audit (Helm)](ch10-logistics/lab05-helm-audit/README.md)
-- **Ch. 10** – [Logistics Tools (Helm & Kustomize)](ch10-logistics/lab06-helm-packages/README.md)
-- **Ch. 11** – [ClusterIP & Internal Communication](ch11-services/lab01-clusterip-internal-traffic/README.md)
+- **Ch. 09** – [Lab 01: Rolling Update Boutique](ch09-launch/lab01-rolling-update-wonderful/README.md)
+- **Ch. 09** – [Lab 02: Blue-Green Sign Swap](ch09-launch/lab02-blue-green-wonderful/README.md)
+- **Ch. 09** – [Lab 03: Canary Taste Test](ch09-launch/lab03-canary-wonderful/README.md)
+- **Ch. 10** – [Lab 01: Mall Catalog Audit (Helm)](ch10-logistics/lab01-helm-audit/README.md)
+- **Ch. 10** – [Lab 02: Logistics Tools (Helm/Kustomize)](ch10-logistics/lab02-helm-kustomize/README.md)
 
 ---
 
 ## 🌐 Part 4: Services and Networking `[ 20% ]`
 > **Focus:** Intercoms, signage, and managing the grand entrances of the mall.
 
-- **Ch. 11** – [ClusterIP & Internal Communication](ch11-services/lab01-clusterip-internal-traffic/README.md)
-- **Ch. 11** – [The NodePort Traffic Adventure (Cross-Namespace Access)](ch11-services/lab02-nodeport-cross-namespace/README.md)
-- **Ch. 12** – [Ingress with Virtual Host Routing](ch12-ingress/lab03-ingress-virtual-host/README.md)
-- **Ch. 12** – [Canary Deployments (Gateway API)](ch12-ingress/lab05-canary-deployment-gateway-api/README.md)
-- **Ch. 13** – [Network Policies & Locked Corridors](ch13-networking/lab06-network-policies/README.md)
+- **Ch. 11** – [Lab 01: ClusterIP & Internal Communication](ch11-services/lab01-clusterip-internal-traffic/README.md)
+- **Ch. 11** – [Lab 02: NodePort Traffic Adventure](ch11-services/lab02-nodeport-cross-namespace/README.md)
+- **Ch. 12** – [Lab 01: Branded Entrance (Host Routing)](ch12-ingress/lab01-virtual-host/README.md)
+- **Ch. 12** – [Lab 02: Grand Entrance (Path Routing)](ch12-ingress/lab02-path-routing/README.md)
+- **Ch. 12** – [Lab 03: Rewrite Policy (Advanced Ingress)](ch12-ingress/lab03-advanced-ingress/README.md)
+- **Ch. 12** – [Lab 04: Canary Deployments (Gateway API)](ch12-ingress/lab04-gateway-api-canary/README.md)
+- **Ch. 13** – [Lab 01: Network Policies & Locked Corridors](ch13-networking/lab01-network-policies/README.md)
 
 ---
 
 ## 🩺 Part 5: Observability and Maintenance `[ 15% ]`
 > **Focus:** Health inspections, incident investigations, and the mall control room.
 
-- **Ch. 14** – [Liveness Probes: The Health Inspector](ch14-probes/lab01-liveness-probes-health-inspector/README.md)
-- **Ch. 14** – [Readiness Probes](ch14-probes/lab02-readiness-probes/README.md)
-- **Ch. 15** – [Fixing the Broken Shop (CCTV & Logs)](ch15-debugging/lab15-fixing-the-broken-shop/README.md)
+- **Ch. 14** – [Lab 01: Liveness Probes: The Health Inspector](ch14-probes/lab01-liveness-probes-health-inspector/README.md)
+- **Ch. 14** – [Lab 02: Readiness Probes](ch14-probes/lab02-readiness-probes/README.md)
+- **Ch. 15** – [Lab 01: Fixing the Broken Shop (CCTV & Logs)](ch15-debugging/lab01-debugging-shop/README.md)
 
 ---
 [Back to Main Index](../../README.md)

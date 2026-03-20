@@ -30,8 +30,8 @@ Kustomize "patches" the base blueprint with your changes to create a final, cust
 * 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 * 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
 * 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
-* 🧪 **Lab:** [Lab 05: The Mall Catalog Audit](../../practice/labs/ch10-logistics/lab05-helm-audit/README.md)
-* 🧪 **Lab:** [Lab 06: Prefab Stores & Overlays](../../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+* 🧪 **Lab:** [Lab 01 - The Mall Audit](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
+* 🧪 **Lab:** [Lab 02 - Logistics Overlays](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
 
 ### 🧩 Kustomize (Blueprint Overlays)
 * 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
