@@ -32,33 +32,16 @@ In the **Central Mall**, some services are provided by external partners.
 
 The Mall Logistics department needs to audit existing kits and install new safety equipment.
 
-1. **Audit the Catalog (Helm List):** Find all Helm releases in all "Wings" (Namespaces) and save the list to `/root/releases`.
-2. **Decommission a Store (Helm Uninstall):** Remove the Helm release named `apiserver` from the `team-yellow` wing.
-3. **Install Safety Kit (Helm Install):** Install the `falcosecurity/falco` chart into the `team-yellow` namespace. Name the release `dev`.
+1. **Install Safety Kit (Helm Install):** Install the `falcosecurity/falco` chart into the `team-yellow` namespace. Name the release `dev`.
+2. **Audit & Check (Helm List):** Verify that the new kit is running and export the list of all Mall releases to `releases`.
+3. **Decommission a Store (Helm Uninstall):** Remove the Helm release named `dev` (the one you just installed) to clean up the wing.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Audit the Catalog
-Check the global inventory and export it to the ledger.
-```bash
-# List all releases in all namespaces
-helm ls -A > /root/releases
-```
-
-### 2. Cleanup Defunct Managers
-Remove the specialized manager that is no longer needed.
-```bash
-# Always check where the release is located first
-helm ls -A | grep apiserver
-
-# Uninstall the apiserver release from team-yellow
-helm -n team-yellow uninstall apiserver
-```
-
-### 3. Install the New Safety Kit
-Add the safety equipment provider to the Mall's registry.
+### 1. Install the New Safety Kit
+Add the safety equipment provider and install the "Falco" health scanner.
 ```bash
 helm repo add falcosecurity https://falcosecurity.github.io/charts
 helm repo update
@@ -67,26 +50,37 @@ helm repo update
 helm -n team-yellow install dev falcosecurity/falco
 ```
 
+### 2. Audit and Check
+Verify the installation and export the global inventory to the ledger.
+```bash
+# Verify 'dev' is deployed
+helm -n team-yellow list
+
+# List all releases in all namespaces and save to a file
+helm ls -A > releases
+```
+
+### 3. Decommission the Kit
+Remove the specialized manager once the audit is complete.
+```bash
+# Uninstall the 'dev' release from team-yellow
+helm -n team-yellow uninstall dev
+```
+
 ---
 
 ## 🔎 Verification
 
 1. **Check the Ledger:**
    ```bash
-   cat /root/releases
-   # Should list all previously installed kits.
+   cat releases
+   # Should list 'dev' (proving it was installed in Step 1 and audited in Step 2).
    ```
 
-2. **Verify Deletion:**
+2. **Verify Decommissioning:**
    ```bash
-   helm ls -A | grep apiserver
-   # Should return nothing.
-   ```
-
-3. **Verify New Install:**
-   ```bash
-   helm -n team-yellow list
-   # Should show 'dev' as 'deployed'.
+   helm ls -A | grep dev
+   # Should return nothing (proving Step 3 worked).
    ```
 
 ---

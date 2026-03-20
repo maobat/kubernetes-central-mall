@@ -54,23 +54,60 @@ helm install my-mall bitnami/nginx --set replicaCount=2
 Create the **Base**:
 ```bash
 mkdir base
-# [Create deployment.yaml inside base/]
-cat <<EOF > base/kustomization.yaml
+vi base/deployment.yaml
+vi base/kustomization.yaml
+```
+
+**Fill `base/deployment.yaml`:**
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mall
+  template:
+    metadata:
+      labels:
+        app: mall
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+```
+
+**Fill `base/kustomization.yaml`:**
+```yaml
 resources:
 - deployment.yaml
-EOF
 ```
 
 Create the **Overlay**:
 ```bash
 mkdir -p overlays/staging
-# [Create patch.yaml to set replicas: 3]
-cat <<EOF > overlays/staging/kustomization.yaml
+vi overlays/staging/patch.yaml
+vi overlays/staging/kustomization.yaml
+```
+
+**Fill `overlays/staging/patch.yaml`:**
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app # Assuming the base deployment is named my-app
+spec:
+  replicas: 3
+```
+
+**Fill `overlays/staging/kustomization.yaml`:**
+```yaml
 resources:
 - ../../base
 patchesStrategicMerge:
 - patch.yaml
-EOF
 ```
 
 Apply the final result:
