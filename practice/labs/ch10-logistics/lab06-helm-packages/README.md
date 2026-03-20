@@ -34,7 +34,7 @@ In the **Central Mall**, we have two ways of building shops:
 2. **Kustomize**:
    - Create a **Base** deployment (1 replica).
    - Create a **Staging Overlay** that patches the base to use 3 replicas.
-   - Deploy using `kubectl -k`.
+   - Deploy using `kubectl apply -k`.
 
 ---
 

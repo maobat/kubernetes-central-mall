@@ -42,7 +42,9 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 09** – [Rolling Update Boutique (Wonderful)](ch09-launch/lab01-rolling-update-wonderful/README.md)
 - **Ch. 09** – [Blue-Green Sign Swap (Wonderful)](ch09-launch/lab02-blue-green-wonderful/README.md)
 - **Ch. 09** – [Canary Taste Test (Wonderful)](ch09-launch/lab03-canary-wonderful/README.md)
+- **Ch. 10** – [The Mall Catalog Audit (Helm)](ch10-logistics/lab05-helm-audit/README.md)
 - **Ch. 10** – [Logistics Tools (Helm & Kustomize)](ch10-logistics/lab06-helm-packages/README.md)
+- **Ch. 11** – [ClusterIP & Internal Communication](ch11-services/lab01-clusterip-internal-traffic/README.md)
 
 ---
 
