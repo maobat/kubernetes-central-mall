@@ -54,7 +54,8 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 - **Ch. 11** – [The NodePort Traffic Adventure](ch11-services/02-cross-namespace/README.md)
 - **Ch. 12** – [The Lost Gateway (Troubleshooting)](ch12-ingress/01-the-lost-gateway/README.md)
 - **Ch. 12** – [The Grand Entrance (Path Routing)](ch12-ingress/02-the-grand-entrance/README.md)
-- **Ch. 13** – [Locked Corridors (Network Policies)](ch13-networking/01-locked-corridors/README.md)
+- **Ch. 13** – [The Locked Corridor (Whitelisting Traffic)](ch13-networking/01-locked-corridors/README.md)
+- **Ch. 13** – [The One-Way Corridor (Egress Control)](ch13-networking/02-one-way-corridors/README.md)
 
 ---
 

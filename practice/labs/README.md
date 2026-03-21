@@ -55,7 +55,8 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 12** – [Lab 02: Grand Entrance (Path Routing)](ch12-ingress/lab02-path-routing/README.md)
 - **Ch. 12** – [Lab 03: Rewrite Policy (Advanced Ingress)](ch12-ingress/lab03-advanced-ingress/README.md)
 - **Ch. 12** – [Lab 04: Canary Deployments (Gateway API)](ch12-ingress/lab04-gateway-api-canary/README.md)
-- **Ch. 13** – [Lab 01: Network Policies & Locked Corridors](ch13-networking/lab01-network-policies/README.md)
+- **Ch. 13** – [Lab 01: Locked Corridors (Ingress Control)](ch13-networking/lab01-network-policies/README.md)
+- **Ch. 13** – [Lab 02: One-Way Corridors (Egress Control)](ch13-networking/lab02-network-policies/README.md)
 
 ---
 

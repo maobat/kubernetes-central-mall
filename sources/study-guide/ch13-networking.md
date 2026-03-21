@@ -87,7 +87,9 @@ kubectl describe netpol <policy-name>
 
 * 📄 **Doc:** [Network Isolation and Troubleshooting](../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
 * 🖼️ **Comic:** [The Locked Corridor - Whitelisting Traffic](../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
-* 🧪 **Lab:** [Lab 01 - Network Policies](../../practice/labs/ch13-networking/lab01-network-policies/README.md)
+* 🖼️ **Comic:** [The One-Way Corridor - Egress Control](../../visual-learning/comics/ch13-networking/02-one-way-corridors/README.md)
+* 🧪 **Lab 01:** [Locked Corridors (Ingress Control)](../../practice/labs/ch13-networking/lab01-network-policies/README.md)
+* 🧪 **Lab 02:** [One-Way Corridors (Egress Control)](../../practice/labs/ch13-networking/lab02-network-policies/README.md)
 
 ---
 [<< Previous: Ingress & Gateway API](ch12-ingress.md) | [Back to Story Index](../story.md) | [Next: Health Checks & Probes >>](ch14-probes.md)
