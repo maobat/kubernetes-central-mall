@@ -27,9 +27,11 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 05** – [Lab 02: Breakroom Rules (Access)](ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
 - **Ch. 05** – [Lab 03: Vault (Secrets & Env Injection)](ch05-config-secrets/lab03-secrets-env-injection/README.md)
 - **Ch. 05** – [Lab 04: Reading the Rules (Pod Access)](ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
-- **Ch. 06** – [Lab 01: Worker Safety (SecurityContext)](ch06-safety/lab01-serviceaccount-identity/README.md)
+- **Ch. 06** – Lab 01: Worker Safety (TBD)
+- **Ch. 07** – [Lab 01: The Employee Badge (ServiceAccounts)](ch07-identity/lab01-serviceaccount-identity/README.md)
 - **Ch. 07** – [Lab 02: RBAC & Identity](ch07-identity/lab02-rbac-identity/README.md)
 - **Ch. 07** – [Lab 03: Entry Permits (Admission Control)](ch07-identity/lab03-admission-control-entry-permit/README.md)
+- **Ch. 07** – [Lab 04: Office Configuration (Advanced Admission)](ch07-identity/lab04-admission-control-configuration/README.md)
 - **Ch. 08** – [Lab 01: Managing Constraints](ch08-resources/lab01-managing-resource-constraints/README.md)
 - **Ch. 08** – [Lab 02: Resource Checker (Requests/Limits)](ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
 
