@@ -1,7 +1,7 @@
 <img src="the-logistics-chain.png" alt="The Logistics Chain" width="40%" />
 
 # 🖼️ Comic: The Logistics Chain
-## Chapter 10: Logistics – Package Management
+## Chapter 10: Logistics & API Management
 
 This comic explains the difference between **Helm** and **Kustomize** using the Central Mall's logistics system.
 
@@ -27,6 +27,8 @@ This comic explains the difference between **Helm** and **Kustomize** using the 
 ---
 
 ## 🔗 References
-- **Study Guide** → [Chapter 10: Logistics Tools](../../../../sources/study-guide/ch10-logistics.md)
-- **Lab** → [Lab 01 - The Mall Audit](../../../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
+- **Study Guide** → [Chapter 10: Logistics & API Management](../../../../sources/study-guide/ch10-management.md)
+- **Lab 01** → [The Mall Audit](../../../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
+- **Lab 02** → [Logistics Overlays](../../../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
+- **Lab 03** → [Renovating the Blueprints (API Versions)](../../../../practice/labs/ch10-logistics/lab03-api-versions/README.md)
 - **Docs** → [Using Helm](../../../../reference/md-resources/using-the-helm-package-manager.md)

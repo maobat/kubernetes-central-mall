@@ -1,4 +1,4 @@
-# 📖 Chapter 10: Logistics Tools
+# 📖 Chapter 10: Logistics & API Management
 *Shipping Containers (Helm & Kustomize)*
 
 In the **Central Mall**, if a corporation like "Nginx-Corp" wants to open a store, they don`t send a construction crew with raw bricks. They send a **Shipping Container** (Helm Chart) that includes the walls, the staff, the manual, and the keys—all ready to be unpacked in one go.
@@ -26,7 +26,17 @@ In the **Central Mall**, if a corporation like "Nginx-Corp" wants to open a stor
 * **Base:** The original, standard blueprint.
 * **Overlay:** The changes (e.g., "In Production, use 10 replicas instead of 1").
 
+---
 
+## 🎭 10.3 API Versions & Renovations
+
+The **Management Office** (API Server) frequently updates its filing system. Blueprints that worked yesterday might be "Deprecated" (Old Style) today.
+
+* **Stable (v1):** The current, approved filing standard.
+* **Beta (v1beta1):** A newer standard being tested but not yet final.
+* **Alpha (v1alpha1):** Experimental blueprints.
+
+**CKAD Tip:** You must be able to convert a deprecated manifest (like an old CronJob) to the current stable version for the exam. Use `kubectl explain <resource>` to see the current version.
 
 ---
 
@@ -69,14 +79,17 @@ kubectl apply -k ./overlays/production
 * 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 * 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
 * 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
-* 🧪 **Lab:** [Lab 05: Helm Catalog Audit](../../practice/labs/ch10-logistics/lab05-helm-audit/README.md)
-* 🧪 **Lab:** [Lab 01: Helm Audit](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
-* 🧪 **Lab:** [Lab 02: Kustomize Overlays](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
-* 🧪 **Lab:** [Architecture: CRDs & Operators (Helm Section)](../../practice/labs/ch04-extending/lab04-crds-operators/README.md#4-the-store-in-a-box-helm)
+* 🧪 **Lab 01:** [Helm Audit](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
+* 🧪 **Lab:** [Architecture: CRDs & Operators (Helm Section)](../../practice/labs/ch04-extending/lab03-operators-helm/README.md#4-the-store-in-a-box-helm)
 
 ### 🧩 Kustomize (Blueprint Overlays)
 * 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 * 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
+* 🧪 **Lab 02:** [Kustomize Overlays](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
+
+### 📝 API Management
+* 📄 **Doc:** [API Deprecations and Stability](../../reference/md-resources/api-deprecations-and-stability.md)
+* 🧪 **Lab 03:** [Renovating the Blueprints (API Versions)](../../practice/labs/ch10-logistics/lab03-api-versions/README.md)
 
 ---
 [<< Previous: Launch Strategies](ch09-deployments.md) | [Back to Story Index](../story.md) | [Next: Intercoms & Delivery Bays >>](ch11-services.md)

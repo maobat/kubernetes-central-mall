@@ -103,7 +103,7 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: Worker Safety & SecurityContext](./../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
 - 📄 [Doc: Worker Safety and Conduct]../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
-- 🧪 [Lab: Managing Security Settings (SecurityContext)](./../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
+- 🧪 [Lab: Worker Safety (SecurityContext) - TBD](./../practice/labs/README.md)
 
 ---
 
@@ -114,7 +114,10 @@ Assigning roles and permissions to ensure only authorized staff access the backr
 
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Secure Badge](./../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
-- 🧪 [Lab: Identity & Access (RBAC)](./practice/labs/ch07-identity/lab02-rbac-identity/README.md)
+- 🧪 [Lab 01: Employee Badge (ServiceAccounts)](./../practice/labs/ch07-identity/lab01-serviceaccount-identity/README.md)
+- 🧪 [Lab 02: Identity & Access (RBAC)](./../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
+- 🧪 [Lab 03: Entry Permit Office (Admission Control)](./../practice/labs/ch07-identity/lab03-admission-control-entry-permit/README.md)
+- 🧪 [Lab 04: Office Configuration (Advanced Admission)](./../practice/labs/ch07-identity/lab04-admission-control-configuration/README.md)
 - 🖼️ [Comic: The HR Manual (Role)](./../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
 - 🖼️ [Comic: The Entry Permit Office (Admission Control)](./../visual-learning/comics/ch07-identity/03-admission-control/README.md)
 - 📄 [Doc: Understanding RBAC]../reference/md-resources/understanding-role-based-access-control-rbac.md)
@@ -150,14 +153,16 @@ Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 
 ---
 
-### 📖 Chapter 10: [Logistics Tools: Shipping Containers](story/ch10-logistics-tools.md)
-Using standardized tools like **Helm** and **Kustomize** to manage mall layout templates.
+### 📖 Chapter 10: [Logistics & API Management: Shipping Containers and Blueprints](story/ch10-logistics-tools.md)
+Using standardized tools like **Helm** and **Kustomize** to manage mall layout templates and **API Versions** to maintain the Management Office.
 
 **⚡ Study Guide:** [Management Tools](./study-guide/ch10-management.md)
 
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: The Logistics Chain](../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
-- 🧪 [Lab: Logistics Tools (Helm & Kustomize)](../practice/labs/ch10-logistics/lab06-helm-packages/README.md)
+- 🧪 [Lab 01: Helm Audit](./../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
+- 🧪 [Lab 02: Logistics Overlays](./../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
+- 🧪 [Lab 03: Renovating the Blueprints (API Versions)](./../practice/labs/ch10-logistics/lab03-api-versions/README.md)
 - 📄 [Doc: Using Helm](../reference/md-resources/using-the-helm-package-manager.md)
 - 📄 [Doc: Using Kustomize](../reference/md-resources/using-kustomize.md)
 
