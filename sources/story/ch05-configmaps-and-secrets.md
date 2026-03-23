@@ -39,6 +39,7 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 * 🧪 **Lab:** [The Price List](../../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
 * 🧪 **Lab:** [Breakroom Rules (ConfigMap Access)](../../practice/labs/ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
 * 🧪 **Lab:** [Reading the Rules (ConfigMap Pod Access)](../../practice/labs/ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
+* 🧪 **Lab:** [Automated Config Writer (InitContainers)](../../practice/labs/ch05-config-secrets/lab05-configmap-init-container/README.md)
 * 🖼️ **Comic:** [The Rulebook & The Uniform](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
 
 ### 🤫 Security (Secrets)

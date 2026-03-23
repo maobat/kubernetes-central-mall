@@ -89,6 +89,7 @@ Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 - 🧪 [Lab: Configuration: ConfigMaps](./../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
 - 🧪 [Lab: Breakroom Rules (ConfigMap Access)](./../practice/labs/ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
 - 🧪 [Lab: Reading the Rules (ConfigMap Pod Access)](./../practice/labs/ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
+- 🧪 [Lab: Automated Config Writer (InitContainers)](./../practice/labs/ch05-config-secrets/lab05-configmap-init-container/README.md)
 - 🖼️ [Comic: The Secret of the High-Security Vault](./../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
 - 🧪 [Lab: Secrets & Env Injection](./../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
 - 📄 [Doc: Configuration Decoupling](../reference/md-resources/configuration-decoupling.md)
