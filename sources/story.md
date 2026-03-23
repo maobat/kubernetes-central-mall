@@ -104,7 +104,7 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 **🧰 Study Toolbox:**
 - 🖼️ [Comic: Worker Safety & SecurityContext](./../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
 - 📄 [Doc: Worker Safety and Conduct]../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
-- 🧪 [Lab: Worker Safety (SecurityContext) - TBD](./../practice/labs/README.md)
+- 🧪 [Lab: Worker Safety (SecurityContext)](./../practice/labs/ch06-safety/lab01-worker-safety/README.md)
 
 ---
 
