@@ -31,6 +31,7 @@ Deciding between a Shop Clerk (**Pod**), a Manager (**Deployment**), or speciali
 - 🖼️ [Comic: The Fixed Boutique (StatefulSets)](./../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
 - 🧪 [Lab 02: Fixed Boutique (StatefulSets)](./../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
 - 🧪 [Lab 03: Floor Security (DaemonSets)](./../practice/labs/ch01-workloads/lab03-daemonsets/README.md)
+- 🧪 [Lab 04: Automated Tasks (Countdown & Reports)](./../practice/labs/ch01-workloads/lab04-automated-tasks-countdown/README.md)
 - 📄 [Doc: Using StatefulSets](./../reference/md-resources/using-statefulsets.md)
 
 ---

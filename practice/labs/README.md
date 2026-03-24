@@ -10,6 +10,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 01** – [Lab 01: Jobs & CronJobs](ch01-workloads/lab01-jobs-cronjobs/README.md)
 - **Ch. 01** – [Lab 02: Fixed Boutique (StatefulSets)](ch01-workloads/lab02-statefulsets/README.md)
 - **Ch. 01** – [Lab 03: Floor Security (DaemonSets)](ch01-workloads/lab03-daemonsets/README.md)
+- **Ch. 01** – [Lab 04: Automated Tasks (Countdown & Reports)](ch01-workloads/lab04-automated-tasks-countdown/README.md)
 - **Ch. 02** – [Lab 01: Sidecar & InitContainers](ch02-multi-container/lab01-sidecar-pattern/README.md)
 - **Ch. 02** – [Lab 02: Warehouse (PV/PVC)](ch02-multi-container/lab02-pv-pvc/README.md)
 - **Ch. 03** – [Lab 01: Build Container from Scratch](ch03-images/lab01-build-container-from-scratch/README.md)
