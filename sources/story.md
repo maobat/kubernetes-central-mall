@@ -61,6 +61,7 @@ Mastering the art of building and updating your store's display models (**Docker
 - 🧪 [Lab 01: Build Container from Scratch](./../practice/labs/ch03-images/lab01-build-container-from-scratch/README.md)
 - 🧪 [Lab 02: Dockerfile & Local Registry](./../practice/labs/ch03-images/lab02-dockerfile-args-registry/README.md)
 - 🧪 [Lab 03: Image Updates & Rollouts](./../practice/labs/ch03-images/lab03-image-updates/README.md)
+- 🧪 [Lab 04: Custom Nginx & Docker Hub](./../practice/labs/ch03-images/lab04-custom-nginx-image/README.md)
 - 📄 [Doc: Managing Images & Rollouts]../../reference/md-resources/managing-container-images-and-rollouts.md)
 
 ---
