@@ -127,17 +127,17 @@ kubectl rollout undo deployment/clerk-dept
 
 ### ⚖️ Rolling Update Strategy (The Default)
 * 🖼️ **Comic:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
-* 🧪 **Lab:** [Lab 01 - The "Wonderful" Boutique Makeover](../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
+* 🧪 **Lab:** [Lab 01: Rolling Update Boutique](../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
 
 ### 🔵🟢 Blue/Green Strategy
 * 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 * 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
-* 🧪 **Lab:** [Lab 02 - Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
+* 🧪 **Lab:** [Lab 02: Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
 
 ### 🐤 Canary Strategy
 * 🖼️ **Comic:** [Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
 * 📄 **Doc:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
-* 🧪 **Lab:** [Lab 03 - Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
+* 🧪 **Lab:** [Lab 03: Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
 
 ### ⚖️ Comparison
 * 📄 **Doc:** [Comparison: Blue/Green vs. Canary](../../reference/md-resources/related-deployment-strategies-comparison.md)

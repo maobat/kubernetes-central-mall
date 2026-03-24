@@ -100,8 +100,9 @@ kubectl describe pod <pod-name>
 ### 🧰 Study Toolbox
 
 * 📄 **Doc:** [The Resource Budget (Requests, Limits, & Quotas)](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
-* 🧪 **Lab:** [Lab: Managing Resource Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
-* 🧪 **Lab:** [Lab: Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+* 🧪 **Lab:** [Lab 01: Managing Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
+* 🧪 **Lab:** [Lab 02: Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+* 🧪 **Lab:** [Lab 03: Special Placements (Node Affinity)](../../practice/labs/ch08-resources/lab03-node-affinity/README.md)
 * 🖼️ **Comic:** [The Resource Hog - Why Limits Matter](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 
 ---

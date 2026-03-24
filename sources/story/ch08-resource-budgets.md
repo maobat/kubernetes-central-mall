@@ -36,7 +36,8 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 
 ### 🚰 Resource Management
 * 🧪 **Lab:** [Managing Resource Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
-* 🧪 **Lab:** [Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+* 🧪 **Lab:** [Lab 02: Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+* 🧪 **Lab:** [Lab 03: Special Placements (Node Affinity)](../../practice/labs/ch08-resources/lab03-node-affinity/README.md)
 * 🖼️ **Comic:** [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 
 ### 📄 Documentation

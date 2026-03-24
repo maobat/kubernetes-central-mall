@@ -32,7 +32,7 @@ By defining **Worker Safety & Conduct**, the Mall Owner ensures that the entire 
 ### 🧰 Study Toolbox
 
 ### 🛠️ Working with Safety Gear
-* 🧪 **Lab:** [Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
+* 🧪 **Lab:** [Lab 01: Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
 * 🖼️ **Comic:** [Worker Safety & SecurityContext](../../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
 
 ### 📄 Documentation

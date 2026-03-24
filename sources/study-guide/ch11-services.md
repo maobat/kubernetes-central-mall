@@ -66,13 +66,13 @@ kubectl get endpoints nginx-intercom
 ### 📞 Services (Internal - ClusterIP)
 * 🖼️ **Comic:** [The Internal Intercom - ClusterIP Balances Traffic](../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
 * 📄 **Doc:** [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)
-* 🧪 **Lab:** [LAB 01 – ClusterIP & Internal Communication](../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
+* 🧪 **Lab:** [Lab 01: ClusterIP & Internal Communication](../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
     
 ### 🚪 Services (External - NodePort)
 * 🖼️ **Comic:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
 * 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
-* 🧪 **Lab:** [LAB 02 – NodePort & Cross-Namespace Communication](../../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
-* 🧪 **Lab:** [LAB 03 – Intercom Investigation (Service Debugging)](../../practice/labs/ch11-services/lab03-service-debugging/README.md)
+* 🧪 **Lab:** [Lab 02: NodePort & Cross-Namespace Communication](../../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
+* 🧪 **Lab:** [Lab 03: Intercom Investigation (Service Debugging)](../../practice/labs/ch11-services/lab03-service-debugging/README.md)
 
 ---
 [<< Previous: Logistics Tools](ch10-management.md) | [Back to Story Index](../story.md) | [Next: Ingress & Gateway API >>](ch12-ingress.md)

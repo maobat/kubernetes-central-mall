@@ -59,11 +59,12 @@ Update →      v2 v1 v1 v1
 
 ### 🔵🟢 Blue/Green
 * 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
-* 🧪 **Lab:** [Lab 02 - Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
+* 🧪 **Lab:** [Lab 01: Rolling Update Boutique](../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
+* 🧪 **Lab:** [Lab 02: Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
 
 ### 🐤 Canary
 * 🖼️ **Comic:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-* 🧪 **Lab:** [Lab 03 - Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
+* 🧪 **Lab:** [Lab 03: Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
 
 ### 📄 Documentation
 * 📖 **Docs:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)

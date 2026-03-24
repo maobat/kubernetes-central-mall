@@ -31,6 +31,6 @@ For the most popular shops, the mall might hire a dedicated **Receptionist**. Wh
 ### 🚪 Services (External - NodePort)
 * 🖼️ **Comic:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
 * 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
-* 🧪 **Lab:** [Intercom Investigation (Service Debugging)](../../practice/labs/ch11-services/lab03-service-debugging/README.md)
+* 🧪 **Lab:** [Lab 03: Intercom Investigation (Service Debugging)](../../practice/labs/ch11-services/lab03-service-debugging/README.md)
 
 [<< Previous Chapter: Logistics Tools](ch10-logistics-tools.md) | [Back to Story Index](../story.md) | [Next Chapter: Ingress & Gateway API >>](ch12-ingress-and-gateway-api.md)
