@@ -1,4 +1,5 @@
 # 🧪 LAB 03: Special Placements (Node Affinity)
+*Focus: Preferred Scheduling, Weights, and Availability Zones*
 
 ## 🎯 Lab Goal
 In this lab, you will learn how to use **Node Affinity** to influence the Kubernetes Scheduler. You will ensure that a specific shop (Pod) "prefers" to be located in certain Wings (Nodes) of the mall based on zoning labels.
@@ -13,8 +14,8 @@ In the **Central Mall**, some shops belong in specific "Zones" for better visibi
 ## 📋 Requirements
 
 1.  **Prepare the Mall Wings**: Label your floors (Nodes) so the Scheduler knows where they are.
-    - Label `controlplane` as `availability-zone=zone1`.
-    - Label `node01` as `availability-zone=zone2`.
+    - Label `minikube` as `availability-zone=zone1`.
+    - Label `minikube-m02` as `availability-zone=zone2`.
 2.  **Create the Shop (Pod)**: Create a Pod named `az1-pod` in the namespace `012963bd`.
 3.  **Apply Node Affinity**:
     - Use `busybox:1.28` image.
@@ -29,17 +30,26 @@ In the **Central Mall**, some shops belong in specific "Zones" for better visibi
 ### 1. Set up the Zoning Labels
 ```bash
 kubectl create namespace 012963bd
-kubectl label node controlplane availability-zone=zone1 --overwrite
-kubectl label node node01 availability-zone=zone2 --overwrite
+kubectl label node minikube availability-zone=zone1 --overwrite
+kubectl label node minikube-m02 availability-zone=zone2 --overwrite
 ```
 
 ### 2. Create the Shop Blueprint
-Create a file named `az1-pod.yaml`:
+You can use the **Fast-Build** technique to generate the base YAML:
+
+```bash
+kubectl run az1-pod -n 012963bd --image=busybox:1.28 --restart=Never --dry-run=client -o yaml -- /bin/sh -c "sleep 3600" > az1-pod.yaml
+```
+
+Now, open `az1-pod.yaml` and add the `affinity` block:
 
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
+  creationTimestamp: null
+  labels:
+    run: az1-pod
   name: az1-pod
   namespace: 012963bd
 spec:
@@ -61,10 +71,16 @@ spec:
             values:
             - zone2
   containers:
-  - name: main
+  - args:
+    - /bin/sh
+    - -c
+    - sleep 3600
     image: busybox:1.28
-    command: ["sh", "-c", "sleep 3600"]
+    name: az1-pod
+    resources: {}
+  dnsPolicy: ClusterFirst
   restartPolicy: Never
+status: {}
 ```
 
 ### 3. Deploy and Inspect
@@ -78,7 +94,9 @@ kubectl -n 012963bd get pod az1-pod -o wide
 ## 🔎 Verification Checklist
 - [ ] Is the Pod in the correct namespace (`012963bd`)?
 - [ ] Does `kubectl describe pod` show the node affinity rules?
-- [ ] Did the Scheduler respect the 80/20 weights (usually landing on `controlplane` if it has capacity)?
+    > [!NOTE]
+    > **The "Missing Section" Quirk:** Sometimes `kubectl describe` won't show the `preferredDuringScheduling` section if there are no "hard" constraints or if the output is truncated. If `kubectl get pod az1-pod -o yaml` shows the rules, the Scheduler is using them!
+- [ ] Did the Scheduler respect the 80/20 weights (usually landing on `minikube` if it has capacity)?
 
 ---
 ## 🧠 Key Takeaways
