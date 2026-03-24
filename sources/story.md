@@ -182,6 +182,7 @@ Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 - 🖼️ [Comic: The NodePort Traffic Adventure](../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
 - 🧪 [Lab: ClusterIP & Internal Communication](../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
 - 🧪 [Lab: NodePort & Cross-Namespace Access](../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
+- 🧪 [Lab: Intercom Investigation (Service Debugging)](../practice/labs/ch11-services/lab03-service-debugging/README.md)
 - 📄 [Doc: Service IP Trackers](../reference/md-resources/service-ip-tracker-evolution.md)
 
 ---

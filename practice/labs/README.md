@@ -55,6 +55,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 
 - **Ch. 11** – [Lab 01: ClusterIP & Internal Communication](ch11-services/lab01-clusterip-internal-traffic/README.md)
 - **Ch. 11** – [Lab 02: NodePort Traffic Adventure](ch11-services/lab02-nodeport-cross-namespace/README.md)
+- **Ch. 11** – [Lab 03: Intercom Investigation (Service Debugging)](ch11-services/lab03-service-debugging/README.md)
 - **Ch. 12** – [Lab 01: Branded Entrance (Host Routing)](ch12-ingress/lab01-virtual-host/README.md)
 - **Ch. 12** – [Lab 02: Grand Entrance (Path Routing)](ch12-ingress/lab02-path-routing/README.md)
 - **Ch. 12** – [Lab 03: Rewrite Policy (Advanced Ingress)](ch12-ingress/lab03-advanced-ingress/README.md)
