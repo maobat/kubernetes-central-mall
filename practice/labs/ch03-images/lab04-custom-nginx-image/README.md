@@ -66,7 +66,16 @@ Find the assigned port:
 ```bash
 kubectl get svc nginx-service
 ```
-(Look for the high-numbered port like `31221` and visit it in your browser).
+Example Output:
+```text
+NAME            TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+nginx-service   NodePort   10.109.163.113   <none>        80:30583/TCP   8m11s
+```
+
+Test the connection from your terminal using `minikube ip`:
+```bash
+curl http://$(minikube ip):30583
+```
 
 ---
 
