@@ -30,11 +30,41 @@ In the **Central Mall**, an `emptyDir` is a **Shared Stockroom** inside a single
 kubectl create namespace volumes
 ```
 
-### 2. Deploy the Multi-Container Pod
-Use the `shared-pod.yaml` file provided in this directory:
-```bash
-kubectl apply -f shared-pod.yaml
+### 2. Craft the Blueprint (Fast-Build)
+Since you can't create multiple containers with a single `kubectl run` command, generate the scaffold for the first container and then manually add the rest.
+
+1.  **Generate the Scaffold:**
+    ```bash
+    kubectl run shared-pod --image=busybox:1.36 --namespace=volumes --dry-run=client -o yaml > shared-pod.yaml
+    ```
+
+2.  **Manual Surgery (`vi`):**
+    Open `shared-pod.yaml` and modify the `spec` to include both containers, the `volumes`, and their `volumeMounts`. Use the following structure:
+
+```yaml
+spec:
+  volumes:
+  - name: shared
+    emptyDir: {}
+  containers:
+  - name: writer
+    image: busybox:1.36
+    command: ["sh", "-c", "while true; do date >> /data/out.log; sleep 2; done"]
+    volumeMounts:
+    - name: shared
+      mountPath: /data
+  - name: reader
+    image: busybox:1.36
+    command: ["sh", "-c", "tail -f /data/out.log"]
+    volumeMounts:
+    - name: shared
+      mountPath: /data
 ```
+
+3.  **Deploy:**
+    ```bash
+    kubectl apply -f shared-pod.yaml
+    ```
 
 ### 3. Verify Inter-Container Communication
 Check the logs of the **reader** container to see if it's successfully reading the data written by the **writer**:

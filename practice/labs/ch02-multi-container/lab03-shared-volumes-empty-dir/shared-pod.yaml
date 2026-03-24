@@ -4,7 +4,7 @@ metadata:
   name: shared-pod
   namespace: volumes
 spec:
-  # 1. THE SHARED COUNTER (Volume Definition)
+  # 1. THE SHARED STOCKROOM (Volume Definition)
   volumes:
   - name: shared
     emptyDir: {}
