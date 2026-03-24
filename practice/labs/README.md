@@ -13,6 +13,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 02** – [Lab 01: Sidecar & InitContainers](ch02-multi-container/lab01-sidecar-pattern/README.md)
 - **Ch. 02** – [Lab 02: Warehouse (PV/PVC)](ch02-multi-container/lab02-pv-pvc/README.md)
 - **Ch. 03** – [Lab 01: Build Container from Scratch](ch03-images/lab01-build-container-from-scratch/README.md)
+- **Ch. 03** – [Lab 02: Dockerfile & Local Registry](ch03-images/lab02-dockerfile-args-registry/README.md)
 - **Ch. 03** – [Lab 03: Image Updates & Rollouts](ch03-images/lab03-image-updates/README.md)
 - **Ch. 04** – [Lab 01: Shopping Items CRD](ch04-extending/lab01-crd-install/README.md)
 - **Ch. 04** – [Lab 02: CRD Discovery & Auditing](ch04-extending/lab02-crd-discovery/README.md)
