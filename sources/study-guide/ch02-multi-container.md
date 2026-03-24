@@ -100,7 +100,8 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 - 🖼️ [**Comic: Sidecar Pattern - The Assistant at Work**](./../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
 - 🧪 [**Lab: Sidecar Pattern**](./../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
 - 🖼️ [**Comic: The Warehouse (PV/PVC)**](./../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
-- 🧪 [**Lab: The Warehouse (PV/PVC)**](./../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+* 🧪 **Lab:** [Lab 02: Warehouse (PV/PVC)](../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+* 🧪 **Lab:** [Lab 03: Shared Volumes (emptyDir)](../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
 - 📄 [**Doc: Understanding Multi-container Pod Patterns**](./../../reference/md-resources/decoupling-pods.md)
 
 ---

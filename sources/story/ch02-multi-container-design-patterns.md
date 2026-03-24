@@ -37,7 +37,8 @@ By separating the "Setup" and the "Side-Tasks" from the Main Worker, we keep our
 
 ### 🧱 Multi-Container Pods & Shared Storage
 * 🖼️ **Comic:** [The Assistant & The Shared Space](../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
-* 🖼️ **Comic:** [The Warehouse (PV/PVC)](../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
+* 🧪 **Lab:** [Lab 02: Warehouse (PV/PVC)](../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+* 🧪 **Lab:** [Lab 03: Shared Volumes (emptyDir)](../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
 
 
 [<< Previous Chapter: Choosing the Right Workload](ch01-choosing-the-right-workload.md) | [Back to Story Index](../story.md) | [Next Chapter: Images & Modifications >>](ch03-images-and-modifications.md)

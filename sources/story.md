@@ -46,6 +46,7 @@ The Clerk and their Helper (**Sidecar** and **Init Containers**).
 - 🧪 [Lab 01: Sidecar Pattern](./../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
 - 🖼️ [Comic: The Warehouse (PV/PVC)](./../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
 - 🧪 [Lab 02: Warehouse (PV/PVC)](./../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+- 🧪 [Lab 03: Shared Volumes (emptyDir)](./../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
 - 📄 [Doc: Decoupling Pods]../../reference/md-resources/decoupling-pods.md)
 
 ---
