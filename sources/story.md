@@ -165,6 +165,7 @@ Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 - 🧪 **Lab 01:** [Rolling Update Boutique](../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
 - 🧪 **Lab 02:** [Blue-Green Sign Swap](./../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
 - 🧪 **Lab 03:** [Canary Taste Test](./../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
+- 🧪 **Lab 04:** [Blue-Green Java App (Guided + Challenge)](../practice/labs/ch09-launch/lab04-blue-green-java/README.md)
 
 ---
 
