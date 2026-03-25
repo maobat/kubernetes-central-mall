@@ -138,7 +138,7 @@ curl http://$(minikube ip):30000
 
 ## 🎯 Challenge
 
-Create a brand-new Deployment using the image `chadmcrowell/hello-world-java`, apply the label `version: "3"` to its pods, expose it via a **NodePort Service** on port `8080`, and visit the resulting web page.
+Create a brand-new Deployment using the image `hashicorp/http-echo:latest`, apply the label `version: "3"` to its pods, expose it via a **NodePort Service** on port `8080`, and visit the resulting web page.
 
 **What does the page say?**
 
