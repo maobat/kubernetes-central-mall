@@ -18,6 +18,8 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 - **Ch. 01** – [Floor Security (DaemonSet)](ch01-workloads/03-daemonset-floor-security/README.md)
 - **Ch. 02** – [The Sidecar Assistant (Design Patterns)](ch02-multi-container/01-sidecar/README.md)
 - **Ch. 02** – [The Warehouse (PV/PVC)](ch02-multi-container/02-the-warehouse/README.md)
+- **Ch. 02** – [The Shared Stockroom (emptyDir)](ch02-multi-container/03-shared-stockroom/README.md)
+- **Ch. 02** – [The External Warehouse (NFS)](ch02-multi-container/04-external-warehouse/README.md)
 - **Ch. 03** – [Seasonal Mannequins (Image Updates)](ch03-images/03-image-updates/README.md)
 - **Ch. 04** – [The Nightly Backup Permit (CRD)](ch04-extending/01-the-nightly-backup-permit/README.md)
 - **Ch. 04** – [The Manager with the Manual (Operators)](ch04-extending/04-operators/README.md)

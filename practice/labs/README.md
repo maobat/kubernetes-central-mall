@@ -14,6 +14,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 02** – [Lab 01: Sidecar & InitContainers](ch02-multi-container/lab01-sidecar-pattern/README.md)
 - **Ch. 02** – [Lab 02: Warehouse (PV/PVC)](ch02-multi-container/lab02-pv-pvc/README.md)
 - **Ch. 02** – [Lab 03: Shared Volumes (emptyDir)](ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
+- **Ch. 02** – [Lab 04: NFS Shared Volumes](ch02-multi-container/lab04-nfs-shared-volumes/README.md)
 - **Ch. 03** – [Lab 01: Build Container from Scratch](ch03-images/lab01-build-container-from-scratch/README.md)
 - **Ch. 03** – [Lab 02: Dockerfile & Local Registry](ch03-images/lab02-dockerfile-args-registry/README.md)
 - **Ch. 03** – [Lab 03: Image Updates & Rollouts](ch03-images/lab03-image-updates/README.md)
