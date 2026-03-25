@@ -251,6 +251,8 @@ Investigating "incidents" using logs and real-time inspections (**Logs, Describe
 - 📄 [Doc: Diagnostic Cheat Sheet](../reference/md-resources/diagnostic-cheat-sheet.md)
 - 🖼️ [Comic: The Broken Shop](../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
 - 🧪 [Lab 01: Fixing the Broken Shop (CCTV & Logs)](../practice/labs/ch15-debugging/lab01-debugging-shop/README.md)
+- 🧪 [Lab 02: Logging & Sidecar Tailing](../practice/labs/ch15-debugging/lab02-logging-sidecars/README.md)
+- 🧪 [Lab 03: The Mall Dashboard (Metrics Server)](../practice/labs/ch15-debugging/lab03-metrics-server/README.md)
 
 ---
 

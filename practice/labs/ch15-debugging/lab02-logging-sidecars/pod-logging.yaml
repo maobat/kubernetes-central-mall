@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shop-standard-cctv
+spec:
+  containers:
+  - name: main-clerk
+    image: busybox:1.28
+    args:
+    - /bin/sh
+    - -c
+    - "while true; do echo $(date) - Customer arrived; sleep 1; done"

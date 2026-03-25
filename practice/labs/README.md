@@ -77,6 +77,8 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 14** – [Lab 01: Liveness Probes: The Health Inspector](ch14-probes/lab01-liveness-probes-health-inspector/README.md)
 - **Ch. 14** – [Lab 02: Readiness Probes](ch14-probes/lab02-readiness-probes/README.md)
 - **Ch. 15** – [Lab 01: Fixing the Broken Shop (CCTV & Logs)](ch15-debugging/lab01-debugging-shop/README.md)
+- **Ch. 15** – [Lab 02: Logging & Sidecar Tailing](ch15-debugging/lab02-logging-sidecars/README.md)
+- **Ch. 15** – [Lab 03: The Mall Dashboard (Metrics Server)](ch15-debugging/lab03-metrics-server/README.md)
 
 ---
 [Back to Main Index](../../README.md)
