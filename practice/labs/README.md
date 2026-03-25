@@ -51,6 +51,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 09** – [Lab 02: Blue-Green Sign Swap](ch09-launch/lab02-blue-green-wonderful/README.md)
 - **Ch. 09** – [Lab 03: Canary Taste Test](ch09-launch/lab03-canary-wonderful/README.md)
 - **Ch. 09** – [Lab 04: Blue-Green Sign Swap (Java Hello App)](ch09-launch/lab04-blue-green-java/README.md)
+- **Ch. 09** – [Lab 05: Deployment Lifecycle (Create, Scale & Update)](ch09-launch/lab05-deployment-lifecycle/README.md)
 - **Ch. 10** – [Lab 01: Mall Catalog Audit (Helm)](ch10-logistics/lab01-helm-audit/README.md)
 - **Ch. 10** – [Lab 02: Logistics Tools (Helm/Kustomize)](ch10-logistics/lab02-helm-kustomize/README.md)
 - **Ch. 10** – [Lab 03: Mapping the API (Versions & Deprecations)](ch10-logistics/lab03-api-versions/README.md)

@@ -135,6 +135,7 @@ kubectl rollout undo deployment/clerk-dept
 * 🧪 **Lab 02:** [Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
 * 🧪 **Lab 03:** [Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
 * 🧪 **Lab 04:** [Blue-Green Java App (Guided + Challenge)](../../practice/labs/ch09-launch/lab04-blue-green-java/README.md)
+* 🧪 **Lab 05:** [Deployment Lifecycle (Create, Scale & Update)](../../practice/labs/ch09-launch/lab05-deployment-lifecycle/README.md)
 
 ---
 [<< Previous: Resources](ch08-resources.md) | [Back to Story Index](../story.md) | [Next: Logistics Tools >>](ch10-management.md)
