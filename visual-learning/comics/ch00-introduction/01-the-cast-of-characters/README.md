@@ -24,7 +24,7 @@ This is an **introductory overview** of every character in *The Central Mall*, a
 
 | Character | Kubernetes Concept | Role |
 | :--- | :--- | :--- |
-| 👷 **The Shop Clerk** | Pod | The individual running application — the heartbeat of the mall. |
+| 👷 **The Shop Clerk** | Pod | The individual running application, the heartbeat of the mall. |
 | 🗂️ **The Store Manager** | Deployment | Ensures the correct number of Shop Clerks are always at their desks. |
 | 🔁 **The Timed Event Crew** | Job / CronJob | Hired for a specific task (stocktake, cleanup). When done, they leave. CronJobs show up on schedule. |
 | 🛡️ **The Floor Security Guard** | DaemonSet | Ensures *one guard per floor (Node)*, covering every part of the mall, always. |
@@ -49,7 +49,7 @@ This is an **introductory overview** of every character in *The Central Mall*, a
 | 📋 **The Local Shop Permit** | Role | A "Can-Do" list restricted to a *single shop (Namespace)*. |
 | 📝 **The Local HR Appointment** | RoleBinding | The document that assigns a Local Permit to a specific Employee ID. |
 | 🌐 **The Mall-Wide Authority** | ClusterRole | Rules that apply to the *entire mall (Cluster)*. |
-| 🏅 **The Mall-Wide Appointment** | ClusterRoleBinding | Grants a Mall-Wide Authority to an ID — a big promotion. |
+| 🏅 **The Mall-Wide Appointment** | ClusterRoleBinding | Grants a Mall-Wide Authority to an ID, a big promotion. |
 | 🚦 **The Entry Permit Desk** | Admission Controller | Reviews every request entering the mall. Can approve, modify, or reject it before it's recorded. |
 | 🦺 **The Safety Rulebook** | SecurityContext | Defines what tools and keys a worker is allowed to carry on the job. |
 

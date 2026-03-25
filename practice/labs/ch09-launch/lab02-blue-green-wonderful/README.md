@@ -133,7 +133,7 @@ spec:
 | :--- | :--- | :--- |
 | **Focus** | Build the full Blue-Green setup from scratch | Practice the switch & reverse with pre-built apps |
 | **You author** | Deployments, labels, Service YAML | Only Service selector edits |
-| **Bonus** | — | Challenge: deploy a v3 app from scratch |
+| **Bonus** | - | Challenge: deploy a v3 app from scratch |
 | **Best for** | Understanding the pattern | Exam-speed muscle memory |
 
 ➡️ [Lab 04: Blue-Green Java App (Guided + Challenge)](../lab04-blue-green-java/README.md)

@@ -3,13 +3,13 @@
 ## Launch Strategies – Guided Blue-Green with Real Apps & Challenges
 
 
-> **⚙️ Local Minikube Compatible** — uses `hashicorp/http-echo` instead of KillerCoda-specific images.
+> **⚙️ Local Minikube Compatible**, uses `hashicorp/http-echo` instead of KillerCoda-specific images.
 
 ---
 
 ## 🎯 Lab Goal
 
-Perform a complete **Blue-Green Deployment** lifecycle using two real Java applications. You will inspect both versions, switch the traffic, and then reverse it — building muscle memory for the exam pattern.
+Perform a complete **Blue-Green Deployment** lifecycle using two real Java applications. You will inspect both versions, switch the traffic, and then reverse it, building muscle memory for the exam pattern.
 
 > **CKAD Importance:** High. Blue-Green deployments are tested through Service selector manipulation. The challenge sections below simulate real CKAD scenarios.
 
@@ -17,7 +17,7 @@ Perform a complete **Blue-Green Deployment** lifecycle using two real Java appli
 
 ## 🛍️ Mall Analogy
 
-Two café storefronts exist side by side in the mall: **Blue Café (v1)** says "Hello Blue," and **Green Café (v2)** says "Hello Green." Each café has their own door (NodePort). The Mall Manager is about to move the **Blue Café sign** from the old kitchen to the new one — without any customer ever noticing.
+Two café storefronts exist side by side in the mall: **Blue Café (v1)** says "Hello Blue," and **Green Café (v2)** says "Hello Green." Each café has their own door (NodePort). The Mall Manager is about to move the **Blue Café sign** from the old kitchen to the new one, without any customer ever noticing.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
@@ -28,7 +28,7 @@ Two café storefronts exist side by side in the mall: **Blue Café (v1)** says "
 
 ---
 
-## 📋 Prerequisites — Deploy the Lab Environment
+## 📋 Prerequisites, Deploy the Lab Environment
 
 Apply both Deployments and Services to spin up the starting state:
 
@@ -70,9 +70,9 @@ curl http://$MINIKUBE_IP:30000   # → Hello Green
 
 ---
 
-## 🛠️ Part 1 — Switch Blue to serve Green
+## 🛠️ Part 1, Switch Blue to serve Green
 
-The goal is to redirect traffic on port `30001` (the Blue entrance) so it now serves the Green app — without touching the Deployment, only the Service.
+The goal is to redirect traffic on port `30001` (the Blue entrance) so it now serves the Green app, without touching the Deployment, only the Service.
 
 ### 1. Inspect the current selector
 
@@ -109,7 +109,7 @@ Or: `minikube service svc-java-blue --url` and open the URL in your browser.
 
 ---
 
-## 🛠️ Part 2 — Reverse the switch (Green → Blue)
+## 🛠️ Part 2, Reverse the switch (Green → Blue)
 
 Now perform the same swap on `svc-java-green` (port `30000`). Direct its traffic to the Blue app instead.
 
@@ -178,7 +178,7 @@ curl http://$(minikube ip):<nodeport-from-above>
 
 ## 🧠 Key Takeaways
 
-- **Service selectors are the only lever** in a Blue-Green switch — no Deployment changes needed.
+- **Service selectors are the only lever** in a Blue-Green switch, no Deployment changes needed.
 - **Labels must match exactly**: a single mismatch (`v2` vs `v2 `) means zero endpoints and a broken service.
 - **Instant rollback**: changing the selector back restores v1 in milliseconds.
 - Blue-Green requires **double the resources** during the overlap window.
@@ -196,7 +196,7 @@ curl http://$(minikube ip):<nodeport-from-above>
 | :--- | :--- | :--- |
 | **Focus** | Build the full Blue-Green setup from scratch | Practice the switch & reverse with pre-built apps |
 | **You author** | Deployments, labels, Service YAML | Only Service selector edits |
-| **Bonus** | — | Challenge: deploy a v3 app from scratch |
+| **Bonus** |, | Challenge: deploy a v3 app from scratch |
 | **Best for** | Understanding the pattern | Exam-speed muscle memory |
 
 ➡️ [Lab 02: Blue-Green with the Wonderful Boutique](../lab02-blue-green-wonderful/README.md)

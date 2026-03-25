@@ -83,6 +83,7 @@ spec:
 * 🧪 **Lab 02:** [Dockerfile & Local Registry](../../practice/labs/ch03-images/lab02-dockerfile-args-registry/README.md)
 * 🧪 **Lab 03:** [Image Updates & Rollouts](../../practice/labs/ch03-images/lab03-image-updates/README.md)
 * 🧪 **Lab 04:** [Custom Nginx & Docker Hub](../../practice/labs/ch03-images/lab04-custom-nginx-image/README.md)
+* 🧪 **Lab 05:** [The Simplest Shop (Standalone Pod)](../../practice/labs/ch03-images/lab05-standalone-pod/README.md)
 
 ---
 [<< Previous: Multi-container](ch02-multi-container.md) | [Back to Story Index](../story.md) | [Next: Extending K8s >>](ch04-extending-k8s.md)

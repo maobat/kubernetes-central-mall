@@ -1,8 +1,8 @@
-# 🧪 Lab 05: Deployment Lifecycle — Create, Scale & Update
+# 🧪 Lab 05: Deployment Lifecycle, Create, Scale & Update
 
 ## Launch Strategies – The Complete Deployment Lifecycle
 
-> **⚙️ Local Minikube Compatible** — uses standard `nginx` images, no special registry required.
+> **⚙️ Local Minikube Compatible**, uses standard `nginx` images, no special registry required.
 
 ---
 
@@ -29,7 +29,7 @@ The **Scaler Boutique** is a new shop in the Central Mall. First, the owner open
 
 ---
 
-## 🛠️ Part 1 — Create the Deployment
+## 🛠️ Part 1, Create the Deployment
 
 Create a deployment named `scaler` using `nginx:1.25` (v1):
 
@@ -65,7 +65,7 @@ curl http://$(minikube ip):$(kubectl get svc scaler -o jsonpath='{.spec.ports[0]
 
 ---
 
-## 🛠️ Part 2 — Scale to 3 Replicas
+## 🛠️ Part 2, Scale to 3 Replicas
 
 The weekend rush is here. Add two more counters:
 
@@ -89,7 +89,7 @@ kubectl get deploy scaler
 
 ---
 
-## 🛠️ Part 3 — Update the Image (Rolling Update)
+## 🛠️ Part 3, Update the Image (Rolling Update)
 
 The new supplier has arrived. Update from `nginx:1.25` to `nginx:1.27`:
 
@@ -148,7 +148,7 @@ kubectl rollout history deploy scaler
 
 - **One command, full stack:** `kubectl create deploy` creates the Deployment, ReplicaSet, and Pod(s) automatically.
 - **Scaling is non-destructive:** It simply adjusts `spec.replicas`; existing pods are not touched.
-- **Rolling update is the default strategy:** Changing the image triggers a controlled replacement — old pods are only removed once new ones are healthy.
+- **Rolling update is the default strategy:** Changing the image triggers a controlled replacement, old pods are only removed once new ones are healthy.
 - **Container name matters:** `kubectl set image` targets by container name, not image name. Always verify it with `kubectl describe`.
 
 ---
