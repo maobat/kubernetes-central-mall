@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: java-hello
+  name: java-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-hello
+  template:
+    metadata:
+      labels:
+        app: java-hello
+        version: "3"
+    spec:
+      containers:
+      - image: hashicorp/http-echo:latest
+        name: hello-world-java
+        args:
+        - "-text=Hello World v3"
+        - "-listen=:8080"
+        ports:
+        - containerPort: 8080

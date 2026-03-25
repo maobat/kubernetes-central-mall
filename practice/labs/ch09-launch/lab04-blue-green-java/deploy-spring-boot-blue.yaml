@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-java-blue
+    version: v1
+  name: hello-java-blue-v1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-java-blue
+  template:
+    metadata:
+      labels:
+        app: hello-java-blue
+        version: v1
+    spec:
+      containers:
+      - image: hashicorp/http-echo:latest
+        name: hello-java-blue
+        args:
+        - "-text=Hello Blue"
+        - "-listen=:8080"
+        ports:
+        - containerPort: 8080

@@ -126,3 +126,14 @@ spec:
 ## 🔗 References
 - **Comic** → [Blue/Green Sign Swap](../../../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 - **Study Guide** → [Chapter 9: Launch Strategies](../../../../sources/study-guide/ch09-deployments.md)
+
+## 🔄 See Also: Lab 04
+
+| | **This lab (Lab 02)** | **Lab 04** |
+| :--- | :--- | :--- |
+| **Focus** | Build the full Blue-Green setup from scratch | Practice the switch & reverse with pre-built apps |
+| **You author** | Deployments, labels, Service YAML | Only Service selector edits |
+| **Bonus** | — | Challenge: deploy a v3 app from scratch |
+| **Best for** | Understanding the pattern | Exam-speed muscle memory |
+
+➡️ [Lab 04: Blue-Green Java App (Guided + Challenge)](../lab04-blue-green-java/README.md)
