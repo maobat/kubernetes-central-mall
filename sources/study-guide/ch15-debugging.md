@@ -22,7 +22,7 @@ In the **Central Mall**, when a shop stops working, you don't just stare at the 
 
 If your shop has multiple workers (Sidecars), you must tell the manager *which* worker's camera you want to see.
 
-///bash
+```bash
 # View the main clerk's activity
 kubectl logs <pod-name> -c main-clerk
 
@@ -31,7 +31,7 @@ kubectl logs -f <pod-name>
 
 # See the tapes from BEFORE the worker fainted (Previous instance)
 kubectl logs <pod-name> --previous
-///
+```
 
 ---
 
@@ -39,9 +39,9 @@ kubectl logs <pod-name> --previous
 
 If a Pod is stuck in `Pending` or `CrashLoopBackOff`, the `describe` command is your best friend. It reveals the "Events"—the Mall Manager's timestamped notes on why things are failing.
 
-///bash
+```bash
 kubectl describe pod <pod-name>
-///
+```
 
 **Common "Incident Report" Findings:**
 * **FailedScheduling:** "No room in the mall for this shop" (Resource shortage).
@@ -60,10 +60,10 @@ In the exam, you'll be given a "Broken Shop" and told to fix it. Use this **3-St
 2. **Read Events:** `kubectl describe pod <name>` (Check the 'Events' section for Manager errors).
 3. **Watch CCTV:** `kubectl logs <name>` (Check for application-level crashes).
 
-///bash
+```bash
 # Fast way to see all "Events" for the whole mall floor
 kubectl get events --sort-by='.lastTimestamp'
-///
+```
 
 ---
 
