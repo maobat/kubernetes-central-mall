@@ -84,6 +84,6 @@ kubectl exec secure-shop -- id
 
 ### 🧰 Study Toolbox
 
-* �️ **Comic:** [The Secure Badge - Pod Identity](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
-* 🧪 **Lab:** [Lab 01: Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
-* � **Doc:** [Worker Safety and Conduct (SecurityContexts)](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+* 🖼️ **Comic 01:** [Worker Safety & SecurityContext](../../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
+* 📄 **Doc:** [Worker Safety and Conduct (SecurityContexts)](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+* 🧪 **Lab 01:** [Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)

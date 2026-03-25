@@ -34,13 +34,10 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 
 ### 🧰 Study Toolbox
 
-### 🚰 Resource Management
-* 🧪 **Lab:** [Managing Resource Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
-* 🧪 **Lab:** [Lab 02: Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
-* 🧪 **Lab:** [Lab 03: Special Placements (Node Affinity)](../../practice/labs/ch08-resources/lab03-node-affinity/README.md)
-* 🖼️ **Comic:** [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
-
-### 📄 Documentation
-* 📖 **Docs:** [Resource Requests, Limits, and Quotas](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+* 🖼️ **Comic 01:** [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+* 📄 **Doc:** [Resource Requests, Limits, and Quotas](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+* 🧪 **Lab 01:** [Managing Resource Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
+* 🧪 **Lab 02:** [Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+* 🧪 **Lab 03:** [Special Placements (Node Affinity)](../../practice/labs/ch08-resources/lab03-node-affinity/README.md)
 
 [<< Previous Chapter: Identity & Access](ch07-identity-and-access.md) | [Back to Story Index](../story.md) | [Next Chapter: Launch Strategies >>](ch09-launch-strategies.md)

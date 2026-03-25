@@ -75,13 +75,13 @@ kubectl get events --sort-by='.lastTimestamp'
 
 ## 🧰 Study Toolbox
 
+* 🖼️ **Comic 01:** [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
+* 🖼️ **Comic 02:** [SSH and Contexts (Service Elevator)](../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
 * 📄 **Doc:** [Troubleshooting Kubernetes (The Master Guide)](../../reference/md-resources/troubleshooting-kubernetes.md)
 * 📄 **Doc:** [Diagnostic Cheat Sheet (Commands to Memorize)](../../reference/md-resources/diagnostic-cheat-sheet.md)
-* 🖼️ **Comic:** [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
-* 🧪 **Lab:** [Lab 01: CCTV Log Investigation](../../practice/labs/ch15-debugging/lab01-debugging-shop/README.md)
-* 🧪 **Lab:** [Lab 02: Logging & Sidecar Tailing](../../practice/labs/ch15-debugging/lab02-logging-sidecars/README.md)
-* 🧪 **Lab:** [Lab 03: The Mall Dashboard (Metrics Server)](../../practice/labs/ch15-debugging/lab03-metrics-server/README.md)
-* 🖼️ **Comic:** [SSH and Contexts (Service Elevator)](../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
+* 🧪 **Lab 01:** [CCTV Log Investigation](../../practice/labs/ch15-debugging/lab01-debugging-shop/README.md)
+* 🧪 **Lab 02:** [Logging & Sidecar Tailing](../../practice/labs/ch15-debugging/lab02-logging-sidecars/README.md)
+* 🧪 **Lab 03:** [The Mall Dashboard (Metrics Server)](../../practice/labs/ch15-debugging/lab03-metrics-server/README.md)
 
 ---
 [<< Previous: Health Checks](ch14-probes.md) | [Back to Story Index](../story.md)

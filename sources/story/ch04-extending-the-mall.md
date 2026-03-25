@@ -39,10 +39,11 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 
 ### 🧰 Study Toolbox
 
-### 🧩 Custom Resource Definitions (CRD)
-* 🖼️ **Comic:** [The Nightly Backup Permit](../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
-* 🧪 **Lab:** [Lab 01 - Shopping Items CRD](../../practice/labs/ch04-extending/lab01-crd-install/README.md)
-* 🧪 **Lab:** [Lab 02 - CRD Discovery](../../practice/labs/ch04-extending/lab02-crd-discovery/README.md)
-* 🧪 **Lab:** [Lab 03 - Operators & Helm](../../practice/labs/ch04-extending/lab03-operators-helm/README.md)
+* 🖼️ **Comic 01:** [The Nightly Backup Permit](../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
+* 🖼️ **Comic 03:** [The Operator - The Manager with the Manual](../../visual-learning/comics/ch04-extending/04-operators/README.md)
+* 📄 **Doc:** [Understanding the Operator Pattern](../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
+* 🧪 **Lab 01:** [Shopping Items CRD](../../practice/labs/ch04-extending/lab01-crd-install/README.md)
+* 🧪 **Lab 02:** [CRD Discovery](../../practice/labs/ch04-extending/lab02-crd-discovery/README.md)
+* 🧪 **Lab 03:** [Operators & Helm](../../practice/labs/ch04-extending/lab03-operators-helm/README.md)
 
 [<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)

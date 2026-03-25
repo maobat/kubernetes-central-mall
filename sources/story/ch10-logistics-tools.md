@@ -26,16 +26,12 @@ Kustomize "patches" the base blueprint with your changes to create a final, cust
 
 ## 🧰 Study Toolbox
 
-### 📦 Helm (The Package Manager)
-* 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+* 🖼️ **Comic 01:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 * 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
 * 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
-* 🧪 **Lab:** [Lab 01: Mall Catalog Audit (Helm)](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
-* 🧪 **Lab:** [Lab 02: Logistics Tools (Helm/Kustomize)](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
-* 🧪 **Lab:** [Lab 03: Mapping the API (Versions & Deprecations)](../../practice/labs/ch10-logistics/lab03-api-versions/README.md)
-
-### 🧩 Kustomize (Blueprint Overlays)
-* 🖼️ **Comic:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 * 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
+* 🧪 **Lab 01:** [Mall Catalog Audit (Helm)](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
+* 🧪 **Lab 02:** [Logistics Tools (Helm/Kustomize)](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
+* 🧪 **Lab 03:** [Mapping the API (Versions & Deprecations)](../../practice/labs/ch10-logistics/lab03-api-versions/README.md)
 
 [<< Previous Chapter: Launch Strategies](ch09-launch-strategies.md) | [Back to Story Index](../story.md) | [Next Chapter: Finding the Stores >>](ch11-finding-the-stores.md)

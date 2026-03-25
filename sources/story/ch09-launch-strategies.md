@@ -54,20 +54,13 @@ Update →      v2 v1 v1 v1
 
 ---
 
-### ⚖️ Rolling Update
-* 🖼️ **Comic:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
-
-### 🔵🟢 Blue/Green
-* 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
-* 🧪 **Lab:** [Lab 01: Rolling Update Boutique](../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
-* 🧪 **Lab:** [Lab 02: Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
-
-### 🐤 Canary
-* 🖼️ **Comic:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-* 🧪 **Lab:** [Lab 03: Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
-
-### 📄 Documentation
-* 📖 **Docs:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
-* 📖 **Docs:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
+* 🖼️ **Comic 01:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
+* 🖼️ **Comic 02:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+* 🖼️ **Comic 03:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+* 📄 **Doc:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
+* 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
+* 🧪 **Lab 01:** [Rolling Update Boutique](../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
+* 🧪 **Lab 02:** [Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
+* 🧪 **Lab 03:** [Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
 
 [<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md)

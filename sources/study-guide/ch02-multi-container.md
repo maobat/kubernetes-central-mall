@@ -111,15 +111,15 @@ The labs in this chapter follow a specific pedagogical progression from simple "
 
 ### 🧰 Study Toolbox
 
-- 🖼️ [**Comic: Sidecar Pattern - The Assistant at Work**](./../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
-- 🧪 [**Lab: Sidecar Pattern**](./../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
-- 🖼️ [**Comic: The Warehouse (PV/PVC)**](./../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
-- 🖼️ [**Comic: The Shared Stockroom (emptyDir)**](./../../visual-learning/comics/ch02-multi-container/03-shared-stockroom/README.md)
-- 🖼️ [**Comic: The External Warehouse (NFS)**](./../../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
-* 🧪 **Lab:** [Lab 02: Warehouse (PV/PVC)](../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
-* 🧪 **Lab:** [Lab 03: Shared Volumes (emptyDir)](../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
-* 🧪 **Lab:** [Lab 04: NFS Shared Volumes](../../practice/labs/ch02-multi-container/lab04-nfs-shared-volumes/README.md)
-- 📄 [**Doc: Understanding Multi-container Pod Patterns**](./../../reference/md-resources/decoupling-pods.md)
+* 🖼️ **Comic 01:** [Sidecar Pattern - The Assistant at Work](../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
+* 🖼️ **Comic 02:** [The Warehouse (PV/PVC)](../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
+* 🖼️ **Comic 03:** [The Shared Stockroom (emptyDir)](../../visual-learning/comics/ch02-multi-container/03-shared-stockroom/README.md)
+* 🖼️ **Comic 04:** [The External Warehouse (NFS)](../../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
+* 📄 **Doc:** [Understanding Multi-container Pod Patterns](../../reference/md-resources/decoupling-pods.md)
+* 🧪 **Lab 01:** [Sidecar Pattern](../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
+* 🧪 **Lab 02:** [Warehouse (PV/PVC)](../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
+* 🧪 **Lab 03:** [Shared Volumes (emptyDir)](../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
+* 🧪 **Lab 04:** [NFS Shared Volumes](../../practice/labs/ch02-multi-container/lab04-nfs-shared-volumes/README.md)
 
 ---
 [<< Previous: Workloads](ch01-workloads.md) | [Back to Story Index](../story.md) | [Next: Pod Design >>](ch03-pod-design.md)

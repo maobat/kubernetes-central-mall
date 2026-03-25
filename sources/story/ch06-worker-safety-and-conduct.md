@@ -25,17 +25,13 @@ Sometimes, a worker needs to read the manual but has no business writing in it. 
 
 If a worker in the "Chemical Supply Store" has a bad day or makes a mistake, these safety protocols ensure that the damage is contained within that one storefront. Without a Master Key and with restricted visibility, they cannot climb into the ventilation ducts to disrupt the "Jewelry Store" next door.
 
-By defining **Worker Safety & Conduct**, the Mall Owner ensures that the entire structure remains stable, secure, and ready for customers, no matter what happens inside an individual shop.
-
 ---
 
 ### 🧰 Study Toolbox
 
-### 🛠️ Working with Safety Gear
-* 🧪 **Lab:** [Lab 01: Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
-* 🖼️ **Comic:** [Worker Safety & SecurityContext](../../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
-
-### 📄 Documentation
-* 📖 **Docs:** [SecurityContext: Worker Safety & Conduct](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+* 🖼️ **Comic 01:** [Worker Safety & SecurityContext](../../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
+* 📄 **Doc:** [SecurityContext: Worker Safety & Conduct](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+* 🧪 **Lab 01:** [Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
+* 🧪 **Lab 01:** [Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
 
 [<< Previous Chapter: ConfigMaps & Secrets](ch05-configmaps-and-secrets.md) | [Back to Story Index](../story.md) | [Next Chapter: Identity & Access >>](ch07-identity-and-access.md)
