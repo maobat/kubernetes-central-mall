@@ -35,6 +35,26 @@ alias kga='k get all'
 
 Default editor is `vim`.
 
+## The "Instant Audit" (The Fast Way)
+While inside Vim, type these commands to see the currently active values:
+
+1. Check everything at once:
+
+```shell
+:set expandtab? tabstop? shiftwidth?
+```
+
+> Adding the ? at the end tells Vim to "report" the value instead of setting it.
+
+2. Check if they are "Global" or "Local":
+If you suspect a specific filetype (like YAML) is overriding your settings:
+
+```shell
+:verbose set expandtab?
+```
+
+> This tells you exactly which file (like /etc/vimrc) last changed that setting.
+
 ## `Vim` Setup
 Persist Vim settings in `.vimrc`
 
