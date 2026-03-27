@@ -83,4 +83,14 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 15** – [Lab 03: The Mall Dashboard (Metrics Server)](ch15-debugging/lab03-metrics-server/README.md)
 
 ---
+
+## 🏁 Part 6: Exam Preparation `[ 20% ]`
+> **Focus:** Final reviews, practice drills, and managing the control room.
+
+- **Ch. 16** – [Lab 01: Deployment Lifecycle (Review)](ch16-ckad-exam/lab01-deployment-lifecycle/README.md)
+- **Ch. 16** – [Lab 02: Namespace & Pod Management](ch16-ckad-exam/lab02-namespaces-and-pods/README.md)
+- **Ch. 16** – [Lab 03: Advanced Kubectl Sorting](ch16-ckad-exam/lab03-advanced-kubectl-sorting/README.md)
+- **Ch. 16** – [Lab 04: SSH & Contexts](ch16-ckad-exam/lab04-ssh-and-contexts/README.md)
+
+---
 [Back to Main Index](../../README.md)
