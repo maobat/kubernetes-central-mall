@@ -125,6 +125,7 @@ kubectl rollout undo deployment/clerk-dept
 
 ### 🧰 Study Toolbox
 
+* 🎙️ **Audio Overview:** [Seamless Software Updates](../audio/ch09-seamless-updates.mp3)
 * 🖼️ **Comic 01:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
 * 🖼️ **Comic 02:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 * 🖼️ **Comic 03:** [Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
