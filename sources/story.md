@@ -186,6 +186,8 @@ Using standardized tools like **Helm** and **Kustomize** to manage mall layout t
 - 🧪 **Lab 01:** [Mall Catalog Audit (Helm)](./../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
 - 🧪 **Lab 02:** [Logistics Tools (Helm/Kustomize)](./../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
 - 🧪 **Lab 03:** [Mapping the API (Versions & Deprecations)](./../practice/labs/ch10-logistics/lab03-api-versions/README.md)
+- 🧪 **Lab 04:** [Inventory Report (Helm List)](./../practice/labs/ch10-logistics/lab04-helm-list/README.md)
+- 🧪 **Lab 05:** [Shop Closure (Helm Delete)](./../practice/labs/ch10-logistics/lab05-helm-delete/README.md)
 
 ---
 

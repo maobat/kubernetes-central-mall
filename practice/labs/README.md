@@ -59,6 +59,8 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 10** – [Lab 01: Mall Catalog Audit (Helm)](ch10-logistics/lab01-helm-audit/README.md)
 - **Ch. 10** – [Lab 02: Logistics Tools (Helm/Kustomize)](ch10-logistics/lab02-helm-kustomize/README.md)
 - **Ch. 10** – [Lab 03: Mapping the API (Versions & Deprecations)](ch10-logistics/lab03-api-versions/README.md)
+- **Ch. 10** – [Lab 04: The Inventory Report (Helm List)](ch10-logistics/lab04-helm-list/README.md)
+- **Ch. 10** – [Lab 05: The Shop Closure (Helm Decommissioning)](ch10-logistics/lab05-helm-delete/README.md)
 
 ---
 
