@@ -13,6 +13,20 @@ The Mall has been extended with custom database backup services. As the Architec
 
 ---
 
+## 🛠️ Lab Setup
+
+If you are practicing in a fresh cluster, you must first register the custom "Charter" and create the sample "Backup Units" used in this audit.
+
+```bash
+# 1. Register the DbBackup CRD
+kubectl apply -f 00-crd-db-backup.yaml
+
+# 2. Create the sample instances in Finance and Logistics wings
+kubectl apply -f 01-db-backup-instances.yaml
+```
+
+---
+
 ## 🛠️ Step 1: Auditing the Charter (CRDs)
 Before looking for objects, we need to see what new "Kinds" of resources the Mall now understands.
 

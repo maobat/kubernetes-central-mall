@@ -43,7 +43,7 @@ The Mall Logistics department wants to track customer orders using custom K8s ob
 ### 1. Register the Charter (CRD)
 Apply the blueprint that defines the new resource.
 ```bash
-kubectl apply -f crd-definition.yaml
+kubectl apply -f crd.yaml
 ```
 
 ### 2. Create a Specific Order (CR)
@@ -57,7 +57,7 @@ kubectl apply -f shopping-item.yaml
 
 1. **Check the Charter:**
    ```bash
-   kubectl get crd shoppingitems.mall.k8s.io
+   kubectl get crd shopping-items.mall.k8s.io
    ```
 
 2. **List the Orders:**
