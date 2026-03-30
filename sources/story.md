@@ -82,6 +82,7 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 - 🧪 **Lab 01:** [Shopping Items CRD](./../practice/labs/ch04-extending/lab01-crd-install/README.md)
 - 🧪 **Lab 02:** [CRD Discovery & Auditing](./../practice/labs/ch04-extending/lab02-crd-discovery/README.md)
 - 🧪 **Lab 03:** [Operators & Helm Packages](./../practice/labs/ch04-extending/lab03-operators-helm/README.md)
+- 🧪 **Lab 04:** [Backup Service Audit](./../practice/labs/ch04-extending/lab04-backup-audit/README.md)
 
 ---
 

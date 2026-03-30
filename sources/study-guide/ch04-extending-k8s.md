@@ -86,6 +86,7 @@ kubectl describe backup nightly-db-backup
 * 🧪 **Lab 01:** [CRD Installation](../../practice/labs/ch04-extending/lab01-crd-install/README.md)
 * 🧪 **Lab 02:** [CRD Discovery & Auditing](../../practice/labs/ch04-extending/lab02-crd-discovery/README.md)
 * 🧪 **Lab 03:** [Operators & Helm Packages](../../practice/labs/ch04-extending/lab03-operators-helm/README.md)
+* 🧪 **Lab 04:** [Backup Service Audit](../../practice/labs/ch04-extending/lab04-backup-audit/README.md)
 
 ---
 [<< Previous: Pod Design](ch03-pod-design.md) | [Back to Story Index](../story.md) | [Next: Configuration >>](ch05-configuration.md)

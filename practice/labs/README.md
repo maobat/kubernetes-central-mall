@@ -22,6 +22,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 04** – [Lab 01: Shopping Items CRD](ch04-extending/lab01-crd-install/README.md)
 - **Ch. 04** – [Lab 02: CRD Discovery & Auditing](ch04-extending/lab02-crd-discovery/README.md)
 - **Ch. 04** – [Lab 03: Operators & Helm Packages](ch04-extending/lab03-operators-helm/README.md)
+- **Ch. 04** – [Lab 04: Backup Service Audit](ch04-extending/lab04-backup-audit/README.md)
 
 ---
 

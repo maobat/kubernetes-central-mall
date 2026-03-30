@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: finance
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: logistics
+---
+apiVersion: stable.example.com/v1
+kind: DbBackup
+metadata:
+  name: finance-audit-backup
+  namespace: finance
+spec:
+  database: finance-db
+  destination: s3://mall-backups/finance
+---
+apiVersion: stable.example.com/v1
+kind: DbBackup
+metadata:
+  name: logistics-inventory-backup
+  namespace: logistics
+spec:
+  database: warehouse-db
+  destination: nfs://mall-storage/backups
