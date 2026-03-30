@@ -80,11 +80,12 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 - 🖼️ **Comic 03:** [The Operator - The Manager with the Manual](./../visual-learning/comics/ch04-extending/04-operators/README.md)
 - 📄 **Doc:** [Extending K8s with CRDs](../../reference/md-resources/extending-k8s-crds-operators.md)
 - 🧪 **Lab 01:** [Shopping Items CRD](./../practice/labs/ch04-extending/lab01-crd-install/README.md)
-- 🧪 **Lab 02:** [CRD Discovery & Auditing](./../practice/labs/ch04-extending/lab02-crd-discovery/README.md)
-- 🧪 **Lab 03:** [Operators & Helm Packages](./../practice/labs/ch04-extending/lab03-operators-helm/README.md)
-- 🧪 **Lab 04:** [Backup Service Audit](./../practice/labs/ch04-extending/lab04-backup-audit/README.md)
-- 🧪 **Lab 05:** [Shopping Charter (Beta)](./../practice/labs/ch04-extending/lab05-crd-shopping-install/README.md)
-- 🧪 **Lab 06:** [Revoking the Charter](./../practice/labs/ch04-extending/lab06-crd-shopping-cleanup/README.md)
+- 🧪 **Lab 02:** [Nightly Backup Permit](./../practice/labs/ch04-extending/lab02-crd-custom-backup-service/README.md)
+- 🧪 **Lab 03:** [CRD Discovery & Auditing](./../practice/labs/ch04-extending/lab03-crd-discovery/README.md)
+- 🧪 **Lab 04:** [Operators & Helm Packages](./../practice/labs/ch04-extending/lab04-operators-helm/README.md)
+- 🧪 **Lab 05:** [Backup Service Audit](./../practice/labs/ch04-extending/lab05-backup-audit/README.md)
+- 🧪 **Lab 06:** [Shopping Charter (Beta)](./../practice/labs/ch04-extending/lab06-crd-shopping-install/README.md)
+- 🧪 **Lab 07:** [Revoking the Charter](./../practice/labs/ch04-extending/lab07-crd-shopping-cleanup/README.md)
 
 ---
 

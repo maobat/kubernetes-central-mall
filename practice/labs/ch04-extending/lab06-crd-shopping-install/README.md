@@ -1,4 +1,4 @@
-# 🧪 LAB 05: The Nightly Shopping Charter (Beta)
+# 🧪 LAB 06: The Nightly Shopping Charter (Beta)
 
 ## Architecture – Beta API Extension & Instance Creation
 

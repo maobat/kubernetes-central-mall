@@ -1,4 +1,4 @@
-# 🧪 LAB 06: Revoking the Useless Charter (Cleanup)
+# 🧪 LAB 07: Revoking the Useless Charter (Cleanup)
 
 ## Architecture – API Resource Deletion & Policy Reversion
 

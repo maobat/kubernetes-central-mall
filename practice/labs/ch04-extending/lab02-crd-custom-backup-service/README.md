@@ -1,4 +1,4 @@
-# 🧪 LAB 01: The Nightly Backup Permit (Custom Resources)
+# 🧪 LAB 02: The Nightly Backup Permit (Custom Resources)
 
 ## Architecture – Extending Kubernetes with CRDs
 

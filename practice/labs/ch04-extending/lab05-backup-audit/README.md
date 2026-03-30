@@ -1,4 +1,4 @@
-# 📜 Lab: The Architect's Ledger (CRDs & Custom Objects)
+# 🧪 LAB 05: The Architect's Ledger (Backup Audit)
 *Focus: API Extension Discovery & Resource Auditing (v1.35)*
 
 In the **Central Mall**, a **CRD (Custom Resource Definition)** is like adding a new type of shop to the mall's legal charter (e.g., "Virtual Reality Lounge") that wasn't in the original blueprints. Once the charter is updated, you can start tracking the actual "VR Lounge" instances (Custom Objects).

@@ -1,4 +1,4 @@
-# 🧪 LAB 03: The Franchise Manager (Operators & Helm)
+# 🧪 LAB 04: The Franchise Manager (Operators & Helm)
 
 ## Extending the Mall – Intelligent Automation & Package Management
 
