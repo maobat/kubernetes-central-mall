@@ -23,6 +23,8 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 04** – [Lab 02: CRD Discovery & Auditing](ch04-extending/lab02-crd-discovery/README.md)
 - **Ch. 04** – [Lab 03: Operators & Helm Packages](ch04-extending/lab03-operators-helm/README.md)
 - **Ch. 04** – [Lab 04: Backup Service Audit](ch04-extending/lab04-backup-audit/README.md)
+- **Ch. 04** – [Lab 05: The Nightly Shopping Charter (Beta)](ch04-extending/lab05-crd-shopping-install/README.md)
+- **Ch. 04** – [Lab 06: Revoking the Useless Charter](ch04-extending/lab06-crd-shopping-cleanup/README.md)
 
 ---
 
