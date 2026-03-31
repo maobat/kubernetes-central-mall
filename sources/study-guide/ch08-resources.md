@@ -99,7 +99,7 @@ kubectl describe pod <pod-name>
 
 ### 🧰 Study Toolbox
 
-* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
+* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 * 🖼️ **Comic 01:** [The Resource Hog - Why Limits Matter](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 * 📄 **Doc:** [The Resource Budget (Requests, Limits, & Quotas)](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 * 🧪 **Lab 01:** [Managing Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)

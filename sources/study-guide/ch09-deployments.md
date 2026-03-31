@@ -125,7 +125,7 @@ kubectl rollout undo deployment/clerk-dept
 
 ### 🧰 Study Toolbox
 
-* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
+* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 * 🖼️ **Comic 01:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
 * 🖼️ **Comic 02:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 * 🖼️ **Comic 03:** [Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
