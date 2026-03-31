@@ -1,40 +1,33 @@
 <img src="one-way-corridors.png" alt="The One-Way Corridor" width="40%" />
 
 # 🖼️ Comic: The One-Way Corridor
+## Chapter 13: Networking – Egress Control
 
-## Chapter 13: Network Policies – Egress Control
-
----
-
-### 🎬 Panel 1 – The Wild West
-**Worker A (Space1):** "I'm going to the Default Wing for lunch!"
-**Worker B (Space2):** "I'm calling Space1 to check inventory!"
-> [!NOTE]
-> By default, all Pods can talk to all Pods (Non-isolated) across the entire cluster.
-
-### 🎬 Panel 2 – The New Protocol
-**Manager:** "New rule! If you are in Space1, you can ONLY walk to Space2. Nowhere else."
-**Worker A:** "But what if I need to use the Phonebook (DNS)?"
-**Manager:** "Fine. Directory calls are allowed, but that's it."
-
-### 🎬 Panel 3 – The Firewall
-**Security Guard (NetworkPolicy):** "Halt! You're from Space1 trying to reach 'Default'? Denied. Go to Space2 or stay put."
+This comic explains how **Egress Rules** work in Kubernetes using the Central Mall's "One-Way Corridor" analogy.
 
 ---
 
-## 💡 Concept: Egress Isolation
-In the **Central Mall**, an **Egress Rule** is like a specialized exit pass.
-- **Default Behavior:** All exits are open. Workers can wander anywhere.
-- **Isolation Applied:** The moment an Egress policy touches a pod, **all exits are locked** except those explicitly whitelisted.
-- **The DNS Exception:** To find other shops by name, workers MUST be allowed to reach the Mall's Phonebook (DNS on Port 53).
+## 🛍️ Mall Analogy
+
+-   **The Wild West (Default Allow):** Initially, all corridors are open. Workers from the "Warehouse" can wander to the "Food Court" or even leave the mall entirely to call home (Internet).
+-   **The Exit Pass (Egress Policy):** A new rule is posted at the shop door. "If you work here, you can ONLY walk to the Shipping Bay."
+-   **Default Deny (Isolation):** The moment an exit pass is issued, **all other doors are locked**. You can't even go to the bathroom unless it's on the pass!
+-   **The Phonebook (DNS Exception):** To find the Shipping Bay, workers still need to reach the **Mall's Phonebook** (DNS on Port 53). Always remember to whitelist the phonebook!
+
+> 🛍️ *In the Central Mall, we don't just control who comes in; we make sure our staff doesn't get lost on the way out.*
 
 ---
 
-## 🧪 Hands-on Practice
-Learn how to build these one-way corridors in the lab:
-- 🧪 **Lab 02:** [One-Way Corridors (Egress Control)](../../../../practice/labs/ch13-networking/lab02-network-policies/README.md)
+## 🧠 Key Takeaways
+
+-   **Egress Control:** While Ingress handles incoming traffic, **Egress** limits what your Pods can connect to (external APIs, databases, or other services).
+-   **Isolation Trigger:** As soon as a `NetworkPolicy` selects a Pod for `Egress`, that Pod can no longer initiate *any* connections unless explicitly allowed.
+-   **DNS is Critical:** Most applications fail if they can't resolve hostnames. Always allow Egress to `kube-dns` in the `kube-system` namespace.
+-   **CKAD Tip:** Pay close attention to `ipBlock` for external traffic and `podSelector/namespaceSelector` for internal mall traffic.
 
 ---
 
 ## 🔗 References
 - **Study Guide** → [Chapter 13: Networking](../../../../sources/study-guide/ch13-networking.md)
+- **Lab** → [Lab 02 - One-Way Corridors](../../../../practice/labs/ch13-networking/lab02-network-policies/README.md)
+- **Docs** → [Network Isolation & Troubleshooting](../../../../reference/md-resources/troubleshooting-kubernetes.md)
