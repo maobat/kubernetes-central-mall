@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: space1-one-way-policy
+  namespace: space1 # The policy lives where the traffic STARTS (Source)
+spec:
+  # *******************************************************************
+  # * Egress rules
+  # *******************************************************************
+  podSelector: {} # Target ALL pods in Space1
+  policyTypes:
+  - Egress
+  egress:
+  # 1. Allow the Mall's Phonebook (DNS)
+  - ports:
+    - port: 53
+      protocol: TCP
+    - port: 53
+      protocol: UDP
+  # 2. Allow visiting Space2 wing
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: space2

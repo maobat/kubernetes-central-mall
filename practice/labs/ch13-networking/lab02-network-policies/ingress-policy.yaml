@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: vault-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: vault
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: cashier

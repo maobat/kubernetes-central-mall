@@ -35,6 +35,26 @@ Restrict all Pods in the `space1` namespace so they can only send traffic to `sp
 
 ---
 
+## 🏗️ Lab Setup
+
+Before you start, you need to build the Mall's wings (Namespaces and Pods). Run the setup script provided in this directory:
+
+```bash
+# 1. Give execution permission
+chmod +x setup.sh
+
+# 2. Run the setup
+./setup.sh
+```
+
+This will create:
+-   **Namespace `space2`** (The Destination).
+-   **Pod `app1-0`** in `space1` (The Source worker).
+-   **Pod `microservice1`** in `space2` (The Allowed Target).
+-   **Pod `tester`** in `default` (The Forbidden Target).
+
+---
+
 ## 🔍 Pre-check: Identifying the Targets
 NetworkPolicies use **Labels**. To target a Namespace, we need to know its label. Since Kubernetes v1.22+, every namespace has a default label: `kubernetes.io/metadata.name`.
 
@@ -54,7 +74,6 @@ metadata:
   name: space1-one-way-policy
   namespace: space1 # The policy lives where the traffic STARTS (Source)
 spec:
-  spec:
   # *******************************************************************
   # * Egress rules
   # *******************************************************************
@@ -62,20 +81,17 @@ spec:
   policyTypes:
   - Egress
   egress:
-  # Missing Piece A: Allow DNS (Port 53)
+  # 1. Allow the Mall's Phonebook (DNS)
   - ports:
     - port: 53
       protocol: TCP
     - port: 53
       protocol: UDP
-  # Missing Piece B: Allow visiting Space2 wing
+  # 2. Allow visiting Space2 wing
   - to:
-     - namespaceSelector:
+    - namespaceSelector:
         matchLabels:
-         kubernetes.io/metadata.name: space2
-  # *******************************************************************
-  # * End of Egress rules
-  # *******************************************************************
+          kubernetes.io/metadata.name: space2
 ```
 
 ---
@@ -99,6 +115,31 @@ kubectl -n space1 exec app1-0 -- curl -m 1 tester.default.svc.cluster.local
 
 ## 🧠 CKAD Insights & Exam Traps
 
+> [!CAUTION]
+> **CNI Support Requirement:** NetworkPolicies are not enforced by Kubernetes itself; they require a **CNI Plugin**.
+> - **In the Exam:** The CKAD environment always uses a CNI that supports NetworkPolicies (usually Calico).
+> - **In this Lab (Local):** 
+>   - **Kind:** Uses `kindnet` by default, which **does not** support NetworkPolicies. 
+>   - **Minikube:** You can easily enable support by starting with: `minikube start --cni calico`.
+>
+> **How to fix Kind locally (Using the `kind` CLI):**
+> 1. Create a `kind-config.yaml`:
+>    ```yaml
+>    kind: Cluster
+>    apiVersion: kind.x-k8s.io/v1alpha4
+>    networking:
+>      disableDefaultCNI: true
+>    ```
+> 2. Recreate the cluster: 
+>    ```bash
+>    # ⚠️ NOTE: Use the 'kind' command, NOT 'kubectl' or 'k'!
+>    kind create cluster --config kind-config.yaml
+>    ```
+> 3. Install Calico: 
+>    ```bash
+>    kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
+>    ```
+
 > **The Isolation Trap:** As soon as you define an `Egress` policy, ALL other outgoing traffic not explicitly allowed is **BLOCKED**. That is why we MUST add the DNS rule, or the Pod won't even find `space2` by name!
 
 - **Namespace Selector vs Pod Selector:** 
@@ -111,13 +152,29 @@ kubectl -n space1 exec app1-0 -- curl -m 1 tester.default.svc.cluster.local
 ## 🛠️ Tool Spotlight: The NetworkPolicy Editor
 If you are struggling with YAML, the [Cilium Network Policy Editor](https://editor.networkpolicy.io/) is the "Blueprinting Tool" of the Mall.
 
-### **How to use it for this Lab:**
-1.  **Select "Egress"** on the right side.
-2.  **Left Side (Source):** Set Namespace to `space1`.
-3.  **Right Side (Destination):** 
-    - Click **"Add Rule"** -> **"To Namespaces"**.
-    - Set Label to `kubernetes.io/metadata.name = space2`.
-    - Click **"Add Rule"** -> **"To Entities"** -> Select **"DNS"** (or manually add Port 53).
+### 🏗️ **The Mall Manager's Logic (For Dummies):**
+Think of the editor like setting permissions for a **security badge**:
+1.  **Select "Egress"**: You are defining where the worker is **leaving** to.
+2.  **Left Side (Source)**: This is the **Room** the worker is currently standing in (`space1`).
+3.  **Right Side (Destination)**: This is the **Wing** they are allowed to enter (`space2`).
+4.  **Allow DNS**: This is like giving them a **Phonebook**. Without it, they can't even "search" for the address of `space2`!
+
+---
+
+## 🧐 **Standard K8s vs. Calico: The API Puzzle**
+
+You might wonder: *"Why did we use `networking.k8s.io/v1` instead of something named `calico`?"*
+
+### 1. **The Standard Blueprint (`networking.k8s.io/v1`)**
+This is the **Universal Mall Regulatory Code**. Every major Kubernetes network provider (Calico, Cilium, Azure CNI, etc.) is built to understand this standard format. 
+- **Pros:** Portable! This exact YAML works on Google Cloud, AWS, or your local Kind cluster.
+- **CKAD Exam:** This is **exactly** what you use in the exam.
+
+### 2. **The Calico Interpretation**
+Once you install Calico, it follows these rules and creates the actual "locked doors" (using Linux `iptables` or `eBPF`) on your nodes. It acts as the **Security Agent** who reads the Mall's Regulatory Code and enforces it.
+
+> [!NOTE]
+> Calico *does* have its own advanced API (`projectcalico.org/v3`) for things like Layer 7 filtering or global policies, but for 99% of CKAD-level tasks, the standard Kubernetes version is all you need!
 
 ---
 
