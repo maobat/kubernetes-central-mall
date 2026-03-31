@@ -2,7 +2,7 @@
 
 ## Services and Networking – Egress Rules & Namespace Isolation
 
-In the **Central Mall**, a **NetworkPolicy** is a security protocol for the corridors. By default, every worker can talk to anyone in any wing (Namespace). This lab creates a "One-Way Corridor" from **Space1** to **Space2**, demonstrating how to restrict outgoing traffic (Egress) using Namespace selectors and handling DNS exceptions.
+In the **Central Mall**, a **NetworkPolicy** is a security protocol for the corridors. By default, every worker can talk to anyone in any wing (Namespace). This lab creates a "One-Way Corridor" from **Space1** to **Space2**, demonstrating how to restrict outgoing traffic (**Egress**) using Namespace selectors and handling **DNS** exceptions.
 
 ---
 
@@ -45,51 +45,69 @@ kubectl get ns --show-labels
 
 ---
 
-## 🛠️ The Solution (egress-policy.yaml)
+## 🛠️ The Solution (Two-Step Process)
 
+For the CKAD exam, the best way to build a NetworkPolicy is to generate a **Skeleton Blueprint** first and then add the specific rules manually.
+
+### 🏁 Step 1: Generate the Skeleton
+Run this command to create the initial file:
+```bash
+kubectl create networkpolicy space1-policy --namespace space1 --dry-run=client -o yaml > egress-policy.yaml
+```
+
+### ✍️ Step 2: Add the "Missing Pieces"
+Now, open `egress-policy.yaml` and manually add the **Egress** rules under `.spec`. 
+
+1.  Set `policyTypes: ["Egress"]`
+2.  Add the `egress:` section for **DNS** and **Space2**.
+
+**The Final Manifest should look like this:**
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: space1-one-way-policy
-  namespace: space1 # The policy lives where the traffic STARTS (Source)
+  name: space1-policy
+  namespace: space1
 spec:
-  podSelector: {} # {} means "Apply to ALL pods in this namespace"
+  # *******************************************************************
+  # * Egress rules
+  # *******************************************************************
+  podSelector: {} # Target ALL pods in Space1
   policyTypes:
   - Egress
   egress:
-  # Rule A: Allow DNS (Crucial for the mall's phonebook/DNS to work)
+  # Missing Piece A: Allow DNS (Port 53)
   - ports:
     - port: 53
       protocol: TCP
     - port: 53
       protocol: UDP
-  # Rule B: Allow traffic to the Space2 wing
+  # Missing Piece B: Allow visiting Space2 wing
   - to:
-    - namespaceSelector:
+     - namespaceSelector:
         matchLabels:
-          kubernetes.io/metadata.name: space2
-```
-
-Apply the policy:
-```bash
-kubectl apply -f egress-policy.yaml
+         kubernetes.io/metadata.name: space2
+  # *******************************************************************
+  # * End of Egress rules
+  # *******************************************************************
 ```
 
 ---
 
-## 🧪 Verification: Testing the Corridors
+## 🧪 Verification: Testing the Corridor
 
-Test the connectivity from a worker in `space1` (`app1-0`):
-
+**✅ These should work:**
 ```bash
-# ✅ This should work (Talking to Space2)
+# Visit Space2 (Allowed)
 kubectl -n space1 exec app1-0 -- curl -m 1 microservice1.space2.svc.cluster.local
 
-# ✅ This should work (DNS Check)
+# Check the Phonebook (Allowed)
 kubectl -n space1 exec app1-0 -- nslookup google.com
+```
 
-# ❌ This should FAIL (Trying to leave the allowed corridor to 'default')
+**❌ These should FAIL:**
+```bash
+# Try to visit the Default wing (Blocked!)
 kubectl -n space1 exec app1-0 -- curl -m 1 tester.default.svc.cluster.local
 ```
 
