@@ -1,10 +1,5 @@
 # 🎙️ Audio Resource Inventory
-
-This directory previously contained generated audio overviews for each chapter. To reduce repository size and ensure the latest versions are used, the physical files have been moved to a managed "Intercom" system.
-
-## 📦 How to Access
-
-To receive the audio briefing for a specific chapter, please **request it from the Mall Manager (TES)** by opening an issue in this repository.
+To receive the audio briefing for a specific chapter, please **request it from the Mall Manager (@maobat)** by opening an issue in this repository.
 
 | Chapter | Description | Status |
 | :--- | :--- | :--- |
