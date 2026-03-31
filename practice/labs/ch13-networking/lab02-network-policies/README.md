@@ -121,4 +121,4 @@ If you are struggling with YAML, the [Cilium Network Policy Editor](https://edit
 
 ## 🔗 References
 - **Study Guide** → [Chapter 13: Networking](../../../../sources/study-guide/ch13-networking.md)
-- **Comic** → [Locked Corridors](../../../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
+- **Comic** → [Locked Corridors](../../../../visual-learning/comics/ch13-networking/02-one-way-corridors/README.md

@@ -42,3 +42,4 @@ spec:
 
 ## 🔗 References
 - **Study Guide** → [Chapter 13: Networking](../../../../sources/study-guide/ch13-networking.md)
+- **Comic** → [Locked Corridors](../../../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
