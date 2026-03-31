@@ -1,14 +1,18 @@
 # 🎙️ Audio Resource Inventory
 
-This directory contains generated audio overviews for each chapter of the Kubernetes Central Mall.
+This directory previously contained generated audio overviews for each chapter. To reduce repository size and ensure the latest versions are used, the physical files have been moved to a managed "Intercom" system.
 
-| Chapter | Description | File |
+## 📦 How to Access
+
+To receive the audio briefing for a specific chapter, please **request it from the Mall Manager (TES)** by opening an issue in this repository.
+
+| Chapter | Description | Status |
 | :--- | :--- | :--- |
-| **Ch 05: Configuration** | Decoupling configuration and code. | [ch05-config-decoupling.mp3](./ch05-config-decoupling.mp3) |
-| **Ch 08: Resources** | Managing Requests & Limits in the Mall. | [ch08-requests-limits.mp3](./ch08-requests-limits.mp3) |
-| **Ch 09: Launch** | Seamless software updates and strategies. | [ch09-seamless-updates.mp3](./ch09-seamless-updates.mp3) |
-| **Ch 14: Probes** | Liveness & Readiness for self-healing. | [ch14-probes-self-healing.mp3](./ch14-probes-self-healing.mp3) |
-| **Ch 16: Exam Prep** | Why Pods always rise again (Persistence). | [ch16-pod-resurrection.mp3](./ch16-pod-resurrection.mp3) |
+| **Ch 05: Configuration** | Decoupling configuration and code. | Available on request |
+| **Ch 08: Resources** | Managing Requests & Limits in the Mall. | Available on request |
+| **Ch 09: Launch** | Seamless software updates and strategies. | Available on request |
+| **Ch 14: Probes** | Liveness & Readiness for self-healing. | Available on request |
+| **Ch 16: Exam Prep** | Why Pods always rise again (Persistence). | Available on request |
 
 ---
-*Note: All audio overviews are currently provided in Italian with English metadata.*
+*Note: Audio overviews are provided in Italian with English metadata.*

@@ -78,7 +78,7 @@ kubectl describe pod <pod-name>
 
 ## 🧰 Study Toolbox
 
-* 🎙️ **Audio Overview:** [Liveness & Readiness Overview](../audio/ch14-probes-self-healing.mp3)
+* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
 * 🖼️ **Comic 01:** [The Health Inspector - Liveness vs Readiness](../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
 * 🖼️ **Comic 02:** [The Health Inspector - Readiness](../../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
 * 📄 **Doc:** [Worker Safety and Probes](../../reference/md-resources/troubleshooting-kubernetes.md#section-2)

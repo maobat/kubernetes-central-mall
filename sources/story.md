@@ -98,7 +98,7 @@ Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 **⚡ Study Guide:** [Configuration](./study-guide/ch05-configuration.md)
 
 **🧰 Study Toolbox:**
-- 🎙️ **Audio Overview:** [Config Decoupling Overview](./audio/ch05-config-decoupling.mp3)
+- 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
 - 🖼️ **Comic 01:** [The Rulebook & The Uniform](./../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
 - 🖼️ **Comic 03:** [The Secret of the High-Security Vault](./../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
 - 📄 **Doc:** [Configuration Decoupling](../reference/md-resources/configuration-decoupling.md)
@@ -145,7 +145,7 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 **⚡ Study Guide:** [Resources & Quotas](./study-guide/ch08-resources.md)
 
 **🧰 Study Toolbox:**
-- 🎙️ **Audio Overview:** [Requests & Limits Overview](./audio/ch08-requests-limits.mp3)
+- 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
 - 🖼️ **Comic 01:** [The Resource Hog](../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 - 📄 **Doc:** [The Resource Budget](../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 - 🧪 **Lab 01:** [Managing Constraints](../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
@@ -163,7 +163,7 @@ Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 **⚡ Study Guide:** [Deployment Strategies](./study-guide/ch09-deployments.md)
 
 **🧰 Study Toolbox:**
-- 🎙️ **Audio Overview:** [Seamless Software Updates](./audio/ch09-seamless-updates.mp3)
+- 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
 - 🖼️ **Comic 01:** [The Trend Spot - Rolling Renovation](../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
 - 🖼️ **Comic 02:** [The Sign Swap (Blue/Green)](./../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 - 🖼️ **Comic 03:** [The Canary Side Entrance](../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
@@ -252,7 +252,7 @@ Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Pr
 **⚡ Study Guide:** [Health Checks & Probes](./study-guide/ch14-probes.md)
 
 **🧰 Study Toolbox:**
-- 🎙️ **Audio Overview:** [Liveness & Readiness Overview](./audio/ch14-probes-self-healing.mp3)
+- 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
 - 🖼️ **Comic 01:** [The Health Inspector - Liveness vs Readiness](../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
 - 🖼️ **Comic 02:** [The Health Inspector - Readiness](../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
 - 📄 **Doc:** [Worker Safety and Probes](../reference/md-resources/troubleshooting-kubernetes.md#section-2)
@@ -284,7 +284,7 @@ Investigating "incidents" using logs and real-time inspections (**Logs, Describe
 Quick guides for surviving the practical exam enviornment.
 
 **🧰 Study Toolbox:**
-- 🎙️ **Audio Overview:** [Why Pods Always Rise Again](./audio/ch16-pod-resurrection.mp3)
+- 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**TES**) via repository issues.
 - 📄 [Doc: Study Environments & Tools](../reference/md-resources/ckad-exam/00-study-environments.md)
 - 🖼️ [Comic: SSH and Contexts (Service Elevator)](../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
 - 📄 [Doc: Linux Setup Tips](../reference/md-resources/ckad-exam/01-linux-setup.md)
