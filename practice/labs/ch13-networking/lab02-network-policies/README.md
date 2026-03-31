@@ -45,30 +45,16 @@ kubectl get ns --show-labels
 
 ---
 
-## 🛠️ The Solution (Two-Step Process)
+## 🛠️ The Solution (egress-policy.yaml)
 
-For the CKAD exam, the best way to build a NetworkPolicy is to generate a **Skeleton Blueprint** first and then add the specific rules manually.
-
-### 🏁 Step 1: Generate the Skeleton
-Run this command to create the initial file:
-```bash
-kubectl create networkpolicy space1-policy --namespace space1 --dry-run=client -o yaml > egress-policy.yaml
-```
-
-### ✍️ Step 2: Add the "Missing Pieces"
-Now, open `egress-policy.yaml` and manually add the **Egress** rules under `.spec`. 
-
-1.  Set `policyTypes: ["Egress"]`
-2.  Add the `egress:` section for **DNS** and **Space2**.
-
-**The Final Manifest should look like this:**
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: space1-policy
-  namespace: space1
+  name: space1-one-way-policy
+  namespace: space1 # The policy lives where the traffic STARTS (Source)
 spec:
+  spec:
   # *******************************************************************
   # * Egress rules
   # *******************************************************************
@@ -94,20 +80,18 @@ spec:
 
 ---
 
-## 🧪 Verification: Testing the Corridor
+## 🧪 Verification: Testing the Corridors
 
-**✅ These should work:**
+Test the connectivity from a worker in `space1` (`app1-0`):
+
 ```bash
-# Visit Space2 (Allowed)
+# ✅ This should work (Talking to Space2)
 kubectl -n space1 exec app1-0 -- curl -m 1 microservice1.space2.svc.cluster.local
 
-# Check the Phonebook (Allowed)
+# ✅ This should work (DNS Check)
 kubectl -n space1 exec app1-0 -- nslookup google.com
-```
 
-**❌ These should FAIL:**
-```bash
-# Try to visit the Default wing (Blocked!)
+# ❌ This should FAIL (Trying to leave the allowed corridor to 'default')
 kubectl -n space1 exec app1-0 -- curl -m 1 tester.default.svc.cluster.local
 ```
 
