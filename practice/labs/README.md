@@ -87,6 +87,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 15** – [Lab 01: Fixing the Broken Shop (CCTV & Logs)](ch15-debugging/lab01-debugging-shop/README.md)
 - **Ch. 15** – [Lab 02: Logging & Sidecar Tailing](ch15-debugging/lab02-logging-sidecars/README.md)
 - **Ch. 15** – [Lab 03: The Mall Dashboard (Metrics Server)](ch15-debugging/lab03-metrics-server/README.md)
+- **Ch. 15** – [Lab 04: The Nested Node (Kind & crictl)](ch15-debugging/lab04-nested-nodes-crictl/README.md)
 
 ---
 
