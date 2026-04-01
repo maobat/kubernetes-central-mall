@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shop-invalid-image
+  labels:
+    app: central-mall
+    service: debugging-lab
+spec:
+  containers:
+  - name: shop-clerk
+    image: nginx:1.23456789 # Non-existent tag to trigger ImagePullBackOff
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shop-crashing-app
+  labels:
+    app: central-mall
+    service: debugging-lab
+spec:
+  containers:
+  - name: shop-clerk
+    image: busybox:1.36
+    command: ["/bin/sh", "-c", "echo 'Opening the shop...'; sleep 5; echo 'OH NO! The shelves collapsed!'; exit 1"]
