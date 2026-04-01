@@ -33,10 +33,12 @@ This is `kubectl exec`. It allows you to step inside a running pod and run comma
 
 * 🖼️ **Comic 01:** [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
 * 🖼️ **Comic 02:** [SSH and Contexts (Service Elevator)](../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
+* 🖼️ **Comic 03:** [The Nested Node (Kind & crictl)](../../visual-learning/comics/ch15-debugging/04-nested-nodes-crictl/README.md)
 * 📄 **Doc:** [Troubleshooting Kubernetes Guide](../../reference/md-resources/troubleshooting-kubernetes.md)
 * 📄 **Doc:** [Diagnostic Cheat Sheet](../../reference/md-resources/diagnostic-cheat-sheet.md)
 * 🧪 **Lab 01:** [CCTV Log Investigation](../../practice/labs/ch15-debugging/lab01-debugging-shop/README.md)
 * 🧪 **Lab 02:** [Logging & Sidecar Tailing](../../practice/labs/ch15-debugging/lab02-logging-sidecars/README.md)
 * 🧪 **Lab 03:** [The Mall Dashboard (Metrics Server)](../../practice/labs/ch15-debugging/lab03-metrics-server/README.md)
+* 🧪 **Lab 04:** [The Nested Node (Kind & crictl)](../../practice/labs/ch15-debugging/lab04-nested-nodes-crictl/README.md)
 
 [<< Previous Chapter: Probes & Health Checks](ch14-probes-and-health-checks.md) | [Back to Story Index](../story.md)

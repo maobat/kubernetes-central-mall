@@ -67,6 +67,7 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 - **Ch. 14** – [The Health Inspector (Liveness)](ch14-probes/01-the-health-inspector/README.md)
 - **Ch. 14** – [The Velvet Rope (Readiness)](ch14-probes/02-readiness-probes/README.md)
 - **Ch. 15** – [The Broken Shop (Investigation)](ch15-debugging/03-the-broken-shop/README.md)
+- **Ch. 15** – [The Nested Node (Kind & crictl)](ch15-debugging/04-nested-nodes-crictl/README.md)
 ---
 
 ## 🎓 Part 6: CKAD Exam Preparation
