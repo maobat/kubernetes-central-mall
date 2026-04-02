@@ -50,6 +50,44 @@ spec:
         add: ["NET_RAW"]
 ```
 
+```bash
+# Or imperatively
+kubectl run worker-safety --image=busybox:1.36 --dry-run=client -o yaml -- /bin/sh -c "sleep 3600" > safety-pod.yaml
+```
+```yaml
+  #***************************
+  # Pod-level securityContext
+  #***************************
+  securityContext:         # <-- Add this block for Pod-level
+    runAsUser: 1000        # runAsUser is the user id of the pod
+    runAsGroup: 3000       # runAsGroup is the group id of the pod
+    fsGroup: 2000          # fsGroup is the group id of the volume
+  #***************************
+  # Pod-level securityContext
+  #***************************
+  containers:
+  - name: worker-safety
+    image: busybox:1.36
+    args:
+    # args is the arguments to the command or entrypoint otherwise you can use command and args together 
+    - /bin/sh
+    - -c
+    - sleep 3600
+    # or more readable
+    # command: ["/bin/sh", "-c", "sleep 3600"]
+    #***************************
+    # Container-level securityContext
+    #***************************
+    securityContext:       # <-- Add this block for Container-level
+      runAsNonRoot: true   # runAsNonRoot is a boolean that specifies whether the container should run as a non-root user
+      readOnlyRootFilesystem: true # readOnlyRootFilesystem is a boolean that specifies whether the container's root filesystem should be read-only
+      capabilities:
+        add: ["NET_RAW"] # capabilities is a list of capabilities to add to the container
+    #***************************
+    # Container-level securityContext
+    #***************************
+```
+
 Apply the blueprint:
 ```bash
 kubectl apply -f safety-pod.yaml
@@ -58,13 +96,13 @@ kubectl apply -f safety-pod.yaml
 ### 2. Inspect the Worker's Conduct
 Check the ID badge:
 ```bash
-kubectl exec worker-safety-pod -- id
+kubectl exec worker-safety -- id
 ```
-*Output should show `uid=1000 gid=3000`.*
+*Output should show `uid=1000 gid=3000 groups=2000,3000`.*
 
 Test the "Museum Rules" (Read-Only FS):
 ```bash
-kubectl exec worker-safety-pod -- touch /test-file
+kubectl exec worker-safety -- touch /test-file
 ```
 *Output should say: `touch: /test-file: Read-only file system`.*
 
@@ -73,7 +111,7 @@ kubectl exec worker-safety-pod -- touch /test-file
 ## 🔎 Verification
 1.  Check the security settings in the live Pod:
     ```bash
-    kubectl get pod worker-safety-pod -o jsonpath='{.spec.containers[0].securityContext}'
+    kubectl get pod worker-safety -o jsonpath='{.spec.containers[0].securityContext}'
     ```
 
 ## 🧠 Key Takeaways
