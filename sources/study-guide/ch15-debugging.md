@@ -80,9 +80,6 @@ kubectl get events --sort-by='.lastTimestamp'
 * 🖼️ **Comic 03:** [The Nested Node (Kind & crictl)](../../visual-learning/comics/ch15-debugging/04-nested-nodes-crictl/README.md)
 * 📄 **Doc:** [Troubleshooting Kubernetes (The Master Guide)](../../reference/md-resources/troubleshooting-kubernetes.md)
 * 📄 **Doc:** [Diagnostic Cheat Sheet (Commands to Memorize)](../../reference/md-resources/diagnostic-cheat-sheet.md)
-* 🧪 **Lab 01:** [CCTV Log Investigation](../../practice/labs/ch15-debugging/lab01-debugging-shop/README.md)
-* 🧪 **Lab 02:** [Logging & Sidecar Tailing](../../practice/labs/ch15-debugging/lab02-logging-sidecars/README.md)
-* 🧪 **Lab 03:** [The Mall Dashboard (Metrics Server)](../../practice/labs/ch15-debugging/lab03-metrics-server/README.md)
-* 🧪 **Lab 04:** [The Nested Node (Kind & crictl)](../../practice/labs/ch15-debugging/lab04-nested-nodes-crictl/README.md)
+* 🧪 **Labs:** [Explore Chapter 15 Labs](../../practice/labs/ch15-debugging/README.md)
 ---
 [<< Previous: Health Checks](ch14-probes.md) | [Back to Story Index](../story.md)

@@ -31,9 +31,6 @@ The Gateway API is "Role-Based." It allows different people to manage different 
 * 🖼️ **Comic 02:** [The Lost Gateway (Ingress Intro)](../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
 * 🖼️ **Comic 03:** [The Grand Entrance (Path Routing)](../../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
 * 📄 **Doc:** [Ingress vs Gateway](../../reference/md-resources/ingress-vs-gateway.md)
-* 🧪 **Lab 01:** [Virtual Host Routing](../../practice/labs/ch12-ingress/lab01-virtual-host/README.md)
-* 🧪 **Lab 02:** [Path-Based Routing](../../practice/labs/ch12-ingress/lab02-path-routing/README.md)
-* 🧪 **Lab 03:** [Rewrite Policies](../../practice/labs/ch12-ingress/lab03-advanced-ingress/README.md)
-* 🧪 **Lab 04:** [Gateway API & Canary](../../practice/labs/ch12-ingress/lab04-gateway-api-canary/README.md)
+* 🧪 **Labs:** [Explore Chapter 12 Labs](../../practice/labs/ch12-ingress/README.md)
 
 [<< Previous Chapter: Finding the Stores](ch11-finding-the-stores.md) | [Back to Story Index](../story.md) | [Next Chapter: Network Policies >>](ch13-network-policies.md)

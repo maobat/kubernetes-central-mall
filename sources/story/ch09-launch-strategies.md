@@ -59,10 +59,6 @@ Update →      v2 v1 v1 v1
 * 🖼️ **Comic 03:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
 * 📄 **Doc:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
 * 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
-* 🧪 **Lab 01:** [Rolling Update Boutique](../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
-* 🧪 **Lab 02:** [Blue-Green Sign Swap](../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
-* 🧪 **Lab 03:** [Canary Taste Test](../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
-* 🧪 **Lab 04:** [Blue-Green Java App (Guided + Challenge)](../../practice/labs/ch09-launch/lab04-blue-green-java/README.md)
-* 🧪 **Lab 05:** [Deployment Lifecycle (Create, Scale & Update)](../../practice/labs/ch09-launch/lab05-deployment-lifecycle/README.md)
+* 🧪 **Labs:** [Explore Chapter 09 Labs](../../practice/labs/ch09-launch/README.md)
 
 [<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md)

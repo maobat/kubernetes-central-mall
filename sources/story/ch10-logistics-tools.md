@@ -30,8 +30,6 @@ Kustomize "patches" the base blueprint with your changes to create a final, cust
 * 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
 * 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
 * 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
-* 🧪 **Lab 01:** [Mall Catalog Audit (Helm)](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
-* 🧪 **Lab 02:** [Logistics Tools (Helm/Kustomize)](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
-* 🧪 **Lab 03:** [Mapping the API (Versions & Deprecations)](../../practice/labs/ch10-logistics/lab03-api-versions/README.md)
+* 🧪 **Labs:** [Explore Chapter 10 Labs](../../practice/labs/ch10-logistics/README.md)
 
 [<< Previous Chapter: Launch Strategies](ch09-launch-strategies.md) | [Back to Story Index](../story.md) | [Next Chapter: Finding the Stores >>](ch11-finding-the-stores.md)

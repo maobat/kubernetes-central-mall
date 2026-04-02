@@ -28,8 +28,6 @@ For the most popular shops, the mall might hire a dedicated **Receptionist**. Wh
 * 🖼️ **Comic 02:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
 * 📄 **Doc:** [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)
 * 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
-* 🧪 **Lab 01:** [ClusterIP & Internal Communication](../../practice/labs/ch11-services/lab01-clusterip-internal-traffic/README.md)
-* 🧪 **Lab 02:** [NodePort & Cross-Namespace Communication](../../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
-* 🧪 **Lab 03:** [Intercom Investigation (Service Debugging)](../../practice/labs/ch11-services/lab03-service-debugging/README.md)
+* 🧪 **Labs:** [Explore Chapter 11 Labs](../../practice/labs/ch11-services/README.md)
 
 [<< Previous Chapter: Logistics Tools](ch10-logistics-tools.md) | [Back to Story Index](../story.md) | [Next Chapter: Ingress & Gateway API >>](ch12-ingress-and-gateway-api.md)

@@ -99,13 +99,9 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 
 The labs in this chapter follow a specific pedagogical progression from simple "in-pod" teamwork to advanced "external" storage.
 
-### 1. The Multi-Container Journey
-- **[Lab 01: Sidecar & InitContainers](../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)**: Teaches the "Teamwork" concept. How two containers work together (Sidecar) and how one must finish before the other starts (Init).
-- **[Lab 03: Shared Volumes (emptyDir)](../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)**: This is the first step in storage. It shows how containers in the same shop (Pod) share a "Stockroom." It’s efficient but temporary.
+### 1. The Laboratory Roadmap
+- **[Explore Chapter 02 Labs Overview](../../practice/labs/ch02-multi-container/README.md)**: A complete guide covering Sidecars, InitContainers, and different storage strategies from emptyDir to NFS.
 
-### 2. The Persistence Layer (The Warehouse)
-- **[Lab 02: PV/PVC](../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)**: Moves from "temporary boxes" to "The Central Warehouse." This introduces the abstraction of **PersistentVolumes**, decoupling the storage lifecycle from the Pod.
-- **[Lab 04: NFS Shared Volumes](../../practice/labs/ch02-multi-container/lab04-nfs-shared-volumes/README.md)**: The "Advanced" storage lab. This demonstrates the **ReadWriteMany** capability, where multiple different shops (Pods) across the mall can all access the same external Warehouse simultaneously.
 
 ---
 
@@ -116,10 +112,7 @@ The labs in this chapter follow a specific pedagogical progression from simple "
 * 🖼️ **Comic 03:** [The Shared Stockroom (emptyDir)](../../visual-learning/comics/ch02-multi-container/03-shared-stockroom/README.md)
 * 🖼️ **Comic 04:** [The External Warehouse (NFS)](../../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
 * 📄 **Doc:** [Understanding Multi-container Pod Patterns](../../reference/md-resources/decoupling-pods.md)
-* 🧪 **Lab 01:** [Sidecar Pattern](../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
-* 🧪 **Lab 02:** [Warehouse (PV/PVC)](../../practice/labs/ch02-multi-container/lab02-pv-pvc/README.md)
-* 🧪 **Lab 03:** [Shared Volumes (emptyDir)](../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
-* 🧪 **Lab 04:** [NFS Shared Volumes](../../practice/labs/ch02-multi-container/lab04-nfs-shared-volumes/README.md)
+* 🧪 **Labs:** [Explore Chapter 02 Labs](../../practice/labs/ch02-multi-container/README.md)
 
 ---
 [<< Previous: Workloads](ch01-workloads.md) | [Back to Story Index](../story.md) | [Next: Pod Design >>](ch03-pod-design.md)

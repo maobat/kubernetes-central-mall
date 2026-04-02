@@ -102,9 +102,7 @@ kubectl describe pod <pod-name>
 * 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 * 🖼️ **Comic 01:** [The Resource Hog - Why Limits Matter](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 * 📄 **Doc:** [The Resource Budget (Requests, Limits, & Quotas)](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
-* 🧪 **Lab 01:** [Managing Constraints](../../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
-* 🧪 **Lab 02:** [Resource Checker (Requests & Limits)](../../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
-* 🧪 **Lab 03:** [Special Placements (Node Affinity)](../../practice/labs/ch08-resources/lab03-node-affinity/README.md)
+* 🧪 **Labs:** [Explore Chapter 08 Labs](../../practice/labs/ch08-resources/README.md)
 
 ---
 [<< Previous: Identity & RBAC](ch07-identity.md) | [Back to Story Index](../story.md) | [Next: Launch Strategies >>](ch09-deployments.md)

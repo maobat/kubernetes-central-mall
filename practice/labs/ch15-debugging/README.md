@@ -1,0 +1,10 @@
+# Chapter 15: Debugging - Overview
+
+Master the tools and techniques for troubleshooting and diagnosing issues in your Kubernetes cluster.
+
+| Lab Name | Description |
+| --- | --- |
+| [Lab 01: Debugging Shop](./lab01-debugging-shop/README.md) | Practice common debugging techniques for troubleshooting application failures. |
+| [Lab 02: Logging Sidecars](./lab02-logging-sidecars/README.md) | Use sidecar containers to stream logs to external systems. |
+| [Lab 03: Metrics Server](./lab03-metrics-server/README.md) | Monitor resource usage at the Pod and Node level using Metrics Server. |
+| [Lab 04: Nested Nodes](./lab04-nested-nodes-crictl/README.md) | Explore container-level debugging using `crictl` on laboratory nodes. |

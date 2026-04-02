@@ -80,11 +80,7 @@ kubectl apply -k ./overlays/production
 * 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
 * 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
 * 📄 **Doc:** [API Deprecations and Stability](../../reference/md-resources/api-deprecations-and-stability.md)
-* 🧪 **Lab 01:** [Mall Catalog Audit (Helm)](../../practice/labs/ch10-logistics/lab01-helm-audit/README.md)
-* 🧪 **Lab 02:** [Logistics Tools (Helm/Kustomize)](../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
-* 🧪 **Lab 03:** [Renovating the Blueprints (API Versions)](../../practice/labs/ch10-logistics/lab03-api-versions/README.md)
-* 🧪 **Lab 04:** [Inventory Report (Helm List)](../../practice/labs/ch10-logistics/lab04-helm-list/README.md)
-* 🧪 **Lab 05:** [Shop Closure (Helm Delete)](../../practice/labs/ch10-logistics/lab05-helm-delete/README.md)
+* 🧪 **Labs:** [Explore Chapter 10 Labs](../../practice/labs/ch10-logistics/README.md)
 
 ---
 [<< Previous: Launch Strategies](ch09-deployments.md) | [Back to Story Index](../story.md) | [Next: Intercoms & Delivery Bays >>](ch11-services.md)

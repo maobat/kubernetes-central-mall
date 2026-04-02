@@ -38,10 +38,6 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 * 🖼️ **Comic 01:** [The Rulebook & The Uniform](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
 * 🖼️ **Comic 03:** [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
 * 📄 **Doc:** [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
-* 🧪 **Lab 01:** [Price List (ConfigMaps)](../../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
-* 🧪 **Lab 02:** [Breakroom Rules (Access)](../../practice/labs/ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
-* 🧪 **Lab 03:** [Vault (Secrets & Env Injection)](../../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
-* 🧪 **Lab 04:** [Reading the Rules (Pod Access)](../../practice/labs/ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
-* 🧪 **Lab 05:** [Automated Config Writer (InitContainers)](../../practice/labs/ch05-config-secrets/lab05-configmap-init-container/README.md)
+* 🧪 **Labs:** [Explore Chapter 05 Labs](../../practice/labs/ch05-config-secrets/README.md)
 
 [<< Previous Chapter: Extending the Mall](ch04-extending-the-mall.md) | [Back to Story Index](../story.md) | [Next Chapter: Worker Safety & Conduct >>](ch06-worker-safety-and-conduct.md)

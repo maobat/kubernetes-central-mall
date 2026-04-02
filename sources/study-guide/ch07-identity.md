@@ -87,10 +87,7 @@ If a worker needs to see shops in **every** floor of the mall (all Namespaces), 
 * 🖼️ **Comic 02:** [The HR Manual (Role)](../../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
 * 🖼️ **Comic 03:** [The Entry Permit Office (Admission Control)](../../visual-learning/comics/ch07-identity/03-admission-control/README.md)
 * 📄 **Doc:** [Understanding Role-Based Access Control (RBAC)](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
-* 🧪 **Lab 01:** [The Employee Badge (ServiceAccounts)](../../practice/labs/ch07-identity/lab01-serviceaccount-identity/README.md)
-* 🧪 **Lab 02:** [RBAC & Identity](../../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
-* 🧪 **Lab 03:** [Entry Permits (Admission Control)](../../practice/labs/ch07-identity/lab03-admission-control-entry-permit/README.md)
-* 🧪 **Lab 04:** [Office Configuration (Advanced Admission)](../../practice/labs/ch07-identity/lab04-admission-control-configuration/README.md)
+* 🧪 **Labs:** [Explore Chapter 07 Labs](../../practice/labs/ch07-identity/README.md)
 
 ---
 [<< Previous: Security](ch06-security.md) | [Back to Story Index](../story.md) | [Next: Resources & Quotas >>](ch08-resources.md)
