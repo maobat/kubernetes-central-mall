@@ -26,41 +26,60 @@ In the **Central Mall**, your production team (RetailCo) needs to package their 
 > **Note:** The environment will install the `buildx` plugin during setup. 
 > 👉 Please **WAIT 2–3 minutes** for it to finish before starting your build.
 
-### Part 1: Build and Export Images
+### Part 1: Local Setup
 
-1. Build the image from `/opt/course/21/workdir`.
-2. Export it as a **Docker archive** to `/opt/course/21/docker/myapp-docker.tar`.
-3. Export it as an **OCI archive** to `/opt/course/21/oci/myapp-oci.tar`.
+Before building, let's create a small workspace and a very simple `Dockerfile`.
+
+```bash
+# Create a workdir and output folders
+mkdir -p buildx-lab/workdir buildx-lab/docker buildx-lab/oci
+cd buildx-lab/workdir
+
+# Create a simple Dockerfile
+cat <<EOF > Dockerfile
+FROM alpine
+CMD ["echo", "Hello from Buildx!"]
+EOF
+
+# Move back to lab root
+cd ..
+```
+
+---
+
+### Part 2: Build and Export Images
+
+1. Build the image from `./workdir`.
+2. Export it as a **Docker archive** to `./docker/myapp-docker.tar`.
+3. Export it as an **OCI archive** to `./oci/myapp-oci.tar`.
 4. Use any name and tag for the image (e.g., `retailco/analytics-api:v1`).
 
 **Solution:**
 
 ```bash
-# navigate to workdir
-cd /opt/course/21/workdir
+# Ensure you are in buildx-lab directory
+cd buildx-lab
 
 # build and export as docker tarball
-docker buildx build -t retailco/analytics-api:v1 . --output type=docker,dest=/opt/course/21/docker/myapp-docker.tar
+docker buildx build -t retailco/analytics-api:v1 ./workdir --output type=docker,dest=./docker/myapp-docker.tar
 
 # build and export as oci tarball
-docker buildx build -t retailco/analytics-api:v1 . --output type=oci,dest=/opt/course/21/oci/myapp-oci.tar
+docker buildx build -t retailco/analytics-api:v1 ./workdir --output type=oci,dest=./oci/myapp-oci.tar
 ```
 
 ---
 
-### Part 2: Verification
+### Part 3: Verification
 
 #### For Docker tarball:
 ```bash
-cd /opt/course/21/docker
-docker load -i myapp-docker.tar
+docker load -i ./docker/myapp-docker.tar
 docker images | grep retailco/analytics-api
 ```
 
 #### For OCI tarball:
 ```bash
-cd /opt/course/21/oci
-tar -tf myapp-oci.tar | head
+tar -tf ./oci/myapp-oci.tar | head
 ```
 
 ---
