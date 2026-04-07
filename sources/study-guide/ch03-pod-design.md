@@ -11,15 +11,33 @@ To get a worker into the mall, they follow a specific path. If any part of this 
 
 | Action | Mall Analogy | K8s / Docker Concept |
 | :--- | :--- | :--- |
-| **The Blueprint** | The tailor`s instructions. | **Dockerfile** |
+| **The Blueprint** | The tailor's instructions. | **Dockerfile** |
 | **The Warehouse** | Where all mannequins are stored. | **Registry** (DockerHub, GCR) |
+| **The Export** | Packaging the mannequin for transport. | **Buildx / OCI Archive** |
 | **The Uniform Swap** | Swapping the old for the new. | **Rolling Update** |
+
+---
+
+## 🛠️ 3.2 Advanced Packaging: Docker Buildx
+
+In modern Kubernetes environments, we use **Docker Buildx** to create images that can be exported in different formats, ensuring they fit any "display case" (runtime) in the world.
+
+- **Docker Archive:** A standard `.tar` file that can be loaded into any Docker environment.
+- **OCI Archive:** An Open Container Initiative industry-standard format, ensuring maximum compatibility.
+
+```bash
+# Build and export as Docker archive
+docker buildx build -t mall-worker:v1 . --output type=docker,dest=worker.tar
+
+# Build and export as OCI archive
+docker buildx build -t mall-worker:v1 . --output type=oci,dest=worker-oci.tar
+```
 
 
 
 ---
 
-## 🛠️ 3.2 Updating the Store (The Blueprints)
+## 🛠️ 3.3 Updating the Store (The Blueprints)
 
 In the CKAD, you often need to update a shop that is already running. You don`t delete the shop; you just tell the manager to use a different mannequin.
 
@@ -48,7 +66,7 @@ kubectl rollout undo deployment/manager-firm
 
 ---
 
-## 📝 3.3 Registry Secrets (The VIP Warehouse Pass)
+## 📝 3.4 Registry Secrets (The VIP Warehouse Pass)
 
 Sometimes, your mannequins are kept in a **Private Warehouse** (Private Registry). To get them, the Mall Manager needs a special "Key" called an `imagePullSecret`. 
 
