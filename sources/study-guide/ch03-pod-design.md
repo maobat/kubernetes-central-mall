@@ -25,6 +25,9 @@ In modern Kubernetes environments, we use **Docker Buildx** to create images tha
 - **Docker Archive:** A standard `.tar` file that can be loaded into any Docker environment.
 - **OCI Archive:** An Open Container Initiative industry-standard format, ensuring maximum compatibility.
 
+### Why use Buildx instead of standard build?
+Standard `docker build` is limited to the local engine. **Buildx** (powered by BuildKit) allows for **multi-platform builds** (e.g., building for both ARM and x86), better **caching performance**, and high-fidelity **package exporting** (like OCI archives).
+
 ```bash
 # Build and export as Docker archive
 docker buildx build -t mall-worker:v1 . --output type=docker,dest=worker.tar

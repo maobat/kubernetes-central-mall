@@ -12,6 +12,16 @@ Learn how to use **Docker Buildx** to build container images and export them in 
 
 ---
 
+## 🤔 Why Buildx?
+
+Standard `docker build` is great for simple local containers, but **Buildx** is the professional tool for modern shipping.
+
+1.  **Multi-Platform Mastery:** Build one image that works on your Mac (M1/M2/M3), your colleague's Linux server, and a cloud provider's ARM instance—all in one command.
+2.  **Flexible Exporting:** Unlike standard builds that just save to the local Docker engine, Buildx can export directly to a tarball, an OCI layout, or skip the local engine entirely.
+3.  **High Efficiency:** Powered by **BuildKit**, it uses advanced caching and parallel processing, making builds significantly faster.
+
+---
+
 ## 🛍️ Mall Analogy
 
 In the **Central Mall**, your production team (RetailCo) needs to package their Analytics API mannequin and deliver it to different departments that might use different display cases.
@@ -35,9 +45,17 @@ Before building, let's create a small workspace and a very simple `Dockerfile`.
 mkdir -p buildx-lab/workdir buildx-lab/docker buildx-lab/oci
 cd buildx-lab/workdir
 
-# Create a simple Dockerfile
+# Create and use a new builder that supports advanced exports (tarballs)
+# Note: --driver-opt network=host ensures the builder can share your host's internet 
+# connection more reliably (fixing potential DNS/timeout issues).
+docker buildx create --name mall-builder --driver-opt network=host --use
+
+# Create a simple Dockerfile with comments
 cat <<EOF > Dockerfile
+# Use a lightweight base image
 FROM alpine
+
+# Print a friendly message
 CMD ["echo", "Hello from Buildx!"]
 EOF
 
@@ -60,10 +78,17 @@ cd ..
 # Ensure you are in buildx-lab directory
 cd buildx-lab
 
-# build and export as docker tarball
+# Build and export as a Docker-formatted tarball
+# -t retailco/analytics-api:v1          -> Specifies the image name and version tag
+# ./workdir                             -> The "Build Context" (where the Dockerfile and source files are)
+# --output type=docker,dest=...        -> Buildx uses a "comma-separated" syntax for outputs:
+#                                          - type=docker: the exporter (format)
+#                                          - dest=PATH  : where the exporter writes the result
 docker buildx build -t retailco/analytics-api:v1 ./workdir --output type=docker,dest=./docker/myapp-docker.tar
 
-# build and export as oci tarball
+# Build and export as an OCI-compliant tarball
+# --output type=oci                     -> Tells BuildKit to use the Open Container Initiative (OCI) standard layout
+#                                          (More universal and modern than the legacy Docker format)
 docker buildx build -t retailco/analytics-api:v1 ./workdir --output type=oci,dest=./oci/myapp-oci.tar
 ```
 
@@ -87,3 +112,19 @@ tar -tf ./oci/myapp-oci.tar | head
 ## 🔗 References
 - **Study Guide** → [Chapter 3: Images & Modifications](../../../../sources/study-guide/ch03-pod-design.md)
 - **Docs** → [Managing Container Images & Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
+
+---
+
+## 🛠️ Troubleshooting
+
+### Error: "dial tcp: lookup registry-1.docker.io: i/o timeout"
+This means the Buildx container (`mall-builder`) cannot reach the internet to pull the `alpine` image.
+**Fix:**
+1.  Verify your host has internet access.
+2.  Try restarting the builder:
+    ```bash
+    docker buildx stop mall-builder
+    docker buildx rm mall-builder
+    docker buildx create --name mall-builder --use
+    ```
+3.  If you are behind a proxy, you may need to pass proxy environment variables when creating the builder.
