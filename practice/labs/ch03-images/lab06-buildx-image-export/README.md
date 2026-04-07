@@ -50,14 +50,12 @@ cd buildx-lab/workdir
 # connection more reliably (fixing potential DNS/timeout issues).
 docker buildx create --name mall-builder --driver-opt network=host --use
 
-# Create a simple Dockerfile with comments
-cat <<EOF > Dockerfile
-# Use a lightweight base image
-FROM alpine
+# Create a simple Dockerfile using vim
+vim Dockerfile
 
-# Print a friendly message
+# Paste the following content:
+FROM alpine
 CMD ["echo", "Hello from Buildx!"]
-EOF
 
 # Move back to lab root
 cd ..

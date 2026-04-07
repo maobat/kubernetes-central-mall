@@ -44,6 +44,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 07** – [Lab 02: RBAC & Identity](ch07-identity/lab02-rbac-identity/README.md)
 - **Ch. 07** – [Lab 03: Entry Permits (Admission Control)](ch07-identity/lab03-admission-control-entry-permit/README.md)
 - **Ch. 07** – [Lab 04: Office Configuration (Advanced Admission)](ch07-identity/lab04-admission-control-configuration/README.md)
+- **Ch. 07** – [Lab 05: ServiceAccount Token Decode](ch07-identity/lab05-serviceaccount-token-decode/README.md)
 - **Ch. 08** – [Lab 01: Managing Constraints](ch08-resources/lab01-managing-resource-constraints/README.md)
 - **Ch. 08** – [Lab 02: Resource Checker (Requests/Limits)](ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
 - **Ch. 08** – [Lab 03: Special Placements (Node Affinity)](ch08-resources/lab03-node-affinity/README.md)
