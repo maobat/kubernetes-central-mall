@@ -55,6 +55,38 @@ kubectl get endpoints nginx-intercom
 
 ---
 
+---
+
+---
+
+## ⚔️ 11.4 The Port Map
+
+| Port Type | Analogy | Summary |
+| :--- | :--- | :--- |
+| **`containerPort`** | The Cash Register | The port the app is listening on. |
+| **`port`** | The Intercom | The internal cluster port for the Service. |
+| **`targetPort`** | The Patch Cable | Connects the Intercom to the Register. |
+| **`nodePort`** | The Mall Entrance | A port on the Node IP for external users. |
+| **`hostPort`** | The Back Door | Directly maps a Node port to a single Pod. |
+| **`hostNetwork`** | Infrastructure | Pod uses the Node's own network directly. |
+
+### Traffic Flow
+
+```mermaid
+graph LR
+    User([User]) -- "nodePort" --> Node[Node IP]
+    Node -- "port" --> Service[Service IP]
+    Service -- "targetPort" --> App[Container]
+    
+    Admin([Admin]) -- "hostPort" --> Node
+    Node -.-> App
+```
+
+> [!WARNING]
+> `hostPort` and `hostNetwork` are security risks. They bypass cluster isolation and can cause port conflicts. Use them only when necessary.
+
+---
+
 ## ⚠️ Common Exam Traps
 - **`port` vs `targetPort` Confusion:** `port` is the port the Service listens on. `targetPort` is the port your container is actually listening on. A mismatch here is the #1 reason a Service fails to forward traffic.
 - **Label Mismatches:** If `kubectl get ep <service>` shows `<none>`, it means the Service's selector does not match the Pod's labels perfectly. Even a single typo in the label stops all traffic.
@@ -65,6 +97,7 @@ kubectl get endpoints nginx-intercom
 
 * 🖼️ **Comic 01:** [The Internal Intercom - ClusterIP Balances Traffic](../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
 * 🖼️ **Comic 02:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+* 🖼️ **Comic 03:** [The Port Map - Section 11.4 Comparison Guide](../../visual-learning/comics/ch11-services/03-the-port-map/README.md)
 * 📄 **Doc:** [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)
 * 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
 * 🧪 **Labs:** [Explore Chapter 11 Labs](../../practice/labs/ch11-services/README.md)

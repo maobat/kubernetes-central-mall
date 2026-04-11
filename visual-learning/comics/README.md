@@ -54,6 +54,7 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 
 - **Ch. 11** – [The Internal Intercom (ClusterIP)](ch11-services/01-internal-intercom/README.md)
 - **Ch. 11** – [The NodePort Traffic Adventure](ch11-services/02-cross-namespace/README.md)
+- **Ch. 11** – [The Port Map (11.4 Comparison Guide)](ch11-services/03-the-port-map/README.md)
 - **Ch. 12** – [The Lost Gateway (Troubleshooting)](ch12-ingress/01-the-lost-gateway/README.md)
 - **Ch. 12** – [The Grand Entrance (Path Routing)](ch12-ingress/02-the-grand-entrance/README.md)
 - **Ch. 13** – [The Locked Corridor (Whitelisting Traffic)](ch13-networking/01-locked-corridors/README.md)

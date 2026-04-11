@@ -22,10 +22,30 @@ For the most popular shops, the mall might hire a dedicated **Receptionist**. Wh
 
 ---
 
+## The Port Trio & The Backroom Bypass
+
+To ensure every customer finds the right cash register, we use a specific set of numbers in our blueprints.
+
+*   **`containerPort` (The Register):** The number on the actual cash register inside the store.
+*   **`port` (The Intercom):** The extension number customers dial on the mall's internal phones.
+*   **`targetPort` (The Patch Cable):** The physical wire that connects the Intercom to the Register. If the Intercom is port 80 but the Register is port 8080, the `targetPort` bridge makes it work.
+
+### Bypassing the Mall System
+
+Sometimes, a store is so specialized that it needs to bypass the mall's official intercom and delivery systems entirely.
+
+*   **`hostPort` (The Private Alley Entrance):** This is a secret back-door that opens directly onto the street (the Node IP). It bypasses the mall's security desks and takes a customer straight to the store's register. 
+*   **`hostNetwork` (Living in the Walls):** This store doesn't even have its own separate room. It is built directly into the mall’s utility tunnels, sharing the same infrastructure (Network Namespace) as the entire floor. 
+
+⚠️ **Warning:** Using the back-alley or living in the utility tunnels is efficient but dangerous. If two stores try to use the same alley entrance number at the same time, they will crash!
+
+---
+
 ## 🧰 Study Toolbox
 
 * 🖼️ **Comic 01:** [The Internal Intercom - ClusterIP Balances Traffic](../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
 * 🖼️ **Comic 02:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+* 🖼️ **Comic 03:** [The Port Map - Section 11.4 Comparison Guide](../../visual-learning/comics/ch11-services/03-the-port-map/README.md)
 * 📄 **Doc:** [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)
 * 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
 * 🧪 **Labs:** [Explore Chapter 11 Labs](../../practice/labs/ch11-services/README.md)

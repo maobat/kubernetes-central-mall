@@ -28,6 +28,6 @@ This comic explains how **NodePorts** allow external traffic to reach your shop,
 ---
 
 ## 🔗 References
-- **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services-networking.md)
+- **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services.md)
 - **Lab** → [Lab 02 - NodePort Cross-Namespace](../../../../practice/labs/ch11-services/lab02-nodeport-cross-namespace/README.md)
 - **Docs** → [Service IP Tracker Evolution](../../../../reference/md-resources/service-ip-tracker-evolution.md)
