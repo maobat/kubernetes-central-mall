@@ -3,6 +3,7 @@
 *The Cash Register, Intercom, Patch Cable & Mall Entrance!*
 
 <img src="03-the-port-map.png" alt="The Port Map" width="40%" />
+<img src="03-patch-cable.png" alt="The Patch Cable" width="40%" />
 
 ---
 
