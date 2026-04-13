@@ -22,14 +22,20 @@ You don't want to create two entirely different blueprints. Instead, you use **K
 
 Kustomize "patches" the base blueprint with your changes to create a final, customized plan. It's like having a master drawing and placing a transparent sheet over it with your notes.
 
+## The Installation Ritual (Castlemock)
+
+For complex boutiques like **Castlemock**, simply unpacking the container isn't enough. You must also perform a specialized "Installation Ritual." This involves setting up the security vaults beforehand and letting a temporary **Setup Assistant** (a Post-Install Job) handle the final configurations—like creating employee accounts and decommissioning temporary factory keys—before the grand opening ceremony.
+
 ---
 
 ## 🧰 Study Toolbox
 
 * 🖼️ **Comic 01:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+* 🖼️ **Comic 02:** [The Castlemock Grand Opening](../../visual-learning/comics/ch10-logistics/03-the-castlemock-grand-opening/README.md)
 * 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
 * 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
 * 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
 * 🧪 **Labs:** [Explore Chapter 10 Labs](../../practice/labs/ch10-logistics/README.md)
+* 🧪 **Lab 06:** [The Castlemock Boutique (Full Ritual)](../../practice/labs/ch10-logistics/lab06-castlemock-setup/README.md)
 
 [<< Previous Chapter: Launch Strategies](ch09-launch-strategies.md) | [Back to Story Index](../story.md) | [Next Chapter: Finding the Stores >>](ch11-finding-the-stores.md)

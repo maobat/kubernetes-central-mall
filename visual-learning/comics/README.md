@@ -46,6 +46,7 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 - **Ch. 09** – [The Canary Taste Test (Traffic Analysis)](ch09-launch/01-canary-nodeport/README.md)
 - **Ch. 09** – [The Blue-Green Sign Swap (Strategies)](ch09-launch/01-blue-green-sign-swap/README.md)
 - **Ch. 10** – [The Logistics Chain (Helm & Kustomize)](ch10-logistics/02-the-logistics-chain/README.md)
+- **Ch. 10** – [The Castlemock Grand Opening](ch10-logistics/03-the-castlemock-grand-opening/README.md)
 
 ---
 
