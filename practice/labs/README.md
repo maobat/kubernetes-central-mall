@@ -39,6 +39,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 05** – [Lab 03: Vault (Secrets & Env Injection)](ch05-config-secrets/lab03-secrets-env-injection/README.md)
 - **Ch. 05** – [Lab 04: Reading the Rules (Pod Access)](ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
 - **Ch. 05** – [Lab 05: Automated Config Writer (InitContainers)](ch05-config-secrets/lab05-configmap-init-container/README.md)
+- **Ch. 05** – [Lab 06: Full Briefing (ConfigMap envFrom)](ch05-config-secrets/lab06-configmap-envfrom/README.md)
 - **Ch. 06** – [Lab 01: Worker Safety (TBD)](ch06-safety/lab01-worker-safety/README.md)
 - **Ch. 07** – [Lab 01: The Employee Badge (ServiceAccounts)](ch07-identity/lab01-serviceaccount-identity/README.md)
 - **Ch. 07** – [Lab 02: RBAC & Identity](ch07-identity/lab02-rbac-identity/README.md)
