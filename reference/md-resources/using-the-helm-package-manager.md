@@ -8,4 +8,4 @@ If manual YAML is "DIY construction," **Helm** is the **Prefabricated Store Cata
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

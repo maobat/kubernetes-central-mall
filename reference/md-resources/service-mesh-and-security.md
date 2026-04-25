@@ -170,4 +170,4 @@ Just like the API server, your Nginx or Python apps should have these "Pulse Che
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

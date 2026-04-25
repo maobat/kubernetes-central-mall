@@ -7,4 +7,4 @@ A **Quota** is a total limit applied to a **Namespace**.
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

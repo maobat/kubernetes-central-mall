@@ -27,4 +27,4 @@ By locking the corridors between competing departments and only allowing necessa
 * 📄 **Doc:** [Network Policies: Concept and Application](../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
 * 🧪 **Labs:** [Explore Chapter 13 Labs](../../practice/labs/ch13-networking/README.md)
 
-[<< Previous Chapter: Ingress & Gateway API](ch12-ingress-and-gateway-api.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Probes & Health Checks >>](ch14-probes-and-health-checks.md)
+[<< Previous Chapter: Ingress & Gateway API](ch12-ingress-and-gateway-api.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Probes & Health Checks >>](ch14-probes-and-health-checks.md) | [🔙 Back](javascript:history.back())

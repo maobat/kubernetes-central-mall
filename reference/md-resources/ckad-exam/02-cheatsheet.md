@@ -74,4 +74,4 @@ Always check:
 - [Time Strategy](./03-time-management.md)
 - [Final Checklist](./04-final-checklist.md)
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

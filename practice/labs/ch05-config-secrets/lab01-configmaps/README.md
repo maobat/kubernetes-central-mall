@@ -113,4 +113,4 @@ spec:
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

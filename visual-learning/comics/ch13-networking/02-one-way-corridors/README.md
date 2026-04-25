@@ -33,4 +33,4 @@ This comic explains how **Egress Rules** work in Kubernetes using the Central Ma
 - **Docs** → [Network Isolation & Troubleshooting](../../../../reference/md-resources/troubleshooting-kubernetes.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

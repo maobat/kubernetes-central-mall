@@ -139,4 +139,4 @@ spec:
 ➡️ [Lab 04: Blue-Green Java App (Guided + Challenge)](../lab04-blue-green-java/README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

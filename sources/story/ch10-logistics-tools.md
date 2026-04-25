@@ -38,4 +38,4 @@ For complex boutiques like **Castlemock**, simply unpacking the container isn't 
 * 🧪 **Labs:** [Explore Chapter 10 Labs](../../practice/labs/ch10-logistics/README.md)
 * 🧪 **Lab 06:** [The Castlemock Boutique (Full Ritual)](../../practice/labs/ch10-logistics/lab06-castlemock-setup/README.md)
 
-[<< Previous Chapter: Launch Strategies](ch09-launch-strategies.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Finding the Stores >>](ch11-finding-the-stores.md)
+[<< Previous Chapter: Launch Strategies](ch09-launch-strategies.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Finding the Stores >>](ch11-finding-the-stores.md) | [🔙 Back](javascript:history.back())

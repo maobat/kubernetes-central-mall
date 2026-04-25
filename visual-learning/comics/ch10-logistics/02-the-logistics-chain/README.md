@@ -34,4 +34,4 @@ This comic explains the difference between **Helm** and **Kustomize** using the 
 - **Docs** → [Using Helm](../../../../reference/md-resources/using-the-helm-package-manager.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

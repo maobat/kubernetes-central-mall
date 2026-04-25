@@ -81,4 +81,4 @@ kubectl get pods
 -   Contexts help avoid mistakes by setting a default namespace.
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

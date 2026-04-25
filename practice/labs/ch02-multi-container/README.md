@@ -10,4 +10,4 @@ This chapter covers patterns for running multiple containers within a single Pod
 | [Lab 04: NFS Shared Volumes](./lab04-nfs-shared-volumes/README.md) | Configure and use NFS for shared storage across multiple Pods. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md)
+[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

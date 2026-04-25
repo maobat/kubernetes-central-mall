@@ -91,4 +91,4 @@ k exec testpod -- wget -qO- support-svc
 - **Study Guide** → [Chapter 11: Services](../../../../sources/study-guide/ch11-services.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

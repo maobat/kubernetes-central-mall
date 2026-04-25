@@ -108,4 +108,4 @@ CONFIG GET maxmemory-policy
 - **Docs** → [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

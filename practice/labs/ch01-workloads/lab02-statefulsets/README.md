@@ -84,4 +84,4 @@ kubectl create statefulset boutique --image=nginx:alpine --replicas=3
 - **Study Guide** → [Chapter 01: Workloads](../../../sources/study-guide/ch01-workloads.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

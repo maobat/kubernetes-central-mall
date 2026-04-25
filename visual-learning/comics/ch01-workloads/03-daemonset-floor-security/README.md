@@ -36,4 +36,4 @@ In the **Central Mall**, some employees are assigned to specific shops, but the 
 - **Docs** → [The Cast of Characters](../../../../reference/md-resources/cast-of-characters.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

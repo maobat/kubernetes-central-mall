@@ -138,4 +138,4 @@ kubectl rollout undo deployment/clerk-dept
 [<< Previous: Resources](ch08-resources.md) | [Back to Story Index](../story.md) | [Next: Logistics Tools >>](ch10-management.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

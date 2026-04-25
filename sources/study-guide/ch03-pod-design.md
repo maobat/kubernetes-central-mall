@@ -105,4 +105,4 @@ spec:
 ---
 [<< Previous: Multi-container](ch02-multi-container.md) | [Back to Story Index](../story.md) | [Next: Extending K8s >>](ch04-extending-k8s.md)
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -101,4 +101,4 @@ Once you install Calico, it follows these rules and creates the actual "locked d
 - **Comic** → [Locked Corridors](../../../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

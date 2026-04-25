@@ -9,4 +9,4 @@ This is the process where Kubernetes creates the storage for you, making manual 
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

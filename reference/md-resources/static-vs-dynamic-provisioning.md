@@ -39,4 +39,4 @@ The key takeaway is that the file count is a symptom of the provisioning method:
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

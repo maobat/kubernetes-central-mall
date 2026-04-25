@@ -107,4 +107,4 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -33,4 +33,4 @@ This comic explains the complexities of the **Gateway API** and why your gateway
 - **Docs** → [Understanding Gateway API](../../../../reference/md-resources/gateway-api.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

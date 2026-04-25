@@ -7,4 +7,4 @@ Access to the Kubernetes API is governed by two distinct processes: **Authentica
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

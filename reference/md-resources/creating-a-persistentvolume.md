@@ -67,4 +67,4 @@ Check on the node (only **after** a Pod uses it): `minikube ssh`, then `ls /myda
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

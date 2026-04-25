@@ -32,4 +32,4 @@ This comic explains why **StatefulSets** are the "VIPs" of the Kubernetes world 
 - **Lab** → [Lab 02 - StatefulSets](../../../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
 - **Docs** → [Using StatefulSets](../../../../reference/md-resources/using-statefulsets.md)
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

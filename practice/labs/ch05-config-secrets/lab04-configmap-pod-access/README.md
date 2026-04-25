@@ -79,4 +79,4 @@ kubectl exec pod1 -- cat /etc/birke/department
 [Back to Chapter 05 Index](../../README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -62,4 +62,4 @@ The **Entry Permit Office** (Admission Control) is the final checkpoint. Even if
 - **Docs** → [Admission Control Overview](../../../../reference/md-resources/authentication-and-authorization-the-security-team.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

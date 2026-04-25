@@ -86,4 +86,4 @@ In the Mall, if you exceed your **Electricity** (CPU), we just dim your lights (
 
 [Back to Chapter 08](../../README.md)
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

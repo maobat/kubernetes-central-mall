@@ -114,4 +114,4 @@ kubectl exec -it <pod-name> -c <container-name> -- bash
 ```
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

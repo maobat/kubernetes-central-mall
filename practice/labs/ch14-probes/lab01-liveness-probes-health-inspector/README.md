@@ -96,4 +96,4 @@ k get pod probed -w
 - **Study Guide** → [Chapter 14: Observability](../../../../sources/study-guide/ch14-probes.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -85,4 +85,4 @@ kubectl get events --sort-by='.lastTimestamp'
 [<< Previous: Health Checks](ch14-probes.md) | [Back to Story Index](../story.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -32,4 +32,4 @@ This comic explains how **Ingress** acts as a sophisticated reception desk that 
 - **Docs** → [Managing Ingress Resources](../../../../reference/md-resources/managing-ingress-resources.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

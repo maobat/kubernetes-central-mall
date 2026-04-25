@@ -38,4 +38,4 @@ This is `kubectl exec`. It allows you to step inside a running pod and run comma
 * 📄 **Doc:** [Diagnostic Cheat Sheet](../../reference/md-resources/diagnostic-cheat-sheet.md)
 * 🧪 **Labs:** [Explore Chapter 15 Labs](../../practice/labs/ch15-debugging/README.md)
 
-[<< Previous Chapter: Probes & Health Checks](ch14-probes-and-health-checks.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md)
+[<< Previous Chapter: Probes & Health Checks](ch14-probes-and-health-checks.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

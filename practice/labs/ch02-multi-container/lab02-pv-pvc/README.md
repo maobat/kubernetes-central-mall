@@ -141,4 +141,4 @@ spec:
 - **Study Guide** → [Chapter 2: Storage](../../../../sources/study-guide/ch02-multi-container.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -35,4 +35,4 @@ This comic explains how **Container Images** are built and how **Rolling Updates
 - **Docs** → [Managing Container Images and Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

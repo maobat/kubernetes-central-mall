@@ -69,4 +69,4 @@ kubectl apply -k overlays/staging
 - **Study Guide** → [Chapter 10: Management](../../../../sources/study-guide/ch10-management.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

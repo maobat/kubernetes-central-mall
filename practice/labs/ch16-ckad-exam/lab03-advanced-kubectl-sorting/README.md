@@ -39,4 +39,4 @@ kubectl -n session283884 get pods --sort-by=.status.containerStatuses[0].restart
 -   Common sort fields: `.metadata.creationTimestamp`, `.status.phase`, `.status.containerStatuses[0].restartCount`.
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -33,4 +33,4 @@ This comic explains **SecurityContexts & Capabilities** using the *Central Mall*
 - **Docs** → [Worker Safety and Conduct](../../../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

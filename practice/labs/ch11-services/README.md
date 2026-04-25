@@ -9,4 +9,4 @@ Connect your applications and manage internal and external traffic using Kuberne
 | [Lab 03: Service Debugging](./lab03-service-debugging/README.md) | Practice troubleshooting common connection and DNS issues. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md)
+[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

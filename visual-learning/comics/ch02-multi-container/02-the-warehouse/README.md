@@ -33,4 +33,4 @@ This comic explains how **Persistent Storage** allows data to survive even if th
 - **Docs** → [Creating a PersistentVolume](../../../../reference/md-resources/creating-a-persistentvolume.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

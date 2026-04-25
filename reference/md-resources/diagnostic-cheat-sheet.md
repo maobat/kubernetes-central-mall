@@ -13,4 +13,4 @@ If the mall isn't working, use these commands to find the "Character" at fault:
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

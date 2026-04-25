@@ -61,4 +61,4 @@ Update →      v2 v1 v1 v1
 * 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
 * 🧪 **Labs:** [Explore Chapter 09 Labs](../../practice/labs/ch09-launch/README.md)
 
-[<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md)
+[<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md) | [🔙 Back](javascript:history.back())

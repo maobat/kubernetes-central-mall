@@ -12,4 +12,4 @@ Understand how identities and permissions are managed in Kubernetes using Servic
 | [Lab 06: Namespaced RBAC](./lab06-namespaced-rbac/README.md) | Learn how to restrict RBAC permissions to a specific namespace. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md)
+[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

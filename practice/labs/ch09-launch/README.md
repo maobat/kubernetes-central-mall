@@ -11,4 +11,4 @@ Master different deployment strategies to release your applications safely and e
 | [Lab 05: Deployment Lifecycle](./lab05-deployment-lifecycle/README.md) | Explore the full lifecycle of a Deployment, including scaling and history. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md)
+[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

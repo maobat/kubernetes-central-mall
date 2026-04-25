@@ -49,4 +49,4 @@ Once you correct your `redis-deploy.yaml` file to use the stable `apiVersion: ap
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

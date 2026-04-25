@@ -108,4 +108,4 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 [Back to Main Index](../../README.md)
 
 ---
-[Mall Directory ✨](./../GLOSSARY.md)
+[Mall Directory ✨](./../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -75,4 +75,4 @@ helm install -f nginx/values.yaml my-nginx ./nginx/
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

@@ -128,4 +128,4 @@ curl http://$NODE_IP:$NODE_PORT/asia -H "Host: world.universe.mine"
 - **Study Guide** → [Chapter 12: Ingress](../../../../sources/study-guide/ch12-ingress.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

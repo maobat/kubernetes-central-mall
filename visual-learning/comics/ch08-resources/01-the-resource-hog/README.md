@@ -34,4 +34,4 @@ This comic explains **Resource Management (Requests & Limits)** using the *Centr
 - **Docs** → [Resource Budget Guide](../../../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md)
+[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())

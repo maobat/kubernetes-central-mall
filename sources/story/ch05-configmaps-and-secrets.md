@@ -41,4 +41,4 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 * 📄 **Doc:** [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
 * 🧪 **Labs:** [Explore Chapter 05 Labs](../../practice/labs/ch05-config-secrets/README.md)
 
-[<< Previous Chapter: Extending the Mall](ch04-extending-the-mall.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Worker Safety & Conduct >>](ch06-worker-safety-and-conduct.md)
+[<< Previous Chapter: Extending the Mall](ch04-extending-the-mall.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Worker Safety & Conduct >>](ch06-worker-safety-and-conduct.md) | [🔙 Back](javascript:history.back())

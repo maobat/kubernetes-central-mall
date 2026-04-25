@@ -21,4 +21,4 @@ If you want to train for free before burning your Killer.sh sessions:
 - **Why use it:** It offers free, browser-based scenarios where the terminal immediately tells you "FAIL" or "PASS". It's excellent for drilling specific tasks (like creating NetworkPolicies or fixing broken Deployments) repeatedly until they are muscle memory.
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
