@@ -35,6 +35,5 @@ If a worker in the "Chemical Supply Store" has a bad day or makes a mistake, the
 **📘 Technical Deep Dive**
 * [SecurityContext: Worker Safety & Conduct](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
 * 🧪 **Lab 01:** [Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
-* 🧪 **Lab 01:** [Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
 
 [<< Previous Chapter: ConfigMaps & Secrets](ch05-configmaps-and-secrets.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Identity & Access >>](ch07-identity-and-access.md)
