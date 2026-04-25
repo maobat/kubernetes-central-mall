@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-Implement a **Canary Deployment** using **replica weighting** and a shared Service selector. You will learn how to route a small percentage of customers to a new version of your shop to test it before a full rollout.
+Implement a **[Canary Deployment](../../../../GLOSSARY.md#canary-deployment)** using **replica weighting** and a shared [Service](../../../../GLOSSARY.md#service) selector. You will learn how to route a small percentage of customers to a new version of your shop to test it before a full rollout.
 
 > **CKAD Importance:** Medium. In the CKAD, you perform canary testing manually by adjusting the **Replica Count** of shared deployments since advanced traffic management tools are often out of scope for basic setups.
 
@@ -16,7 +16,7 @@ Implement a **Canary Deployment** using **replica weighting** and a shared Servi
 
 In the **Central Mall**, a **Canary Rollout** is like having 10 shop assistants. To test a new uniform, you give it to only 2 assistants (20%). 
 
-Customers have an 80% chance of meeting the old style and a 20% chance of meeting the new one as they walk through the main entrance. We keep the main entrance (Service) exactly as it is; the workers just "join" the team by wearing the same brand badge (`app: wonderful`).
+Customers have an 80% chance of meeting the old style and a 20% chance of meeting the new one as they walk through the main entrance. We keep the main entrance ([Service](../../../../GLOSSARY.md#service)) exactly as it is; the workers just "join" the team by wearing the same brand badge (`app: wonderful`).
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
@@ -35,29 +35,29 @@ The Manager wants to test `nginx:alpine` but is afraid of a total failure.
 1. **The Math (80/20 Rule):** To achieve the 80/20 split with 10 total Pods:
    - **wonderful-v1:** 8 replicas (`httpd:alpine`).
    - **wonderful-v2:** 2 replicas (`nginx:alpine`).
-2. **Current (v1):** Reduce the replicas of the old deployment to 8.
-3. **New (v2):** Create a new Deployment `wonderful-v2` with 2 replicas using `nginx:alpine`.
-4. **Shared Identity:** Both must have the label `app: wonderful` to be reached through the `NodePort` Service
+2. **Current (v1):** Reduce the replicas of the old [deployment](../../../../GLOSSARY.md#deployment) to 8.
+3. **New (v2):** Create a new [Deployment](../../../../GLOSSARY.md#deployment) `wonderful-v2` with 2 replicas using `nginx:alpine`.
+4. **Shared Identity:** Both must have the label `app: wonderful` to be reached through the `NodePort` [Service](../../../../GLOSSARY.md#service)
    
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Adjust the Main Squad (v1 - httpd:alpine - initial deployment)
-Scale the existing deployment to make room for the Canary.
+### 1. Adjust the Main Squad (v1 - httpd:alpine - initial [deployment](../../../../GLOSSARY.md#deployment))
+Scale the existing [deployment](../../../../GLOSSARY.md#deployment) to make room for the Canary.
 
 ```bash
 kubectl scale deploy wonderful-v1 --replicas=8
 ```
 
 ### 2. Launch the Canary (v2)
-Create the new deployment. **Crucial:** It must share the same `app: wonderful` label so the existing Service can find it.
+Create the new [deployment](../../../../GLOSSARY.md#deployment). **Crucial:** It must share the same `app: wonderful` label so the existing [Service](../../../../GLOSSARY.md#service) can find it.
 
 ```bash
 kubectl create deploy wonderful-v2 --image=nginx:alpine --replicas=2 --dry-run=client -o yaml > canary.yaml
 ```
 
-**Edit `canary.yaml` to ensure the labels match the Service selector:**
+**Edit `canary.yaml` to ensure the labels match the [Service](../../../../GLOSSARY.md#service) selector:**
 
 ```yaml
 apiVersion: apps/v1
@@ -78,7 +78,7 @@ spec:
       - name: nginx
         image: nginx:alpine
 ```
-Then apply the canary deployment
+Then apply the [canary deployment](../../../../GLOSSARY.md#canary-deployment)
 ```bash
 kubectl apply -f canary.yaml
 ```
@@ -87,13 +87,13 @@ kubectl apply -f canary.yaml
 
 ## 🔎 Verification
 
-Since both Deployments share the label `app: wonderful`, the Service will distribute traffic randomly (Round Robin) among all 10 Pods.
+Since both Deployments share the label `app: wonderful`, the [Service](../../../../GLOSSARY.md#service) will distribute traffic randomly (Round Robin) among all 10 Pods.
 
 1. **Check the Endpoints:** (You should see 10 IP addresses)
    ```bash
    k describe svc wonderful
    ```
-   obviously previoulsly you need to expose the service
+   obviously previoulsly you need to expose the [service](../../../../GLOSSARY.md#service)
 
    ```bash
    k expose deploy wonderful-v1 --name=wonderful --type=NodePort --port=80 --target-port=80 --selector=app=wonderful
@@ -112,8 +112,8 @@ Since both Deployments share the label `app: wonderful`, the Service will distri
 
 ## 🧠 Key Takeaways
 
-- **The Selector is Key:** In Blue-Green, we change the Service selector. In Canary, we keep the Service selector fixed and let new Pods "join" the pool by sharing the same label.
-- **Standardization:** In the real world, tools like **Gateway API** or **Ingress-Nginx** handle this with percentages (Weights). In the CKAD, you often do it manually with the **Replica Count**.
+- **The Selector is Key:** In Blue-Green, we change the [Service](../../../../GLOSSARY.md#service) selector. In Canary, we keep the [Service](../../../../GLOSSARY.md#service) selector fixed and let new Pods "join" the pool by sharing the same label.
+- **Standardization:** In the real world, tools like **[Gateway API](../../../../GLOSSARY.md#gateway-api)** or **[Ingress](../../../../GLOSSARY.md#ingress)-Nginx** handle this with percentages (Weights). In the CKAD, you often do it manually with the **Replica Count**.
 - **Low Risk:** If the "Canary" Pods fail, only 20% of the customers are affected while you investigate.
 
 ---

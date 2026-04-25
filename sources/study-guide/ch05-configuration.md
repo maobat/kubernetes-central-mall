@@ -9,8 +9,8 @@ In the **Central Mall**, every clerk needs instructions (Config) and some need k
 
 | Resource | Mall Analogy | Security Level |
 | :--- | :--- | :--- |
-| **ConfigMap** | **The Shop Manual** | Public info. Set the background color, the store name, or the `index.html`. |
-| **Secret** | **The Locked Drawer** | Sensitive info. Passwords, API keys, or certificates. Encoded (obfuscated) so casual bypassers can't read it. |
+| **[ConfigMap](../../GLOSSARY.md#configmap)** | **The Shop Manual** | Public info. Set the background color, the store name, or the `index.html`. |
+| **[Secret](../../GLOSSARY.md#secret)** | **The Locked Drawer** | Sensitive info. Passwords, API keys, or certificates. Encoded (obfuscated) so casual bypassers can't read it. |
 
 
 
@@ -18,7 +18,7 @@ In the **Central Mall**, every clerk needs instructions (Config) and some need k
 
 ## 🛠️ 5.2 ConfigMaps: The index.html Strategy
 
-As we planned for your Lab, we use a **ConfigMap** to change how a store looks without rebuilding the mannequin (Image).
+As we planned for your Lab, we use a **[ConfigMap](../../GLOSSARY.md#configmap)** to change how a store looks without rebuilding the mannequin (Image).
 
 ### 1. Create the Instruction Folder
 ```bash
@@ -54,7 +54,7 @@ Secrets are handled exactly like ConfigMaps, but they are stored in `base64` enc
 kubectl create secret generic db-pass --from-literal=password=MallPass123
 ```
 
-### How to use a Secret as an Environment Variable:
+### How to use a [Secret](../../GLOSSARY.md#secret) as an Environment Variable:
 The clerk gets the password as a "vibe" (Environment Variable) instead of a file.
 
 ```yaml
@@ -79,7 +79,7 @@ kubectl create secret generic my-secret --from-literal=user=admin
 ```
 
 ### 2. Viewing the Content (The Decoder Ring)
-If you need to see what's inside a secret during the exam:
+If you need to see what's inside a [secret](../../GLOSSARY.md#secret) during the exam:
 ```bash
 kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 ```
@@ -87,14 +87,14 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 ---
 
 ## ⚠️ Common Exam Traps
-- **The Volume Overwrite Trap:** If you mount a ConfigMap as a volume into `/etc/nginx`, it will hide *all existing files* in that directory! To mount a single file into a directory without overwriting it, you **must use `subPath`**.
-- **Base64 Nuances:** In YAML manifests, Secret data values *must* be base64 encoded. However, if you use `kubectl create secret generic <name> --from-literal=key=value`, `kubectl` automatically encodes it for you. Don't encode it twice!
+- **The Volume Overwrite Trap:** If you mount a [ConfigMap](../../GLOSSARY.md#configmap) as a volume into `/etc/nginx`, it will hide *all existing files* in that directory! To mount a single file into a directory without overwriting it, you **must use `subPath`**.
+- **Base64 Nuances:** In YAML manifests, [Secret](../../GLOSSARY.md#secret) data values *must* be base64 encoded. However, if you use `kubectl create secret generic <name> --from-literal=key=value`, `kubectl` automatically encodes it for you. Don't encode it twice!
 
 ---
 
 ### 🧰 Study Toolbox
 
-* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
+* 🎙️ **Audio Overview:** [Request](../../GLOSSARY.md#request) the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 **🎨 Visualize the Analogy**
 * [Explore Chapter 5 Comics](../../visual-learning/comics/ch05-config-secrets/README.md)
 

@@ -7,8 +7,8 @@
 ## 🎯 Lab Goal
 
 This lab demonstrates how to handle **sensitive data** (passwords, tokens) in Kubernetes. You will learn how to:
-- Store sensitive data using a **Kubernetes Secret**.
-- Inject secret values into a **Deployment** as environment variables.
+- Store sensitive data using a **Kubernetes [Secret](../../../../GLOSSARY.md#secret)**.
+- Inject [secret](../../../../GLOSSARY.md#secret) values into a **[Deployment](../../../../GLOSSARY.md#deployment)** as environment variables.
 - Use **Prefixing** to map internal keys to application-specific variables.
 
 > **CKAD Importance:** Very High. Handling sensitive data correctly is a key security requirement for the exam.
@@ -19,13 +19,13 @@ This lab demonstrates how to handle **sensitive data** (passwords, tokens) in Ku
 
 In the **Central Mall**, some things can't be posted on the breakroom board.
 
-- **The High-Security Vault (Secret)** → A literal safe with a combination. Only authorized staff know how to open it.
-- **The Secret Whisper (Env Injection)** → Instead of printing the code, the manager whispers it to the worker exactly when they need it.
+- **The High-Security Vault ([Secret](../../../../GLOSSARY.md#secret))** → A literal safe with a combination. Only authorized staff know how to open it.
+- **The [Secret](../../../../GLOSSARY.md#secret) Whisper (Env Injection)** → Instead of printing the code, the manager whispers it to the worker exactly when they need it.
 - **The Application Requirement** → The MariaDB shop *requires* the vault code to open its doors.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Secret** | A secure storage for sensitive data. |
+| **[Secret](../../../../GLOSSARY.md#secret)** | A secure storage for sensitive data. |
 | **Environment Variable** | Injecting the confidential data into the process. |
 | **Prefixing** | Renaming a general code (ROOT) to a specific one (MARIADB_ROOT). |
 
@@ -33,17 +33,17 @@ In the **Central Mall**, some things can't be posted on the breakroom board.
 
 ## 📋 Requirements
 
-1. **Create a Secret** named `supersecret`:
+1. **Create a [Secret](../../../../GLOSSARY.md#secret)** named `supersecret`:
    - Key: `PASSWORD` -> Value: `password`
 2. **Deploy MariaDB** named `secretlab`:
    - Image: `mariadb`
-   - Requirement: Inject the password from the secret as `MARIADB_ROOT_PASSWORD`.
+   - Requirement: Inject the password from the [secret](../../../../GLOSSARY.md#secret) as `MARIADB_ROOT_PASSWORD`.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Create the Vault (Secret)
+### 1. Create the Vault ([Secret](../../../../GLOSSARY.md#secret))
 ```bash
 k create secret generic supersecret --from-literal=PASSWORD=password
 ```
@@ -53,7 +53,7 @@ k create secret generic supersecret --from-literal=PASSWORD=password
 k create deploy secretlab --image=mariadb
 ```
 
-### 3. The Secret Whisper (Injection)
+### 3. The [Secret](../../../../GLOSSARY.md#secret) Whisper (Injection)
 Use the `set env` command with a prefix to match what MariaDB expects!
 ```bash
 k set env deployment/secretlab --from=secret/supersecret --prefix=MARIADB_ROOT_
@@ -70,7 +70,7 @@ k set env deployment/secretlab --from=secret/supersecret --prefix=MARIADB_ROOT_
    # Output: MARIADB_ROOT_PASSWORD=password
    ```
 
-2. **Check Secret Encoding:**
+2. **Check [Secret](../../../../GLOSSARY.md#secret) Encoding:**
    Remember that secrets are Base64 encoded, not encrypted by default!
    ```bash
    k get secret supersecret -o yaml
@@ -84,7 +84,7 @@ k set env deployment/secretlab --from=secret/supersecret --prefix=MARIADB_ROOT_
 - **Security:** Secrets avoid putting passwords in plain text in your YAML files or container images.
 - **Base64:** Secrets are obscured but easy to decode. In a real mall, you'd add encryption.
 - **Application Logic:** Many database images *refuse* to start unless you provide a specific environment variable for the root password.
-- **CKAD Tip:** `kubectl set env --from=secret/name` is the fastest way to inject all keys from a secret during the exam.
+- **CKAD Tip:** `kubectl set env --from=secret/name` is the fastest way to inject all keys from a [secret](../../../../GLOSSARY.md#secret) during the exam.
 
 ---
 

@@ -7,21 +7,21 @@ In a standard shop, one clerk does everything. But in a complex **Central Mall**
 
 ## 🎭 2.1 The Team Dynamics (Design Patterns)
 
-In Kubernetes, we can put multiple workers (containers) inside the same shop (**Pod**). They share the same address (IP) and the same storage (Volumes).
+In Kubernetes, we can put multiple workers (containers) inside the same shop (**[Pod](../../GLOSSARY.md#pod)**). They share the same address (IP) and the same storage (Volumes).
 
 | Pattern | Mall Analogy | The "Why" |
 | :--- | :--- | :--- |
 | **Sidecar** | **The Security Guard** | Sits next to the clerk. While the clerk sells, the guard logs everyone who enters/exits. |
-| **Init Container** | **The Setup Crew** | Arrives before the shop opens. They set up the shelves and then leave. The shop won`t open until they finish. |
+| **[Init Container](../../GLOSSARY.md#init-container)** | **The Setup Crew** | Arrives before the shop opens. They set up the shelves and then leave. The shop won`t open until they finish. |
 | **Adapter** | **The Translator** | Takes the clerk`s messy notes and converts them into a standardized format for the Mall Management. |
 | **Ambassador** | **The Delivery Courier** | Handles all outgoing requests. The clerk just hands them a package, and the courier finds the way to the customer. |
 
 ---
 
 ## 🛠️ 2.1.1 Ephemeral Storage: The Temporary Work Table
-Some workers need a surface to lay out their tools during a shift. They share a **Temporary Work Table** (**emptyDir** volume).
+Some workers need a surface to lay out their tools during a shift. They share a **Temporary Work Table** (**[emptyDir](../../GLOSSARY.md#emptydir)** volume).
 - **Teamwork:** Both the Clerk and the Assistant can put tools on the table.
-- **Cleanup:** As soon as the shop closes (the Pod exits), the table is wiped clean. No tools or data remain for the next shift.
+- **Cleanup:** As soon as the shop closes (the [Pod](../../GLOSSARY.md#pod) exits), the table is wiped clean. No tools or data remain for the next shift.
 
 
 
@@ -36,7 +36,7 @@ The main worker writes to a local file. The Sidecar reads that file and streams 
 
 ---
 
-## 🛠️ 2.3 The Init Container: The Prep Team
+## 🛠️ 2.3 The [Init Container](../../GLOSSARY.md#init-container): The Prep Team
 
 Before a store opens, a crew must download the latest price list from the Central Office. If they fail to download it, the store **cannot** open.
 
@@ -73,7 +73,7 @@ kubectl run sidecar-pod --image=nginx --dry-run=client -o yaml > pod.yaml
 
 *Then, manually add the second container under the `containers:` list.*
 
-### 2. Monitoring the Multi-container Pod
+### 2. Monitoring the Multi-container [Pod](../../GLOSSARY.md#pod)
 
 ```bash
 # Check status (You will see READY 2/2)
@@ -89,18 +89,18 @@ kubectl exec -it <pod-name> -c <container-name> -- sh
 ---
 
 ## ⚠️ Common Exam Traps
-- **Blocking InitContainers:** If an `initContainer` fails or runs forever, the main container will *never* start. Always check `kubectl logs <pod> -c <init-container-name>` if a Pod is stuck in `Init:0/1`.
-- **Shared Network Namespace:** Containers in the same Pod share the same `localhost`. If Container A listens on port 80, Container B cannot also listen on port 80, or it will crash with a "Bind: Address already in use" error.
+- **Blocking InitContainers:** If an `initContainer` fails or runs forever, the main container will *never* start. Always check `kubectl logs <pod> -c <init-container-name>` if a [Pod](../../GLOSSARY.md#pod) is stuck in `Init:0/1`.
+- **Shared Network [Namespace](../../GLOSSARY.md#namespace):** Containers in the same [Pod](../../GLOSSARY.md#pod) share the same `localhost`. If Container A listens on port 80, Container B cannot also listen on port 80, or it will crash with a "Bind: Address already in use" error.
 - **No Imperative PV/PVC:** You cannot create PVs or PVCs using `kubectl create`. Always search the official docs for a YAML template to copy and modify.
 
 ---
 
 ## 🧪 2.4 Laboratory Roadmap: The Storage & Teamwork Journey
 
-The labs in this chapter follow a specific pedagogical progression from simple "in-pod" teamwork to advanced "external" storage.
+The labs in this chapter follow a specific pedagogical progression from simple "in-[pod](../../GLOSSARY.md#pod)" teamwork to advanced "external" storage.
 
 ### 1. The Laboratory Roadmap
-- **[Explore Chapter 02 Labs Overview](../../practice/labs/ch02-multi-container/README.md)**: A complete guide covering Sidecars, InitContainers, and different storage strategies from emptyDir to NFS.
+- **[Explore Chapter 02 Labs Overview](../../practice/labs/ch02-multi-container/README.md)**: A complete guide covering Sidecars, InitContainers, and different storage strategies from [emptyDir](../../GLOSSARY.md#emptydir) to NFS.
 
 
 ---

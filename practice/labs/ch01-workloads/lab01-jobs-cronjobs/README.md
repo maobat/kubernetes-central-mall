@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-In this lab, you'll learn how to manage tasks that don't need to run forever. You will deploy a **Job** to perform a one-time cleanup and a **CronJob** to schedule recurring maintenance staff, ensuring the mall stays tidy without manual intervention.
+In this lab, you'll learn how to manage tasks that don't need to run forever. You will deploy a **[Job](../../../../GLOSSARY.md#job)** to perform a one-time cleanup and a **[CronJob](../../../../GLOSSARY.md#cronjob)** to schedule recurring maintenance staff, ensuring the mall stays tidy without manual intervention.
 
 ---
 
@@ -19,8 +19,8 @@ In the **Central Mall**, not all workers are "Full Time" (Deployments).
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Job** | A one-time contract worker. |
-| **CronJob** | A recurring scheduled shift. |
+| **[Job](../../../../GLOSSARY.md#job)** | A one-time contract worker. |
+| **[CronJob](../../../../GLOSSARY.md#cronjob)** | A recurring scheduled shift. |
 | **Completions** | How many times the task must be finished. |
 
 ---
@@ -29,11 +29,11 @@ In the **Central Mall**, not all workers are "Full Time" (Deployments).
 
 The Mall Management needs to run a data backup and a daily report.
 
-1. **Namespace:** `default`.
-2. **Job:** `backup-job`.
+1. **[Namespace](../../../../GLOSSARY.md#namespace):** `default`.
+2. **[Job](../../../../GLOSSARY.md#job):** `backup-job`.
    - Image: `busybox`.
    - Task: `echo "Backing up Mall Database..." && sleep 5`.
-3. **CronJob:** `daily-report`.
+3. **[CronJob](../../../../GLOSSARY.md#cronjob):** `daily-report`.
    - Schedule: `*/5 * * * *` (Every 5 minutes for this lab).
    - Image: `busybox`.
    - Task: `date; echo "Report generated."`.
@@ -42,12 +42,12 @@ The Mall Management needs to run a data backup and a daily report.
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Create the One-Time Job
+### 1. Create the One-Time [Job](../../../../GLOSSARY.md#job)
 ```bash
 kubectl create job backup-job --image=busybox -- /bin/sh -c "echo 'Backing up Mall Database...' && sleep 5"
 ```
 
-### 2. Create the Recurring CronJob
+### 2. Create the Recurring [CronJob](../../../../GLOSSARY.md#cronjob)
 ```bash
 kubectl create cronjob daily-report --image=busybox --schedule="*/5 * * * * " -- /bin/sh -c "date; echo 'Report generated.'"
 ```
@@ -56,13 +56,13 @@ kubectl create cronjob daily-report --image=busybox --schedule="*/5 * * * * " --
 
 ## 🔎 Verification
 
-1. **Check Job Status:**
+1. **Check [Job](../../../../GLOSSARY.md#job) Status:**
    ```bash
    kubectl get jobs
    # Should show 1/1 completions.
    ```
 
-2. **Check CronJob Schedule:**
+2. **Check [CronJob](../../../../GLOSSARY.md#cronjob) Schedule:**
    ```bash
    kubectl get cronjobs
    # Wait for the next 5-minute mark to see a job spawned.
@@ -72,7 +72,7 @@ kubectl create cronjob daily-report --image=busybox --schedule="*/5 * * * * " --
 
 ## 🧠 Key Takeaways
 
-- **Reliability:** If a Job fails, Kubernetes will restart the pod until it completes (backoffLimit).
+- **Reliability:** If a [Job](../../../../GLOSSARY.md#job) fails, Kubernetes will restart the [pod](../../../../GLOSSARY.md#pod) until it completes (backoffLimit).
 - **Automation:** CronJobs are perfect for backups, certificate renewals, or clearing logs.
 - **CKAD Tip:** Ensure you know the cron format (`* * * * *`). It's a common area for simple mistakes.
 

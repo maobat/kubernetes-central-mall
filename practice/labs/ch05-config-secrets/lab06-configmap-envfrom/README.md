@@ -1,4 +1,4 @@
-# 🧪 LAB 06: Full Briefing (ConfigMap envFrom)
+# 🧪 LAB 06: Full Briefing ([ConfigMap](../../../../GLOSSARY.md#configmap) envFrom)
 
 ## Environment & Configuration – Injecting All Rules
 
@@ -6,8 +6,8 @@
 
 ## 🎯 Lab Goal
 
-This lab focuses on injecting an entire **ConfigMap** as Environment Variables into a Pod. You will learn how to:
-- Create a ConfigMap with multiple literal key-value pairs.
+This lab focuses on injecting an entire **[ConfigMap](../../../../GLOSSARY.md#configmap)** as Environment Variables into a [Pod](../../../../GLOSSARY.md#pod). You will learn how to:
+- Create a [ConfigMap](../../../../GLOSSARY.md#configmap) with multiple literal key-value pairs.
 - Use `envFrom` to inject all keys natively as environment variables without specifying them individually.
 
 > **CKAD Importance:** Core. Using `envFrom` saves a lot of YAML typing when an application expects multiple variables from a single configuration source.
@@ -23,27 +23,27 @@ In the **Central Mall**, the Mall Manager has a long list of daily rules for the
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **ConfigMap** | The list of daily rules. |
+| **[ConfigMap](../../../../GLOSSARY.md#configmap)** | The list of daily rules. |
 | **envFrom** | Telling the worker to memorize the entire list at once. |
 
 ---
 
 ## 📋 Requirements
 
-1. **Create a ConfigMap** named `app-config`:
+1. **Create a [ConfigMap](../../../../GLOSSARY.md#configmap)** named `app-config`:
    - `APP_MODE`: `production`
    - `APP_VERSION`: `1.0`
-2. **Deploy a Pod** named `app-pod`:
+2. **Deploy a [Pod](../../../../GLOSSARY.md#pod)** named `app-pod`:
    - Image: `nginx:1.29.0`
-   - Inject all keys from the `app-config` ConfigMap as Environment Variables using `envFrom`.
+   - Inject all keys from the `app-config` [ConfigMap](../../../../GLOSSARY.md#configmap) as Environment Variables using `envFrom`.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Create the ConfigMap
+### 1. Create the [ConfigMap](../../../../GLOSSARY.md#configmap)
 
-Create the ConfigMap with the required literal values.
+Create the [ConfigMap](../../../../GLOSSARY.md#configmap) with the required literal values.
 
 ```bash
 kubectl create cm app-config \
@@ -51,7 +51,7 @@ kubectl create cm app-config \
   --from-literal APP_VERSION=1.0
 ```
 
-### 2. Scaffold the Pod
+### 2. Scaffold the [Pod](../../../../GLOSSARY.md#pod)
 
 Generate the basic YAML.
 
@@ -59,7 +59,7 @@ Generate the basic YAML.
 kubectl run app-pod --image=nginx:1.29.0 $do > app-pod.yaml
 ```
 
-### 3. Edit the Pod Configuration
+### 3. Edit the [Pod](../../../../GLOSSARY.md#pod) Configuration
 
 Open `app-pod.yaml` and add the `envFrom` block.
 
@@ -77,7 +77,7 @@ spec:
         name: app-config
 ```
 
-Apply the pod:
+Apply the [pod](../../../../GLOSSARY.md#pod):
 ```bash
 kubectl apply -f app-pod.yaml
 ```
@@ -86,7 +86,7 @@ kubectl apply -f app-pod.yaml
 
 ## 🔎 Verification
 
-1. **Wait for the Pod to be Ready:**
+1. **Wait for the [Pod](../../../../GLOSSARY.md#pod) to be Ready:**
    ```bash
    kubectl wait --for=condition=Ready pod/app-pod --timeout=60s
    ```
@@ -111,9 +111,9 @@ kubectl apply -f app-pod.yaml
 
 ## 🧠 Key Takeaways
 
-- A ConfigMap can be mounted into Pods either as environment variables or as files (volumes).
+- A [ConfigMap](../../../../GLOSSARY.md#configmap) can be mounted into Pods either as environment variables or as files (volumes).
 - If the application supports reading environment variables, use `envFrom` to inject all keys, or `env` with `configMapKeyRef` to inject selectively.
-- If the application expects configuration files, mount the ConfigMap as a volume so each key becomes a file.
+- If the application expects configuration files, mount the [ConfigMap](../../../../GLOSSARY.md#configmap) as a volume so each key becomes a file.
 - **CKAD Tip:** Always read the question carefully. "Mount as env vars" usually indicates `env` or `envFrom`, while "does not read env vars; config must be files" indicates a `volumeMount`.
 
 ## References

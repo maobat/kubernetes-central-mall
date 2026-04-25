@@ -17,25 +17,25 @@ Understand how Kubernetes detects and fixes unhealthy containers using **Livenes
 In the **Central Mall**, we have a dedicated **Health Inspector** who walks the floors.
 
 - **The Worker (Container)** → A shop assistant at their station.
-- **The Health Check (Liveness Probe)** → The Inspector stops by every few minutes and asks, "Are you still conscious?" (HTTP GET).
+- **The Health Check ([Liveness Probe](../../../../GLOSSARY.md#liveness-probe))** → The Inspector stops by every few minutes and asks, "Are you still conscious?" (HTTP GET).
 - **The Startup Time (initialDelaySeconds)** → The worker is allowed 30 seconds to get their coffee and set up before the Inspector starts checking.
 - **The Faint (Failure)** → If the worker doesn't respond for 3 checks in a row, the Inspector declares an emergency.
 - **The Firing (Never Restart)** → If `restartPolicy` is set to `Never`, the worker is sent home and the station remains empty for safety investigation.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Liveness Probe** | "Are you still alive?" check. |
-| **Readiness Probe** | "Are you ready for customers?" check. |
+| **[Liveness Probe](../../../../GLOSSARY.md#liveness-probe)** | "Are you still alive?" check. |
+| **[Readiness Probe](../../../../GLOSSARY.md#readiness-probe)** | "Are you ready for customers?" check. |
 | **initialDelaySeconds** | Grace period to let the app start up. |
 
 ---
 
 ## 📋 Requirements
 
-1. **Pod**: Create `probed` (nginx).
-2. **Liveness Probe**: Add an HTTP check to `/healthz` on port 80.
+1. **[Pod](../../../../GLOSSARY.md#pod)**: Create `probed` (nginx).
+2. **[Liveness Probe](../../../../GLOSSARY.md#liveness-probe)**: Add an HTTP check to `/healthz` on port 80.
 3. **Restart Policy**: Set to `Never` to observe the terminal failure.
-4. **Observe**: Watch the Pod transition from `Running` to `Completed` as the probe fails.
+4. **Observe**: Watch the [Pod](../../../../GLOSSARY.md#pod) transition from `Running` to `Completed` as the probe fails.
 
 ---
 
@@ -83,8 +83,8 @@ k get pod probed -w
 
 ## 🧠 Key Takeaways
 
-- **Liveness kills Pods:** If a liveness probe fails, Kubernetes terminates the container to try and fix it (if allowed by policy).
-- **Readiness hides Pods:** If a readiness probe fails, Kubernetes just stops sending traffic to the pod (Service stops routing to it).
+- **Liveness kills Pods:** If a [liveness probe](../../../../GLOSSARY.md#liveness-probe) fails, Kubernetes terminates the container to try and fix it (if allowed by policy).
+- **Readiness hides Pods:** If a [readiness probe](../../../../GLOSSARY.md#readiness-probe) fails, Kubernetes just stops sending traffic to the [pod](../../../../GLOSSARY.md#pod) ([Service](../../../../GLOSSARY.md#service) stops routing to it).
 - **Grace Periods are Critical:** If your `initialDelaySeconds` is too short, Kubernetes might kill your app before it even finishes starting up!
 - **CKAD Tip:** Confusing Liveness and Readiness is a classic exam trap. Remember: **Liveness restarts, Readiness removes.**
 

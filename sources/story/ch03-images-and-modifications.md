@@ -1,7 +1,7 @@
 # 📖 Chapter 3: Images & Modifications
 > Creating the perfect "Mannequin"
 
-Every worker in the Central Mall starts as a **Mannequin**. Before a Shop Clerk (Pod) can start their shift, they need to be "dressed" in the perfect uniform with all the right tools. In the world of tech, this template is the **Container Image**.
+Every worker in the Central Mall starts as a **Mannequin**. Before a Shop Clerk ([Pod](../../GLOSSARY.md#pod)) can start their shift, they need to be "dressed" in the perfect uniform with all the right tools. In the world of tech, this template is the **Container Image**.
 
 ## The Master Mold (The Base Image)
 When you want to create 10 identical shop clerks, you don't dress them one by one. You create a **Master Mold**. 
@@ -23,7 +23,7 @@ When the instructions are sent to the factory, the factory produces the **Final 
 ## The Warehouse (Container Registry)
 Once the mannequins are created, they are stored in a **Warehouse**. This is the **Container Registry** (like Docker Hub or a private mall warehouse). 
 
-When the Mall Manager (Deployment) needs 3 new workers, they simply call the Warehouse and say, "Send over 3 clerks using the 'v1.0-blue-uniform' mannequin."
+When the Mall Manager ([Deployment](../../GLOSSARY.md#deployment)) needs 3 new workers, they simply call the Warehouse and say, "Send over 3 clerks using the 'v1.0-blue-uniform' mannequin."
 
 ---
 

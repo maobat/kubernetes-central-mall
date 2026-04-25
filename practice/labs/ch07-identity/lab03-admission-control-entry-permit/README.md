@@ -7,20 +7,20 @@ Understand how the **Admission Control** system acts as a policy enforcement gat
 The **Entry Permit Office** (Admission Control) is the final checkpoint. Even if a worker has a valid badge (AuthN) and a permit (AuthZ), the office can still reject them if they violate mall-wide safety rules (like not having a safety vest/resource limits) or if the specific wing is already at full capacity (Resource Quotas).
 
 ## 📋 Requirements
-1.  Create a namespace called `secure-wing`.
-2.  Apply a **ResourceQuota** to the `secure-wing` that limits the total number of pods to **2**.
+1.  Create a [namespace](../../../../GLOSSARY.md#namespace) called `secure-wing`.
+2.  Apply a **[ResourceQuota](../../../../GLOSSARY.md#resourcequota)** to the `secure-wing` that limits the total number of pods to **2**.
 3.  Deploy 2 pods successfully.
-4.  Attempt to deploy a 3rd pod and observe the **Admission Controller** rejecting the request.
+4.  Attempt to deploy a 3rd [pod](../../../../GLOSSARY.md#pod) and observe the **Admission Controller** rejecting the [request](../../../../GLOSSARY.md#request).
 5.  Inspect the events to see the "Permit Denied" message.
 
 ## 🛠️ Step-by-Step Solution
 
-1.  **Create the Namespace:**
+1.  **Create the [Namespace](../../../../GLOSSARY.md#namespace):**
     ```bash
     kubectl create ns secure-wing
     ```
 
-2.  **Create the ResourceQuota (The Wing Limit):**
+2.  **Create the [ResourceQuota](../../../../GLOSSARY.md#resourcequota) (The Wing [Limit](../../../../GLOSSARY.md#limit)):**
     ```bash
     kubectl create quota wing-limit --hard=pods=2 -n secure-wing
     ```
@@ -37,7 +37,7 @@ The **Entry Permit Office** (Admission Control) is the final checkpoint. Even if
     ```
 
 5.  **Observe the Rejection:**
-    The output should immediately show an error from the API Server (Admission Control):
+    The output should immediately show an error from the [API Server](../../../../GLOSSARY.md#api-server) (Admission Control):
     `Error from server (Forbidden): pods "worker-3" is forbidden: exceeded quota: wing-limit, requested: pods=1, used: pods=2, limited: pods=2`
 
 ## 🔎 Verification
@@ -54,7 +54,7 @@ The **Entry Permit Office** (Admission Control) is the final checkpoint. Even if
 
 ## 🧠 Key Takeaways
 - **Gatekeeper:** Admission Control intercepts requests *after* authentication and authorization but *before* the object is persisted in the ledger (etcd).
-- **Types:** There are **Validating** controllers (checks rules) and **Mutating** controllers (changes the request to fit rules, like adding default sidecars).
+- **Types:** There are **Validating** controllers (checks rules) and **Mutating** controllers (changes the [request](../../../../GLOSSARY.md#request) to fit rules, like adding default sidecars).
 - **CKAD Tip:** ResourceQuotas and LimitRanges are common examples of admission controllers encountered in the exam.
 
 ## 🔗 References

@@ -1,33 +1,33 @@
 # 🧪 LAB 03: Swapping the Mannequins (Image Updates & Rollouts)
 
-## Pod Design – Image Lifecycle & Deployment Rollouts
+## [Pod](../../../../GLOSSARY.md#pod) Design – Image Lifecycle & [Deployment](../../../../GLOSSARY.md#deployment) Rollouts
 
 ---
 
 ## 🎯 Lab Goal
 
-This lab focuses on the **lifecycle of a Deployment**. You will learn how to:
-- Create a Deployment with a specific image version.
-- Perform a **Rolling Update** to a newer version without downtime.
+This lab focuses on the **lifecycle of a [Deployment](../../../../GLOSSARY.md#deployment)**. You will learn how to:
+- Create a [Deployment](../../../../GLOSSARY.md#deployment) with a specific image version.
+- Perform a **[Rolling Update](../../../../GLOSSARY.md#rolling-update)** to a newer version without downtime.
 - Observe the rollout status and history.
 - Perform a **Rollback** (Undo) when a new version is "buggy."
 
-> **CKAD Importance:** Fundamental. Expect to perform at least one rolling update and potentially a rollback.
+> **CKAD Importance:** Fundamental. Expect to perform at least one [rolling update](../../../../GLOSSARY.md#rolling-update) and potentially a rollback.
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, a **Deployment** is like a store's management firm. Instead of closing the shop to change everyone's clothes, they do it one worker at a time.
+In the **Central Mall**, a **[Deployment](../../../../GLOSSARY.md#deployment)** is like a store's management firm. Instead of closing the shop to change everyone's clothes, they do it one worker at a time.
 
 - **The Mannequin (Image Layer)** → A frozen, unchangeable blueprint of a worker.
-- **The Uniform Swap (Rolling Update)** → Swapping the old mannequins for new ones one by one, so there's always someone at the counter.
+- **The Uniform Swap ([Rolling Update](../../../../GLOSSARY.md#rolling-update))** → Swapping the old mannequins for new ones one by one, so there's always someone at the counter.
 - **The Backroom Records (Rollout History)** → A list of all the old uniform sets we used to have.
 - **The Undo Button (Rollback)** → Realizing the new uniforms are ugly and immediately bringing back the old ones from the backroom.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Rolling Update** | Swapping workers one by one until everyone has the new uniform. |
+| **[Rolling Update](../../../../GLOSSARY.md#rolling-update)** | Swapping workers one by one until everyone has the new uniform. |
 | **Rollback** | Returning to a previous "Revision" of the uniform. |
 | **Rollout History** | The history of all uniform changes. |
 
@@ -36,7 +36,7 @@ In the **Central Mall**, a **Deployment** is like a store's management firm. Ins
 ## 📋 Requirements
 
 1. **Deploy the initial version**:
-   - Deployment Name: `manager-firm`
+   - [Deployment](../../../../GLOSSARY.md#deployment) Name: `manager-firm`
    - Replicas: `3`
    - Image: `nginx:1.14`
 2. **Perform an Update**: Change the image to `nginx:1.16`.
@@ -84,7 +84,7 @@ k rollout undo deployment/manager-firm
    # Should show 1.14 again after the rollback.
    ```
 
-2. **Check Pod Events:**
+2. **Check [Pod](../../../../GLOSSARY.md#pod) Events:**
    ```bash
    k get pods
    # Notice that pods are being terminated and new ones created during the rollout.

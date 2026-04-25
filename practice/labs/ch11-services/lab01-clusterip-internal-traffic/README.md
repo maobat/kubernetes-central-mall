@@ -16,8 +16,8 @@ This lab focuses on **ClusterIP Services**. You will learn how to create a stabl
 
 In the **Central Mall**, shops needs to talk to each other (e.g., The Cafe needs to check the Warehouse inventory).
 
-- **The Worker (Pod)** → A staff member at a specific desk. Their desk might move (Pod IP changes), making it hard to find them.
-- **The Intercom Extension (Service Name)** → A stable phone number (DNS name) like `extension-101`. No matter which desk the worker is at, if you dial `101`, the intercom finds them.
+- **The Worker ([Pod](../../../../GLOSSARY.md#pod))** → A staff member at a specific desk. Their desk might move ([Pod](../../../../GLOSSARY.md#pod) IP changes), making it hard to find them.
+- **The Intercom Extension ([Service](../../../../GLOSSARY.md#service) Name)** → A stable phone number (DNS name) like `extension-101`. No matter which desk the worker is at, if you dial `101`, the intercom finds them.
 - **The Switchboard (ClusterIP)** → The internal wiring of the mall. It only works for people *inside* the building. You can't call this extension from your house.
 
 | Kubernetes Concept | Mall Analogy |
@@ -30,9 +30,9 @@ In the **Central Mall**, shops needs to talk to each other (e.g., The Cafe needs
 
 ## 📋 Requirements
 
-1. **Deployment**: Create `staff-support` (nginx, 2 replicas).
-2. **Service**: Create a ClusterIP named `support-svc` on port 80.
-3. **Internal Test**: Use a BusyBox Pod (`testpod`) to call the service by name.
+1. **[Deployment](../../../../GLOSSARY.md#deployment)**: Create `staff-support` (nginx, 2 replicas).
+2. **[Service](../../../../GLOSSARY.md#service)**: Create a ClusterIP named `support-svc` on port 80.
+3. **Internal Test**: Use a BusyBox [Pod](../../../../GLOSSARY.md#pod) (`testpod`) to call the [service](../../../../GLOSSARY.md#service) by name.
 
 ---
 
@@ -43,7 +43,7 @@ In the **Central Mall**, shops needs to talk to each other (e.g., The Cafe needs
 k create deploy staff-support --image=nginx --replicas=2
 ```
 
-### 2. Install the Intercom (Service)
+### 2. Install the Intercom ([Service](../../../../GLOSSARY.md#service))
 Fastest way:
 ```bash
 k expose deploy staff-support --name=support-svc --port=80
@@ -78,10 +78,10 @@ k exec testpod -- wget -qO- support-svc
 
 ## 🧠 Key Takeaways
 
-- **Internal Only:** ClusterIP is the default service type. It is NOT reachable from the internet.
-- **Service Discovery:** Kubernetes handles the DNS automatically. You don't need to know the IP, just the name.
+- **Internal Only:** ClusterIP is the default [service](../../../../GLOSSARY.md#service) type. It is NOT reachable from the internet.
+- **[Service](../../../../GLOSSARY.md#service) Discovery:** Kubernetes handles the DNS automatically. You don't need to know the IP, just the name.
 - **Load Balancing:** If you have multiple pods, the intercom automatically sends your call to the next available worker.
-- **CKAD Tip:** `kubectl expose` is your best friend. It automatically creates the selectors and ports based on your deployment.
+- **CKAD Tip:** `kubectl expose` is your best friend. It automatically creates the selectors and ports based on your [deployment](../../../../GLOSSARY.md#deployment).
 
 ---
 

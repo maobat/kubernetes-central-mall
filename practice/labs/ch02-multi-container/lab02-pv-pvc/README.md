@@ -7,9 +7,9 @@
 ## 🎯 Lab Goal
 
 This lab focuses on **managing stateful data** using **PersistentVolumes (PV)** and **PersistentVolumeClaims (PVC)**. You will learn how to:
-- Create a **PersistentVolume (PV)** representing physical storage.
-- Create a **PersistentVolumeClaim (PVC)** to request storage.
-- Mount the PVC into a **Pod** to persist data across restarts.
+- Create a **[PersistentVolume](../../../../GLOSSARY.md#persistentvolume) (PV)** representing physical storage.
+- Create a **PersistentVolumeClaim (PVC)** to [request](../../../../GLOSSARY.md#request) storage.
+- Mount the PVC into a **[Pod](../../../../GLOSSARY.md#pod)** to persist data across restarts.
 
 > **CKAD Importance:** Very High. You will almost certainly have to mount a volume or create a PVC during the exam.
 
@@ -25,8 +25,8 @@ In the **Central Mall**, if a shop wants to keep inventory safe even when the st
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **PersistentVolume** | The actual physical storage units in the basement. |
-| **PersistentVolumeClaim** | The request for a unit. |
+| **[PersistentVolume](../../../../GLOSSARY.md#persistentvolume)** | The actual physical storage units in the basement. |
+| **PersistentVolumeClaim** | The [request](../../../../GLOSSARY.md#request) for a unit. |
 | **accessModes** | "Is this unit for one clerk (RWO) or many (RWM)?" |
 | **storageClassName** | "Is this a standard locker or a high-speed SSD safe?" |
 
@@ -34,18 +34,18 @@ In the **Central Mall**, if a shop wants to keep inventory safe even when the st
 
 ## 📋 Requirements
 
-1. **Create a PersistentVolume** named `task-pv-volume`:
+1. **Create a [PersistentVolume](../../../../GLOSSARY.md#persistentvolume)** named `task-pv-volume`:
    - Capacity: `1Gi`
    - Access: `ReadWriteOnce`
-   - StorageClass: `manual`
+   - [StorageClass](../../../../GLOSSARY.md#storageclass): `manual`
    - Path: `/mnt/data` (on the host)
 
 2. **Create a PersistentVolumeClaim** named `task-pv-claim`:
-   - Request: `500Mi`
+   - [Request](../../../../GLOSSARY.md#request): `500Mi`
    - Access: `ReadWriteOnce`
-   - StorageClass: `manual`
+   - [StorageClass](../../../../GLOSSARY.md#storageclass): `manual`
 
-3. **Create a Pod** named `task-pv-pod`:
+3. **Create a [Pod](../../../../GLOSSARY.md#pod)** named `task-pv-pod`:
    - Image: `nginx`
    - Mount: Connect `task-pv-claim` to `/usr/share/nginx/html`.
 
@@ -82,7 +82,7 @@ spec:
       storage: 500Mi
 ```
 
-### 3. The Shop (Pod)
+### 3. The Shop ([Pod](../../../../GLOSSARY.md#pod))
 ```yaml
 apiVersion: v1
 kind: Pod

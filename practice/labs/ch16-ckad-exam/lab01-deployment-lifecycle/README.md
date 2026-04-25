@@ -1,4 +1,4 @@
-# 🧪 Lab 01: Deployment Lifecycle (Review)
+# 🧪 Lab 01: [Deployment](../../../../GLOSSARY.md#deployment) Lifecycle (Review)
 
 ## Basic Workload Operations
 
@@ -8,21 +8,21 @@
 
 ## 🎯 Lab Goal
 
-Practice the core `kubectl` operations for managing deployments and services within a specific namespace. This is a common requirement in the CKAD exam.
+Practice the core `kubectl` operations for managing deployments and services within a specific [namespace](../../../../GLOSSARY.md#namespace). This is a common requirement in the CKAD exam.
 
-1. **Create** a deployment in a custom namespace.
-2. **Scale** the deployment.
+1. **Create** a [deployment](../../../../GLOSSARY.md#deployment) in a custom [namespace](../../../../GLOSSARY.md#namespace).
+2. **Scale** the [deployment](../../../../GLOSSARY.md#deployment).
 3. **Update** the container image.
-4. **Expose** the deployment as a service.
+4. **Expose** the [deployment](../../../../GLOSSARY.md#deployment) as a [service](../../../../GLOSSARY.md#service).
 
 ---
 
-## 🛠️ Part 1: Create a Deployment
+## 🛠️ Part 1: Create a [Deployment](../../../../GLOSSARY.md#deployment)
 
-Create a deployment named `web` in the `session283884` namespace with 3 replicas using the image `nginx:1.18`.
+Create a [deployment](../../../../GLOSSARY.md#deployment) named `web` in the `session283884` [namespace](../../../../GLOSSARY.md#namespace) with 3 replicas using the image `nginx:1.18`.
 
 > [!NOTE]
-> You may need to create the namespace first if it doesn't exist.
+> You may need to create the [namespace](../../../../GLOSSARY.md#namespace) first if it doesn't exist.
 
 ```bash
 # Create the namespace
@@ -34,9 +34,9 @@ kubectl -n session283884 create deployment web --image=nginx:1.18 --replicas=3
 
 ---
 
-## 🛠️ Part 2: Scale the Deployment
+## 🛠️ Part 2: Scale the [Deployment](../../../../GLOSSARY.md#deployment)
 
-Scale the existing deployment named `web` in the `session283884` namespace to **5 replicas**.
+Scale the existing [deployment](../../../../GLOSSARY.md#deployment) named `web` in the `session283884` [namespace](../../../../GLOSSARY.md#namespace) to **5 replicas**.
 
 ```bash
 kubectl -n session283884 scale deployment web --replicas=5
@@ -44,9 +44,9 @@ kubectl -n session283884 scale deployment web --replicas=5
 
 ---
 
-## 🛠️ Part 3: Update Deployment Image
+## 🛠️ Part 3: Update [Deployment](../../../../GLOSSARY.md#deployment) Image
 
-Update the deployment named `web` in the `session283884` namespace to use the image `nginx:1.19`.
+Update the [deployment](../../../../GLOSSARY.md#deployment) named `web` in the `session283884` [namespace](../../../../GLOSSARY.md#namespace) to use the image `nginx:1.19`.
 
 ```bash
 kubectl -n session283884 set image deployment/web nginx=nginx:1.19
@@ -55,9 +55,9 @@ kubectl -n session283884 rollout status deployment/web
 
 ---
 
-## 🛠️ Part 4: Create a ClusterIP Service
+## 🛠️ Part 4: Create a ClusterIP [Service](../../../../GLOSSARY.md#service)
 
-Expose the deployment `web` in the `session283884` namespace as a **ClusterIP** service on port 80.
+Expose the [deployment](../../../../GLOSSARY.md#deployment) `web` in the `session283884` [namespace](../../../../GLOSSARY.md#namespace) as a **ClusterIP** [service](../../../../GLOSSARY.md#service) on port 80.
 
 ```bash
 kubectl -n session283884 expose deployment web --port=80 --target-port=80 --type=ClusterIP
@@ -78,8 +78,8 @@ kubectl -n session283884 expose deployment web --port=80 --target-port=80 --type
 ## 🧠 Key Takeaways
 
 -   Moving between namespaces requires the `-n` or `--namespace` flag.
--   `kubectl set image` is the standard way to trigger a rolling update.
--   `expose` is a quick way to create a service mapping to a deployment's pods.
+-   `kubectl set image` is the standard way to trigger a [rolling update](../../../../GLOSSARY.md#rolling-update).
+-   `expose` is a quick way to create a [service](../../../../GLOSSARY.md#service) mapping to a [deployment](../../../../GLOSSARY.md#deployment)'s pods.
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

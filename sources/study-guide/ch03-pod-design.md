@@ -14,7 +14,7 @@ To get a worker into the mall, they follow a specific path. If any part of this 
 | **The Blueprint** | The tailor's instructions. | **Dockerfile** |
 | **The Warehouse** | Where all mannequins are stored. | **Registry** (DockerHub, GCR) |
 | **The Export** | Packaging the mannequin for transport. | **Buildx / OCI Archive** |
-| **The Uniform Swap** | Swapping the old for the new. | **Rolling Update** |
+| **The Uniform Swap** | Swapping the old for the new. | **[Rolling Update](../../GLOSSARY.md#rolling-update)** |
 
 ---
 
@@ -73,7 +73,7 @@ kubectl rollout undo deployment/manager-firm
 
 Sometimes, your mannequins are kept in a **Private Warehouse** (Private Registry). To get them, the Mall Manager needs a special "Key" called an `imagePullSecret`. 
 
-Without this key, the manager will stand at the warehouse door and the Pod will show: `ImagePullBackOff`.
+Without this key, the manager will stand at the warehouse door and the [Pod](../../GLOSSARY.md#pod) will show: `ImagePullBackOff`.
 
 ```yaml
 apiVersion: v1
@@ -91,7 +91,7 @@ spec:
 ---
 
 ## ⚠️ Common Exam Traps
-- **The `:latest` Trap:** If you don't specify an image tag, or use `:latest`, Kubernetes sets `imagePullPolicy: Always`. This means it checks the registry *every time* the container restarts. If the cluster loses internet access, your `latest` Pod will fail to restart with `ImagePullBackOff`.
+- **The `:latest` Trap:** If you don't specify an image tag, or use `:latest`, Kubernetes sets `imagePullPolicy: Always`. This means it checks the registry *every time* the container restarts. If the cluster loses internet access, your `latest` [Pod](../../GLOSSARY.md#pod) will fail to restart with `ImagePullBackOff`.
 - **Typos in Image Names:** The most common cause of `ErrImagePull` in the exam is a simple typo (e.g., `niginx` instead of `nginx`). Always verify the spelling using `kubectl describe pod`.
 
 ---

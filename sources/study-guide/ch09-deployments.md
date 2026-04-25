@@ -1,11 +1,11 @@
 # 📖 Chapter 9: Launch Strategies
 *The Renovation, the Sign Swap, and the Taste Test*
 
-In the **Central Mall**, a grand opening is a high-stakes event. If you open a new shop and the lights don't work, customers leave disappointed. To prevent this, successful managers use three strategies: the **Seamless Renovation** (Rolling Update), the **Sign Swap** (Blue/Green), and the **Taste Test** (Canary).
+In the **Central Mall**, a grand opening is a high-stakes event. If you open a new shop and the lights don't work, customers leave disappointed. To prevent this, successful managers use three strategies: the **Seamless Renovation** ([Rolling Update](../../GLOSSARY.md#rolling-update)), the **Sign Swap** (Blue/Green), and the **Taste Test** (Canary).
 
 ---
 
-## 🎭 9.1 Rolling Update: The Seamless Renovation
+## 🎭 9.1 [Rolling Update](../../GLOSSARY.md#rolling-update): The Seamless Renovation
 
 This is the default strategy for a reason. Kubernetes replaces old workers with new ones, one by one, ensuring that the shop is always open for business.
 
@@ -20,7 +20,7 @@ This is the default strategy for a reason. Kubernetes replaces old workers with 
 
 ---
 
-## 🎭 9.2 Blue/Green Deployment: The Sign Swap
+## 🎭 9.2 [Blue/Green Deployment](../../GLOSSARY.md#bluegreen-deployment): The Sign Swap
 
 Imagine you have two identical storefronts: **Store A (Blue)** and **Store B (Green)**. 
 
@@ -28,20 +28,20 @@ Imagine you have two identical storefronts: **Store A (Blue)** and **Store B (Gr
 2. **Green (New):** You build the entire green shop behind a curtain. You test the lights and stock the shelves while nobody is looking.
 3. **The Swap:** Once Green is ready, you simply move the "Main Entrance" sign from Blue to Green.
 
-In Kubernetes, this is done by updating a **Service's selector** to point to the Green shop's labels.
+In Kubernetes, this is done by updating a **[Service](../../GLOSSARY.md#service)'s selector** to point to the Green shop's labels.
 
 ---
 
-## ☎️ Resource: Service Selectors & Label Matching
+## ☎️ Resource: [Service](../../GLOSSARY.md#service) Selectors & Label Matching
 
-In the **Central Mall**, a Service is an intercom system. The `--selector` flag defines exactly which desks will ring when a customer calls.
+In the **Central Mall**, a [Service](../../GLOSSARY.md#service) is an intercom system. The `--selector` flag defines exactly which desks will ring when a customer calls.
 
 ### 🧩 The "Hard-Coded" Selector
 When using `kubectl expose --selector=key=value`, you are overriding the default behavior.
 
 | Component | Function | Mall Analogy |
 | :--- | :--- | :--- |
-| **Service Name** | `wonderful` | The name on the directory board. |
+| **[Service](../../GLOSSARY.md#service) Name** | `wonderful` | The name on the directory board. |
 | **Port** | `80` | The number the customer dials. |
 | **Target Port** | `80` | The phone on the worker's desk. |
 | **Selector** | `app=w,version=v1` | The specific "Skills" or "Badges" required to answer. |
@@ -55,20 +55,20 @@ This command "re-wires" the intercom to the new office (v2) in milliseconds.
 
 ---
 
-## 🎭 9.3 Canary Deployment: The Taste Test
+## 🎭 9.3 [Canary Deployment](../../GLOSSARY.md#canary-deployment): The Taste Test
 
-A **Canary Deployment** is like a free sample station. You don't move everyone at once. 
+A **[Canary Deployment](../../GLOSSARY.md#canary-deployment)** is like a free sample station. You don't move everyone at once. 
 
 1. You open a tiny corner of the new shop (the "Canary") and invite 10% of your customers to try it.
 2. If they like it, you slowly expand the corner until the new version takes over.
 
-**Lab Tip:** In Kubernetes, we do this by having two Deployments (v1.14 and latest) sharing the same **Service**. By adjusting the **number of replicas** (e.g., 3 Old, 1 Canary), you control the traffic split! For more advanced control, you'd use an **Ingress** or **Service Mesh**.
+**Lab Tip:** In Kubernetes, we do this by having two Deployments (v1.14 and latest) sharing the same **[Service](../../GLOSSARY.md#service)**. By adjusting the **number of replicas** (e.g., 3 Old, 1 Canary), you control the traffic split! For more advanced control, you'd use an **[Ingress](../../GLOSSARY.md#ingress)** or **[Service](../../GLOSSARY.md#service) Mesh**.
 
 ---
 
 ## ⚖️ Strategy Comparison
 
-| Feature | Rolling Update | Blue-Green | Canary |
+| Feature | [Rolling Update](../../GLOSSARY.md#rolling-update) | Blue-Green | Canary |
 | :--- | :--- | :--- | :--- |
 | **Native in Deploy?**| ✅ Yes | ❌ No (Pattern) | ❌ No (Pattern) |
 | **Mixed Versions?** | ⚠️ Yes | ✅ No | ⚠️ Yes (by design) |
@@ -76,22 +76,22 @@ A **Canary Deployment** is like a free sample station. You don't move everyone a
 | **Resources** | 🪙 Normal | 💰 2x Needed | 🪙 Normal |
 
 ### Pros & Cons
-- **Rolling Update:** Zero downtime and automatic, but rollback is slower and versions mix during the move.
+- **[Rolling Update](../../GLOSSARY.md#rolling-update):** Zero downtime and automatic, but rollback is slower and versions mix during the move.
 - **Blue-Green:** Instant rollback and no version mixing, but requires double resources and a manual switch.
-- **Canary:** Safest for real-user testing and gradual risk, but requires more complex routing (Ingress/Mesh).
+- **Canary:** Safest for real-user testing and gradual risk, but requires more complex routing ([Ingress](../../GLOSSARY.md#ingress)/Mesh).
 
 ---
 
 ## 🧠 Quick CKAD Memory Trick
 
-| Strategy | Traffic Style | Pod State |
+| Strategy | Traffic Style | [Pod](../../GLOSSARY.md#pod) State |
 | :--- | :--- | :--- |
-| **Rolling Update** | Gradual replacement | Mixed versions |
+| **[Rolling Update](../../GLOSSARY.md#rolling-update)** | Gradual replacement | Mixed versions |
 | **Blue-Green** | Instant switch | Separate environments |
 | **Canary** | Partial traffic testing | Percentage-based |
 
 > [!IMPORTANT]
-> **Exam Note:** Only `RollingUpdate` is native to the `Deployment` spec. Blue-Green and Canary are architectural patterns implemented using Services, Ingress, or Service Mesh.
+> **Exam Note:** Only `RollingUpdate` is native to the `Deployment` spec. Blue-Green and Canary are architectural patterns implemented using Services, [Ingress](../../GLOSSARY.md#ingress), or [Service](../../GLOSSARY.md#service) Mesh.
 
 ---
 
@@ -118,14 +118,14 @@ kubectl rollout undo deployment/clerk-dept
 ---
 
 ## ⚠️ Common Exam Traps
-- **Selector Mismatches:** Once a Deployment is created, its `matchLabels` selector is **immutable**. You cannot change it to fix a typo. You must delete the Deployment and recreate it.
-- **Rollout History:** If you don't use the `--record` flag (or `CHANGE-CAUSE` annotations), `kubectl rollout history` will show a blank `revision` cause. In recent k8s versions, `--record` is deprecated, so exams may prefer you manually annotate the Deployment.
+- **Selector Mismatches:** Once a [Deployment](../../GLOSSARY.md#deployment) is created, its `matchLabels` selector is **immutable**. You cannot change it to fix a typo. You must delete the [Deployment](../../GLOSSARY.md#deployment) and recreate it.
+- **Rollout History:** If you don't use the `--record` flag (or `CHANGE-CAUSE` annotations), `kubectl rollout history` will show a blank `revision` cause. In recent k8s versions, `--record` is deprecated, so exams may prefer you manually annotate the [Deployment](../../GLOSSARY.md#deployment).
 
 ---
 
 ### 🧰 Study Toolbox
 
-* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
+* 🎙️ **Audio Overview:** [Request](../../GLOSSARY.md#request) the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 **🎨 Visualize the Analogy**
 * [Explore Chapter 9 Comics](../../visual-learning/comics/ch09-launch/README.md)
 

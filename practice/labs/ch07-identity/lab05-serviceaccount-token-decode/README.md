@@ -1,4 +1,4 @@
-# 🧪 LAB 05: ServiceAccount Token Decode
+# 🧪 LAB 05: [ServiceAccount](../../../../GLOSSARY.md#serviceaccount) Token Decode
 
 ## Identity & Access – The Magnetic ID Badge
 
@@ -6,16 +6,16 @@
 
 ## 🎯 Lab Goal
 
-Learn how to locate the **Secret** linked to a **ServiceAccount**, extract the base64-encoded token, and decode it into a human-readable string.
+Learn how to locate the **[Secret](../../../../GLOSSARY.md#secret)** linked to a **[ServiceAccount](../../../../GLOSSARY.md#serviceaccount)**, extract the base64-encoded token, and decode it into a human-readable string.
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, every specialized worker (ServiceAccount) has a digital chip in their **Magnetic ID Badge**. Sometimes, the Security Office needs to "dump" the data from that chip to verify the encrypted authorization token stored inside.
+In the **Central Mall**, every specialized worker ([ServiceAccount](../../../../GLOSSARY.md#serviceaccount)) has a digital chip in their **Magnetic ID Badge**. Sometimes, the Security Office needs to "dump" the data from that chip to verify the encrypted authorization token stored inside.
 
-- **ServiceAccount** → The worker's ID card.
-- **Secret** → The encrypted digital chip on the card.
+- **[ServiceAccount](../../../../GLOSSARY.md#serviceaccount)** → The worker's ID card.
+- **[Secret](../../../../GLOSSARY.md#secret)** → The encrypted digital chip on the card.
 - **Token** → The actual access code stored on the chip.
 
 ---
@@ -24,7 +24,7 @@ In the **Central Mall**, every specialized worker (ServiceAccount) has a digital
 
 ### Part 1: Local Setup
 
-If you are running this in a local environment, you need to create the namespace and the ServiceAccount first. Since modern Kubernetes (1.24+) does not create secrets automatically for ServiceAccounts, we will create one manually.
+If you are running this in a local environment, you need to create the [namespace](../../../../GLOSSARY.md#namespace) and the [ServiceAccount](../../../../GLOSSARY.md#serviceaccount) first. Since modern Kubernetes (1.24+) does not create secrets automatically for ServiceAccounts, we will create one manually.
 
 ```bash
 # 1. Create the namespace
@@ -55,10 +55,10 @@ kubectl apply -f sa-secret.yaml
 
 ### Part 2: Retrieve and Decode the Token
 
-Your task is to locate the Secret linked to the ServiceAccount `neptune-sa-v2` in the `neptune` namespace, decode the token, and save it.
+Your task is to locate the [Secret](../../../../GLOSSARY.md#secret) linked to the [ServiceAccount](../../../../GLOSSARY.md#serviceaccount) `neptune-sa-v2` in the `neptune` [namespace](../../../../GLOSSARY.md#namespace), decode the token, and save it.
 
-1. Find the Secret associated with the ServiceAccount `neptune-sa-v2`.
-2. Extract the `token` from the Secret's data.
+1. Find the [Secret](../../../../GLOSSARY.md#secret) associated with the [ServiceAccount](../../../../GLOSSARY.md#serviceaccount) `neptune-sa-v2`.
+2. Extract the `token` from the [Secret](../../../../GLOSSARY.md#secret)'s data.
 3. Decode the base64 string.
 4. Save the exact decoded token string to `/tmp/token` (locally) or `/opt/course/5/token` (if in exam env).
 

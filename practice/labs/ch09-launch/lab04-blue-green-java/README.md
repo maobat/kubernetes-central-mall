@@ -9,9 +9,9 @@
 
 ## 🎯 Lab Goal
 
-Perform a complete **Blue-Green Deployment** lifecycle using two real Java applications. You will inspect both versions, switch the traffic, and then reverse it, building muscle memory for the exam pattern.
+Perform a complete **Blue-Green [Deployment](../../../../GLOSSARY.md#deployment)** lifecycle using two real Java applications. You will inspect both versions, switch the traffic, and then reverse it, building muscle memory for the exam pattern.
 
-> **CKAD Importance:** High. Blue-Green deployments are tested through Service selector manipulation. The challenge sections below simulate real CKAD scenarios.
+> **CKAD Importance:** High. Blue-Green deployments are tested through [Service](../../../../GLOSSARY.md#service) selector manipulation. The challenge sections below simulate real CKAD scenarios.
 
 ---
 
@@ -21,10 +21,10 @@ Two café storefronts exist side by side in the mall: **Blue Café (v1)** says "
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| `hello-java-blue-v1` Deployment | Blue Café, currently open |
-| `hello-java-green-v2` Deployment | Green Café, ready to serve |
-| `svc-java-blue` Service | The Blue Café entrance sign |
-| Editing the Service selector | Moving the sign overnight |
+| `hello-java-blue-v1` [Deployment](../../../../GLOSSARY.md#deployment) | Blue Café, currently open |
+| `hello-java-green-v2` [Deployment](../../../../GLOSSARY.md#deployment) | Green Café, ready to serve |
+| `svc-java-blue` [Service](../../../../GLOSSARY.md#service) | The Blue Café entrance sign |
+| Editing the [Service](../../../../GLOSSARY.md#service) selector | Moving the sign overnight |
 
 ---
 
@@ -72,7 +72,7 @@ curl http://$MINIKUBE_IP:30000   # → Hello Green
 
 ## 🛠️ Part 1, Switch Blue to serve Green
 
-The goal is to redirect traffic on port `30001` (the Blue entrance) so it now serves the Green app, without touching the Deployment, only the Service.
+The goal is to redirect traffic on port `30001` (the Blue entrance) so it now serves the Green app, without touching the [Deployment](../../../../GLOSSARY.md#deployment), only the [Service](../../../../GLOSSARY.md#service).
 
 ### 1. Inspect the current selector
 
@@ -81,7 +81,7 @@ kubectl describe svc svc-java-blue | grep Selector
 # Selector: app=hello-java-blue,version=v1
 ```
 
-### 2. Edit the Service to point to the Green Deployment
+### 2. Edit the [Service](../../../../GLOSSARY.md#service) to point to the Green [Deployment](../../../../GLOSSARY.md#deployment)
 
 ```bash
 kubectl edit svc svc-java-blue
@@ -113,7 +113,7 @@ Or: `minikube service svc-java-blue --url` and open the URL in your browser.
 
 Now perform the same swap on `svc-java-green` (port `30000`). Direct its traffic to the Blue app instead.
 
-Edit the service:
+Edit the [service](../../../../GLOSSARY.md#service):
 
 ```bash
 kubectl edit svc svc-java-green
@@ -138,7 +138,7 @@ curl http://$(minikube ip):30000
 
 ## 🎯 Challenge
 
-Create a brand-new Deployment using the image `hashicorp/http-echo:latest`, apply the label `version: "3"` to its pods, expose it via a **NodePort Service** on port `8080`, and visit the resulting web page.
+Create a brand-new [Deployment](../../../../GLOSSARY.md#deployment) using the image `hashicorp/http-echo:latest`, apply the label `version: "3"` to its pods, expose it via a **NodePort [Service](../../../../GLOSSARY.md#service)** on port `8080`, and visit the resulting web page.
 
 **What does the page say?**
 
@@ -172,14 +172,14 @@ curl http://$(minikube ip):<nodeport-from-above>
 | Port `30001` after Part 1 | "Hello Green" |
 | Port `30000` after Part 2 | "Hello Blue" |
 | New NodePort from Challenge | Page renders v3 message |
-| `kubectl get endpoints <svc>` | Shows correct pod IPs |
+| `kubectl get endpoints <svc>` | Shows correct [pod](../../../../GLOSSARY.md#pod) IPs |
 
 ---
 
 ## 🧠 Key Takeaways
 
-- **Service selectors are the only lever** in a Blue-Green switch, no Deployment changes needed.
-- **Labels must match exactly**: a single mismatch (`v2` vs `v2 `) means zero endpoints and a broken service.
+- **[Service](../../../../GLOSSARY.md#service) selectors are the only lever** in a Blue-Green switch, no [Deployment](../../../../GLOSSARY.md#deployment) changes needed.
+- **Labels must match exactly**: a single mismatch (`v2` vs `v2 `) means zero endpoints and a broken [service](../../../../GLOSSARY.md#service).
 - **Instant rollback**: changing the selector back restores v1 in milliseconds.
 - Blue-Green requires **double the resources** during the overlap window.
 
@@ -195,7 +195,7 @@ curl http://$(minikube ip):<nodeport-from-above>
 | | **Lab 02** | **This lab (Lab 04)** |
 | :--- | :--- | :--- |
 | **Focus** | Build the full Blue-Green setup from scratch | Practice the switch & reverse with pre-built apps |
-| **You author** | Deployments, labels, Service YAML | Only Service selector edits |
+| **You author** | Deployments, labels, [Service](../../../../GLOSSARY.md#service) YAML | Only [Service](../../../../GLOSSARY.md#service) selector edits |
 | **Bonus** |, | Challenge: deploy a v3 app from scratch |
 | **Best for** | Understanding the pattern | Exam-speed muscle memory |
 

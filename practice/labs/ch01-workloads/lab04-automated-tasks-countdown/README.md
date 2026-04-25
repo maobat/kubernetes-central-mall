@@ -6,8 +6,8 @@ In this lab, you will learn how to handle one-time procedural tasks (Jobs) and r
 
 ## 🛍️ Mall Analogy
 In the **Central Mall**, some tasks are predictable and procedural.
-- **The Countdown (Job)** → A specialized contractor hired to count down the seconds until the grand opening. Once they hit "1", they pack up and leave.
-- **The Scheduled Report (CronJob)** → A clerk who prints the daily sales report at a specific time every day. You don't have to remind them; it's in their job description.
+- **The Countdown ([Job](../../../../GLOSSARY.md#job))** → A specialized contractor hired to count down the seconds until the grand opening. Once they hit "1", they pack up and leave.
+- **The Scheduled Report ([CronJob](../../../../GLOSSARY.md#cronjob))** → A clerk who prints the daily sales report at a specific time every day. You don't have to remind them; it's in their [job](../../../../GLOSSARY.md#job) description.
 
 ---
 
@@ -17,7 +17,7 @@ In the **Central Mall**, some tasks are predictable and procedural.
 We have a file named `job-countdown.yaml` that uses a `centos:7` worker to run a for-loop.
 
 ### 2. Hire the Worker
-Start the job:
+Start the [job](../../../../GLOSSARY.md#job):
 ```bash
 kubectl apply -f job-countdown.yaml
 ```
@@ -27,7 +27,7 @@ List the jobs and pods:
 ```bash
 kubectl get job,po
 ```
-(Look for `countdown` with 1/1 completions and a pod in `Completed` status).
+(Look for `countdown` with 1/1 completions and a [pod](../../../../GLOSSARY.md#pod) in `Completed` status).
 
 ### 4. Check the "Incident Report" (Logs)
 Verify that the work was done correctly:
@@ -56,7 +56,7 @@ kubectl get cj,job,po
 ---
 
 ## 🧠 Key Takeaways
-- **Job Identity**: Jobs create pods with randomized suffixes (e.g., `countdown-mqd2s`).
+- **[Job](../../../../GLOSSARY.md#job) Identity**: Jobs create pods with randomized suffixes (e.g., `countdown-mqd2s`).
 - **Execution History**: CronJobs keep a history of successful and failed jobs, which can be configured using `successfulJobsHistoryLimit`.
 
 ---

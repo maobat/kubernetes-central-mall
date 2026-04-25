@@ -1,5 +1,5 @@
 # 📖 Chapter 10: Logistics & API Management
-*Shipping Containers (Helm & Kustomize)*
+*Shipping Containers ([Helm](../../GLOSSARY.md#helm) & Kustomize)*
 
 In the **Central Mall**, if a corporation like "Nginx-Corp" wants to open a store, they don`t send a construction crew with raw bricks. They send a **Shipping Container** (Helm Chart) that includes the walls, the staff, the manual, and the keys—all ready to be unpacked in one go.
 
@@ -30,19 +30,19 @@ In the **Central Mall**, if a corporation like "Nginx-Corp" wants to open a stor
 
 ## 🎭 10.3 API Versions & Renovations
 
-The **Management Office** (API Server) frequently updates its filing system. Blueprints that worked yesterday might be "Deprecated" (Old Style) today.
+The **Management Office** ([API Server](../../GLOSSARY.md#api-server)) frequently updates its filing system. Blueprints that worked yesterday might be "Deprecated" (Old Style) today.
 
 * **Stable (v1):** The current, approved filing standard.
 * **Beta (v1beta1):** A newer standard being tested but not yet final.
 * **Alpha (v1alpha1):** Experimental blueprints.
 
-**CKAD Tip:** You must be able to convert a deprecated manifest (like an old CronJob) to the current stable version for the exam. Use `kubectl explain <resource>` to see the current version.
+**CKAD Tip:** You must be able to convert a deprecated manifest (like an old [CronJob](../../GLOSSARY.md#cronjob)) to the current stable version for the exam. Use `kubectl explain <resource>` to see the current version.
 
 ---
 
 ## 🛠️ The Blueprint (CKAD Speed-Run)
 
-### 1. The Helm Toolkit
+### 1. The [Helm](../../GLOSSARY.md#helm) Toolkit
 You might be asked to search for a package or install one during the exam.
 ```bash
 # Search the warehouse for Nginx
@@ -68,8 +68,8 @@ kubectl apply -k ./overlays/production
 ---
 
 ## ⚠️ Common Exam Traps
-- **Apply `-k` vs `-f`:** When deploying a Kustomization directory, you MUST use `kubectl apply -k <dir>`. If you use `-f`, it will ignore the `kustomization.yaml` and try to apply plain files, which usually fails or results in the wrong configuration.
-- **Extracting Values:** When working with Helm, you often need to fetch the default values before customizing them. Use `helm show values <repo/chart> > values.yaml`, modify the file, and then deploy it using `helm install -f values.yaml`.
+- **Apply `-k` vs `-f`:** When deploying a Kustomization directory, you MUST use `[kubectl](../../GLOSSARY.md#kubectl) apply -k <dir>`. If you use `-f`, it will ignore the `kustomization.yaml` and try to apply plain files, which usually fails or results in the wrong configuration.
+- **Extracting Values:** When working with Helm, you often need to fetch the default values before customizing them. Use `[helm](../../GLOSSARY.md#helm) show values <repo/chart> > values.yaml`, modify the file, and then deploy it using `[helm](../../GLOSSARY.md#helm) install -f values.yaml`.
 
 ---
 

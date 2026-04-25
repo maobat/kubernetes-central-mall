@@ -1,28 +1,28 @@
 # 📖 Chapter 11: Finding the Stores
 *Intercoms and Delivery Bays (Services)*
 
-In the **Central Mall**, shops move around. One day a bakery is in Stall A, the next day it might move to Stall B because of a plumbing issue. If customers tried to find the bakery by its "Stall Number" (Pod IP), they would get lost. Instead, we give every shop a permanent **Intercom Number** (Service).
+In the **Central Mall**, shops move around. One day a bakery is in Stall A, the next day it might move to Stall B because of a plumbing issue. If customers tried to find the bakery by its "Stall Number" ([Pod](../../GLOSSARY.md#pod) IP), they would get lost. Instead, we give every shop a permanent **Intercom Number** ([Service](../../GLOSSARY.md#service)).
 
 ---
 
-## 🎭 11.1 The Service Types
+## 🎭 11.1 The [Service](../../GLOSSARY.md#service) Types
 
-| Service Type | Mall Analogy | The "Why" |
+| [Service](../../GLOSSARY.md#service) Type | Mall Analogy | The "Why" |
 | :--- | :--- | :--- |
 | **ClusterIP** | **Internal Intercom** | Only workers inside the mall can call this number. Perfect for a database "Backroom." |
 | **NodePort** | **The Delivery Bay** | Opens a specific door (port) on the outside of the mall building. Customers can drive up to any mall entrance and find you. |
-| **LoadBalancer** | **The Grand Entrance** | A dedicated valet service that directs traffic from the main highway straight to your store. |
+| **LoadBalancer** | **The Grand Entrance** | A dedicated valet [service](../../GLOSSARY.md#service) that directs traffic from the main highway straight to your store. |
 
 
 
 ---
 
-## 🎭 11.2 Cross-Namespace Navigation
+## 🎭 11.2 Cross-[Namespace](../../GLOSSARY.md#namespace) Navigation
 
 The Mall is divided into floors (**Namespaces**). If you are on the "Finance" floor and need to talk to the "HR" floor, you can`t just shout. You need the full address.
 
 **The Full Address Format:**
-`service-name.namespace-name.svc.cluster.local`
+`[service](../../GLOSSARY.md#service)-name.[namespace](../../GLOSSARY.md#namespace)-name.svc.cluster.local`
 
 
 
@@ -89,7 +89,7 @@ graph LR
 
 ## ⚠️ Common Exam Traps
 - **`port` vs `targetPort` Confusion:** `port` is the port the Service listens on. `targetPort` is the port your container is actually listening on. A mismatch here is the #1 reason a Service fails to forward traffic.
-- **Label Mismatches:** If `kubectl get ep <service>` shows `<none>`, it means the Service's selector does not match the Pod's labels perfectly. Even a single typo in the label stops all traffic.
+- **Label Mismatches:** If `[kubectl](../../GLOSSARY.md#kubectl) get ep <service>` shows `<none>`, it means the [Service](../../GLOSSARY.md#service)'s selector does not match the [Pod](../../GLOSSARY.md#pod)'s labels perfectly. Even a single typo in the label stops all traffic.
 
 ---
 

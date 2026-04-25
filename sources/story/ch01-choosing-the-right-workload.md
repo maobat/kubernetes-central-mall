@@ -5,45 +5,45 @@ In the **Central Mall**, every task requires a different type of staff. You woul
 
 ---
 
-## 👤 The Shop Clerk (Pod)
-The **Pod** is the most basic unit—the **individual employee**. A clerk has a specific skill (running a containerized app) and is assigned to a specific shop (Namespace).
+## 👤 The Shop Clerk ([Pod](../../GLOSSARY.md#pod))
+The **[Pod](../../GLOSSARY.md#pod)** is the most basic unit—the **individual employee**. A clerk has a specific skill (running a containerized app) and is assigned to a specific shop ([Namespace](../../GLOSSARY.md#namespace)).
 
 However, clerks in the Central Mall are considered "mortal." If a clerk gets sick or decides to leave, they don't automatically come back. For a robust business, you need someone to oversee them.
 
 ---
 
-## 👔 The Store Manager (Deployment)
-Most shops in the mall are run by a **Store Manager**. This is the **Deployment**.
+## 👔 The Store Manager ([Deployment](../../GLOSSARY.md#deployment))
+Most shops in the mall are run by a **Store Manager**. This is the **[Deployment](../../GLOSSARY.md#deployment)**.
 
-The Manager's job isn't to do the work themselves, but to ensure the **"Desired State"** is met. If the owner says, "I need 3 clerks at the jewelry counter," the Manager makes sure 3 people are always there. These clerks are **Stateless**: they are identical and interchangeable. If one disappears, the Manager hires a replacement immediately.
-
----
-
-## 💎 The Boutique Owner (StatefulSet)
-Unlike interchangeable clerks, some shops require specialized owners who need a **Fixed Address** and a **Personal Safe**. This is the **StatefulSet**.
-
-If the owner of **Boutique-0** leaves, their replacement **must** take over the same desk (Network Identity) and the same safe (Persistent Volume). In a StatefulSet, every worker is an individual with a unique ID (0, 1, 2) that never changes.
+The Manager's [job](../../GLOSSARY.md#job) isn't to do the work themselves, but to ensure the **"Desired State"** is met. If the owner says, "I need 3 clerks at the jewelry counter," the Manager makes sure 3 people are always there. These clerks are **Stateless**: they are identical and interchangeable. If one disappears, the Manager hires a replacement immediately.
 
 ---
 
-## 💂 The Floor Security (DaemonSet)
-In the Central Mall, some staff aren't assigned to a single boutique. Instead, the mall owner ensures there is exactly one **Security Guard** on **every single floor** of the building. This is the **DaemonSet**.
+## 💎 The Boutique Owner ([StatefulSet](../../GLOSSARY.md#statefulset))
+Unlike interchangeable clerks, some shops require specialized owners who need a **Fixed Address** and a **Personal Safe**. This is the **[StatefulSet](../../GLOSSARY.md#statefulset)**.
 
-As soon as a new floor (Node) is added to the mall, a Security Guard (Pod) is automatically hired to work there. If a floor is removed, the Guard leaves. DaemonSets are perfect for mall-wide services like background music (logging), air filtration (monitoring), or general security (networking).
-
----
-
-## 🌙 The Night-Shift Worker (Job)
-Sometimes, the mall needs a specific task done just once—like moving a heavy safe or performing a one-time inventory count. For this, we hire a **Night-Shift Worker**. This is the **Job**.
-
-Unlike a Clerk who stays as long as the shop is open, a Night-Shift Worker arrives, completes their specific task, and then leaves. If they fail, the Mall Manager will make them try again until the job is done.
+If the owner of **Boutique-0** leaves, their replacement **must** take over the same desk (Network Identity) and the same safe (Persistent Volume). In a [StatefulSet](../../GLOSSARY.md#statefulset), every worker is an individual with a unique ID (0, 1, 2) that never changes.
 
 ---
 
-## ⏰ The Recurring Maintenance Crew (CronJob)
-What if the mall needs the windows cleaned every Monday morning? You don't want a worker sitting around all week waiting. Instead, you hire a **Recurring Maintenance Crew**. This is the **CronJob**.
+## 💂 The Floor Security ([DaemonSet](../../GLOSSARY.md#daemonset))
+In the Central Mall, some staff aren't assigned to a single boutique. Instead, the mall owner ensures there is exactly one **Security Guard** on **every single floor** of the building. This is the **[DaemonSet](../../GLOSSARY.md#daemonset)**.
 
-The CronJob follows a strict schedule (the "Cron" format). When the time comes, it automatically "hires" a Night-Shift Worker (Job) to perform the task. Once the windows are sparkling, the worker leaves.
+As soon as a new floor ([Node](../../GLOSSARY.md#node)) is added to the mall, a Security Guard ([Pod](../../GLOSSARY.md#pod)) is automatically hired to work there. If a floor is removed, the Guard leaves. DaemonSets are perfect for mall-wide services like background music (logging), air filtration (monitoring), or general security (networking).
+
+---
+
+## 🌙 The Night-Shift Worker ([Job](../../GLOSSARY.md#job))
+Sometimes, the mall needs a specific task done just once—like moving a heavy safe or performing a one-time inventory count. For this, we hire a **Night-Shift Worker**. This is the **[Job](../../GLOSSARY.md#job)**.
+
+Unlike a Clerk who stays as long as the shop is open, a Night-Shift Worker arrives, completes their specific task, and then leaves. If they fail, the Mall Manager will make them try again until the [job](../../GLOSSARY.md#job) is done.
+
+---
+
+## ⏰ The Recurring Maintenance Crew ([CronJob](../../GLOSSARY.md#cronjob))
+What if the mall needs the windows cleaned every Monday morning? You don't want a worker sitting around all week waiting. Instead, you hire a **Recurring Maintenance Crew**. This is the **[CronJob](../../GLOSSARY.md#cronjob)**.
+
+The [CronJob](../../GLOSSARY.md#cronjob) follows a strict schedule (the "Cron" format). When the time comes, it automatically "hires" a Night-Shift Worker ([Job](../../GLOSSARY.md#job)) to perform the task. Once the windows are sparkling, the worker leaves.
 
 ---
 

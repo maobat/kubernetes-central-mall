@@ -1,4 +1,4 @@
-# 🧪 Lab Supplement: Revoking the Charter (CRD Deletion)
+# 🧪 Lab Supplement: Revoking the Charter ([CRD](../../../../GLOSSARY.md#crd) Deletion)
 
 ## Architecture – Resource Lifecycle & Cascading Deletion
 
@@ -6,19 +6,19 @@
 
 ## 🎯 Lab Goal
 
-Understand what happens when an API extension is removed. You will learn how deleting a **CRD** automatically cleans up all associated resources (Cascading Deletion).
+Understand what happens when an API extension is removed. You will learn how deleting a **[CRD](../../../../GLOSSARY.md#crd)** automatically cleans up all associated resources (Cascading Deletion).
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, deleting a **CRD** is like officially removing a service category from the mall's bylaws. 
+In the **Central Mall**, deleting a **[CRD](../../../../GLOSSARY.md#crd)** is like officially removing a [service](../../../../GLOSSARY.md#service) category from the mall's bylaws. 
 
 The moment the category is deleted, all existing shops or orders belonging to that category are automatically evicted. **No charter, no shops.**
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **CRD Deletion** | Revoking a legal charter. |
+| **[CRD](../../../../GLOSSARY.md#crd) Deletion** | Revoking a legal charter. |
 | **Cascading Deletion** | The automatic eviction of all shops using that charter. |
 | **API Endpoint** | The Management Office closing the specialized desk. |
 
@@ -28,7 +28,7 @@ The moment the category is deleted, all existing shops or orders belonging to th
 
 The Management Office has decided the `Shopping-Items` experiment is over. Wipe every trace of it from the Cluster.
 
-- **Target:** The CRD `shopping-items.beta.killercoda.com`.
+- **Target:** The [CRD](../../../../GLOSSARY.md#crd) `shopping-items.beta.killercoda.com`.
 
 ---
 
@@ -66,8 +66,8 @@ kubectl delete crd shopping-items.beta.killercoda.com
 ## 🧠 Key Takeaways
 
 - **Garbage Collection:** Since every `ShoppingItem` exists only because the `CRD` allowed it, they are automatically destroyed when their parent definition is removed.
-- **Safety Warning:** In production, deleting a CRD is **dangerous**. It destroys all your custom data instantly. Always perform a backup first.
-- **Finalizers Trap:** If a CRD gets "stuck" in a *Terminating* state, check for **Finalizers** in the YAML. You might need to edit them to allow the deletion to finish.
+- **Safety Warning:** In production, deleting a [CRD](../../../../GLOSSARY.md#crd) is **dangerous**. It destroys all your custom data instantly. Always perform a backup first.
+- **Finalizers Trap:** If a [CRD](../../../../GLOSSARY.md#crd) gets "stuck" in a *Terminating* state, check for **Finalizers** in the YAML. You might need to edit them to allow the deletion to finish.
 
 ---
 

@@ -1,4 +1,4 @@
-# 🧪 LAB 04: The Flexible Route (Gateway API & Canary)
+# 🧪 LAB 04: The Flexible Route ([Gateway API](../../../../GLOSSARY.md#gateway-api) & Canary)
 
 ## Services and Networking – Next-Gen Traffic Management
 
@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-Learn how to use **Gateway API** to perform advanced traffic splitting for a Canary release of a new menu in the Mall.
+Learn how to use **[Gateway API](../../../../GLOSSARY.md#gateway-api)** to perform advanced traffic splitting for a Canary release of a new menu in the Mall.
 
 ---
 

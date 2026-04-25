@@ -52,7 +52,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 
 ---
 
-## 🚀 Part 3: Application Deployment `[ 20% ]`
+## 🚀 Part 3: Application [Deployment](../../GLOSSARY.md#deployment) `[ 20% ]`
 > **Focus:** Grand openings, logistics pipelines, and managing change without disappointing customers.
 
 - **Ch. 09** – [Lab 01: Rolling Update Boutique](ch09-launch/lab01-rolling-update-wonderful/README.md)

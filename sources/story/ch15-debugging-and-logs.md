@@ -16,16 +16,16 @@ Sometimes the CCTV doesn't show the whole picture. Maybe the "Smoothie Stand" is
 
 For this, you check the **Incident Reports** in the Manager's office. This book records high-level events:
 - "10:00 AM: Smoothie Stand requested 500 Watts of power."
-- "10:01 AM: Power request denied (Quota exceeded)."
+- "10:01 AM: Power [request](../../GLOSSARY.md#request) denied (Quota exceeded)."
 - "10:05 AM: Security Guard shut down the stand due to lack of resources."
 
-In Kubernetes, this is `kubectl describe`. It shows the "Third Person" perspective—what the Cluster (the Mall Manager) thinks is happening to your pod. It lists the **Events**, showing you if there were scheduling failures, image pull errors, or resource limit violations.
+In Kubernetes, this is `kubectl describe`. It shows the "Third Person" perspective—what the Cluster (the Mall Manager) thinks is happening to your [pod](../../GLOSSARY.md#pod). It lists the **Events**, showing you if there were scheduling failures, image pull errors, or resource [limit](../../GLOSSARY.md#limit) violations.
 
 ## Inspecting the Shop (Exec)
 
 If the logs and incident reports aren't enough, the Manager might actually put on a hard hat and **walk into the shop** to look around for themselves. They might check the shelves, look under the counter, or try to use the machinery.
 
-This is `kubectl exec`. It allows you to step inside a running pod and run commands directly, helping you find those tricky "local" problems that don't show up in the logs.
+This is `kubectl exec`. It allows you to step inside a running [pod](../../GLOSSARY.md#pod) and run commands directly, helping you find those tricky "local" problems that don't show up in the logs.
 
 ---
 

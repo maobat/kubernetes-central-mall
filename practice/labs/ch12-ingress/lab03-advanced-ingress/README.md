@@ -1,4 +1,4 @@
-# 🧪 LAB 03: The Rewrite Policy (Advanced Ingress)
+# 🧪 LAB 03: The Rewrite Policy (Advanced [Ingress](../../../../GLOSSARY.md#ingress))
 
 ## Services and Networking – Fine-Tuning Routing Behavior
 

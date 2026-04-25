@@ -6,16 +6,16 @@
 
 ## 🎯 Lab Goal
 
-Learn how to install a new **Beta CRD** that the team has been working on and create a specific instance based on it.
+Learn how to install a new **Beta [CRD](../../../../GLOSSARY.md#crd)** that the team has been working on and create a specific instance based on it.
 
 ---
 
 ## 📋 Requirements
 
-The team worked really hard for months on a new **Shopping-Items CRD** which is currently in beta.
+The team worked really hard for months on a new **Shopping-Items [CRD](../../../../GLOSSARY.md#crd)** which is currently in beta.
 
-1. **Rulebook Update:** Install the CRD from `crd.yaml`.
-2. **First Order:** Create a `ShoppingItem` object named `bananas` in the `default` namespace.
+1. **Rulebook Update:** Install the [CRD](../../../../GLOSSARY.md#crd) from `crd.yaml`.
+2. **First Order:** Create a `ShoppingItem` object named `bananas` in the `default` [namespace](../../../../GLOSSARY.md#namespace).
 3. **Details:** 
    - `dueDate` → "tomorrow"
    - `description` → "buy yellow ones"
@@ -57,7 +57,7 @@ spec:
    dueDate: tomorrow
 ```
 # 3. Apply the file
-kubectl apply -f bananas.yaml
+[kubectl](../../../../GLOSSARY.md#kubectl) apply -f bananas.yaml
 ```
 ---
 
@@ -65,8 +65,8 @@ kubectl apply -f bananas.yaml
 
 1. **Check the Order:**
    ```bash
-   kubectl get shopping-item
-   kubectl get shopping-item bananas -o yaml
+   [kubectl](../../../../GLOSSARY.md#kubectl) get shopping-item
+   [kubectl](../../../../GLOSSARY.md#kubectl) get shopping-item bananas -o yaml
    ```
 
 ---

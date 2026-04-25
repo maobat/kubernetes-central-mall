@@ -9,8 +9,8 @@ In the **Central Mall**, the Mall Manager acts as a strict Health Inspector. Ins
 
 | Check-up | Mall Analogy | K8s Action if it Fails |
 | :--- | :--- | :--- |
-| **Liveness Probe** | **"Are you alive?"** If the clerk has fainted, they can't recover. | **Restart:** The manager fires the clerk and hires a new one (Restarts the container). |
-| **Readiness Probe** | **"Are you ready?"** The shop is open, but the shelves are still empty. | **Isolation:** The manager takes the shop's sign down. No customers are sent here until it passes. |
+| **[Liveness Probe](../../GLOSSARY.md#liveness-probe)** | **"Are you alive?"** If the clerk has fainted, they can't recover. | **Restart:** The manager fires the clerk and hires a new one (Restarts the container). |
+| **[Readiness Probe](../../GLOSSARY.md#readiness-probe)** | **"Are you ready?"** The shop is open, but the shelves are still empty. | **Isolation:** The manager takes the shop's sign down. No customers are sent here until it passes. |
 
 
 
@@ -19,7 +19,7 @@ In the **Central Mall**, the Mall Manager acts as a strict Health Inspector. Ins
 ## 🛠️ 14.2 The Inspection Methods
 
 The Health Inspector has three ways to check on a shop:
-1. **The Shout (HTTP):** Sends a request to a specific URL (e.g., `/healthz`).
+1. **The Shout (HTTP):** Sends a [request](../../GLOSSARY.md#request) to a specific URL (e.g., `/healthz`).
 2. **The Knock (TCP):** Checks if the door is physically open (Port check).
 3. **The Task (Exec):** Tells the clerk to run a specific command (e.g., `cat /tmp/healthy`).
 
@@ -57,10 +57,10 @@ readinessProbe:
 ## 🛠️ The Blueprint (CKAD Speed-Run)
 
 ### 1. The Crash Loop
-If you see a Pod with `CrashLoopBackOff`, the **Liveness Probe** is likely failing because the shop is "dying" faster than the inspector can check it. 
+If you see a [Pod](../../GLOSSARY.md#pod) with `CrashLoopBackOff`, the **[Liveness Probe](../../GLOSSARY.md#liveness-probe)** is likely failing because the shop is "dying" faster than the inspector can check it. 
 
 ### 2. The "Hidden" Shop
-If a Pod is `Running` but `READY 0/1`, the **Readiness Probe** is failing. The clerk is alive, but the manager won't let customers in yet.
+If a [Pod](../../GLOSSARY.md#pod) is `Running` but `READY 0/1`, the **[Readiness Probe](../../GLOSSARY.md#readiness-probe)** is failing. The clerk is alive, but the manager won't let customers in yet.
 
 ```bash
 # See WHY the inspector is unhappy
@@ -71,14 +71,14 @@ kubectl describe pod <pod-name>
 ---
 
 ## ⚠️ Common Exam Traps
-- **The `initialDelaySeconds` Death Loop:** If your app takes 30 seconds to start, but your Liveness probe has `initialDelaySeconds: 5`, Kubernetes will constantly kill the container before it ever finishes starting.
-- **Liveness vs Readiness:** A failing **Liveness** probe restarts the container. A failing **Readiness** probe simply removes the Pod from the Service endpoint (stopping traffic) but leaves it running. Don't use a Liveness probe for a database connection issue, or your app will endlessly restart.
+- **The `initialDelaySeconds` Death Loop:** If your app takes 30 seconds to start, but your [Liveness probe](../../GLOSSARY.md#liveness-probe) has `initialDelaySeconds: 5`, Kubernetes will constantly kill the container before it ever finishes starting.
+- **Liveness vs Readiness:** A failing **Liveness** probe restarts the container. A failing **Readiness** probe simply removes the [Pod](../../GLOSSARY.md#pod) from the [Service](../../GLOSSARY.md#service) endpoint (stopping traffic) but leaves it running. Don't use a [Liveness probe](../../GLOSSARY.md#liveness-probe) for a database connection issue, or your app will endlessly restart.
 
 ---
 
 ## 🧰 Study Toolbox
 
-* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
+* 🎙️ **Audio Overview:** [Request](../../GLOSSARY.md#request) the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 **🎨 Visualize the Analogy**
 * [Explore Chapter 14 Comics](../../visual-learning/comics/ch14-probes/README.md)
 

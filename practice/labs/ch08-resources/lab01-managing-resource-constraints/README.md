@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-In this lab, we simulate a worker who asks for too little "space" and gets "evicted" (**OOMKilled**). You will learn how to diagnose resource failures and adjust the budget to keep the shop running.
+In this lab, we simulate a worker who asks for too little "space" and gets "evicted" (**[OOMKilled](../../../../GLOSSARY.md#oomkilled)**). You will learn how to diagnose resource failures and adjust the budget to keep the shop running.
 
 > **CKAD Importance:** Very High. You must know how to set `requests` and `limits` and understand the difference between them.
 
@@ -18,23 +18,23 @@ In the **Central Mall**, space is expensive. Every shop needs to tell the manage
 
 - **The Minimum Desk Space (Requests)** → The absolute minimum space a worker needs to sit down. If the mall is full, the manager won't even let the worker in unless there's at least this much space.
 - **The Maximum Office Size (Limits)** → The hard ceiling. If a worker tries to expand their desk beyond this line, the security guard (Linux OOM Killer) will literally kick them out of the building.
-- **The Eviction (OOMKilled)** → When a shop tries to store too much inventory in a tiny locker, the locker bursts, and the shop is closed for safety.
+- **The Eviction ([OOMKilled](../../../../GLOSSARY.md#oomkilled))** → When a shop tries to store too much inventory in a tiny locker, the locker bursts, and the shop is closed for safety.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Requests** | Guaranteed space for the worker. |
+| **Requests** | [Guaranteed](../../../../GLOSSARY.md#guaranteed) space for the worker. |
 | **Limits** | The point where the worker gets kicked out for oversharing. |
-| **OOMKilled** | Being fired for trying to use more RAM than allowed. |
+| **[OOMKilled](../../../../GLOSSARY.md#oomkilled)** | Being fired for trying to use more RAM than allowed. |
 
 ---
 
 ## 📋 Requirements
 
-1. **Deploy a Pod** named `frontend`:
+1. **Deploy a [Pod](../../../../GLOSSARY.md#pod)** named `frontend`:
    - Two containers: `db` (mysql) and `wp` (wordpress).
    - Resources: Set low memory limits (e.g., 64Mi) to trigger a crash.
 2. **Diagnose**: Identify the `OOMKilled` status and the `137` exit code.
-3. **Fix**: Increase the memory limits to allow the Pod to stabilize.
+3. **Fix**: Increase the memory limits to allow the [Pod](../../../../GLOSSARY.md#pod) to stabilize.
 
 ---
 
@@ -91,8 +91,8 @@ resources:
 
 - **Exit Code 137:** This is the universal sign for "Out Of Memory."
 - **Requests vs Limits:** Requests are for scheduling (finding a home); Limits are for enforcement (safety).
-- **Quality of Service (QoS):** Pods with equal requests and limits are "Guaranteed"—the highest priority in the mall.
-- **CKAD Tip:** If a Pod stays in `Pending`, use `k describe node` to see if you've requested more resources than the building actually has.
+- **Quality of [Service](../../../../GLOSSARY.md#service) (QoS):** Pods with equal requests and limits are "[Guaranteed](../../../../GLOSSARY.md#guaranteed)"—the highest priority in the mall.
+- **CKAD Tip:** If a [Pod](../../../../GLOSSARY.md#pod) stays in `Pending`, use `k describe node` to see if you've requested more resources than the building actually has.
 
 ---
 

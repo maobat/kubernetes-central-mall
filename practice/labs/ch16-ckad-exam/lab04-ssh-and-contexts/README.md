@@ -19,11 +19,11 @@ The **Mall Manager** uses different keycards (Contexts) to access different wing
 
 ---
 
-## 🛠️ Part 1: Kubectl Contexts
+## 🛠️ Part 1: [Kubectl](../../../../GLOSSARY.md#kubectl) Contexts
 
-A kubectl context contains connection information to a Kubernetes cluster. Different kubectl contexts can connect to different Kubernetes clusters, or to the same cluster but using different users or different default namespaces.
+A [kubectl](../../../../GLOSSARY.md#kubectl) context contains connection information to a Kubernetes cluster. Different [kubectl](../../../../GLOSSARY.md#kubectl) contexts can connect to different Kubernetes clusters, or to the same cluster but using different users or different default namespaces.
 
-List all available kubectl contexts and write the output to `/tmp/contexts` (using `/tmp` as a safe alternative to `/root` for practice).
+List all available [kubectl](../../../../GLOSSARY.md#kubectl) contexts and write the output to `/tmp/contexts` (using `/tmp` as a safe alternative to `/root` for practice).
 
 ### Tip
 `kubectl config -h`
@@ -76,9 +76,9 @@ kubectl get pods
 
 ## 🧠 Key Takeaways
 
--   **Context = Cluster + User + Namespace.**
+-   **Context = Cluster + User + [Namespace](../../../../GLOSSARY.md#namespace).**
 -   `kubectl config use-context` is the standard way to switch focus.
--   Contexts help avoid mistakes by setting a default namespace.
+-   Contexts help avoid mistakes by setting a default [namespace](../../../../GLOSSARY.md#namespace).
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

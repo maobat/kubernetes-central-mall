@@ -1,4 +1,4 @@
-# 🧪 LAB 02: The Architect's Ledger (CRD Discovery)
+# 🧪 LAB 02: The Architect's Ledger ([CRD](../../../../GLOSSARY.md#crd) Discovery)
 
 ## Extending the Mall – API Discovery & Auditing
 
@@ -12,7 +12,7 @@ Learn how to discover and audit custom extensions that have been added to the Ce
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, when an architect adds a new legal "Charter" (CRD), it must be recorded in the **Architect's Ledger**.
+In the **Central Mall**, when an architect adds a new legal "Charter" ([CRD](../../../../GLOSSARY.md#crd)), it must be recorded in the **Architect's Ledger**.
 
 - **The Ledger (API Discovery)** → A master list of every active regulation in the mall.
 - **The Fine Print (Explain)** → Reading the blueprint to see exactly what fields are required on a form.

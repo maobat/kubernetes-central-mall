@@ -1,4 +1,4 @@
-# 🧪 LAB 05: The Shop Closure (Helm Decommissioning)
+# 🧪 LAB 05: The Shop Closure ([Helm](../../../../GLOSSARY.md#helm) Decommissioning)
 
 ## Logistics Tools – Decommissioning Prefab Kits
 
@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-Learn how to formally decommission a specialized shop manager by deleting an active **Helm Release**.
+Learn how to formally decommission a specialized shop manager by deleting an active **[Helm](../../../../GLOSSARY.md#helm) Release**.
 
 ---
 
@@ -36,21 +36,21 @@ helm -n team-yellow install apiserver bitnami/apache
 
 The Management Office has decided to close a specific specialized shop.
 
-1. **Identify the Manager:** Locate the Helm release named `apiserver`.
-2. **Decommission:** Delete the `apiserver` Helm release.
+1. **Identify the Manager:** Locate the [Helm](../../../../GLOSSARY.md#helm) release named `apiserver`.
+2. **Decommission:** Delete the `apiserver` [Helm](../../../../GLOSSARY.md#helm) release.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
 ### 1. Locate the Shop
-First, find out which wing (namespace) the `apiserver` manager is operating in.
+First, find out which wing ([namespace](../../../../GLOSSARY.md#namespace)) the `apiserver` manager is operating in.
 ```bash
 helm ls -A
 ```
 
 ### 2. Formally Uninstall
-Once you've identified the namespace (likely `team-yellow`), uninstall the release.
+Once you've identified the [namespace](../../../../GLOSSARY.md#namespace) (likely `team-yellow`), uninstall the release.
 ```bash
 # Assuming the release is in team-yellow as per the logs
 helm -n team-yellow uninstall apiserver
@@ -70,8 +70,8 @@ helm -n team-yellow uninstall apiserver
 
 ## 🧠 Key Takeaways
 
-- **Total Cleanup:** Uninstalling a release via Helm clears all associated Kubernetes objects automatically.
-- **Namespace Precision:** You often need the `-n` flag to specify where the manager was originally hired.
+- **Total Cleanup:** Uninstalling a release via [Helm](../../../../GLOSSARY.md#helm) clears all associated Kubernetes objects automatically.
+- **[Namespace](../../../../GLOSSARY.md#namespace) Precision:** You often need the `-n` flag to specify where the manager was originally hired.
 
 ---
 

@@ -9,10 +9,10 @@ In the **Central Mall**, when a shop stops working, you don't just stare at the 
 
 | Tool | Mall Analogy | The "Why" |
 | :--- | :--- | :--- |
-| **kubectl logs** | **CCTV Tapes** | See exactly what the clerk said or did right before the "crash." |
-| **kubectl describe** | **Security Logbook** | See the Mall Manager's events. Did the worker run out of water (OOM)? Did the door jam (ImagePullBackOff)? |
-| **kubectl exec** | **Walking Inside** | Physically enter the shop to check if the files are where they should be. |
-| **kubectl get** | **The Directory** | A quick look to see which shops are "Running" and which are "Terminated." |
+| **[kubectl](../../GLOSSARY.md#kubectl) logs** | **CCTV Tapes** | See exactly what the clerk said or did right before the "crash." |
+| **[kubectl](../../GLOSSARY.md#kubectl) describe** | **Security Logbook** | See the Mall Manager's events. Did the worker run out of water (OOM)? Did the door jam (ImagePullBackOff)? |
+| **[kubectl](../../GLOSSARY.md#kubectl) exec** | **Walking Inside** | Physically enter the shop to check if the files are where they should be. |
+| **[kubectl](../../GLOSSARY.md#kubectl) get** | **The Directory** | A quick look to see which shops are "Running" and which are "Terminated." |
 
 
 
@@ -37,7 +37,7 @@ kubectl logs <pod-name> --previous
 
 ## 🛠️ 15.3 Incident Reports: The Logbook
 
-If a Pod is stuck in `Pending` or `CrashLoopBackOff`, the `describe` command is your best friend. It reveals the "Events"—the Mall Manager's timestamped notes on why things are failing.
+If a [Pod](../../GLOSSARY.md#pod) is stuck in `Pending` or `CrashLoopBackOff`, the `describe` command is your best friend. It reveals the "Events"—the Mall Manager's timestamped notes on why things are failing.
 
 ```bash
 kubectl describe pod <pod-name>
@@ -45,7 +45,7 @@ kubectl describe pod <pod-name>
 
 **Common "Incident Report" Findings:**
 * **FailedScheduling:** "No room in the mall for this shop" (Resource shortage).
-* **Back-off restarting failed container:** "The clerk keeps fainting" (App error or bad Liveness Probe).
+* **Back-off restarting failed container:** "The clerk keeps fainting" (App error or bad [Liveness Probe](../../GLOSSARY.md#liveness-probe)).
 * **Failed to pull image:** "The warehouse doesn't have that mannequin" (Typo in image name).
 
 
@@ -68,8 +68,8 @@ kubectl get events --sort-by='.lastTimestamp'
 ---
 
 ## ⚠️ Common Exam Traps
-- **Multi-Container Logs:** If a Pod has more than one container, `kubectl logs <pod>` will fail, demanding you specify a container with `-c`. Get used to looking at the Pod description `Containers:` section first.
-- **Ignoring Events:** If a Pod is stuck in `Pending` or `ImagePullBackOff`, the logs will be totally empty! The container hasn't started yet. You MUST use `kubectl describe pod <pod>` and read the `Events` section at the very bottom to find out why.
+- **Multi-Container Logs:** If a [Pod](../../GLOSSARY.md#pod) has more than one container, `kubectl logs <pod>` will fail, demanding you specify a container with `-c`. Get used to looking at the [Pod](../../GLOSSARY.md#pod) description `Containers:` section first.
+- **Ignoring Events:** If a [Pod](../../GLOSSARY.md#pod) is stuck in `Pending` or `ImagePullBackOff`, the logs will be totally empty! The container hasn't started yet. You MUST use `kubectl describe pod <pod>` and read the `Events` section at the very bottom to find out why.
 
 ---
 

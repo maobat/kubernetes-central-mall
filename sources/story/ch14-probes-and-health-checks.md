@@ -2,23 +2,23 @@
 
 In the Central Mall, a shop that's open but has no employees, or a restaurant that's serving spoiled food, is worse than no shop at all. To protect customers and the mall's reputation, the Mall Owner employs a **Health Inspector**.
 
-## "Are you still alive?" (Liveness Probe)
+## "Are you still alive?" ([Liveness Probe](../../GLOSSARY.md#liveness-probe))
 
 The Health Inspector walks by every shop and knocks on the door. "Are you still awake in there?" 
 
-If the employee (Pod) is slumped over their desk and doesn't answer, the Inspector doesn't wait. They immediately call the Mall Manager, who fires the unresponsive worker and hires a fresh replacement. 
+If the employee ([Pod](../../GLOSSARY.md#pod)) is slumped over their desk and doesn't answer, the Inspector doesn't wait. They immediately call the Mall Manager, who fires the unresponsive worker and hires a fresh replacement. 
 
-This is the **Liveness Probe**. It's a simple check to see if the application is still running. If it's "deadlocked" or crashed, Kubernetes restarts the pod to bring it back to life.
+This is the **[Liveness Probe](../../GLOSSARY.md#liveness-probe)**. It's a simple check to see if the application is still running. If it's "deadlocked" or crashed, Kubernetes restarts the [pod](../../GLOSSARY.md#pod) to bring it back to life.
 
-## "Are you ready for customers?" (Readiness Probe)
+## "Are you ready for customers?" ([Readiness Probe](../../GLOSSARY.md#readiness-probe))
 
 Sometimes, a new shop has just opened, but they're still unpacking boxes and setting up the shelves. They're technically "alive," but they aren't ready to serve anyone yet.
 
 The Health Inspector asks: "Can you take a customer right now?" 
-- If the shop says "No, I'm still setting up," the Inspector tells the Receptionists (the Services and Ingress) to stop sending customers there for a while. 
+- If the shop says "No, I'm still setting up," the Inspector tells the Receptionists (the Services and [Ingress](../../GLOSSARY.md#ingress)) to stop sending customers there for a while. 
 - Once the shop says "I'm ready!", the traffic starts flowing again.
 
-This is the **Readiness Probe**. It ensures that traffic only reaches pods that are fully initialized and capable of handling requests. Without it, customers might walk into an empty shop and leave frustrated.
+This is the **[Readiness Probe](../../GLOSSARY.md#readiness-probe)**. It ensures that traffic only reaches pods that are fully initialized and capable of handling requests. Without it, customers might walk into an empty shop and leave frustrated.
 
 ## "I'm just starting up" (Startup Probe)
 

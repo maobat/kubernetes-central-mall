@@ -1,4 +1,4 @@
-# 🧪 Lab 03: Advanced Kubectl Sorting
+# 🧪 Lab 03: Advanced [Kubectl](../../../../GLOSSARY.md#kubectl) Sorting
 
 ## Finding the Troublemakers
 
@@ -14,7 +14,7 @@ Use advanced `kubectl` sorting capabilities to identify pods based on their curr
 
 ## 🛠️ Part 1: List Pods by Restart Count
 
-List all pods in the `session283884` namespace sorted by **restart count** in descending order.
+List all pods in the `session283884` [namespace](../../../../GLOSSARY.md#namespace) sorted by **restart count** in descending order.
 
 ```bash
 kubectl -n session283884 get pods --sort-by=.status.containerStatuses[0].restartCount
@@ -29,7 +29,7 @@ kubectl -n session283884 get pods --sort-by=.status.containerStatuses[0].restart
 | `kubectl get pods` | `Pods are displayed, with those having more restarts at the bottom (ascending order by default)` |
 
 > [!TIP]
-> Kubectl sorts in ascending order. To find the "most" of something, look at the end of the list.
+> [Kubectl](../../../../GLOSSARY.md#kubectl) sorts in ascending order. To find the "most" of something, look at the end of the list.
 
 ---
 

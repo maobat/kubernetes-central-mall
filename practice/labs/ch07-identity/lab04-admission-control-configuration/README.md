@@ -45,7 +45,7 @@ vim /etc/kubernetes/manifests/kube-apiserver.yaml
 **Change**: Update the `--enable-admission-plugins` line:
 `--enable-admission-plugins=NodeRestriction,LimitRanger,Priority,MutatingAdmissionWebhook`
 
-**Wait**: Use `watch crictl ps` to monitor the API server restarting.
+**Wait**: Use `watch crictl ps` to monitor the [API server](../../../../GLOSSARY.md#api-server) restarting.
 
 ### 3. Disabling Floor Protection (DANGEROUS!)
 The `NamespaceLifecycle` plugin prevents you from deleting "Essential Floors" like `default`. Let's see what happens if we turn it off.
@@ -64,17 +64,17 @@ vim /etc/kubernetes/manifests/kube-apiserver.yaml
 
 **Add/Update**: `--disable-admission-plugins=NamespaceLifecycle`
 
-**Observation**: After the API server restarts, attempt to delete the `default` namespace. It will now be allowed (though it will likely be recreated immediately by the mall's heart).
+**Observation**: After the [API server](../../../../GLOSSARY.md#api-server) restarts, attempt to delete the `default` [namespace](../../../../GLOSSARY.md#namespace). It will now be allowed (though it will likely be recreated immediately by the mall's heart).
 
 ---
 
 ## 🔎 Verification
-1.  Check the API server process: `ps aux | grep kube-apiserver`
+1.  Check the [API server](../../../../GLOSSARY.md#api-server) process: `ps aux | grep kube-apiserver`
 2.  Verify the plugins are active in the manifest.
 
 ## 🧠 Key Takeaways
 - **Plugins:** Admission control is modular. You can enable/disable specific checks.
-- **Static Pods:** The API server is often a static pod; editing its manifest triggers an automatic restart.
+- **Static Pods:** The [API server](../../../../GLOSSARY.md#api-server) is often a static [pod](../../../../GLOSSARY.md#pod); editing its manifest triggers an automatic restart.
 - **Safety First:** Disabling plugins like `NamespaceLifecycle` can lead to accidental deletion of critical infrastructure.
 
 ---

@@ -1,49 +1,49 @@
 # 🧪 LAB 01: The Sidecar & The Renovation Crew
 
-## Pod Design – Advanced Pod Patterns
+## [Pod](../../../../GLOSSARY.md#pod) Design – Advanced [Pod](../../../../GLOSSARY.md#pod) Patterns
 
 ---
 
 ## 🎯 Lab Goal
 
-This lab introduces the **Multi-Container Pod** patterns. You will learn how to:
+This lab introduces the **Multi-Container [Pod](../../../../GLOSSARY.md#pod)** patterns. You will learn how to:
 - Use an **InitContainer** to perform setup tasks (creating configuration files).
-- Use a **Sidecar Container** to assist the main application (logging/monitoring).
+- Use a **[Sidecar Container](../../../../GLOSSARY.md#sidecar-container)** to assist the main application (logging/monitoring).
 - Share data between containers using a shared **Volume (`emptyDir`)**.
 
-> **CKAD Importance:** Very High. Pod design patterns like these are a staple of the exam.
+> **CKAD Importance:** Very High. [Pod](../../../../GLOSSARY.md#pod) design patterns like these are a staple of the exam.
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, a single shop (Pod) might have multiple workers:
+In the **Central Mall**, a single shop ([Pod](../../../../GLOSSARY.md#pod)) might have multiple workers:
 
 - **The Renovation Crew (InitContainer)** → They come in *before* the shop opens, paint the walls, and set up the shelves. Once they finish, they leave. The shop can't open until they are done.
 - **The Salesperson (Main Container)** → The person serving customers (Nginx).
-- **The Assistant (Sidecar Container)** → Someone in the back room watching inventory or security cameras (Busybox). They work while the salesperson works.
+- **The Assistant ([Sidecar Container](../../../../GLOSSARY.md#sidecar-container))** → Someone in the back room watching inventory or security cameras (Busybox). They work while the salesperson works.
 - **The Stockroom (Shared Volume)** → A common closet inside the shop where all three can leave notes or tools for each other.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Pod** | A single shop unit. |
+| **[Pod](../../../../GLOSSARY.md#pod)** | A single shop unit. |
 | **Main Container** | The primary business logic. |
 | **InitContainer** | Setup script that runs once. |
 | **Sidecar** | Helper process that runs alongside. |
-| **emptyDir** | A temporary storage closet for that shop only. |
+| **[emptyDir](../../../../GLOSSARY.md#emptydir)** | A temporary storage closet for that shop only. |
 
 ---
 
 ## 📋 Requirements
 
-1. **Create a Pod** named `sidecar-example`.
+1. **Create a [Pod](../../../../GLOSSARY.md#pod)** named `sidecar-example`.
 2. **InitContainer** (`init-myfile`):
    - Image: `busybox`
    - Action: Create `index.html` in `/data` with content "Hello from Init".
 3. **Main Container** (`nginx`):
    - Image: `nginx`
    - Action: Serve the shared `/data` folder.
-4. **Sidecar Container** (`sidecar-helper`):
+4. **[Sidecar Container](../../../../GLOSSARY.md#sidecar-container)** (`sidecar-helper`):
    - Image: `busybox`
    - Action: Stay alive and monitor the shared file.
 5. **Shared Storage**: Use an `emptyDir` named `shared-data`.
@@ -112,9 +112,9 @@ spec:
 ## 🧠 Key Takeaways
 
 - **Initialization:** InitContainers run one by one and *must* exit successfully before the main containers even start.
-- **Shared Lifecycle:** All containers in a Pod are scheduled on the same Node and share the same network (localhost).
-- **Communication:** `emptyDir` is only shared between containers *in the same Pod*. If the Pod is deleted, the data is gone.
-- **CKAD Tip:** If your Pod is stuck in `Init:CrashLoopBackOff`, check the logs of the Init container specifically: `k logs pod-name -c init-container-name`.
+- **Shared Lifecycle:** All containers in a [Pod](../../../../GLOSSARY.md#pod) are scheduled on the same [Node](../../../../GLOSSARY.md#node) and share the same network (localhost).
+- **Communication:** `emptyDir` is only shared between containers *in the same [Pod](../../../../GLOSSARY.md#pod)*. If the [Pod](../../../../GLOSSARY.md#pod) is deleted, the data is gone.
+- **CKAD Tip:** If your [Pod](../../../../GLOSSARY.md#pod) is stuck in `Init:CrashLoopBackOff`, check the logs of the [Init container](../../../../GLOSSARY.md#init-container) specifically: `k logs pod-name -c init-container-name`.
 
 ---
 

@@ -1,6 +1,6 @@
-# 🧪 Lab 05: Deployment Lifecycle, Create, Scale & Update
+# 🧪 Lab 05: [Deployment](../../../../GLOSSARY.md#deployment) Lifecycle, Create, Scale & Update
 
-## Launch Strategies – The Complete Deployment Lifecycle
+## Launch Strategies – The Complete [Deployment](../../../../GLOSSARY.md#deployment) Lifecycle
 
 > **⚙️ Local Minikube Compatible**, uses standard `nginx` images, no special registry required.
 
@@ -8,10 +8,10 @@
 
 ## 🎯 Lab Goal
 
-Walk through the full lifecycle of a Kubernetes Deployment in three steps:
-1. **Create** a deployment from scratch
+Walk through the full lifecycle of a Kubernetes [Deployment](../../../../GLOSSARY.md#deployment) in three steps:
+1. **Create** a [deployment](../../../../GLOSSARY.md#deployment) from scratch
 2. **Scale** it to handle more traffic
-3. **Update** the image to release a new version (triggering a rolling update)
+3. **Update** the image to release a new version (triggering a [rolling update](../../../../GLOSSARY.md#rolling-update))
 
 > **CKAD Importance:** High. Creating, scaling, and rolling out Deployments are bread-and-butter tasks in the exam.
 
@@ -29,15 +29,15 @@ The **Scaler Boutique** is a new shop in the Central Mall. First, the owner open
 
 ---
 
-## 🛠️ Part 1, Create the Deployment
+## 🛠️ Part 1, Create the [Deployment](../../../../GLOSSARY.md#deployment)
 
-Create a deployment named `scaler` using `nginx:1.25` (v1):
+Create a [deployment](../../../../GLOSSARY.md#deployment) named `scaler` using `nginx:1.25` (v1):
 
 ```bash
 kubectl create deploy scaler --image=nginx:1.25
 ```
 
-Verify the deployment and its underlying ReplicaSet and Pod:
+Verify the [deployment](../../../../GLOSSARY.md#deployment) and its underlying ReplicaSet and [Pod](../../../../GLOSSARY.md#pod):
 
 ```bash
 kubectl get deploy,rs,po -l app=scaler
@@ -89,7 +89,7 @@ kubectl get deploy scaler
 
 ---
 
-## 🛠️ Part 3, Update the Image (Rolling Update)
+## 🛠️ Part 3, Update the Image ([Rolling Update](../../../../GLOSSARY.md#rolling-update))
 
 The new supplier has arrived. Update from `nginx:1.25` to `nginx:1.27`:
 
@@ -97,9 +97,9 @@ The new supplier has arrived. Update from `nginx:1.25` to `nginx:1.27`:
 kubectl set image deploy scaler nginx=nginx:1.27
 ```
 
-> ⚠️ The container name (`nginx`) must match the name in the deployment spec. Check it with `kubectl describe deploy scaler | grep -A3 Containers`.
+> ⚠️ The container name (`nginx`) must match the name in the [deployment](../../../../GLOSSARY.md#deployment) spec. Check it with `kubectl describe deploy scaler | grep -A3 Containers`.
 
-Watch the rolling update in real-time:
+Watch the [rolling update](../../../../GLOSSARY.md#rolling-update) in real-time:
 
 ```bash
 kubectl rollout status deploy scaler
@@ -146,9 +146,9 @@ kubectl rollout history deploy scaler
 
 ## 🧠 Key Takeaways
 
-- **One command, full stack:** `kubectl create deploy` creates the Deployment, ReplicaSet, and Pod(s) automatically.
+- **One command, full stack:** `kubectl create deploy` creates the [Deployment](../../../../GLOSSARY.md#deployment), ReplicaSet, and [Pod](../../../../GLOSSARY.md#pod)(s) automatically.
 - **Scaling is non-destructive:** It simply adjusts `spec.replicas`; existing pods are not touched.
-- **Rolling update is the default strategy:** Changing the image triggers a controlled replacement, old pods are only removed once new ones are healthy.
+- **[Rolling update](../../../../GLOSSARY.md#rolling-update) is the default strategy:** Changing the image triggers a controlled replacement, old pods are only removed once new ones are healthy.
 - **Container name matters:** `kubectl set image` targets by container name, not image name. Always verify it with `kubectl describe`.
 
 ---

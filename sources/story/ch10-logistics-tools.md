@@ -2,11 +2,11 @@
 
 Managing a single shop is one thing. Managing an entire international franchise with hundreds of malls is another. To keep everything organized, the Central Mall uses standardized logistics tools.
 
-## The Shipping Container (Helm)
+## The Shipping Container ([Helm](../../GLOSSARY.md#helm))
 
 Imagine you want to open a "Standardized Gift Shop" in ten different malls. You don't want to design the layout, hire the staff, and order the inventory from scratch ten times. 
 
-Instead, you use a **Helm Chart**. This is like a pre-packed shipping container. It contains everything the shop needs:
+Instead, you use a **[Helm](../../GLOSSARY.md#helm) Chart**. This is like a pre-packed shipping container. It contains everything the shop needs:
 - The blueprints (Templates).
 - The list of staff (Replica count).
 - The inventory list (ConfigMaps).
@@ -24,7 +24,7 @@ Kustomize "patches" the base blueprint with your changes to create a final, cust
 
 ## The Installation Ritual (Castlemock)
 
-For complex boutiques like **Castlemock**, simply unpacking the container isn't enough. You must also perform a specialized "Installation Ritual." This involves setting up the security vaults beforehand and letting a temporary **Setup Assistant** (a Post-Install Job) handle the final configurations—like creating employee accounts and decommissioning temporary factory keys—before the grand opening ceremony.
+For complex boutiques like **Castlemock**, simply unpacking the container isn't enough. You must also perform a specialized "Installation Ritual." This involves setting up the security vaults beforehand and letting a temporary **Setup Assistant** (a Post-Install [Job](../../GLOSSARY.md#job)) handle the final configurations—like creating employee accounts and decommissioning temporary factory keys—before the grand opening ceremony.
 
 ---
 

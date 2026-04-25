@@ -1,6 +1,6 @@
-# 🧪 LAB 04: The Nested Node (Kind & crictl)
+# 🧪 LAB 04: The Nested [Node](../../../../GLOSSARY.md#node) (Kind & crictl)
 
-## Observability and Maintenance – Node Debugging & CCTV
+## Observability and Maintenance – [Node](../../../../GLOSSARY.md#node) Debugging & CCTV
 
 ---
 
@@ -15,8 +15,8 @@ Understand the "Nested Architecture" of your lab environment (Kind) and use **`c
 In the **Central Mall**, Kind is like a set of **Delivery Trucks** (Docker containers) parked in the loading dock. 
 
 - **The Street (Laptop):** Runs Docker. Sees the nodes as trucks.
-- **The Truck (Kind Node):** Runs Ubuntu/Debian. Contains the Mini-Mall (K8s).
-- **The Shop (Pod Container):** Runs your App. Managed by **`crictl`**.
+- **The Truck (Kind [Node](../../../../GLOSSARY.md#node)):** Runs Ubuntu/Debian. Contains the Mini-Mall (K8s).
+- **The Shop ([Pod](../../../../GLOSSARY.md#pod) Container):** Runs your App. Managed by **`crictl`**.
 
 To see the individual shops, you have to climb into the truck and use the **Internal CCTV** (`crictl`).
 
@@ -24,8 +24,8 @@ To see the individual shops, you have to climb into the truck and use the **Inte
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Enter the Truck (Kind Node)
-If your laptop's `kubectl` isn't working, or you need to see "under the hood", enter the node directly:
+### 1. Enter the Truck (Kind [Node](../../../../GLOSSARY.md#node))
+If your laptop's `kubectl` isn't working, or you need to see "under the hood", enter the [node](../../../../GLOSSARY.md#node) directly:
 ```bash
 docker exec -it kind-control-plane bash
 ```
@@ -43,7 +43,7 @@ Once inside the truck, use `crictl` to see the "Ground Truth":
 |---------|--------|------|
 | `crictl ps` | List containers | See what is actually running on the CPU. |
 | `crictl pods` | List Pods | Check the "Sandboxes" (Network/IP) of the shops. |
-| `crictl logs <id>`| View Logs | Direct access if the API Server is down. |
+| `crictl logs <id>`| View Logs | Direct access if the [API Server](../../../../GLOSSARY.md#api-server) is down. |
 
 ---
 
@@ -53,10 +53,10 @@ If you are modifying the cluster "under the hood" using `vim`, these are the onl
 
 -   **/etc/kubernetes/manifests/**
     -   **Purpose:** Static Pods.
-    -   **Usage:** Drop a YAML here, and the Kubelet will start it without asking the API Server.
-    -   **Best for:** API Server, Scheduler, Etcd.
+    -   **Usage:** Drop a YAML here, and the Kubelet will start it without asking the [API Server](../../../../GLOSSARY.md#api-server).
+    -   **Best for:** [API Server](../../../../GLOSSARY.md#api-server), Scheduler, Etcd.
 -   **/var/lib/kubelet/config.yaml**
-    -   **Purpose:** The "Rules of the Node."
+    -   **Purpose:** The "Rules of the [Node](../../../../GLOSSARY.md#node)."
     -   **Usage:** Change the `staticPodPath` or authentication settings here.
 -   **/run/containerd/containerd.sock**
     -   **Purpose:** The "Phone Line" between K8s and the hardware.
@@ -67,12 +67,12 @@ If you are modifying the cluster "under the hood" using `vim`, these are the onl
 ## 🧠 CKAD Insights & Exam Traps
 
 > [!CAUTION]
-> **Context Confusion:** Never run `crictl` on your laptop; it only works **inside** the Node via SSH/Docker Exec!
+> **Context Confusion:** Never run `crictl` on your laptop; it only works **inside** the [Node](../../../../GLOSSARY.md#node) via SSH/Docker Exec!
 
--   **The Pause Container:** If you see a container named `pause`, do not kill it. It’s the "Foundation" of the Pod’s network.
+-   **The Pause Container:** If you see a container named `pause`, do not kill it. It’s the "Foundation" of the [Pod](../../../../GLOSSARY.md#pod)’s network.
 -   **Read-Only Filesystems:** Sometimes Kind nodes are mounted read-only. If `apt-get install` fails with "Read-only file system," you must recreate the cluster with write permissions.
 
-**⚡ One-line memory:** *"Docker manages the Truck (Node), `crictl` manages the Shop (Container)."*
+**⚡ One-line memory:** *"Docker manages the Truck ([Node](../../../../GLOSSARY.md#node)), `crictl` manages the Shop (Container)."*
 
 ---
 

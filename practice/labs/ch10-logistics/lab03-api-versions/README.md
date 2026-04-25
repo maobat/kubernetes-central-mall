@@ -1,10 +1,10 @@
 # 🧪 LAB 03: Renovating the Blueprints (API Versions & Deprecations)
 
 ## 🎯 Lab Goal
-Learn how to identify and upgrade Kubernetes API versions. In a long-running mall, blueprints (YAML manifests) eventually become outdated as the Management Office (API Server) adopts newer, more efficient standards.
+Learn how to identify and upgrade Kubernetes API versions. In a long-running mall, blueprints (YAML manifests) eventually become outdated as the Management Office ([API Server](../../../../GLOSSARY.md#api-server)) adopts newer, more efficient standards.
 
 ## 🛍️ Mall Analogy
-The **Management Office** (API Server) frequently updates its filing system. A blueprint for a "Warehouse" (**CronJob**) that worked perfectly two years ago might use an "Old Style" form (**v1beta1**). As a Mall Architect, you must audit the current system version and ensure all blueprints are updated to the "Current Style" (**v1**) before the old ones are no longer accepted.
+The **Management Office** ([API Server](../../../../GLOSSARY.md#api-server)) frequently updates its filing system. A blueprint for a "Warehouse" (**[CronJob](../../../../GLOSSARY.md#cronjob)**) that worked perfectly two years ago might use an "Old Style" form (**v1beta1**). As a Mall Architect, you must audit the current system version and ensure all blueprints are updated to the "Current Style" (**v1**) before the old ones are no longer accepted.
 
 ---
 
@@ -41,7 +41,7 @@ kubectl explain deploy
 **Observation**: You will see `VERSION: apps/v1`. The group is `apps`.
 **Task**: Save the group name to `/root/group`.
 
-### 3. Renovating the Warehouse Blueprint (CronJob)
+### 3. Renovating the Warehouse Blueprint ([CronJob](../../../../GLOSSARY.md#cronjob))
 A `CronJob` file exists at `/apps/cronjob.yaml` but uses an old version.
 
 **Task**: Update the `apiVersion` in `/apps/cronjob.yaml` to the current stable version (`batch/v1`).

@@ -1,7 +1,7 @@
 # 🧪 LAB 05: The Architect's Ledger (Backup Audit)
 *Focus: API Extension Discovery & Resource Auditing (v1.35)*
 
-In the **Central Mall**, a **CRD (Custom Resource Definition)** is like adding a new type of shop to the mall's legal charter (e.g., "Virtual Reality Lounge") that wasn't in the original blueprints. Once the charter is updated, you can start tracking the actual "VR Lounge" instances (Custom Objects).
+In the **Central Mall**, a **[CRD](../../../../GLOSSARY.md#crd) (Custom Resource Definition)** is like adding a new type of shop to the mall's legal charter (e.g., "Virtual Reality Lounge") that wasn't in the original blueprints. Once the charter is updated, you can start tracking the actual "VR Lounge" instances (Custom Objects).
 
 ---
 
@@ -51,7 +51,7 @@ kubectl get db-backups -A > /root/db-backups
 ---
 
 ## 💡 Why this works?
-1. **API Evolution:** By defining a `CRD`, you are teaching the `kube-apiserver` a new vocabulary. The Mall Manager (kubectl) now understands what a `DbBackup` is.
+1. **API Evolution:** By defining a `CRD`, you are teaching the `kube-apiserver` a new vocabulary. The Mall Manager ([kubectl](../../../../GLOSSARY.md#kubectl)) now understands what a `DbBackup` is.
 2. **Global Visibility:** Custom objects live inside Namespaces just like Pods. The `-A` (or `--all-namespaces`) flag is the only way to get the full "Mall-wide" inventory.
 3. **Storage:** These lists are vital for disaster recovery. Knowing which CRDs exist allows you to recreate the Mall's custom logic in a new Cluster.
 
@@ -60,8 +60,8 @@ kubectl get db-backups -A > /root/db-backups
 ## 📝 CKAD Pro-Tips
 - **Shortnames:** Many CRDs define shortnames (like `deploy` for `deployments`). Try `kubectl api-resources` to see if `db-backups` has a shorter alias like `dbb`.
 - **The "Kind" vs "Object":** - `kubectl get crd`: Shows the *Definition* (The Template).
-    - `kubectl get <name-of-crd>`: Shows the *Instance* (The actual running service).
-- **v1.35 Update:** In the latest exam versions, you might encounter **Operators**. An Operator is just a Controller that watches these Custom Objects and performs actions (like actually running the backup).
+    - `kubectl get <name-of-crd>`: Shows the *Instance* (The actual running [service](../../../../GLOSSARY.md#service)).
+- **v1.35 Update:** In the latest exam versions, you might encounter **Operators**. An [Operator](../../../../GLOSSARY.md#operator) is just a Controller that watches these Custom Objects and performs actions (like actually running the backup).
 
 ---
 ---

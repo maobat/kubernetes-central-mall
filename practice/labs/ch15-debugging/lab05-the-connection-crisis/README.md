@@ -1,4 +1,4 @@
-# 🧪 LAB 05: The Connection Crisis (Kubeconfig & VPN)
+# 🧪 LAB 05: The Connection Crisis ([Kubeconfig](../../../../GLOSSARY.md#kubeconfig) & VPN)
 
 ## Infrastructure & Troubleshooting – The Broken Compass
 
@@ -6,17 +6,17 @@
 
 ## 🎯 Lab Goal
 
-Diagnose and repair the **"Broken Compass"** (Kubeconfig) when your laptop and the Cluster (Kind) lose their connection due to VPN interference or "Port Drift."
+Diagnose and repair the **"Broken Compass"** ([Kubeconfig](../../../../GLOSSARY.md#kubeconfig)) when your laptop and the Cluster (Kind) lose their connection due to VPN interference or "Port Drift."
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, your kubeconfig is the **Store Directory (The Map)**.
+In the **Central Mall**, your [kubeconfig](../../../../GLOSSARY.md#kubeconfig) is the **Store Directory (The Map)**.
 
-- **The Map (Kubeconfig)** → Tells you the Shop is at Aisle 10 (Port 45145).
+- **The Map ([Kubeconfig](../../../../GLOSSARY.md#kubeconfig))** → Tells you the Shop is at Aisle 10 (Port 45145).
 - **The Reality (Docker)** → Due to a "Renovation" (Cluster restart), the Shop moved to Aisle 12 (Port 37607).
-- **The VPN Jammer** → A Security Gate (FortiClient) has blocked the main hallway, so you have to find the Service Entrance (Internal Docker Bridge IP).
+- **The VPN Jammer** → A Security Gate (FortiClient) has blocked the main hallway, so you have to find the [Service](../../../../GLOSSARY.md#service) Entrance (Internal Docker Bridge IP).
 
 If your map doesn't match reality, you'll be wandering the parking lot forever (**I/O Timeout**).
 
@@ -31,7 +31,7 @@ docker inspect ckad-control-plane --format='{{(index (index .NetworkSettings.Por
 ```
 
 ### 2. Bypass the VPN "Jammer"
-If the local IP is timing out, find the **Internal Service Entrance** (The Docker Bridge IP):
+If the local IP is timing out, find the **Internal [Service](../../../../GLOSSARY.md#service) Entrance** (The Docker Bridge IP):
 ```bash
 docker inspect ckad-control-plane -f '{{ .NetworkSettings.Networks.kind.IPAddress }}'
 ```
@@ -57,7 +57,7 @@ These files are the "ID Cards" for your connection:
 | File Path | Purpose | Usage |
 | :--- | :--- | :--- |
 | `~/.kube/config` | **The Client-side Map** | Stores Contexts, Clusters, and Credentials. |
-| `/etc/kubernetes/pki/ca.crt` | **The "Security Badge"** | `kubectl` uses this to verify the API server identity. |
+| `/etc/kubernetes/pki/ca.crt` | **The "Security Badge"** | `kubectl` uses this to verify the [API server](../../../../GLOSSARY.md#api-server) identity. |
 | `/etc/kubernetes/admin.conf` | **The "Master Key"** | Copy this to your laptop if your local config is totally corrupted. |
 
 ---
@@ -67,11 +67,11 @@ These files are the "ID Cards" for your connection:
 > [!CAUTION]
 > **Context Check:** Always run `kubectl config get-contexts` first! You might be perfectly connected to the wrong cluster.
 
-- **The "Thinking" kubectl:** If `kubectl` hangs (I/O Timeout), it's usually a **Routing/VPN issue**.
-- **The "Refused" kubectl:** If `kubectl` says "Connection Refused," the **Process (API Server) is dead** or the **Port is wrong**.
+- **The "Thinking" [kubectl](../../../../GLOSSARY.md#kubectl):** If `kubectl` hangs (I/O Timeout), it's usually a **Routing/VPN issue**.
+- **The "Refused" [kubectl](../../../../GLOSSARY.md#kubectl):** If `kubectl` says "Connection Refused," the **Process ([API Server](../../../../GLOSSARY.md#api-server)) is dead** or the **Port is wrong**.
 - **Certificate Verification:** If you change the IP in your config, you might need `--insecure-skip-tls-verify` because the certificate was only signed for `localhost`.
 
-> ⚡ **One-line memory:** "Docker is the Building, Kubeconfig is the Map, and the VPN is the locked gate between them."
+> ⚡ **One-line memory:** "Docker is the Building, [Kubeconfig](../../../../GLOSSARY.md#kubeconfig) is the Map, and the VPN is the locked gate between them."
 
 ---
 

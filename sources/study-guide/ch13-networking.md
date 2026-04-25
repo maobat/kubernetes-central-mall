@@ -1,18 +1,18 @@
 # 📖 Chapter 13: Network Policies
 *Locked Corridors (Network Isolation)*
 
-By default, the **Central Mall** has an "Open Door Policy." Every shop (Pod) can talk to every other shop. While this sounds friendly, it is a security nightmare. If a hacker takes over the "Juice Bar," they can walk straight into the "Main Cashier." We use **Network Policies** to lock the doors.
+By default, the **Central Mall** has an "Open Door Policy." Every shop ([Pod](../../GLOSSARY.md#pod)) can talk to every other shop. While this sounds friendly, it is a security nightmare. If a hacker takes over the "Juice Bar," they can walk straight into the "Main Cashier." We use **Network Policies** to lock the doors.
 
 ---
 
-## 🎭 13.1 Ingress vs. Egress
+## 🎭 13.1 [Ingress](../../GLOSSARY.md#ingress) vs. Egress
 
 In the world of Locked Corridors, we look at which way the person is walking:
 
 | Term | Mall Analogy | K8s Concept |
 | :--- | :--- | :--- |
-| **Ingress** | **The Front Door.** Who is allowed to enter your shop? | Traffic coming *into* the Pod. |
-| **Egress** | **The Staff Exit.** Where are your workers allowed to go? | Traffic leaving *from* the Pod. |
+| **[Ingress](../../GLOSSARY.md#ingress)** | **The Front Door.** Who is allowed to enter your shop? | Traffic coming *into* the [Pod](../../GLOSSARY.md#pod). |
+| **Egress** | **The Staff Exit.** Where are your workers allowed to go? | Traffic leaving *from* the [Pod](../../GLOSSARY.md#pod). |
 
 
 
@@ -55,8 +55,8 @@ spec:
       port: 5432
 ```
 
-### 2. The Namespace Wall
-You can also lock doors based on which floor (Namespace) the person is coming from.
+### 2. The [Namespace](../../GLOSSARY.md#namespace) Wall
+You can also lock doors based on which floor ([Namespace](../../GLOSSARY.md#namespace)) the person is coming from.
 ```yaml
   ingress:
   - from:
@@ -78,8 +78,8 @@ kubectl describe netpol <policy-name>
 ---
 
 ## ⚠️ Common Exam Traps
-- **Default Deny Is Instant:** The moment you create a NetworkPolicy that selects a Pod, the default behavior for that Pod changes from "Allow All" to "Deny All" for any traffic direction (Ingress/Egress) not explicitly allowed by the policy rule.
-- **Namespace Selector Pitfalls:** To allow traffic from another namespace, that namespace *must* have the correct labels applied, and your policy must use `namespaceSelector`. If you just use `podSelector`, it only checks pods *in the same namespace*.
+- **Default Deny Is Instant:** The moment you create a [NetworkPolicy](../../GLOSSARY.md#networkpolicy) that selects a [Pod](../../GLOSSARY.md#pod), the default behavior for that [Pod](../../GLOSSARY.md#pod) changes from "Allow All" to "Deny All" for any traffic direction ([Ingress](../../GLOSSARY.md#ingress)/Egress) not explicitly allowed by the policy rule.
+- **[Namespace](../../GLOSSARY.md#namespace) Selector Pitfalls:** To allow traffic from another [namespace](../../GLOSSARY.md#namespace), that [namespace](../../GLOSSARY.md#namespace) *must* have the correct labels applied, and your policy must use `namespaceSelector`. If you just use `podSelector`, it only checks pods *in the same [namespace](../../GLOSSARY.md#namespace)*.
 
 ---
 

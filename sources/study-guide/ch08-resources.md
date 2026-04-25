@@ -11,25 +11,25 @@ Think of these as your "Usage Contract."
 
 | Term | Mall Analogy | K8s Concept |
 | :--- | :--- | :--- |
-| **Request** | **The Minimum Guarantee.** "I need at least 2 sockets to open my doors." | The scheduler uses this to find a Node with enough room. |
-| **Limit** | **The Circuit Breaker.** "If I try to use more than 10 sockets, cut my power." | Prevents a Pod from starving other Pods of resources. |
+| **[Request](../../GLOSSARY.md#request)** | **The Minimum Guarantee.** "I need at least 2 sockets to open my doors." | The scheduler uses this to find a [Node](../../GLOSSARY.md#node) with enough room. |
+| **[Limit](../../GLOSSARY.md#limit)** | **The Circuit Breaker.** "If I try to use more than 10 sockets, cut my power." | Prevents a [Pod](../../GLOSSARY.md#pod) from starving other Pods of resources. |
 
 
 
 ---
 
-## 🛠️ 8.2 The Consequences: Throttling & Eviction
+## 🛠️ 8.2 The Consequences: [Throttling](../../GLOSSARY.md#throttling) & Eviction
 
 If a shop breaks its contract, the Mall Manager takes action:
 
-1. **CPU Over-limit:** The manager slows down your machines (Throttling). The shop stays open, but things move very slowly.
-2. **Memory Over-limit:** Memory is like water; once it's gone, it's gone. If you go over your limit, the manager shuts down the shop immediately (**OOMKilled** - Out Of Memory Killed).
+1. **CPU Over-[limit](../../GLOSSARY.md#limit):** The manager slows down your machines ([Throttling](../../GLOSSARY.md#throttling)). The shop stays open, but things move very slowly.
+2. **Memory Over-[limit](../../GLOSSARY.md#limit):** Memory is like water; once it's gone, it's gone. If you go over your [limit](../../GLOSSARY.md#limit), the manager shuts down the shop immediately (**[OOMKilled](../../GLOSSARY.md#oomkilled)** - Out Of Memory Killed).
 
 ---
 
 ## 🛠️ 8.3 The Blueprint: Setting the Budget
 
-You must define these at the **container** level within your Pod blueprint.
+You must define these at the **container** level within your [Pod](../../GLOSSARY.md#pod) blueprint.
 
 ```yaml
 apiVersion: v1
@@ -55,7 +55,7 @@ spec:
 
 ## 🏗️ 8.4 Resource Quotas: Floor-Wide Limits
 
-What if you want to limit the total electricity used by an **entire floor** (Namespace)? You use a **ResourceQuota**. This ensures that the "Food Court" floor doesn't use 90% of the Mall's total capacity.
+What if you want to [limit](../../GLOSSARY.md#limit) the total electricity used by an **entire floor** ([Namespace](../../GLOSSARY.md#namespace))? You use a **[ResourceQuota](../../GLOSSARY.md#resourcequota)**. This ensures that the "Food Court" floor doesn't use 90% of the Mall's total capacity.
 
 ```yaml
 apiVersion: v1
@@ -83,7 +83,7 @@ kubectl top node
 ```
 
 ### 2. Spotting the Resource Hog
-If a Pod keeps restarting, check for the OOMKilled status:
+If a [Pod](../../GLOSSARY.md#pod) keeps restarting, check for the [OOMKilled](../../GLOSSARY.md#oomkilled) status:
 ```bash
 kubectl describe pod <pod-name>
 # Look for: Last State: Terminated, Reason: OOMKilled
@@ -92,14 +92,14 @@ kubectl describe pod <pod-name>
 ---
 
 ## ⚠️ Common Exam Traps
-- **OOMKilled vs Throttling:** If a container exceeds its CPU `limit`, it is throttled (slows down) but stays running. If it exceeds its Memory `limit`, it is instantly terminated (`OOMKilled`). Focus on memory limits if a Pod keeps spontaneously restarting.
-- **Requests vs Limits:** `requests` are used by the Scheduler to find a Node with enough room. If your total `requests` are higher than any Node's capacity, the Pod stays in `Pending` forever.
+- **[OOMKilled](../../GLOSSARY.md#oomkilled) vs [Throttling](../../GLOSSARY.md#throttling):** If a container exceeds its CPU `limit`, it is throttled (slows down) but stays running. If it exceeds its Memory `limit`, it is instantly terminated (`OOMKilled`). Focus on memory limits if a [Pod](../../GLOSSARY.md#pod) keeps spontaneously restarting.
+- **Requests vs Limits:** `requests` are used by the Scheduler to find a [Node](../../GLOSSARY.md#node) with enough room. If your total `requests` are higher than any [Node](../../GLOSSARY.md#node)'s capacity, the [Pod](../../GLOSSARY.md#pod) stays in `Pending` forever.
 
 ---
 
 ### 🧰 Study Toolbox
 
-* 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
+* 🎙️ **Audio Overview:** [Request](../../GLOSSARY.md#request) the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 **🎨 Visualize the Analogy**
 * [Explore Chapter 8 Comics](../../visual-learning/comics/ch08-resources/README.md)
 

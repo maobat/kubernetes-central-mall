@@ -1,8 +1,8 @@
-# 🧪 LAB 02: One-Way Corridors (Namespace Egress)
+# 🧪 LAB 02: One-Way Corridors ([Namespace](../../../../GLOSSARY.md#namespace) Egress)
 
-## Services and Networking – Egress Rules & Namespace Isolation
+## Services and Networking – Egress Rules & [Namespace](../../../../GLOSSARY.md#namespace) Isolation
 
-In the **Central Mall**, a **NetworkPolicy** is a security protocol for the corridors. By default, every worker can talk to anyone in any wing (Namespace). This lab creates a "One-Way Corridor" from **Space1** to **Space2**, demonstrating how to restrict outgoing traffic (**Egress**) using Namespace selectors and handling **DNS** exceptions.
+In the **Central Mall**, a **[NetworkPolicy](../../../../GLOSSARY.md#networkpolicy)** is a security protocol for the corridors. By default, every worker can talk to anyone in any wing ([Namespace](../../../../GLOSSARY.md#namespace)). This lab creates a "One-Way Corridor" from **Space1** to **Space2**, demonstrating how to restrict outgoing traffic (**Egress**) using [Namespace](../../../../GLOSSARY.md#namespace) selectors and handling **DNS** exceptions.
 
 ---
 
@@ -21,17 +21,17 @@ In the **Central Mall**, a **NetworkPolicy** is a security protocol for the corr
 **Manager:** "Fine. DNS calls are allowed, but that's it."
 
 ### 🎬 Panel 3 – The Firewall
-**Security Guard (NetworkPolicy):** "Halt! You're from Space1 trying to reach 'Default'? Denied. Go to Space2 or stay put."
+**Security Guard ([NetworkPolicy](../../../../GLOSSARY.md#networkpolicy)):** "Halt! You're from Space1 trying to reach 'Default'? Denied. Go to Space2 or stay put."
 > [!IMPORTANT]
-> **Egress** rules restrict outgoing traffic. Once an Egress policy is applied to a Pod, all other outgoing traffic is blocked by default (Isolation).
+> **Egress** rules restrict outgoing traffic. Once an Egress policy is applied to a [Pod](../../../../GLOSSARY.md#pod), all other outgoing traffic is blocked by default (Isolation).
 
 ---
 
 ## 🎯 Lab Objectives
-Restrict all Pods in the `space1` namespace so they can only send traffic to `space2`. 
-- **Rule 1:** Allow Egress to all Pods in Namespace `space2`.
+Restrict all Pods in the `space1` [namespace](../../../../GLOSSARY.md#namespace) so they can only send traffic to `space2`. 
+- **Rule 1:** Allow Egress to all Pods in [Namespace](../../../../GLOSSARY.md#namespace) `space2`.
 - **Rule 2:** Allow Egress for DNS (Port 53 TCP/UDP) so they can still resolve internal Mall addresses.
-- **Note:** Incoming traffic (Ingress) remains untouched in this lab.
+- **Note:** Incoming traffic ([Ingress](../../../../GLOSSARY.md#ingress)) remains untouched in this lab.
 
 ---
 
@@ -48,15 +48,15 @@ chmod +x setup.sh
 ```
 
 This will create:
--   **Namespace `space2`** (The Destination).
--   **Pod `app1-0`** in `space1` (The Source worker).
--   **Pod `microservice1`** in `space2` (The Allowed Target).
--   **Pod `tester`** in `default` (The Forbidden Target).
+-   **[Namespace](../../../../GLOSSARY.md#namespace) `space2`** (The Destination).
+-   **[Pod](../../../../GLOSSARY.md#pod) `app1-0`** in `space1` (The Source worker).
+-   **[Pod](../../../../GLOSSARY.md#pod) `microservice1`** in `space2` (The Allowed Target).
+-   **[Pod](../../../../GLOSSARY.md#pod) `tester`** in `default` (The Forbidden Target).
 
 ---
 
 ## 🔍 Pre-check: Identifying the Targets
-NetworkPolicies use **Labels**. To target a Namespace, we need to know its label. Since Kubernetes v1.22+, every namespace has a default label: `kubernetes.io/metadata.name`.
+NetworkPolicies use **Labels**. To target a [Namespace](../../../../GLOSSARY.md#namespace), we need to know its label. Since Kubernetes v1.22+, every [namespace](../../../../GLOSSARY.md#namespace) has a default label: `kubernetes.io/metadata.name`.
 
 ```bash
 # Check namespace labels to verify the target wings
@@ -140,16 +140,16 @@ kubectl -n space1 exec app1-0 -- curl -m 1 tester.default.svc.cluster.local
 >    kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
 >    ```
 
-> **The Isolation Trap:** As soon as you define an `Egress` policy, ALL other outgoing traffic not explicitly allowed is **BLOCKED**. That is why we MUST add the DNS rule, or the Pod won't even find `space2` by name!
+> **The Isolation Trap:** As soon as you define an `Egress` policy, ALL other outgoing traffic not explicitly allowed is **BLOCKED**. That is why we MUST add the DNS rule, or the [Pod](../../../../GLOSSARY.md#pod) won't even find `space2` by name!
 
-- **Namespace Selector vs Pod Selector:** 
-  - `podSelector`: Who are we protecting/restricting in the current namespace?
+- **[Namespace](../../../../GLOSSARY.md#namespace) Selector vs [Pod](../../../../GLOSSARY.md#pod) Selector:** 
+  - `podSelector`: Who are we protecting/restricting in the current [namespace](../../../../GLOSSARY.md#namespace)?
   - `to.namespaceSelector`: Which other wings (Namespaces) are they allowed to visit?
 - **Standard Port:** Port 53 is the standard for DNS. Don't forget both **TCP** and **UDP**!
 
 ---
 
-## 🛠️ Tool Spotlight: The NetworkPolicy Editor
+## 🛠️ Tool Spotlight: The [NetworkPolicy](../../../../GLOSSARY.md#networkpolicy) Editor
 If you are struggling with YAML, the [Cilium Network Policy Editor](https://editor.networkpolicy.io/) is the "Blueprinting Tool" of the Mall.
 
 ### 🏗️ **The Mall Manager's Logic (For Dummies):**

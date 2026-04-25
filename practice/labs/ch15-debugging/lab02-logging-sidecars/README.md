@@ -8,25 +8,25 @@ In this lab, we will explore two different ways the Central Mall collects "CCTV 
 
 ## 🎯 Lab Goals
 - Understand default `STDOUT` logging behavior in Kubernetes.
-- Deploy a logging **sidecar container** to capture application logs that don't output directly to `STDOUT`.
+- Deploy a logging **[sidecar container](../../../../GLOSSARY.md#sidecar-container)** to capture application logs that don't output directly to `STDOUT`.
 - Tie logs back to the Central Mall "CCTV" analogy.
 
 ---
 
 ## 🛠️ Step 1: Standard CCTV (STDOUT Logging)
 
-By default, logs from a container get written to **Standard Output (STDOUT)**. The Kubernetes node agent automatically acts like a mall microphone, collecting these logs so you can view them with `kubectl`.
+By default, logs from a container get written to **Standard Output (STDOUT)**. The Kubernetes [node](../../../../GLOSSARY.md#node) agent automatically acts like a mall microphone, collecting these logs so you can view them with `kubectl`.
 
-Let's examine a pod that simulates a busy shop clerk announcing every time a customer arrives.
+Let's examine a [pod](../../../../GLOSSARY.md#pod) that simulates a busy shop clerk announcing every time a customer arrives.
 
 ### 1. View the manifest
-Run the following command to review the Pod definition:
+Run the following command to review the [Pod](../../../../GLOSSARY.md#pod) definition:
 ```bash
 vim pod-logging.yaml
 ```
 *Note that the `busybox` container is using a `while` loop that echos the date every 1 second directly to STDOUT.*
 
-### 2. Create the Pod
+### 2. Create the [Pod](../../../../GLOSSARY.md#pod)
 ```bash
 kubectl create -f pod-logging.yaml
 ```
@@ -42,31 +42,31 @@ kubectl logs shop-standard-cctv -f
 
 ## 🛠️ Step 2: The Silent Worker (Sidecar Tailing)
 
-Not all applications log conveniently to `STDOUT`. Some legacy software only writes logs to a local file on disk. If we want to capture these in Kubernetes, we can deploy a **Sidecar container** whose sole job is to tail that file and scream it out loud for the mall's microphones to pick up!
+Not all applications log conveniently to `STDOUT`. Some legacy software only writes logs to a local file on disk. If we want to capture these in Kubernetes, we can deploy a **[Sidecar container](../../../../GLOSSARY.md#sidecar-container)** whose sole [job](../../../../GLOSSARY.md#job) is to tail that file and scream it out loud for the mall's microphones to pick up!
 
 ### 1. View the multi-container manifest
 ```bash
 cat pod-logging-sidecar.yaml
 ```
 **Key Concepts to notice:**
-- There are **two containers** in the single Pod.
+- There are **two containers** in the single [Pod](../../../../GLOSSARY.md#pod).
 - The `main-clerk` is echoing data to `/var/log/main-container.log` every 5 seconds (not to STDOUT).
 - The `log-tailer-sidecar` is running the command `tail -f /var/log/main-container.log`.
 - Both containers share a `varlog` volume (using `emptyDir`) so they can see the exact same file.
 
-### 2. Create the Pod
+### 2. Create the [Pod](../../../../GLOSSARY.md#pod)
 ```bash
 kubectl create -f pod-logging-sidecar.yaml
 ```
 
-### 3. Verify the Pod is running
+### 3. Verify the [Pod](../../../../GLOSSARY.md#pod) is running
 Ensure both the Main Clerk and the Sidecar are ready (`2/2`):
 ```bash
 kubectl get pods
 ```
 
 ### 4. Check the Assistant's Tape
-If you ask the Pod for its logs generally, Kubernetes might get confused because there are two workers. You must specifically ask the Sidecar what it saw:
+If you ask the [Pod](../../../../GLOSSARY.md#pod) for its logs generally, Kubernetes might get confused because there are two workers. You must specifically ask the Sidecar what it saw:
 ```bash
 kubectl logs shop-with-tail-sidecar -c log-tailer-sidecar
 ```

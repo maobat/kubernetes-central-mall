@@ -5,9 +5,9 @@ In the **Central Mall**, just because you hire a clerk doesn't mean you give the
 
 ---
 
-## 🎭 6.1 The Safety Gear (SecurityContext)
+## 🎭 6.1 The Safety Gear ([SecurityContext](../../GLOSSARY.md#securitycontext))
 
-A **SecurityContext** defines the "Privilege" level of your worker. It ensures that if a worker is "compromised" (goes rogue), they can't do much damage to the rest of the mall.
+A **[SecurityContext](../../GLOSSARY.md#securitycontext)** defines the "Privilege" level of your worker. It ensures that if a worker is "compromised" (goes rogue), they can't do much damage to the rest of the mall.
 
 | Safety Rule | Mall Analogy | K8s Parameter |
 | :--- | :--- | :--- |
@@ -77,8 +77,8 @@ kubectl exec secure-shop -- id
 ---
 
 ## ⚠️ Common Exam Traps
-- **Pod vs. Container Context:** `securityContext` can be specified at the Pod level (applies to all containers) AND at the Container level. If there is a conflict (e.g., Pod says `runAsUser: 1000`, Container says `runAsUser: 2000`), the Container's setting wins.
-- **Capabilities placement:** Linux `capabilities` (like adding `NET_ADMIN`) can **only** be added at the Container level, not the Pod level. Putting `capabilities` under the Pod spec will result in a validation error.
+- **Pod vs. Container Context:** `[securityContext](../../GLOSSARY.md#securitycontext)` can be specified at the Pod level (applies to all containers) AND at the Container level. If there is a conflict (e.g., Pod says `runAsUser: 1000`, Container says `runAsUser: 2000`), the Container's setting wins.
+- **Capabilities placement:** Linux `capabilities` (like adding `NET_ADMIN`) can **only** be added at the Container level, not the Pod level. Putting `capabilities` under the [Pod](../../GLOSSARY.md#pod) spec will result in a validation error.
 
 ---
 

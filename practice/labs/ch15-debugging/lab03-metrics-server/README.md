@@ -41,7 +41,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 ```
 
 **2. The "Insecure" Patch:**
-Since Kind's certificates aren't "official," you have to edit the Metrics Server deployment to allow insecure communication:
+Since Kind's certificates aren't "official," you have to edit the Metrics Server [deployment](../../../../GLOSSARY.md#deployment) to allow insecure communication:
 ```bash
 kubectl patch deployment metrics-server -n kube-system --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
 ```
@@ -63,11 +63,11 @@ kubectl top pod --sort-by=cpu
 
 ---
 
-## 🛠️ Step 1: Checking the Mall Infrastructure (Node Metrics)
+## 🛠️ Step 1: Checking the Mall Infrastructure ([Node](../../../../GLOSSARY.md#node) Metrics)
 
-The **Metrics Server** collects data from every floor (Node) in the mall. This allows the Manager to see if a specific floor is becoming overcrowded or running out of power.
+The **Metrics Server** collects data from every floor ([Node](../../../../GLOSSARY.md#node)) in the mall. This allows the Manager to see if a specific floor is becoming overcrowded or running out of power.
 
-### 1. View Node Usage
+### 1. View [Node](../../../../GLOSSARY.md#node) Usage
 Run the following command to see the total "electricity" and "water" being used by the control plane:
 ```bash
 kubectl top node controlplane
@@ -90,18 +90,18 @@ kubectl top node node01
 
 ---
 
-## 🛠️ Step 2: Inspecting Individual Shops (Pod Metrics)
+## 🛠️ Step 2: Inspecting Individual Shops ([Pod](../../../../GLOSSARY.md#pod) Metrics)
 
 Sometimes, the whole floor is fine, but one specific shop is "leaving the lights on." We can use the dashboard to zoom in on individual shops (Pods).
 
-### 1. View Pod Usage
-Run the following command to see the metrics for a specific pod:
+### 1. View [Pod](../../../../GLOSSARY.md#pod) Usage
+Run the following command to see the metrics for a specific [pod](../../../../GLOSSARY.md#pod):
 ```bash
 kubectl top pod shop-standard-cctv
 ```
 
 ### 2. 🏆 CHALLENGE
-Find the pod named `shop-with-tail-sidecar` and check its resource usage. 
+Find the [pod](../../../../GLOSSARY.md#pod) named `shop-with-tail-sidecar` and check its resource usage. 
 
 <details>
 <summary><b>Solution</b></summary>
@@ -130,7 +130,7 @@ kubectl top pod --sort-by=memory
 ```
 
 ### 3. 🏆 CHALLENGE
-Show the metrics for all containers inside the `shop-with-tail-sidecar` pod and sort them by memory usage to see if the clerk or the sidecar is the bigger "water hog."
+Show the metrics for all containers inside the `shop-with-tail-sidecar` [pod](../../../../GLOSSARY.md#pod) and sort them by memory usage to see if the clerk or the sidecar is the bigger "water hog."
 
 <details>
 <summary><b>Solution</b></summary>
@@ -144,8 +144,8 @@ kubectl top pod shop-with-tail-sidecar --containers --sort-by=memory
 
 ## 📝 Key Takeaways
 1. **The Dashboard**: The Metrics Server is the engine behind `kubectl top`. Without it, the "meters" would show no data.
-2. **Resource Visibility**: Monitoring CPU and Memory is the first step in preventing **OOMKilled** (Out Of Memory) incidents.
-3. **Scaling**: These metrics are also used by the **Horizontal Pod Autoscaler (HPA)** to decide when to "hire more staff" (add replicas).
+2. **Resource Visibility**: Monitoring CPU and Memory is the first step in preventing **[OOMKilled](../../../../GLOSSARY.md#oomkilled)** (Out Of Memory) incidents.
+3. **Scaling**: These metrics are also used by the **Horizontal [Pod](../../../../GLOSSARY.md#pod) Autoscaler (HPA)** to decide when to "hire more staff" (add replicas).
 
 ---
 

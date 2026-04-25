@@ -1,4 +1,4 @@
-# 🧪 LAB 02: Prefab Stores & Blueprint Overlays (Helm & Kustomize)
+# 🧪 LAB 02: Prefab Stores & Blueprint Overlays ([Helm](../../../../GLOSSARY.md#helm) & Kustomize)
 
 ## Logistics Tools – Managing Complex Manifests
 
@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-Learn how to manage Kubernetes resources at scale using **Helm** for third-party apps and **Kustomize** for overriding your own internal blueprints across different environments.
+Learn how to manage Kubernetes resources at scale using **[Helm](../../../../GLOSSARY.md#helm)** for third-party apps and **Kustomize** for overriding your own internal blueprints across different environments.
 
 ---
 
@@ -14,14 +14,14 @@ Learn how to manage Kubernetes resources at scale using **Helm** for third-party
 
 In the **Central Mall**, we have two ways of building shops:
 
-- **The Store-in-a-Box (Helm)** → You order a fully built MariaDB shop from a catalog.
+- **The Store-in-a-Box ([Helm](../../../../GLOSSARY.md#helm))** → You order a fully built MariaDB shop from a catalog.
 - **The Blueprint Overlay (Kustomize)** → You have a standard "Base" blueprint for a coffee shop. You put a piece of tracing paper (Overlay) over it to add a "Big Neon Sign" for the Staging environment.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Helm: The Prefab Delivery
+### 1. [Helm](../../../../GLOSSARY.md#helm): The Prefab Delivery
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm install my-mall bitnami/nginx --set replicaCount=2

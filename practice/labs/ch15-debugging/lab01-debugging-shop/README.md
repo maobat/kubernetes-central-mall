@@ -22,7 +22,7 @@ Wait a few seconds, then check the status:
 ```bash
 kubectl get pods
 ```
-*You should see one pod stuck in `ImagePullBackOff` and another in `CrashLoopBackOff`.*
+*You should see one [pod](../../../../GLOSSARY.md#pod) stuck in `ImagePullBackOff` and another in `CrashLoopBackOff`.*
 
 ---
 

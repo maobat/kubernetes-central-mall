@@ -6,7 +6,7 @@ In a massive, crowded mall, a small fire in one shop can quickly become a disast
 
 Some jobs in the mall require specialized tools. A plumber might need a heavy-duty torch (privileged access), while a shop clerk only needs a pen.
 
-However, giving every worker a torch is dangerous. The **SecurityContext** allows the Owner to specify exactly what "Safety Gear" each worker is allowed to carry:
+However, giving every worker a torch is dangerous. The **[SecurityContext](../../GLOSSARY.md#securitycontext)** allows the Owner to specify exactly what "Safety Gear" each worker is allowed to carry:
 - **No Master Keys:** By default, workers are told they cannot use a "Master Key" (**Privileged: false**). They can only open the doors they are explicitly assigned to.
 - **Limited Toolset:** Instead of a full toolbox, a worker might be given just one or two specific tools (**Capabilities**), like "Permission to change the clock" but not "Permission to rewire the building."
 

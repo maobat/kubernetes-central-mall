@@ -49,14 +49,14 @@ docker push <username>/nginx-custom:v1
 
 ## 📋 Part 3: Opening the Shop (Deploy)
 
-### 1. Create the Deployment
+### 1. Create the [Deployment](../../../../GLOSSARY.md#deployment)
 Deploy your custom image to the cluster:
 ```bash
 kubectl create deploy custom-nginx --image=<username>/nginx-custom:v1
 ```
 
 ### 2. Expose the Storefront
-Create a **NodePort** service to make the page accessible:
+Create a **NodePort** [service](../../../../GLOSSARY.md#service) to make the page accessible:
 ```bash
 kubectl expose deploy custom-nginx --type=NodePort --port=80 --name=nginx-service
 ```

@@ -1,4 +1,4 @@
-# 🧪 LAB 04: The Inventory Report (Helm Releases)
+# 🧪 LAB 04: The Inventory Report ([Helm](../../../../GLOSSARY.md#helm) Releases)
 
 ## Logistics Tools – Tracking Managed Prefab Kits
 
@@ -6,13 +6,13 @@
 
 ## 🎯 Lab Goal
 
-Learn how to audit the mall's specialized management services by listing all active **Helm Releases** across all wings (namespaces).
+Learn how to audit the mall's specialized management services by listing all active **[Helm](../../../../GLOSSARY.md#helm) Releases** across all wings (namespaces).
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, specialized shops often come with their own "Prefab Managers" (Helm Releases). To keep an accurate inventory, you need to check every wing to see which managers are currently on duty.
+In the **Central Mall**, specialized shops often come with their own "Prefab Managers" ([Helm](../../../../GLOSSARY.md#helm) Releases). To keep an accurate inventory, you need to check every wing to see which managers are currently on duty.
 
 ---
 
@@ -38,7 +38,7 @@ helm -n team-blue install warehouse bitnami/redis
 
 The Mall Logistics department needs a full report of all specialized managers currently active in the cluster.
 
-1. **Inventory Collection:** Write the list of all **Helm releases** in the cluster into the file `releases`.
+1. **Inventory Collection:** Write the list of all **[Helm](../../../../GLOSSARY.md#helm) releases** in the cluster into the file `releases`.
 
 ---
 

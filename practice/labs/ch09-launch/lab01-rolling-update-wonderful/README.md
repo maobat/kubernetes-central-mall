@@ -1,4 +1,4 @@
-# 🧪 LAB 01: The "Wonderful" Boutique Makeover (Rolling Update)
+# 🧪 LAB 01: The "Wonderful" Boutique Makeover ([Rolling Update](../../../../GLOSSARY.md#rolling-update))
 
 ## Launch Strategies – Strategy Tuning & Upgrades
 
@@ -6,15 +6,15 @@
 
 ## 🎯 Lab Goal
 
-Perform a **Rolling Update** of an application modifying its `maxSurge` and `maxUnavailable` parameters to achieve a seamless, zero-downtime transition.
+Perform a **[Rolling Update](../../../../GLOSSARY.md#rolling-update)** of an application modifying its `maxSurge` and `maxUnavailable` parameters to achieve a seamless, zero-downtime transition.
 
-> **CKAD Importance:** High. Adjusting Deployment strategies, performing rollouts, and checking rollout status are foundational CKAD tasks.
+> **CKAD Importance:** High. Adjusting [Deployment](../../../../GLOSSARY.md#deployment) strategies, performing rollouts, and checking rollout status are foundational CKAD tasks.
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, changing an image from `httpd` to `nginx` is like renovating a boutique while keeping the doors open. We use a **Rolling Update** to ensure there is always a worker at the counter.
+In the **Central Mall**, changing an image from `httpd` to `nginx` is like renovating a boutique while keeping the doors open. We use a **[Rolling Update](../../../../GLOSSARY.md#rolling-update)** to ensure there is always a worker at the counter.
 
 The shop "Wonderful" is switching suppliers. We need to move from the old system (`httpd:alpine`) to the new one (`nginx:alpine`). The Mall Manager demands specific safety rules during the renovation.
 
@@ -33,10 +33,10 @@ The shop "Wonderful" is switching suppliers. We need to move from the old system
 
 ## � Requirements
 
-1. **Initial Deployment:** Application "wonderful" is running with `httpd:alpine` and 3 replicas.
+1. **Initial [Deployment](../../../../GLOSSARY.md#deployment):** Application "wonderful" is running with `httpd:alpine` and 3 replicas.
 2. **Strategy:** Set `maxSurge` to 50% and `maxUnavailable` to 0%.
 3. **Update:** Switch the image to `nginx:alpine`.
-4. **Verification:** Wait till the rolling update has succeeded and the application is accessible.
+4. **Verification:** Wait till the [rolling update](../../../../GLOSSARY.md#rolling-update) has succeeded and the application is accessible.
 
 ---
 
@@ -114,9 +114,9 @@ Apply the changes (if using a file) or save the editor, and watch the "Shift Cha
 
 ## 🧠 Key Takeaways
 
-- **Rolling Updates are the Default:** Changing an image naturally triggers a rolling update in Kubernetes Deployments.
+- **Rolling Updates are the Default:** Changing an image naturally triggers a [rolling update](../../../../GLOSSARY.md#rolling-update) in Kubernetes Deployments.
 - **Tuning Availability:** Adjusting `maxSurge` and `maxUnavailable` gives you total control over the balance between rollout speed and resource over-provisioning versus application stability and availability.
-- **Internal Routing:** A Service finds the Pods by `selector` ignoring their underlying image version, so the `NodePort` keeps working immediately!
+- **Internal Routing:** A [Service](../../../../GLOSSARY.md#service) finds the Pods by `selector` ignoring their underlying image version, so the `NodePort` keeps working immediately!
 
 ---
 

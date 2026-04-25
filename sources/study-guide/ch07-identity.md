@@ -1,7 +1,7 @@
-# 📖 Chapter 7: Identity & Access (RBAC)
+# 📖 Chapter 7: Identity & Access ([RBAC](../../GLOSSARY.md#rbac))
 *The Magnetic ID Badge*
 
-In the **Central Mall**, security isn't just about locks; it's about **Permissions**. A "ServiceAccount" is the ID badge for a worker, a "Role" is the list of doors that badge can open, and a "Binding" is the act of handing that badge to a specific person.
+In the **Central Mall**, security isn't just about locks; it's about **Permissions**. A "[ServiceAccount](../../GLOSSARY.md#serviceaccount)" is the ID badge for a worker, a "[Role](../../GLOSSARY.md#role)" is the list of doors that badge can open, and a "Binding" is the act of handing that badge to a specific person.
 
 ---
 
@@ -11,8 +11,8 @@ To give a worker access to the "Backroom" (The API), you need three things:
 
 | Component | Mall Analogy | K8s Concept |
 | :--- | :--- | :--- |
-| **ServiceAccount** | **The Badge** | The identity of the Pod. |
-| **Role** | **The Keycard Access List** | Defines *what* can be done (get, list, watch). |
+| **[ServiceAccount](../../GLOSSARY.md#serviceaccount)** | **The Badge** | The identity of the [Pod](../../GLOSSARY.md#pod). |
+| **[Role](../../GLOSSARY.md#role)** | **The Keycard Access List** | Defines *what* can be done (get, list, watch). |
 | **RoleBinding** | **The Hand-off** | Connects the Badge to the Access List. |
 
 
@@ -21,14 +21,14 @@ To give a worker access to the "Backroom" (The API), you need three things:
 
 ## 🛠️ 7.2 The Blueprint: Creating Access
 
-In the CKAD, you often need to give a Pod permission to "list" other Pods in its neighborhood.
+In the CKAD, you often need to give a [Pod](../../GLOSSARY.md#pod) permission to "list" other Pods in its neighborhood.
 
-### 1. Create the Badge (ServiceAccount)
+### 1. Create the Badge ([ServiceAccount](../../GLOSSARY.md#serviceaccount))
 ```bash
 kubectl create serviceaccount mall-clerk
 ```
 
-### 2. Create the Access List (Role)
+### 2. Create the Access List ([Role](../../GLOSSARY.md#role))
 This list says: "You can look at Pods, but you cannot delete them."
 ```bash
 kubectl create role pod-viewer --verb=get,list,watch --resource=pods
@@ -64,20 +64,20 @@ spec:
 ## 🛠️ The Blueprint (CKAD Speed-Run)
 
 ### 1. The "Can I?" Check
-This is the most important command in the exam. It lets you test permissions without actually running a Pod.
+This is the most important command in the exam. It lets you test permissions without actually running a [Pod](../../GLOSSARY.md#pod).
 ```bash
 # Can the mall-clerk list pods?
 kubectl auth can-i list pods --as=system:serviceaccount:default:mall-clerk
 ```
 
 ### 2. Cluster-Wide Access
-If a worker needs to see shops in **every** floor of the mall (all Namespaces), use a **ClusterRole** instead of a Role.
+If a worker needs to see shops in **every** floor of the mall (all Namespaces), use a **[ClusterRole](../../GLOSSARY.md#clusterrole)** instead of a [Role](../../GLOSSARY.md#role).
 
 ---
 
 ## ⚠️ Common Exam Traps
-- **Forgetting the Binding:** Creating a `ServiceAccount` and a `Role` does absolutely nothing until you create a `RoleBinding` to connect them. If your Pod gets "Forbidden" errors, check the binding first!
-- **Cross-Namespace Bindings:** A `RoleBinding` in `namespace-a` can reference a `Role` in `namespace-a` and bind it to a `ServiceAccount` in `namespace-b`. Pay close attention to the `--serviceaccount=<namespace>:<name>` syntax in the exam.
+- **Forgetting the Binding:** Creating a `ServiceAccount` and a `Role` does absolutely nothing until you create a `RoleBinding` to connect them. If your [Pod](../../GLOSSARY.md#pod) gets "Forbidden" errors, check the binding first!
+- **Cross-[Namespace](../../GLOSSARY.md#namespace) Bindings:** A `RoleBinding` in `namespace-a` can reference a `Role` in `namespace-a` and bind it to a `ServiceAccount` in `namespace-b`. Pay close attention to the `--serviceaccount=<namespace>:<name>` syntax in the exam.
 
 ---
 

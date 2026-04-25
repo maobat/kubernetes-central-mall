@@ -1,21 +1,21 @@
-# 🧪 LAB 03: Shared Volumes (emptyDir)
+# 🧪 LAB 03: Shared Volumes ([emptyDir](../../../../GLOSSARY.md#emptydir))
 *Focus: Inter-container Communication and Shared Log Storage*
 
 ## 🎯 Lab Goal
-In this lab, you will learn how to use an `emptyDir` volume to share data between two containers in the same Pod. This is a fundamental pattern for sidecar logging and data transformation.
+In this lab, you will learn how to use an `emptyDir` volume to share data between two containers in the same [Pod](../../../../GLOSSARY.md#pod). This is a fundamental pattern for sidecar logging and data transformation.
 
 ## 🛍️ Mall Analogy
 In the **Central Mall**, an `emptyDir` is a **Shared Stockroom** inside a single shop.
 - **The Writer (Shopkeeper)** → They keep adding new receipts to a pile in the stockroom.
 - **The Reader (Assistant)** → They stand in the stockroom and watch the pile, reading out every new receipt as it arrives.
-- **The Stockroom (emptyDir)** → It only exists as long as the shop is open. If the shop closes (Pod is deleted), the stockroom is cleared.
+- **The Stockroom ([emptyDir](../../../../GLOSSARY.md#emptydir))** → It only exists as long as the shop is open. If the shop closes ([Pod](../../../../GLOSSARY.md#pod) is deleted), the stockroom is cleared.
 
 ---
 
 ## 📋 Requirements
 
-1. **Namespace:** `volumes`.
-2. **Pod:** `shared-pod`.
+1. **[Namespace](../../../../GLOSSARY.md#namespace):** `volumes`.
+2. **[Pod](../../../../GLOSSARY.md#pod):** `shared-pod`.
 3. **Containers:**
    - `writer`: Continuously appends the current date to `/data/out.log`.
    - `reader`: Tails the `/data/out.log` file.
@@ -75,9 +75,9 @@ kubectl -n volumes logs shared-pod -c reader --tail=10
 ---
 
 ## 🧠 Key Takeaways
-- **Shared Filesystem:** Containers in the same Pod can share storage easily via volumes.
+- **Shared Filesystem:** Containers in the same [Pod](../../../../GLOSSARY.md#pod) can share storage easily via volumes.
 - **Sidecar Pattern:** The `reader` acts as a sidecar, processing or surfacing data from the primary `writer` container.
-- **Ephemeral Storage:** `emptyDir` is temporary; it lives and dies with the Pod.
+- **Ephemeral Storage:** `emptyDir` is temporary; it lives and dies with the [Pod](../../../../GLOSSARY.md#pod).
 
 ---
 

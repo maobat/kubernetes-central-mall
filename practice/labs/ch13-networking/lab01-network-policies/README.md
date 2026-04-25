@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-Lock down the mall's internal corridors using **NetworkPolicies**. You will ensure that only the "Cashier" room (Service) can communicate with the "Bank Vault" (Pod).
+Lock down the mall's internal corridors using **NetworkPolicies**. You will ensure that only the "Cashier" room ([Service](../../../../GLOSSARY.md#service)) can communicate with the "Bank Vault" ([Pod](../../../../GLOSSARY.md#pod)).
 
 ---
 
@@ -14,14 +14,14 @@ Lock down the mall's internal corridors using **NetworkPolicies**. You will ensu
 
 In the **Central Mall**, some corridors are "Staff Only". 
 
-- **The Cashier Pod** → Only this group is allowed to use the specialized tube to the vault.
-- **The Security Door (NetworkPolicy)** → A rule that says: "Reject all traffic to the Vault unless it has the label `role=cashier`."
+- **The Cashier [Pod](../../../../GLOSSARY.md#pod)** → Only this group is allowed to use the specialized tube to the vault.
+- **The Security Door ([NetworkPolicy](../../../../GLOSSARY.md#networkpolicy))** → A rule that says: "Reject all traffic to the Vault unless it has the label `role=cashier`."
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Create the Locked Corrido (ingress-policy.yaml)
+### 1. Create the Locked Corrido ([ingress](../../../../GLOSSARY.md#ingress)-policy.yaml)
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -67,16 +67,16 @@ spec:
 >    kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
 >    ```
 
--   **Isolation Strategy:** The moment you select a Pod in a `NetworkPolicy`, it becomes "Isolated" for that traffic type. If it's an Ingress policy, all unwhitelisted incoming traffic is blocked!
+-   **Isolation Strategy:** The moment you select a [Pod](../../../../GLOSSARY.md#pod) in a `NetworkPolicy`, it becomes "Isolated" for that traffic type. If it's an [Ingress](../../../../GLOSSARY.md#ingress) policy, all unwhitelisted incoming traffic is blocked!
 -   **Label-Based Security:** NetworkPolicies rely heavily on labels. Always double-check your `matchLabels`!
 
 ---
-## 🛠️ Tool Spotlight: The NetworkPolicy Editor
+## 🛠️ Tool Spotlight: The [NetworkPolicy](../../../../GLOSSARY.md#networkpolicy) Editor
 If you are struggling with YAML, the [Cilium Network Policy Editor](https://editor.networkpolicy.io/) is the "Blueprinting Tool" of the Mall.
 
 ## 🏗️ **The Mall Manager's Logic (For Dummies):**
 Think of the policy like setting permissions for a **security badge**:
-1.  **Select "Ingress"**: You are defining who is **entering** the room.
+1.  **Select "[Ingress](../../../../GLOSSARY.md#ingress)"**: You are defining who is **entering** the room.
 2.  **Left Side (Source)**: This is the **Room** where the visitor is coming from (`cashier`).
 3.  **Right Side (Destination)**: This is the **Room** they are trying to enter (`vault`).
 

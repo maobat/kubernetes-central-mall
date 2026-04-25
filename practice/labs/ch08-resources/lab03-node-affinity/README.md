@@ -1,8 +1,8 @@
-# 🧪 LAB 03: Special Placements (Node Affinity)
+# 🧪 LAB 03: Special Placements ([Node](../../../../GLOSSARY.md#node) Affinity)
 *Focus: Preferred Scheduling, Weights, and Availability Zones*
 
 ## 🎯 Lab Goal
-In this lab, you will learn how to use **Node Affinity** to influence the Kubernetes Scheduler. You will ensure that a specific shop (Pod) "prefers" to be located in certain Wings (Nodes) of the mall based on zoning labels.
+In this lab, you will learn how to use **[Node](../../../../GLOSSARY.md#node) Affinity** to influence the Kubernetes Scheduler. You will ensure that a specific shop ([Pod](../../../../GLOSSARY.md#pod)) "prefers" to be located in certain Wings (Nodes) of the mall based on zoning labels.
 
 ## 🛍️ Mall Analogy
 In the **Central Mall**, some shops belong in specific "Zones" for better visibility or logistics.
@@ -16,11 +16,11 @@ In the **Central Mall**, some shops belong in specific "Zones" for better visibi
 1.  **Prepare the Mall Wings**: Label your floors (Nodes) so the Scheduler knows where they are.
     - Label `minikube` as `availability-zone=zone1`.
     - Label `minikube-m02` as `availability-zone=zone2`.
-2.  **Create the Shop (Pod)**: Create a Pod named `az1-pod` in the namespace `012963bd`.
-3.  **Apply Node Affinity**:
+2.  **Create the Shop ([Pod](../../../../GLOSSARY.md#pod))**: Create a [Pod](../../../../GLOSSARY.md#pod) named `az1-pod` in the [namespace](../../../../GLOSSARY.md#namespace) `012963bd`.
+3.  **Apply [Node](../../../../GLOSSARY.md#node) Affinity**:
     - Use `busybox:1.28` image.
-    - **Weight 80:** Prefer a node with label `availability-zone=zone1`.
-    - **Weight 20:** Prefer a node with label `availability-zone=zone2`.
+    - **Weight 80:** Prefer a [node](../../../../GLOSSARY.md#node) with label `availability-zone=zone1`.
+    - **Weight 20:** Prefer a [node](../../../../GLOSSARY.md#node) with label `availability-zone=zone2`.
 4.  **Verify Placement**: Check which floor the shop was finally opened on.
 
 ---
@@ -92,15 +92,15 @@ kubectl -n 012963bd get pod az1-pod -o wide
 ---
 
 ## 🔎 Verification Checklist
-- [ ] Is the Pod in the correct namespace (`012963bd`)?
-- [ ] Does `kubectl describe pod` show the node affinity rules?
+- [ ] Is the [Pod](../../../../GLOSSARY.md#pod) in the correct [namespace](../../../../GLOSSARY.md#namespace) (`012963bd`)?
+- [ ] Does `kubectl describe pod` show the [node](../../../../GLOSSARY.md#node) affinity rules?
     > [!NOTE]
     > **The "Missing Section" Quirk:** Sometimes `kubectl describe` won't show the `preferredDuringScheduling` section if there are no "hard" constraints or if the output is truncated. If `kubectl get pod az1-pod -o yaml` shows the rules, the Scheduler is using them!
 - [ ] Did the Scheduler respect the 80/20 weights (usually landing on `minikube` if it has capacity)?
 
 ---
 ## 🧠 Key Takeaways
-- **Soft Affinity:** `preferredDuringScheduling` is a "Soft" rule. The Scheduler will try its best, but won't fail to schedule the Pod if the preferred nodes are absent.
+- **Soft Affinity:** `preferredDuringScheduling` is a "Soft" rule. The Scheduler will try its best, but won't fail to schedule the [Pod](../../../../GLOSSARY.md#pod) if the preferred nodes are absent.
 - **Weights:** Use weights to prioritize or "layer" your preferences across different criteria.
 
 ---

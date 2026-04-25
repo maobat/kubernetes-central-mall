@@ -6,7 +6,7 @@
 
 ## 🎯 Lab Goal
 
-Establish a central "Direction Board" (Ingress) for the **World Wing** of the mall. You will first hire the staff (Deployments), give them intercoms (Services), and then set up the main entrance with path-based routing for `europe` and `asia`.
+Establish a central "Direction Board" ([Ingress](../../../../GLOSSARY.md#ingress)) for the **World Wing** of the mall. You will first hire the staff (Deployments), give them intercoms (Services), and then set up the main entrance with path-based routing for `europe` and `asia`.
 
 ---
 
@@ -36,31 +36,31 @@ kubectl -n world create deployment asia --image=nginx:1.14
 ```
 
 > [!TIP]
-> **Kind Cluster Tip:** If you're using **Kind**, you must create the cluster with port mappings (80/443) for Ingress to work. See the [Kind Documentation](https://kind.sigs.k8s.io/docs/user/ingress/) for the exact cluster configuration.
+> **Kind Cluster Tip:** If you're using **Kind**, you must create the cluster with port mappings (80/443) for [Ingress](../../../../GLOSSARY.md#ingress) to work. See the [Kind Documentation](https://kind.sigs.k8s.io/docs/user/ingress/) for the exact cluster configuration.
 
 ---
 
 ## 📋 Requirements
 
-The Nginx Ingress Controller is already installed in the mall. Your task is to make the `europe` and `asia` departments accessible from the outside.
+The Nginx [Ingress](../../../../GLOSSARY.md#ingress) Controller is already installed in the mall. Your task is to make the `europe` and `asia` departments accessible from the outside.
 
-1.  **Intercom Setup:** Create **ClusterIP Services** for both existing deployments (`europe` and `asia`) in the `world` namespace.
+1.  **Intercom Setup:** Create **ClusterIP Services** for both existing deployments (`europe` and `asia`) in the `world` [namespace](../../../../GLOSSARY.md#namespace).
     -   Target Port: `80`
-    -   Service Names: Must match the Deployment names.
-2.  **Direction Board (Ingress):** Create an Ingress resource named `world` in the `world` namespace.
+    -   [Service](../../../../GLOSSARY.md#service) Names: Must match the [Deployment](../../../../GLOSSARY.md#deployment) names.
+2.  **Direction Board ([Ingress](../../../../GLOSSARY.md#ingress)):** Create an [Ingress](../../../../GLOSSARY.md#ingress) resource named `world` in the `world` [namespace](../../../../GLOSSARY.md#namespace).
     -   Host: `world.universe.mine`
-    -   Path 1: `/europe` pointing to the `europe` service.
-    -   Path 2: `/asia` pointing to the `asia` service.
-    -   Ingress Class: `nginx`
+    -   Path 1: `/europe` pointing to the `europe` [service](../../../../GLOSSARY.md#service).
+    -   Path 2: `/asia` pointing to the `asia` [service](../../../../GLOSSARY.md#service).
+    -   [Ingress](../../../../GLOSSARY.md#ingress) Class: `nginx`
 3.  **Advanced Routing (Optional):** Add an annotation to ensure that trailing slashes are handled correctly (rewrite-target).
 
 ---
 
 ## 🛍️ Mall Analogy
 
--   **The Direction Board (Ingress Resource)** → The sign at the main entrance that says "Left for Europe, Right for Asia."
--   **The Intercom (Service)** → The internal phone line connecting the entrance to the specific shop.
--   **The Wing (Namespace)** → The "World" section of the mall.
+-   **The Direction Board ([Ingress](../../../../GLOSSARY.md#ingress) Resource)** → The sign at the main entrance that says "Left for Europe, Right for Asia."
+-   **The Intercom ([Service](../../../../GLOSSARY.md#service))** → The internal phone line connecting the entrance to the specific shop.
+-   **The Wing ([Namespace](../../../../GLOSSARY.md#namespace))** → The "World" section of the mall.
 
 ---
 
@@ -73,14 +73,14 @@ kubectl -n world expose deploy europe --port 80
 kubectl -n world expose deploy asia --port 80
 ```
 
-### 2. Check the Ingress Class
+### 2. Check the [Ingress](../../../../GLOSSARY.md#ingress) Class
 Ensure you know the correct class name for the mall's controller.
 ```bash
 kubectl get ingressclass
 # Expected: nginx
 ```
 
-### 3. Create the Ingress Manifest (`world-ingress.yaml`)
+### 3. Create the [Ingress](../../../../GLOSSARY.md#ingress) Manifest (`world-ingress.yaml`)
 
 > [!TIP]
 > **CKAD Speed-Run (Imperative):** You can generate this manifest in seconds without a template!
@@ -101,7 +101,7 @@ kubectl apply -f world-ingress.yaml
 
 ## 🧪 Verification
 
-To test the entrance, you need to find the **NodePort** assigned to your Ingress Controller. 
+To test the entrance, you need to find the **NodePort** assigned to your [Ingress](../../../../GLOSSARY.md#ingress) Controller. 
 
 ```bash
 # 1. Dynamically find the assigned NodePort
@@ -119,7 +119,7 @@ curl http://$NODE_IP:$NODE_PORT/asia -H "Host: world.universe.mine"
 ```
 
 > [!TIP]
-> **Host Header:** Since we are using a custom domain (`world.universe.mine`), we must pass the `-H "Host: ..."` header so the Ingress Controller knows which "Direction Board" to use.
+> **Host Header:** Since we are using a custom domain (`world.universe.mine`), we must pass the `-H "Host: ..."` header so the [Ingress](../../../../GLOSSARY.md#ingress) Controller knows which "Direction Board" to use.
 
 ---
 

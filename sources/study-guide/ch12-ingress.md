@@ -1,27 +1,27 @@
-# 📖 Chapter 12: Ingress & Gateway API
+# 📖 Chapter 12: [Ingress](../../GLOSSARY.md#ingress) & [Gateway API](../../GLOSSARY.md#gateway-api)
 *The Grand Entrance & The Information Desk*
 
-In the **Central Mall**, customers don't want to memorize 50 different "Gate Numbers" (NodePorts). They want to walk through one **Grand Entrance** and see a sign that says: *"Go Left for Shoes.com, Go Right for Food.com."* This is what **Ingress** and the **Gateway API** do.
+In the **Central Mall**, customers don't want to memorize 50 different "Gate Numbers" (NodePorts). They want to walk through one **Grand Entrance** and see a sign that says: *"Go Left for Shoes.com, Go Right for Food.com."* This is what **[Ingress](../../GLOSSARY.md#ingress)** and the **[Gateway API](../../GLOSSARY.md#gateway-api)** do.
 
 ---
 
-## 🎭 12.1 Ingress: The Smart Directory
+## 🎭 12.1 [Ingress](../../GLOSSARY.md#ingress): The Smart Directory
 
-**Ingress** is like a smart directory board at the entrance. It looks at the "Host" (the URL) or the "Path" (/shoes) and directs the customer to the right internal Service.
+**[Ingress](../../GLOSSARY.md#ingress)** is like a smart directory board at the entrance. It looks at the "Host" (the URL) or the "Path" (/shoes) and directs the customer to the right internal [Service](../../GLOSSARY.md#service).
 
 | Feature | Mall Analogy | K8s Concept |
 | :--- | :--- | :--- |
 | **Host Routing** | "If you want the Boutique, go to Hall A." | `host: boutique.com` |
 | **Path Routing** | "If you want the Food Court, go to Hall B." | `path: /food` |
-| **The Concierge** | The person actually moving the people. | **Ingress Controller** (Nginx, Traefik) |
+| **The Concierge** | The person actually moving the people. | **[Ingress](../../GLOSSARY.md#ingress) Controller** (Nginx, Traefik) |
 
 
 
 ---
 
-## 🎭 12.2 Gateway API: The Next-Gen Lobby
+## 🎭 12.2 [Gateway API](../../GLOSSARY.md#gateway-api): The Next-Gen Lobby
 
-If Ingress is a simple directory board, the **Gateway API** is a high-tech, multi-tenant reception system. It separates the "Mall Owner" (who manages the building infrastructure) from the "Store Manager" (who manages the routes to their specific store).
+If [Ingress](../../GLOSSARY.md#ingress) is a simple directory board, the **[Gateway API](../../GLOSSARY.md#gateway-api)** is a high-tech, multi-tenant reception system. It separates the "Mall Owner" (who manages the building infrastructure) from the "Store Manager" (who manages the routes to their specific store).
 
 * **GatewayClass:** The brand of the doors (e.g., "Google Cloud Doors" or "Nginx Doors").
 * **Gateway:** The physical entrance itself.
@@ -33,8 +33,8 @@ If Ingress is a simple directory board, the **Gateway API** is a high-tech, mult
 
 ## 🛠️ The Blueprint (CKAD Speed-Run)
 
-### 1. Creating an Ingress Rule
-In the exam, you often use an Ingress to connect a domain name to a service.
+### 1. Creating an [Ingress](../../GLOSSARY.md#ingress) Rule
+In the exam, you often use an [Ingress](../../GLOSSARY.md#ingress) to connect a domain name to a [service](../../GLOSSARY.md#service).
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -56,7 +56,7 @@ spec:
 ```
 
 ### 2. Troubleshooting "The Lost Gateway"
-If your Ingress or Gateway isn't working, check the **Controller**. Without a Controller (the concierge), the Ingress is just a sign in an empty room.
+If your [Ingress](../../GLOSSARY.md#ingress) or Gateway isn't working, check the **Controller**. Without a Controller (the concierge), the [Ingress](../../GLOSSARY.md#ingress) is just a sign in an empty room.
 
 ```bash
 # Check if the Ingress has been assigned an IP
@@ -68,8 +68,8 @@ kubectl get gateway -o wide
 
 ---
 
-## 🧪 Lab Highlight: Canary with Gateway API
-The Gateway API is much better at **Traffic Splitting** than standard Services. You can tell a Gateway to send exactly 10% of people to the "Canary" version without messing with replica counts!
+## 🧪 Lab Highlight: Canary with [Gateway API](../../GLOSSARY.md#gateway-api)
+The [Gateway API](../../GLOSSARY.md#gateway-api) is much better at **Traffic Splitting** than standard Services. You can tell a Gateway to send exactly 10% of people to the "Canary" version without messing with replica counts!
 
 ```yaml
 spec:
@@ -84,7 +84,7 @@ spec:
 ---
 
 ## ⚠️ Common Exam Traps
-- **Missing Ingress Controller:** Creating an `Ingress` resource does nothing if an Ingress Controller (like NGINX) is not installed in the cluster. It will just sit there without an `ADDRESS`. Always check if the controller is running.
+- **Missing [Ingress](../../GLOSSARY.md#ingress) Controller:** Creating an `Ingress` resource does nothing if an [Ingress](../../GLOSSARY.md#ingress) Controller (like NGINX) is not installed in the cluster. It will just sit there without an `ADDRESS`. Always check if the controller is running.
 - **PathType Exact vs Prefix:** In the `rules.http.paths` array, `pathType: Exact` means `/app` only matches `/app`. `pathType: Prefix` means `/app` matches `/app/login` and `/app/images`. Choosing the wrong one is a common exam mistake.
 
 ---

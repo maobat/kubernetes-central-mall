@@ -1,23 +1,23 @@
 # 🧪 LAB 04: Reading the Breakroom Rules
 *Accessing ConfigMaps in Pods*
 
-In the **Central Mall**, once the Mall Manager posts the rules in the breakroom (ConfigMap), the clerks (Pods) need a way to read them. This lab focuses on the two primary ways a clerk can receive these rules: as a direct instruction before their shift (**Environment Variable**) or as a physical handbook on their desk (**Volume Mount**).
+In the **Central Mall**, once the Mall Manager posts the rules in the breakroom ([ConfigMap](../../../../GLOSSARY.md#configmap)), the clerks (Pods) need a way to read them. This lab focuses on the two primary ways a clerk can receive these rules: as a direct instruction before their shift (**Environment Variable**) or as a physical handbook on their desk (**Volume Mount**).
 
 ---
 
 ## 🎯 Lab Objectives
-1. Create a **Pod** named `pod1` using the `nginx:alpine` image.
-2. Inject a single rule from the `trauerweide` ConfigMap as an **Environment Variable**.
-3. Provide the entire `birke` ConfigMap as a physical handbook by mounting it as a **Volume**.
+1. Create a **[Pod](../../../../GLOSSARY.md#pod)** named `pod1` using the `nginx:alpine` image.
+2. Inject a single rule from the `trauerweide` [ConfigMap](../../../../GLOSSARY.md#configmap) as an **Environment Variable**.
+3. Provide the entire `birke` [ConfigMap](../../../../GLOSSARY.md#configmap) as a physical handbook by mounting it as a **Volume**.
 4. Test that the clerk can successfully access both.
 
-> **CKAD Importance:** Injecting configuration into Pods is a core requirement for almost every application deployment scenario.
+> **CKAD Importance:** Injecting configuration into Pods is a core requirement for almost every application [deployment](../../../../GLOSSARY.md#deployment) scenario.
 
 ---
 
 ## 🛠️ Step 1: The "Hacker" Scaffold
 
-Generate the basic YAML for the clerk (Pod) without applying it yet.
+Generate the basic YAML for the clerk ([Pod](../../../../GLOSSARY.md#pod)) without applying it yet.
 
 ```shell
 k run pod1 --image=nginx:alpine $do > pod.yaml
@@ -29,8 +29,8 @@ k run pod1 --image=nginx:alpine $do > pod.yaml
 
 Open `pod.yaml` and equip the clerk with their instructions. 
 
-> **Mall Logic:** > - **The Vibe (Env Var):** We look up the `tree` key from the `trauerweide` ConfigMap and tell the clerk to remember it as `TREE1`.
-> - **The Handbook (Volume Mount):** We take the entire `birke` ConfigMap and place it on the clerk's desk at `/etc/birke`.
+> **Mall Logic:** > - **The Vibe (Env Var):** We look up the `tree` key from the `trauerweide` [ConfigMap](../../../../GLOSSARY.md#configmap) and tell the clerk to remember it as `TREE1`.
+> - **The Handbook (Volume Mount):** We take the entire `birke` [ConfigMap](../../../../GLOSSARY.md#configmap) and place it on the clerk's desk at `/etc/birke`.
 
 ```yaml
 apiVersion: v1

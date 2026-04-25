@@ -15,36 +15,36 @@ Understand how Kubernetes determines if a container is ready to receive traffic 
 In the **Central Mall**, we have a dedicated **Health Inspector** who checks if shops are ready for customers.
 
 - **The Worker (Container)** → A shop assistant setting up their station.
-- **The Readiness Check (Readiness Probe)** → The Inspector asks, "Are you ready for customers?".
+- **The Readiness Check ([Readiness Probe](../../../../GLOSSARY.md#readiness-probe))** → The Inspector asks, "Are you ready for customers?".
 - **The Condition (`stat /tmp/ready`)** → The shelves must be fully stocked (the file must exist) before opening the doors.
 - **The Isolation** → If the shop isn't ready, the manager takes the shop's sign down. No customers are sent here until it passes.
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **Readiness Probe** | "Are you ready for customers?" check. |
+| **[Readiness Probe](../../../../GLOSSARY.md#readiness-probe)** | "Are you ready for customers?" check. |
 | **initialDelaySeconds** | Grace period to let the app start up. |
 
 ---
 
 ## 📋 Requirements
 
-**Create a Deployment with a ReadinessProbe**
+**Create a [Deployment](../../../../GLOSSARY.md#deployment) with a ReadinessProbe**
 
-A `ReadinessProbe` will be executed periodically all the time, not just during start or until a Pod is ready.
+A `ReadinessProbe` will be executed periodically all the time, not just during start or until a [Pod](../../../../GLOSSARY.md#pod) is ready.
 
-1. Create a Deployment named `space-alien-welcome-message-generator` of image `httpd:alpine` with one replica.
-2. It should have a `ReadinessProbe` which executes the command `stat /tmp/ready`. This means once the file exists the Pod should be ready.
+1. Create a [Deployment](../../../../GLOSSARY.md#deployment) named `space-alien-welcome-message-generator` of image `httpd:alpine` with one replica.
+2. It should have a `ReadinessProbe` which executes the command `stat /tmp/ready`. This means once the file exists the [Pod](../../../../GLOSSARY.md#pod) should be ready.
 3. The `initialDelaySeconds` should be `10` and `periodSeconds` should be `5`.
-4. Create the Deployment and observe that the Pod won't get ready.
+4. Create the [Deployment](../../../../GLOSSARY.md#deployment) and observe that the [Pod](../../../../GLOSSARY.md#pod) won't get ready.
 
 **Probes Summary**
 `ReadinessProbes` and `LivenessProbes` will be executed periodically all the time.
 
 If a `StartupProbe` is defined, `ReadinessProbes` and `LivenessProbes` won't be executed until the `StartupProbe` succeeds.
 
-- **ReadinessProbe fails***: Pod won't be marked Ready and won't receive any traffic
-- **LivenessProbe fails***: The container inside the Pod will be restarted
-- **StartupProbe fails***: The container inside the Pod will be restarted
+- **ReadinessProbe fails***: [Pod](../../../../GLOSSARY.md#pod) won't be marked Ready and won't receive any traffic
+- **LivenessProbe fails***: The container inside the [Pod](../../../../GLOSSARY.md#pod) will be restarted
+- **StartupProbe fails***: The container inside the [Pod](../../../../GLOSSARY.md#pod) will be restarted
 
 *\*fails: fails more times than configured with failureThreshold*
 
@@ -65,7 +65,7 @@ If a `StartupProbe` is defined, `ReadinessProbes` and `LivenessProbes` won't be 
 ## 🛠️ Step-by-Step Solution
 
 ### 1. Create the Blueprint
-First we generate a Deployment yaml:
+First we generate a [Deployment](../../../../GLOSSARY.md#deployment) yaml:
 ```bash
 k create deploy space-alien-welcome-message-generator --image=httpd:alpine -oyaml --dry-run=client > deploy.yaml
 ```
@@ -103,7 +103,7 @@ spec:
 ```
 
 ### 3. Apply and Observe
-Observe that the Pod won't get ready. We see `0/1` in the `READY` column.
+Observe that the [Pod](../../../../GLOSSARY.md#pod) won't get ready. We see `0/1` in the `READY` column.
 
 ```bash
 controlplane $ k get deploy
@@ -113,21 +113,21 @@ space-alien-welcome-message-generator   0/1     1            0           40s
 
 We can also run `k describe deploy` to see info about failed `ReadinessProbes`.
 
-### 4. Make the Deployment Ready
-Now, let's stock the shelves so the Inspector passes the shop. We need to create the `/tmp/ready` file inside the Pod.
+### 4. Make the [Deployment](../../../../GLOSSARY.md#deployment) Ready
+Now, let's stock the shelves so the Inspector passes the shop. We need to create the `/tmp/ready` file inside the [Pod](../../../../GLOSSARY.md#pod).
 
-First, get the Pod name:
+First, get the [Pod](../../../../GLOSSARY.md#pod) name:
 ```bash
 k get pod -l app=space-alien-welcome-message-generator
 ```
 
-Then, execute a command inside the Pod to create the file (replace the pod name with yours):
+Then, execute a command inside the [Pod](../../../../GLOSSARY.md#pod) to create the file (replace the [pod](../../../../GLOSSARY.md#pod) name with yours):
 ```bash
 k exec <pod-name> -- touch /tmp/ready
 ```
 
 ### 5. Final Observation
-After waiting for the next probe interval (up to 5 seconds), observe that the Pod is now marked as ready.
+After waiting for the next probe interval (up to 5 seconds), observe that the [Pod](../../../../GLOSSARY.md#pod) is now marked as ready.
 
 We see `1/1` in the `READY` column.
 
@@ -138,7 +138,7 @@ space-alien-welcome-message-generator   1/1     1            0           3m53s
 ```
 
 > **Alternative Check Method (HTTP)**
-> Alternatively, if the app served a web page, you might configure an HTTP readiness probe instead of checking for a file. For example:
+> Alternatively, if the app served a web page, you might configure an HTTP [readiness probe](../../../../GLOSSARY.md#readiness-probe) instead of checking for a file. For example:
 > ```yaml
 >         readinessProbe:
 >           httpGet:

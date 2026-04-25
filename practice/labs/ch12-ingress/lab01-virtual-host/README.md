@@ -1,4 +1,4 @@
-# 🧪 LAB 01: The Branded Entrance (Ingress & Virtual Hosts)
+# 🧪 LAB 01: The Branded Entrance ([Ingress](../../../../GLOSSARY.md#ingress) & Virtual Hosts)
 
 ## Services and Networking – Managing Incoming Traffic
 
@@ -6,23 +6,23 @@
 
 ## 🎯 Lab Goal
 
-Learn how to route traffic using the HTTP `Host` header, allowing multiple "branded" shops to share a single mall entrance (the Ingress Controller).
+Learn how to route traffic using the HTTP `Host` header, allowing multiple "branded" shops to share a single mall entrance (the [Ingress](../../../../GLOSSARY.md#ingress) Controller).
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In the **Central Mall**, we have one massive **Main Entrance (Ingress Controller)**.
+In the **Central Mall**, we have one massive **Main Entrance ([Ingress](../../../../GLOSSARY.md#ingress) Controller)**.
 
-- **The Shop (Pod)** → The physical store.
+- **The Shop ([Pod](../../../../GLOSSARY.md#pod))** → The physical store.
 - **The Branded Sign (Host Header)** → The name on the entrance door (e.g., `fashion.mall.k8s`).
-- **The Concierge (Ingress Controller)** → The guard who reads your invite and points you to the right wing.
+- **The Concierge ([Ingress](../../../../GLOSSARY.md#ingress) Controller)** → The guard who reads your invite and points you to the right wing.
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Create the Ingress Rule
+### 1. Create the [Ingress](../../../../GLOSSARY.md#ingress) Rule
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -46,7 +46,7 @@ spec:
 
 ## 🧠 Key Takeaways
 
-- **Host Header:** Ingress uses the domain name, not just the IP.
+- **Host Header:** [Ingress](../../../../GLOSSARY.md#ingress) uses the domain name, not just the IP.
 
 ---
 

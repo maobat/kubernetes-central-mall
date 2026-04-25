@@ -1,18 +1,18 @@
 # 🧪 LAB 02: The Fixed Boutique (StatefulSets)
 
-## Application Design and Build – Ordered Deployment and Persistent Identity
+## Application Design and Build – Ordered [Deployment](../../../../GLOSSARY.md#deployment) and Persistent Identity
 
 ---
 
 ## 🎯 Lab Goal
 
-Understand how to manage staff members who need their own specific "locker" and identity. You will deploy a **StatefulSet**, observing how each pod receives a unique name that persists even if the pod is replaced.
+Understand how to manage staff members who need their own specific "locker" and identity. You will deploy a **[StatefulSet](../../../../GLOSSARY.md#statefulset)**, observing how each [pod](../../../../GLOSSARY.md#pod) receives a unique name that persists even if the [pod](../../../../GLOSSARY.md#pod) is replaced.
 
 ---
 
 ## 🛍️ Mall Analogy
 
-In Most shops, staff are interchangeable. If one leaves, another replaces them. But in a **High-End Boutique (StatefulSet)**:
+In Most shops, staff are interchangeable. If one leaves, another replaces them. But in a **High-End Boutique ([StatefulSet](../../../../GLOSSARY.md#statefulset))**:
 
 - **The Specialist Pods** → Every worker has a permanent name-tag (e.g., `boutique-0`, `boutique-1`).
 - **The Dedicated Lockers (PVCs)** → When `boutique-0` goes home, their unique locker is saved for when they return. A new worker doesn't take over a random locker; they take *their* locker.
@@ -20,7 +20,7 @@ In Most shops, staff are interchangeable. If one leaves, another replaces them. 
 
 | Kubernetes Concept | Mall Analogy |
 | :--- | :--- |
-| **StatefulSet** | A boutique with specialized, named workers. |
+| **[StatefulSet](../../../../GLOSSARY.md#statefulset)** | A boutique with specialized, named workers. |
 | **Ordinal Index** | The number on the name-tag (0, 1, 2). |
 | **Stable Storage** | A locker that only belongs to one specific staff member. |
 
@@ -30,23 +30,23 @@ In Most shops, staff are interchangeable. If one leaves, another replaces them. 
 
 The Boutique needs a set of 3 specialized managers.
 
-1. **Deployment Type:** StatefulSet.
+1. **[Deployment](../../../../GLOSSARY.md#deployment) Type:** [StatefulSet](../../../../GLOSSARY.md#statefulset).
 2. **Name:** `boutique`.
 3. **Replicas:** 3.
 4. **Image:** `nginx:alpine`.
-5. **Headless Service:** Create a service named `boutique` (ClusterIP: None).
+5. **Headless [Service](../../../../GLOSSARY.md#service):** Create a [service](../../../../GLOSSARY.md#service) named `boutique` (ClusterIP: None).
 
 ---
 
 ## 🛠️ Step-by-Step Solution
 
-### 1. Create the Headless Service
-StatefulSets require a service to manage their identities.
+### 1. Create the Headless [Service](../../../../GLOSSARY.md#service)
+StatefulSets require a [service](../../../../GLOSSARY.md#service) to manage their identities.
 ```bash
 kubectl create service clusterip boutique --tcp=80:80 --clusterip="None"
 ```
 
-### 2. Create the StatefulSet
+### 2. Create the [StatefulSet](../../../../GLOSSARY.md#statefulset)
 ```bash
 # Using shorthand or generating YAML
 kubectl create statefulset boutique --image=nginx:alpine --replicas=3
@@ -74,7 +74,7 @@ kubectl create statefulset boutique --image=nginx:alpine --replicas=3
 
 - **Identity Matters:** Use StatefulSets for databases (like MariaDB or MongoDB) or any app where pods aren't identical.
 - **Scalability:** They scale up from 0 to N and down from N to 0, always in order.
-- **CKAD Tip:** Don't forget the **Headless Service**! Without it, the pods won't have stable network names.
+- **CKAD Tip:** Don't forget the **Headless [Service](../../../../GLOSSARY.md#service)**! Without it, the pods won't have stable network names.
 
 ---
 
