@@ -36,9 +36,7 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Rulebook & The Uniform](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
-* [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
-* [The Morning Briefing](../../visual-learning/comics/ch05-config-secrets/06-configmap-envfrom/README.md)
+* [Explore Chapter 5 Comics](../../visual-learning/comics/ch05-config-secrets/README.md)
 
 **📘 Technical Deep Dive**
 * [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)

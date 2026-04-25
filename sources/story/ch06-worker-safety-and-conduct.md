@@ -30,7 +30,7 @@ If a worker in the "Chemical Supply Store" has a bad day or makes a mistake, the
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [Worker Safety & SecurityContext](../../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
+* [Explore Chapter 6 Comics](../../visual-learning/comics/ch06-safety/README.md)
 
 **📘 Technical Deep Dive**
 * [SecurityContext: Worker Safety & Conduct](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)

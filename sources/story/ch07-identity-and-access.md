@@ -49,9 +49,7 @@ You might wonder why the Mall doesn't just write the permissions directly onto t
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Secure Badge (Comic 01)](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
-* [The HR Manual (Role) (Comic 02)](../../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
-* [The Entry Permit Office (Comic 03)](../../visual-learning/comics/ch07-identity/03-admission-control/README.md)
+* [Explore Chapter 7 Comics](../../visual-learning/comics/ch07-identity/README.md)
 
 **📘 Technical Deep Dive**
 * [Understanding RBAC (Technical Doc)](../../reference/md-resources/understanding-role-based-access-control-rbac.md)

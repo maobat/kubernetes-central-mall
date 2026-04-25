@@ -92,9 +92,7 @@ spec:
 ## 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [Virtual Host Gateway Show - Host-based Routing](../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
-* [The Lost Gateway - Troubleshooting Gateway API](../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
-* [The Grand Entrance (Path-Based Routing)](../../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
+* [Explore Chapter 12 Comics](../../visual-learning/comics/ch12-ingress/README.md)
 
 **📘 Technical Deep Dive**
 * [Ingress vs Gateway](../../reference/md-resources/ingress-vs-gateway.md)

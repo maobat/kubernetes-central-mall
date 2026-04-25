@@ -76,9 +76,7 @@ kubectl get events --sort-by='.lastTimestamp'
 ## 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
-* [SSH and Contexts (Service Elevator)](../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
-* [The Nested Node (Kind & crictl)](../../visual-learning/comics/ch15-debugging/04-nested-nodes-crictl/README.md)
+* [Explore Chapter 15 Comics](../../visual-learning/comics/ch15-debugging/README.md)
 
 **📘 Technical Deep Dive**
 * [Troubleshooting Kubernetes (The Master Guide)](../../reference/md-resources/troubleshooting-kubernetes.md)

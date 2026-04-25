@@ -27,9 +27,7 @@ Deciding between a Shop Clerk (**Pod**), a Manager (**Deployment**), or speciali
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [Jobs & CronJobs - The Contractor's Visit](./../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
-* [StatefulSets - The Fixed Boutique](./../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
-* [Floor Security (DaemonSet)](./../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
+* [Explore Chapter 1 Comics](./../visual-learning/comics/ch01-workloads/README.md)
 
 **📘 Technical Deep Dive**
 * [Using StatefulSets - The Bolted-Down Safe](./../reference/md-resources/using-statefulsets.md)
@@ -49,10 +47,7 @@ The Clerk and their Helper (**Sidecar** and **Init Containers**).
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [Sidecar Pattern](./../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
-* [The Warehouse (PV/PVC)](./../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
-* [The Shared Stockroom (emptyDir)](./../visual-learning/comics/ch02-multi-container/03-shared-stockroom/README.md)
-* [The External Warehouse (NFS)](./../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
+* [Explore Chapter 2 Comics](./../visual-learning/comics/ch02-multi-container/README.md)
 
 **📘 Technical Deep Dive**
 * [Decoupling Pods](../reference/md-resources/decoupling-pods.md)
@@ -72,7 +67,7 @@ Mastering the art of building and updating your store's display models (**Docker
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [The Perfect Mannequin](./../visual-learning/comics/ch03-images/03-image-updates/README.md)
+* [Explore Chapter 3 Comics](./../visual-learning/comics/ch03-images/README.md)
 
 **📘 Technical Deep Dive**
 * [Managing Images & Rollouts](../reference/md-resources/managing-container-images-and-rollouts.md)
@@ -92,8 +87,7 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [The Nightly Backup Permit](./../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
-* [The Operator - The Manager with the Manual](./../visual-learning/comics/ch04-extending/04-operators/README.md)
+* [Explore Chapter 4 Comics](./../visual-learning/comics/ch04-extending/README.md)
 
 **📘 Technical Deep Dive**
 * [Extending K8s with CRDs](../reference/md-resources/extending-k8s-crds-operators.md)
@@ -122,8 +116,7 @@ Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 * * Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 
 **🎨 Visualize the Analogy**
-* [The Rulebook & The Uniform](./../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
-* [The Secret of the High-Security Vault](./../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
+* [Explore Chapter 5 Comics](./../visual-learning/comics/ch05-config-secrets/README.md)
 
 **📘 Technical Deep Dive**
 * [Configuration Decoupling](../reference/md-resources/configuration-decoupling.md)
@@ -144,7 +137,7 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [Worker Safety & SecurityContext](./../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
+* [Explore Chapter 6 Comics](./../visual-learning/comics/ch06-safety/README.md)
 
 **📘 Technical Deep Dive**
 * [Worker Safety and Conduct](../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
@@ -161,9 +154,7 @@ Assigning roles and permissions to ensure only authorized staff access the backr
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [The Secure Badge](./../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
-* [The HR Manual (Role)](./../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
-* [The Entry Permit Office (Admission Control)](./../visual-learning/comics/ch07-identity/03-admission-control/README.md)
+* [Explore Chapter 7 Comics](./../visual-learning/comics/ch07-identity/README.md)
 
 **📘 Technical Deep Dive**
 * [Understanding RBAC](../reference/md-resources/understanding-role-based-access-control-rbac.md)
@@ -186,7 +177,7 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 * * Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 
 **🎨 Visualize the Analogy**
-* [The Resource Hog](../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+* [Explore Chapter 8 Comics](./../visual-learning/comics/ch08-resources/README.md)
 
 **📘 Technical Deep Dive**
 * [The Resource Budget](../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
@@ -211,9 +202,7 @@ Mastering **Blue/Green** and **Canary** deployments to ensure zero downtime.
 * * Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 
 **🎨 Visualize the Analogy**
-* [The Trend Spot - Rolling Renovation](../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
-* [The Sign Swap (Blue/Green)](./../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
-* [The Canary Side Entrance](../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+* [Explore Chapter 9 Comics](./../visual-learning/comics/ch09-launch/README.md)
 
 **📘 Technical Deep Dive**
 * [Implementing Canary Deployments](../reference/md-resources/implementing-canary-deployments.md)
@@ -235,7 +224,7 @@ Using standardized tools like **Helm** and **Kustomize** to manage mall layout t
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [The Logistics Chain](../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+* [Explore Chapter 10 Comics](./../visual-learning/comics/ch10-logistics/README.md)
 
 **📘 Technical Deep Dive**
 * [Using Helm](../reference/md-resources/using-the-helm-package-manager.md)
@@ -260,8 +249,7 @@ Connecting shops and drivers via **ClusterIP** and **NodePort** services.
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [The Internal Intercom (ClusterIP)](../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
-* [The NodePort Traffic Adventure](../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+* [Explore Chapter 11 Comics](./../visual-learning/comics/ch11-services/README.md)
 
 **📘 Technical Deep Dive**
 * [Service IP Trackers](../reference/md-resources/service-ip-tracker-evolution.md)
@@ -280,9 +268,7 @@ Routing customers through the main doors and specialized directories (**Ingress 
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [Virtual Host Gateway Show](../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
-* [The Lost Gateway](../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
-* [The Grand Entrance (Path Routing)](../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
+* [Explore Chapter 12 Comics](./../visual-learning/comics/ch12-ingress/README.md)
 
 **📘 Technical Deep Dive**
 * [Ingress vs Gateway API](../reference/md-resources/ingress-vs-gateway.md)
@@ -302,8 +288,7 @@ Restricting movement between departments to protect the mall's security.
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [The Locked Corridor](../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
-* [The One-Way Corridor (Egress Control)](../visual-learning/comics/ch13-networking/02-one-way-corridors/README.md)
+* [Explore Chapter 13 Comics](./../visual-learning/comics/ch13-networking/README.md)
 
 **📘 Technical Deep Dive**
 * [Network Isolation Concept](../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
@@ -327,8 +312,7 @@ Ensuring shops are alive and ready to serve customers (**Liveness & Readiness Pr
 * * Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 
 **🎨 Visualize the Analogy**
-* [The Health Inspector - Liveness vs Readiness](../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
-* [The Health Inspector - Readiness](../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
+* [Explore Chapter 14 Comics](./../visual-learning/comics/ch14-probes/README.md)
 
 **📘 Technical Deep Dive**
 * [Worker Safety and Probes](../reference/md-resources/troubleshooting-kubernetes.md#section-2)
@@ -346,8 +330,7 @@ Investigating "incidents" using logs and real-time inspections (**Logs, Describe
 
 **🧰 Study Toolbox:**
 **🎨 Visualize the Analogy**
-* [The Broken Shop](../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
-* [SSH and Contexts (Service Elevator)](../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
+* [Explore Chapter 15 Comics](./../visual-learning/comics/ch15-debugging/README.md)
 
 **📘 Technical Deep Dive**
 * [Troubleshooting Guide](../reference/md-resources/troubleshooting-kubernetes.md)
@@ -371,7 +354,7 @@ Quick guides for surviving the practical exam enviornment.
 * * Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 
 **🎨 Visualize the Analogy**
-* [Comic: SSH and Contexts (Service Elevator)](../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
+* [Explore Chapter 15 Comics](./../visual-learning/comics/ch15-debugging/README.md)
 
 **📘 Technical Deep Dive**
 * [Doc: Study Environments & Tools](../reference/md-resources/ckad-exam/00-study-environments.md)

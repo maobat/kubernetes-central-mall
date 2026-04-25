@@ -40,8 +40,7 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Nightly Backup Permit](../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
-* [The Operator - The Manager with the Manual](../../visual-learning/comics/ch04-extending/04-operators/README.md)
+* [Explore Chapter 4 Comics](../../visual-learning/comics/ch04-extending/README.md)
 
 **📘 Technical Deep Dive**
 * [Understanding the Operator Pattern](../../reference/md-resources/understanding-custom-resource-definitions-crds.md)

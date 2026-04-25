@@ -86,8 +86,7 @@ kubectl describe netpol <policy-name>
 ## 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Locked Corridor - Whitelisting Traffic](../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
-* [The One-Way Corridor - Egress Control](../../visual-learning/comics/ch13-networking/02-one-way-corridors/README.md)
+* [Explore Chapter 13 Comics](../../visual-learning/comics/ch13-networking/README.md)
 
 **📘 Technical Deep Dive**
 * [Network Isolation and Troubleshooting](../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)

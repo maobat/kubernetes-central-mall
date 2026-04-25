@@ -28,9 +28,7 @@ The Gateway API is "Role-Based." It allows different people to manage different 
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [Virtual Host Gateway Show](../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
-* [The Lost Gateway (Ingress Intro)](../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
-* [The Grand Entrance (Path Routing)](../../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
+* [Explore Chapter 12 Comics](../../visual-learning/comics/ch12-ingress/README.md)
 
 **📘 Technical Deep Dive**
 * [Ingress vs Gateway](../../reference/md-resources/ingress-vs-gateway.md)

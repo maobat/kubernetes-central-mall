@@ -96,9 +96,7 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 
 * 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 **🎨 Visualize the Analogy**
-* [The Rulebook & The Uniform - ConfigMaps](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
-* [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
-* [The Morning Briefing - ConfigMap envFrom](../../visual-learning/comics/ch05-config-secrets/06-configmap-envfrom/README.md)
+* [Explore Chapter 5 Comics](../../visual-learning/comics/ch05-config-secrets/README.md)
 
 **📘 Technical Deep Dive**
 * [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)

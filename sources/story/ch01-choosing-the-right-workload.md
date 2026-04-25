@@ -60,9 +60,7 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 ---
 ### 🧰 Study Toolbox
 **🎨 Visualize the Analogy**
-* [Jobs & CronJobs - The Contractor's Visit](../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
-* [StatefulSets - The Fixed Boutique](../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
-* [Floor Security (DaemonSet)](../../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
+* [Explore Chapter 1 Comics](../../visual-learning/comics/ch01-workloads/README.md)
 
 **📘 Technical Deep Dive**
 * [Using StatefulSets - The Bolted-Down Safe](../../reference/md-resources/using-statefulsets.md)

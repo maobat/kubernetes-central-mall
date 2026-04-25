@@ -80,8 +80,7 @@ kubectl describe pod <pod-name>
 
 * 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
 **🎨 Visualize the Analogy**
-* [The Health Inspector - Liveness vs Readiness](../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
-* [The Health Inspector - Readiness](../../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
+* [Explore Chapter 14 Comics](../../visual-learning/comics/ch14-probes/README.md)
 
 **📘 Technical Deep Dive**
 * [Worker Safety and Probes](../../reference/md-resources/troubleshooting-kubernetes.md#section-2)

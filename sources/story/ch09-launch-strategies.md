@@ -12,7 +12,7 @@ In Kubernetes, this is a **Blue/Green Deployment**. You have two full versions o
 
 ### 🔵🟢 Blue/Green Strategy
 **🎨 Visualize the Analogy**
-* [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+* [Explore Chapter 9 Comics](../../visual-learning/comics/ch09-launch/README.md)
 
 ## The Taste Test (Canary Deployment)
 

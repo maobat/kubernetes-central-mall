@@ -85,7 +85,7 @@ kubectl exec secure-shop -- id
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [Worker Safety & SecurityContext](../../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
+* [Explore Chapter 6 Comics](../../visual-learning/comics/ch06-safety/README.md)
 
 **📘 Technical Deep Dive**
 * [Worker Safety and Conduct (SecurityContexts)](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)

@@ -99,7 +99,7 @@ spec:
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Perfect Mannequin - Image Layers](../../visual-learning/comics/ch03-images/03-image-updates/README.md)
+* [Explore Chapter 3 Comics](../../visual-learning/comics/ch03-images/README.md)
 
 **📘 Technical Deep Dive**
 * [Managing Container Images & Rollouts](../../reference/md-resources/managing-container-images-and-rollouts.md)

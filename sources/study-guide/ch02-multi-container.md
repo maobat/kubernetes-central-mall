@@ -108,10 +108,7 @@ The labs in this chapter follow a specific pedagogical progression from simple "
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [Sidecar Pattern - The Assistant at Work](../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
-* [The Warehouse (PV/PVC)](../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
-* [The Shared Stockroom (emptyDir)](../../visual-learning/comics/ch02-multi-container/03-shared-stockroom/README.md)
-* [The External Warehouse (NFS)](../../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
+* [Explore Chapter 2 Comics](../../visual-learning/comics/ch02-multi-container/README.md)
 
 **📘 Technical Deep Dive**
 * [Understanding Multi-container Pod Patterns](../../reference/md-resources/decoupling-pods.md)

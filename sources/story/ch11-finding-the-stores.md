@@ -44,9 +44,7 @@ Sometimes, a store is so specialized that it needs to bypass the mall's official
 ## 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Internal Intercom - ClusterIP Balances Traffic](../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
-* [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
-* [The Port Map - Section 11.4 Comparison Guide](../../visual-learning/comics/ch11-services/03-the-port-map/README.md)
+* [Explore Chapter 11 Comics](../../visual-learning/comics/ch11-services/README.md)
 
 **📘 Technical Deep Dive**
 * [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)

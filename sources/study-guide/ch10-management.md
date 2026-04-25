@@ -76,8 +76,7 @@ kubectl apply -k ./overlays/production
 ### 🧰 Study Toolbox
 
 **🎨 Visualize the Analogy**
-* [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
-* [The Castlemock Grand Opening](../../visual-learning/comics/ch10-logistics/03-the-castlemock-grand-opening/README.md)
+* [Explore Chapter 10 Comics](../../visual-learning/comics/ch10-logistics/README.md)
 
 **📘 Technical Deep Dive**
 * [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
