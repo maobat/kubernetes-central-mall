@@ -11,4 +11,4 @@ Master the tools and techniques for troubleshooting and diagnosing issues in you
 | [Lab 05: Connection Crisis](./lab05-the-connection-crisis/README.md) | Diagnose and repair Kubeconfig and VPN-related connection issues. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

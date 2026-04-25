@@ -94,7 +94,16 @@ The mall is your Kubernetes cluster:
 
 ---
 
-## 🧭 Repository Structure
+## 🧭 How to Navigate
+The **Central Mall** is designed for non-linear exploration. Use these tips to move through the project:
+*   **The Mall Directory (Glossary):** Use the [GLOSSARY.md](./GLOSSARY.md) at any time to look up a technical term and see its Mall Analogy.
+*   **The Learning Matrix:** Every technical concept in the Glossary links back to its corresponding Story, Study Guide, and Lab.
+*   **Hoppping Back:** Since Markdown is static, use your **Browser's Back Button** or **IDE Navigation arrows** to return to a specific chapter after looking up a term in the Glossary.
+*   **Footers:** Every page has a footer with links back to the Chapter Index and the Global Directory.
+
+---
+
+## 🏗️ Project Structure
 
 ```text
 .

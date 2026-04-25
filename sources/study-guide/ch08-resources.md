@@ -107,4 +107,4 @@ kubectl describe pod <pod-name>
 ---
 [<< Previous: Identity & RBAC](ch07-identity.md) | [Back to Story Index](../story.md) | [Next: Launch Strategies >>](ch09-deployments.md)
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

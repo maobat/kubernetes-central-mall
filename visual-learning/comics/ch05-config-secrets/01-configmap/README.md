@@ -33,4 +33,4 @@ This comic explains how to **decouple configuration** from your store's workers 
 - **Docs** → [Configuration Decoupling](../../../../reference/md-resources/configuration-decoupling.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

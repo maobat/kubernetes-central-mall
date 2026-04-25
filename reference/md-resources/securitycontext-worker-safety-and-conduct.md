@@ -11,4 +11,4 @@ A **SecurityContext** defines the specific "behavioral rules" for a worker (Pod/
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

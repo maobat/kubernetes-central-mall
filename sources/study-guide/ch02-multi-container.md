@@ -120,4 +120,4 @@ The labs in this chapter follow a specific pedagogical progression from simple "
 ---
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

@@ -99,4 +99,4 @@ The Endpoint status clearly shows that only the Service's selector patch (Phase 
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

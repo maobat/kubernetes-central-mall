@@ -35,4 +35,4 @@ Even with a badge and a job description, you might still be stopped at the gate.
 - **Docs** → [The Cast of Characters](../../../../reference/md-resources/cast-of-characters.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

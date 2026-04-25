@@ -33,4 +33,4 @@ This comic explains how **Multi-Container Pods** work and how they share resourc
 - **Docs** → [Decoupling Pods](../../../../reference/md-resources/decoupling-pods.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

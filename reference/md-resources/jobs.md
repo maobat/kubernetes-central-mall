@@ -49,4 +49,4 @@ kubectl create job pi-calc --image=perl:5.34 -- perl -Mbignum=bpi -wle 'print bp
 kubectl get jobs
 ```
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

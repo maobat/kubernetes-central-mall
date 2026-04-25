@@ -82,4 +82,4 @@ kubectl -n session283884 expose deployment web --port=80 --target-port=80 --type
 -   `expose` is a quick way to create a service mapping to a deployment's pods.
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

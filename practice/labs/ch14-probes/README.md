@@ -8,4 +8,4 @@ Ensure your applications are healthy and ready to serve traffic using Liveness a
 | [Lab 02: Readiness Probes](./lab02-readiness-probes/README.md) | Ensure Pods only receive traffic when they are prepared to handle it. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

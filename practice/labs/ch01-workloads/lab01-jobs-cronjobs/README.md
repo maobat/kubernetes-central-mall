@@ -84,4 +84,4 @@ kubectl create cronjob daily-report --image=busybox --schedule="*/5 * * * * " --
 - **Study Guide** → [Chapter 01: Workloads](../../../sources/study-guide/ch01-workloads.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

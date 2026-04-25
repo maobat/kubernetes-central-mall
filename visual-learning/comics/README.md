@@ -82,4 +82,4 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 [Back to Main Index](../../README.md)
 
 ---
-[Mall Directory ✨](./../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](./../GLOSSARY.md)

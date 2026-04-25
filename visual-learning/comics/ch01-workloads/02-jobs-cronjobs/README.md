@@ -32,4 +32,4 @@ This comic explains the difference between **standard staff (Deployments)** and 
 - **Docs** → [Scheduled Maintenance Guide](../../../../reference/md-resources/cronjobs.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

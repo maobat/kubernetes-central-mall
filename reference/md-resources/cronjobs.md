@@ -55,4 +55,4 @@ kubectl patch cronjob log-sweep -p '{"spec" : {"suspend" : true }}'
 * **concurrencyPolicy:** What happens if the old crew isn't done when the new crew arrives? (`Allow`, `Forbid`, or `Replace`).
 * **successfulJobsHistoryLimit:** How many "Success Reports" do we keep in the logbook? (Default is 3).
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

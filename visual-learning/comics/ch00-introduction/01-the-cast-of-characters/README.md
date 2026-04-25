@@ -90,4 +90,4 @@ This is an **introductory overview** of every character in *The Central Mall*, a
 - **Comics Registry** → [All Comics](../../README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

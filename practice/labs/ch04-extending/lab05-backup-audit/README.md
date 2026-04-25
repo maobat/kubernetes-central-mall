@@ -65,4 +65,4 @@ kubectl get db-backups -A > /root/db-backups
 
 ---
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -33,4 +33,4 @@ For massive department stores that take a very long time to open their heavy shu
 * 📄 **Doc:** [Worker Safety and Probes](../../reference/md-resources/troubleshooting-kubernetes.md#section-2)
 * 🧪 **Labs:** [Explore Chapter 14 Labs](../../practice/labs/ch14-probes/README.md)
 
-[<< Previous Chapter: Network Policies](ch13-network-policies.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Debugging & Logs >>](ch15-debugging-and-logs.md) | [🔙 Back](javascript:history.back())
+[<< Previous Chapter: Network Policies](ch13-network-policies.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Debugging & Logs >>](ch15-debugging-and-logs.md)

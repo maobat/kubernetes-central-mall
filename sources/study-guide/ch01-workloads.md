@@ -72,4 +72,4 @@ kubectl create cronjob nightly-clean --image=busybox --schedule=`0 23 * * *` -- 
 * 🧪 **Labs:** [Explore Chapter 01 Labs](../../practice/labs/ch01-workloads/README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

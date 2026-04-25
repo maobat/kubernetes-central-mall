@@ -10,4 +10,4 @@ Prepare for the Certified Kubernetes Application Developer (CKAD) exam with hand
 | [Lab 04: SSH and Contexts](./lab04-ssh-and-contexts/README.md) | Practice switching between contexts and using SSH for node-level tasks. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

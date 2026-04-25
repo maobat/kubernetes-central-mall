@@ -87,4 +87,4 @@ Create a second pod identically configured to use the same NFS volume. Notice ho
 - **Docs** → [Volumes (NFS)](https://kubernetes.io/docs/concepts/storage/volumes/#nfs)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

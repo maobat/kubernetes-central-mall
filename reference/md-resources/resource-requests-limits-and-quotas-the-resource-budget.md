@@ -5,4 +5,4 @@ To keep the Mall from running out of electricity (CPU) or physical floor space (
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

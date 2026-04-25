@@ -83,4 +83,4 @@ kubectl get pods -l app=mall-guard -o wide
 - **Study Guide** → [Chapter 01: Workloads](../../../sources/study-guide/ch01-workloads.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

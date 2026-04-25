@@ -104,4 +104,4 @@ kubectl auth can-i list pods \
 - **Central Mall Map** → [Practice Labs Index](../../README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

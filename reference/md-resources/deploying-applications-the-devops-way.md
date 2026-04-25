@@ -25,4 +25,4 @@ In the exam, you act as the **DevOps Engineer**. You are responsible for the **Y
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

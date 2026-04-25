@@ -107,4 +107,4 @@ helm upgrade castlemock . \
 - **Study Guide** → [Chapter 10: Logistics & API Management](../../../../sources/study-guide/ch10-management.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

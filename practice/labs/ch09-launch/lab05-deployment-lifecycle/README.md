@@ -160,4 +160,4 @@ kubectl rollout history deploy scaler
 - **Lab 01** → [Rolling Update with Strategy Tuning](../lab01-rolling-update-wonderful/README.md) *(advanced: maxSurge/maxUnavailable)*
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

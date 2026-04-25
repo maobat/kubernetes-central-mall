@@ -13,4 +13,4 @@ The Kubernetes storage model is built on **decoupling**. Applications (Pods) sho
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

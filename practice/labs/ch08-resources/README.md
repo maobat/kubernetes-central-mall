@@ -9,4 +9,4 @@ Manage cluster resources efficiently by setting constraints and controlling Pod 
 | [Lab 03: Node Affinity](./lab03-node-affinity/README.md) | Control Pod scheduling using Node labels and affinity rules. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

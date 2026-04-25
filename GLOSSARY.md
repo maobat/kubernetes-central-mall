@@ -4,7 +4,7 @@ Welcome to **The Information Desk** of the Kubernetes Central Mall. 🛍️
 Use this directory to quickly look up terms, understand their mall analogies, and find every related chapter, lab, or comic in the project.
 
 > [!TIP]
-> **Pro Tip:** Use `Ctrl + F` (or `Cmd + F` on Mac) to search for any keyword or resource name (e.g., "Ingress" or "Vault").
+> **Pro Tip:** Use `Ctrl + F` to search for any keyword. Once you've found what you need, use your **Browser/IDE back button** to return to your previous chapter!
 
 ## 🧭 Navigating the Official Building Codes
 When you follow links to `kubernetes.io`, you will encounter different types of documentation. Use this map to find the level of detail you need:
@@ -87,4 +87,4 @@ Find where each concept is discussed across different study paths.
 
 ---
 
-[🔙 Back](javascript:history.back()) \| [Back to Main README](./README.md)
+ \| [Back to Main README](./README.md)

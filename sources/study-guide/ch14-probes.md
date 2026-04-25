@@ -88,4 +88,4 @@ kubectl describe pod <pod-name>
 [<< Previous: Network Policies](ch13-networking.md) | [Back to Story Index](../story.md) | [Next: Debugging & Logs >>](ch15-debugging.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

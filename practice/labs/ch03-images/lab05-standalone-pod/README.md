@@ -98,4 +98,4 @@ kubectl delete pod nginx
 - **Lab 03** → [Image Updates](../lab03-image-updates/README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

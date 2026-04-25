@@ -13,4 +13,4 @@ Explore how to extend Kubernetes functionality using Custom Resource Definitions
 | [Lab 07: CRD Shopping Cleanup](./lab07-crd-shopping-cleanup/README.md) | Clean up and remove the shopping CRDs. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

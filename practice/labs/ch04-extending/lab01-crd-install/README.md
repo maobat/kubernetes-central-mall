@@ -82,4 +82,4 @@ kubectl apply -f shopping-item.yaml
 - **Study Guide** → [Chapter 04: Extending](../../../../sources/study-guide/ch10-management.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

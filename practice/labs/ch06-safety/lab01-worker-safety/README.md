@@ -125,4 +125,4 @@ kubectl exec worker-safety -- touch /test-file
 - **Docs** → [Configure a Security Context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

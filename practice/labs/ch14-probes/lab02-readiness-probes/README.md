@@ -156,4 +156,4 @@ space-alien-welcome-message-generator   1/1     1            0           3m53s
 - **Study Guide** → [Chapter 14: Observability](../../../../sources/study-guide/ch14-probes.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

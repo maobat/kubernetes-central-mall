@@ -83,4 +83,4 @@ vim /etc/kubernetes/manifests/kube-apiserver.yaml
 - **Docs** → [Admission Controllers Reference](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

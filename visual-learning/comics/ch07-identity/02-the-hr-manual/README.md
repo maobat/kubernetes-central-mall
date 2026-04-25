@@ -36,4 +36,4 @@ In the **Central Mall**, security isn't just a badge; it's a **Permit**. The **H
 - **Docs** → [Understanding RBAC](../../../../reference/md-resources/understanding-role-based-access-control-rbac.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

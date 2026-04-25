@@ -38,4 +38,4 @@ By using Images, the mall ensures that every worker is **exactly the same**. No 
 * 📄 **Doc:** [Managing Container Images & Rollouts](../../reference/md-resources/managing-container-images-and-rollouts.md)
 * 🧪 **Labs:** [Explore Chapter 03 Labs](../../practice/labs/ch03-images/README.md)
 
-[<< Previous Chapter: Multi-container Design Patterns](ch02-multi-container-design-patterns.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Extending the Mall >>](ch04-extending-the-mall.md) | [🔙 Back](javascript:history.back())
+[<< Previous Chapter: Multi-container Design Patterns](ch02-multi-container-design-patterns.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Extending the Mall >>](ch04-extending-the-mall.md)

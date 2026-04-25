@@ -95,4 +95,4 @@ kubectl delete -f pod-logging-sidecar.yaml
 - **Central Mall Map** → [Practice Labs Index](../../README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

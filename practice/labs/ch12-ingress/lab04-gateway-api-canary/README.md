@@ -15,4 +15,4 @@ Learn how to use **Gateway API** to perform advanced traffic splitting for a Can
 - **Study Guide** → [Chapter 12: Ingress](../../../../sources/study-guide/ch12-ingress.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

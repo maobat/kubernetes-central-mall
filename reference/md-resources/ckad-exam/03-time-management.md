@@ -67,4 +67,4 @@ Come back later.
 
 - [Final Checklist](./04-final-checklist.md)
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

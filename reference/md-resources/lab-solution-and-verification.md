@@ -40,4 +40,4 @@ If you look closer at the `describe` output, you will see a "Mount" point:
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

@@ -24,4 +24,4 @@ Here is a direct comparison between the Blue/Green and Canary deployment strateg
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

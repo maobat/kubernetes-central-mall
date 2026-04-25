@@ -73,4 +73,4 @@ kubectl -n session283884 delete deployment web
 -   Use `--restart=Never` with `kubectl run` to create a standalone Pod instead of a Deployment.
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

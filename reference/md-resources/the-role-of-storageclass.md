@@ -39,4 +39,4 @@ The `storageClassName` value is the unique identifier for the StorageClass resou
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

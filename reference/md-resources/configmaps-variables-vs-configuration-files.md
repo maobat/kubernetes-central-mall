@@ -78,4 +78,4 @@ When the Pod runs, the key (`index.html`) inside the ConfigMap appears as a file
 [Back to Documentation](../README.md)
 
 ---
-[Mall Directory ✨](../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../GLOSSARY.md)

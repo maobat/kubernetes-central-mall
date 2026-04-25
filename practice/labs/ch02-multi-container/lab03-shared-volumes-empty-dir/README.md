@@ -86,4 +86,4 @@ kubectl -n volumes logs shared-pod -c reader --tail=10
 - **Docs** → [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

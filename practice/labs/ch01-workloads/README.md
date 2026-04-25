@@ -10,4 +10,4 @@ In this chapter, you will explore different types of Kubernetes workloads beyond
 | [Lab 04: Automated Tasks](./lab04-automated-tasks-countdown/README.md) | Practice creating Jobs and CronJobs in a "Mall" scenario. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

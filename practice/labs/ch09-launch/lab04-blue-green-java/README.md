@@ -202,4 +202,4 @@ curl http://$(minikube ip):<nodeport-from-above>
 ➡️ [Lab 02: Blue-Green with the Wonderful Boutique](../lab02-blue-green-wonderful/README.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -94,4 +94,4 @@ k set env deployment/secretlab --from=secret/supersecret --prefix=MARIADB_ROOT_
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

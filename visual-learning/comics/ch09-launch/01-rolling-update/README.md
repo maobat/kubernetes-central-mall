@@ -30,4 +30,4 @@ As a result, the crew replaces one section at a time, moving stock and staff fro
 - 📝 **Study Guide** → [Chapter 9: Deployments](../../../../sources/study-guide/ch09-deployments.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

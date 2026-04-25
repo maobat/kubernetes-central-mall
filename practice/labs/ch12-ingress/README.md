@@ -10,4 +10,4 @@ Manage external access to your services using Ingress controllers and the modern
 | [Lab 04: Gateway API Canary](./lab04-gateway-api-canary/README.md) | Use the Gateway API for advanced traffic management and canary releases. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

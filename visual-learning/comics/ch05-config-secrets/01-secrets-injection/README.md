@@ -32,4 +32,4 @@ This comic explains how to handle **sensitive data** in Kubernetes without leaki
 - **Docs** → [Secrets & Security](../../../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)

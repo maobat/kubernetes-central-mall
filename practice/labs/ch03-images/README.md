@@ -12,4 +12,4 @@ Learn how to build, manage, and update container images, and how they are used w
 | [Lab 06: Buildx Image Export](./lab06-buildx-image-export/README.md) | Use Docker Buildx to export images in Docker and OCI formats. |
 
 ---
-[Mall Directory ✨](../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../GLOSSARY.md)

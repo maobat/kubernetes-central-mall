@@ -102,4 +102,4 @@ resources:
 - **Study Guide** → [Chapter 8: Resource Budgets](../../../../sources/study-guide/ch08-resources.md)
 
 ---
-[Mall Directory ✨](../../../../GLOSSARY.md) | [🔙 Back](javascript:history.back())
+[Mall Directory ✨](../../../../GLOSSARY.md)
