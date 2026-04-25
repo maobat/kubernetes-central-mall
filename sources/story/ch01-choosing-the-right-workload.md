@@ -59,11 +59,16 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 
 ---
 ### 🧰 Study Toolbox
-* 🖼️ **Comic:** [Jobs & CronJobs - The Contractor's Visit](../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
-* 🖼️ **Comic:** [StatefulSets - The Fixed Boutique](../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
-* 🖼️ **Comic:** [Floor Security (DaemonSet)](../../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
-* 📄 **Doc:** [Using StatefulSets - The Bolted-Down Safe](../../reference/md-resources/using-statefulsets.md)
-* 🧪 **Labs:** [Explore Chapter 01 Labs](../../practice/labs/ch01-workloads/README.md)
+**🎨 Visualize the Analogy**
+* [Jobs & CronJobs - The Contractor's Visit](../../visual-learning/comics/ch01-workloads/02-jobs-cronjobs/README.md)
+* [StatefulSets - The Fixed Boutique](../../visual-learning/comics/ch01-workloads/02-statefulsets/README.md)
+* [Floor Security (DaemonSet)](../../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
+
+**📘 Technical Deep Dive**
+* [Using StatefulSets - The Bolted-Down Safe](../../reference/md-resources/using-statefulsets.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 01 Labs](../../practice/labs/ch01-workloads/README.md)
 
 ---
 

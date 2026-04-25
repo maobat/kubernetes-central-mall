@@ -79,10 +79,15 @@ kubectl describe pod <pod-name>
 ## 🧰 Study Toolbox
 
 * 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
-* 🖼️ **Comic 01:** [The Health Inspector - Liveness vs Readiness](../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
-* 🖼️ **Comic 02:** [The Health Inspector - Readiness](../../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
-* 📄 **Doc:** [Worker Safety and Probes](../../reference/md-resources/troubleshooting-kubernetes.md#section-2)
-* 🧪 **Labs:** [Explore Chapter 14 Labs](../../practice/labs/ch14-probes/README.md)
+**🎨 Visualize the Analogy**
+* [The Health Inspector - Liveness vs Readiness](../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
+* [The Health Inspector - Readiness](../../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
+
+**📘 Technical Deep Dive**
+* [Worker Safety and Probes](../../reference/md-resources/troubleshooting-kubernetes.md#section-2)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 14 Labs](../../practice/labs/ch14-probes/README.md)
 
 ---
 [<< Previous: Network Policies](ch13-networking.md) | [Back to Story Index](../story.md) | [Next: Debugging & Logs >>](ch15-debugging.md)

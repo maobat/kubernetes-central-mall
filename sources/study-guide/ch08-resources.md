@@ -100,9 +100,14 @@ kubectl describe pod <pod-name>
 ### 🧰 Study Toolbox
 
 * 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
-* 🖼️ **Comic 01:** [The Resource Hog - Why Limits Matter](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
-* 📄 **Doc:** [The Resource Budget (Requests, Limits, & Quotas)](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
-* 🧪 **Labs:** [Explore Chapter 08 Labs](../../practice/labs/ch08-resources/README.md)
+**🎨 Visualize the Analogy**
+* [The Resource Hog - Why Limits Matter](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+
+**📘 Technical Deep Dive**
+* [The Resource Budget (Requests, Limits, & Quotas)](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 08 Labs](../../practice/labs/ch08-resources/README.md)
 
 ---
 [<< Previous: Identity & RBAC](ch07-identity.md) | [Back to Story Index](../story.md) | [Next: Launch Strategies >>](ch09-deployments.md)

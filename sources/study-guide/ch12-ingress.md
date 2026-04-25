@@ -91,11 +91,16 @@ spec:
 
 ## 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [Virtual Host Gateway Show - Host-based Routing](../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
-* 🖼️ **Comic 02:** [The Lost Gateway - Troubleshooting Gateway API](../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
-* 🖼️ **Comic 03:** [The Grand Entrance (Path-Based Routing)](../../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
-* 📄 **Doc:** [Ingress vs Gateway](../../reference/md-resources/ingress-vs-gateway.md)
-* 🧪 **Labs:** [Explore Chapter 12 Labs](../../practice/labs/ch12-ingress/README.md)
+**🎨 Visualize the Analogy**
+* [Virtual Host Gateway Show - Host-based Routing](../../visual-learning/comics/ch12-ingress/01-virtual-host/README.md)
+* [The Lost Gateway - Troubleshooting Gateway API](../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
+* [The Grand Entrance (Path-Based Routing)](../../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
+
+**📘 Technical Deep Dive**
+* [Ingress vs Gateway](../../reference/md-resources/ingress-vs-gateway.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 12 Labs](../../practice/labs/ch12-ingress/README.md)
 
 ---
 [<< Previous: Networking Services](ch11-services.md) | [Back to Story Index](../story.md) | [Next: Network Policies >>](ch13-networking.md)

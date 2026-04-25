@@ -95,11 +95,16 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 ### 🧰 Study Toolbox
 
 * 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
-* 🖼️ **Comic 01:** [The Rulebook & The Uniform - ConfigMaps](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
-* 🖼️ **Comic 03:** [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
-* 🖼️ **Comic 06:** [The Morning Briefing - ConfigMap envFrom](../../visual-learning/comics/ch05-config-secrets/06-configmap-envfrom/README.md)
-* 📄 **Doc:** [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
-* 🧪 **Labs:** [Explore Chapter 05 Labs](../../practice/labs/ch05-config-secrets/README.md)
+**🎨 Visualize the Analogy**
+* [The Rulebook & The Uniform - ConfigMaps](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
+* [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
+* [The Morning Briefing - ConfigMap envFrom](../../visual-learning/comics/ch05-config-secrets/06-configmap-envfrom/README.md)
+
+**📘 Technical Deep Dive**
+* [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 05 Labs](../../practice/labs/ch05-config-secrets/README.md)
 
 ---
 [<< Previous: Extending K8s](ch04-extending-k8s.md) | [Back to Story Index](../story.md) | [Next: Security >>](ch06-security.md)

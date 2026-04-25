@@ -35,10 +35,15 @@ Whether those drawers are filled with **Environment Variables** (loose papers) o
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Rulebook & The Uniform](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
-* 🖼️ **Comic 03:** [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
-* 🖼️ **Comic 06:** [The Morning Briefing](../../visual-learning/comics/ch05-config-secrets/06-configmap-envfrom/README.md)
-* 📄 **Doc:** [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
-* 🧪 **Labs:** [Explore Chapter 05 Labs](../../practice/labs/ch05-config-secrets/README.md)
+**🎨 Visualize the Analogy**
+* [The Rulebook & The Uniform](../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
+* [The Secret of the High-Security Vault](../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
+* [The Morning Briefing](../../visual-learning/comics/ch05-config-secrets/06-configmap-envfrom/README.md)
+
+**📘 Technical Deep Dive**
+* [Core Concepts: ConfigMaps, Secrets, and Security](../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 05 Labs](../../practice/labs/ch05-config-secrets/README.md)
 
 [<< Previous Chapter: Extending the Mall](ch04-extending-the-mall.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Worker Safety & Conduct >>](ch06-worker-safety-and-conduct.md)

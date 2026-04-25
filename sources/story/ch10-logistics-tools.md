@@ -30,12 +30,17 @@ For complex boutiques like **Castlemock**, simply unpacking the container isn't 
 
 ## 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
-* 🖼️ **Comic 02:** [The Castlemock Grand Opening](../../visual-learning/comics/ch10-logistics/03-the-castlemock-grand-opening/README.md)
-* 📄 **Doc:** [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
-* 📄 **Doc:** [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
-* 📄 **Doc:** [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
-* 🧪 **Labs:** [Explore Chapter 10 Labs](../../practice/labs/ch10-logistics/README.md)
+**🎨 Visualize the Analogy**
+* [The Logistics Chain - Deploying at Scale](../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
+* [The Castlemock Grand Opening](../../visual-learning/comics/ch10-logistics/03-the-castlemock-grand-opening/README.md)
+
+**📘 Technical Deep Dive**
+* [Using the Helm Package Manager](../../reference/md-resources/using-the-helm-package-manager.md)
+* [Working with Helm Charts](../../reference/md-resources/working-with-helm-charts.md)
+* [Using Kustomize (Transparent Sheet Method)](../../reference/md-resources/using-kustomize.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 10 Labs](../../practice/labs/ch10-logistics/README.md)
 * 🧪 **Lab 06:** [The Castlemock Boutique (Full Ritual)](../../practice/labs/ch10-logistics/lab06-castlemock-setup/README.md)
 
 [<< Previous Chapter: Launch Strategies](ch09-launch-strategies.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Finding the Stores >>](ch11-finding-the-stores.md)

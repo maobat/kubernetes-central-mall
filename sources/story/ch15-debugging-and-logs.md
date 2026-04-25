@@ -31,11 +31,16 @@ This is `kubectl exec`. It allows you to step inside a running pod and run comma
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
-* 🖼️ **Comic 02:** [SSH and Contexts (Service Elevator)](../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
-* 🖼️ **Comic 03:** [The Nested Node (Kind & crictl)](../../visual-learning/comics/ch15-debugging/04-nested-nodes-crictl/README.md)
-* 📄 **Doc:** [Troubleshooting Kubernetes Guide](../../reference/md-resources/troubleshooting-kubernetes.md)
-* 📄 **Doc:** [Diagnostic Cheat Sheet](../../reference/md-resources/diagnostic-cheat-sheet.md)
-* 🧪 **Labs:** [Explore Chapter 15 Labs](../../practice/labs/ch15-debugging/README.md)
+**🎨 Visualize the Analogy**
+* [The Health Inspector - The Broken Shop](../../visual-learning/comics/ch15-debugging/03-the-broken-shop/README.md)
+* [SSH and Contexts (Service Elevator)](../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
+* [The Nested Node (Kind & crictl)](../../visual-learning/comics/ch15-debugging/04-nested-nodes-crictl/README.md)
+
+**📘 Technical Deep Dive**
+* [Troubleshooting Kubernetes Guide](../../reference/md-resources/troubleshooting-kubernetes.md)
+* [Diagnostic Cheat Sheet](../../reference/md-resources/diagnostic-cheat-sheet.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 15 Labs](../../practice/labs/ch15-debugging/README.md)
 
 [<< Previous Chapter: Probes & Health Checks](ch14-probes-and-health-checks.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md)

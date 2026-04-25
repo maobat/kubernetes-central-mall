@@ -44,12 +44,17 @@ By separating the "Setup" and the "Side-Tasks" from the Main Worker, we keep our
 ### 🧰 Study Toolbox
 
 ### 🧱 Multi-Container Pods & Shared Storage
-* 🖼️ **Comic 01:** [The Assistant & The Shared Space](../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
-* 🖼️ **Comic 02:** [The Warehouse (PV/PVC)](../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
-* 🖼️ **Comic 03:** [The Shared Stockroom (emptyDir)](../../visual-learning/comics/ch02-multi-container/03-shared-stockroom/README.md)
-* 🖼️ **Comic 04:** [The External Warehouse (NFS)](../../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
-* 📄 **Doc:** [Understanding Multi-container Pod Patterns](../../reference/md-resources/decoupling-pods.md)
-* 🧪 **Labs:** [Explore Chapter 02 Labs](../../practice/labs/ch02-multi-container/README.md)
+**🎨 Visualize the Analogy**
+* [The Assistant & The Shared Space](../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
+* [The Warehouse (PV/PVC)](../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
+* [The Shared Stockroom (emptyDir)](../../visual-learning/comics/ch02-multi-container/03-shared-stockroom/README.md)
+* [The External Warehouse (NFS)](../../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
+
+**📘 Technical Deep Dive**
+* [Understanding Multi-container Pod Patterns](../../reference/md-resources/decoupling-pods.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 02 Labs](../../practice/labs/ch02-multi-container/README.md)
 
 
 [<< Previous Chapter: Choosing the Right Workload](ch01-choosing-the-right-workload.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Images & Modifications >>](ch03-images-and-modifications.md)

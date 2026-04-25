@@ -39,9 +39,14 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Nightly Backup Permit](../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
-* 🖼️ **Comic 03:** [The Operator - The Manager with the Manual](../../visual-learning/comics/ch04-extending/04-operators/README.md)
-* 📄 **Doc:** [Understanding the Operator Pattern](../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
-* 🧪 **Labs:** [Explore Chapter 04 Labs](../../practice/labs/ch04-extending/README.md)
+**🎨 Visualize the Analogy**
+* [The Nightly Backup Permit](../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
+* [The Operator - The Manager with the Manual](../../visual-learning/comics/ch04-extending/04-operators/README.md)
+
+**📘 Technical Deep Dive**
+* [Understanding the Operator Pattern](../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 04 Labs](../../practice/labs/ch04-extending/README.md)
 
 [<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)

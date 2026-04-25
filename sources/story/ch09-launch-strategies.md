@@ -11,7 +11,8 @@ For a while, both cafés exist. The old one is still serving customers. Once the
 In Kubernetes, this is a **Blue/Green Deployment**. You have two full versions of your app (Blue and Green). You switch the **Service** (the sign) to point to the new version once it's ready. If something goes wrong with the New Café, you just swap the sign back to the old one. Zero downtime, zero risk.
 
 ### 🔵🟢 Blue/Green Strategy
-* 🖼️ **Comic:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+**🎨 Visualize the Analogy**
+* [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
 
 ## The Taste Test (Canary Deployment)
 
@@ -54,11 +55,15 @@ Update →      v2 v1 v1 v1
 
 ---
 
-* 🖼️ **Comic 01:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
-* 🖼️ **Comic 02:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
-* 🖼️ **Comic 03:** [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-* 📄 **Doc:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
-* 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
-* 🧪 **Labs:** [Explore Chapter 09 Labs](../../practice/labs/ch09-launch/README.md)
+* [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
+* [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+* [Canary Traffic at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+
+**📘 Technical Deep Dive**
+* [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
+* [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 09 Labs](../../practice/labs/ch09-launch/README.md)
 
 [<< Previous Chapter: Resource Budgets](ch08-resource-budgets.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Logistics Tools >>](ch10-logistics-tools.md)

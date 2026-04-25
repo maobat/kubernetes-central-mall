@@ -83,11 +83,16 @@ If a worker needs to see shops in **every** floor of the mall (all Namespaces), 
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Secure Badge - Pod Identity](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
-* 🖼️ **Comic 02:** [The HR Manual (Role)](../../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
-* 🖼️ **Comic 03:** [The Entry Permit Office (Admission Control)](../../visual-learning/comics/ch07-identity/03-admission-control/README.md)
-* 📄 **Doc:** [Understanding Role-Based Access Control (RBAC)](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
-* 🧪 **Labs:** [Explore Chapter 07 Labs](../../practice/labs/ch07-identity/README.md)
+**🎨 Visualize the Analogy**
+* [The Secure Badge - Pod Identity](../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
+* [The HR Manual (Role)](../../visual-learning/comics/ch07-identity/02-the-hr-manual/README.md)
+* [The Entry Permit Office (Admission Control)](../../visual-learning/comics/ch07-identity/03-admission-control/README.md)
+
+**📘 Technical Deep Dive**
+* [Understanding Role-Based Access Control (RBAC)](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 07 Labs](../../practice/labs/ch07-identity/README.md)
     * ↳ [Lab 05: ServiceAccount Token Decode](../../practice/labs/ch07-identity/lab05-serviceaccount-token-decode/README.md)
 
 ---

@@ -98,9 +98,14 @@ spec:
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 03:** [The Perfect Mannequin - Image Layers](../../visual-learning/comics/ch03-images/03-image-updates/README.md)
-* 📄 **Doc:** [Managing Container Images & Rollouts](../../reference/md-resources/managing-container-images-and-rollouts.md)
-* 🧪 **Labs:** [Explore Chapter 03 Labs](../../practice/labs/ch03-images/README.md)
+**🎨 Visualize the Analogy**
+* [The Perfect Mannequin - Image Layers](../../visual-learning/comics/ch03-images/03-image-updates/README.md)
+
+**📘 Technical Deep Dive**
+* [Managing Container Images & Rollouts](../../reference/md-resources/managing-container-images-and-rollouts.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 03 Labs](../../practice/labs/ch03-images/README.md)
 
 ---
 [<< Previous: Multi-container](ch02-multi-container.md) | [Back to Story Index](../story.md) | [Next: Extending K8s >>](ch04-extending-k8s.md)

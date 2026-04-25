@@ -34,8 +34,13 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
-* 📄 **Doc:** [Resource Requests, Limits, and Quotas](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
-* 🧪 **Labs:** [Explore Chapter 08 Labs](../../practice/labs/ch08-resources/README.md)
+**🎨 Visualize the Analogy**
+* [The Resource Hog](../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
+
+**📘 Technical Deep Dive**
+* [Resource Requests, Limits, and Quotas](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 08 Labs](../../practice/labs/ch08-resources/README.md)
 
 [<< Previous Chapter: Identity & Access](ch07-identity-and-access.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Launch Strategies >>](ch09-launch-strategies.md)

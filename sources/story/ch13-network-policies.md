@@ -22,9 +22,14 @@ By locking the corridors between competing departments and only allowing necessa
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Locked Corridor - Whitelisting Traffic](../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
-* 🖼️ **Comic 02:** [The One-Way Corridor - Egress Control](../../visual-learning/comics/ch13-networking/02-one-way-corridors/README.md)
-* 📄 **Doc:** [Network Policies: Concept and Application](../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
-* 🧪 **Labs:** [Explore Chapter 13 Labs](../../practice/labs/ch13-networking/README.md)
+**🎨 Visualize the Analogy**
+* [The Locked Corridor - Whitelisting Traffic](../../visual-learning/comics/ch13-networking/01-locked-corridors/README.md)
+* [The One-Way Corridor - Egress Control](../../visual-learning/comics/ch13-networking/02-one-way-corridors/README.md)
+
+**📘 Technical Deep Dive**
+* [Network Policies: Concept and Application](../../reference/md-resources/troubleshooting-kubernetes.md#section-8-3)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 13 Labs](../../practice/labs/ch13-networking/README.md)
 
 [<< Previous Chapter: Ingress & Gateway API](ch12-ingress-and-gateway-api.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Probes & Health Checks >>](ch14-probes-and-health-checks.md)

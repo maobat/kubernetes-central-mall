@@ -95,12 +95,17 @@ graph LR
 
 ### 🧰 Study Toolbox
 
-* 🖼️ **Comic 01:** [The Internal Intercom - ClusterIP Balances Traffic](../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
-* 🖼️ **Comic 02:** [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
-* 🖼️ **Comic 03:** [The Port Map - Section 11.4 Comparison Guide](../../visual-learning/comics/ch11-services/03-the-port-map/README.md)
-* 📄 **Doc:** [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)
-* 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
-* 🧪 **Labs:** [Explore Chapter 11 Labs](../../practice/labs/ch11-services/README.md)
+**🎨 Visualize the Analogy**
+* [The Internal Intercom - ClusterIP Balances Traffic](../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
+* [The NodePort Traffic Adventure - Crossing Mall Corridors](../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
+* [The Port Map - Section 11.4 Comparison Guide](../../visual-learning/comics/ch11-services/03-the-port-map/README.md)
+
+**📘 Technical Deep Dive**
+* [Service IP Trackers & Evolution](../../reference/md-resources/service-ip-tracker-evolution.md)
+* [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 11 Labs](../../practice/labs/ch11-services/README.md)
 
 ---
 [<< Previous: Logistics Tools](ch10-management.md) | [Back to Story Index](../story.md) | [Next: Ingress & Gateway API >>](ch12-ingress.md)

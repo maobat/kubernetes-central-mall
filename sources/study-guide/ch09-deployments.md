@@ -126,13 +126,18 @@ kubectl rollout undo deployment/clerk-dept
 ### 🧰 Study Toolbox
 
 * 🎙️ **Audio Overview:** Request the audio briefing from the Mall Manager (**@maobat**) via repository issues.
-* 🖼️ **Comic 01:** [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
-* 🖼️ **Comic 02:** [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
-* 🖼️ **Comic 03:** [Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
-* 📄 **Doc:** [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
-* 📄 **Doc:** [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
-* 📄 **Doc:** [Comparison: Blue/Green vs. Canary](../../reference/md-resources/related-deployment-strategies-comparison.md)
-* 🧪 **Labs:** [Explore Chapter 09 Labs](../../practice/labs/ch09-launch/README.md)
+**🎨 Visualize the Analogy**
+* [The Trend Spot - Rolling Renovation](../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
+* [Blue/Green Sign Swap](../../visual-learning/comics/ch09-launch/01-blue-green-sign-swap/README.md)
+* [Replica Weighting - Canary at the Side Entrance](../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
+
+**📘 Technical Deep Dive**
+* [Implementing Blue/Green Deployments](../../reference/md-resources/implementing-bluegreen-deployments.md)
+* [Implementing Canary Deployments](../../reference/md-resources/implementing-canary-deployments.md)
+* [Comparison: Blue/Green vs. Canary](../../reference/md-resources/related-deployment-strategies-comparison.md)
+
+**🛠️ Hands-on Practice**
+* [Explore Chapter 09 Labs](../../practice/labs/ch09-launch/README.md)
 
 ---
 [<< Previous: Resources](ch08-resources.md) | [Back to Story Index](../story.md) | [Next: Logistics Tools >>](ch10-management.md)
