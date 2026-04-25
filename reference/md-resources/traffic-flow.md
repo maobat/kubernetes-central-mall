@@ -16,3 +16,6 @@ To see how these characters interact, follow the path of a request during `Secti
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

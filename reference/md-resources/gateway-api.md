@@ -31,3 +31,6 @@ helm install my-gateway-controller oci://ghcr.io/nginxinc/charts/nginx-gateway-f
   4. **Hang the Signs (HTTPRoute):** Connects the Gateway to your shop services (like `task7svc`).
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

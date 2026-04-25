@@ -10,3 +10,6 @@ Learn how to build, manage, and update container images, and how they are used w
 | [Lab 04: Custom Nginx](./lab04-custom-nginx-image/README.md) | Personalize an Nginx image and share it on Docker Hub. |
 | [Lab 05: Standalone Pod](./lab05-standalone-pod/README.md) | Practice creating and inspecting standalone Pods. |
 | [Lab 06: Buildx Image Export](./lab06-buildx-image-export/README.md) | Use Docker Buildx to export images in Docker and OCI formats. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

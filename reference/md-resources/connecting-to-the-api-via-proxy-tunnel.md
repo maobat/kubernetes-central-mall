@@ -16,3 +16,6 @@ To safely access the API using local tools like \`curl\`, you start the Kubernet
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

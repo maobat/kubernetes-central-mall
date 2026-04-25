@@ -158,3 +158,6 @@ kubectl rollout history deploy scaler
 - **Comic** → [The Trend Spot - Rolling Renovation](../../../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
 - **Study Guide** → [Chapter 9: Launch Strategies](../../../../sources/study-guide/ch09-deployments.md)
 - **Lab 01** → [Rolling Update with Strategy Tuning](../lab01-rolling-update-wonderful/README.md) *(advanced: maxSurge/maxUnavailable)*
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

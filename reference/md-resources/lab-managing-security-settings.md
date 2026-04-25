@@ -3,3 +3,6 @@ This lab demonstrates the "HR Process" of assigning a specific identity to a dep
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

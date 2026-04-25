@@ -49,3 +49,6 @@ k describe cm trauerweide
 ---
 
 [Back to Chapter 05 Index](../../README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

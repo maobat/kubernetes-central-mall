@@ -7,3 +7,6 @@ This is the process where Kubernetes creates the storage for you, making manual 
   - **When to use:** When you need a new, dedicated storage resource (like a cloud disk) created just for this PVC. This is the preferred method in modern clusters.
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

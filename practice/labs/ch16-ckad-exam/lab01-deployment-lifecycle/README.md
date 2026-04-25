@@ -80,3 +80,6 @@ kubectl -n session283884 expose deployment web --port=80 --target-port=80 --type
 -   Moving between namespaces requires the `-n` or `--namespace` flag.
 -   `kubectl set image` is the standard way to trigger a rolling update.
 -   `expose` is a quick way to create a service mapping to a deployment's pods.
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -31,3 +31,5 @@ This comic explains why **StatefulSets** are the "VIPs" of the Kubernetes world 
 - **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
 - **Lab** → [Lab 02 - StatefulSets](../../../../practice/labs/ch01-workloads/lab02-statefulsets/README.md)
 - **Docs** → [Using StatefulSets](../../../../reference/md-resources/using-statefulsets.md)
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

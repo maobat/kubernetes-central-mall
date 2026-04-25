@@ -31,3 +31,6 @@ This comic explains the complexities of the **Gateway API** and why your gateway
 - **Study Guide** → [Chapter 12: Ingress & Gateway API](../../../../sources/study-guide/ch12-ingress.md)
 - **Lab** → [Lab 04 - Gateway API & Canary](../../../../practice/labs/ch12-ingress/lab04-gateway-api-canary/README.md)
 - **Docs** → [Understanding Gateway API](../../../../reference/md-resources/gateway-api.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

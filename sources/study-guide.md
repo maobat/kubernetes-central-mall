@@ -1,0 +1,3 @@
+
+---
+[Mall Directory ✨](../GLOSSARY.md)

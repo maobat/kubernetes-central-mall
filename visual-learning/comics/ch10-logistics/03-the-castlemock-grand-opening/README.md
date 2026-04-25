@@ -51,3 +51,6 @@ Ready to perform the ritual yourself? Head over to the technical lab:
 
 ---
 [<< Back to Comics Index](../../README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

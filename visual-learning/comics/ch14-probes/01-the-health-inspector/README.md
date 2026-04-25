@@ -31,3 +31,6 @@ This comic explains the difference between **Liveness** and **Readiness** probes
 - **Study Guide** → [Chapter 14: Health Checks & Probes](../../../../sources/study-guide/ch14-probes.md)
 - **Lab** → [Lab 01 - Liveness Probes](../../../../practice/labs/ch14-probes/lab01-liveness-probes-health-inspector/README.md)
 - **Docs** → [Troubleshooting Guide](../../../../reference/md-resources/troubleshooting-kubernetes.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

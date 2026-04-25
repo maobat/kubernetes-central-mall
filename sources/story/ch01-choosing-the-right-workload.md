@@ -67,4 +67,4 @@ The CronJob follows a strict schedule (the "Cron" format). When the time comes, 
 
 ---
 
-[Back to Story Index](../story.md) | [Next Chapter: Multi-container Design Patterns >>](ch02-multi-container-design-patterns.md)
+[Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Multi-container Design Patterns >>](ch02-multi-container-design-patterns.md)

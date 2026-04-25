@@ -65,3 +65,6 @@ The attempt is forbidden because the `default` ServiceAccount is not bound to an
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

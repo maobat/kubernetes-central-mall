@@ -110,3 +110,5 @@ If YAML is required, generate it with **--dry-run**.
 - [CKAD Cheatsheet](./02-cheatsheet.md)
 - [Time Strategy](./03-time-management.md)
 - [Final Checklist](./04-final-checklist.md)
+---
+[Mall Directory ✨](../../GLOSSARY.md)

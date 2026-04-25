@@ -142,3 +142,6 @@ The PVC `www-web-0` was **Bound** to the digging machine before the Nginx "Bank"
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

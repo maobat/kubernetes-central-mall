@@ -181,3 +181,6 @@ This walkthrough demonstrates creating a generic password Secret and injecting i
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

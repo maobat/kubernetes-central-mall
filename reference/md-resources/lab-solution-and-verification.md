@@ -38,3 +38,6 @@ If you look closer at the `describe` output, you will see a "Mount" point:
   - **Resources:** Is the worker staying within their allocated Desk Space (**Memory/CPU**)?
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

@@ -73,3 +73,6 @@ docker images
 ## 🔗 References
 - **Study Guide** → [Chapter 3: Pod Design & Images](../../../../sources/study-guide/ch03-pod-design.md)
 - **Docs** → [Managing Container Images & Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -31,3 +31,6 @@ This comic explains the "Stocked Shelves" analogy—understanding that being "al
 - **Study Guide** → [Chapter 14: Health Checks & Probes](../../../../sources/study-guide/ch14-probes.md)
 - **Lab** → [Lab 02 - Readiness Probes](../../../../practice/labs/ch14-probes/lab02-readiness-probes/README.md)
 - **Docs** → [Troubleshooting Guide](../../../../reference/md-resources/troubleshooting-kubernetes.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -44,3 +44,6 @@ Once inside the truck, use `crictl` to see the "Ground Truth" of what's happenin
 - **Study Guide** → [Chapter 15: Debugging](../../../../sources/study-guide/ch15-debugging.md)
 - **Lab** → [Lab 04 - The Nested Node](../../../../practice/labs/ch15-debugging/lab04-nested-nodes-crictl/README.md)
 - **Official Docs** → [crictl CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

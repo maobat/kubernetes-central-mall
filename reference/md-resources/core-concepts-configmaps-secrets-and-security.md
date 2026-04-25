@@ -13,3 +13,6 @@ Secrets are specialized Kubernetes resources designed for storing sensitive data
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

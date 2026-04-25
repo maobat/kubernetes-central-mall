@@ -21,3 +21,6 @@
 ---
 ## 🔗 References
 - **Study Guide** → [Chapter 11: Services & Networking](../../../../sources/study-guide/ch11-services.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

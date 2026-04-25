@@ -152,3 +152,6 @@ kubectl delete deployment old-nginx
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

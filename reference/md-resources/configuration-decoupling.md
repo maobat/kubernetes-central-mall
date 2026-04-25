@@ -7,3 +7,6 @@ Configuration decoupling ensures that application settings (`ConfigMaps`), sensi
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

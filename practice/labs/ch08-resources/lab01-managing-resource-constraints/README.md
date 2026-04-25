@@ -100,3 +100,6 @@ resources:
 - **Comic** → [The Resource Hog](../../../../visual-learning/comics/ch08-resources/01-the-resource-hog/README.md)
 - **Docs** → [Resource Management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 - **Study Guide** → [Chapter 8: Resource Budgets](../../../../sources/study-guide/ch08-resources.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

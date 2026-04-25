@@ -96,3 +96,6 @@ kubectl delete pod nginx
 
 - **Study Guide** → [Chapter 3: Pod Design](../../../../sources/study-guide/ch03-pod-design.md)
 - **Lab 03** → [Image Updates](../lab03-image-updates/README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

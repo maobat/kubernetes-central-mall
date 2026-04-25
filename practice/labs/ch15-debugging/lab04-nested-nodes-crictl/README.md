@@ -79,3 +79,6 @@ If you are modifying the cluster "under the hood" using `vim`, these are the onl
 ## 🔗 References
 - **Study Guide** → [Chapter 15: Debugging](../../../../sources/study-guide/ch15-debugging.md)
 - **Official Docs** → [crictl CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

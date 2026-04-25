@@ -32,3 +32,6 @@ curl -i <GATEWAY_IP>/boutique
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

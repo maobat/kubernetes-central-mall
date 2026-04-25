@@ -71,3 +71,6 @@ kubectl -n session283884 delete deployment web
 -   Pods managed by **Deployments** or **ReplicaSets** will be automatically re-created if deleted.
 -   To permanently remove such pods, you must delete the parent **Deployment**.
 -   Use `--restart=Never` with `kubectl run` to create a standalone Pod instead of a Deployment.
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

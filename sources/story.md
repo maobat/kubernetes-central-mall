@@ -291,3 +291,5 @@ Quick guides for surviving the practical exam enviornment.
 - 📄 [Doc: Time Management](../reference/md-resources/ckad-exam/03-time-management.md)
 
 ---
+---
+[Mall Directory ✨](../GLOSSARY.md)

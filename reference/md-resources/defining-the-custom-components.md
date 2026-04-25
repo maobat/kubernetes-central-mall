@@ -101,3 +101,6 @@ The access is granted because the Pod is using the `mysa` ServiceAccount, which 
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

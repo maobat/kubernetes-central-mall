@@ -90,3 +90,5 @@ k apply -f 02-simulated-controller-job.yaml
 - **Comic** → [The Nightly Backup Permit](../../../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
 - **Docs** → [Understanding CRDs](../../../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
 - **Study Guide** → [Chapter 4: Extending K8s](../../../../sources/study-guide/ch04-extending-k8s.md)
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

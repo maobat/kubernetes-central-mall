@@ -10,3 +10,6 @@ Manage application packages and deployments using Helm and other Kubernetes tool
 | [Lab 04: Helm List](./lab04-helm-list/README.md) | Practice listing and filtering Helm releases across all namespaces. |
 | [Lab 05: Helm Delete](./lab05-helm-delete/README.md) | Learn how to properly decommission and delete Helm releases. |
 | [Lab 06: Castlemock Setup](./lab06-castlemock-setup/README.md) | Full application lifecycle: secrets, install, logs, and upgrades. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

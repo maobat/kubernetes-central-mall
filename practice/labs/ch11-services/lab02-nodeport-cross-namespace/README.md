@@ -94,3 +94,6 @@ k exec testpod -- wget -qO- remoteweb.remote.svc.cluster.local
 - **Comic** → [NodePort Traffic Adventure](../../../../visual-learning/comics/ch11-services/02-cross-namespace/README.md)
 - **Docs** → [NodePort Service](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)
 - **Study Guide** → [Chapter 11: Services](../../../../sources/study-guide/ch11-services.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

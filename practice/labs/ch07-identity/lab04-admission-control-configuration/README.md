@@ -81,3 +81,6 @@ vim /etc/kubernetes/manifests/kube-apiserver.yaml
 ## 🔗 References
 - **Study Guide** → [Chapter 7: Identity & RBAC](../../../../sources/study-guide/ch07-identity.md)
 - **Docs** → [Admission Controllers Reference](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

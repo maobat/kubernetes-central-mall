@@ -115,3 +115,6 @@ This lab demonstrates the process of using rapid, imperative commands to configu
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

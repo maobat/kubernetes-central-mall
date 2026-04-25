@@ -92,3 +92,6 @@ k set env deployment/secretlab --from=secret/supersecret --prefix=MARIADB_ROOT_
 - **Comic** → [Secrets](../../../../visual-learning/comics/ch05-config-secrets/01-secrets-injection/README.md)
 - **Docs** → [Secrets Use Cases](../../../../reference/md-resources/secrets-use-cases-and-application-integration.md)
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -139,3 +139,6 @@ spec:
 - **Comic** → [Warehouse Safes](../../../../visual-learning/comics/ch02-multi-container/02-the-warehouse/README.md)
 - **Docs** → [PV Creation](../../../../reference/md-resources/creating-a-persistentvolume.md) | [PVC Binding](../../../../reference/md-resources/pvc-definition-binding.md)
 - **Study Guide** → [Chapter 2: Storage](../../../../sources/study-guide/ch02-multi-container.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -40,6 +40,16 @@ The technical blueprints where you actually build the mall using `kubectl` acros
 
 ---
 
+---
+
+### 🗺️ [The Mall Directory: Search & Glossary](./GLOSSARY.md)
+*The Information Desk*
+A central repository to quickly find terms, analogies, and all related documentation, labs, and official Kubernetes references.
+- **Goal:** Fast lookup and cross-referencing across all project sections.
+- **Link:** [Open the Mall Directory](./GLOSSARY.md)
+
+---
+
 ### 4. 📚 [Reference: Technical Library](./reference/README.md)
 *Deep Dives*
 Compact study guides and modular documentation covering all CKAD domains.

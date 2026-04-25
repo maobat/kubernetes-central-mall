@@ -85,3 +85,6 @@ Create a second pod identically configured to use the same NFS volume. Notice ho
 ## 🔗 References
 - **Study Guide** → [Chapter 2: Multi-Container Patterns](../../../../sources/study-guide/ch02-multi-container.md)
 - **Docs** → [Volumes (NFS)](https://kubernetes.io/docs/concepts/storage/volumes/#nfs)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

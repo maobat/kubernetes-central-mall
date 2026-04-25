@@ -183,6 +183,7 @@ Comprehensive guides for the final stretch before the exam:
 
 ## 🛠️ Quick Reference
 
+- 📋 **[Global Glossary & Search Index](../GLOSSARY.md)**
 - 📋 **[CKAD Cheatsheet & Keymap](md-resources/ckad-cheatsheet.md)**
   *Comprehensive list of imperative commands and troubleshooting steps.*
 

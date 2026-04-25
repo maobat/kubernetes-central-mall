@@ -6,3 +6,6 @@ Ensure your applications are healthy and ready to serve traffic using Liveness a
 | --- | --- |
 | [Lab 01: Liveness Probes](./lab01-liveness-probes-health-inspector/README.md) | Learn how to use liveness probes to automatically restart unhealthy containers. |
 | [Lab 02: Readiness Probes](./lab02-readiness-probes/README.md) | Ensure Pods only receive traffic when they are prepared to handle it. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

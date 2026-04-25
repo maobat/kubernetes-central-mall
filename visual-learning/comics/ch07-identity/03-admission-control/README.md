@@ -33,3 +33,6 @@ Even with a badge and a job description, you might still be stopped at the gate.
 - **Study Guide** → [Chapter 7: Identity & Access](../../../../sources/study-guide/ch07-identity.md)
 - **Lab** → [Lab 03 - Admission Control](../../../../practice/labs/ch07-identity/lab03-admission-control-entry-permit/README.md)
 - **Docs** → [The Cast of Characters](../../../../reference/md-resources/cast-of-characters.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

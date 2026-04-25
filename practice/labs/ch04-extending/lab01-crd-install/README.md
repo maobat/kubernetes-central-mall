@@ -80,3 +80,6 @@ kubectl apply -f shopping-item.yaml
 - **Comic** → [The Nightly Backup Permit](../../../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
 - **Docs** → [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
 - **Study Guide** → [Chapter 04: Extending](../../../../sources/study-guide/ch10-management.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

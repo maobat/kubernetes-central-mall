@@ -9,3 +9,6 @@ In this scenario, we aren't just opening a standard stall. We are creating a res
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

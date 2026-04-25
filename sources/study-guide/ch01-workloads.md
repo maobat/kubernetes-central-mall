@@ -70,3 +70,6 @@ kubectl create cronjob nightly-clean --image=busybox --schedule=`0 23 * * *` -- 
 * 🖼️ **Comic:** [Floor Security (DaemonSet)](../../visual-learning/comics/ch01-workloads/03-daemonset-floor-security/README.md)
 * 📄 **Doc:** [Using StatefulSets - The Bolted-Down Safe](../../reference/md-resources/using-statefulsets.md)
 * 🧪 **Labs:** [Explore Chapter 01 Labs](../../practice/labs/ch01-workloads/README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

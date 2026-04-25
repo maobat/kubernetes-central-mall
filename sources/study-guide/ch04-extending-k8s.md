@@ -87,3 +87,6 @@ kubectl describe backup nightly-db-backup
 
 ---
 [<< Previous: Pod Design](ch03-pod-design.md) | [Back to Story Index](../story.md) | [Next: Configuration >>](ch05-configuration.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

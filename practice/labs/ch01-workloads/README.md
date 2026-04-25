@@ -8,3 +8,6 @@ In this chapter, you will explore different types of Kubernetes workloads beyond
 | [Lab 02: StatefulSets](./lab02-statefulsets/README.md) | Understand how to manage stateful applications with stable network identities and persistent storage. |
 | [Lab 03: DaemonSets](./lab03-daemonsets/README.md) | Ensure that all Nodes run a copy of a Pod, ideal for logging and monitoring agents. |
 | [Lab 04: Automated Tasks](./lab04-automated-tasks-countdown/README.md) | Practice creating Jobs and CronJobs in a "Mall" scenario. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

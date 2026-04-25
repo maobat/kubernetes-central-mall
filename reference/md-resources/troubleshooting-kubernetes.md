@@ -458,3 +458,6 @@ kubectl get endpoints <service-name>
 ```
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

@@ -5,3 +5,6 @@ The core functionality of Kubernetes is exposed through its API, which is a crit
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

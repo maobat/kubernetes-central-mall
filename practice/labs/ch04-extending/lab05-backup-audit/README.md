@@ -64,3 +64,5 @@ kubectl get db-backups -A > /root/db-backups
 - **v1.35 Update:** In the latest exam versions, you might encounter **Operators**. An Operator is just a Controller that watches these Custom Objects and performs actions (like actually running the backup).
 
 ---
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

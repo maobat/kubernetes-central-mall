@@ -9,3 +9,6 @@ Master different deployment strategies to release your applications safely and e
 | [Lab 03: Canary Deployment](./lab03-canary-wonderful/README.md) | Gradually roll out changes to a subset of users to test for issues. |
 | [Lab 04: Blue-Green Java](./lab04-blue-green-java/README.md) | Implement a Blue-Green deployment for a Java-based application. |
 | [Lab 05: Deployment Lifecycle](./lab05-deployment-lifecycle/README.md) | Explore the full lifecycle of a Deployment, including scaling and history. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

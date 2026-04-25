@@ -13,3 +13,6 @@ When your inventory becomes too large or needs to be shared across many differen
 
 ---
 [Back to Chapter 2 Comics](../README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

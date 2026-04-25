@@ -28,3 +28,6 @@ As a result, the crew replaces one section at a time, moving stock and staff fro
 - 🧪 **Practice Lab** → [Lab 01: The "Wonderful" Boutique Makeover](../../../../practice/labs/ch09-launch/lab01-rolling-update-wonderful/README.md)
 - 📖 **Story/Theory** → [Chapter 9: Launch Strategies](../../../../sources/story/ch09-launch-strategies.md)
 - 📝 **Study Guide** → [Chapter 9: Deployments](../../../../sources/study-guide/ch09-deployments.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

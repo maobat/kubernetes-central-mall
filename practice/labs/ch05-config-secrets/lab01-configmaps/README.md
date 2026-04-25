@@ -111,3 +111,6 @@ spec:
 - **Comic** → [ConfigMaps](../../../../visual-learning/comics/ch05-config-secrets/01-configmap/README.md)
 - **Docs** → [Configuration Decoupling](../../../../reference/md-resources/configuration-decoupling.md)
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

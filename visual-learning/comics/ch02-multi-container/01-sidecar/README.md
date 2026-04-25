@@ -31,3 +31,6 @@ This comic explains how **Multi-Container Pods** work and how they share resourc
 - **Study Guide** → [Chapter 2: Sidecars & Helpers](../../../../sources/study-guide/ch02-multi-container.md)
 - **Lab** → [Lab 01 - Sidecar Pattern](../../../../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
 - **Docs** → [Decoupling Pods](../../../../reference/md-resources/decoupling-pods.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

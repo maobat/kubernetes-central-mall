@@ -122,3 +122,6 @@ spec:
 - **Comic** → [Sidecars](../../../../visual-learning/comics/ch02-multi-container/01-sidecar/README.md)
 - **Docs** → [Decoupling Pods](../../../../reference/md-resources/decoupling-pods.md) | [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
 - **Study Guide** → [Chapter 2: Multi-Container Patterns](../../../../sources/study-guide/ch02-multi-container.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

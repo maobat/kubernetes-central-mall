@@ -20,3 +20,6 @@ Troubleshooting|Find why a Pod is failing.|`k get events --sort-by='.lastTimesta
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

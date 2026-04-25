@@ -33,4 +33,4 @@ The Gateway API is "Role-Based." It allows different people to manage different 
 * 📄 **Doc:** [Ingress vs Gateway](../../reference/md-resources/ingress-vs-gateway.md)
 * 🧪 **Labs:** [Explore Chapter 12 Labs](../../practice/labs/ch12-ingress/README.md)
 
-[<< Previous Chapter: Finding the Stores](ch11-finding-the-stores.md) | [Back to Story Index](../story.md) | [Next Chapter: Network Policies >>](ch13-network-policies.md)
+[<< Previous Chapter: Finding the Stores](ch11-finding-the-stores.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Network Policies >>](ch13-network-policies.md)

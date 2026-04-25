@@ -31,3 +31,6 @@ This comic explains the **Blue/Green Strategy** using the *Central Mall* storefr
 - **Study Guide** → [Chapter 9: Launch Day](../../../../sources/study-guide/ch09-deployments.md)
 - **Lab** → [Lab 02 - Blue-Green Sign Swap](../../../../practice/labs/ch09-launch/lab02-blue-green-wonderful/README.md)
 - **Docs** → [Implementing Blue/Green Deployments](../../../../reference/md-resources/implementing-bluegreen-deployments.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

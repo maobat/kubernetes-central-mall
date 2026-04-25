@@ -30,3 +30,6 @@ This comic explains the difference between **standard staff (Deployments)** and 
 - **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
 - **Lab** → [Lab 01 - Jobs & CronJobs](../../../../practice/labs/ch01-workloads/lab01-jobs-cronjobs/README.md)
 - **Docs** → [Scheduled Maintenance Guide](../../../../reference/md-resources/cronjobs.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

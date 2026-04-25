@@ -9,3 +9,6 @@ A practical demonstration of consuming a large, industry-standard Custom Resourc
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

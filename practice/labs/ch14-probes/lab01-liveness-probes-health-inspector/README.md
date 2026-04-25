@@ -94,3 +94,6 @@ k get pod probed -w
 - **Comic** → [The Health Inspector](../../../../visual-learning/comics/ch14-probes/01-the-health-inspector/README.md)
 - **Docs** → [Configure Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 - **Study Guide** → [Chapter 14: Observability](../../../../sources/study-guide/ch14-probes.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

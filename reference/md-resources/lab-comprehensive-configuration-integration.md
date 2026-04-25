@@ -82,3 +82,6 @@ spec:
     ```
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

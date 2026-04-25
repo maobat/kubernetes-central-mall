@@ -34,3 +34,6 @@ In the **Central Mall**, security isn't just a badge; it's a **Permit**. The **H
 - **Study Guide** → [Chapter 7: Identity & Access](../../../../sources/study-guide/ch07-identity.md)
 - **Lab** → [Lab 02 - RBAC & Identity](../../../../practice/labs/ch07-identity/lab02-rbac-identity/README.md)
 - **Docs** → [Understanding RBAC](../../../../reference/md-resources/understanding-role-based-access-control-rbac.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

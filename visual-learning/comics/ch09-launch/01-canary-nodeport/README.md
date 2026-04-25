@@ -31,3 +31,6 @@ This comic explains how the **Canary Strategy** works when you only have a singl
 - **Study Guide** → [Chapter 9: Launch Day](../../../../sources/study-guide/ch09-deployments.md)
 - **Lab** → [Lab 04 - Canary Taste Test](../../../../practice/labs/ch09-launch/lab03-canary-wonderful/README.md)
 - **Docs** → [Deployment Strategies Comparison](../../../../reference/md-resources/related-deployment-strategies-comparison.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

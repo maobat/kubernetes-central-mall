@@ -85,3 +85,6 @@ helm -n team-yellow uninstall dev
 - **Comic** → [The Logistics Chain](../../../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 - **Docs** → [Helm CLI](https://helm.sh/docs/helm/helm/)
 - **Study Guide** → [Chapter 10: Management](../../../../sources/study-guide/ch10-management.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -37,3 +37,6 @@ kubectl -n session283884 get pods --sort-by=.status.containerStatuses[0].restart
 
 -   The `--sort-by` flag allows you to sort by any JSONPath field in the resource specification or status.
 -   Common sort fields: `.metadata.creationTimestamp`, `.status.phase`, `.status.containerStatuses[0].restartCount`.
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

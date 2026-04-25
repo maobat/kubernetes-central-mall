@@ -31,3 +31,6 @@ This comic explains **SecurityContexts & Capabilities** using the *Central Mall*
 - **Study Guide** → [Chapter 6: Safety & Conduct](../../../../sources/study-guide/ch06-security.md)
 - **Lab** → [Lab 01 - Worker Safety (SecurityContext)](../../../../practice/labs/ch06-safety/lab01-serviceaccount-identity/README.md)
 - **Docs** → [Worker Safety and Conduct](../../../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

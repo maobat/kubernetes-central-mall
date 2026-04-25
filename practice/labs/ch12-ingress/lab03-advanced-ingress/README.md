@@ -40,3 +40,6 @@ spec:
 ## 🔗 References
 - **Comic** → [The Grand Entrance](../../../../visual-learning/comics/ch12-ingress/02-the-grand-entrance/README.md)
 - **Study Guide** → [Chapter 12: Ingress](../../../../sources/study-guide/ch12-ingress.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

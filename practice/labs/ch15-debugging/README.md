@@ -9,3 +9,6 @@ Master the tools and techniques for troubleshooting and diagnosing issues in you
 | [Lab 03: Metrics Server](./lab03-metrics-server/README.md) | Monitor resource usage at the Pod and Node level using Metrics Server. |
 | [Lab 04: Nested Nodes](./lab04-nested-nodes-crictl/README.md) | Explore container-level debugging using `crictl` on laboratory nodes. |
 | [Lab 05: Connection Crisis](./lab05-the-connection-crisis/README.md) | Diagnose and repair Kubeconfig and VPN-related connection issues. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

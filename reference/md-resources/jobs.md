@@ -48,3 +48,5 @@ kubectl create job pi-calc --image=perl:5.34 -- perl -Mbignum=bpi -wle 'print bp
 # Check the status of your contractors
 kubectl get jobs
 ```
+---
+[Mall Directory ✨](../../GLOSSARY.md)

@@ -121,3 +121,5 @@ kubectl apply -f app-pod.yaml
 - **Comic** → [ConfigMap envFrom](../../../../visual-learning/comics/ch05-config-secrets/06-configmap-envfrom/README.md)
 - **Docs** → [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) | [Using ConfigMaps as Files](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#configmap-volume-source) | [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

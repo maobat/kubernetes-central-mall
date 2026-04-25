@@ -16,3 +16,6 @@ The entire PV/PVC process is about decoupling the application's *need* from the 
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

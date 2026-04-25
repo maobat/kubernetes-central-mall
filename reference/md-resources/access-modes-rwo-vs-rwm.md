@@ -12,3 +12,6 @@ The choice of Access Mode is the key difference between single-Pod storage (like
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

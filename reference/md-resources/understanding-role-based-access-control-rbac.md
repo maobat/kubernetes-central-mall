@@ -12,3 +12,6 @@ RBAC is the mechanism that connects the "Who" to the "What."
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

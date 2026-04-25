@@ -31,3 +31,6 @@ This comic explains how **Egress Rules** work in Kubernetes using the Central Ma
 - **Study Guide** → [Chapter 13: Networking](../../../../sources/study-guide/ch13-networking.md)
 - **Lab** → [Lab 02 - One-Way Corridors](../../../../practice/labs/ch13-networking/lab02-network-policies/README.md)
 - **Docs** → [Network Isolation & Troubleshooting](../../../../reference/md-resources/troubleshooting-kubernetes.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

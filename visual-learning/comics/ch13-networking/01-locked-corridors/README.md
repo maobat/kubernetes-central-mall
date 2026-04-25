@@ -31,3 +31,6 @@ This comic explains how **Network Policies** (Network Isolation) work in Kuberne
 - **Study Guide** → [Chapter 13: Network Policies](../../../../sources/study-guide/ch13-networking.md)
 - **Lab** → [Lab 01 - Network Policies](../../../../practice/labs/ch13-networking/lab01-network-policies/README.md)
 - **Docs** → [Network Isolation & Troubleshooting](../../../../reference/md-resources/troubleshooting-kubernetes.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

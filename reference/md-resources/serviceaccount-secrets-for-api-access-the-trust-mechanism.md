@@ -51,3 +51,6 @@ kubectl patch sa coredns -n kube-system -p '{"secrets": [{"name": "coredns-manua
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

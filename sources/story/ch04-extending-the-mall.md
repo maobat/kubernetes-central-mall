@@ -44,4 +44,4 @@ The Mall Management stays lean and fast because it doesn't need to know how to d
 * 📄 **Doc:** [Understanding the Operator Pattern](../../reference/md-resources/understanding-custom-resource-definitions-crds.md)
 * 🧪 **Labs:** [Explore Chapter 04 Labs](../../practice/labs/ch04-extending/README.md)
 
-[<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)
+[<< Previous Chapter: Images & Modifications](ch03-images-and-modifications.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: ConfigMaps & Secrets >>](ch05-configmaps-and-secrets.md)

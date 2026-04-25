@@ -64,3 +64,6 @@ kubectl get cj,job,po
 ## 🔗 References
 - **Study Guide** → [Chapter 01: Workloads](../../../../sources/study-guide/ch01-workloads.md)
 - **Docs** → [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/) | [CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

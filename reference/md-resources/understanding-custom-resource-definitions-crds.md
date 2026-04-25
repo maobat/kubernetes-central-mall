@@ -7,3 +7,6 @@ By default, Mall Management can only issue permits for Stores (Deployments), Pic
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

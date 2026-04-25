@@ -121,3 +121,6 @@ Since both Deployments share the label `app: wonderful`, the Service will distri
 ## 🔗 References
 - **Comic** → [Canary Traffic at the Side Entrance](../../../../visual-learning/comics/ch09-launch/01-canary-nodeport/README.md)
 - **Study Guide** → [Chapter 9: Launch Strategies](../../../../sources/study-guide/ch09-deployments.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

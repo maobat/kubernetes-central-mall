@@ -126,3 +126,6 @@ This means the Buildx container (`mall-builder`) cannot reach the internet to pu
     docker buildx create --name mall-builder --use
     ```
 3.  If you are behind a proxy, you may need to pass proxy environment variables when creating the builder.
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

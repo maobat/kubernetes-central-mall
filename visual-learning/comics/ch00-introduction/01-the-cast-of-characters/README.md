@@ -88,3 +88,6 @@ This is an **introductory overview** of every character in *The Central Mall*, a
 - **Story Index** → [The Central Mall: A CKAD Adventure](../../../../sources/story.md)
 - **Reference** → [Full Cast of Characters](../../../../reference/md-resources/cast-of-characters.md)
 - **Comics Registry** → [All Comics](../../README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

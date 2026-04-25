@@ -26,3 +26,6 @@ This comic explains how to **inject all rules at once** using `envFrom` so you d
 ## 🔗 References
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
 - **Lab** → [Lab 06 - ConfigMap envFrom](../../../../practice/labs/ch05-config-secrets/lab06-configmap-envfrom/README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

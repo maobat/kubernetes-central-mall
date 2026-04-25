@@ -51,3 +51,6 @@ Once the `kubectl proxy` is running, you can use standard RESTful commands via `
     ```
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

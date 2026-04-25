@@ -25,3 +25,6 @@ Since we have the oklahoma wing of the mall ready with our securepod (`Task 15`)
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

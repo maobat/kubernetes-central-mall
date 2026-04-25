@@ -106,3 +106,6 @@ spec:
 - **Comic** → [The Secure Badge](../../../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
 - **Docs** → [RBAC Identity](../../../../reference/md-resources/managing-identity-and-access-the-mall-pass-system.md)
 - **Study Guide** → [Chapter 7: Identity & Access](../../../../sources/study-guide/ch07-identity.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

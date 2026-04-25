@@ -53,3 +53,6 @@ spec:
 ## 🔗 References
 - **Comic** → [The Lost Gateway](../../../../visual-learning/comics/ch12-ingress/01-the-lost-gateway/README.md)
 - **Study Guide** → [Chapter 12: Ingress](../../../../sources/study-guide/ch12-ingress.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

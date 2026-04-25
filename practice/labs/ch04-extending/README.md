@@ -11,3 +11,6 @@ Explore how to extend Kubernetes functionality using Custom Resource Definitions
 | [Lab 05: Backup Audit](./lab05-backup-audit/README.md) | Audit and verify backup resources created via CRDs. |
 | [Lab 06: CRD Shopping Install](./lab06-crd-shopping-install/README.md) | Install shopping-related Custom Resource Definitions. |
 | [Lab 07: CRD Shopping Cleanup](./lab07-crd-shopping-cleanup/README.md) | Clean up and remove the shopping CRDs. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

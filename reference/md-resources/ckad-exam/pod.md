@@ -40,3 +40,5 @@ spec:
         cpu: "300m"
   dnsPolicy: ClusterFirst
   restartPolicy: Always
+---
+[Mall Directory ✨](../../GLOSSARY.md)

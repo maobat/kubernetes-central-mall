@@ -79,3 +79,6 @@ helm -n team-yellow uninstall apiserver
 - **Comic** → [The Logistics Chain](../../../../visual-learning/comics/ch10-logistics/02-the-logistics-chain/README.md)
 - **Docs** → [Helm Uninstall](https://helm.sh/docs/helm/helm_uninstall/)
 - **Study Guide** → [Chapter 10: Management](../../../../sources/study-guide/ch10-management.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

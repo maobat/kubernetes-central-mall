@@ -82,3 +82,6 @@ cat /tmp/token
 ## 🔗 References
 - **Study Guide** → [Chapter 7: Identity & Access](../../../../sources/study-guide/ch07-identity.md)
 - **Docs** → [Understanding ServiceAccounts](../../../../reference/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -89,3 +89,6 @@ k exec testpod -- wget -qO- support-svc
 - **Comic** → [Internal Intercom](../../../../visual-learning/comics/ch11-services/01-internal-intercom/README.md)
 - **Docs** → [Service DNS](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 - **Study Guide** → [Chapter 11: Services](../../../../sources/study-guide/ch11-services.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

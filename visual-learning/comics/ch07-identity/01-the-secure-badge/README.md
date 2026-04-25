@@ -31,3 +31,6 @@ This comic explains **how identity works in Kubernetes** using the *Central Mall
 - **Study Guide** → [Chapter 7: Identity & RBAC](../../../../sources/study-guide/ch07-identity.md)
 - **Lab** → [Lab 01 - ServiceAccount Identity](../../../../practice/labs/ch07-identity/lab01-serviceaccount-identity/README.md)
 - **Docs** → [Understanding ServiceAccounts](../../../../reference/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

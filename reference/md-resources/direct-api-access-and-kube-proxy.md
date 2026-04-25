@@ -10,3 +10,6 @@ The Kubernetes APIs are **RESTful**, meaning they can be accessed directly using
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

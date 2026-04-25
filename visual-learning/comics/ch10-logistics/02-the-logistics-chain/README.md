@@ -32,3 +32,6 @@ This comic explains the difference between **Helm** and **Kustomize** using the 
 - **Lab 02** → [Logistics Overlays](../../../../practice/labs/ch10-logistics/lab02-helm-kustomize/README.md)
 - **Lab 03** → [Renovating the Blueprints (API Versions)](../../../../practice/labs/ch10-logistics/lab03-api-versions/README.md)
 - **Docs** → [Using Helm](../../../../reference/md-resources/using-the-helm-package-manager.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

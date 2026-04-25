@@ -200,3 +200,6 @@ curl http://$(minikube ip):<nodeport-from-above>
 | **Best for** | Understanding the pattern | Exam-speed muscle memory |
 
 ➡️ [Lab 02: Blue-Green with the Wonderful Boutique](../lab02-blue-green-wonderful/README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

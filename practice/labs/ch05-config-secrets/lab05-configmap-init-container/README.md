@@ -106,3 +106,6 @@ CONFIG GET maxmemory-policy
 ## 🔗 References
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
 - **Docs** → [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

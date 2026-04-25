@@ -118,3 +118,6 @@ The labs in this chapter follow a specific pedagogical progression from simple "
 [<< Previous: Workloads](ch01-workloads.md) | [Back to Story Index](../story.md) | [Next: Pod Design >>](ch03-pod-design.md)
 
 ---
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

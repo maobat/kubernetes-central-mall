@@ -105,3 +105,6 @@ helm upgrade castlemock . \
 - **Comic** → [The Castlemock Grand Opening](../../../../visual-learning/comics/ch10-logistics/03-the-castlemock-grand-opening/README.md)
 - **Docs** → [Helm Install/Upgrade](https://helm.sh/docs/intro/using_helm/)
 - **Study Guide** → [Chapter 10: Logistics & API Management](../../../../sources/study-guide/ch10-management.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

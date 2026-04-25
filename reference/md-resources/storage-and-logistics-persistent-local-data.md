@@ -16,3 +16,6 @@ How workers (Pods) handle their data: temporary files, shared lockers, persisten
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

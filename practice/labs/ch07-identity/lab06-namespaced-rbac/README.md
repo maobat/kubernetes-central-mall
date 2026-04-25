@@ -102,3 +102,6 @@ kubectl auth can-i list pods \
 - **Comic** → [The Secure Badge](../../../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
 - **Study Guide** → [Chapter 7: Identity & Access](../../../../sources/study-guide/ch07-identity.md)
 - **Central Mall Map** → [Practice Labs Index](../../README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -281,3 +281,6 @@ replicaset.apps/prod-nginx-friday20-58d8c8f884               5         5        
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

@@ -60,3 +60,6 @@ The **Entry Permit Office** (Admission Control) is the final checkpoint. Even if
 ## 🔗 References
 - **Study Guide** → [Chapter 7: Identity & RBAC](../../../../sources/study-guide/ch07-identity.md)
 - **Docs** → [Admission Control Overview](../../../../reference/md-resources/authentication-and-authorization-the-security-team.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

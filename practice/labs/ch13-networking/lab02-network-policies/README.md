@@ -181,3 +181,5 @@ Once you install Calico, it follows these rules and creates the actual "locked d
 ## 🔗 References
 - **Study Guide** → [Chapter 13: Networking](../../../../sources/study-guide/ch13-networking.md)
 - **Comic** → [One-Way Corridors](../../../../visual-learning/comics/ch13-networking/02-one-way-corridors/README.md)
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

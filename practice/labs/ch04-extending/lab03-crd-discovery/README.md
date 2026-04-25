@@ -66,3 +66,6 @@ kubectl explain shoppingitem.spec
 ## 🔗 References
 - **Comic** → [The Nightly Backup Permit](../../../../visual-learning/comics/ch04-extending/01-the-nightly-backup-permit/README.md)
 - **Study Guide** → [Chapter 04: Extending](../../../../sources/study-guide/ch04-extending-k8s.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

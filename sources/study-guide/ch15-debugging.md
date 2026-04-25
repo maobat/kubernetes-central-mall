@@ -83,3 +83,6 @@ kubectl get events --sort-by='.lastTimestamp'
 * 🧪 **Labs:** [Explore Chapter 15 Labs](../../practice/labs/ch15-debugging/README.md)
 ---
 [<< Previous: Health Checks](ch14-probes.md) | [Back to Story Index](../story.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

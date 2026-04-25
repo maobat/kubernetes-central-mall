@@ -66,3 +66,5 @@ Come back later.
 👉 Continue with:
 
 - [Final Checklist](./04-final-checklist.md)
+---
+[Mall Directory ✨](../../GLOSSARY.md)

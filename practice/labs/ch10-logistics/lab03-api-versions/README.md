@@ -74,3 +74,6 @@ A `FlowSchema` file exists at `/apps/flowschema.yaml` with a deprecated version.
 ## 🔗 References
 - **Study Guide** → [Chapter 10: Management](../../../../sources/study-guide/ch10-management.md)
 - **Docs** → [API Deprecations and Stability](../../../../reference/md-resources/api-deprecations-and-stability.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

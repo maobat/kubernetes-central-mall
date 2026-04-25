@@ -152,3 +152,6 @@ kubectl top pod shop-with-tail-sidecar --containers --sort-by=memory
 ## 🔗 References
 - **Study Guide** → [Chapter 15: Debugging](../../../../sources/study-guide/ch15-debugging.md)
 - **Central Mall Map** → [Practice Labs Index](../../README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

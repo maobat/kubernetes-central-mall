@@ -112,3 +112,6 @@ kubectl apply -f pod-sidecar.yaml
 # Exec into a specific container within a Pod
 kubectl exec -it <pod-name> -c <container-name> -- bash
 ```
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

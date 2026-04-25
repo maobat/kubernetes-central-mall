@@ -123,3 +123,6 @@ kubectl exec worker-safety -- touch /test-file
 ## 🔗 References
 - **Study Guide** → [Chapter 6: Security & Safety](../../../../sources/study-guide/ch06-security.md)
 - **Docs** → [Configure a Security Context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

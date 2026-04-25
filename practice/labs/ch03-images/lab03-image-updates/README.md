@@ -105,3 +105,6 @@ k rollout undo deployment/manager-firm
 - **Comic** → [Image Updates & Rollouts](../../../../visual-learning/comics/ch03-images/03-image-updates/README.md)
 - **Docs** → [Managing Images and Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
 - **Study Guide** → [Chapter 3: Pod Design](../../../../sources/study-guide/ch03-pod-design.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

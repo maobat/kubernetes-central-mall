@@ -17,3 +17,6 @@ This comic illustrates the difference between **SSH** and **Kubectl Contexts**, 
 
 ---
 [Review the full study guide for SSH and Contexts](../../../../reference/md-resources/ckad-exam/05-ssh-and-contexts.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

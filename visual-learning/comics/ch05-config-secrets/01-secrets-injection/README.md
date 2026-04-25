@@ -30,3 +30,6 @@ This comic explains how to handle **sensitive data** in Kubernetes without leaki
 - **Study Guide** → [Chapter 5: Configuration](../../../../sources/study-guide/ch05-configuration.md)
 - **Lab** → [Lab 03 - Secrets Injection](../../../../practice/labs/ch05-config-secrets/lab03-secrets-vault/README.md)
 - **Docs** → [Secrets & Security](../../../../reference/md-resources/core-concepts-configmaps-secrets-and-security.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

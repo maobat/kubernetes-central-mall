@@ -39,3 +39,6 @@
 
 ---
 [<< Previous: Virtual Host Routing](../01-virtual-host/README.md) | [Back to Comics Index](../../README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

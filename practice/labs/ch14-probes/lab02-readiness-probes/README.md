@@ -154,3 +154,6 @@ space-alien-welcome-message-generator   1/1     1            0           3m53s
 - **Comic** → [The Health Inspector - Readiness](../../../../visual-learning/comics/ch14-probes/02-readiness-probes/README.md)
 - **Docs** → [Configure Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 - **Study Guide** → [Chapter 14: Observability](../../../../sources/study-guide/ch14-probes.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

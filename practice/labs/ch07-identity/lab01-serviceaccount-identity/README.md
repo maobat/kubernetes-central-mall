@@ -86,3 +86,6 @@ k create deploy securedeploy --image=nginx --port=80 -n secure --serviceaccount=
 - **Comic** → [The Secure Badge](../../../../visual-learning/comics/ch07-identity/01-the-secure-badge/README.md)
 - **Docs** → [Understanding ServiceAccounts](../../../../reference/md-resources/understanding-serviceaccounts-the-shops-internal-badge.md)
 - **Study Guide** → [Chapter 7: Identity & RBAC](../../../../sources/study-guide/ch07-identity.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

@@ -34,3 +34,6 @@ In the **Central Mall**, some employees are assigned to specific shops, but the 
 - **Study Guide** → [Chapter 1: Workloads & Contracts](../../../../sources/study-guide/ch01-workloads.md)
 - **Lab** → [Lab 03 - DaemonSets](../../../../practice/labs/ch01-workloads/lab03-daemonsets/README.md)
 - **Docs** → [The Cast of Characters](../../../../reference/md-resources/cast-of-characters.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

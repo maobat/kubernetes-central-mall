@@ -59,3 +59,6 @@ Think of Gateway API as the **professional mall redesign**: safer, cleaner, and 
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

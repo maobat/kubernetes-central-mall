@@ -92,3 +92,6 @@ If a worker needs to see shops in **every** floor of the mall (all Namespaces), 
 
 ---
 [<< Previous: Security](ch06-security.md) | [Back to Story Index](../story.md) | [Next: Resources & Quotas >>](ch08-resources.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

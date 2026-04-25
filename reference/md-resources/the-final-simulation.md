@@ -907,3 +907,6 @@ In Section 10.0, remember the Mall Manager's priority:
 
 
 [Back to Documentation](../README.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

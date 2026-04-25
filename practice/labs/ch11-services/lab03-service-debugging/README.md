@@ -82,3 +82,6 @@ If DNS is fine but calls still fail, the "Wiring" (Selector) at the Intercom sta
 ## 🔗 References
 - **Study Guide** → [Chapter 11: Finding the Stores](../../../../sources/study-guide/ch11-services.md)
 - **Docs** → [Debug Services](https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

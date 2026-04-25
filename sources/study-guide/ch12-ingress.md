@@ -99,3 +99,6 @@ spec:
 
 ---
 [<< Previous: Networking Services](ch11-services.md) | [Back to Story Index](../story.md) | [Next: Network Policies >>](ch13-networking.md)
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

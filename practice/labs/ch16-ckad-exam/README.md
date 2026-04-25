@@ -8,3 +8,6 @@ Prepare for the Certified Kubernetes Application Developer (CKAD) exam with hand
 | [Lab 02: Namespaces and Pods](./lab02-namespaces-and-pods/README.md) | Master creating and managing Pods across different namespaces. |
 | [Lab 03: Kubectl Sorting](./lab03-advanced-kubectl-sorting/README.md) | Use advanced `kubectl` field selectors and sorting to find resources. |
 | [Lab 04: SSH and Contexts](./lab04-ssh-and-contexts/README.md) | Practice switching between contexts and using SSH for node-level tasks. |
+
+---
+[Mall Directory ✨](../../../GLOSSARY.md)

@@ -38,4 +38,4 @@ By carefully managing **Requests**, **Limits**, and **Quotas**, the Mall Owner e
 * 📄 **Doc:** [Resource Requests, Limits, and Quotas](../../reference/md-resources/resource-requests-limits-and-quotas-the-resource-budget.md)
 * 🧪 **Labs:** [Explore Chapter 08 Labs](../../practice/labs/ch08-resources/README.md)
 
-[<< Previous Chapter: Identity & Access](ch07-identity-and-access.md) | [Back to Story Index](../story.md) | [Next Chapter: Launch Strategies >>](ch09-launch-strategies.md)
+[<< Previous Chapter: Identity & Access](ch07-identity-and-access.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Launch Strategies >>](ch09-launch-strategies.md)

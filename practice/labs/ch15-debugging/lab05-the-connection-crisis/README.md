@@ -79,3 +79,5 @@ These files are the "ID Cards" for your connection:
 - **Comic** → [The Connection Crisis](../../../../visual-learning/comics/ch15-debugging/05-the-connection-crisis/README.md)
 - **Study Guide** → [Chapter 15: Debugging](../../../../sources/study-guide/ch15-debugging.md)
 - **Central Mall Map** → [Practice Labs Index](../../README.md)
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

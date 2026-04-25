@@ -31,3 +31,6 @@ In the **Central Mall**, staying connected depends on having the right map and n
 ## 🔗 References
 - **Study Guide** → [Chapter 15: Debugging](../../../../sources/study-guide/ch15-debugging.md)
 - **Practice Lab** → [Lab 05: Connection Crisis](../../../../practice/labs/ch15-debugging/lab05-the-connection-crisis/README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

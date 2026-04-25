@@ -137,3 +137,6 @@ spec:
 | **Best for** | Understanding the pattern | Exam-speed muscle memory |
 
 ➡️ [Lab 04: Blue-Green Java App (Guided + Challenge)](../lab04-blue-green-java/README.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

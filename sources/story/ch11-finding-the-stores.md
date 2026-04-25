@@ -50,4 +50,4 @@ Sometimes, a store is so specialized that it needs to bypass the mall's official
 * 📄 **Doc:** [Understanding Traffic Flow Verification](../../reference/md-resources/traffic-flow-verification.md)
 * 🧪 **Labs:** [Explore Chapter 11 Labs](../../practice/labs/ch11-services/README.md)
 
-[<< Previous Chapter: Logistics Tools](ch10-logistics-tools.md) | [Back to Story Index](../story.md) | [Next Chapter: Ingress & Gateway API >>](ch12-ingress-and-gateway-api.md)
+[<< Previous Chapter: Logistics Tools](ch10-logistics-tools.md) | [Back to Story Index](../story.md) | [Mall Directory ✨](../../GLOSSARY.md) | [Next Chapter: Ingress & Gateway API >>](ch12-ingress-and-gateway-api.md)

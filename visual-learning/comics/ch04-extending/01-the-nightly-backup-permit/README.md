@@ -31,3 +31,6 @@ This comic explains how **Custom Resource Definitions (CRDs)** and **Operators**
 - **Study Guide** → [Chapter 4: Extending the Mall](../../../../sources/study-guide/ch04-extending-k8s.md)
 - **Lab** → [Lab 01 - Shopping Items CRD](../../../../practice/labs/ch04-extending/lab01-crd-install/README.md)
 - **Docs** → [Extending K8s with CRDs](../../../../reference/md-resources/extending-k8s-crds-operators.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

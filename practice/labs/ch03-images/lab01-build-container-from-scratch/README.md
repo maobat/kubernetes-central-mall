@@ -91,3 +91,6 @@ podman push local-registry:5000/pinger:v1
 ## 🔗 References
 - **Study Guide** → [Chapter 3: Images & Modifications](../../../../sources/study-guide/ch03-pod-design.md)
 - **Docs** → [Managing Container Images & Rollouts](../../../../reference/md-resources/managing-container-images-and-rollouts.md)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

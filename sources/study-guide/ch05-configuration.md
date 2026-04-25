@@ -105,3 +105,6 @@ kubectl get secret my-secret -o jsonpath='{.data.password}' | base64 --decode
 [<< Previous: Extending K8s](ch04-extending-k8s.md) | [Back to Story Index](../story.md) | [Next: Security >>](ch06-security.md)
 
 
+
+---
+[Mall Directory ✨](../../GLOSSARY.md)

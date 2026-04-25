@@ -79,3 +79,6 @@ kubectl get pods
 -   **Context = Cluster + User + Namespace.**
 -   `kubectl config use-context` is the standard way to switch focus.
 -   Contexts help avoid mistakes by setting a default namespace.
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)

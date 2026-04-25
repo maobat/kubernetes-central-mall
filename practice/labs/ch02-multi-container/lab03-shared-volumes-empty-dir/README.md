@@ -84,3 +84,6 @@ kubectl -n volumes logs shared-pod -c reader --tail=10
 ## 🔗 References
 - **Study Guide** → [Chapter 2: Multi-Container Patterns](../../../../sources/study-guide/ch02-multi-container.md)
 - **Docs** → [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
+
+---
+[Mall Directory ✨](../../../../GLOSSARY.md)
