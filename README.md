@@ -63,7 +63,7 @@ Compact study guides and modular documentation covering all CKAD domains.
 If you are new to a concept, follow this "Central Mall" sequence:
 1. **Read the Story Chapter** (e.g., [Chapter 12: Ingress](./sources/story/ch12-ingress-and-gateway-api.md)).
 2. **Scan the Matching Comic** (e.g., [Virtual Host Gateway Show](./visual-learning/comics/ch12-ingress/01-virtual-host/README.md)).
-3. **Execute the Lab** (e.g., [lab03-ingress-virtual-host](./practice/labs/ch12-ingress/lab03-ingress-virtual-host/README.md)).
+3. **Execute the Lab** (e.g., [lab03-advanced-ingress](./practice/labs/ch12-ingress/lab03-advanced-ingress/README.md)).
 4. **Consult the Study Guide** (e.g., [ch12-ingress](./sources/study-guide/ch12-ingress.md)) for exam traps and technical details.
 
 ---
