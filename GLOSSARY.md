@@ -6,6 +6,14 @@ Use this directory to quickly look up terms, understand their mall analogies, an
 > [!TIP]
 > **Pro Tip:** Use `Ctrl + F` (or `Cmd + F` on Mac) to search for any keyword or resource name (e.g., "Ingress" or "Vault").
 
+## 🧭 Navigating the Official Building Codes
+When you follow links to `kubernetes.io`, you will encounter different types of documentation. Use this map to find the level of detail you need:
+
+- **CONCEPTS (/docs/concepts)**: **The "Why" and "What".** Best for building mental models (like our *Story* & *Study Guides*).
+- **TASKS (/docs/tasks)**: **The "How-To".** Step-by-step guides for specific configurations (like our *Labs*).
+- **REFERENCE (/docs/reference)**: **The "Official Specs".** Command-line flags, API details, and the technical fine print.
+- **TUTORIALS (/docs/tutorials)**: **The "Walkthroughs".** Longer, scenario-based learning paths.
+
 ---
 
 ## 🏗️ The Global Link Matrix
