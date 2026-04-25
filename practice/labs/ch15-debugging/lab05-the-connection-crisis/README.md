@@ -1,8 +1,5 @@
 # 🧪 LAB 05: The Connection Crisis ([Kubeconfig](../../../../GLOSSARY.md#kubeconfig) & VPN)
 
-## Infrastructure & Troubleshooting – The Broken Compass
-
----
 
 ## 🎯 Lab Goal
 
@@ -47,6 +44,16 @@ Find the `server:` line and update the IP and Port to match Step 2 (using port `
 | :--- | :--- | :--- |
 | `127.0.0.1:PORT` | **Standard** | Fastest, but fails if VPN blocks loopbacks. |
 | `172.18.x.x:6443` | **VPN/Tunnel** | Bypasses Host routing. Most stable in enterprise labs. |
+
+---
+
+## 🔎 Verification (The Connectivity Test)
+
+Once you've saved `~/.kube/config`, test the connection to ensure the compass is fixed:
+```bash
+kubectl get nodes
+```
+*If this returns the `ckad-control-plane` node in a `Ready` state, your Map is correct and the VPN is bypassed!*
 
 ---
 
