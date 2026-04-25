@@ -79,9 +79,9 @@ kubectl create statefulset boutique --image=nginx:alpine --replicas=3
 ---
 
 ## 🔗 References
-- **Comic** → [Workload Types](../../../visual-learning/comics/ch01-workloads/README.md)
+- **Comic** → [Workload Types](../../../../visual-learning/comics/README.md)
 - **Docs** → [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
-- **Study Guide** → [Chapter 01: Workloads](../../../sources/study-guide/ch01-workloads.md)
+- **Study Guide** → [Chapter 01: Workloads](../../../../sources/study-guide/ch01-workloads.md)
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

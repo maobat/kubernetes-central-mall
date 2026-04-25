@@ -12,7 +12,7 @@ When your inventory becomes too large or needs to be shared across many differen
 - **Persistence**: Even if Boutique A closes or moves to a new location, the boxes in the External Warehouse remain exactly where they were, safe and sound.
 
 ---
-[Back to Chapter 2 Comics](../README.md)
+[Back to Comics Index](../../README.md)
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

@@ -15,4 +15,4 @@ k get cronjob -A
 ---
 - [ssh & context](05-ssh-and-contexts.md)
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../../GLOSSARY.md)

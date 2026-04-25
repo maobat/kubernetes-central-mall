@@ -13,8 +13,8 @@ Inside **The Mall Store**, space is tight. When two workers (Containers) need to
 ---
 
 ## 🔗 References
-- [Study Guide](./../../sources/study-guide/ch02-multi-container.md)
-- [Lab 03: Shared Volumes (emptyDir)](../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
+- [Study Guide](../../../../sources/study-guide/ch02-multi-container.md)
+- [Lab 03: Shared Volumes (emptyDir)](../../../../practice/labs/ch02-multi-container/lab03-shared-volumes-empty-dir/README.md)
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

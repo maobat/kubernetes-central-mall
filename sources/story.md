@@ -55,7 +55,7 @@ The Clerk and their Helper (**Sidecar** and **Init Containers**).
 * [The External Warehouse (NFS)](./../visual-learning/comics/ch02-multi-container/04-external-warehouse/README.md)
 
 **📘 Technical Deep Dive**
-* [Decoupling Pods](../../reference/md-resources/decoupling-pods.md)
+* [Decoupling Pods](../reference/md-resources/decoupling-pods.md)
 
 **🛠️ Hands-on Practice**
 * [Sidecar & InitContainers](./../practice/labs/ch02-multi-container/lab01-sidecar-pattern/README.md)
@@ -75,7 +75,7 @@ Mastering the art of building and updating your store's display models (**Docker
 * [The Perfect Mannequin](./../visual-learning/comics/ch03-images/03-image-updates/README.md)
 
 **📘 Technical Deep Dive**
-* [Managing Images & Rollouts](../../reference/md-resources/managing-container-images-and-rollouts.md)
+* [Managing Images & Rollouts](../reference/md-resources/managing-container-images-and-rollouts.md)
 
 **🛠️ Hands-on Practice**
 * [Build Container from Scratch](./../practice/labs/ch03-images/lab01-build-container-from-scratch/README.md)
@@ -96,7 +96,7 @@ Hiring external contractors and obtaining special building permits (**CRDs & Ope
 * [The Operator - The Manager with the Manual](./../visual-learning/comics/ch04-extending/04-operators/README.md)
 
 **📘 Technical Deep Dive**
-* [Extending K8s with CRDs](../../reference/md-resources/extending-k8s-crds-operators.md)
+* [Extending K8s with CRDs](../reference/md-resources/extending-k8s-crds-operators.md)
 
 **🛠️ Hands-on Practice**
 * [Shopping Items CRD](./../practice/labs/ch04-extending/lab01-crd-install/README.md)
@@ -130,9 +130,9 @@ Managing shop data and keeping the combinations safe (**ConfigMaps & Secrets**).
 
 **🛠️ Hands-on Practice**
 * [Price List (ConfigMaps)](./../practice/labs/ch05-config-secrets/lab01-configmaps/README.md)
-* [Breakroom Rules (Access)](./../practice/labs/ch05-config-secrets/lab02-configmap-access/lab02-configmap-access.md)
+* [Breakroom Rules (Access)](./../practice/labs/ch05-config-secrets/lab02-configmap-access/README.md)
 * [Vault (Secrets & Env Injection)](./../practice/labs/ch05-config-secrets/lab03-secrets-env-injection/README.md)
-* [Reading the Rules (Pod Access)](./../practice/labs/ch05-config-secrets/lab04-configmap-pod-access/lab04-configmap-pod-access.md)
+* [Reading the Rules (Pod Access)](./../practice/labs/ch05-config-secrets/lab04-configmap-pod-access/README.md)
 * [Automated Config Writer (InitContainers)](./../practice/labs/ch05-config-secrets/lab05-configmap-init-container/README.md)
 
 ---
@@ -147,7 +147,7 @@ Setting strict rules for how employees handle equipment (**SecurityContexts & Ca
 * [Worker Safety & SecurityContext](./../visual-learning/comics/ch06-safety/02-worker-safety/README.md)
 
 **📘 Technical Deep Dive**
-* [Worker Safety and Conduct](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
+* [Worker Safety and Conduct](../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
 
 **🛠️ Hands-on Practice**
 * [Worker Safety (SecurityContext)](./../practice/labs/ch06-safety/lab01-worker-safety/README.md)
@@ -166,7 +166,7 @@ Assigning roles and permissions to ensure only authorized staff access the backr
 * [The Entry Permit Office (Admission Control)](./../visual-learning/comics/ch07-identity/03-admission-control/README.md)
 
 **📘 Technical Deep Dive**
-* [Understanding RBAC](../../reference/md-resources/understanding-role-based-access-control-rbac.md)
+* [Understanding RBAC](../reference/md-resources/understanding-role-based-access-control-rbac.md)
 
 **🛠️ Hands-on Practice**
 * [The Employee Badge (ServiceAccounts)](./../practice/labs/ch07-identity/lab01-serviceaccount-identity/README.md)
@@ -193,7 +193,7 @@ Preventing "Resource Hogs" from causing mall-wide blackouts (**Requests, Limits 
 
 **🛠️ Hands-on Practice**
 * [Managing Constraints](../practice/labs/ch08-resources/lab01-managing-resource-constraints/README.md)
-* [Resource Checker (Requests & Limits)](../practice/labs/ch08-resources/lab02-resource-checker/lab02-resource-checker.md)
+* [Resource Checker (Requests & Limits)](../practice/labs/ch08-resources/lab02-resource-checker/README.md)
 * [Special Placements (Node Affinity)](../practice/labs/ch08-resources/lab03-node-affinity/README.md)
 
 ---

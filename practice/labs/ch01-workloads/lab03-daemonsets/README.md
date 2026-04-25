@@ -78,9 +78,9 @@ kubectl get pods -l app=mall-guard -o wide
 ---
 
 ## 🔗 References
-- **Comic** → [Workload Types](../../../visual-learning/comics/ch01-workloads/README.md)
+- **Comic** → [Workload Types](../../../../visual-learning/comics/README.md)
 - **Docs** → [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
-- **Study Guide** → [Chapter 01: Workloads](../../../sources/study-guide/ch01-workloads.md)
+- **Study Guide** → [Chapter 01: Workloads](../../../../sources/study-guide/ch01-workloads.md)
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

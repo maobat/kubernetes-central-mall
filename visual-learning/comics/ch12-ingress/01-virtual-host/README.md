@@ -28,8 +28,8 @@ This comic explains how **Ingress** acts as a sophisticated reception desk that 
 
 ## 🔗 References
 - **Study Guide** → [Chapter 12: Ingress & Gateway API](../../../../sources/study-guide/ch12-ingress.md)
-- **Lab** → [Ingress Virtual Hosts](../../../../practice/labs/ch12-ingress/lab03-ingress-virtual-host/README.md)
-- **Docs** → [Managing Ingress Resources](../../../../reference/md-resources/managing-ingress-resources.md)
+- **Lab** → [Ingress Virtual Hosts](../../../../practice/labs/ch12-ingress/lab03-advanced-ingress/README.md)
+- **Docs** → [Managing Ingress Resources](../../../../reference/md-resources/ingress-vs-gateway.md)
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

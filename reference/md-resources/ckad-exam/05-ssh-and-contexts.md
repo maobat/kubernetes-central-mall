@@ -72,4 +72,4 @@ k config use-context purple
 
 [Back to Documentation](../../README.md)
 ---
-[Mall Directory ✨](../../GLOSSARY.md)
+[Mall Directory ✨](../../../GLOSSARY.md)
