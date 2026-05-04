@@ -5026,6 +5026,40 @@ Internal testing helps you visualize the hops the data takes:
 4. **Service/Pods** receive the traffic from the Ingress.
 ---
 
+## Appendix: Common Command Breakdowns
+
+Throughout the curriculum and labs, we use several Linux networking utilities to test connectivity. Here is a centralized breakdown of the most common ones.
+
+### 1. The "Silent Test" (`nc -vz`)
+Often used to check if a specific port is open without actually sending any data.
+
+> **Breakdown of `nc -vz`**
+>
+> - **nc**: The **Netcat** utility (often the busybox or nmap version).
+> - **-v** (Verbose): Tells the tool to explain what it is doing. Without this, a successful connection would return no output (a "silent success").
+> - **-z** (Zero-I/O): Tells Netcat to only scan for a listening daemon and then immediately close the connection. It doesn't send any actual data, making it perfect for connection testing.
+
+### 2. The "Mock Server" (`nc -lk`)
+Often used to spin up a quick, temporary server to listen for incoming connections on a specific port.
+
+> **Breakdown of `nc -lk`**
+>
+> - **nc**: The **Netcat** utility.
+> - **-l** (Listen): Tells Netcat to listen for an incoming connection rather than initiating one (acting as a server).
+> - **-k** (Keep-alive): Forces Netcat to stay listening for another connection after its current connection is completed, instead of exiting.
+> - **-p <port>** (Port): Specifies the port (e.g., `-p 8080`) to listen on.
+
+### 3. The "Clean Fetch" (`wget -qO-`)
+Often used to fetch the contents of a web page and print it directly to the terminal, without downloading a file or showing progress bars.
+
+> **Breakdown of `wget -qO-`**
+>
+> - **wget**: A free utility for non-interactive download of files from the Web.
+> - **-q** (Quiet): Turns off Wget's output (no download progress or logs), making the output cleaner.
+> - **-O-** (Output document): The `-O` flag tells wget where to save the file. Using `-` as the destination tells it to print the downloaded content directly to standard output (the terminal) instead of saving it to a file.
+
+---
+
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-2.png)
