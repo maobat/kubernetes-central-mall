@@ -7,6 +7,7 @@ Connect your applications and manage internal and external traffic using Kuberne
 | [Lab 01: ClusterIP](./lab01-clusterip-internal-traffic/README.md) | Learn how to expose applications internally within the cluster. |
 | [Lab 02: NodePort](./lab02-nodeport-cross-namespace/README.md) | Expose services on [Node](../../../GLOSSARY.md#node) IPs and explore cross-[namespace](../../../GLOSSARY.md#namespace) communication. |
 | [Lab 03: Service Debugging](./lab03-service-debugging/README.md) | Practice troubleshooting common connection and DNS issues. |
+| [Lab 04: Endpoints & Slices](./lab04-endpoints-slices/README.md) | Understand the evolution from Endpoints to EndpointSlices for scalability. |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
