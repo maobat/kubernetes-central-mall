@@ -1,4 +1,4 @@
-<img src="the-grand-ensemble.png" alt="The Central Mall: A Kubernetes Adventure – Grand Ensemble" width="60%" />
+<img src="the-grand-ensemble.png" alt="The Central Mall: A Kubernetes Adventure – Grand Ensemble" width="40%" />
 
 # 🖼️ Comic: The Cast of Characters
 ## Chapter 00: Introduction – The Mall Staff

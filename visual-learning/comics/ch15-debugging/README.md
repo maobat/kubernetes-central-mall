@@ -5,6 +5,7 @@ Here are all the visual analogies for this section:
 * [The Broken Shop (Investigation)](./03-the-broken-shop/README.md)
 * [The Nested Node (Kind & crictl)](./04-nested-nodes-crictl/README.md)
 * [The Connection Crisis (Kubeconfig & VPN)](./05-the-connection-crisis/README.md)
+* [The IPv6 Illusion (ImagePullBackOff)](./06-image-pull-backoff/README.md)
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md) | [Back to Comic Index](../README.md)
