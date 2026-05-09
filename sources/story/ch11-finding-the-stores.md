@@ -22,6 +22,22 @@ For the most popular shops, the mall might hire a dedicated **Receptionist**. Wh
 
 ---
 
+## The Staff Tracker: From Paper Ledgers to Digital Slices
+
+Behind every storefront sign (Service) is a real-time list of which workers are actually standing at their registers. The mall's Management Office has had to upgrade this system as the mall grew.
+
+### The Old Paper Ledger (Endpoints)
+In the early days, the office kept a single, massive sheet of paper for every shop. This **[Endpoints](../../GLOSSARY.md#service)** list contained every worker's personal phone number. 
+
+When a shop grew to have hundreds of workers, this paper became a nightmare. Every time *one* worker went on break, the office had to reprint the entire massive page and hand a copy to every security guard in the mall. This caused huge bottlenecks and slowed everything down.
+
+### The Digital Roll-Call (EndpointSlice)
+To solve this, the mall introduced the **[EndpointSlice](../../GLOSSARY.md#endpointslice)**. Instead of one giant list, the staff is now organized into smaller, digital "slices." 
+
+If a shop has 1,000 workers, the Management Office might keep ten slices of 100 workers each. Now, if one worker leaves, the office only has to update *one small slice*. This modern system is much faster, more scalable, and is how the Central Mall operates today.
+
+---
+
 ## The Port Trio & The Backroom Bypass
 
 To ensure every customer finds the right cash register, we use a specific set of numbers in our blueprints.

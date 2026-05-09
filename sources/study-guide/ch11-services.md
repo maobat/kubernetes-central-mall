@@ -44,18 +44,25 @@ kubectl expose deployment nginx-dept --type=NodePort --port=80 --name=nginx-deli
 
 ---
 
-## 📍 11.3 Endpoint Slices: The GPS Tracker
+## 📍 11.3 Service Backends: The Tracking System
 
-Behind the scenes, the Service keeps a list of exactly which stalls the clerks are currently in. This list is called **Endpoints**. If the Endpoints list is empty, the intercom is broken!
+Behind the scenes, the Service keeps a real-time list of exactly which stalls the clerks are currently in. This tracking system has evolved to handle the mall's massive growth.
 
-```bash
-# Check if your service actually found any clerks
-kubectl get endpoints nginx-intercom
-```
+### Endpoints (Legacy)
+The original way to track backend IPs. It stores all Pod IPs in a single, monolithic object.
+- **Problem:** Scalability. If a Service has 1,000 Pods, any change to *one* Pod requires the API server to update and broadcast the entire 1,000-IP list to every Node.
+- **Check:** `kubectl get endpoints <service-name>`
 
----
+### EndpointSlices (Modern)
+The modern, scalable replacement. Instead of one giant list, it breaks the backends into multiple "slices."
+- **Benefit:** Performance. If a Pod changes, only its specific slice needs an update. This significantly reduces API pressure and network traffic in large clusters.
+- **Check:** `kubectl get endpointslice -l kubernetes.io/service-name=<service-name>`
 
----
+| Feature | `Endpoints` | `EndpointSlice` |
+| :--- | :--- | :--- |
+| **Structure** | Single Monolithic Object | Multiple Partitioned Slices |
+| **Scalability** | Poor (bottleneck at 1000+ pods) | Excellent (designed for 100k+ pods) |
+| **Standard** | Legacy (still supported) | Modern Default |
 
 ---
 

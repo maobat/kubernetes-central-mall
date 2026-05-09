@@ -31,10 +31,9 @@ In the **Central Mall**, managing a massive team of shop workers requires an eff
 
 ---
 
-## 🖼️ Visual Evolution
+## 🎨 Visual Analogy
 
-![EndpointSlice Evolution](./endpointslice.png)
-*Figure 1: How EndpointSlices partition large sets of endpoints to reduce API pressure.*
+Check out the **[Scaling Ledger Comic](../../../../visual-learning/comics/ch11-services/04-endpoint-slices/README.md)** to see how the mall upgraded from massive paper lists to organized digital slices.
 
 ---
 
