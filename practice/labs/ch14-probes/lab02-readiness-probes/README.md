@@ -67,7 +67,7 @@ If a `StartupProbe` is defined, `ReadinessProbes` and `LivenessProbes` won't be 
 ### 1. Create the Blueprint
 First we generate a [Deployment](../../../../GLOSSARY.md#deployment) yaml:
 ```bash
-k create deploy space-alien-welcome-message-generator --image=httpd:alpine -oyaml --dry-run=client > deploy.yaml
+k create deploy space-alien-welcome-message-generator --image=httpd:alpine -o yaml --dry-run=client > deploy.yaml
 ```
 
 ### 2. Add the Health Inspector
