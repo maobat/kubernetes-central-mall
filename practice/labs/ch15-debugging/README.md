@@ -9,6 +9,8 @@ Master the tools and techniques for troubleshooting and diagnosing issues in you
 | [Lab 03: Metrics Server](./lab03-metrics-server/README.md) | Monitor resource usage at the [Pod](../../../GLOSSARY.md#pod) and [Node](../../../GLOSSARY.md#node) level using Metrics Server. |
 | [Lab 04: Nested Nodes](./lab04-nested-nodes-crictl/README.md) | Explore container-level debugging using `crictl` on laboratory nodes. |
 | [Lab 05: Connection Crisis](./lab05-the-connection-crisis/README.md) | Diagnose and repair [Kubeconfig](../../../GLOSSARY.md#kubeconfig) and VPN-related connection issues. |
+| [Lab 06: Image Pull Backoff](./lab06-image-pull-backoff/README.md) | Investigate ImagePullBackOff due to external network resolution timeouts. |
+| [Lab 07: Security Guard Strike](./lab07-security-guard-strike/README.md) | Troubleshoot complex networking issues involving CNI failures and restrictive NetworkPolicies. |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)

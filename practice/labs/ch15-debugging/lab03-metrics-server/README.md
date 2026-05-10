@@ -2,7 +2,7 @@
 
 ## Observability and Maintenance – Electricity & Water Meters
 
-In the **Central Mall**, the Mall Manager needs to know how much "electricity" (CPU) and "water" (Memory) each shop is consuming. If a shop starts using too many resources, it might cause a mall-wide blackout! To prevent this, we use the **Metrics Server**—a central dashboard that reads the meters on every shop door.
+In the **Central Mall**, if the CNI is the security team, the **Metrics Server** is the Mall's Utility Metering System. It tells the owner how much "electricity" (CPU) and "water" (Memory) each shop is consuming. If a shop starts using too many resources, it might cause a mall-wide blackout! To prevent this, we use the central dashboard to read the meters on every shop door. Without it, running commands is like looking at a blank utility bill—the data simply isn't being collected.
 
 ---
 
@@ -18,10 +18,10 @@ In the **Central Mall**, the Mall Manager needs to know how much "electricity" (
 In our Central Mall analogy, `kubectl top` is like a **Real-Time Energy Meter**. It tells you exactly how much electricity (CPU) and water (RAM) each shop is using. But by default, **Kind** clusters arrive without the meters installed!
 
 ### 🕵️ Why it doesn't work out-of-the-box
-To use `top`, the cluster needs a specific worker called the **Metrics Server**. 
-- The **Kubelet** (the truck driver) collects the data.
-- The **Metrics Server** (the accountant) gathers that data and translates it for `kubectl`.
-- Kind leaves this out to stay "lightweight" and fast.
+By default, **Kind** clusters arrive without the meters installed in the basement. 
+- **The Error:** If you see `Metrics API not available`, it means the mall was built, but the meters weren't installed.
+- **The Command:** When you run `kubectl top pod`, you are asking for the consumption report. Since there are no meters, the API server has no data to give you.
+- **The Check:** Running `kubectl get pods -n kube-system` confirms this—you will see `coredns`, `kube-proxy`, and `calico`, but no pod named `metrics-server`.
 
 ### 🚚 Choose Your Truck: Minikube vs. Kind
 Depending on which "mall construction kit" you are using, the setup is different:
@@ -30,21 +30,35 @@ Depending on which "mall construction kit" you are using, the setup is different
   ```bash
   minikube addons enable metrics-server
   ```
-- **Kind (The Manual Setup)**: Kind is more bare-bones. You have to install the meters yourself and then apply the "Insecure Patch" shown below.
 
-### 🛠️ How to "Install the Meters" in Kind
-If you want to practice for the CKAD (where `top` is very useful), you have to install the Metrics Server manually. However, there is a **"Kind-specific" trap**. Because Kind uses self-signed certificates for its internal "truck" communication, the Metrics Server will refuse to talk to the nodes unless you tell it to "ignore the lack of ID."
+### 🛠️ How to "Install the Meters" in Kind (The CKAD Way)
+If you want to practice for the CKAD (where YAML editing is essential), you have to install the Metrics Server manually. However, there is a **"Kind-specific" trap**. Because Kind uses local self-signed certificates, the Metrics Server will refuse to talk to the nodes unless you add an "insecure" tweak.
 
-**1. Apply the official manifest:**
+**1. Download the official manifest:**
 ```bash
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+wget https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
 
-**2. The "Insecure" Patch:**
-Since Kind's certificates aren't "official," you have to edit the Metrics Server [deployment](../../../../GLOSSARY.md#deployment) to allow insecure communication:
-```bash
-kubectl patch deployment metrics-server -n kube-system --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
+**2. Add the "Insecure" flag:**
+Edit `components.yaml` and add `--kubelet-insecure-tls` to the container arguments for the Metrics Server deployment:
+```yaml
+    # Inside the Metrics Server Deployment spec -> containers -> args
+    - args:
+      - --cert-dir=/tmp
+      - --secure-port=4443
+      - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+      - --kubelet-use-node-status-port
+      - --metric-resolution=15s
+      - --kubelet-insecure-tls  # <--- ADD THIS
 ```
+
+**3. Apply it:**
+```bash
+kubectl apply -f components.yaml
+```
+
+**4. Wait for the Billing Cycle:**
+Once the `metrics-server` pod shows up as `Running` in your `kube-system` list, **wait about 60 seconds** for it to gather the first "billing cycle" of data before testing.
 
 ### 📊 Alternative: Checking the "Truck" from the "Street"
 If you don't want to install the Metrics Server, you can still see how much "Gas" your Kind nodes are using by looking from your Laptop (Outside). Since the nodes are just Docker containers, run this on your terminal:
@@ -139,6 +153,16 @@ Show the metrics for all containers inside the `shop-with-tail-sidecar` [pod](..
 kubectl top pod shop-with-tail-sidecar --containers --sort-by=memory
 ```
 </details>
+
+---
+
+## 🔍 Common Troubleshooting Traps
+
+If you get an error like `unknown command "client"` when running `kubectl top client -n internal-only`:
+* **The Reason:** `kubectl top` needs to know the *resource type* (`pod` or `node`) before the name.
+* **Correct Syntax:** `kubectl top pod client -n internal-only`
+
+*(Are you planning to add an **HPA (Horizontal Pod Autoscaler)** to your mall lab next? That would be the perfect use case for these metrics!)*
 
 ---
 

@@ -1,7 +1,6 @@
 <img src="broken-shop.png" alt="Troubleshooting - The Broken Shop" width="40%" />
 
-# 🖼️ Comic: The Broken Shop
-## Chapter 15: Debugging – Investigation
+# 🎨 Section 15.1: The Broken Shop
 
 This comic explains the **CSI (Crime Scene Investigation)** approach to troubleshooting pods in the Central Mall.
 
