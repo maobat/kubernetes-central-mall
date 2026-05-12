@@ -11,6 +11,8 @@ Control and secure network traffic between your Pods and Namespaces using Networ
 | [Lab 05: Role-Based Ingress](./lab05-role-based-ingress/README.md) | Allow ingress traffic based on specific roles (e.g., allow `frontend` but deny `backend`). |
 | [Lab 06: Allow DNS Egress](./lab06-dns-egress/README.md) | Restrict a pod's egress traffic so it can only make DNS queries. |
 | [Lab 07: The Phonebook Trap](./lab07-the-dns-egress-trap/README.md) | Troubleshoot why a pod can't reach another namespace due to DNS being blocked. |
+| [Lab 08: Fine-Grained Access](./lab08-fine-grained-access/README.md) | Secure specific pods using label-based selectors and specific ports. |
+| [Lab 09: Multiple Keys (OR Logic)](./lab09-multiple-keys-or/README.md) | Implement OR logic to allow ingress from multiple different sources. |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
