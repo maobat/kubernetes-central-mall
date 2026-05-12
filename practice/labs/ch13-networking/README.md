@@ -10,6 +10,7 @@ Control and secure network traffic between your Pods and Namespaces using Networ
 | [Lab 04: Default Deny Ingress](./lab04-default-deny-ingress/README.md) | Implement a "Default Deny" ingress policy to lock down a namespace, and then allow a client. |
 | [Lab 05: Role-Based Ingress](./lab05-role-based-ingress/README.md) | Allow ingress traffic based on specific roles (e.g., allow `frontend` but deny `backend`). |
 | [Lab 06: Allow DNS Egress](./lab06-dns-egress/README.md) | Restrict a pod's egress traffic so it can only make DNS queries. |
+| [Lab 07: The Phonebook Trap](./lab07-the-dns-egress-trap/README.md) | Troubleshoot why a pod can't reach another namespace due to DNS being blocked. |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
