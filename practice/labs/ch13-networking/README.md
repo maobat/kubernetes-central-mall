@@ -14,6 +14,7 @@ Control and secure network traffic between your Pods and Namespaces using Networ
 | [Lab 08: Fine-Grained Access](./lab08-fine-grained-access/README.md) | Secure specific pods using label-based selectors and specific ports. |
 | [Lab 09: Multiple Keys (OR Logic)](./lab09-multiple-keys-or/README.md) | Implement OR logic to allow ingress from multiple different sources. |
 | [Lab 10: Double Lockdown (AND Logic)](./lab10-double-lockdown-and/README.md) | Combine namespace and pod selectors to create highly specific AND rules. |
+| [Lab 11: Secure Connection (Egress)](./lab11-secure-connection-egress/README.md) | Restrict outgoing traffic to a specific pod using egress selectors. |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
