@@ -12,6 +12,7 @@ This chapter covers patterns for running multiple containers within a single [Po
 | [Lab 06: The Local Delivery Agent (Ambassador)](./lab06-ambassador-pattern/README.md) | Implement the Ambassador Pattern to demonstrate how containers in the same Pod communicate over `localhost`. |
 | [Lab 07: The Prep Cook (InitContainer)](./lab07-init-container/README.md) | Use an InitContainer to configure and prepare files on a shared volume before the main app starts. |
 | [Lab 08: The Shift Bulletin (Shared Variables)](./lab08-shared-variables/README.md) | Implement a multi-container Pod where environment variables are shared via a volume. |
+| [Lab 09: The Bookkeeper's Desk (Adapter Pattern)](./lab09-adapter-pattern/README.md) | Implement the Adapter Pattern using a shared volume to normalize application output. |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
