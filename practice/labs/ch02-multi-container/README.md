@@ -10,6 +10,7 @@ This chapter covers patterns for running multiple containers within a single [Po
 | [Lab 04: NFS Shared Volumes](./lab04-nfs-shared-volumes/README.md) | Configure and use NFS for shared storage across multiple Pods. |
 | [Lab 05: The Auditor's Desk (Sidecar Logging)](./lab05-sidecar-logging/README.md) | Implement the Sidecar Logging Pattern using an `emptyDir` to stream file logs to stdout. |
 | [Lab 06: The Local Delivery Agent (Ambassador)](./lab06-ambassador-pattern/README.md) | Implement the Ambassador Pattern to demonstrate how containers in the same Pod communicate over `localhost`. |
+| [Lab 07: The Prep Cook (InitContainer)](./lab07-init-container/README.md) | Use an InitContainer to configure and prepare files on a shared volume before the main app starts. |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
