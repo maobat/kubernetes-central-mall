@@ -56,7 +56,6 @@ spec:
     command: ["/bin/sh", "-c"]
     args:
     - |
-      mkdir -p /config
       echo "settings=enabled" > /config/settings.conf
       echo "config" >> /config/settings.conf
     volumeMounts:
