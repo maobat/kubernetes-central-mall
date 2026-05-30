@@ -66,6 +66,8 @@ spec:
   accessModes: [ "ReadWriteOnce" ]
   hostPath:
     path: "/mnt/data"
+    type: DirectoryOrCreate 
+    # to avoid Error: stat /mnt/data: no such file or directory
 ```
 
 ### 2. The Rental Contract (PVC)
