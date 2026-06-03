@@ -357,9 +357,9 @@ Quick guides for surviving the practical exam enviornment.
 * [Explore Chapter 15 Comics](./../visual-learning/comics/ch15-debugging/README.md)
 
 **📘 Technical Deep Dive**
-* [Doc: Study Environments & Tools](../reference/md-resources/ckad-exam/00-study-environments.md)
-* [Doc: Linux Setup Tips](../reference/md-resources/ckad-exam/01-linux-setup.md)
-* [Doc: Time Management](../reference/md-resources/ckad-exam/03-time-management.md)
+* [Doc: Study Environments & Tools](../reference/md-resources/ckad-exam/playbook/00-study-environments.md)
+* [Doc: Linux Setup Tips](../reference/md-resources/ckad-exam/playbook/01-linux-setup.md)
+* [Doc: Time Management](../reference/md-resources/ckad-exam/playbook/03-time-management.md)
 
 ---
 ---

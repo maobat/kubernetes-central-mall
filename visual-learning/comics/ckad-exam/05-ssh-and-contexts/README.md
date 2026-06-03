@@ -16,7 +16,7 @@ This comic illustrates the difference between **SSH** and **Kubectl Contexts**, 
 * **The Reality:** **SSH** is used to securely connect directly to a specific Node in the cluster (e.g., `ssh node01`). When you are SShed into a node, you are operating on that specific machine's OS, not via the Kubernetes API. You must type `exit` to return to your main terminal (usually the control plane) when finished.
 
 ---
-[Review the full study guide for SSH and Contexts](../../../../reference/md-resources/ckad-exam/05-ssh-and-contexts.md)
+[Review the full study guide for SSH and Contexts](../../../../reference/md-resources/ckad-exam/playbook/05-ssh-and-contexts.md)
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

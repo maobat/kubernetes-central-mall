@@ -10,4 +10,13 @@ Prepare for the Certified Kubernetes Application Developer (CKAD) exam with hand
 | [Lab 04: SSH and Contexts](./lab04-ssh-and-contexts/README.md) | Practice switching between contexts and using SSH for [node](../../../GLOSSARY.md#node)-level tasks. |
 
 ---
+
+### 🎓 Exam Preparation
+
+For a complete walkthrough and practice of the simulator tasks using the mall analogy:
+- 👉 **[The CKAD Central Mall Master Simulator Guide (Killer.sh)](../../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)**
+- 👉 **[The CKAD Mock Exam Simulator (Questions Only)](../../../reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md)**
+- 👉 **[The CKAD Simulator Lab Preparation Guide](../../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator-prep.md)**
+
+---
 [Mall Directory ✨](../../../GLOSSARY.md)

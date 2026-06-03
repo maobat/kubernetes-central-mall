@@ -103,6 +103,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 16** – [Lab 02: Namespace & Pod Management](ch16-ckad-exam/lab02-namespaces-and-pods/README.md)
 - **Ch. 16** – [Lab 03: Advanced Kubectl Sorting](ch16-ckad-exam/lab03-advanced-kubectl-sorting/README.md)
 - **Ch. 16** – [Lab 04: SSH & Contexts](ch16-ckad-exam/lab04-ssh-and-contexts/README.md)
+- **Simulator** – [Master Simulator Guide](../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md) | [Real Simulator (Questions Only)](../../reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md) | [Lab Prep Guide](../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator-prep.md)
 
 ---
 [Back to Main Index](../../README.md)

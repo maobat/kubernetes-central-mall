@@ -174,10 +174,13 @@ The documents are designed to be read sequentially, but each section is also sel
 Comprehensive guides for the final stretch before the exam:
 
 - 🚀 **[Playbook Overview](md-resources/ckad-exam/README.md)**
-- 💻 [Linux Setup (The first 5 minutes)](md-resources/ckad-exam/01-linux-setup.md)
-- ⚡ [CKAD Cheatsheet (Speed-run version)](md-resources/ckad-exam/02-cheatsheet.md)
-- ⏱️ [Time Management Strategy](md-resources/ckad-exam/03-time-management.md)
-- ✅ [Final Checklist](md-resources/ckad-exam/04-final-checklist.md)
+- 💻 [Linux Setup (The first 5 minutes)](md-resources/ckad-exam/playbook/01-linux-setup.md)
+- ⚡ [CKAD Cheatsheet (Speed-run version)](md-resources/ckad-exam/playbook/02-cheatsheet.md)
+- ⏱️ [Time Management Strategy](md-resources/ckad-exam/playbook/03-time-management.md)
+- ✅ [Final Checklist](md-resources/ckad-exam/playbook/04-final-checklist.md)
+- 🔑 [SSH & Contexts](md-resources/ckad-exam/playbook/05-ssh-and-contexts.md)
+- 🏬 [Killer.sh Simulator Guide](md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)
+- 🎯 [Real Simulator (Questions Only)](md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md)
 
 ---
 

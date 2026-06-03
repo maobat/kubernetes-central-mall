@@ -58,6 +58,15 @@ Compact study guides and modular documentation covering all CKAD domains.
 
 ---
 
+### 5. 🏬 [CKAD Simulator: Killer.sh Practice](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)
+*Real Exam Drill*
+Practice the full 22-question Killer.sh simulator suite on your local cluster using mapped mall analogies.
+- **Goal:** Get comfortable with exam-level pressure, multi-context switches, and debugging under time constraints.
+- **Includes:** A local lab preparation script to spin up the entire practice environment instantly.
+- **Link:** [Go to the Simulator Guide](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md) | [Real Simulator (Questions Only)](./reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md) | [Setup Instructions](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator-prep.md)
+
+---
+
 ## 🚀 Recommended Workflow
 
 If you are new to a concept, follow this "Central Mall" sequence:
