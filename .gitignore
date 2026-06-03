@@ -1,0 +1,9 @@
+# Protect the automation engine
+reference/md-resources/ckad-exam/scripts/
+
+# Protect the premium mock questions
+reference/md-resources/ckad-exam/simulator/
+
+# Block any local development configuration test artifacts
+*.bk
+.DS_Store
