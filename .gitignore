@@ -7,3 +7,5 @@ reference/md-resources/ckad-exam/simulator/
 # Block any local development configuration test artifacts
 *.bk
 .DS_Store
+
+ckad-mall-simulator-trial.zip

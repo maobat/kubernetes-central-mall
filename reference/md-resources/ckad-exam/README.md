@@ -25,12 +25,42 @@ This directory contains resources to prepare for and execute your **CKAD Exam Da
 - **Verification List:** [Final Checklist](./playbook/04-final-checklist.md) — what to check before submitting.
 - **Context Routing:** [SSH & Contexts](./playbook/05-ssh-and-contexts.md) — moving between clusters and nodes safely.
 
-### 🏬 Part 2: Killer.sh Simulator (CKAD Mall Analogy Practice)
+### 🚀 Part 2: Killer.sh Simulator (CKAD Mall Analogy Practice)
 - **Lab Preparation:** [Lab Prep Guide](./simulator/06-killer-sh-simulator-prep.md) — local lab setup guide.
 - **Lab Setup Script:** [setup-labs.sh](./scripts/setup-labs.sh) — spins up namespaces, pods, and deployments.
 - **Master Study Guide:** [Killer.sh Simulator Guide](./simulator/06-killer-sh-simulator.md) — full 22-question syllabus with blueprints, solutions, and exam tips.
 - **Mock Exam Simulator:** [Real Simulator (Questions Only)](./simulator/06-killer-sh-real-simulator.md) — practice questions-only under real exam conditions.
 - **Grading Script:** [check-answers-labs.sh](./scripts/check-answers-labs.sh) — terminal grading tool to verify your answers.
+- **Cleanup Script:** [cleanup-labs.sh](./scripts/cleanup-labs.sh) — tears down all created namespaces and directories.
+
+---
+
+## ⚙️ Prerequisites & Quick Start
+
+Before starting the simulator locally, ensure you meet the following requirements:
+
+1. **Local Kubernetes Cluster:** A running local cluster (such as Minikube, Kind, or a local VM) with `kubectl` configured.
+2. **Permissions Setup:** The lab environment writes output files to `/opt/course`. To avoid permission errors when redirects are used, run this command once to grant ownership to your current user:
+   ```bash
+   sudo chown -R $(whoami) /opt/course
+   ```
+
+### ⚡ Quick Start Workflow:
+1. **Initialize the lab:**
+   ```bash
+   ./scripts/setup-labs.sh
+   ```
+2. **Take the exam:** Open [Real Simulator](./simulator/06-killer-sh-real-simulator.md) and solve the tasks.
+3. **Verify your answers:**
+   ```bash
+   ./scripts/check-answers-labs.sh
+   ```
+4. **Clean up when finished:**
+   ```bash
+   ./scripts/cleanup-labs.sh
+   ```
+
+---
 
 ### 📝 Part 3: Extra Practice Exercises
 - **Resource Limits:** [Pod Resources Practice](./exercises/pod.md) — practice setting up CPU/Memory limits.
