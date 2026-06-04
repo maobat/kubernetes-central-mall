@@ -40,6 +40,6 @@ Question 2
 
 ---
 
-[Back to Documentation](../../README.md)
+[Back to Documentation](../README.md)
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)
