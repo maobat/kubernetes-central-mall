@@ -4,6 +4,11 @@ Welcome to the real-simulator mode. This file contains **only the questions** as
 
 Use [06-killer-sh-simulator.md](./06-killer-sh-simulator.md) to check the solutions and [check-answers-labs.sh](../scripts/check-answers-labs.sh) to grade your cluster state.
 
+> [!NOTE]
+> **Practice Environment vs. Real Simulator Contexts:**
+> * **In the Real Simulator / Exam:** You work in a multi-cluster, multi-node topology. Questions will prompt you to access specific environments (e.g., `ssh ckad5601` or switch context via `kubectl config use-context ...`).
+> * **In Your Local Practice Environment:** You are running on a single local cluster (e.g., Kind or Minikube). **Do not run `ssh ckad5601`** (this host does not exist on your machine). Instead, execute all commands directly on your local terminal and save output files to `/opt/course/...` locally.
+
 ---
 
 Question 1
@@ -40,6 +45,6 @@ Question 2
 
 ---
 
-[Back to Documentation](../README.md)
+[Back to Documentation](../../README.md)
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)

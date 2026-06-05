@@ -4,6 +4,11 @@ Welcome to the Master Simulator Guide. This file contains the complete solutions
 
 Use [06-killer-sh-real-simulator.md](./06-killer-sh-real-simulator.md) to practice in "questions-only" mode.
 
+> [!NOTE]
+> **Practice Environment vs. Real Simulator Contexts:**
+> * **In the Real Simulator / Exam:** You work in a multi-cluster, multi-node topology. Questions will prompt you to access specific environments (e.g., `ssh ckad5601` or switch context via `kubectl config use-context ...`).
+> * **In Your Local Practice Environment:** You are running on a single local cluster (e.g., Kind or Minikube). **Do not run `ssh ckad5601`** (this host does not exist on your machine). Instead, execute all commands directly on your local terminal and save output files to `/opt/course/...` locally.
+
 ---
 
 ## 🛒 Question 1: Namespaces List
@@ -71,6 +76,6 @@ The command should use `kubectl`.
 
 ---
 
-[Back to Documentation](../README.md)
+[Back to Documentation](../../README.md)
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)
