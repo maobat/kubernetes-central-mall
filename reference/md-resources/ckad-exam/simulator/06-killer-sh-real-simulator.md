@@ -6,8 +6,8 @@ Use [06-killer-sh-simulator.md](./06-killer-sh-simulator.md) to check the soluti
 
 > [!NOTE]
 > **Practice Environment vs. Real Simulator Contexts:**
-> * **In the Real Simulator / Exam:** You work in a multi-cluster, multi-node topology. Questions will prompt you to access specific environments (e.g., `ssh ckad5601` or switch context via `kubectl config use-context ...`).
-> * **In Your Local Practice Environment:** You are running on a single local cluster (e.g., Kind or Minikube). **Do not run `ssh ckad5601`** (this host does not exist on your machine). Instead, execute all commands directly on your local terminal and save output files to `/opt/course/...` locally.
+> * **In the Real Simulator / Exam:** You work in a multi-cluster, multi-node topology. Questions will prompt you to access specific environments (e.g., `ssh ckadxxxx` or switch context via `kubectl config use-context ...`).
+> * **In Your Local Practice Environment:** You are running on a single local cluster (e.g., Kind or Minikube). **Do not run `ssh ckadxxxx`** (this host does not exist on your machine). Instead, execute all commands directly on your local terminal and save output files to `/opt/course/...` locally.
 
 ---
 
@@ -16,13 +16,13 @@ Question 1
 
 - [ ] ⚑ Flag this
 
-<p>Solve this question on instance: <code class="copy-on-click">ssh ckad5601</code></p>
+<p>Solve this question on instance: <code class="copy-on-click">ssh ckadxxxx</code></p>
 
 <p>The DevOps team would like to get the list of all Namespaces in the cluster.</p>
 
 <p>The list can contain other columns like <code class="copy-on-click">STATUS</code> or <code class="copy-on-click">AGE</code>.</p>
 
-<p>Save the list to <code class="copy-on-click">/opt/course/1/namespaces</code> on <code class="copy-on-click">ckad5601</code>.</p>
+<p>Save the list to <code class="copy-on-click">/opt/course/1/namespaces</code> on <code class="copy-on-click">ckadxxxx</code>.</p>
 
 ---
 
@@ -31,7 +31,7 @@ Question 2
 
 - [ ] ⚑ Flag this
 
-<p>Solve this question on instance: <code class="copy-on-click">ssh ckad5601</code></p>
+<p>Solve this question on instance: <code class="copy-on-click">ssh ckadxxxx</code></p>
 
 <p>Create a single Pod of image <code class="copy-on-click">nginx:1.14</code> in Namespace <code class="copy-on-click">default</code>.</p>
 
@@ -39,7 +39,7 @@ Question 2
 
 <p>Your manager would like to run a command manually on occasion to output the status of that exact Pod.</p>
 
-<p>Please write a command that does this into <code class="copy-on-click">/opt/course/2/pod1-status-command.sh</code> on <code class="copy-on-click">ckad5601</code>.</p>
+<p>Please write a command that does this into <code class="copy-on-click">/opt/course/2/pod1-status-command.sh</code> on <code class="copy-on-click">ckadxxxx</code>.</p>
 
 <p>The command should use <code class="copy-on-click">kubectl</code>.</p>
 

@@ -6,8 +6,8 @@ Use [06-killer-sh-real-simulator.md](./06-killer-sh-real-simulator.md) to practi
 
 > [!NOTE]
 > **Practice Environment vs. Real Simulator Contexts:**
-> * **In the Real Simulator / Exam:** You work in a multi-cluster, multi-node topology. Questions will prompt you to access specific environments (e.g., `ssh ckad5601` or switch context via `kubectl config use-context ...`).
-> * **In Your Local Practice Environment:** You are running on a single local cluster (e.g., Kind or Minikube). **Do not run `ssh ckad5601`** (this host does not exist on your machine). Instead, execute all commands directly on your local terminal and save output files to `/opt/course/...` locally.
+> * **In the Real Simulator / Exam:** You work in a multi-cluster, multi-node topology. Questions will prompt you to access specific environments (e.g., `ssh ckadxxxx` or switch context via `kubectl config use-context ...`).
+> * **In Your Local Practice Environment:** You are running on a single local cluster (e.g., Kind or Minikube). **Do not run `ssh ckadxxxx`** (this host does not exist on your machine). Instead, execute all commands directly on your local terminal and save output files to `/opt/course/...` locally.
 
 ---
 
@@ -17,7 +17,7 @@ Use [06-killer-sh-real-simulator.md](./06-killer-sh-real-simulator.md) to practi
 ### Task Description
 The DevOps team would like to get the list of all Namespaces in the cluster.
 The list can contain other columns like `STATUS` or `AGE`.
-Save the list to `/opt/course/1/namespaces` on `ckad5601`.
+Save the list to `/opt/course/1/namespaces` on `ckadxxxx`.
 
 ### Solution & Execution
 To get the list of namespaces and save it, run:
@@ -39,7 +39,7 @@ kubectl get namespaces > /opt/course/1/namespaces
 Create a single Pod of image `nginx:1.14` in Namespace `default`.
 The Pod should be named `pod1` and the container should be named `pod1-container`.
 Your manager would like to run a command manually on occasion to output the status of that exact Pod.
-Please write a command that does this into `/opt/course/2/pod1-status-command.sh` on `ckad5601`.
+Please write a command that does this into `/opt/course/2/pod1-status-command.sh` on `ckadxxxx`.
 The command should use `kubectl`.
 
 ### Solution & Execution
