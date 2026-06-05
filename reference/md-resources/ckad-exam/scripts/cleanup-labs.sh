@@ -18,11 +18,7 @@ fi
 echo "🧹 Cleaning up resources in default namespace..."
 kubectl delete pod pod1 -n default --force --grace-period=0 2>/dev/null || true
 
-# 2. Delete created namespaces
-echo "🌐 Deleting lab namespaces..."
-kubectl delete ns mercury neptune saturn pluto earth moon mars jupiter venus sun --force --grace-period=0 2>/dev/null || true
-
-# 3. Clean up directory structures
+# 2. Clean up directory structures
 echo "📁 Removing workspace directories under /opt/course..."
 if [ -d "/opt/course" ]; then
   # Try removing without sudo first (if current user has permissions)

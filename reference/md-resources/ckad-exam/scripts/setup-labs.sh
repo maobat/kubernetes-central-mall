@@ -17,12 +17,6 @@ echo "📁 Creating workspace directories..."
 mkdir -p /opt/course/1 \
          /opt/course/2
 
-# 2. Create Namespaces
-echo "🌐 Creating namespaces..."
-for ns in mercury neptune saturn pluto earth moon mars jupiter venus sun; do
-  kubectl create namespace "$ns" --dry-run=client -o yaml | kubectl apply -f -
-done
-
 # ==========================================
 # Question 1 Setup
 # ==========================================
