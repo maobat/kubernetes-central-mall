@@ -31,6 +31,7 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 
 - **Ch. 05** – [The Rulebook & The Uniform (ConfigMap)](ch05-config-secrets/01-configmap/README.md)
 - **Ch. 05** – [High-Security Vault (Secrets)](ch05-config-secrets/01-secrets-injection/README.md)
+- **Ch. 05** – [The Morning Briefing (ConfigMap envFrom)](ch05-config-secrets/06-configmap-envfrom/README.md)
 - **Ch. 06** – [Worker Safety (SecurityContext)](ch06-safety/02-worker-safety/README.md)
 - **Ch. 07** – [The Secure Badge (RBAC)](ch07-identity/01-the-secure-badge/README.md)
 - **Ch. 07** – [The HR Manual (Role)](ch07-identity/02-the-hr-manual/README.md)
@@ -56,10 +57,13 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 - **Ch. 11** – [The Internal Intercom (ClusterIP)](ch11-services/01-internal-intercom/README.md)
 - **Ch. 11** – [The NodePort Traffic Adventure](ch11-services/02-cross-namespace/README.md)
 - **Ch. 11** – [The Port Map (11.4 Comparison Guide)](ch11-services/03-the-port-map/README.md)
+- **Ch. 11** – [The Scaling Ledger (Endpoints vs EndpointSlice)](ch11-services/04-endpoint-slices/README.md)
 - **Ch. 12** – [The Lost Gateway (Troubleshooting)](ch12-ingress/01-the-lost-gateway/README.md)
 - **Ch. 12** – [The Grand Entrance (Path Routing)](ch12-ingress/02-the-grand-entrance/README.md)
+- **Ch. 12** – [The Smart Transit Hub (Gateway API Routing)](ch12-ingress/03-gateway-api-routing/README.md)
 - **Ch. 13** – [The Locked Corridor (Whitelisting Traffic)](ch13-networking/01-locked-corridors/README.md)
 - **Ch. 13** – [The One-Way Corridor (Egress Control)](ch13-networking/02-one-way-corridors/README.md)
+- **Ch. 13** – [The Network Policy Master Map](ch13-networking/03-network-policy-master-map/README.md)
 
 ---
 
@@ -68,9 +72,13 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 
 - **Ch. 14** – [The Health Inspector (Liveness)](ch14-probes/01-the-health-inspector/README.md)
 - **Ch. 14** – [The Velvet Rope (Readiness)](ch14-probes/02-readiness-probes/README.md)
-- **Ch. 15** – [The Broken Shop (Investigation)](ch15-debugging/03-the-broken-shop/README.md)
+- **Ch. 15** – [The Broken Shop (Investigation)](ch15-debugging/01-the-broken-shop/README.md)
+- **Ch. 15** – [Logging Sidecars](ch15-debugging/02-logging-sidecars/README.md)
+- **Ch. 15** – [Metrics Server](ch15-debugging/03-metrics-server/README.md)
 - **Ch. 15** – [The Nested Node (Kind & crictl)](ch15-debugging/04-nested-nodes-crictl/README.md)
 - **Ch. 15** – [The Connection Crisis (Kubeconfig & VPN)](ch15-debugging/05-the-connection-crisis/README.md)
+- **Ch. 15** – [The IPv6 Illusion (ImagePullBackOff)](ch15-debugging/06-image-pull-backoff/README.md)
+- **Ch. 15** – [The Security Guard Strike (CNI & NetPol)](ch15-debugging/07-security-guard-strike/README.md)
 ---
 
 ## 🎓 Part 6: CKAD Exam Preparation
