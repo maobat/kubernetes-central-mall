@@ -15,7 +15,7 @@ Stop wasting hours setting up test clusters. Run a single command to automatical
 A full, curated challenge set mapped directly against the 2026 CNCF Certified Kubernetes Application Developer curriculum constraints. No generic questions, every task is wrapped inside our highly memorable Mall Analogy framework.
 
 ### 🤖 3. The Automated Mall Inspector Engine (`check-answers-with-score-labs.sh`)
-The ultimate diagnostic companion. Run the evaluator script at any time to instantly analyze your running cluster. It executes programmatic validation checks across your objects and spits out clean, explicit pass/fail evaluation logs to expose your hidden mistakes before the real exam day.
+The ultimate diagnostic companion. Run the evaluator script at any time to instantly analyze your running cluster. It executes programmatic validation checks across your objects, calculates your weighted exam score, and reports whether you met the official 66% CKAD passing threshold.
 
 ---
 

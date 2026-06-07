@@ -46,3 +46,19 @@ if [ "$pod1_exists" == "pod1" ] && [ "$pod1_container" == "pod1-container" ] && 
 else
     grade "2" 1 3 "Pod 'pod1' or helper script is incorrect or missing."
 fi
+
+# --- FINAL SCORE SUMMARY ENGINE ---
+echo -e "\n${YELLOW}===============================================${NC}"
+if [ "$TOTAL_SCORE" -eq "$MAX_SCORE" ]; then
+    echo -e "${GREEN}FINAL EXAM SCORE: $TOTAL_SCORE / $MAX_SCORE (100%)${NC}"
+else
+    PERCENTAGE=$(( (TOTAL_SCORE * 100) / MAX_SCORE ))
+    echo -e "${YELLOW}CURRENT EXAM SCORE: $TOTAL_SCORE / $MAX_SCORE ($PERCENTAGE%)${NC}"
+fi
+
+if [ "$TOTAL_SCORE" -eq "$MAX_SCORE" ] || [ "$PERCENTAGE" -ge 66 ]; then
+    echo -e "${GREEN}EXAM STATUS: PASSING COMPLIANT (Target >= 66%)${NC}"
+else
+    echo -e "${RED}EXAM STATUS: BELOW PASSING THRESHOLD (Target >= 66%)${NC}"
+fi
+echo -e "${YELLOW}===============================================${NC}"
