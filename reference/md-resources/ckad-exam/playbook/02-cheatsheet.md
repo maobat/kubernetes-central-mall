@@ -1,11 +1,19 @@
 
 ---
 
-# 📘 `02-cheatsheet.md`
-
 # ⚡ CKAD Cheatsheet
 
 Short, fast, no thinking.
+
+> [!WARNING]
+> **Custom Variables (`$do` / `$now`) Warning:**
+> In this cheatsheet, we use the shortcuts `$do` and `$now` which are defined as:
+> ```bash
+> export do="--dry-run=client -o yaml"
+> export now="--grace-period=0 --force"
+> ```
+> * **Local practice environment:** These are highly recommended to save time.
+> * **Exam Day:** **Do not rely on them!** During the exam, you will frequently hop between different contexts and nodes (via `ssh` or context switches). Environment variables do not transfer automatically to other nodes/sessions. If you type `k run nginx $do` in a new shell where `$do` is not defined, it will evaluate to an empty string and run the Pod *live* in the cluster instead of generating the YAML template, costing you time and points.
 
 ---
 
