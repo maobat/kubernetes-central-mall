@@ -64,7 +64,7 @@ Compact study guides and modular documentation covering all CKAD domains.
 *Real Exam Drill*
 Practice the exam-level mock simulator suite on your local cluster using mapped mall analogies.
 - **Goal:** Get comfortable with exam-level pressure, multi-context switches, and debugging under time constraints.
-- **Trial Pack:** Download the free [ckad-mall-simulator-trial.zip](./ckad-mall-simulator-trial.zip) to practice Questions 1 & 2 instantly.
+- 🆓 **Try the Simulator:** Download the free [**ckad-mall-simulator-trial.zip**](./ckad-mall-simulator-trial.zip) to practice Questions 1 & 2 instantly (includes automated scoring!).
 - **Links:** [Go to the Simulator Guide](./reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md) | [Real Simulator (Questions Only)](./reference/md-resources/ckad-exam/simulator/06-ckad-real-simulator.md) | [Setup Instructions](./reference/md-resources/ckad-exam/simulator/06-ckad-simulator-prep.md) | [Unlock Full 22 Questions](PREMIUM.md)
 
 ---

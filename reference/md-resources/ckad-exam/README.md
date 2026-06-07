@@ -35,6 +35,16 @@ This directory contains resources to prepare for and execute your **CKAD Exam Da
 
 ---
 
+## 🆓 Free Simulator Trial
+
+To help you get started instantly without manually copy-pasting files, you can download our pre-packaged **Free Simulator Trial**. It contains the complete local setup and automated scoring scripts pre-configured for **Question 1** and **Question 2**:
+
+👉 [**Download the Free Simulator Trial (ZIP)**](../../../ckad-mall-simulator-trial.zip) 👈
+
+*Unzip this package directly into your repository root folder to begin practicing immediately.*
+
+---
+
 ## ⚙️ Prerequisites & Quick Start
 
 Before starting the simulator locally, ensure you meet the following requirements:
