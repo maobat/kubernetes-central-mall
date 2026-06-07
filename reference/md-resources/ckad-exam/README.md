@@ -30,7 +30,7 @@ This directory contains resources to prepare for and execute your **CKAD Exam Da
 - **Lab Setup Script:** [setup-labs.sh](./scripts/setup-labs.sh) — spins up namespaces, pods, and deployments.
 - **Master Study Guide:** [Killer.sh Simulator Guide](./simulator/06-killer-sh-simulator.md) — full 22-question syllabus with blueprints, solutions, and exam tips.
 - **Mock Exam Simulator:** [Real Simulator (Questions Only)](./simulator/06-killer-sh-real-simulator.md) — practice questions-only under real exam conditions.
-- **Grading Script:** [check-answers-labs.sh](./scripts/check-answers-labs.sh) — terminal grading tool to verify your answers.
+- **Grading Script:** [check-answers-with-score-labs.sh](./scripts/check-answers-with-score-labs.sh) — terminal grading tool to verify your answers.
 - **Cleanup Script:** [cleanup-labs.sh](./scripts/cleanup-labs.sh) — tears down all created namespaces and directories.
 
 ---
@@ -45,19 +45,19 @@ Before starting the simulator locally, ensure you meet the following requirement
    sudo chown -R $(whoami) /opt/course
    ```
 
-### ⚡ Quick Start Workflow:
+### ⚡ Quick Start Workflow (Run from repository root):
 1. **Initialize the lab:**
    ```bash
-   ./scripts/setup-labs.sh
+   sudo ./reference/md-resources/ckad-exam/scripts/setup-labs.sh
    ```
 2. **Take the exam:** Open [Real Simulator](./simulator/06-killer-sh-real-simulator.md) and solve the tasks.
 3. **Verify your answers:**
    ```bash
-   ./scripts/check-answers-labs.sh
+   ./reference/md-resources/ckad-exam/scripts/check-answers-with-score-labs.sh
    ```
 4. **Clean up when finished:**
    ```bash
-   ./scripts/cleanup-labs.sh
+   ./reference/md-resources/ckad-exam/scripts/cleanup-labs.sh
    ```
 
 ---

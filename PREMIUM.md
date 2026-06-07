@@ -14,7 +14,7 @@ Stop wasting hours setting up test clusters. Run a single command to automatical
 ### 📋 2. The Comprehensive 22-Question Simulation Blueprint
 A full, curated challenge set mapped directly against the 2026 CNCF Certified Kubernetes Application Developer curriculum constraints. No generic questions, every task is wrapped inside our highly memorable Mall Analogy framework.
 
-### 🤖 3. The Automated Mall Inspector Engine (`check-answers-labs.sh`)
+### 🤖 3. The Automated Mall Inspector Engine (`check-answers-with-score-labs.sh`)
 The ultimate diagnostic companion. Run the evaluator script at any time to instantly analyze your running cluster. It executes programmatic validation checks across your objects and spits out clean, explicit pass/fail evaluation logs to expose your hidden mistakes before the real exam day.
 
 ---
@@ -25,11 +25,11 @@ You can test the automation and study workflow with our **Free Simulator Trial**
 
 👉 [**Download the Free Simulator Trial (ZIP)**](./ckad-mall-simulator-trial.zip) 👈
 
-Once you have downloaded and unzipped the trial package:
-1. Initialize the practice environment: `./scripts/setup-labs.sh`
+Once you have downloaded and unzipped the trial package directly into your local `kubernetes-central-mall` directory:
+1. Initialize the practice environment: `sudo ./reference/md-resources/ckad-exam/scripts/setup-labs.sh`
 2. Open the questions: [06-killer-sh-real-simulator.md](./reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md)
 3. Check the solution explanations: [06-killer-sh-simulator.md](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)
-4. Evaluate your work: `./scripts/check-answers-labs.sh`
+4. Evaluate your work: `./reference/md-resources/ckad-exam/scripts/check-answers-with-score-labs.sh`
 
 ---
 
@@ -39,4 +39,4 @@ Get instant access to the private automation scripts and the complete 22-questio
 
 👉 [**Download the Premium Simulation Suite via Gumroad**](YOUR_GUMROAD_OR_PAYWALL_URL) 👈
 
-*Unzip the downloaded package directly into your local `kubernetes-central-mall` directory and execute `./setup-labs.sh` to begin.*
+*Unzip the downloaded package directly into your local `kubernetes-central-mall` directory and execute `sudo ./reference/md-resources/ckad-exam/scripts/setup-labs.sh` to begin.*
