@@ -42,6 +42,8 @@ The documents are designed to be read sequentially, but each section is also sel
   A hands-on exercise guiding you through routing requests to a specific namespace using Services, Ingress, and Gateway API, simulating a real-world customer journey within the mall.
 - [3.7 The "Traffic Flow" Verification](md-resources/traffic-flow-verification.md)  
   A practical lab focused on implementing weighted traffic routing to support canary deployments and progressive delivery strategies.
+- [3.8 Lab: Gateway API Path-Based Routing](../practice/labs/ch12-ingress/lab05-gateway-api-routing/README.md)  
+  Implement basic host and path-based routing using the modern Gateway API.
 - [4.0 The Evolution of the Service IP Tracker](md-resources/service-ip-tracker-evolution.md)  
   Endpoints vs EndpointSlice.
 - [4.1 Application Environment, Configuration and Security](md-resources/configuration-decoupling.md)  

@@ -8,6 +8,7 @@ Manage external access to your services using [Ingress](../../../GLOSSARY.md#ing
 | [Lab 02: Path Routing](./lab02-path-routing/README.md) | Route traffic to different services based on the URL path. |
 | [Lab 03: Advanced Ingress](./lab03-advanced-ingress/README.md) | Explore advanced features like SSL termination and custom annotations. |
 | [Lab 04: Gateway API Canary](./lab04-gateway-api-canary/README.md) | Use the [Gateway API](../../../GLOSSARY.md#gateway-api) for advanced traffic management and canary releases. |
+| [Lab 05: Gateway API Routing](./lab05-gateway-api-routing/README.md) | Implement basic host and path-based routing using the modern [Gateway API](../../../GLOSSARY.md#gateway-api). |
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)

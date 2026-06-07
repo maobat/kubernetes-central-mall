@@ -1,0 +1,23 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: storefront-route
+  namespace: default
+spec:
+  parentRefs:
+  - name: mall-gateway
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /shoes
+    backendRefs:
+    - name: shoes-store-svc
+      port: 80
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /shirts
+    backendRefs:
+    - name: shirts-store-svc
+      port: 80
