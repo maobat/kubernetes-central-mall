@@ -14,9 +14,13 @@ Prepare for the Certified Kubernetes Application Developer (CKAD) exam with hand
 ### 🎓 Exam Preparation
 
 For a complete walkthrough and practice of the simulator tasks using the mall analogy:
-- 👉 **[The CKAD Central Mall Master Simulator Guide (Killer.sh)](../../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)**
-- 👉 **[The CKAD Mock Exam Simulator (Questions Only)](../../../reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md)**
-- 👉 **[The CKAD Simulator Lab Preparation Guide](../../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator-prep.md)**
+- 👉 **[The CKAD Central Mall Master Simulator Guide](../../../reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md)**
+- 👉 **[The CKAD Mock Exam Simulator (Questions Only)](../../../reference/md-resources/ckad-exam/simulator/06-ckad-real-simulator.md)**
+- 👉 **[The CKAD Simulator Lab Preparation Guide](../../../reference/md-resources/ckad-exam/simulator/06-ckad-simulator-prep.md)**
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

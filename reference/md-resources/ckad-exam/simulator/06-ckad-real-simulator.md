@@ -2,7 +2,7 @@
 
 Welcome to the real-simulator mode. This file contains **only the questions** as you would see them on the exam screen. Solutions, fast execution commands, and docs references have been stripped so you can practice under realistic time pressure.
 
-Use [06-killer-sh-simulator.md](./06-killer-sh-simulator.md) to check the solutions and [check-answers-labs.sh](../scripts/check-answers-labs.sh) to grade your cluster state.
+Use [06-ckad-practice-simulator.md](./06-ckad-practice-simulator.md) to check the solutions and [check-answers-with-score-labs.sh](../scripts/check-answers-with-score-labs.sh) to grade your cluster state.
 
 > [!NOTE]
 > **Practice Environment vs. Real Simulator Contexts:**
@@ -48,3 +48,7 @@ Question 2
 [Back to Documentation](../../README.md)
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

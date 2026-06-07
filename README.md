@@ -60,12 +60,12 @@ Compact study guides and modular documentation covering all CKAD domains.
 
 ---
 
-### 5. 🏬 [CKAD Simulator: Killer.sh Practice](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)
+### 5. 🏬 [CKAD Mock Simulator: Central Mall Practice](./reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md)
 *Real Exam Drill*
-Practice the Killer.sh simulator suite on your local cluster using mapped mall analogies.
+Practice the exam-level mock simulator suite on your local cluster using mapped mall analogies.
 - **Goal:** Get comfortable with exam-level pressure, multi-context switches, and debugging under time constraints.
 - **Trial Pack:** Download the free [ckad-mall-simulator-trial.zip](./ckad-mall-simulator-trial.zip) to practice Questions 1 & 2 instantly.
-- **Links:** [Go to the Simulator Guide](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md) | [Real Simulator (Questions Only)](./reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md) | [Setup Instructions](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator-prep.md) | [Unlock Full 22 Questions](PREMIUM.md)
+- **Links:** [Go to the Simulator Guide](./reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md) | [Real Simulator (Questions Only)](./reference/md-resources/ckad-exam/simulator/06-ckad-real-simulator.md) | [Setup Instructions](./reference/md-resources/ckad-exam/simulator/06-ckad-simulator-prep.md) | [Unlock Full 22 Questions](PREMIUM.md)
 
 ---
 
@@ -130,3 +130,7 @@ The **Central Mall** is designed for non-linear exploration. Use these tips to m
 ---
 
 🛍️ *Ready to start? Head over to [Chapter 1: Choosing the Right Workload](./sources/story/ch01-choosing-the-right-workload.md) and hire your first worker!*
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

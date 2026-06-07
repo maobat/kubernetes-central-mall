@@ -179,8 +179,8 @@ Comprehensive guides for the final stretch before the exam:
 - ⏱️ [Time Management Strategy](md-resources/ckad-exam/playbook/03-time-management.md)
 - ✅ [Final Checklist](md-resources/ckad-exam/playbook/04-final-checklist.md)
 - 🔑 [SSH & Contexts](md-resources/ckad-exam/playbook/05-ssh-and-contexts.md)
-- 🏬 [Killer.sh Simulator Guide](md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)
-- 🎯 [Real Simulator (Questions Only)](md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md)
+- 🏬 [CKAD Practice Simulator Guide](md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md)
+- 🎯 [Real Simulator (Questions Only)](md-resources/ckad-exam/simulator/06-ckad-real-simulator.md)
 
 ---
 
@@ -197,3 +197,7 @@ Comprehensive guides for the final stretch before the exam:
 - Pair these documents with the hands-on exercises in the **[practice/labs/](../practice/labs/README.md)** directory for practical learning.
 
 This documentation is part of an evolving project and will expand as new sections and labs are added.
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

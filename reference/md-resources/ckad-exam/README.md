@@ -25,11 +25,11 @@ This directory contains resources to prepare for and execute your **CKAD Exam Da
 - **Verification List:** [Final Checklist](./playbook/04-final-checklist.md) — what to check before submitting.
 - **Context Routing:** [SSH & Contexts](./playbook/05-ssh-and-contexts.md) — moving between clusters and nodes safely.
 
-### 🚀 Part 2: Killer.sh Simulator (CKAD Mall Analogy Practice)
-- **Lab Preparation:** [Lab Prep Guide](./simulator/06-killer-sh-simulator-prep.md) — local lab setup guide.
+### 🚀 Part 2: CKAD Mock Simulator (Central Mall Practice)
+- **Lab Preparation:** [Lab Prep Guide](./simulator/06-ckad-simulator-prep.md) — local lab setup guide.
 - **Lab Setup Script:** [setup-labs.sh](./scripts/setup-labs.sh) — spins up namespaces, pods, and deployments.
-- **Master Study Guide:** [Killer.sh Simulator Guide](./simulator/06-killer-sh-simulator.md) — full 22-question syllabus with blueprints, solutions, and exam tips.
-- **Mock Exam Simulator:** [Real Simulator (Questions Only)](./simulator/06-killer-sh-real-simulator.md) — practice questions-only under real exam conditions.
+- **Master Study Guide:** [CKAD Practice Simulator Guide](./simulator/06-ckad-practice-simulator.md) — full 22-question syllabus with blueprints, solutions, and exam tips.
+- **Mock Exam Simulator:** [Real Simulator (Questions Only)](./simulator/06-ckad-real-simulator.md) — practice questions-only under real exam conditions.
 - **Grading Script:** [check-answers-with-score-labs.sh](./scripts/check-answers-with-score-labs.sh) — terminal grading tool to verify your answers, calculate your weighted exam score, and check if you met the 66% passing threshold.
 - **Cleanup Script:** [cleanup-labs.sh](./scripts/cleanup-labs.sh) — tears down all created namespaces and directories.
 
@@ -50,7 +50,7 @@ Before starting the simulator locally, ensure you meet the following requirement
    ```bash
    sudo ./reference/md-resources/ckad-exam/scripts/setup-labs.sh
    ```
-2. **Take the exam:** Open [Real Simulator](./simulator/06-killer-sh-real-simulator.md) and solve the tasks.
+2. **Take the exam:** Open [Real Simulator](./simulator/06-ckad-real-simulator.md) and solve the tasks.
 3. **Verify your answers:**
    ```bash
    ./reference/md-resources/ckad-exam/scripts/check-answers-with-score-labs.sh
@@ -67,3 +67,7 @@ Before starting the simulator locally, ensure you meet the following requirement
 
 ---
 [Mall Directory ✨](../../../GLOSSARY.md)
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

@@ -103,10 +103,14 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Ch. 16** – [Lab 02: Namespace & Pod Management](ch16-ckad-exam/lab02-namespaces-and-pods/README.md)
 - **Ch. 16** – [Lab 03: Advanced Kubectl Sorting](ch16-ckad-exam/lab03-advanced-kubectl-sorting/README.md)
 - **Ch. 16** – [Lab 04: SSH & Contexts](ch16-ckad-exam/lab04-ssh-and-contexts/README.md)
-- **Simulator** – [Master Simulator Guide](../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md) | [Real Simulator (Questions Only)](../../reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md) | [Lab Prep Guide](../../reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator-prep.md)
+- **Simulator** – [CKAD Practice Simulator Guide](../../reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md) | [Real Simulator (Questions Only)](../../reference/md-resources/ckad-exam/simulator/06-ckad-real-simulator.md) | [Lab Prep Guide](../../reference/md-resources/ckad-exam/simulator/06-ckad-simulator-prep.md)
 
 ---
 [Back to Main Index](../../README.md)
 
 ---
 [Mall Directory ✨](../../GLOSSARY.md)
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

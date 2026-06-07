@@ -37,3 +37,7 @@ When practicing on a local single-node cluster (like **Kind** or **Minikube**) i
 
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

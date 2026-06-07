@@ -27,8 +27,8 @@ You can test the automation and study workflow with our **Free Simulator Trial**
 
 Once you have downloaded and unzipped the trial package directly into your local `kubernetes-central-mall` directory:
 1. Initialize the practice environment: `sudo ./reference/md-resources/ckad-exam/scripts/setup-labs.sh`
-2. Open the questions: [06-killer-sh-real-simulator.md](./reference/md-resources/ckad-exam/simulator/06-killer-sh-real-simulator.md)
-3. Check the solution explanations: [06-killer-sh-simulator.md](./reference/md-resources/ckad-exam/simulator/06-killer-sh-simulator.md)
+2. Open the questions: [06-ckad-real-simulator.md](./reference/md-resources/ckad-exam/simulator/06-ckad-real-simulator.md)
+3. Check the solution explanations: [06-ckad-practice-simulator.md](./reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md)
 4. Evaluate your work: `./reference/md-resources/ckad-exam/scripts/check-answers-with-score-labs.sh`
 
 ---
@@ -40,3 +40,7 @@ Get instant access to the private automation scripts and the complete 22-questio
 👉 [**Download the Premium Simulation Suite via Gumroad**](YOUR_GUMROAD_OR_PAYWALL_URL) 👈
 
 *Unzip the downloaded package directly into your local `kubernetes-central-mall` directory and execute `sudo ./reference/md-resources/ckad-exam/scripts/setup-labs.sh` to begin.*
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*

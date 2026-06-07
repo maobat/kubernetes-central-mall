@@ -2,7 +2,7 @@
 
 Welcome to the Master Simulator Guide. This file contains the complete solutions, explanations, and Official Docs references for the simulator questions. Use this file to check your answers and understand the best practices.
 
-Use [06-killer-sh-real-simulator.md](./06-killer-sh-real-simulator.md) to practice in "questions-only" mode.
+Use [06-ckad-real-simulator.md](./06-ckad-real-simulator.md) to practice in "questions-only" mode.
 
 > [!NOTE]
 > **Practice Environment vs. Real Simulator Contexts:**
@@ -79,3 +79,7 @@ The command should use `kubectl`.
 [Back to Documentation](../../README.md)
 ---
 [Mall Directory ✨](../../../../GLOSSARY.md)
+
+---
+
+> **Disclaimer:** *Kubernetes®, CKAD, and CNCF are registered trademarks of The Linux Foundation. This project is an independent educational resource and is not affiliated with, sponsored by, or officially endorsed by The Linux Foundation or the Cloud Native Computing Foundation (CNCF).*
