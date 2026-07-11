@@ -101,10 +101,10 @@ Since both Deployments share the label `app: wonderful`, the [Service](../../../
 
 2. **Test Traffic Split:**
    ```bash
-   PORT=$(kubectl get svc wonderful -o jsonpath='{.spec.ports[0].nodePort}')
-   
    # Run multiple curls to see the different responses
-   for i in {1..10}; do curl -sI $(minikube ip):$PORT | grep -i "Server"; done
+   NODE_IP=$(kubectl get node ckad-control-plane -o jsonpath='{.status.addresses[0].address}')
+   PORT=$(kubectl get svc wonderful-v1 -o jsonpath='{.spec.ports[0].nodePort}')
+   for ((;;)); do curl -sI $NODE_IP:$PORT | grep -i "Server"; sleep 1;done
    ```
    *Statistically, you should see 'httpd' about 8 times and 'nginx' about 2 times.*
 
