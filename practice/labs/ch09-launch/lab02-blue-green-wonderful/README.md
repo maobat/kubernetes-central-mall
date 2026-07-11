@@ -44,7 +44,7 @@ If you need to prepare the "Blue" environment:
 ```bash
 kubectl create deploy wonderful-v1 --image=httpd:alpine --replicas=3
 kubectl label deploy wonderful-v1 app=wonderful version=v1 --overwrite
-kubectl expose deploy wonderful-v1 --name=wonderful --type=NodePort --port=80 --target-port=80 --selector=app=wonderful,version=v1
+kubectl expose deploy wonderful-v1 --name=wonderful --type=NodePort --port=80 --target-port=80 ,version=v1
 ```
 
 ### 2. Prepare the "Green" [Deployment](../../../../GLOSSARY.md#deployment)

@@ -96,7 +96,7 @@ Since both Deployments share the label `app: wonderful`, the [Service](../../../
    obviously previoulsly you need to expose the [service](../../../../GLOSSARY.md#service)
 
    ```bash
-   k expose deploy wonderful-v1 --name=wonderful --type=NodePort --port=80 --target-port=80 --selector=app=wonderful
+   k expose deploy wonderful-v1 --name=wonderful --type=NodePort --port=80 --target-port=80 
    ```
 
 2. **Test Traffic Split:**
