@@ -46,11 +46,88 @@ StatefulSets require a [service](../../../../GLOSSARY.md#service) to manage thei
 kubectl create service clusterip boutique --tcp=80:80 --clusterip="None"
 ```
 
-### 2. Create the [StatefulSet](../../../../GLOSSARY.md#statefulset)
+### 2. Attempt to Create the [StatefulSet](../../../../GLOSSARY.md#statefulset) Directly (Will Fail)
+If you try to run:
 ```bash
-# Using shorthand or generating YAML
 kubectl create statefulset boutique --image=nginx:alpine --replicas=3
 ```
+> [!NOTE]
+> This command will fail because `statefulset` is not a supported subcommand for `kubectl create`.
+
+### 3. Generate a [Deployment](../../../../GLOSSARY.md#deployment) Template Instead
+To work around this, generate a Deployment template first:
+```bash
+kubectl create deploy boutique --image=nginx:alpine --replicas=3 --dry-run=client -o yaml > sfs.yaml
+```
+
+### 4. Switch to [StatefulSet](../../../../GLOSSARY.md#statefulset) and Add the [Service](../../../../GLOSSARY.md#service)
+Open the generated `sfs.yaml` file, and:
+1. Change `kind: Deployment` to `kind: StatefulSet`.
+2. Add `serviceName: boutique` to the `spec` block.
+3. Add the headless service definition to the same file.
+
+Your final `sfs.yaml` should look like this:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: boutique
+  name: boutique
+spec:
+  clusterIP: None
+  ports:
+  - name: 80-80
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: boutique
+  type: ClusterIP
+status:
+  loadBalancer: {}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: boutique
+  name: boutique
+spec:
+  serviceName: boutique
+  replicas: 3
+  selector:
+    matchLabels:
+      app: boutique
+  template:
+    metadata:
+      labels:
+        app: boutique
+    spec:
+      containers:
+      - image: nginx:alpine
+        name: boutique
+        resources: {}
+        volumeMounts:
+        - name: boutique-locker
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: boutique-locker
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "standard"
+      resources:
+        requests:
+          storage: 1Gi
+status: {}
+```
+
+Apply the manifest:
+```bash
+kubectl apply -f sfs.yaml
+```
+
 
 ---
 

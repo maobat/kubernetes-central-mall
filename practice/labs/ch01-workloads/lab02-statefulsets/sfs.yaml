@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: svc-web
-  name: svc-web
+    app: boutique
+  name: boutique
 spec:
   clusterIP: None
   ports:
@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: svc-web
+    app: boutique
   type: ClusterIP
 status:
   loadBalancer: {}
@@ -21,29 +21,29 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   labels:
-    app: svc-web
-  name: web
+    app: boutique
+  name: boutique
 spec:
-  serviceName: svc-web
+  serviceName: boutique
   replicas: 3
   selector:
     matchLabels:
-      app: web
+      app: boutique
   template:
     metadata:
       labels:
-        app: web
+        app: boutique
     spec:
       containers:
-      - image: registry.k8s.io/nginx-slim:0.24
-        name: nginx-slim
+      - image: nginx:alpine
+        name: boutique
         resources: {}
         volumeMounts:
-        - name: www
+        - name: boutique-locker
           mountPath: /usr/share/nginx/html
   volumeClaimTemplates:
   - metadata:
-      name: www
+      name: boutique-locker
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "standard"
