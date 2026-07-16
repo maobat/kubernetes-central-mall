@@ -41,7 +41,14 @@ The Mall's surveillance system must be deployed on every [node](../../../../GLOS
 ### 1. Create the Security Mandate
 ```bash
 # Generating YAML or using create
-kubectl create daemonset mall-guard --image=nginx:alpine --namespace=default
+k create deploy mall-guard --image=nginx:1.14 -n default --dry-run=client -o yaml > deploy2daemonset.yaml
+
+# update deploy2daemonset.yaml
+# change kind: Deployment with kind: DaemonSet.
+# remove replicas: ... (DaemonSet run every node).
+# remove strategym, status...
+vim deploy2daemonset.yaml
+k apply -f deploy2daemonset.yaml
 ```
 
 ### 2. Verify Presence
