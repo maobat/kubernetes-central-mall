@@ -107,6 +107,13 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 - **Simulator** – [CKAD Practice Simulator Guide](../../reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md) | [Real Simulator (Questions Only)](../../reference/md-resources/ckad-exam/simulator/06-ckad-real-simulator.md) | [Lab Prep Guide](../../reference/md-resources/ckad-exam/simulator/06-ckad-simulator-prep.md)
 
 ---
+
+## 🏆 Part 7: Capstone Project
+> **Focus:** The Grand Opening. Connecting all concepts into a single comprehensive deployment.
+
+- **Ch. 17** – [Lab 01: The Grand Opening (Capstone Project)](ch17-capstone/README.md)
+
+---
 [Back to Main Index](../../README.md)
 
 ---

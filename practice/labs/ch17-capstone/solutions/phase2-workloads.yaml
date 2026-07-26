@@ -1,0 +1,91 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: warehouse-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""
+  hostPath:
+    path: "/mnt/data"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: warehouse-pvc
+  namespace: mall-shops
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""
+  resources:
+    requests:
+      storage: 500Mi
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: shoes-boutique
+  namespace: mall-shops
+spec:
+  serviceName: "shoes-boutique-svc"
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shoes-boutique
+  template:
+    metadata:
+      labels:
+        app: shoes-boutique
+    spec:
+      serviceAccountName: cashier
+      volumes:
+      - name: config-volume
+        configMap:
+          name: mall-prices
+      - name: shared-data
+        emptyDir: {}
+      - name: warehouse-data
+        persistentVolumeClaim:
+          claimName: warehouse-pvc
+      initContainers:
+      - name: init-myservice
+        image: busybox:1.36
+        command: ['sh', '-c', 'echo "Welcome to the Grand Opening!" > /usr/share/nginx/html/index.html']
+        volumeMounts:
+        - name: shared-data
+          mountPath: /usr/share/nginx/html
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/config
+        - name: shared-data
+          mountPath: /usr/share/nginx/html
+        - name: warehouse-data
+          mountPath: /var/lib/shoes
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: security-camera
+  namespace: mall-security
+spec:
+  selector:
+    matchLabels:
+      app: security-camera
+  template:
+    metadata:
+      labels:
+        app: security-camera
+    spec:
+      containers:
+      - name: camera
+        image: busybox:1.36
+        command: ["sh", "-c", "while true; do echo 'Monitoring mall...'; sleep 10; done"]

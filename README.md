@@ -5,7 +5,15 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 ![Status: WIP](https://img.shields.io/badge/status-WIP-orange)
 
-**Kubernetes Central Mall** is a **CKAD-focused learning project** that explains Kubernetes concepts using a **consistent shopping mall analogy**, reinforced by **hands-on labs** and **educational comic strips**.
+**Kubernetes Central Mall** is a **CKAD-focused learning project** that explains Kubernetes concepts using a **consistent shopping mall analogy**. It's a complete learning path:
+
+🏬 **Kubernetes Central Mall**
+📖 [Read the guide](./sources/story.md)
+🎨 [Read the comic](./visual-learning/comics/README.md)
+🧪 [Complete the labs](./practice/labs/README.md)
+🏆 [Finish the Grand Opening Capstone](./practice/labs/ch17-capstone/README.md)
+🔍 Survive the Inspector
+✅ Pass the CKAD
 
 The goal is simple:  
 👉 *Understand Kubernetes fast, remember it longer, pass the exam with confidence.*
@@ -130,6 +138,12 @@ The **Central Mall** is designed for non-linear exploration. Use these tips to m
 ---
 
 🛍️ *Ready to start? Head over to [Chapter 1: Choosing the Right Workload](./sources/story/ch01-choosing-the-right-workload.md) and hire your first worker!*
+
+---
+
+## 💡 Why this project exists
+
+Kubernetes is often taught by memorizing commands and YAML. This project takes a different approach: every concept is part of a single, consistent world. The goal isn't just to help you pass the CKAD—it is to help you remember why Kubernetes behaves the way it does.
 
 ---
 

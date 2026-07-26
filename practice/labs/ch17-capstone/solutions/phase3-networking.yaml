@@ -1,0 +1,62 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shoes-boutique-svc
+  namespace: mall-shops
+spec:
+  clusterIP: None
+  selector:
+    app: shoes-boutique
+  ports:
+  - port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mall-entrance
+  namespace: mall-shops
+spec:
+  type: ClusterIP
+  selector:
+    app: shoes-boutique
+  ports:
+  - port: 80
+    targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: secure-shops
+  namespace: mall-shops
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: mall-system
+    ports:
+    - protocol: TCP
+      port: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grand-entrance
+  namespace: mall-shops
+spec:
+  rules:
+  - host: "mall.example.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: mall-entrance
+            port:
+              number: 80

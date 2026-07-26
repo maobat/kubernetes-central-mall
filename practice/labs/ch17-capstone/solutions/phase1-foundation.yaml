@@ -1,0 +1,63 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mall-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mall-shops
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mall-security
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: cashier
+  namespace: mall-shops
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: mall-shops
+  name: shop-manager
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services"]
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: cashier-shop-manager
+  namespace: mall-shops
+subjects:
+- kind: ServiceAccount
+  name: cashier
+  namespace: mall-shops
+roleRef:
+  kind: Role
+  name: shop-manager
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mall-prices
+  namespace: mall-shops
+data:
+  shoes: "50"
+  shirts: "25"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mall-vault
+  namespace: mall-system
+type: Opaque
+stringData:
+  master-password: supersecret123
