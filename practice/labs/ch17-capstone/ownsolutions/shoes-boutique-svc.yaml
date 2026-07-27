@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: shoes-boutique-svc
+  name: shoes-boutique-svc
+  namespace: mall-shops
+spec:
+  clusterIP: None
+  ports:
+  - name: "80"
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: shoes-boutique-svc
+  type: ClusterIP
+status:
+  loadBalancer: {}
