@@ -60,6 +60,11 @@ kubectl auth can-i get pods --as=system:serviceaccount:mall-shops:cashier -n mal
    - Command: `["sh", "-c", "while true; do echo 'Monitoring mall...'; sleep 10; done"]`
 4. **InitContainer:** Add an init container to the `shoes-boutique` StatefulSet that writes "Welcome to the Grand Opening!" to a shared `emptyDir` volume at `/usr/share/nginx/html/index.html`. Make sure this `emptyDir` volume is also mounted in the **main `nginx` container** at `/usr/share/nginx/html`.
 
+> [!NOTE]
+> **🕵️ Inspector's Tip:** 
+> - **Why specify `containerPort: 80` if nginx defaults to it?** It acts as documentation! It explicitly tells Kubernetes (and other developers) that this container expects traffic on port 80.
+> - **Why mount the emptyDir in the `busybox` initContainer at `/usr/share/nginx/html`?** The initContainer acts as a "construction worker." It mounts a shared "USB drive" (`emptyDir`), writes the `index.html` file, and leaves. When the main `nginx` container starts, it mounts that *exact same* USB drive into its own `/usr/share/nginx/html` folder, finding the file the construction worker left behind!
+
 ### ✅ Verify Phase 2
 ```bash
 kubectl get pv,pvc -n mall-shops
@@ -74,7 +79,7 @@ kubectl exec shoes-boutique-0 -n mall-shops -- cat /usr/share/nginx/html/index.h
 **Goal:** Connect the shops internally and open the grand entrance to the public.
 
 1. **Internal Service:** Create a Headless Service named `shoes-boutique-svc` in `mall-shops` exposing port 80. Select the `shoes-boutique` Pods.
-2. **External Service:** Create a ClusterIP Service named `mall-entrance` in `mall-shops` exposing port 80. Select the `shoes-boutique` Pods.
+2. **Entrance Service:** Create a ClusterIP Service named `mall-entrance` in `mall-shops` exposing port 80. Select the `shoes-boutique` Pods.
 3. **NetworkPolicy:** Create a NetworkPolicy in `mall-shops` named `secure-shops` that applies to **all pods** in the `mall-shops` namespace:
    - Denies all ingress traffic by default.
    - Allows ingress traffic on port 80 only from pods in the `mall-system` namespace.

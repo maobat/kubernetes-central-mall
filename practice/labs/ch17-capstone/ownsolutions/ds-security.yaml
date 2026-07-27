@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  creationTimestamp: null
+  labels:
+    app: security-camera
+  name: security-camera
+  namespace: mall-security
+spec:
+  selector:
+    matchLabels:
+      app: security-camera
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: security-camera
+    spec:
+      containers:
+      - command:
+        - sh
+        - -c
+        - while true; do echo 'Monitoring mall...'; sleep 10; done
+        image: busybox:1.36
+        name: busybox
+        resources: {}
+status: {}
