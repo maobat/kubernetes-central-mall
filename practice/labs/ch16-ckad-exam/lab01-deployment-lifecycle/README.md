@@ -82,4 +82,12 @@ kubectl -n session283884 expose deployment web --port=80 --target-port=80 --type
 -   `expose` is a quick way to create a [service](../../../../GLOSSARY.md#service) mapping to a [deployment](../../../../GLOSSARY.md#deployment)'s pods.
 
 ---
+
+## 🔗 References
+- **Comic** → [The Trend Spot - Rolling Renovation](../../../../visual-learning/comics/ch09-launch/01-rolling-update/README.md)
+- **Docs** → [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) | [kubectl rollout](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_rollout/)
+- **Study Guide** → [Chapter 09: Launch Strategies](../../../../sources/study-guide/ch09-deployments.md)
+- **Related Lab** → [Ch09 Lab 05: Deployment Lifecycle (Full Walk-through)](../../ch09-launch/lab05-deployment-lifecycle/README.md)
+
+---
 [Mall Directory ✨](../../../../GLOSSARY.md)

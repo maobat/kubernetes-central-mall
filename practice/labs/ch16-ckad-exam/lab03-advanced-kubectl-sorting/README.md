@@ -39,4 +39,10 @@ kubectl -n session283884 get pods --sort-by=.status.containerStatuses[0].restart
 -   Common sort fields: `.metadata.creationTimestamp`, `.status.phase`, `.status.containerStatuses[0].restartCount`.
 
 ---
+
+## 🔗 References
+- **Docs** → [kubectl get --sort-by](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_get/) | [JSONPath](https://kubernetes.io/docs/reference/kubectl/jsonpath/)
+- **Study Guide** → [Chapter 15: Debugging](../../../../sources/study-guide/ch15-debugging.md)
+
+---
 [Mall Directory ✨](../../../../GLOSSARY.md)

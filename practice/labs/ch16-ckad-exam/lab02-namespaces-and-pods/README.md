@@ -73,4 +73,10 @@ kubectl -n session283884 delete deployment web
 -   Use `--restart=Never` with `kubectl run` to create a standalone [Pod](../../../../GLOSSARY.md#pod) instead of a [Deployment](../../../../GLOSSARY.md#deployment).
 
 ---
+
+## 🔗 References
+- **Docs** → [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) | [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
+- **Study Guide** → [Chapter 09: Launch Strategies](../../../../sources/study-guide/ch09-deployments.md)
+
+---
 [Mall Directory ✨](../../../../GLOSSARY.md)
