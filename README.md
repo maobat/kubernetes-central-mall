@@ -143,7 +143,7 @@ The **Central Mall** is designed for non-linear exploration. Use these tips to m
 
 ## 💡 Why this project exists
 
-Kubernetes is often taught by memorizing commands and YAML. This project takes a different approach: every concept is part of a single, consistent world. The goal isn't just to help you pass the CKAD—it is to help you remember why Kubernetes behaves the way it does.
+Kubernetes is often taught by memorizing commands and YAML. This project takes a different approach: every concept is part of a single, consistent world. The goal isn't just to help you pass the CKAD, it is to help you remember why Kubernetes behaves the way it does.
 
 ---
 
