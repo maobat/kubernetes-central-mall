@@ -77,6 +77,21 @@ Practice the exam-level mock simulator suite on your local cluster using mapped 
 
 ---
 
+### 6. 🚨 [Troubleshooting Challenges: Live Incident Drills](./practice/labs/ch17-capstone/challenge/README.md)
+*Break it. Fix it. Pass the exam.*
+Real cluster troubleshooting drills where scripts inject actual faults into your running environment. No hypotheticals — the cluster breaks, and you repair it under exam-like pressure.
+- **Goal:** Build the muscle memory for the `Observe → Inspect → Identify → Repair → Verify` loop that the CKAD exam demands.
+- **How it works:** Run `overnight-contractors.sh` to introduce six real faults, then debug and repair each one without touching the solution manifests.
+- 🆓 **Included free:** The [**`overnight-contractors.sh`**](./practice/labs/ch17-capstone/challenge/overnight-contractors.sh) challenge script ships with this repository — clone, complete the Capstone, and run it directly on your local cluster. No setup beyond Phase 1–4.
+- 🔒 **Want more challenges?** Additional incident drill packs (multi-cluster scenarios, advanced RBAC failures, storage deep-dives) are part of the [**Premium Simulation Suite**](PREMIUM.md).
+- **Links:** [Challenge README](./practice/labs/ch17-capstone/challenge/README.md) | [Capstone Lab (prerequisite)](./practice/labs/ch17-capstone/README.md)
+
+| Challenge | Faults | Prerequisite |
+| :--- | :---: | :--- |
+| 🏗️ [Grand Opening — Overnight Contractors](./practice/labs/ch17-capstone/challenge/README.md) | 6 | Capstone Phases 1–4 |
+
+---
+
 ## 🚀 Recommended Workflow
 
 If you are new to a concept, follow this "Central Mall" sequence:

@@ -521,6 +521,17 @@ You believed the mall was ready. At exactly 9:00 AM, the Inspector enters with a
 
 Several overnight contractors made unauthorised changes. You may repair resources, but **do not delete and recreate the entire architecture**.
 
+> [!IMPORTANT]
+> **This phase has a live challenge environment.**
+> The [`challenge/`](challenge/README.md) folder contains two executable scripts that turn the running cluster into a real troubleshooting scenario:
+>
+> | Script | Purpose |
+> | :--- | :--- |
+> | [`overnight-contractors.sh`](challenge/overnight-contractors.sh) | Injects all six faults into the live cluster |
+> | [`challenge-reset.sh`](challenge/challenge-reset.sh) | Restores the approved solution state |
+>
+> See the **[Challenge README](challenge/README.md)** for operating rules, the suggested first-inspection sequence, and reset instructions.
+
 ### 🔥 Operational fires
 
 1. **Who removed the permits?**  
