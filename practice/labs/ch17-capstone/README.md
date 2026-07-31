@@ -338,8 +338,47 @@ minikube addons enable ingress
 
 For kind, a fresh cluster normally needs a controller installed separately. Use the deployment instructions that match your kind and ingress-nginx versions rather than blindly relying on an old pinned URL.
 
-> **NetworkPolicy caveat:** a controller running in a namespace such as `ingress-nginx` will also be blocked by this mission's strict policy. The ClusterIP policy test below remains valid. To test the public Ingress end to end, either run the controller in `mall-system` or explicitly allow its namespace as an additional source.
-
+> **NetworkPolicy caveat:**  
+> The validation commands in this chapter access the application **through the ClusterIP Service**, so allowing traffic from the `mall-system` namespace is sufficient.
+>
+> If you later install an **Ingress controller** (for example, in the `ingress-nginx` namespace) and test the application through the Ingress, the source namespace becomes the controller's namespace. In that case, you must either:
+>
+> - Deploy the Ingress controller in the `mall-system` namespace, or
+> - Extend the `NetworkPolicy` to explicitly allow traffic from the controller's namespace.
+>
+> This distinction is important:
+>
+> ```text
+> ClusterIP test
+> --------------
+> BusyBox Pod (mall-system)
+>         │
+>         ▼
+> ClusterIP Service
+>         │
+>         ▼
+> Application Pods
+> ```
+>
+> ```text
+> Ingress test
+> ------------
+> Browser
+>    │
+>    ▼
+> Ingress
+>    │
+>    ▼
+> Ingress Controller (e.g. ingress-nginx)
+>    │
+>    ▼
+> ClusterIP Service
+>    │
+>    ▼
+> Application Pods
+> ```
+>
+> Therefore, a successful `wget` from a Pod running in `mall-system` **does not require an Ingress controller**. It validates only the internal Service path. An Ingress controller becomes part of the request path **only when traffic enters the cluster through an Ingress resource**.
 ### 🏗️ Build hints
 
 Generate the headless Service skeleton:
