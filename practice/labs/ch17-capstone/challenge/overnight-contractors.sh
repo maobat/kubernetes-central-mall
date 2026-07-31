@@ -98,7 +98,7 @@ kubectl patch networkpolicy secure-shops -n "$SHOP_NS" --type=json \
   -p='[{"op":"replace","path":"/spec/ingress/0/ports/0/port","value":8080}]' >/dev/null
 ok "Approved traffic is now allowed only on the wrong TCP port."
 
-info "[6/6] The security team is in the wrong district."
+info "[6/6] The security cameras should guard only the Secure District."
 kubectl patch daemonset security-camera -n "$SECURITY_NS" --type=merge \
   -p='{"spec":{"template":{"spec":{"affinity":null}}}}' >/dev/null
 ok "The DaemonSet is no longer restricted to secure nodes."

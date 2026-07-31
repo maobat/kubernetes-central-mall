@@ -549,8 +549,8 @@ Several overnight contractors made unauthorised changes. You may repair resource
 5. **A contractor locked every entrance.**  
    Approved traffic from `mall-system` cannot reach TCP port 80. Repair the NetworkPolicy.
 
-6. **The security team is in the wrong district.**  
-   The DaemonSet is not restricted to `mall-zone=secure` nodes.
+6. **The security cameras should guard only the Secure District.**  
+   The DaemonSet has lost its placement rule and is no longer constrained to nodes labeled `mall-zone=secure`.
 
 ### ✅ Final inspection checklist
 
