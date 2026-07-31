@@ -306,22 +306,80 @@ kubernetes.io/metadata.name: mall-system
 
 #### 4. Ingress
 
-Create `grand-entrance` in `mall-shops`:
+Create an Ingress named `grand-entrance` in the `mall-shops` namespace:
 
-- host: `mall.example.com`;
-- path: `/`;
-- `pathType: Prefix`;
-- backend: `mall-entrance` on port `80`.
+- host: `mall.example.com`
+- path: `/`
+- `pathType: Prefix`
+- backend Service: `mall-entrance`
+- backend port: `80`
 
-If your environment has no Ingress Controller, use a NodePort fallback for `mall-entrance`.
+At this point, it is important to distinguish between the **Service** and the **Ingress**.
 
-### 🕵️ Inspector's Tip — The missing doorman
+```
+                    Inside the Cluster
 
-An Ingress is a routing map, not a traffic-processing component. The Ingress Controller is the doorman who reads that map and forwards visitors to the correct Service.
+             ┌──────────────────────────┐
+             │  Service: mall-entrance  │
+             └─────────────┬────────────┘
+                           │
+                     shoes-boutique Pods
+```
+
+The Service is the **internal corridor** used by Pods inside the cluster.
+
+Pods can reach it directly using Kubernetes DNS:
+
+```bash
+wget http://mall-entrance.mall-shops
+```
+
+This request never touches an Ingress.
+
+---
+
+The Ingress is something different:
+
+```
+Outside Client
+      │
+      ▼
+mall.example.com
+      │
+      ▼
+Ingress: grand-entrance
+      │
+      ▼
+Ingress Controller
+      │
+      ▼
+Service: mall-entrance
+      │
+      ▼
+shoes-boutique Pods
+```
+
+The Ingress is simply a routing rule.
+
+It does **not** forward traffic by itself.
+
+Someone must read that rule and apply it.
+
+That "someone" is the **Ingress Controller**.
+
+### 🕵️ Inspector's Tip — The Missing Doorman
+
+Think of the mall:
+
+- `mall-entrance` is the **internal corridor** connecting the lobby to the boutiques.
+- `grand-entrance` is the **main public entrance**.
+- The **Ingress Controller** is the doorman standing at that entrance.
+
+Without the doorman, visitors arriving at the main entrance have nobody to guide them.
 
 ![The Missing Doorman](comics/03-the-missing-doorman.png)
 
-Check whether a controller is present:
+Check whether a controller exists:
 
 ```bash
 kubectl get ingressclass
@@ -329,56 +387,63 @@ kubectl get pods -A | grep -i ingress
 kubectl get svc -A | grep -i ingress
 ```
 
-For minikube:
+For Minikube:
 
 ```bash
-minikube addons list | grep ingress
 minikube addons enable ingress
 ```
 
-For kind, a fresh cluster normally needs a controller installed separately. Use the deployment instructions that match your kind and ingress-nginx versions rather than blindly relying on an old pinned URL.
+For kind, install an Ingress Controller separately.
 
-> **NetworkPolicy caveat:**  
-> The validation commands in this chapter access the application **through the ClusterIP Service**, so allowing traffic from the `mall-system` namespace is sufficient.
+---
+
+> **NetworkPolicy caveat**
 >
-> If you later install an **Ingress controller** (for example, in the `ingress-nginx` namespace) and test the application through the Ingress, the source namespace becomes the controller's namespace. In that case, you must either:
+> The examples in this chapter validate the application through the **Service**:
 >
-> - Deploy the Ingress controller in the `mall-system` namespace, or
-> - Extend the `NetworkPolicy` to explicitly allow traffic from the controller's namespace.
->
-> This distinction is important:
->
-> ```text
-> ClusterIP test
-> --------------
-> BusyBox Pod (mall-system)
->         │
->         ▼
-> ClusterIP Service
->         │
->         ▼
-> Application Pods
+> ```bash
+> wget http://mall-entrance.mall-shops
 > ```
 >
-> ```text
-> Ingress test
-> ------------
+> This path is:
+>
+> ```
+> Pod
+>   │
+>   ▼
+> Service (mall-entrance)
+>   │
+>   ▼
+> Pods
+> ```
+>
+> Therefore, only the `mall-system` namespace needs to be allowed by the NetworkPolicy.
+>
+> If you later test:
+>
+> ```
+> http://mall.example.com
+> ```
+>
+> the request follows a different path:
+>
+> ```
 > Browser
->    │
->    ▼
-> Ingress
->    │
->    ▼
-> Ingress Controller (e.g. ingress-nginx)
->    │
->    ▼
-> ClusterIP Service
->    │
->    ▼
-> Application Pods
+>   │
+>   ▼
+> Ingress Controller
+>   │
+>   ▼
+> Service (mall-entrance)
+>   │
+>   ▼
+> Pods
 > ```
 >
-> Therefore, a successful `wget` from a Pod running in `mall-system` **does not require an Ingress controller**. It validates only the internal Service path. An Ingress controller becomes part of the request path **only when traffic enters the cluster through an Ingress resource**.
+> In this case, the source seen by the Pods is the **Ingress Controller**, not the browser.
+>
+> Therefore, the controller's namespace (for example `ingress-nginx`) must also be allowed by the NetworkPolicy, unless the controller itself runs in `mall-system`.
+
 ### 🏗️ Build hints
 
 Generate the headless Service skeleton:
