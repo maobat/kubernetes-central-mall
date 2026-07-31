@@ -79,7 +79,7 @@ Visual explanations of key Kubernetes concepts using the Central Mall analogy.
 - **Ch. 15** – [The Connection Crisis (Kubeconfig & VPN)](ch15-debugging/05-the-connection-crisis/README.md)
 - **Ch. 15** – [The IPv6 Illusion (ImagePullBackOff)](ch15-debugging/06-image-pull-backoff/README.md)
 - **Ch. 15** – [The Security Guard Strike (CNI & NetPol)](ch15-debugging/07-security-guard-strike/README.md)
-- **Ch. 17** – [Capstone](ch17-capstone/comics/README.md)
+- **Ch. 17** – [Capstone](/practice/labs/ch17-capstone/comics/README.md)
 ---
 
 ## 🎓 Part 6: CKAD Exam Preparation
