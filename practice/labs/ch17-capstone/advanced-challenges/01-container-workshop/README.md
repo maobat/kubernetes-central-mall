@@ -44,6 +44,18 @@ After completing this challenge, you will be able to:
 
 ---
 
+## 🚀 Start the Challenge
+
+Inject the overnight faults into your cluster:
+
+```bash
+./setup.sh
+```
+
+This applies the base manifest, then breaks it — removing the approved image from every kind node, swapping in a broken image, and misconfiguring the Service port. Everything described below is what you'll find once this script has run.
+
+---
+
 ## 🔥 Operational Fires
 
 Overnight, several contractors made unauthorized changes.
