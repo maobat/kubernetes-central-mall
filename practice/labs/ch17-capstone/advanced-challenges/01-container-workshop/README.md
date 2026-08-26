@@ -9,6 +9,12 @@ Some problems happened during the image build, others during deployment, and one
 Your mission is to reopen the boutique.
 
 > 📍 **Namespace:** all resources for this challenge live in `mall-workshop`.
+>
+> 📂 **Working directory:** run every command in this README (`docker build`, `./setup.sh`, `./verify.sh`, `./reset.sh`) from inside `advanced-challenges/01-container-workshop/` — the Dockerfile and scripts are resolved relative to this challenge's own directory.
+>
+> ```bash
+> cd practice/labs/ch17-capstone/advanced-challenges/01-container-workshop
+> ```
 
 ```text
 Dockerfile
