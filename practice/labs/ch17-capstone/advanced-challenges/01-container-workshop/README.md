@@ -159,7 +159,7 @@ docker build -t central-mall/boutique:v2 .
 Load it into kind:
 
 ```bash
-       docker-image central-mall/boutique:v2 --name ckad
+kind load docker-image central-mall/boutique:v2 --name ckad
 ```
 
 Inspect the Deployment:
@@ -179,6 +179,18 @@ Verify the repair:
 ```bash
 ./verify.sh
 ```
+
+---
+
+## 🔄 Restore & Clean Up
+
+To rebuild the approved image, reload it into kind, and recreate the `mall-workshop` namespace from a clean, working state:
+
+```bash
+./reset.sh
+```
+
+Use this if you want to retry the challenge from scratch, or to confirm what the "approved" state actually looks like before diagnosing the faults.
 
 ---
 
