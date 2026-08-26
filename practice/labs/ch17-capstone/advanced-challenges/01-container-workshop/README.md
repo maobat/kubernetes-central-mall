@@ -8,6 +8,8 @@ Some problems happened during the image build, others during deployment, and one
 
 Your mission is to reopen the boutique.
 
+> 📍 **Namespace:** all resources for this challenge live in `mall-workshop`.
+
 ```text
 Dockerfile
       │
