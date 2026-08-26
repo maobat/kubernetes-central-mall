@@ -90,6 +90,8 @@ kubectl exec secure-shop -- id
 **📘 Technical Deep Dive**
 * [Worker Safety and Conduct (SecurityContexts)](../../reference/md-resources/securitycontext-worker-safety-and-conduct.md)
 * 🧪 **Lab 01:** [Worker Safety (SecurityContext)](../../practice/labs/ch06-safety/lab01-worker-safety/README.md)
+* 🧪 **Lab 02:** [Drop Privileges (Capabilities & Escalation)](../../practice/labs/ch06-safety/lab02-drop-privileges/README.md)
+* 🧪 **Lab 03:** [The Seccomp Filter (System Call Restrictions)](../../practice/labs/ch06-safety/lab03-seccomp-profile/README.md)
 
 ---
 [Mall Directory ✨](../../GLOSSARY.md)
