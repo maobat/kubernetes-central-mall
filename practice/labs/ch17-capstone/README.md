@@ -476,6 +476,71 @@ Again, ensure the selector is `app=shoes-boutique`.
 
 `kubectl expose` cannot expose a StatefulSet, so create these Services separately.
 
+Generate the Ingress:
+
+```bash
+kubectl create ingress grand-entrance \
+  -n mall-shops \
+  --rule="mall.example.com/*=mall-entrance:80" \
+  --dry-run=client \
+  -o yaml > ownsolutions/grand-entrance.yaml
+```
+
+The `*` after `/` tells `kubectl` to generate:
+
+```yaml
+path: /
+pathType: Prefix
+```
+
+Check the generated manifest:
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grand-entrance
+  namespace: mall-shops
+spec:
+  rules:
+    - host: mall.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mall-entrance
+                port:
+                  number: 80
+```
+
+If the cluster has an IngressClass that must be selected explicitly, add it with:
+
+```bash
+kubectl get ingressclass
+```
+
+Then either generate it with:
+
+```bash
+kubectl create ingress grand-entrance \
+  -n mall-shops \
+  --class=nginx \
+  --rule="mall.example.com/*=mall-entrance:80" \
+  --dry-run=client \
+  -o yaml > ownsolutions/grand-entrance.yaml
+```
+
+or add the field manually:
+
+```yaml
+spec:
+  ingressClassName: nginx
+```
+
+Use the actual IngressClass name available in the cluster.
+
 ### ✅ Verify Phase 3
 
 ```bash
@@ -529,22 +594,31 @@ Expected: timeout or connection failure.
 
 ### 🎬 Story
 
-The mall appears complete, but the Inspector does not accept “Running” as proof. The boutiques must demonstrate that they are alive, ready for customers, and operating within budget. Security cameras must also stand only in the secure zone.
+The mall appears complete, but the Inspector does not accept **"Running"** as proof.
+
+The boutiques must demonstrate that they are **alive**, **ready for customers**, and operating within their assigned resource budget.
+
+Meanwhile, the security cameras are no longer allowed to patrol the entire city. They must guard only the **Secure District** of the mall.
+
+---
 
 ### 🎯 Your mission
 
 #### 1. Resource requests and limits
 
-Update only the main nginx container:
+Update **only the main nginx container**:
 
 ```yaml
 requests:
   memory: 64Mi
   cpu: 250m
+
 limits:
   memory: 128Mi
   cpu: 500m
 ```
+
+---
 
 #### 2. Liveness probe
 
@@ -555,6 +629,8 @@ initialDelaySeconds: 5
 periodSeconds: 10
 failureThreshold: 3
 ```
+
+---
 
 #### 3. Readiness probe
 
@@ -574,15 +650,42 @@ initialDelaySeconds: 5
 periodSeconds: 5
 ```
 
+---
+
 #### 4. Strict node affinity
 
-Label one node:
+The security cameras must guard **only the Secure District**.
+
+To make that possible, Kubernetes first needs to know which node belongs to that district.
+
+Inspect the available nodes:
+
+```bash
+kubectl get nodes
+```
+
+Choose one node and label it:
 
 ```bash
 kubectl label node <NODE-NAME> mall-zone=secure
 ```
 
-Update `security-camera` to require:
+Verify the result:
+
+```bash
+kubectl get nodes -L mall-zone
+```
+
+Expected:
+
+```text
+NAME             STATUS   ROLES           MALL-ZONE
+control-plane    Ready    control-plane
+worker           Ready                    secure
+worker2          Ready
+```
+
+Now update `security-camera` to require:
 
 ```text
 requiredDuringSchedulingIgnoredDuringExecution
@@ -591,17 +694,107 @@ requiredDuringSchedulingIgnoredDuringExecution
       → mall-zone In [secure]
 ```
 
+---
+
+### 🕵️ Inspector's Tip — Why label the node first?
+
+Think of the cluster as a city.
+
+Initially every building looks identical:
+
+```text
+Cluster
+
+Node A
+Node B
+Node C
+```
+
+After placing the Secure District sign:
+
+```text
+Cluster
+
+🏷 Node A
+mall-zone=secure
+
+Node B
+
+Node C
+```
+
+the Scheduler finally knows where security cameras are allowed to work.
+
+The DaemonSet now says:
+
+> "Deploy cameras only onto nodes labelled
+> `mall-zone=secure`."
+
+Without at least one matching node:
+
+```text
+Scheduler
+      │
+      ▼
+No matching node
+      │
+      ▼
+Pods remain Pending
+```
+
+Once a node is labelled:
+
+```text
+Scheduler
+      │
+      ▼
+Node A matches
+      │
+      ▼
+Camera Pods start
+```
+
+The label therefore **must exist before applying Phase 4**, otherwise the DaemonSet has no eligible destination.
+
+---
+
 ### 🕵️ Inspector's Tip
 
-- **Liveness:** “Should Kubernetes restart this container?”
-- **Readiness:** “Should Services send customers to this Pod now?”
-- **Requests:** the reserved operating budget used by the scheduler.
+- **Liveness:** "Should Kubernetes restart this container?"
+- **Readiness:** "Should Services send customers to this Pod now?"
+- **Requests:** the operating budget reserved by the Scheduler.
 - **Limits:** the maximum budget the container may consume.
-- **Required affinity:** a hard location rule; without a matching node, the Pod remains Pending.
+- **Required node affinity:** a hard placement rule. Without a matching node, Pods remain Pending.
+
+---
+
+### 🏗️ Build hints
+
+Resource requests and limits can be updated imperatively:
+
+```bash
+kubectl set resources statefulset shoes-boutique \
+  -n mall-shops \
+  -c nginx \
+  --requests=cpu=250m,memory=64Mi \
+  --limits=cpu=500m,memory=128Mi
+```
+
+There is **no imperative command** for:
+
+- Liveness probes
+- Readiness probes
+- Node affinity
+
+Edit the StatefulSet and DaemonSet manifests directly.
+
+---
 
 ### ✅ Verify Phase 4
 
 ```bash
+kubectl get nodes -L mall-zone
+
 kubectl get sts shoes-boutique -n mall-shops \
   -o jsonpath='{.spec.template.spec.containers[0].resources}'
 echo
@@ -609,9 +802,15 @@ echo
 kubectl describe pod shoes-boutique-0 -n mall-shops \
   | grep -E 'Liveness|Readiness'
 
-kubectl get nodes --show-labels | grep mall-zone
-kubectl get pods -n mall-security -o wide
 kubectl describe ds security-camera -n mall-security
+
+kubectl get pods -n mall-security -o wide
+```
+
+The `security-camera` Pods should run **only** on nodes labelled:
+
+```text
+mall-zone=secure
 ```
 
 ---
@@ -621,40 +820,56 @@ kubectl describe ds security-camera -n mall-security
 
 ### 🎬 Story
 
-You believed the mall was ready. At exactly 9:00 AM, the Inspector enters with a clipboard.
+You believed the mall was ready.
 
-Several overnight contractors made unauthorised changes. You may repair resources, but **do not delete and recreate the entire architecture**.
+At exactly **9:00 AM**, the Inspector enters carrying a clipboard.
+
+Unfortunately, several overnight contractors made unauthorised changes.
+
+Repair the mall **without deleting and recreating the whole architecture**.
+
+---
 
 > [!IMPORTANT]
 > **This phase has a live challenge environment.**
-> The [`challenge/`](challenge/README.md) folder contains two executable scripts that turn the running cluster into a real troubleshooting scenario:
+>
+> The `challenge/` folder contains two helper scripts:
 >
 > | Script | Purpose |
 > | :--- | :--- |
-> | [`overnight-contractors.sh`](challenge/overnight-contractors.sh) | Injects all six faults into the live cluster |
-> | [`challenge-reset.sh`](challenge/challenge-reset.sh) | Restores the approved solution state |
+> | `overnight-contractors.sh` | Injects all six faults into the running cluster |
+> | `challenge-reset.sh` | Restores the approved solution |
 >
-> See the **[Challenge README](challenge/README.md)** for operating rules, the suggested first-inspection sequence, and reset instructions.
+> See the Challenge README for the operating rules and the recommended inspection order.
+
+---
 
 ### 🔥 Operational fires
 
 1. **Who removed the permits?**  
-   The `cashier` identity can no longer read Pods. Restore its RBAC access.
+   The `cashier` identity can no longer read Pods. Restore its RBAC permissions.
 
 2. **The warehouse reservation is stuck.**  
    `warehouse-pvc` remains Pending. Repair the PV/PVC binding without changing the requested size.
 
 3. **The welcome sign has disappeared.**  
-   nginx serves its default page. Restore the init-container-to-nginx shared-volume path.
+   nginx serves its default page. Restore the shared `emptyDir` path between the init container and nginx.
 
 4. **The corridor reaches no boutiques.**  
-   One Service selector does not match the StatefulSet Pod labels.
+   One Service selector no longer matches the StatefulSet Pod labels.
 
 5. **A contractor locked every entrance.**  
-   Approved traffic from `mall-system` cannot reach TCP port 80. Repair the NetworkPolicy.
+   Approved traffic from `mall-system` can no longer reach TCP port 80. Repair the NetworkPolicy.
 
-6. **The security cameras should guard only the Secure District.**  
-   The security cameras are no longer guarding only the Secure District..
+6. **The security cameras escaped the Secure District.**  
+   The DaemonSet has lost its required node affinity and is no longer constrained to nodes labelled:
+
+   ```text
+   mall-zone=secure
+   ```
+
+   Restore the required node affinity.
+---
 
 ### ✅ Final inspection checklist
 
@@ -665,13 +880,17 @@ kubectl auth can-i get pods \
 
 kubectl get pv warehouse-pv
 kubectl get pvc warehouse-pvc -n mall-shops
+
 kubectl get sts shoes-boutique -n mall-shops
 kubectl get ds security-camera -n mall-security
+
 kubectl get svc,ingress,networkpolicy -n mall-shops
 
 kubectl exec -n mall-shops shoes-boutique-0 -c nginx -- \
   cat /usr/share/nginx/html/index.html
 ```
+
+Everything should now be back to the approved Grand Opening configuration.
 
 ---
 
@@ -698,41 +917,25 @@ kubectl exec -n mall-shops shoes-boutique-0 -c nginx -- \
 
 Customers enter the mall.
 
-The corridors guide them to the correct boutiques. The pricing catalogue is mounted. The warehouse is bound. Security cameras watch the secure zone. Cashiers carry the correct permissions. The health Inspector gives a final nod.
+The corridors guide them to the correct boutiques.
+
+The pricing catalogue is mounted.
+
+The warehouse is bound.
+
+Security cameras protect only the Secure District.
+
+Cashiers carry the correct permissions.
+
+The Health Inspector gives one final approving nod.
 
 The Mall Director smiles:
 
-> “Congratulations, Architect. The Kubernetes Central Mall is officially open.”
+> "Congratulations, Architect. The Kubernetes Central Mall is officially open."
 
 ## You are now ready for the CKAD exam.
 
 ---
-
-# 📁 Repository layout
-
-```text
-ch17-capstone/
-├── README.md
-├── comics/
-│   ├── 01-grand-opening-overview.png
-│   ├── 02-one-serviceaccount-two-moments.png
-│   ├── 03-the-missing-doorman.png
-│   └── README.md
-├── ownsolutions/
-│   ├── ds-security.yaml
-│   ├── mall-entrance-svc.yaml
-│   ├── np-secure-shops.yaml
-│   ├── pv.yaml
-│   ├── pvc.yaml
-│   ├── shoes-boutique-svc.yaml
-│   └── sts-shoes-boutique.yaml
-└── solutions/
-    ├── README.md
-    ├── phase1-foundation.yaml
-    ├── phase2-workloads.yaml
-    ├── phase3-networking.yaml
-    └── phase4-maintenance.yaml
-```
 
 ## Apply the official solutions
 
@@ -740,11 +943,25 @@ ch17-capstone/
 kubectl apply -f solutions/phase1-foundation.yaml
 kubectl apply -f solutions/phase2-workloads.yaml
 kubectl apply -f solutions/phase3-networking.yaml
+```
 
-# Label a node before applying Phase 4:
+Before applying **Phase 4**, designate one node as the Secure District:
+
+```bash
+kubectl get nodes
+
 kubectl label node <NODE-NAME> mall-zone=secure
+
+kubectl get nodes -L mall-zone
+```
+
+Now apply the maintenance phase:
+
+```bash
 kubectl apply -f solutions/phase4-maintenance.yaml
 ```
+
+---
 
 ## Clean up
 
@@ -755,14 +972,10 @@ kubectl delete -f solutions/phase2-workloads.yaml --ignore-not-found
 kubectl delete -f solutions/phase1-foundation.yaml --ignore-not-found
 ```
 
+The node label is cluster metadata and is **not removed** by deleting the manifests.
 
----
+Remove it explicitly:
 
-## 🔗 References
-- **Comic** → [Grand Opening Overview](comics/01-grand-opening-overview.png)
-- **Docs** → [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) | [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/network-policies/) | [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-- **Study Guide** → [Chapter 09: Launch Strategies](../../../sources/study-guide/ch09-deployments.md) | [Chapter 13: Networking](../../../sources/study-guide/ch13-networking.md)
-- **Simulator** → [CKAD Practice Simulator Guide](../../../reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md)
-
----
-[Mall Directory ✨](../../../GLOSSARY.md)
+```bash
+kubectl label node <NODE-NAME> mall-zone-
+```
