@@ -83,7 +83,7 @@ kubectl get pods
 ---
 
 ## 🔗 References
-- **Comic** → [SSH & Contexts](../../../../visual-learning/comics/ckad-exam/05-ssh-and-contexts/README.md)
+- **Comic** → [SSH & Contexts](../../../../visual-learning/comics/ch16-ckad-exam/05-ssh-and-contexts/README.md)
 - **Docs** → [kubectl config](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_config/) | [Configure Access to Multiple Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
 - **Study Guide** → [Chapter 15: Debugging](../../../../sources/study-guide/ch15-debugging.md)
 
