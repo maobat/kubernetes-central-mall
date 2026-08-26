@@ -64,6 +64,9 @@ A **[Canary Deployment](../../GLOSSARY.md#canary-deployment)** is like a free sa
 
 **Lab Tip:** In Kubernetes, we do this by having two Deployments (v1.14 and latest) sharing the same **[Service](../../GLOSSARY.md#service)**. By adjusting the **number of replicas** (e.g., 3 Old, 1 Canary), you control the traffic split! For more advanced control, you'd use an **[Ingress](../../GLOSSARY.md#ingress)** or **[Service](../../GLOSSARY.md#service) Mesh**.
 
+> 💡 **Exam Insight — Another Angle: Double-Blind Testing**
+> Canary deployment mirrors a double-blind clinical trial. Real users (the subjects) don't know they've been routed to the new version, and you (the researcher) watch objective signals — error rate, latency, logs — under real production traffic before committing to anything. If the Canary fails, only the sampled slice of users was ever exposed, so you roll back instantly. Once it clears every check, you promote it to 100%, the same way a trial declares a treatment effective after a successful run.
+
 ---
 
 ## ⚖️ Strategy Comparison
