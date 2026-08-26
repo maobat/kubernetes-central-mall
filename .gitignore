@@ -10,3 +10,10 @@ reference/md-resources/ckad-exam/simulator/
 
 ckad-mall-simulator-trial.zip
 ckad-mall-simulator-premium.zip
+
+# Local editor state
+.crossnote/
+
+# Personal scratch notes (not project content)
+/CKAD-CHEAT-SHEET
+/TODO

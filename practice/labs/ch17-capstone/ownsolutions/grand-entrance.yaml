@@ -1,17 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  creationTimestamp: null
   name: grand-entrance
   namespace: mall-shops
 spec:
+  ingressClassName: nginx
   rules:
-  - host: "mall.example.com"
+  - host: mall.example.com
     http:
       paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
+      - backend:
           service:
             name: mall-entrance
             port:
               number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer: {}

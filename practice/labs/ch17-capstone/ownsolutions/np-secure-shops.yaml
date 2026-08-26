@@ -14,4 +14,5 @@ spec:
           kubernetes.io/metadata.name: mall-system
     ports:
     - protocol: TCP
-      port: 80
+      port: 80 
+

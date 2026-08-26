@@ -112,6 +112,7 @@ Hands-on exercises scheduled by the Mall Manager to test your architectural skil
 > **Focus:** The Grand Opening. Connecting all concepts into a single comprehensive deployment.
 
 - **Ch. 17** – [Lab 01: The Grand Opening (Capstone Project)](ch17-capstone/README.md)
+- **Ch. 17** – [Free Trial: Container Workshop Challenge](ch17-capstone/advanced-challenges/01-container-workshop/README.md)
 
 ---
 [Back to Main Index](../../README.md)
