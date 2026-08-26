@@ -65,6 +65,12 @@ Always check:
 - capacity
 - bound status
 
+## 🧮 jsonpath
+```bash
+k get pods -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.phase}{"\n"}{end}'
+```
+Forgetting `-n <ns>` (or `-A`) is the #1 reason a resource "isn't showing up" — not a wrong jsonpath.
+
 ## 🔍 Debug
 - k describe pod `<name>`
 - k logs `<pod>`
