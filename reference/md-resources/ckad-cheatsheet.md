@@ -151,6 +151,47 @@ Quick check that the label actually landed on the Pods (not just the controller 
 kubectl get pods -l x=yyyy
 ```
 
+## 🌐 "TCP port redirection of X:Y" — Service Port Mapping Trap
+
+When the exam wording says *"the Service should use TCP port redirection of X:Y"*, read it like a Docker-style `HOST:CONTAINER` mapping: the **first** number (`X`) is the Service's own `port` (what clients connect to), the **second** number (`Y`) is `targetPort` (the container port it forwards to). `protocol` defaults to `TCP`, but set it explicitly if the task says "TCP" out loud.
+
+> Example requirement: *"The Service should use TCP port redirection of 3333:80."*
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: my-app
+  ports:
+  - port: 3333          # <-- first number: the Service's own port
+    targetPort: 80       # <-- second number: forwarded to this container port
+    protocol: TCP
+```
+
+Quick check that the mapping landed correctly:
+
+```bash
+kubectl get svc my-service -o jsonpath='{.spec.ports[0].port}{":"}{.spec.ports[0].targetPort}{"\n"}'
+```
+
+**Imperative shortcut:** `kubectl create service` (not `kubectl expose`, which has no `--tcp` flag) accepts `PORT:TARGETPORT` directly:
+
+```bash
+kubectl create service clusterip my-service --tcp=3333:80 --dry-run=client -o yaml > svc.yaml
+```
+
+> [!WARNING]
+> The generated `selector` defaults to `app: <service-name>` — almost never what you actually want. Edit it to match your target Deployment/Pod's real labels before applying, or the Service will select zero Pods:
+>
+> ```yaml
+> spec:
+>   selector:
+>     app: my-service   # <-- generated default, usually wrong
+> ```
+
 ## 🩺 "Wait X, then check every Y seconds" — Probe Timing Trap
 
 When the exam wording says *"it should initially wait N seconds and periodically wait M seconds"*, that maps to `initialDelaySeconds` and `periodSeconds` — and an exec-based probe ("executing `cat /tmp/ready`") means `exec.command`, not `httpGet` or `tcpSocket`.
