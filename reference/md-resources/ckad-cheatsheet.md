@@ -237,6 +237,55 @@ kubectl create service clusterip my-service --tcp=3333:80 --dry-run=client -o ya
 >     app: my-service   # <-- generated default, usually wrong
 > ```
 
+## 🧪 Testing a Service — ClusterIP vs FQDN vs Endpoint
+
+When something can't reach a Service, test in **layers** — from "does DNS even resolve" down to "does the Pod itself respond" — to isolate whether the problem is DNS, the Service's `selector`, or the app inside the Pod.
+
+Example setup (`mars` namespace): Service `manager-api-svc` (`ClusterIP 10.96.224.255`, `port: 4444` → `targetPort: 80`) in front of a Deployment whose Pods carry label `id=manager-api-pod`.
+
+```bash
+kubectl get pods,deploy,svc,endpointslice -n mars --show-labels -o wide
+```
+
+**1. Via the Service's ClusterIP + port — tests the Service object itself:**
+
+```bash
+kubectl run tester --rm -it --restart=Never --image=busybox:1.36 -n mars -- \
+  wget -qO- 10.96.224.255:4444
+```
+
+**2. Via the Service name / FQDN — tests DNS resolution too:**
+
+```bash
+# short name (same namespace only)
+wget -qO- manager-api-svc:4444
+
+# FQDN — works from any namespace
+wget -qO- manager-api-svc.mars.svc.cluster.local:4444
+```
+
+**3. Via a Pod's IP + `targetPort` directly — bypasses the Service entirely:**
+
+Get the real Pod/endpoint IPs from the EndpointSlice (or `kubectl get ep` on older clusters):
+
+```bash
+kubectl get endpointslice -n mars -o jsonpath='{.items[0].endpoints[*].addresses}'
+```
+
+```bash
+# hits the Pod directly on its targetPort (80), no Service involved
+wget -qO- 10.244.2.156:80
+```
+
+> [!TIP]
+> **Where it breaks tells you the cause:**
+>
+> - Step 3 fails → the **app itself** is broken (bad container, wrong `containerPort`, app not listening) — nothing to do with the Service.
+> - Step 3 works but Step 1 fails → the **Service's `selector`** doesn't match the Pod's labels, so the EndpointSlice is empty even though the Pods are healthy. Compare `service.spec.selector` against `kubectl get pods --show-labels` directly.
+> - Steps 1 and 3 work but Step 2 fails → a **DNS** problem, not a networking one (check CoreDNS, or that you're using the right namespace in the FQDN).
+>
+> An empty `ENDPOINTS` column on `kubectl get endpointslice` (or `kubectl get ep <svc>`) is the fastest single signal that it's a selector-mismatch problem before you even start testing connectivity.
+
 ## 🩺 "Wait X, then check every Y seconds" — Probe Timing Trap
 
 When the exam wording says *"it should initially wait N seconds and periodically wait M seconds"*, that maps to `initialDelaySeconds` and `periodSeconds` — and an exec-based probe ("executing `cat /tmp/ready`") means `exec.command`, not `httpGet` or `tcpSocket`.
