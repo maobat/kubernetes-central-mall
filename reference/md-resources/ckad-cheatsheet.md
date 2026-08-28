@@ -397,6 +397,45 @@ egress:
         id: api
 ```
 
+### 🔀 OR vs AND Logic in `from`/`to` Selectors
+
+The same List vs Map distinction from earlier decides whether two selectors are combined with **OR** or **AND**, and it's one of the most common NetworkPolicy traps on the exam.
+
+**OR: separate list items, each with its own `-`.** Traffic is allowed if it matches *either* peer:
+
+```yaml
+ingress:
+- from:
+  - podSelector:
+      matchLabels:
+        role: frontend
+  - podSelector:
+      matchLabels:
+        role: monitoring
+```
+
+This allows traffic from Pods labeled `role: frontend` **or** Pods labeled `role: monitoring`, two independent peers in the same `from` list.
+
+**AND: multiple selectors inside the *same* list item, as siblings.** Traffic is allowed only if it matches *all* the conditions at once:
+
+```yaml
+ingress:
+- from:
+  - namespaceSelector:
+      matchLabels:
+        team: ops
+    podSelector:
+      matchLabels:
+        role: monitoring
+```
+
+Here `namespaceSelector` and `podSelector` sit under the **same** `-`, so this allows traffic only from Pods labeled `role: monitoring` that are *also* running in a Namespace labeled `team: ops`. Combining `namespaceSelector` and `podSelector` this way scopes the podSelector to that specific namespace instead of the policy's own namespace.
+
+> [!TIP]
+> **Read the indentation, not the words.** `podSelector` and `namespaceSelector` at the same indent level under one `-` are AND'ed together; each separate `-` under `from`/`to` is OR'ed with the others. The exact same rule applies inside a single `matchLabels` block too: every key/value pair listed there must all match (AND), since `matchLabels` is itself one selector, not a list.
+>
+> Same principle for `ports`: multiple entries in a `ports` list are OR'ed (any listed port is allowed), there's no AND equivalent for ports within one rule.
+
 ## 🩺 "Wait X, then check every Y seconds": Probe Timing Trap
 
 When the exam wording says *"it should initially wait N seconds and periodically wait M seconds"*, that maps to `initialDelaySeconds` and `periodSeconds`, and an exec-based probe ("executing `cat /tmp/ready`") means `exec.command`, not `httpGet` or `tcpSocket`.
