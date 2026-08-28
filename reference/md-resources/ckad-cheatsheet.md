@@ -16,9 +16,9 @@ kubectl apply -f <file.yaml>
 kubectl delete -f <file.yaml>
 ```
 
-## 📐 "Do I need a `-` here?" — List vs Map in YAML
+## 📐 "Do I need a `-` here?": List vs Map in YAML
 
-Ask `kubectl explain` for the field's type — it tells you definitively, no guessing:
+Ask `kubectl explain` for the field's type; it tells you definitively, no guessing:
 
 ```bash
 kubectl explain pod.spec.containers
@@ -29,13 +29,13 @@ kubectl explain pod.spec.containers.securityContext
 | `KIND`/`TYPE` shown | Meaning | Syntax |
 | :--- | :--- | :--- |
 | `[]Object` / `[]string` | **List** | Each entry starts with `-` |
-| `map[string]string` | **Map**, not a list | `key: value`, no `-` — even though the field name sounds like a collection |
-| `Object` (e.g. `PodSecurityContext`) | Single map | `key: value`, nested — no `-` |
-| `string` / `integer` / `boolean` | Scalar | Direct value — no `-` |
+| `map[string]string` | **Map**, not a list | `key: value`, no `-`, even though the field name sounds like a collection |
+| `Object` (e.g. `PodSecurityContext`) | Single map | `key: value`, nested, no `-` |
+| `string` / `integer` / `boolean` | Scalar | Direct value, no `-` |
 
-**Fast heuristic (no typing required):** plural-sounding fields are *usually* lists — `containers`, `volumes`, `volumeMounts`, `ports`, `env`, `tolerations`, `imagePullSecrets`, `command`/`args` (arrays of strings even though not literally "commands"), `capabilities.add`/`drop`. Singular fields like `securityContext`, `resources`, `metadata`, `selector` are almost always maps.
+**Fast heuristic (no typing required):** plural-sounding fields are *usually* lists: `containers`, `volumes`, `volumeMounts`, `ports`, `env`, `tolerations`, `imagePullSecrets`, `command`/`args` (arrays of strings even though not literally "commands"), `capabilities.add`/`drop`. Singular fields like `securityContext`, `resources`, `metadata`, `selector` are almost always maps.
 
-`command`/`args` and `capabilities.add`/`drop` are all confirmed `[]string` by `kubectl explain` — one array item per word/flag or per capability name:
+`command`/`args` and `capabilities.add`/`drop` are all confirmed `[]string` by `kubectl explain`: one array item per word/flag or per capability name:
 
 ```yaml
 containers:
@@ -50,20 +50,20 @@ containers:
 ```
 
 > [!WARNING]
-> **The heuristic breaks on `labels`, `annotations`, and `nodeSelector`.** All three sound like collections but are `map[string]string` — key/value pairs, **not** a list:
+> **The heuristic breaks on `labels`, `annotations`, and `nodeSelector`.** All three sound like collections but are `map[string]string`; key/value pairs, **not** a list:
 >
 > ```yaml
 > metadata:
 >   labels:
->     app: holy-api        # correct — no "-"
+>     app: holy-api        # correct, no "-"
 > spec:
 >   nodeSelector:
->     disktype: ssd         # correct — no "-"
+>     disktype: ssd         # correct, no "-"
 > ```
 >
 > Writing `labels: [{app: holy-api}]` or `- app: holy-api` is a validation error. When in doubt on these three specifically, trust `kubectl explain` over the plural-name heuristic.
 
-**Safest option under exam pressure:** don't guess at all — generate with `--dry-run=client -o yaml` and let `kubectl` write the correct structure, then only edit the values.
+**Safest option under exam pressure:** don't guess at all: generate with `--dry-run=client -o yaml` and let `kubectl` write the correct structure, then only edit the values.
 
 ## 📦 Deployments & Scaling
 
@@ -107,9 +107,9 @@ kubectl describe cm <name>
 kubectl describe secret <name>
 ```
 
-## 🔌 `env` vs `envFrom` — Picking One Key vs the Whole Map
+## 🔌 `env` vs `envFrom`: Picking One Key vs the Whole Map
 
-Both are Container-level fields (see the [Pod vs Container decision table](pod-vs-container-and-decisions.md)), confirmed `[]EnvVar` and `[]EnvFromSource` by `kubectl explain` — both **lists**, but they solve different problems.
+Both are Container-level fields (see the [Pod vs Container decision table](pod-vs-container-and-decisions.md)), confirmed `[]EnvVar` and `[]EnvFromSource` by `kubectl explain`; both **lists**, but they solve different problems.
 
 | | `env` | `envFrom` |
 | :--- | :--- | :--- |
@@ -117,7 +117,7 @@ Both are Container-level fields (see the [Pod vs Container decision table](pod-v
 | **Env var name** | You choose it (`name:`) | Forced to match the ConfigMap/Secret's key name |
 | **Source** | `valueFrom.configMapKeyRef` / `valueFrom.secretKeyRef` (one key) | `configMapRef` / `secretRef` (the whole object) |
 
-**`env` — pick a single key, rename it if you want:**
+**`env`, to pick a single key and rename it if you want:**
 
 ```yaml
 env:
@@ -133,7 +133,7 @@ env:
       key: password
 ```
 
-**`envFrom` — bulk-inject every key, no renaming:**
+**`envFrom`, to bulk-inject every key with no renaming:**
 
 ```yaml
 envFrom:
@@ -166,9 +166,9 @@ kubectl get pods -o wide
 kubectl get deployments -o wide
 ```
 
-## 🏷️ "Each Pod should have label X" — Requirement Phrasing Trap
+## 🏷️ "Each Pod should have label X": Requirement Phrasing Trap
 
-When the exam wording says *"each Pod created by the Job/Deployment/CronJob should have the label `x: yyyy`"*, it means the **Pod template's** labels — not the top-level resource's own `metadata.labels`.
+When the exam wording says *"each Pod created by the Job/Deployment/CronJob should have the label `x: yyyy`"*, it means the **Pod template's** labels, not the top-level resource's own `metadata.labels`.
 
 ```yaml
 apiVersion: batch/v1
@@ -188,7 +188,7 @@ spec:
 ```
 
 > [!TIP]
-> This applies to **every** controller with a Pod template: Deployment, Job, DaemonSet, StatefulSet — labels always go under `spec.template.metadata.labels`. For a **CronJob** it's nested one level deeper, under `spec.jobTemplate.spec.template.metadata.labels`, since a CronJob's template is itself a Job template.
+> This applies to **every** controller with a Pod template: Deployment, Job, DaemonSet, StatefulSet: labels always go under `spec.template.metadata.labels`. For a **CronJob** it's nested one level deeper, under `spec.jobTemplate.spec.template.metadata.labels`, since a CronJob's template is itself a Job template.
 
 Quick check that the label actually landed on the Pods (not just the controller object):
 
@@ -196,7 +196,7 @@ Quick check that the label actually landed on the Pods (not just the controller 
 kubectl get pods -l x=yyyy
 ```
 
-## 🌐 "TCP port redirection of X:Y" — Service Port Mapping Trap
+## 🌐 "TCP port redirection of X:Y": Service Port Mapping Trap
 
 When the exam wording says *"the Service should use TCP port redirection of X:Y"*, read it like a Docker-style `HOST:CONTAINER` mapping: the **first** number (`X`) is the Service's own `port` (what clients connect to), the **second** number (`Y`) is `targetPort` (the container port it forwards to). `protocol` defaults to `TCP`, but set it explicitly if the task says "TCP" out loud.
 
@@ -229,7 +229,7 @@ kubectl create service clusterip my-service --tcp=3333:80 --dry-run=client -o ya
 ```
 
 > [!WARNING]
-> The generated `selector` defaults to `app: <service-name>` — almost never what you actually want. Edit it to match your target Deployment/Pod's real labels before applying, or the Service will select zero Pods:
+> The generated `selector` defaults to `app: <service-name>`, almost never what you actually want. Edit it to match your target Deployment/Pod's real labels before applying, or the Service will select zero Pods:
 >
 > ```yaml
 > spec:
@@ -237,9 +237,9 @@ kubectl create service clusterip my-service --tcp=3333:80 --dry-run=client -o ya
 >     app: my-service   # <-- generated default, usually wrong
 > ```
 
-## 🧪 Testing a Service — ClusterIP vs FQDN vs Endpoint
+## 🧪 Testing a Service: ClusterIP vs FQDN vs Endpoint
 
-When something can't reach a Service, test in **layers** — from "does DNS even resolve" down to "does the Pod itself respond" — to isolate whether the problem is DNS, the Service's `selector`, or the app inside the Pod.
+When something can't reach a Service, test in **layers**: from "does DNS even resolve" down to "does the Pod itself respond", to isolate whether the problem is DNS, the Service's `selector`, or the app inside the Pod.
 
 Example setup (`mars` namespace): Service `manager-api-svc` (`ClusterIP 10.96.224.255`, `port: 4444` → `targetPort: 80`) in front of a Deployment whose Pods carry label `id=manager-api-pod`.
 
@@ -247,24 +247,24 @@ Example setup (`mars` namespace): Service `manager-api-svc` (`ClusterIP 10.96.22
 kubectl get pods,deploy,svc,endpointslice -n mars --show-labels -o wide
 ```
 
-**1. Via the Service's ClusterIP + port — tests the Service object itself:**
+**1. Via the Service's ClusterIP + port, tests the Service object itself:**
 
 ```bash
 kubectl run tester --rm -it --restart=Never --image=busybox:1.36 -n mars -- \
   wget -qO- 10.96.224.255:4444
 ```
 
-**2. Via the Service name / FQDN — tests DNS resolution too:**
+**2. Via the Service name / FQDN, tests DNS resolution too:**
 
 ```bash
 # short name (same namespace only)
 wget -qO- manager-api-svc:4444
 
-# FQDN — works from any namespace
+# FQDN, works from any namespace
 wget -qO- manager-api-svc.mars.svc.cluster.local:4444
 ```
 
-**3. Via a Pod's IP + `targetPort` directly — bypasses the Service entirely:**
+**3. Via a Pod's IP + `targetPort` directly, bypasses the Service entirely:**
 
 Get the real Pod/endpoint IPs from the EndpointSlice (or `kubectl get ep` on older clusters):
 
@@ -280,15 +280,42 @@ wget -qO- 10.244.2.156:80
 > [!TIP]
 > **Where it breaks tells you the cause:**
 >
-> - Step 3 fails → the **app itself** is broken (bad container, wrong `containerPort`, app not listening) — nothing to do with the Service.
+> - Step 3 fails → the **app itself** is broken (bad container, wrong `containerPort`, app not listening), nothing to do with the Service.
 > - Step 3 works but Step 1 fails → the **Service's `selector`** doesn't match the Pod's labels, so the EndpointSlice is empty even though the Pods are healthy. Compare `service.spec.selector` against `kubectl get pods --show-labels` directly.
 > - Steps 1 and 3 work but Step 2 fails → a **DNS** problem, not a networking one (check CoreDNS, or that you're using the right namespace in the FQDN).
 >
 > An empty `ENDPOINTS` column on `kubectl get endpointslice` (or `kubectl get ep <svc>`) is the fastest single signal that it's a selector-mismatch problem before you even start testing connectivity.
 
-## 🩺 "Wait X, then check every Y seconds" — Probe Timing Trap
+### 🌍 NodePort: Reachable on *Every* Node, Not Just Where the Pod Runs
 
-When the exam wording says *"it should initially wait N seconds and periodically wait M seconds"*, that maps to `initialDelaySeconds` and `periodSeconds` — and an exec-based probe ("executing `cat /tmp/ready`") means `exec.command`, not `httpGet` or `tcpSocket`.
+The trap: assuming a `NodePort` Service only answers on the node that's actually running the backing Pod. It doesn't, `kube-proxy` installs the same forwarding rule on **every** node in the cluster, so the NodePort responds cluster-wide regardless of Pod placement.
+
+```text
+service/jupiter-crew-svc   NodePort   10.96.29.238   <none>   8080:30100/TCP   SELECTOR: id=jupiter-crew
+pod/jupiter-crew-deploy-6d6c6985c-zzp8m   Running   NODE: ckad-worker2
+```
+
+> Example requirement: *"Test the NodePort Service using the internal IP of all available nodes and port 30100: on which nodes is the Service reachable? On which node is the Pod running?"*
+
+```bash
+# 1. Get every node's internal IP
+kubectl get nodes -o wide
+
+# 2. curl the NodePort on each one
+curl <control-plane-internal-ip>:30100
+curl <ckad-worker-internal-ip>:30100
+curl <ckad-worker2-internal-ip>:30100
+```
+
+> [!TIP]
+> **Service reachable on:** every node in the cluster: that's the entire point of `NodePort`, it's a cluster-wide listening port, not a per-node one.
+> **Pod running on:** exactly one node: read the `NODE` column from `kubectl get pods -o wide` (here, `ckad-worker2`).
+>
+> Don't confuse "where the Service answers" (everywhere) with "where the Pod lives" (one specific node); the exam question is testing exactly that distinction.
+
+## 🩺 "Wait X, then check every Y seconds": Probe Timing Trap
+
+When the exam wording says *"it should initially wait N seconds and periodically wait M seconds"*, that maps to `initialDelaySeconds` and `periodSeconds`, and an exec-based probe ("executing `cat /tmp/ready`") means `exec.command`, not `httpGet` or `tcpSocket`.
 
 > Example requirement: *"The Pod should have a readiness probe executing `cat /tmp/ready`. It should initially wait 5 and periodically wait 10 seconds."*
 
@@ -314,9 +341,9 @@ containers:
 | "checking `http://.../path` on port P" | `httpGet.path` / `httpGet.port` |
 | "checking that port P is open" | `tcpSocket.port` |
 
-## 🔐 "...on container level" — SecurityContext Placement Trap
+## 🔐 "...on container level": SecurityContext Placement Trap
 
-When the wording explicitly says *"...for the security context **on container level**"*, `allowPrivilegeEscalation` and `privileged` go under the **container's** `securityContext`, nested inside `spec.template.spec.containers[]` — not under `spec.template.spec.securityContext` (the Pod-level one). See the [Pod vs Container decision table](pod-vs-container-and-decisions.md) for the full field list — both of these fields are container-only regardless of wording.
+When the wording explicitly says *"...for the security context **on container level**"*, `allowPrivilegeEscalation` and `privileged` go under the **container's** `securityContext`, nested inside `spec.template.spec.containers[]`, not under `spec.template.spec.securityContext` (the Pod-level one). See the [Pod vs Container decision table](pod-vs-container-and-decisions.md) for the full field list: both of these fields are container-only regardless of wording.
 
 > Example requirement: *"The new Deployment should set `allowPrivilegeEscalation: false` and `privileged: false` for the security context on container level."*
 
@@ -341,13 +368,13 @@ spec:
 
 ## 🏷️ Naming the Container Differently from the Job/Pod
 
-There is **no imperative flag** to set a container name different from the resource's own name — `kubectl create job`/`kubectl run` always name the container the same as the Job/Pod. If the task requires a distinct container name (e.g. Job `neb-new-job` with container `neb-new-job-container`), you must dry-run, edit the YAML, then apply.
+There is **no imperative flag** to set a container name different from the resource's own name: `kubectl create job`/`kubectl run` always name the container the same as the Job/Pod. If the task requires a distinct container name (e.g. Job `neb-new-job` with container `neb-new-job-container`), you must dry-run, edit the YAML, then apply.
 
 ```bash
 kubectl create job neb-new-job --image=busybox --dry-run=client -o yaml -- sleep 3600 > neb-new-job.yaml
 ```
 
-Edit only the container's `name:` field (leave `metadata.name` — the Job's own name — untouched):
+Edit only the container's `name:` field (leave `metadata.name`, the Job's own name, untouched):
 
 ```yaml
 apiVersion: batch/v1
@@ -436,7 +463,7 @@ spec:
 ```
 
 > [!WARNING]
-> **Race condition:** a native sidecar starts *before* the regular `containers`, so if it reads a file the main container is supposed to create (like `tail -f cleaner.log` here), that file may not exist yet — `tail -f` on a missing file fails immediately, and the sidecar crash-loops until the main container finally creates it.
+> **Race condition:** a native sidecar starts *before* the regular `containers`, so if it reads a file the main container is supposed to create (like `tail -f cleaner.log` here), that file may not exist yet: `tail -f` on a missing file fails immediately, and the sidecar crash-loops until the main container finally creates it.
 >
 > Fix it by pre-seeding the file with a plain (non-sidecar) init container that runs first:
 >
@@ -448,7 +475,7 @@ spec:
 >   volumeMounts:
 >   - name: logs
 >     mountPath: /var/log/cleaner
-> - name: logger-con        # the native sidecar, defined after — see block above
+> - name: logger-con        # the native sidecar, see block above for its definition
 >   ...
 > ```
 >
@@ -502,12 +529,12 @@ spec:
 ```
 
 ```bash
-# init-con already exited — can't exec into it. Check its work through nginx instead,
+# init-con already exited, so you can't exec into it. Check its work through nginx instead,
 # since both mount the same "web-content" volume:
 kubectl exec -it <pod-name> -c nginx -- cat /usr/share/nginx/html/index.html
 ```
 
-## 🧮 Custom Output — jsonpath
+## 🧮 Custom Output: jsonpath
 
 ```bash
 # Print a single field for every item, tab-separated, one line per item
