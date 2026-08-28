@@ -313,6 +313,65 @@ curl <ckad-worker2-internal-ip>:30100
 >
 > Don't confuse "where the Service answers" (everywhere) with "where the Pod lives" (one specific node); the exam question is testing exactly that distinction.
 
+## 🛡️ Generating a NetworkPolicy Skeleton
+
+Unlike Deployments, Services, or Jobs, there is **no imperative generator** for NetworkPolicy:
+
+```bash
+kubectl create networkpolicy --help
+# error: unknown command "networkpolicy"
+```
+
+Two real options on exam day:
+
+**1. `kubectl explain` to see the exact field tree while you hand-write the YAML:**
+
+```bash
+kubectl explain networkpolicy.spec --recursive
+```
+
+Shows the full structure: `podSelector`, `policyTypes`, `ingress[].from`, `egress[].to`, `ports[].protocol`/`port`, so you know exactly what to nest where without guessing.
+
+**2. Copy the skeleton from the official docs (allowed during the exam):**
+[kubernetes.io/docs/concepts/services-networking/network-policies/#the-networkpolicy-resource](https://kubernetes.io/docs/concepts/services-networking/network-policies/#the-networkpolicy-resource) has a ready-made example with `podSelector`, `policyTypes`, `ingress`, and `egress` already structured; copy it and edit only the values.
+
+**Minimal skeleton worth memorizing**, trim `policyTypes`/`ingress`/`egress` to whatever the task actually asks for:
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: <name>
+  namespace: <ns>
+spec:
+  podSelector:
+    matchLabels: {}
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress: []
+  egress: []
+```
+
+> [!WARNING]
+> Adding `Egress` to `policyTypes` blocks **all** outgoing traffic not explicitly allowed, including DNS. If the task restricts egress to one destination, add a **separate** egress rule for UDP/TCP port 53 with no `to` field (so it applies to any destination), otherwise DNS resolution breaks and everything looks like it's failing for the wrong reason:
+>
+> ```yaml
+> egress:
+> - to:
+>   - podSelector:
+>       matchLabels:
+>         id: api
+>   ports:
+>   - protocol: TCP
+>     port: 80
+> - ports:                # <-- separate rule, no "to": DNS allowed to any destination
+>   - protocol: UDP
+>     port: 53
+>   - protocol: TCP
+>     port: 53
+> ```
+
 ## 🩺 "Wait X, then check every Y seconds": Probe Timing Trap
 
 When the exam wording says *"it should initially wait N seconds and periodically wait M seconds"*, that maps to `initialDelaySeconds` and `periodSeconds`, and an exec-based probe ("executing `cat /tmp/ready`") means `exec.command`, not `httpGet` or `tcpSocket`.
