@@ -107,6 +107,51 @@ kubectl describe cm <name>
 kubectl describe secret <name>
 ```
 
+## 🔌 `env` vs `envFrom` — Picking One Key vs the Whole Map
+
+Both are Container-level fields (see the [Pod vs Container decision table](pod-vs-container-and-decisions.md)), confirmed `[]EnvVar` and `[]EnvFromSource` by `kubectl explain` — both **lists**, but they solve different problems.
+
+| | `env` | `envFrom` |
+| :--- | :--- | :--- |
+| **Use when** | You need **one specific key**, possibly renamed | You want **every key** from a ConfigMap/Secret injected as-is |
+| **Env var name** | You choose it (`name:`) | Forced to match the ConfigMap/Secret's key name |
+| **Source** | `valueFrom.configMapKeyRef` / `valueFrom.secretKeyRef` (one key) | `configMapRef` / `secretRef` (the whole object) |
+
+**`env` — pick a single key, rename it if you want:**
+
+```yaml
+env:
+- name: DB_HOST                        # <-- the env var name inside the container
+  valueFrom:
+    configMapKeyRef:
+      name: app-config                 # <-- the ConfigMap
+      key: database_host               # <-- the specific key
+- name: DB_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: db-secret
+      key: password
+```
+
+**`envFrom` — bulk-inject every key, no renaming:**
+
+```yaml
+envFrom:
+- configMapRef:
+    name: app-config      # <-- every key in app-config becomes an env var, same names
+- secretRef:
+    name: db-secret        # <-- every key in db-secret becomes an env var, same names
+```
+
+> [!TIP]
+> If the task says *"inject **all** the keys from ConfigMap X as environment variables,"* that's `envFrom`. If it names **one specific key** (especially with a different env var name than the key), that's `env` + `valueFrom`.
+
+Verify what actually landed inside the container:
+
+```bash
+kubectl exec <pod-name> -- env
+```
+
 ## 🏗️ Pod & Deployment Creation (Imperative)
 
 ```bash
@@ -313,6 +358,104 @@ kubectl apply -f pod-sidecar.yaml
 
 # Exec into a specific container within a Pod
 kubectl exec -it <pod-name> -c <container-name> -- bash
+```
+
+### 🥷 Native Sidecars (Kubernetes ≥ 1.28)
+
+A **native sidecar** is a container placed inside `initContainers` with `restartPolicy: Always` set **on that container itself** (not at the Pod level). This marks it as a long-running helper: it starts before the regular `containers` and keeps running for the Pod's whole lifetime, instead of running-to-completion like a normal init container.
+
+```yaml
+spec:
+  volumes:
+  - name: logs
+    emptyDir: {}
+  initContainers:
+  - name: logger-con                                     # <-- native sidecar
+    image: busybox:1.36
+    restartPolicy: Always                                # <-- this is what makes it a sidecar, not a regular init container
+    command: ["sh", "-c", "tail -f /var/log/cleaner/cleaner.log"]
+    volumeMounts:
+    - name: logs
+      mountPath: /var/log/cleaner
+  containers:
+  - name: cleaner-con
+    image: busybox:1.36
+    command: ["sh", "-c", "while true; do echo \"$(date): remove random file\" >> /var/log/cleaner/cleaner.log; sleep 1; done"]
+    volumeMounts:
+    - name: logs
+      mountPath: /var/log/cleaner
+```
+
+> [!WARNING]
+> **Race condition:** a native sidecar starts *before* the regular `containers`, so if it reads a file the main container is supposed to create (like `tail -f cleaner.log` here), that file may not exist yet — `tail -f` on a missing file fails immediately, and the sidecar crash-loops until the main container finally creates it.
+>
+> Fix it by pre-seeding the file with a plain (non-sidecar) init container that runs first:
+>
+> ```yaml
+> initContainers:
+> - name: init
+>   image: busybox:1.36
+>   command: ['sh', '-c', 'echo init > /var/log/cleaner/cleaner.log']
+>   volumeMounts:
+>   - name: logs
+>     mountPath: /var/log/cleaner
+> - name: logger-con        # the native sidecar, defined after — see block above
+>   ...
+> ```
+>
+> Regular init containers still run to completion in order before the native sidecar starts, so this guarantees the file exists first.
+
+### 🔎 Verifying What an Init Container Did
+
+A **regular** (non-sidecar) init container runs to completion and then **terminates**, it is no longer a running container, so `kubectl exec` into it fails once it's done:
+
+```bash
+kubectl exec -it <pod-name> -c init-con -- sh
+# error: unable to upgrade connection / container not running
+```
+
+`kubectl logs -c <init-container-name> <pod-name>` still works (it reads the terminated container's stdout), but if you need to check the actual **effect** it had, files it wrote or modified on a shared volume, exec into a **running** container that mounts the same volume instead:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-init-container
+  namespace: mars
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      id: test-init-container
+  template:
+    metadata:
+      labels:
+        id: test-init-container
+    spec:
+      volumes:
+      - name: web-content
+        emptyDir: {}
+      initContainers:
+      - name: init-con
+        image: busybox:1.36
+        command: ['sh', '-c', 'touch /tmp/index.html; echo "check this out!" > /tmp/index.html']
+        volumeMounts:
+        - name: web-content
+          mountPath: /tmp
+      containers:
+      - name: nginx
+        image: nginx:1.14
+        volumeMounts:
+        - name: web-content
+          mountPath: /usr/share/nginx/html
+        ports:
+        - containerPort: 80
+```
+
+```bash
+# init-con already exited — can't exec into it. Check its work through nginx instead,
+# since both mount the same "web-content" volume:
+kubectl exec -it <pod-name> -c nginx -- cat /usr/share/nginx/html/index.html
 ```
 
 ## 🧮 Custom Output — jsonpath
