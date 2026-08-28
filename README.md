@@ -68,7 +68,15 @@ Compact study guides and modular documentation covering all CKAD domains.
 
 ---
 
-### 5. 🏬 [CKAD Mock Simulator: Central Mall Practice](./reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md)
+### 5. 🧠 [CKAD Cheat Sheet: Exam-Day Traps](./reference/md-resources/ckad-cheatsheet.md)
+*The Wording-to-YAML Decoder*
+Real exam-wording traps decoded into exact YAML, verified against a live cluster: List vs Map syntax, `env` vs `envFrom`, Service port mapping, NetworkPolicy AND/OR logic, probe timing, SecurityContext placement, native sidecars, and more, split across 6 topic files.
+- **Goal:** Stop losing points to syntax traps and misread requirements, not to missing Kubernetes knowledge.
+- **Link:** [Open the Cheat Sheet Index](./reference/md-resources/ckad-cheatsheet.md) | [Pod vs Container Decision Tables](./reference/md-resources/pod-vs-container-and-decisions.md)
+
+---
+
+### 6. 🏬 [CKAD Mock Simulator: Central Mall Practice](./reference/md-resources/ckad-exam/simulator/06-ckad-practice-simulator.md)
 *Real Exam Drill*
 Practice the exam-level mock simulator suite on your local cluster using mapped mall analogies.
 - **Goal:** Get comfortable with exam-level pressure, multi-context switches, and debugging under time constraints.
@@ -77,7 +85,7 @@ Practice the exam-level mock simulator suite on your local cluster using mapped 
 
 ---
 
-### 6. 🚨 [Troubleshooting Challenges: Live Incident Drills](./practice/labs/ch17-capstone/challenge/README.md)
+### 7. 🚨 [Troubleshooting Challenges: Live Incident Drills](./practice/labs/ch17-capstone/challenge/README.md)
 *Break it. Fix it. Pass the exam.*
 Real cluster troubleshooting drills where scripts inject actual faults into your running environment. No hypotheticals — the cluster breaks, and you repair it under exam-like pressure.
 - **Goal:** Build the muscle memory for the `Observe → Inspect → Identify → Repair → Verify` loop that the CKAD exam demands.

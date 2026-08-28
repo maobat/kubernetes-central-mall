@@ -190,7 +190,7 @@ Comprehensive guides for the final stretch before the exam:
 
 - 📋 **[Global Glossary & Search Index](../GLOSSARY.md)**
 - 📋 **[CKAD Cheatsheet & Keymap](md-resources/ckad-cheatsheet.md)**
-  *Comprehensive list of imperative commands and troubleshooting steps.*
+  *Exam-wording traps decoded into exact YAML, verified against a live cluster: List vs Map syntax, Services, NetworkPolicy, probes, SecurityContext, sidecars, and more, split across 6 topic files.*
 - 🧭 **[Pod vs Container & Decision Cheat Sheet](md-resources/pod-vs-container-and-decisions.md)**
   *Field placement (Pod vs Container) plus "which one should I pick" tables for workloads, probes, volumes, Services, ConfigMaps/Secrets, and RBAC.*
 
