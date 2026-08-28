@@ -16,6 +16,41 @@ kubectl apply -f <file.yaml>
 kubectl delete -f <file.yaml>
 ```
 
+## 🏷️ Label Selectors: Equality vs Set-Based (`-l`)
+
+The `-l`/`--selector` flag works on `kubectl get`, `kubectl label`, `kubectl delete`, and more, in two styles:
+
+**Equality-based** (comma-separated conditions are ANDed together):
+
+```bash
+kubectl get pods -l type=worker
+kubectl get pods -l type!=worker
+kubectl get pods -l type=worker,env=prod   # AND: both must match
+```
+
+**Set-based**, more powerful, needed for "one of several values" or "has/lacks this key" conditions:
+
+```bash
+kubectl get pods -l "type in (worker,runner)"     # type is worker OR runner
+kubectl get pods -l "type notin (worker)"         # type is anything except worker
+kubectl get pods -l "type"                        # has the "type" key, any value
+kubectl get pods -l '!type'                       # does NOT have the "type" key
+```
+
+Bulk-apply a label to everything matching a selector at once:
+
+```bash
+kubectl -n sun label pod -l "type in (worker,runner)" protected=true
+```
+
+> [!WARNING]
+> **`kubectl <verb> --help` only documents the equality forms** (`=`, `==`, `!=`), not the set-based syntax (`in`, `notin`, bare-key existence). Run `kubectl label --help` or `kubectl get --help` and look at the `-l, --selector` entry: it's genuinely not there. For set-based syntax, the only real reference is the official docs page (bookmark it): [kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors).
+
+<!-- -->
+
+> [!TIP]
+> **Quote set-based expressions.** `(`, `)`, and spaces mean something to your shell before `kubectl` ever sees them; without quotes, `type in (worker,runner)` gets mangled by shell parsing. Equality expressions with no spaces or parens (`type=worker`) usually survive unquoted, but quoting everything is the safer habit.
+
 ## 📐 "Do I need a `-` here?": List vs Map in YAML
 
 Ask `kubectl explain` for the field's type; it tells you definitively, no guessing:
