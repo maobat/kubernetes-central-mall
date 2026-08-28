@@ -362,15 +362,40 @@ spec:
 >   - podSelector:
 >       matchLabels:
 >         id: api
->   ports:
->   - protocol: TCP
->     port: 80
+>   # no "ports" here: if the task doesn't name a specific port for "api",
+>   # leaving "ports" out means all ports/protocols are allowed to this destination
 > - ports:                # <-- separate rule, no "to": DNS allowed to any destination
+>   - protocol: TCP
+>     port: 53
 >   - protocol: UDP
 >     port: 53
->   - protocol: TCP
->     port: 53
 > ```
+
+**Real error you'll hit if `to` is written as a map instead of a list:**
+
+```text
+Error from server (BadRequest): error when creating "np.yaml": NetworkPolicy in version "v1"
+cannot be handled as a NetworkPolicy: json: cannot unmarshal object into Go struct field
+NetworkPolicyEgressRule.spec.egress.to of type []v1.NetworkPolicyPeer
+```
+
+The error message itself tells you the fix: `[]v1.NetworkPolicyPeer` means `to` (and `from` on the Ingress side) is a **list**, confirmed by `kubectl explain networkpolicy.spec.egress.to`. Missing the `-` is the classic version of the List vs Map trap from earlier in this cheat sheet:
+
+```yaml
+# wrong: "to" parsed as a single object, not a list
+egress:
+- to:
+    podSelector:
+      matchLabels:
+        id: api
+
+# right: "-" makes it a list item
+egress:
+- to:
+  - podSelector:
+      matchLabels:
+        id: api
+```
 
 ## 🩺 "Wait X, then check every Y seconds": Probe Timing Trap
 
