@@ -59,6 +59,46 @@ Quick check that the label actually landed on the Pods (not just the controller 
 kubectl get pods -l x=yyyy
 ```
 
+## 🔢 "Run a total of X times, Y in parallel": Job Completions Trap
+
+Two separate numbers in the wording map to two separate fields, don't merge them into one:
+
+| Wording in the task | Field |
+| :--- | :--- |
+| "run a total of X times" | `completions: X` |
+| "Y runs in parallel" / "Y at a time" | `parallelism: Y` |
+
+> Example requirement: *"The Job should run a total of 3 times and should execute 2 runs in parallel."*
+
+```yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-job
+spec:
+  completions: 3      # <-- total successful Pod completions needed before the Job is done
+  parallelism: 2       # <-- how many Pods run at once while getting there
+  template:
+    spec:
+      containers:
+      - name: worker
+        image: busybox
+        command: ["sh", "-c", "sleep 5"]
+      restartPolicy: Never
+```
+
+With `completions: 3` and `parallelism: 2`, Kubernetes starts 2 Pods immediately; as soon as one finishes, a 3rd Pod starts to reach the total of 3, it never runs more than 2 at once.
+
+> [!TIP]
+> `completions` alone (no `parallelism`, or `parallelism: 1`) runs the Pods **sequentially**, one at a time, X times total. `parallelism` with no `completions` set runs that many Pods concurrently but the Job is done as soon as **any one** succeeds, that's a different pattern (a "race", not "run X times"), don't set one when the task actually specifies both.
+
+Verify what actually ran:
+
+```bash
+kubectl get job my-job -o jsonpath='{.status.succeeded}{"\n"}'   # should reach 3
+kubectl get pods -l job-name=my-job                              # up to 2 Running at any moment while it converges on 3
+```
+
 ## 🏷️ Naming the Container Differently from the Job/Pod
 
 There is **no imperative flag** to set a container name different from the resource's own name: `kubectl create job`/`kubectl run` always name the container the same as the Job/Pod. If the task requires a distinct container name (e.g. Job `neb-new-job` with container `neb-new-job-container`), you must dry-run, edit the YAML, then apply.
