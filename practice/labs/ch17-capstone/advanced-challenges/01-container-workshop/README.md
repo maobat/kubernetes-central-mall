@@ -220,4 +220,4 @@ Use this if you want to retry the challenge from scratch, or to confirm what the
 
 </div>
 
-[Advanced Challenges — index ✨](../../advanced-challenges/README.md)
+🔒 [Advanced Challenges — index (Premium) ✨](../../../../PREMIUM.md)
