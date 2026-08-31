@@ -6,12 +6,33 @@ reference/md-resources/ckad-exam/simulator/
 
 # Protect the premium advanced challenges (Ch17 Premium tier — 01-container-workshop stays free)
 practice/labs/ch17-capstone/advanced-challenges/02-helm-renovation/
-practice/labs/ch17-capstone/advanced-challenges/03-canary-opening/
+# practice/labs/ch17-capstone/advanced-challenges/03-canary-opening/
 practice/labs/ch17-capstone/advanced-challenges/04-blue-green-mall/
 practice/labs/ch17-capstone/advanced-challenges/05-gateway-modernization/
 practice/labs/ch17-capstone/advanced-challenges/06-ingress-grand-entrance/
 practice/labs/ch17-capstone/advanced-challenges/INTEGRATION.md
 practice/labs/ch17-capstone/advanced-challenges/README.md
+practice/labs/ch17-capstone/advanced-challenges/07-three-container-pod
+practice/labs/ch17-capstone/advanced-challenges/08-banana-storage-class
+practice/labs/ch17-capstone/advanced-challenges/09-simple-node-cronjob
+practice/labs/ch17-capstone/advanced-challenges/10-ubuntu-sleeper-pod
+practice/labs/ch17-capstone/advanced-challenges/11-blue-green-apd
+practice/labs/ch17-capstone/advanced-challenges/12-news-apd-crash-fix
+practice/labs/ch17-capstone/advanced-challenges/13-webapp-color-helm
+practice/labs/ch17-capstone/advanced-challenges/14-imperative-service-svcn
+practice/labs/ch17-capstone/advanced-challenges/15-deny-all-netpol
+practice/labs/ch17-capstone/advanced-challenges/16-external-webserver-fix
+practice/labs/ch17-capstone/advanced-challenges/17-webapp-service-svcn
+practice/labs/ch17-capstone/advanced-challenges/18-externalname-dns-service
+practice/labs/ch17-capstone/advanced-challenges/19-qos-burstable-pod
+practice/labs/ch17-capstone/advanced-challenges/20-anime-crd
+practice/labs/ch17-capstone/advanced-challenges/21-configmap-from-env-files
+practice/labs/ch17-capstone/advanced-challenges/22-db-secret-env
+practice/labs/ch17-capstone/advanced-challenges/23-resourcequota-limit
+practice/labs/ch17-capstone/advanced-challenges/24-secret-volume-mount
+practice/labs/ch17-capstone/advanced-challenges/25-readiness-probe-recreate
+practice/labs/ch17-capstone/advanced-challenges/26-fix-broken-manifest
+practice/labs/ch17-capstone/advanced-challenges/27-imperative-liveness-probe
 
 # Block any local development configuration test artifacts
 *.bk

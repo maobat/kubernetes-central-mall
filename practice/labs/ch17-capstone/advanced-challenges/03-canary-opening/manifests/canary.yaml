@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Namespace
+metadata: {name: mall-canary}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: stable-html, namespace: mall-canary}
+data: {index.html: "STABLE boutique
+"}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: canary-html, namespace: mall-canary}
+data: {index.html: "CANARY boutique
+"}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: checkout-stable, namespace: mall-canary}
+spec:
+  replicas: 4
+  selector:
+    matchLabels: {app: checkout, track: stable}
+  template:
+    metadata:
+      labels: {app: checkout, track: stable}
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        volumeMounts: [{name: html, mountPath: /usr/share/nginx/html}]
+      volumes:
+      - name: html
+        configMap: {name: stable-html}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: checkout-canary, namespace: mall-canary}
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: checkout, track: canary}
+  template:
+    metadata:
+      labels: {app: checkout, track: canary}
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        volumeMounts: [{name: html, mountPath: /usr/share/nginx/html}]
+      volumes:
+      - name: html
+        configMap: {name: canary-html}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: checkout, namespace: mall-canary}
+spec:
+  selector: {app: checkout}
+  ports: [{port: 80, targetPort: 80}]
