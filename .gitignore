@@ -6,7 +6,7 @@ reference/md-resources/ckad-exam/simulator/
 
 # Protect the premium advanced challenges (Ch17 Premium tier — 01-container-workshop stays free)
 practice/labs/ch17-capstone/advanced-challenges/02-helm-renovation/
-# practice/labs/ch17-capstone/advanced-challenges/03-canary-opening/
+ practice/labs/ch17-capstone/advanced-challenges/03-canary-opening/
 practice/labs/ch17-capstone/advanced-challenges/04-blue-green-mall/
 practice/labs/ch17-capstone/advanced-challenges/05-gateway-modernization/
 practice/labs/ch17-capstone/advanced-challenges/06-ingress-grand-entrance/

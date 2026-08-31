@@ -142,8 +142,8 @@ Example output:
 
 <div style="text-align: right;">
 
-[next challenge ✨](../../advanced-challenges/04-blue-green-mall/README.md)
+🔒 [next challenge — unlock in Premium ✨](../../../../PREMIUM.md)
 
 </div>
 
-[Advanced Challenges — index ✨](../../advanced-challenges/README.md)
+🔒 [Advanced Challenges — index (Premium) ✨](../../../../PREMIUM.md)
