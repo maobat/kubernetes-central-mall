@@ -179,6 +179,7 @@ practice/labs/ch17-capstone/advanced-challenges/MockExam/mockExam-08/18-servicea
 practice/labs/ch17-capstone/advanced-challenges/MockExam/mockExam-08/19-multi-container-manifest-fix-v2
 practice/labs/ch17-capstone/advanced-challenges/MockExam/mockExam-08/20-api-resources-report
 practice/labs/ch17-capstone/advanced-challenges/MockExam/mockExam-08/21-node-metrics-report
+practice/labs/ch17-capstone/advanced-challenges/MockExam/mockExam-01/lab-format
 
 # Block any local development configuration test artifacts
 *.bk
