@@ -119,6 +119,150 @@ curl <ckad-worker2-internal-ip>:30100
 >
 > Don't confuse "where the Service answers" (everywhere) with "where the Pod lives" (one specific node); the exam question is testing exactly that distinction.
 
+## 🔵🟢 Blue/Green vs Canary: Which Label Does the Service Selector Use?
+
+Both patterns put two Deployments behind one Service, the difference is entirely in **which label the Service selects on**, not in the Deployments themselves.
+
+**The one constraint both patterns share:** each Deployment's own `selector.matchLabels` must be unique (can't overlap another Deployment's), so every Deployment needs at least one label that's exclusive to it, on top of anything shared.
+
+### True Blue/Green — instant 100/0 cutover
+
+The Service selects **only** the exclusive/distinguishing label, so at any moment it routes to exactly one color. Cutover = flip that one selector value, an atomic all-or-nothing switch with an equally instant rollback.
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels: {app: myapp, version: blue}
+  template:
+    metadata:
+      labels: {app: myapp, version: blue}
+    spec:
+      containers: [{name: myapp, image: myapp:v1}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-green
+spec:
+  replicas: 3
+  selector:
+    matchLabels: {app: myapp, version: green}
+  template:
+    metadata:
+      labels: {app: myapp, version: green}
+    spec:
+      containers: [{name: myapp, image: myapp:v2}]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-svc
+spec:
+  selector: {app: myapp, version: blue}   # <-- 100% blue right now
+  ports: [{port: 80}]
+```
+
+Cutover to green: `kubectl patch svc myapp-svc -p '{"spec":{"selector":{"version":"green"}}}'` — no rolling update, no replica math, just a Service edit. Rollback is the same command with `blue` again.
+
+### Weighted split (what CKAD calls "blue/green X% / Y%", really a canary shape)
+
+The Service selects a label **shared** by both Deployments, excluding the distinguishing one entirely. Both colors are always live endpoints, the traffic ratio is controlled purely by **replica count**, not by the Service.
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-blue
+spec:
+  replicas: 7                       # 70%
+  selector:
+    matchLabels: {app: myapp, version: blue}
+  template:
+    metadata:
+      labels: {app: myapp, version: blue}
+    spec:
+      containers: [{name: myapp, image: myapp:v1}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-green
+spec:
+  replicas: 3                       # 30%
+  selector:
+    matchLabels: {app: myapp, version: green}
+  template:
+    metadata:
+      labels: {app: myapp, version: green}
+    spec:
+      containers: [{name: myapp, image: myapp:v2}]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-svc
+spec:
+  selector: {app: myapp}              # <-- no "version" here, matches BOTH colors
+  ports: [{port: 80}]
+```
+
+Shifting the ratio: `kubectl scale deployment app-blue --replicas=5` + `kubectl scale deployment app-green --replicas=5` for 50/50, and so on, no Service edit needed, ever.
+
+> [!TIP]
+> **The tell in an exam question:** a percentage split ("70% to blue, 30% to green") only makes sense as a replica-ratio weighted split, a plain Service has no concept of a weighted percentage (that needs a service mesh/Ingress-level traffic split, out of CKAD scope). An instant cutover ("switch all traffic to green", "roll back to blue immediately") is the exclusive-label pattern instead. Read which one the question is actually asking for before picking a label scheme, using the wrong one either breaks the split (excluded label ends up in the Service selector) or breaks the cutover (shared label means both colors always get some traffic, cutover never reaches 100%).
+
+### 🏷️ Distinguishing-Label Variant: Two Different Keys, Not One Shared Key
+
+The examples above use the same key with a different value per color (`version: blue` vs `version: green`), but a real question can just as easily hand you **two entirely different keys** instead, one per Deployment, neither shared with the other:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-apd
+  labels: {type-one: blue}          # <-- Deployment's OWN metadata.labels, a different tier from the pod template
+spec:
+  replicas: 7
+  selector:
+    matchLabels: {type-one: blue, version: v1}
+  template:
+    metadata:
+      labels: {type-one: blue, version: v1}   # <-- "Add labels to the pod": BOTH keys land here
+    spec:
+      containers: [{name: blue-apd, image: myapp:v1}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green-apd
+  labels: {type-two: green}          # <-- a DIFFERENT key, not "type-one: green"
+spec:
+  replicas: 3
+  selector:
+    matchLabels: {type-two: green, version: v1}
+  template:
+    metadata:
+      labels: {type-two: green, version: v1}
+    spec:
+      containers: [{name: green-apd, image: myapp:v2}]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: route-apd-svc
+spec:
+  type: NodePort
+  selector: {version: v1}             # <-- the ONE key both Deployments actually share
+  ports: [{port: 8080, targetPort: 8080}]
+```
+
+`type-one` and `type-two` are each exclusive to their own Deployment (functionally interchangeable with a `version: blue`/`version: green` scheme), the difference is purely cosmetic naming, don't assume `type-one`/`type-two` are typos for the same key, or that the second one should also read `type-one`. `version: v1` is the real shared key here, and it's identical on both colors (not `v1`/`v2`), it's the label that makes the weighted split work, `type-one`/`type-two` never appear in the Service's selector at all. Also note the two-tier label placement: "use the label X" on a Deployment typically means the Deployment's own `metadata.labels` (informational, not involved in selection), while "add labels to the pod X and Y" means `spec.template.metadata.labels` (and, by extension, `spec.selector.matchLabels`, which must match it) — conflating the two is an easy way to lose points on a question that grades both separately.
+
 ## 🛡️ Generating a NetworkPolicy Skeleton
 
 Unlike Deployments, Services, or Jobs, there is **no imperative generator** for NetworkPolicy:
